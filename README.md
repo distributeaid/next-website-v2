@@ -10,7 +10,7 @@ Open Source Explorers is Distribute Aid’s open source outreach program. It use
 
 ## About the Project
 
-This repository contains the scaffolding for DA's new website, powered by Nextjs, Strapi, and Puck CMS.
+This repository contains the scaffolding for DA's new website, powered by Nextjs, TypeScript & Strapi.
 
 ## Technologies Used
 
