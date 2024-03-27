@@ -8,6 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        "light-brown": "#E3E5FF",
+
+        "navy-400": "rgb(139 159 200)",
+
+        "light-green": "#E9FBFE",
+
+        "dark-blue": "#09328b"
+      }
     },
   },
   plugins: [],
