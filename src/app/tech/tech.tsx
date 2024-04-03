@@ -1,9 +1,12 @@
+import { techContent } from '@/data/techData';
 import Image from 'next/image';
+import Link from 'next/link';
+import TechSection from '../components/techSection';
 
 const Tech = () => {
   return (
-    <section className='w-[90%] md:w-[80%] lg:w-[70%] m-auto my-12 flex flex-col prose pt-4'>
-      <div className='mb-8 last:mb-0 border-l-2 pl-4 py-10 border-navy-400'>
+    <section className='w-[90%] md:w-[70%] lg:w-[50%] m-auto pt-4'>
+      <div className='mb-8 last:mb-0 border-l-2 pl-4 py-8 border-navy-400'>
         <Image 
           width={585.2}
           height={127.02}
@@ -11,6 +14,9 @@ const Tech = () => {
           alt="DA Open Source Explorers Logo"
          />
       </div>
+      {techContent.map((content, index) => (
+        <TechSection key={index} {...content} />
+      ))}
     </section>
   );
 };
