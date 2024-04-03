@@ -40,7 +40,7 @@ const Counter = ({
 
 const CounterStat = () => {
   return (
-    <section className="text-center px-72  py-28">
+    <section className="text-center px-72 max-[1024px]:px-2 py-28">
       <h2 className="text-4xl font-bold mb-4">
         July 2021 - June 2022 in numbers
       </h2>
@@ -56,7 +56,7 @@ const CounterStat = () => {
           latest annual report.
         </a>
       </p>
-      <div className="flex justify-evenly items-baseline pt-24">
+      <div className="flex justify-evenly items-baseline pt-24 flex-wrap">
         <div className="flex flex-col justify-center items-center">
           <Icon srcImg={crate} />
           <Counter stat={32} title="shipments" />
