@@ -1,12 +1,12 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
-interface BackgroundImgProps {
+interface DynamicBgImgProps {
   currentBg: string;
   otherBgImages: string[];
 }
 
-const BackgroundImg: React.FC<BackgroundImgProps> = ({
+const DynamicBgImg: React.FC<DynamicBgImgProps> = ({
   currentBg,
   otherBgImages,
 }) => {
@@ -20,7 +20,7 @@ const BackgroundImg: React.FC<BackgroundImgProps> = ({
   }, [otherBgImages]);
 
   return (
-    <div className="h-auto w-full relative">
+    <div className="h-full w-full relative">
       {otherBgImages.map((bgImage, index) => (
         <div
           key={index}
@@ -36,4 +36,4 @@ const BackgroundImg: React.FC<BackgroundImgProps> = ({
   );
 };
 
-export default BackgroundImg;
+export default DynamicBgImg;
