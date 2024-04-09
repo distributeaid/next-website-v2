@@ -13,16 +13,16 @@ const Hero = () => {
   const setImagesII = [soapRelief.src, loadingTruck.src, waterRelief.src];
   const setImagesIII = [loadingTruck.src, waterRelief.src, moriaFireRelief.src];
   return (
-    <section className="flex gap-20 py-32 justify-center flex-nowrap flex-shrink-0">
+    <section className="flex gap-20 py-32 max-[768px]:py-20 justify-center flex-nowrap flex-shrink-0">
       <div className="size-[360px] opacity-50 translate-y-5 flex-none">
         <DynamicBgImg currentBg={waterRelief.src} otherBgImages={setImagesI} />
       </div>
-      <div className="flex w-[50%] h-[400px] justify-between items-center flex-shrink-0">
-        <div className="w-[50%] pr-4">
-          <Image src={logoHero} alt="" className="py-2" />
-          <p className="text-primary text-[2.15rem] leading-[3rem] ">Re-imagine {<br/>}Humanitarian Aid {<br/>}Delivery</p>
+      <div className="flex w-[48rem] max-[767px]:w-full h-[400px] justify-between items-center flex-none mx-auto px-2">
+        <div className="max-[767px]:w-full w-[50%] pr-4 flex-shrink-0">
+          <Image src={logoHero} alt="" className="py-2 max-[767px]:w-full" />
+          <p className="text-primary text-[2.15rem] leading-[3rem]">Re-imagine {<br/>}Humanitarian Aid {<br/>}Delivery</p>
         </div>
-        <div className="flex-1 h-full">
+        <div className="max-[767px]:hidden flex-1 h-full">
           <DynamicBgImg currentBg={moriaFireRelief.src} otherBgImages={setImagesII} />
         </div>
       </div>
