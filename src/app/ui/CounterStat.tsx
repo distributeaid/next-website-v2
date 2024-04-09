@@ -10,7 +10,7 @@ import CountUp from "react-countup";
 import { lato } from "../ui/fonts";
 
 const Icon = ({ srcImg }: { srcImg: string }) => {
-  return <Image src={srcImg} alt="" className="size-28" />;
+  return <Image src={srcImg} alt="" className="size-28 max-[768px]:size-[7.5rem]" />;
 };
 
 const Counter = ({
@@ -28,21 +28,21 @@ const Counter = ({
     <div
       className={`${lato.className} antialiased flex flex-col justify-center items-center mt-4`}
     >
-      <p className="text-2xl">
+      <p className="text-2xl max-[768px]:text-[1.35rem]">
         <span>{unitStart}</span>
         <CountUp duration={10} className="counter" end={stat} />
         <span> {unitEnd}</span>
       </p>
-      <span className="text-primary opacity-80">{title}</span>
+      <span className="text-primary opacity-80 max-[768px]:text-sm">{title}</span>
     </div>
   );
 };
 
 const CounterStat = () => {
   return (
-    <section className="text-center px-72 max-[1024px]:px-2 py-28">
-      <h2 className="text-4xl font-bold mb-4">
-        July 2021 - June 2022 in numbers
+    <section className={`${lato.className} antialiased text-center px-72 max-[1024px]:px-2 py-28 max-[768px]:py-10`}>
+      <h2 className="text-4xl font-bold mb-4 max-[768px]:text-3xl">
+      July 2021—June 2022 in numbers
       </h2>
       <p>
         Read more in our
@@ -56,16 +56,16 @@ const CounterStat = () => {
           latest annual report.
         </a>
       </p>
-      <div className="flex justify-evenly items-baseline pt-24 flex-wrap">
-        <div className="flex flex-col justify-center items-center">
+      <div className="flex justify-evenly items-baseline pt-24 max-[768px]:py-16 flex-wrap gap-8">
+        <div className="flex flex-col justify-center items-center flex-1">
           <Icon srcImg={crate} />
           <Counter stat={32} title="shipments" />
         </div>
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center flex-1">
           <Icon srcImg={handsParcel} />
           <Counter stat={1117000} title="needs met" />
         </div>
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center flex-1">
           <Icon srcImg={handsPluses} />
           <Counter
             stat={6124150}
@@ -78,16 +78,16 @@ const CounterStat = () => {
             unitStart="$"
           />
         </div>
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center flex-1">
           <Icon srcImg={route} />
           <Counter stat={96500} title="traveled" unitEnd="km" />
           <Counter stat={202000} title="shipped" unitEnd="kg" />
         </div>
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center flex-1">
           <Icon srcImg={pallet} />
           <Counter stat={4400000} title="items shipped" />
         </div>
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center flex-1">
           <Icon srcImg={handsShaking} />
           <Counter stat={142} title="organizations worked with" />
           <Counter stat={40} title="active team members" />
