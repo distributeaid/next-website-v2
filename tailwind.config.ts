@@ -12,6 +12,7 @@ const config: Config = {
         "light-brown": "#E3E5FF",
         "brown-800": "rgb(9 50 139)",
         "brown-600": "rgb(227, 229, 255)",
+        "brown-900": "rgb(233, 223, 238)",
 
         "navy-400": "rgb(139 159 200)",
         "navy-600": "rgb(34 75 164)",

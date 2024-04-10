@@ -45,7 +45,7 @@ const Assort = () => {
                     </p>
                 </article>
             </section>
-            <section className=" bg-brown-600 pb-8 px-4 py-8 text-[15px] leading-7">
+            <section className=" bg-brown-900 pb-8 px-4 py-8 text-[15px] leading-7">
                 <h2 className=" border-l-2 border-navy-600 pl-4 py-4 text-4xl font-bold text-dark-blue mb-8">Download</h2>
                 <div className="border-l-2 border-navy-400 pl-4">
                     <a className='text-brown-800 font-bold underline block' href="/documents/assort_guidelines_v15.pdf" download="assort_guidelines_v15">Standards Guide</a>
