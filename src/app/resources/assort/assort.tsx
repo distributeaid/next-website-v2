@@ -5,7 +5,7 @@ const Assort = () => {
     <section>
         <div className="grid md:grid-cols-2">
             <section className=" bg-primary-brown-10 pb-8 px-4 py-8 text-[15px] leading-7">
-                <h2 className=" border-l-2 border-navy-600 pl-4 py-4 text-4xl font-bold text-neutral-black mb-8">About ASSORT</h2>
+                <h2 className=" border-l-2 border-navy-600 pl-4 py-4 text-4xl font-bold text-dark-blue mb-8">About ASSORT</h2>
                 <article className="border-l-2 border-navy-400 pl-4">
                     <p className="mb-3 pt-4">The Aid Standards for Sorting (ASSORT) are a set of interoperability standards for humanitarian aid that are designed to save grassroots organisations time, effort, and money.</p>
                     <p>When quality control and sorting are not standardised, inefficiencies arise. These inefficiencies require significant expenditure of resources:</p>
@@ -46,7 +46,7 @@ const Assort = () => {
                 </article>
             </section>
             <section className=" bg-brown-600 pb-8 px-4 py-8 text-[15px] leading-7">
-                <h2 className=" border-l-2 border-navy-600 pl-4 py-4 text-4xl font-bold text-neutral-black mb-8">Download</h2>
+                <h2 className=" border-l-2 border-navy-600 pl-4 py-4 text-4xl font-bold text-dark-blue mb-8">Download</h2>
                 <div className="border-l-2 border-navy-400 pl-4">
                     <a className='text-brown-800 font-bold underline block' href="/documents/assort_guidelines_v15.pdf" download="assort_guidelines_v15">Standards Guide</a>
                     <a className='text-brown-800 font-bold underline block' href="/documents/assort_sizing_chart_v6.pdf" download="assort_sizing_chart_v6">Sizing Chart</a>
