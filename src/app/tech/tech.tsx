@@ -22,3 +22,5 @@ const Tech = () => {
 };
 
 export default Tech;
+
+// Frontend Developer @Mentorlst | @AllInOpenSource Regional Ambassador for East Africa | Open Sauced 🤌 at @CHAOSS
