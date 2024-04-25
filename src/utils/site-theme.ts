@@ -50,29 +50,3 @@ export function getColors({
   return colors;
 }
 
-// export function useVisualizationColors({ swatches, weights, randomize }) {
-//   const themeColors = theme?.colors ?? {}; // {rosemary: {200: '#F2ECF5', 300: '#E9DFEE', etc}, etc}
-
-//   const [colors, setColors] = useState([]);
-
-//   useState(() => {
-//     const newColors = [];
-//     for (const [swatch, colorsByWeight] of Object.entries(themeColors)) {
-//       if (swatches.includes(swatch)) {
-//         for (const [weight, color] of Object.entries(colorsByWeight)) {
-//           if (weights.includes(parseInt(weight))) {
-//             newColors.push(color);
-//           }
-//         }
-//       }
-//     }
-
-//     if (randomize) {
-//       shuffle(newColors);
-//     }
-
-//     setColors(newColors);
-//   }, [swatches, weights, randomize]);
-
-//   return colors;
-// }
