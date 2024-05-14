@@ -4,8 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
-import Image from "next/image";
-import Logo from "../../../public/images/logomark_blue.svg";
+import LogoMark from "../../../../public/images/LogoMark"
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
@@ -52,14 +51,15 @@ const NavBar = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <Image
+            <LogoMark width="50" height={(60 / 70) * 50} />
+            {/* <Image
               src={Logo}
               alt="da-logo"
               width={50}
               height={50}
               priority={true}
               className=""
-            />
+            /> */}
           </Link>
         </h1>
       </div>
