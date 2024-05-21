@@ -1,12 +1,9 @@
 'use client'
-import Button from '../shared/Button'
+import Button from '../ui/Button'
 import BankInformationModal from './BankInfoModal'
 import { useState } from 'react'
-
 import Image from 'next/image'
-
 import siteSettings from '../../data/site-settings.json';
-
 import Link from 'next/link'
 
 const Divider = () => <hr className="w-[110%] h-1 bg-rosemary-300 px-8" />

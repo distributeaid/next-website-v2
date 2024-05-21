@@ -1,4 +1,4 @@
-import Button from '../shared/Button'
+import Button from '../ui/Button'
 import Link from 'next/link'
 import { FC } from 'react'
 import Modal from 'react-modal'

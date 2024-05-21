@@ -1,11 +1,11 @@
 import { activities, socials } from "../data/home";
-import { lato } from "../app/ui/fonts";
+import { lato } from "../components/ui/fonts";
 import Image from "next/image";
-import CounterStat from "./ui/CounterStat";
-import Hero from "./ui/Hero";
+import CounterStat from "../components/ui/CounterStat";
+import Hero from "../components/ui/Hero";
 import homepageBanner from "../../public/images/homepage-banner-image.svg";
 import sary from "../../public/images/lettermark_blue.svg"
-import Earth3D from "./ui/Earth3D";
+import Earth3D from "../components/ui/Earth3D";
 
 
 const Home = () => {

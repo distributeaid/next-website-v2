@@ -24,7 +24,6 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-<<<<<<< HEAD
         'navy-400': 'rgb(139 159 200)',
         'navy-600': 'rgb(34 75 164)',
 
@@ -104,13 +103,11 @@ const config: Config = {
           },
         },
       }),
-=======
         primary: "#082B76",
         secondary: "#F8FAFE",
       },
->>>>>>> homepage
     },
-  },
-  plugins: [],
-};
+    plugins: [],
+  }
+  
 export default config;

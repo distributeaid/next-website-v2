@@ -32,7 +32,7 @@ const Earth3D: React.FC<Earth3DProps> = ({ svgPath }) => {
 
     const loader = new SVGLoader();
 
-    loader.load(svgPath, (data) => {
+    loader.load(svgPath, (data: any) => {
       const paths = data.paths;
       const group = new THREE.Group();
 
