@@ -7,6 +7,7 @@ import homepageBanner from "../../public/images/homepage-banner-image.svg";
 import sary from "../../public/images/lettermark_blue.svg"
 import Earth3D from "./ui/Earth3D";
 
+
 const Home = () => {
   return (
     <main className="flex min-h-screen flex-col justify-between bg-white">
