@@ -20,7 +20,7 @@ const NavBar = () => {
       id: 2,
       title: "About Us",
       url: "/about-us",
-      
+
     },
     {
       id: 3,
@@ -50,7 +50,7 @@ const NavBar = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-navy-900 fixed nav">
+    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-navy-900 fixed nav z-40">
       <div>
         {/* <h1 className="text-5xl font-signature ml-2"><a className="link-underline hover:transition ease-in-out delay-150 hover:underline hover:decoration-solid" href="">Logo</a></h1> */}
         <h1 className="text-5xl font-signature ml-2">
