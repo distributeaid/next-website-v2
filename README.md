@@ -23,6 +23,16 @@ This repository contains the scaffolding for DA's new website, powered by Nextjs
 - [Vercel](https://vercel.com/home) - Production and deployment
 <!-- - [Playwright](https://playwright.dev/) - end-to-end (E2E) test framework -->
 
+# 🚀 Getting started with Gitpod
+Gitpod provides a fully automated development environment for your Next.js project, and the development environment is set up with just a single click. Follow these steps to get started:
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/distributeaid/next-website-v2)
+
+1. Click the ``Open in Gitpod`` button above. Note: you'll need to have an account on [Gitpod](https://gitpod.io/login/) before proceeding with the next steps (this requires a GitHub account).
+2. Click the `Continue` button.
+3. Relax, a development environment is being set up for you in the first terminal. 
+4. To access your workspace later, go to [Gitpod Workspaces](https://gitpod.io/workspaces). Pin the `next-website-v2` workspace to prevent auto-deletion after 14 days by clicking the three dots next to the workspace name and selecting "Pin".
+
 ## Setup
 
 This setup comes preconfigured with Nextjs, TypeScript, Tailwind,  and Next's Incremental Static Regeneration
