@@ -1,0 +1,5467 @@
+{
+  "name": "Sending Groups Needs Met",
+  "color": "hsl(196, 70%, 50%)",
+  "children": [
+    {
+      "name": "AUT",
+      "color": "hsl(89, 70%, 50%)",
+      "children": [
+        {
+          "name": 38.0,
+          "color": "hsl(38, 70%, 50%)",
+          "children": [
+            {
+              "name": "Electronic",
+              "color": "hsl(166, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Laptop",
+                  "color": "hsl(172, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 147.0,
+          "color": "hsl(147, 70%, 50%)",
+          "children": [
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bottoms",
+                  "color": "hsl(233, 70%, 50%)",
+                  "value": 127.66666666666652
+                },
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 21.16666666666666
+                },
+                {
+                  "name": "Shorts",
+                  "color": "hsl(153, 70%, 50%)",
+                  "value": 133.83333333333326
+                },
+                {
+                  "name": "Socks",
+                  "color": "hsl(159, 70%, 50%)",
+                  "value": 76.66666666666652
+                },
+                {
+                  "name": "Underwear",
+                  "color": "hsl(185, 70%, 50%)",
+                  "value": 213.833333333333
+                }
+              ]
+            },
+            {
+              "name": "Household",
+              "color": "hsl(17, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Blanket",
+                  "color": "hsl(186, 70%, 50%)",
+                  "value": 1233.0
+                },
+                {
+                  "name": "Table",
+                  "color": "hsl(316, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Hygiene",
+              "color": "hsl(176, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bath Towel",
+                  "color": "hsl(262, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Toys & Activities",
+              "color": "hsl(44, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Toy",
+                  "color": "hsl(144, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "BEL",
+      "color": "hsl(94, 70%, 50%)",
+      "children": [
+        {
+          "name": 121.0,
+          "color": "hsl(121, 70%, 50%)",
+          "children": [
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 2.16666666666666
+                }
+              ]
+            },
+            {
+              "name": "Electronic",
+              "color": "hsl(166, 70%, 50%)",
+              "children": [
+                {
+                  "name": "CPU",
+                  "color": "hsl(344, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Hard Drive",
+                  "color": "hsl(319, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Keyboard",
+                  "color": "hsl(237, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Laptop",
+                  "color": "hsl(172, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Lego Mindstorms Coding Set",
+                  "color": "hsl(0, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Mouse",
+                  "color": "hsl(123, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Power Cable",
+                  "color": "hsl(67, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Wifi Booster",
+                  "color": "hsl(240, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Wireless Switch",
+                  "color": "hsl(86, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "BIH",
+      "color": "hsl(214, 70%, 50%)",
+      "children": [
+        {
+          "name": 43.0,
+          "color": "hsl(43, 70%, 50%)",
+          "children": [
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bottoms",
+                  "color": "hsl(233, 70%, 50%)",
+                  "value": 17.1666666666666
+                },
+                {
+                  "name": "Jacket",
+                  "color": "hsl(265, 70%, 50%)",
+                  "value": 27.0833333333333
+                },
+                {
+                  "name": "Jumper",
+                  "color": "hsl(321, 70%, 50%)",
+                  "value": 122.666666666666
+                },
+                {
+                  "name": "Socks",
+                  "color": "hsl(159, 70%, 50%)",
+                  "value": 77.9166666666666
+                },
+                {
+                  "name": "Top",
+                  "color": "hsl(5, 70%, 50%)",
+                  "value": 21.25
+                },
+                {
+                  "name": "Underwear",
+                  "color": "hsl(185, 70%, 50%)",
+                  "value": 11.8333333333333
+                }
+              ]
+            },
+            {
+              "name": "Household",
+              "color": "hsl(17, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Blanket",
+                  "color": "hsl(186, 70%, 50%)",
+                  "value": 553.0
+                }
+              ]
+            },
+            {
+              "name": "Hygiene",
+              "color": "hsl(176, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bath Towel",
+                  "color": "hsl(262, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Shelter",
+              "color": "hsl(216, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Sleeping Bag",
+                  "color": "hsl(3, 70%, 50%)",
+                  "value": 125.0
+                },
+                {
+                  "name": "Tent",
+                  "color": "hsl(278, 70%, 50%)",
+                  "value": 50.0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CHN",
+      "color": "hsl(168, 70%, 50%)",
+      "children": [
+        {
+          "name": 25.0,
+          "color": "hsl(25, 70%, 50%)",
+          "children": [
+            {
+              "name": "Shelter",
+              "color": "hsl(216, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Tent",
+                  "color": "hsl(278, 70%, 50%)",
+                  "value": 22320.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 101.0,
+          "color": "hsl(101, 70%, 50%)",
+          "children": [
+            {
+              "name": "Household",
+              "color": "hsl(17, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Sleeping Bag",
+                  "color": "hsl(3, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Shelter",
+              "color": "hsl(216, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Tent",
+                  "color": "hsl(278, 70%, 50%)",
+                  "value": 2160.0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "DEU",
+      "color": "hsl(33, 70%, 50%)",
+      "children": [
+        {
+          "name": 38.0,
+          "color": "hsl(38, 70%, 50%)",
+          "children": [
+            {
+              "name": "Baby",
+              "color": "hsl(238, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Diaper",
+                  "color": "hsl(160, 70%, 50%)",
+                  "value": 102.3533333333332
+                },
+                {
+                  "name": "Food",
+                  "color": "hsl(319, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bottoms",
+                  "color": "hsl(233, 70%, 50%)",
+                  "value": 63.33333333333326
+                },
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 1515.4999999999975
+                },
+                {
+                  "name": "Coat",
+                  "color": "hsl(225, 70%, 50%)",
+                  "value": 133.3333333333332
+                },
+                {
+                  "name": "Jacket",
+                  "color": "hsl(265, 70%, 50%)",
+                  "value": 12.666666666666663
+                },
+                {
+                  "name": "Shoes",
+                  "color": "hsl(358, 70%, 50%)",
+                  "value": 61.5
+                },
+                {
+                  "name": "Top",
+                  "color": "hsl(5, 70%, 50%)",
+                  "value": 354.33333333333286
+                }
+              ]
+            },
+            {
+              "name": "Food",
+              "color": "hsl(319, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Cookies",
+                  "color": "hsl(261, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Health",
+              "color": "hsl(262, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Crutches",
+                  "color": "hsl(223, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Household",
+              "color": "hsl(17, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Blanket",
+                  "color": "hsl(186, 70%, 50%)",
+                  "value": 2825.0
+                },
+                {
+                  "name": "Duvet",
+                  "color": "hsl(228, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Hygiene",
+              "color": "hsl(176, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bath Towel",
+                  "color": "hsl(262, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Feminine Pad",
+                  "color": "hsl(329, 70%, 50%)",
+                  "value": 763.3333333333326
+                },
+                {
+                  "name": "Hygiene Kit",
+                  "color": "hsl(33, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Mask",
+                  "color": "hsl(70, 70%, 50%)",
+                  "value": 50000.0
+                },
+                {
+                  "name": "Razor",
+                  "color": "hsl(214, 70%, 50%)",
+                  "value": 3333.33333333333
+                },
+                {
+                  "name": "Toothbrush",
+                  "color": "hsl(141, 70%, 50%)",
+                  "value": 10000.0
+                },
+                {
+                  "name": "Wipes",
+                  "color": "hsl(198, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Infrastructure",
+              "color": "hsl(328, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Tarp",
+                  "color": "hsl(40, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Shelter",
+              "color": "hsl(216, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Rucksack",
+                  "color": "hsl(272, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Sleeping Bag",
+                  "color": "hsl(3, 70%, 50%)",
+                  "value": 1669.0
+                },
+                {
+                  "name": "Suitcase",
+                  "color": "hsl(328, 70%, 50%)",
+                  "value": 100.0
+                },
+                {
+                  "name": "Tent",
+                  "color": "hsl(278, 70%, 50%)",
+                  "value": 2280.0
+                }
+              ]
+            },
+            {
+              "name": "Toys & Activities",
+              "color": "hsl(44, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Toy",
+                  "color": "hsl(144, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 43.0,
+          "color": "hsl(43, 70%, 50%)",
+          "children": [
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Belt",
+                  "color": "hsl(47, 70%, 50%)",
+                  "value": 5.33333333333333
+                },
+                {
+                  "name": "Bottoms",
+                  "color": "hsl(233, 70%, 50%)",
+                  "value": 34.6666666666666
+                },
+                {
+                  "name": "Coat",
+                  "color": "hsl(225, 70%, 50%)",
+                  "value": 39.25
+                },
+                {
+                  "name": "Gloves",
+                  "color": "hsl(103, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Hat",
+                  "color": "hsl(164, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Jumper",
+                  "color": "hsl(321, 70%, 50%)",
+                  "value": 51.3333333333333
+                },
+                {
+                  "name": "Scarf",
+                  "color": "hsl(173, 70%, 50%)",
+                  "value": 6.75
+                },
+                {
+                  "name": "Socks",
+                  "color": "hsl(159, 70%, 50%)",
+                  "value": 32.0
+                },
+                {
+                  "name": "Top",
+                  "color": "hsl(5, 70%, 50%)",
+                  "value": 64.49999999999996
+                },
+                {
+                  "name": "Underwear",
+                  "color": "hsl(185, 70%, 50%)",
+                  "value": 22.5
+                }
+              ]
+            },
+            {
+              "name": "Education",
+              "color": "hsl(205, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Backpack",
+                  "color": "hsl(311, 70%, 50%)",
+                  "value": 105.0
+                }
+              ]
+            },
+            {
+              "name": "Household",
+              "color": "hsl(17, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Blanket",
+                  "color": "hsl(186, 70%, 50%)",
+                  "value": 7.0
+                }
+              ]
+            },
+            {
+              "name": "Hygiene",
+              "color": "hsl(176, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bath Towel",
+                  "color": "hsl(262, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Shampoo",
+                  "color": "hsl(112, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Shower Gel",
+                  "color": "hsl(17, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Shelter",
+              "color": "hsl(216, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Sleeping Bag",
+                  "color": "hsl(3, 70%, 50%)",
+                  "value": 288.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 121.0,
+          "color": "hsl(121, 70%, 50%)",
+          "children": [
+            {
+              "name": "Electronic",
+              "color": "hsl(166, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Laptop",
+                  "color": "hsl(172, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Laptop Charger",
+                  "color": "hsl(119, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Power Bank",
+                  "color": "hsl(253, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Solar Panel",
+                  "color": "hsl(302, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 133.0,
+          "color": "hsl(133, 70%, 50%)",
+          "children": [
+            {
+              "name": "Baby",
+              "color": "hsl(238, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Carrier",
+                  "color": "hsl(281, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Diaper",
+                  "color": "hsl(160, 70%, 50%)",
+                  "value": 55.9999999999999
+                },
+                {
+                  "name": "Food",
+                  "color": "hsl(319, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Hygiene Kit",
+                  "color": "hsl(33, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Mattress",
+                  "color": "hsl(320, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Stroller",
+                  "color": "hsl(90, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 5825.583333333325
+                }
+              ]
+            },
+            {
+              "name": "Food",
+              "color": "hsl(319, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bread",
+                  "color": "hsl(51, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Energy Bar",
+                  "color": "hsl(62, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Individual Snacks",
+                  "color": "hsl(306, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Household",
+              "color": "hsl(17, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bag",
+                  "color": "hsl(353, 70%, 50%)",
+                  "value": 10000.0
+                }
+              ]
+            },
+            {
+              "name": "Hygiene",
+              "color": "hsl(176, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bath Towel",
+                  "color": "hsl(262, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Hygiene Kit",
+                  "color": "hsl(33, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Shampoo",
+                  "color": "hsl(112, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Soap",
+                  "color": "hsl(304, 70%, 50%)",
+                  "value": 1000.0
+                },
+                {
+                  "name": "Wipes",
+                  "color": "hsl(198, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Shelter",
+              "color": "hsl(216, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Roll Mat",
+                  "color": "hsl(121, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Sleeping Bag",
+                  "color": "hsl(3, 70%, 50%)",
+                  "value": 550.0
+                },
+                {
+                  "name": "Tent",
+                  "color": "hsl(278, 70%, 50%)",
+                  "value": 600.0
+                }
+              ]
+            },
+            {
+              "name": "Toys & Activities",
+              "color": "hsl(44, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Musical Instrument",
+                  "color": "hsl(250, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "W.A.S.H.",
+              "color": "hsl(330, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Washing Machine",
+                  "color": "hsl(49, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 181.0,
+          "color": "hsl(181, 70%, 50%)",
+          "children": [
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bottoms",
+                  "color": "hsl(233, 70%, 50%)",
+                  "value": 28.0833333333333
+                },
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 36.5833333333333
+                },
+                {
+                  "name": "Gilet",
+                  "color": "hsl(277, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Gloves",
+                  "color": "hsl(103, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Hat",
+                  "color": "hsl(164, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Jacket",
+                  "color": "hsl(265, 70%, 50%)",
+                  "value": 43.25
+                },
+                {
+                  "name": "Jumper",
+                  "color": "hsl(321, 70%, 50%)",
+                  "value": 48.8333333333333
+                },
+                {
+                  "name": "Scarf",
+                  "color": "hsl(173, 70%, 50%)",
+                  "value": 20.9166666666666
+                },
+                {
+                  "name": "Socks",
+                  "color": "hsl(159, 70%, 50%)",
+                  "value": 48.41666666666663
+                },
+                {
+                  "name": "Top",
+                  "color": "hsl(5, 70%, 50%)",
+                  "value": 68.6666666666666
+                },
+                {
+                  "name": "Underwear",
+                  "color": "hsl(185, 70%, 50%)",
+                  "value": 3.33333333333333
+                }
+              ]
+            },
+            {
+              "name": "Cooking",
+              "color": "hsl(95, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Water Bottle",
+                  "color": "hsl(3, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Education",
+              "color": "hsl(205, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Backpack",
+                  "color": "hsl(311, 70%, 50%)",
+                  "value": 63.0
+                }
+              ]
+            },
+            {
+              "name": "Health",
+              "color": "hsl(262, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Life Jacket",
+                  "color": "hsl(79, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Hygiene",
+              "color": "hsl(176, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Soap",
+                  "color": "hsl(304, 70%, 50%)",
+                  "value": 89.0
+                }
+              ]
+            },
+            {
+              "name": "Shelter",
+              "color": "hsl(216, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Sleeping Bag",
+                  "color": "hsl(3, 70%, 50%)",
+                  "value": 187.0
+                }
+              ]
+            },
+            {
+              "name": "Toys & Activities",
+              "color": "hsl(44, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Exercise Mat",
+                  "color": "hsl(138, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ESP",
+      "color": "hsl(295, 70%, 50%)",
+      "children": [
+        {
+          "name": 183.0,
+          "color": "hsl(183, 70%, 50%)",
+          "children": [
+            {
+              "name": "Food",
+              "color": "hsl(319, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Milk",
+                  "color": "hsl(252, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GBR",
+      "color": "hsl(26, 70%, 50%)",
+      "children": [
+        {
+          "name": 17.0,
+          "color": "hsl(17, 70%, 50%)",
+          "children": [
+            {
+              "name": "Baby",
+              "color": "hsl(238, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Diaper",
+                  "color": "hsl(160, 70%, 50%)",
+                  "value": 46.9999999999998
+                }
+              ]
+            },
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 2021.58333333333
+                },
+                {
+                  "name": "Shoes",
+                  "color": "hsl(358, 70%, 50%)",
+                  "value": 0.916666666666666
+                },
+                {
+                  "name": "Socks",
+                  "color": "hsl(159, 70%, 50%)",
+                  "value": 9.0
+                },
+                {
+                  "name": "Top",
+                  "color": "hsl(5, 70%, 50%)",
+                  "value": 3.0
+                },
+                {
+                  "name": "Underwear",
+                  "color": "hsl(185, 70%, 50%)",
+                  "value": 1.33333333333333
+                }
+              ]
+            },
+            {
+              "name": "Health",
+              "color": "hsl(262, 70%, 50%)",
+              "children": [
+                {
+                  "name": "First Aid Kit",
+                  "color": "hsl(189, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Household",
+              "color": "hsl(17, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Blanket",
+                  "color": "hsl(186, 70%, 50%)",
+                  "value": 418.0
+                }
+              ]
+            },
+            {
+              "name": "Hygiene",
+              "color": "hsl(176, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Shampoo",
+                  "color": "hsl(112, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Toothbrush",
+                  "color": "hsl(141, 70%, 50%)",
+                  "value": 225.0
+                }
+              ]
+            },
+            {
+              "name": "Shelter",
+              "color": "hsl(216, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Sleeping Bag",
+                  "color": "hsl(3, 70%, 50%)",
+                  "value": 21.0
+                },
+                {
+                  "name": "Tent",
+                  "color": "hsl(278, 70%, 50%)",
+                  "value": 162.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 34.0,
+          "color": "hsl(34, 70%, 50%)",
+          "children": [
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 75.0
+                }
+              ]
+            },
+            {
+              "name": "Household",
+              "color": "hsl(17, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Blanket",
+                  "color": "hsl(186, 70%, 50%)",
+                  "value": 20.0
+                }
+              ]
+            },
+            {
+              "name": "Shelter",
+              "color": "hsl(216, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Sleeping Bag",
+                  "color": "hsl(3, 70%, 50%)",
+                  "value": 20.0
+                },
+                {
+                  "name": "Tent",
+                  "color": "hsl(278, 70%, 50%)",
+                  "value": 40.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 42.0,
+          "color": "hsl(42, 70%, 50%)",
+          "children": [
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bottoms",
+                  "color": "hsl(233, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 168.6666666666662
+                },
+                {
+                  "name": "Coat",
+                  "color": "hsl(225, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Jumper",
+                  "color": "hsl(321, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Leggings",
+                  "color": "hsl(9, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Maternity Clothes",
+                  "color": "hsl(95, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Pyjamas",
+                  "color": "hsl(262, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Shoes",
+                  "color": "hsl(358, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Socks",
+                  "color": "hsl(159, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Top",
+                  "color": "hsl(5, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Underwear",
+                  "color": "hsl(185, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Hygiene",
+              "color": "hsl(176, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bath Towel",
+                  "color": "hsl(262, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Lotion",
+                  "color": "hsl(250, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Shampoo",
+                  "color": "hsl(112, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Soap",
+                  "color": "hsl(304, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Toiletries",
+                  "color": "hsl(75, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Toothbrush",
+                  "color": "hsl(141, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Toothpaste",
+                  "color": "hsl(237, 70%, 50%)",
+                  "value": 4.66
+                },
+                {
+                  "name": "Wipes",
+                  "color": "hsl(198, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Shelter",
+              "color": "hsl(216, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Sleeping Bag",
+                  "color": "hsl(3, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 45.0,
+          "color": "hsl(45, 70%, 50%)",
+          "children": [
+            {
+              "name": "Hygiene",
+              "color": "hsl(176, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Soap",
+                  "color": "hsl(304, 70%, 50%)",
+                  "value": 196312.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 48.0,
+          "color": "hsl(48, 70%, 50%)",
+          "children": [
+            {
+              "name": "Baby",
+              "color": "hsl(238, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Diaper",
+                  "color": "hsl(160, 70%, 50%)",
+                  "value": 1133.33333333333
+                }
+              ]
+            },
+            {
+              "name": "Cleaning",
+              "color": "hsl(285, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bottle",
+                  "color": "hsl(174, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Jumper",
+                  "color": "hsl(321, 70%, 50%)",
+                  "value": 28.58333333333326
+                },
+                {
+                  "name": "Top",
+                  "color": "hsl(5, 70%, 50%)",
+                  "value": 14.58333333333331
+                }
+              ]
+            },
+            {
+              "name": "Cooking",
+              "color": "hsl(95, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Travel Mug",
+                  "color": "hsl(150, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Education",
+              "color": "hsl(205, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Backpack",
+                  "color": "hsl(311, 70%, 50%)",
+                  "value": 163.0
+                },
+                {
+                  "name": "Notebook",
+                  "color": "hsl(66, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Electronic",
+              "color": "hsl(166, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Earphones",
+                  "color": "hsl(184, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Laptop Sleeve",
+                  "color": "hsl(337, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Mouse",
+                  "color": "hsl(123, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Phone Fan",
+                  "color": "hsl(318, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Phone Stand",
+                  "color": "hsl(289, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Tablet Sleeve",
+                  "color": "hsl(41, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Household",
+              "color": "hsl(17, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Drawstring Bag",
+                  "color": "hsl(134, 70%, 50%)",
+                  "value": 9970.0
+                },
+                {
+                  "name": "Umbrella",
+                  "color": "hsl(113, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Hygiene",
+              "color": "hsl(176, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Hygiene Kit",
+                  "color": "hsl(33, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Mask",
+                  "color": "hsl(70, 70%, 50%)",
+                  "value": 7000.0
+                }
+              ]
+            },
+            {
+              "name": "Toys & Activities",
+              "color": "hsl(44, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Paper Bag",
+                  "color": "hsl(335, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Pen",
+                  "color": "hsl(201, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 51.0,
+          "color": "hsl(51, 70%, 50%)",
+          "children": [
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 58.3333333333333
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 69.0,
+          "color": "hsl(69, 70%, 50%)",
+          "children": [
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bottoms",
+                  "color": "hsl(233, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 176.1666666666663
+                },
+                {
+                  "name": "Gloves",
+                  "color": "hsl(103, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Hat",
+                  "color": "hsl(164, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Jacket",
+                  "color": "hsl(265, 70%, 50%)",
+                  "value": 87.08333333333316
+                },
+                {
+                  "name": "Jumper",
+                  "color": "hsl(321, 70%, 50%)",
+                  "value": 164.24999999999997
+                },
+                {
+                  "name": "Scarf",
+                  "color": "hsl(173, 70%, 50%)",
+                  "value": 39.83333333333332
+                },
+                {
+                  "name": "Shoes",
+                  "color": "hsl(358, 70%, 50%)",
+                  "value": 2.999999999999996
+                },
+                {
+                  "name": "Skirt",
+                  "color": "hsl(272, 70%, 50%)",
+                  "value": 39.1666666666666
+                },
+                {
+                  "name": "Socks",
+                  "color": "hsl(159, 70%, 50%)",
+                  "value": 10.66666666666666
+                },
+                {
+                  "name": "Sweatpants",
+                  "color": "hsl(256, 70%, 50%)",
+                  "value": 219.49999999999972
+                },
+                {
+                  "name": "Top",
+                  "color": "hsl(5, 70%, 50%)",
+                  "value": 197.3333333333332
+                },
+                {
+                  "name": "Underwear",
+                  "color": "hsl(185, 70%, 50%)",
+                  "value": 34.99999999999999
+                },
+                {
+                  "name": "Winter Shoes",
+                  "color": "hsl(288, 70%, 50%)",
+                  "value": 17.3333333333333
+                }
+              ]
+            },
+            {
+              "name": "Household",
+              "color": "hsl(17, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Blanket",
+                  "color": "hsl(186, 70%, 50%)",
+                  "value": 347.0
+                }
+              ]
+            },
+            {
+              "name": "Hygiene",
+              "color": "hsl(176, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bath Towel",
+                  "color": "hsl(262, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Shelter",
+              "color": "hsl(216, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Sleeping Bag",
+                  "color": "hsl(3, 70%, 50%)",
+                  "value": 15.0
+                },
+                {
+                  "name": "Tent",
+                  "color": "hsl(278, 70%, 50%)",
+                  "value": 26.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 84.0,
+          "color": "hsl(84, 70%, 50%)",
+          "children": [
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Household",
+              "color": "hsl(17, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Blanket",
+                  "color": "hsl(186, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Shelter",
+              "color": "hsl(216, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Tent",
+                  "color": "hsl(278, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 86.0,
+          "color": "hsl(86, 70%, 50%)",
+          "children": [
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 39.5
+                },
+                {
+                  "name": "Shoes",
+                  "color": "hsl(358, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Shelter",
+              "color": "hsl(216, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Sleeping Bag",
+                  "color": "hsl(3, 70%, 50%)",
+                  "value": 12.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 98.0,
+          "color": "hsl(98, 70%, 50%)",
+          "children": [
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 9.58333333333333
+                },
+                {
+                  "name": "Shoes",
+                  "color": "hsl(358, 70%, 50%)",
+                  "value": 1.08333333333333
+                },
+                {
+                  "name": "Underwear",
+                  "color": "hsl(185, 70%, 50%)",
+                  "value": 16.4166666666666
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 102.0,
+          "color": "hsl(102, 70%, 50%)",
+          "children": [
+            {
+              "name": "Baby",
+              "color": "hsl(238, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Blanket",
+                  "color": "hsl(186, 70%, 50%)",
+                  "value": 67.0
+                },
+                {
+                  "name": "Diaper",
+                  "color": "hsl(160, 70%, 50%)",
+                  "value": 3.18666666666666
+                },
+                {
+                  "name": "Onesie",
+                  "color": "hsl(39, 70%, 50%)",
+                  "value": 83.0833333333333
+                }
+              ]
+            },
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bottoms",
+                  "color": "hsl(233, 70%, 50%)",
+                  "value": 7.75
+                },
+                {
+                  "name": "Bra",
+                  "color": "hsl(342, 70%, 50%)",
+                  "value": 15.8333333333333
+                },
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 934.4999999999993
+                },
+                {
+                  "name": "Gloves",
+                  "color": "hsl(103, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Hat",
+                  "color": "hsl(164, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Jacket",
+                  "color": "hsl(265, 70%, 50%)",
+                  "value": 14.41666666666666
+                },
+                {
+                  "name": "Jumper",
+                  "color": "hsl(321, 70%, 50%)",
+                  "value": 3.0
+                },
+                {
+                  "name": "Scarf",
+                  "color": "hsl(173, 70%, 50%)",
+                  "value": 14.91666666666666
+                },
+                {
+                  "name": "Shoes",
+                  "color": "hsl(358, 70%, 50%)",
+                  "value": 10.33333333333333
+                },
+                {
+                  "name": "Top",
+                  "color": "hsl(5, 70%, 50%)",
+                  "value": 5.0
+                },
+                {
+                  "name": "Underwear",
+                  "color": "hsl(185, 70%, 50%)",
+                  "value": 14.6666666666666
+                },
+                {
+                  "name": "Vest",
+                  "color": "hsl(181, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Winter Shoes",
+                  "color": "hsl(288, 70%, 50%)",
+                  "value": 1.66666666666666
+                }
+              ]
+            },
+            {
+              "name": "Household",
+              "color": "hsl(17, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Blanket",
+                  "color": "hsl(186, 70%, 50%)",
+                  "value": 648.0
+                }
+              ]
+            },
+            {
+              "name": "Hygiene",
+              "color": "hsl(176, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Feminine Pad",
+                  "color": "hsl(329, 70%, 50%)",
+                  "value": 7.53333333333333
+                }
+              ]
+            },
+            {
+              "name": "Shelter",
+              "color": "hsl(216, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Sleeping Bag",
+                  "color": "hsl(3, 70%, 50%)",
+                  "value": 9.0
+                },
+                {
+                  "name": "Tent",
+                  "color": "hsl(278, 70%, 50%)",
+                  "value": 6.0
+                }
+              ]
+            },
+            {
+              "name": "Toys & Activities",
+              "color": "hsl(44, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Exercise Mat",
+                  "color": "hsl(138, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 104.0,
+          "color": "hsl(104, 70%, 50%)",
+          "children": [
+            {
+              "name": "Toys & Activities",
+              "color": "hsl(44, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Yarn",
+                  "color": "hsl(352, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 124.0,
+          "color": "hsl(124, 70%, 50%)",
+          "children": [
+            {
+              "name": "Baby",
+              "color": "hsl(238, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Baby Box",
+                  "color": "hsl(101, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Baby Kit",
+                  "color": "hsl(255, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Blanket",
+                  "color": "hsl(186, 70%, 50%)",
+                  "value": 215.0
+                },
+                {
+                  "name": "Bottle",
+                  "color": "hsl(174, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Changing Pad",
+                  "color": "hsl(39, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Coat",
+                  "color": "hsl(225, 70%, 50%)",
+                  "value": 3.33333333333333
+                },
+                {
+                  "name": "Diaper",
+                  "color": "hsl(160, 70%, 50%)",
+                  "value": 8.29333333333332
+                },
+                {
+                  "name": "Jacket",
+                  "color": "hsl(265, 70%, 50%)",
+                  "value": 4.0
+                },
+                {
+                  "name": "Pram Suit",
+                  "color": "hsl(336, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Stroller",
+                  "color": "hsl(90, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Belt",
+                  "color": "hsl(47, 70%, 50%)",
+                  "value": 285.916666666666
+                },
+                {
+                  "name": "Bottoms",
+                  "color": "hsl(233, 70%, 50%)",
+                  "value": 233.3333333333331
+                },
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 827.4999999999992
+                },
+                {
+                  "name": "Coat",
+                  "color": "hsl(225, 70%, 50%)",
+                  "value": 5.08333333333333
+                },
+                {
+                  "name": "Dress",
+                  "color": "hsl(253, 70%, 50%)",
+                  "value": 1715.8333333333258
+                },
+                {
+                  "name": "Gloves",
+                  "color": "hsl(103, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Hat",
+                  "color": "hsl(164, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Jacket",
+                  "color": "hsl(265, 70%, 50%)",
+                  "value": 383.83333333333286
+                },
+                {
+                  "name": "Jumper",
+                  "color": "hsl(321, 70%, 50%)",
+                  "value": 319.16666666666634
+                },
+                {
+                  "name": "Leggings",
+                  "color": "hsl(9, 70%, 50%)",
+                  "value": 3.08333333333333
+                },
+                {
+                  "name": "Maternity Clothes",
+                  "color": "hsl(95, 70%, 50%)",
+                  "value": 31.5
+                },
+                {
+                  "name": "Pyjamas",
+                  "color": "hsl(262, 70%, 50%)",
+                  "value": 255.5833333333332
+                },
+                {
+                  "name": "Scarf",
+                  "color": "hsl(173, 70%, 50%)",
+                  "value": 148.4999999999999
+                },
+                {
+                  "name": "Shoes",
+                  "color": "hsl(358, 70%, 50%)",
+                  "value": 146.9166666666665
+                },
+                {
+                  "name": "Skirt",
+                  "color": "hsl(272, 70%, 50%)",
+                  "value": 32.83333333333333
+                },
+                {
+                  "name": "Socks",
+                  "color": "hsl(159, 70%, 50%)",
+                  "value": 192.91666666666634
+                },
+                {
+                  "name": "Thermals",
+                  "color": "hsl(297, 70%, 50%)",
+                  "value": 19.41666666666666
+                },
+                {
+                  "name": "Tights",
+                  "color": "hsl(163, 70%, 50%)",
+                  "value": 7.41666666666666
+                },
+                {
+                  "name": "Top",
+                  "color": "hsl(5, 70%, 50%)",
+                  "value": 383.08333333333275
+                },
+                {
+                  "name": "Underwear",
+                  "color": "hsl(185, 70%, 50%)",
+                  "value": 281.4999999999996
+                }
+              ]
+            },
+            {
+              "name": "Health",
+              "color": "hsl(262, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Mobility Walker",
+                  "color": "hsl(107, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Wheelchair",
+                  "color": "hsl(44, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Household",
+              "color": "hsl(17, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bed Linens",
+                  "color": "hsl(309, 70%, 50%)",
+                  "value": 9.0
+                },
+                {
+                  "name": "Blanket",
+                  "color": "hsl(186, 70%, 50%)",
+                  "value": 1151.0
+                }
+              ]
+            },
+            {
+              "name": "Hygiene",
+              "color": "hsl(176, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bath Towel",
+                  "color": "hsl(262, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Toiletries",
+                  "color": "hsl(75, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Office",
+              "color": "hsl(135, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Stationery",
+                  "color": "hsl(132, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Shelter",
+              "color": "hsl(216, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Cot",
+                  "color": "hsl(342, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Rain Poncho",
+                  "color": "hsl(184, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Rucksack",
+                  "color": "hsl(272, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Sleeping Bag",
+                  "color": "hsl(3, 70%, 50%)",
+                  "value": 56.0
+                },
+                {
+                  "name": "Tent",
+                  "color": "hsl(278, 70%, 50%)",
+                  "value": 332.0
+                }
+              ]
+            },
+            {
+              "name": "Toys & Activities",
+              "color": "hsl(44, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Toy",
+                  "color": "hsl(144, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 132.0,
+          "color": "hsl(132, 70%, 50%)",
+          "children": [
+            {
+              "name": "Toys & Activities",
+              "color": "hsl(44, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Sewing Machine",
+                  "color": "hsl(9, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 140.0,
+          "color": "hsl(140, 70%, 50%)",
+          "children": [
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Fabric",
+                  "color": "hsl(198, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Hygiene",
+              "color": "hsl(176, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Feminine Pad",
+                  "color": "hsl(329, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 141.0,
+          "color": "hsl(141, 70%, 50%)",
+          "children": [
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Shoes",
+                  "color": "hsl(358, 70%, 50%)",
+                  "value": 10.0
+                },
+                {
+                  "name": "Top",
+                  "color": "hsl(5, 70%, 50%)",
+                  "value": 299.25
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 143.0,
+          "color": "hsl(143, 70%, 50%)",
+          "children": [
+            {
+              "name": "Baby",
+              "color": "hsl(238, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Blanket",
+                  "color": "hsl(186, 70%, 50%)",
+                  "value": 14.0
+                },
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 786.916666666666
+                },
+                {
+                  "name": "Jumper",
+                  "color": "hsl(321, 70%, 50%)",
+                  "value": 5.58333333333333
+                },
+                {
+                  "name": "Scarf",
+                  "color": "hsl(173, 70%, 50%)",
+                  "value": 14.0
+                },
+                {
+                  "name": "Socks",
+                  "color": "hsl(159, 70%, 50%)",
+                  "value": 13.25
+                },
+                {
+                  "name": "Top",
+                  "color": "hsl(5, 70%, 50%)",
+                  "value": 109.4166666666666
+                }
+              ]
+            },
+            {
+              "name": "Household",
+              "color": "hsl(17, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Blanket",
+                  "color": "hsl(186, 70%, 50%)",
+                  "value": 48.0
+                }
+              ]
+            },
+            {
+              "name": "Hygiene",
+              "color": "hsl(176, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Hygiene Kit",
+                  "color": "hsl(33, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Shelter",
+              "color": "hsl(216, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Sleeping Bag",
+                  "color": "hsl(3, 70%, 50%)",
+                  "value": 304.9999999999998
+                },
+                {
+                  "name": "Tent",
+                  "color": "hsl(278, 70%, 50%)",
+                  "value": 40.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 144.0,
+          "color": "hsl(144, 70%, 50%)",
+          "children": [
+            {
+              "name": "Baby",
+              "color": "hsl(238, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bottle",
+                  "color": "hsl(174, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 145.0,
+          "color": "hsl(145, 70%, 50%)",
+          "children": [
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 5.16666666666666
+                },
+                {
+                  "name": "Coat",
+                  "color": "hsl(225, 70%, 50%)",
+                  "value": 11.33333333333331
+                },
+                {
+                  "name": "Gloves",
+                  "color": "hsl(103, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Hat",
+                  "color": "hsl(164, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Jumper",
+                  "color": "hsl(321, 70%, 50%)",
+                  "value": 2.83333333333332
+                },
+                {
+                  "name": "Scarf",
+                  "color": "hsl(173, 70%, 50%)",
+                  "value": 1.25
+                },
+                {
+                  "name": "Shoes",
+                  "color": "hsl(358, 70%, 50%)",
+                  "value": 4.58333333333333
+                },
+                {
+                  "name": "Socks",
+                  "color": "hsl(159, 70%, 50%)",
+                  "value": 1.833333333333333
+                },
+                {
+                  "name": "Top",
+                  "color": "hsl(5, 70%, 50%)",
+                  "value": 13.99999999999999
+                }
+              ]
+            },
+            {
+              "name": "Household",
+              "color": "hsl(17, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bag",
+                  "color": "hsl(353, 70%, 50%)",
+                  "value": 5.0
+                },
+                {
+                  "name": "Blanket",
+                  "color": "hsl(186, 70%, 50%)",
+                  "value": 30.0
+                }
+              ]
+            },
+            {
+              "name": "Shelter",
+              "color": "hsl(216, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Sleeping Bag",
+                  "color": "hsl(3, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 146.0,
+          "color": "hsl(146, 70%, 50%)",
+          "children": [
+            {
+              "name": "Hygiene",
+              "color": "hsl(176, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Mask",
+                  "color": "hsl(70, 70%, 50%)",
+                  "value": 2500.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 148.0,
+          "color": "hsl(148, 70%, 50%)",
+          "children": [
+            {
+              "name": "Household",
+              "color": "hsl(17, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Blanket",
+                  "color": "hsl(186, 70%, 50%)",
+                  "value": 180.0
+                }
+              ]
+            },
+            {
+              "name": "Shelter",
+              "color": "hsl(216, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Sleeping Bag",
+                  "color": "hsl(3, 70%, 50%)",
+                  "value": 36.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 149.0,
+          "color": "hsl(149, 70%, 50%)",
+          "children": [
+            {
+              "name": "Baby",
+              "color": "hsl(238, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Carrier",
+                  "color": "hsl(281, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bottoms",
+                  "color": "hsl(233, 70%, 50%)",
+                  "value": 3.5
+                },
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Coat",
+                  "color": "hsl(225, 70%, 50%)",
+                  "value": 10.249999999999979
+                },
+                {
+                  "name": "Flip Flops",
+                  "color": "hsl(34, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Gloves",
+                  "color": "hsl(103, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Hat",
+                  "color": "hsl(164, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Jumper",
+                  "color": "hsl(321, 70%, 50%)",
+                  "value": 10.33333333333332
+                },
+                {
+                  "name": "Long Sleeve Top",
+                  "color": "hsl(141, 70%, 50%)",
+                  "value": 3.33333333333333
+                },
+                {
+                  "name": "Shoes",
+                  "color": "hsl(358, 70%, 50%)",
+                  "value": 3.0833333333333277
+                },
+                {
+                  "name": "Shorts",
+                  "color": "hsl(153, 70%, 50%)",
+                  "value": 4.0
+                },
+                {
+                  "name": "Socks",
+                  "color": "hsl(159, 70%, 50%)",
+                  "value": 6.75
+                },
+                {
+                  "name": "Top",
+                  "color": "hsl(5, 70%, 50%)",
+                  "value": 3.33333333333333
+                },
+                {
+                  "name": "Underwear",
+                  "color": "hsl(185, 70%, 50%)",
+                  "value": 16.33333333333332
+                },
+                {
+                  "name": "Vest",
+                  "color": "hsl(181, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Cooking",
+              "color": "hsl(95, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Kitchen Utensil",
+                  "color": "hsl(143, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Pan",
+                  "color": "hsl(171, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Plastic Plate",
+                  "color": "hsl(27, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Pot",
+                  "color": "hsl(313, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Household",
+              "color": "hsl(17, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Blanket",
+                  "color": "hsl(186, 70%, 50%)",
+                  "value": 19.0
+                }
+              ]
+            },
+            {
+              "name": "Hygiene",
+              "color": "hsl(176, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Diaper",
+                  "color": "hsl(160, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Shelter",
+              "color": "hsl(216, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Camping Equipment",
+                  "color": "hsl(192, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Rucksack",
+                  "color": "hsl(272, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Sleeping Bag",
+                  "color": "hsl(3, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Tent",
+                  "color": "hsl(278, 70%, 50%)",
+                  "value": 12.0
+                }
+              ]
+            },
+            {
+              "name": "Toys & Activities",
+              "color": "hsl(44, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Yarn",
+                  "color": "hsl(352, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 151.0,
+          "color": "hsl(151, 70%, 50%)",
+          "children": [
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Top",
+                  "color": "hsl(5, 70%, 50%)",
+                  "value": 5641.666666666658
+                }
+              ]
+            },
+            {
+              "name": "Education",
+              "color": "hsl(205, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Notebook",
+                  "color": "hsl(66, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Hygiene",
+              "color": "hsl(176, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Mask",
+                  "color": "hsl(70, 70%, 50%)",
+                  "value": 135000.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 152.0,
+          "color": "hsl(152, 70%, 50%)",
+          "children": [
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 2437.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 155.0,
+          "color": "hsl(155, 70%, 50%)",
+          "children": [
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 541.583333333333
+                }
+              ]
+            },
+            {
+              "name": "Household",
+              "color": "hsl(17, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Blanket",
+                  "color": "hsl(186, 70%, 50%)",
+                  "value": 991.0
+                }
+              ]
+            },
+            {
+              "name": "Shelter",
+              "color": "hsl(216, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Sleeping Bag",
+                  "color": "hsl(3, 70%, 50%)",
+                  "value": 757.0
+                },
+                {
+                  "name": "Tent",
+                  "color": "hsl(278, 70%, 50%)",
+                  "value": 648.0
+                }
+              ]
+            },
+            {
+              "name": "Toys & Activities",
+              "color": "hsl(44, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Foam Mat",
+                  "color": "hsl(334, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 168.0,
+          "color": "hsl(168, 70%, 50%)",
+          "children": [
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Boots",
+                  "color": "hsl(85, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Bottoms",
+                  "color": "hsl(233, 70%, 50%)",
+                  "value": 9.083333333333325
+                },
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 103.5
+                },
+                {
+                  "name": "Coat",
+                  "color": "hsl(225, 70%, 50%)",
+                  "value": 2.749999999999996
+                },
+                {
+                  "name": "Gloves",
+                  "color": "hsl(103, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Hat",
+                  "color": "hsl(164, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Jacket",
+                  "color": "hsl(265, 70%, 50%)",
+                  "value": 4.9999999999999964
+                },
+                {
+                  "name": "Jumper",
+                  "color": "hsl(321, 70%, 50%)",
+                  "value": 12.16666666666666
+                },
+                {
+                  "name": "Scarf",
+                  "color": "hsl(173, 70%, 50%)",
+                  "value": 90.08333333333333
+                },
+                {
+                  "name": "Shoes",
+                  "color": "hsl(358, 70%, 50%)",
+                  "value": 2.333333333333333
+                },
+                {
+                  "name": "Socks",
+                  "color": "hsl(159, 70%, 50%)",
+                  "value": 6.08333333333332
+                },
+                {
+                  "name": "Sweatpants",
+                  "color": "hsl(256, 70%, 50%)",
+                  "value": 0.583333333333333
+                },
+                {
+                  "name": "Thermals",
+                  "color": "hsl(297, 70%, 50%)",
+                  "value": 0.9999999999999991
+                },
+                {
+                  "name": "Top",
+                  "color": "hsl(5, 70%, 50%)",
+                  "value": 30.1666666666666
+                }
+              ]
+            },
+            {
+              "name": "Cooking",
+              "color": "hsl(95, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Camping Stove",
+                  "color": "hsl(358, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Cooking Kit",
+                  "color": "hsl(161, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Frying Pan",
+                  "color": "hsl(32, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Pot",
+                  "color": "hsl(313, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Thermos",
+                  "color": "hsl(316, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Education",
+              "color": "hsl(205, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Backpack",
+                  "color": "hsl(311, 70%, 50%)",
+                  "value": 17.0
+                }
+              ]
+            },
+            {
+              "name": "Electronic",
+              "color": "hsl(166, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Battery",
+                  "color": "hsl(169, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Electronics",
+                  "color": "hsl(10, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Phone",
+                  "color": "hsl(303, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Health",
+              "color": "hsl(262, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bandage",
+                  "color": "hsl(167, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Household",
+              "color": "hsl(17, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Blanket",
+                  "color": "hsl(186, 70%, 50%)",
+                  "value": 59.0
+                },
+                {
+                  "name": "Flashlight",
+                  "color": "hsl(195, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Mirror",
+                  "color": "hsl(181, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Hygiene",
+              "color": "hsl(176, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bath Towel",
+                  "color": "hsl(262, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Deodorant",
+                  "color": "hsl(68, 70%, 50%)",
+                  "value": 4.05714285714285
+                },
+                {
+                  "name": "Shampoo",
+                  "color": "hsl(112, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Soap",
+                  "color": "hsl(304, 70%, 50%)",
+                  "value": 10.0
+                },
+                {
+                  "name": "Toothbrush",
+                  "color": "hsl(141, 70%, 50%)",
+                  "value": 10.0
+                },
+                {
+                  "name": "Toothpaste",
+                  "color": "hsl(237, 70%, 50%)",
+                  "value": 46.6
+                }
+              ]
+            },
+            {
+              "name": "Infrastructure",
+              "color": "hsl(328, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Tarp",
+                  "color": "hsl(40, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Shelter",
+              "color": "hsl(216, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Awning",
+                  "color": "hsl(21, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Camping Equipment",
+                  "color": "hsl(192, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Inflatable Mattress",
+                  "color": "hsl(331, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Rucksack",
+                  "color": "hsl(272, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Sleeping Bag",
+                  "color": "hsl(3, 70%, 50%)",
+                  "value": 115.0
+                },
+                {
+                  "name": "Tent",
+                  "color": "hsl(278, 70%, 50%)",
+                  "value": 468.0
+                }
+              ]
+            },
+            {
+              "name": "W.A.S.H.",
+              "color": "hsl(330, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Toilet Tent",
+                  "color": "hsl(352, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Water Tank",
+                  "color": "hsl(263, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 191.0,
+          "color": "hsl(191, 70%, 50%)",
+          "children": [
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 281.75
+                }
+              ]
+            },
+            {
+              "name": "Shelter",
+              "color": "hsl(216, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Sleeping Bag",
+                  "color": "hsl(3, 70%, 50%)",
+                  "value": 340.0
+                },
+                {
+                  "name": "Tent",
+                  "color": "hsl(278, 70%, 50%)",
+                  "value": 4620.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 192.0,
+          "color": "hsl(192, 70%, 50%)",
+          "children": [
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 4436.41666666666
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 194.0,
+          "color": "hsl(194, 70%, 50%)",
+          "children": [
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 9.16666666666666
+                }
+              ]
+            },
+            {
+              "name": "Shelter",
+              "color": "hsl(216, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Tent",
+                  "color": "hsl(278, 70%, 50%)",
+                  "value": 96.0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GRC",
+      "color": "hsl(93, 70%, 50%)",
+      "children": [
+        {
+          "name": 4.0,
+          "color": "hsl(4, 70%, 50%)",
+          "children": [
+            {
+              "name": "W.A.S.H.",
+              "color": "hsl(330, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Pipe",
+                  "color": "hsl(174, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Washing Machine",
+                  "color": "hsl(49, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Water Heater",
+                  "color": "hsl(146, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Water Pump",
+                  "color": "hsl(167, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Water Tank",
+                  "color": "hsl(263, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 205.0,
+          "color": "hsl(205, 70%, 50%)",
+          "children": [
+            {
+              "name": "Shelter",
+              "color": "hsl(216, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Rain Poncho",
+                  "color": "hsl(184, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ITA",
+      "color": "hsl(42, 70%, 50%)",
+      "children": [
+        {
+          "name": 54.0,
+          "color": "hsl(54, 70%, 50%)",
+          "children": [
+            {
+              "name": "Baby",
+              "color": "hsl(238, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 105.99999999999993
+                },
+                {
+                  "name": "Shoes",
+                  "color": "hsl(358, 70%, 50%)",
+                  "value": 3.25
+                },
+                {
+                  "name": "Top",
+                  "color": "hsl(5, 70%, 50%)",
+                  "value": 16.4166666666666
+                }
+              ]
+            },
+            {
+              "name": "Household",
+              "color": "hsl(17, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Blanket",
+                  "color": "hsl(186, 70%, 50%)",
+                  "value": 421.0
+                }
+              ]
+            },
+            {
+              "name": "Hygiene",
+              "color": "hsl(176, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Toiletries",
+                  "color": "hsl(75, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 173.0,
+          "color": "hsl(173, 70%, 50%)",
+          "children": [
+            {
+              "name": "Household",
+              "color": "hsl(17, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Blanket",
+                  "color": "hsl(186, 70%, 50%)",
+                  "value": 2615.0
+                }
+              ]
+            },
+            {
+              "name": "Hygiene",
+              "color": "hsl(176, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Toiletries",
+                  "color": "hsl(75, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 175.0,
+          "color": "hsl(175, 70%, 50%)",
+          "children": [
+            {
+              "name": "Baby",
+              "color": "hsl(238, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Diaper",
+                  "color": "hsl(160, 70%, 50%)",
+                  "value": 98.33333333333333
+                }
+              ]
+            },
+            {
+              "name": "Food",
+              "color": "hsl(319, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Dried Food",
+                  "color": "hsl(306, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Household",
+              "color": "hsl(17, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Blanket",
+                  "color": "hsl(186, 70%, 50%)",
+                  "value": 1307.0
+                }
+              ]
+            },
+            {
+              "name": "Hygiene",
+              "color": "hsl(176, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Soap",
+                  "color": "hsl(304, 70%, 50%)",
+                  "value": 1500.0
+                }
+              ]
+            },
+            {
+              "name": "Shelter",
+              "color": "hsl(216, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Sleeping Bag",
+                  "color": "hsl(3, 70%, 50%)",
+                  "value": 500.0
+                },
+                {
+                  "name": "Tent",
+                  "color": "hsl(278, 70%, 50%)",
+                  "value": 1000.0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "LTU",
+      "color": "hsl(340, 70%, 50%)",
+      "children": [
+        {
+          "name": 190.0,
+          "color": "hsl(190, 70%, 50%)",
+          "children": [
+            {
+              "name": "Health",
+              "color": "hsl(262, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Candesartan - 16Mg",
+                  "color": "hsl(221, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Cetirizin - 10Mg",
+                  "color": "hsl(212, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Fosinopril - 20Mg",
+                  "color": "hsl(47, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Gabapentin - 600Mg",
+                  "color": "hsl(328, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Ibandronat - 150Mg",
+                  "color": "hsl(40, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Loratadin - 10Mg",
+                  "color": "hsl(229, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Moxonidin - 0.2Mg",
+                  "color": "hsl(54, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Moxonidin - 0.4Mg",
+                  "color": "hsl(244, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Olanzapin - 50G",
+                  "color": "hsl(285, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Sertralin - 5Mg",
+                  "color": "hsl(165, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Terbinafin - 25Mg",
+                  "color": "hsl(61, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "NLD",
+      "color": "hsl(149, 70%, 50%)",
+      "children": [
+        {
+          "name": 121.0,
+          "color": "hsl(121, 70%, 50%)",
+          "children": [
+            {
+              "name": "Electronic",
+              "color": "hsl(166, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Chromebook",
+                  "color": "hsl(286, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Desktop Computer",
+                  "color": "hsl(18, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Laptop",
+                  "color": "hsl(172, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Laptop Accessories",
+                  "color": "hsl(264, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Vr Headset",
+                  "color": "hsl(137, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 158.0,
+          "color": "hsl(158, 70%, 50%)",
+          "children": [
+            {
+              "name": "Cooking",
+              "color": "hsl(95, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Water Bottle",
+                  "color": "hsl(3, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PAK",
+      "color": "hsl(23, 70%, 50%)",
+      "children": [
+        {
+          "name": 25.0,
+          "color": "hsl(25, 70%, 50%)",
+          "children": [
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Sweatpants",
+                  "color": "hsl(256, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "POL",
+      "color": "hsl(220, 70%, 50%)",
+      "children": [
+        {
+          "name": 153.0,
+          "color": "hsl(153, 70%, 50%)",
+          "children": [
+            {
+              "name": "Baby",
+              "color": "hsl(238, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Diaper",
+                  "color": "hsl(160, 70%, 50%)",
+                  "value": 117.37333333333329
+                },
+                {
+                  "name": "Pull-Ups",
+                  "color": "hsl(147, 70%, 50%)",
+                  "value": 3.433333333333326
+                }
+              ]
+            },
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Safety Jacket",
+                  "color": "hsl(205, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Underwear",
+                  "color": "hsl(185, 70%, 50%)",
+                  "value": 6.0
+                }
+              ]
+            },
+            {
+              "name": "Education",
+              "color": "hsl(205, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Chalk",
+                  "color": "hsl(63, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Health",
+              "color": "hsl(262, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Acm Bowl",
+                  "color": "hsl(168, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Adhesive Bandage",
+                  "color": "hsl(228, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Adult Resuscitator",
+                  "color": "hsl(353, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Airlife Face Mask",
+                  "color": "hsl(358, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Airlife Ventilation Circuit",
+                  "color": "hsl(359, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Alcohol Prep Pad",
+                  "color": "hsl(262, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Bd Extension Set",
+                  "color": "hsl(15, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Bd Leverlock Cannula",
+                  "color": "hsl(96, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Blood Collection Adapter",
+                  "color": "hsl(166, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Blood Pressure Cuff",
+                  "color": "hsl(298, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Bowl Pack",
+                  "color": "hsl(257, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Cane",
+                  "color": "hsl(177, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Cartridge Express Ni",
+                  "color": "hsl(174, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Catheter",
+                  "color": "hsl(199, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Champion Whistlers",
+                  "color": "hsl(197, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Cold And Hot Pack",
+                  "color": "hsl(302, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Cotton Tipped Applicator",
+                  "color": "hsl(46, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Cov-Zip Elastic Wrist And Face",
+                  "color": "hsl(345, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Crutches",
+                  "color": "hsl(223, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Elastic Bandage",
+                  "color": "hsl(74, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Emg Endotracheal Tube",
+                  "color": "hsl(54, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Eye Shield",
+                  "color": "hsl(124, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Face Shield",
+                  "color": "hsl(176, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Fetal Monitor Belt",
+                  "color": "hsl(113, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Gauze",
+                  "color": "hsl(115, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Gloves",
+                  "color": "hsl(103, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Gown",
+                  "color": "hsl(333, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Hessburg Barron Vacuum Trephine",
+                  "color": "hsl(349, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Hypodermic Needle",
+                  "color": "hsl(10, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Instant Cold Pack",
+                  "color": "hsl(114, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Knee Immobilizer",
+                  "color": "hsl(121, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Knee Splint",
+                  "color": "hsl(146, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Light",
+                  "color": "hsl(317, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Mepilex Lite",
+                  "color": "hsl(13, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Microelectrode Cable",
+                  "color": "hsl(48, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Monoject Collection Device",
+                  "color": "hsl(160, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Pulse Oximeter",
+                  "color": "hsl(85, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Silicone Round Drain",
+                  "color": "hsl(327, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Slow Flow Soft Nipple",
+                  "color": "hsl(334, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Softside Goggles",
+                  "color": "hsl(351, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Spirometer",
+                  "color": "hsl(149, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Suction Canister",
+                  "color": "hsl(99, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Surgical Drape",
+                  "color": "hsl(103, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Surgical Pack: Cerclage",
+                  "color": "hsl(342, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Surgical Pack: Chest Tube",
+                  "color": "hsl(217, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Surgical Pack: Cysto Tur Pack",
+                  "color": "hsl(323, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Surgical Pack: Ent Dental",
+                  "color": "hsl(65, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Surgical Pack: General Lap",
+                  "color": "hsl(317, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Surgical Pack: Heart Angio",
+                  "color": "hsl(42, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Surgical Pack: Hip Pinning",
+                  "color": "hsl(230, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Surgical Pack: Lami",
+                  "color": "hsl(55, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Surgical Pack: Laparoscopy",
+                  "color": "hsl(221, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Surgical Pack: Minor Plastic",
+                  "color": "hsl(128, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Surgical Pack: Open Heart",
+                  "color": "hsl(92, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Surgical Pack: Pacemaker Weiler",
+                  "color": "hsl(7, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Surgical Pack: Picc Line Insertion",
+                  "color": "hsl(181, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Surgical Pack: Rectal",
+                  "color": "hsl(49, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Surgical Pack: Retinal",
+                  "color": "hsl(121, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Surgical Pack: T And A",
+                  "color": "hsl(317, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Surgical Pack: Thoracotomy",
+                  "color": "hsl(151, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Surgical Pack: Total Hip",
+                  "color": "hsl(81, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Syringe",
+                  "color": "hsl(287, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Tongue Blade",
+                  "color": "hsl(84, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Tube Set Misonix",
+                  "color": "hsl(29, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Undercast Padding",
+                  "color": "hsl(1, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Urethral Catheter",
+                  "color": "hsl(206, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Urine Cup",
+                  "color": "hsl(129, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Vacuum Line Filter",
+                  "color": "hsl(134, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Ventilator Circuit",
+                  "color": "hsl(114, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Warm Therapy",
+                  "color": "hsl(294, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Household",
+              "color": "hsl(17, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Flashlight",
+                  "color": "hsl(195, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Hygiene",
+              "color": "hsl(176, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Feminine Pad",
+                  "color": "hsl(329, 70%, 50%)",
+                  "value": 1009.133333333333
+                },
+                {
+                  "name": "Hygiene Kit",
+                  "color": "hsl(33, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Wipes",
+                  "color": "hsl(198, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 210.0,
+          "color": "hsl(210, 70%, 50%)",
+          "children": [
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Top",
+                  "color": "hsl(5, 70%, 50%)",
+                  "value": 1715.9999999999989
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "UKR",
+      "color": "hsl(211, 70%, 50%)",
+      "children": [
+        {
+          "name": 156.0,
+          "color": "hsl(156, 70%, 50%)",
+          "children": [
+            {
+              "name": "Food",
+              "color": "hsl(319, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Sunflower Oil",
+                  "color": "hsl(128, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "USA",
+      "color": "hsl(283, 70%, 50%)",
+      "children": [
+        {
+          "name": 35.0,
+          "color": "hsl(35, 70%, 50%)",
+          "children": [
+            {
+              "name": "Baby",
+              "color": "hsl(238, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Binkie",
+                  "color": "hsl(37, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Bottle",
+                  "color": "hsl(174, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Crib",
+                  "color": "hsl(179, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Diaper",
+                  "color": "hsl(160, 70%, 50%)",
+                  "value": 190.8533333333331
+                },
+                {
+                  "name": "Food",
+                  "color": "hsl(319, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Formula",
+                  "color": "hsl(263, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Pull-Ups",
+                  "color": "hsl(147, 70%, 50%)",
+                  "value": 43.68666666666658
+                },
+                {
+                  "name": "Socks",
+                  "color": "hsl(159, 70%, 50%)",
+                  "value": 1.5
+                },
+                {
+                  "name": "Stroller",
+                  "color": "hsl(90, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Underwear",
+                  "color": "hsl(185, 70%, 50%)",
+                  "value": 4.75
+                },
+                {
+                  "name": "Wipes",
+                  "color": "hsl(198, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bottoms",
+                  "color": "hsl(233, 70%, 50%)",
+                  "value": 6.33333333333333
+                },
+                {
+                  "name": "Bra",
+                  "color": "hsl(342, 70%, 50%)",
+                  "value": 1.08333333333333
+                },
+                {
+                  "name": "Bracelet",
+                  "color": "hsl(342, 70%, 50%)",
+                  "value": 0.0833333333333333
+                },
+                {
+                  "name": "Coat",
+                  "color": "hsl(225, 70%, 50%)",
+                  "value": 1.083333333333333
+                },
+                {
+                  "name": "Dress",
+                  "color": "hsl(253, 70%, 50%)",
+                  "value": 4.58333333333333
+                },
+                {
+                  "name": "Gloves",
+                  "color": "hsl(103, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Hat",
+                  "color": "hsl(164, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Jacket",
+                  "color": "hsl(265, 70%, 50%)",
+                  "value": 3.41666666666666
+                },
+                {
+                  "name": "Jeans",
+                  "color": "hsl(210, 70%, 50%)",
+                  "value": 0.916666666666666
+                },
+                {
+                  "name": "Onesie",
+                  "color": "hsl(39, 70%, 50%)",
+                  "value": 0.916666666666666
+                },
+                {
+                  "name": "Scarf",
+                  "color": "hsl(173, 70%, 50%)",
+                  "value": 8.25
+                },
+                {
+                  "name": "Shoes",
+                  "color": "hsl(358, 70%, 50%)",
+                  "value": 18.249999999999964
+                },
+                {
+                  "name": "Shorts",
+                  "color": "hsl(153, 70%, 50%)",
+                  "value": 1.91666666666666
+                },
+                {
+                  "name": "Thermals",
+                  "color": "hsl(297, 70%, 50%)",
+                  "value": 2.0
+                },
+                {
+                  "name": "Top",
+                  "color": "hsl(5, 70%, 50%)",
+                  "value": 82.83333333333323
+                },
+                {
+                  "name": "Traditional Dress",
+                  "color": "hsl(224, 70%, 50%)",
+                  "value": 0.25
+                },
+                {
+                  "name": "Underwear",
+                  "color": "hsl(185, 70%, 50%)",
+                  "value": 106.3333333333333
+                },
+                {
+                  "name": "Winter Boots",
+                  "color": "hsl(221, 70%, 50%)",
+                  "value": 8.33333333333333
+                },
+                {
+                  "name": "Winter Jacket",
+                  "color": "hsl(3, 70%, 50%)",
+                  "value": 2.08333333333333
+                }
+              ]
+            },
+            {
+              "name": "Cooking",
+              "color": "hsl(95, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bottle Brush",
+                  "color": "hsl(32, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Lunch Box",
+                  "color": "hsl(19, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Plastic Pitcher",
+                  "color": "hsl(246, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Thermos",
+                  "color": "hsl(316, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Ziploc Bag",
+                  "color": "hsl(271, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Education",
+              "color": "hsl(205, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Backpack",
+                  "color": "hsl(311, 70%, 50%)",
+                  "value": 121.0
+                },
+                {
+                  "name": "Binder",
+                  "color": "hsl(223, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Clipboard",
+                  "color": "hsl(357, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Color Pencil",
+                  "color": "hsl(42, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Craft Stick",
+                  "color": "hsl(70, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Eraser",
+                  "color": "hsl(40, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Filing Cabinet",
+                  "color": "hsl(230, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Filler Paper",
+                  "color": "hsl(238, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Glue",
+                  "color": "hsl(359, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Highlighter",
+                  "color": "hsl(338, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Marker",
+                  "color": "hsl(272, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Notebook",
+                  "color": "hsl(66, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Pencil",
+                  "color": "hsl(79, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Pencil Case",
+                  "color": "hsl(245, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Sheet Protector",
+                  "color": "hsl(239, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "White Board",
+                  "color": "hsl(357, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "White Paper Sheets",
+                  "color": "hsl(67, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Food",
+              "color": "hsl(319, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Popcorn Bag",
+                  "color": "hsl(66, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Protein Shake",
+                  "color": "hsl(278, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Seltzer Water",
+                  "color": "hsl(95, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Health",
+              "color": "hsl(262, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Face Shield",
+                  "color": "hsl(176, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Vitamin D",
+                  "color": "hsl(200, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Household",
+              "color": "hsl(17, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bed Frame",
+                  "color": "hsl(161, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Bed Linens",
+                  "color": "hsl(309, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Bin",
+                  "color": "hsl(295, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Blanket",
+                  "color": "hsl(186, 70%, 50%)",
+                  "value": 14.0
+                },
+                {
+                  "name": "Chair",
+                  "color": "hsl(325, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Cooler",
+                  "color": "hsl(41, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Drawstring Bag",
+                  "color": "hsl(134, 70%, 50%)",
+                  "value": 925.0
+                },
+                {
+                  "name": "Febreeze",
+                  "color": "hsl(334, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Flashlight",
+                  "color": "hsl(195, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Glasses",
+                  "color": "hsl(125, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Lamp",
+                  "color": "hsl(333, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Mattress",
+                  "color": "hsl(320, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Milk Crate",
+                  "color": "hsl(89, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Table",
+                  "color": "hsl(316, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Tape",
+                  "color": "hsl(124, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Hygiene",
+              "color": "hsl(176, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Alcohol Wipes",
+                  "color": "hsl(30, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Baby Powder",
+                  "color": "hsl(16, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Comb",
+                  "color": "hsl(41, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Condom",
+                  "color": "hsl(45, 70%, 50%)",
+                  "value": 250.0
+                },
+                {
+                  "name": "Deodorant",
+                  "color": "hsl(68, 70%, 50%)",
+                  "value": 60.8571428571428
+                },
+                {
+                  "name": "Feminine Pad",
+                  "color": "hsl(329, 70%, 50%)",
+                  "value": 6.33333333333333
+                },
+                {
+                  "name": "Floss",
+                  "color": "hsl(268, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Gloves",
+                  "color": "hsl(103, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Hand Sanitizer",
+                  "color": "hsl(142, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Hygiene Kit",
+                  "color": "hsl(33, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Mask",
+                  "color": "hsl(70, 70%, 50%)",
+                  "value": 830.0
+                },
+                {
+                  "name": "Shampoo",
+                  "color": "hsl(112, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Shaving Cream",
+                  "color": "hsl(264, 70%, 50%)",
+                  "value": 941.46
+                },
+                {
+                  "name": "Tissues",
+                  "color": "hsl(280, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Toothbrush",
+                  "color": "hsl(141, 70%, 50%)",
+                  "value": 20.0
+                },
+                {
+                  "name": "Wipes",
+                  "color": "hsl(198, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Office",
+              "color": "hsl(135, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Rubberbands",
+                  "color": "hsl(210, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Religious",
+              "color": "hsl(76, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bible",
+                  "color": "hsl(162, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Quran",
+                  "color": "hsl(278, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Toys & Activities",
+              "color": "hsl(44, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Activity Book",
+                  "color": "hsl(8, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Airpump",
+                  "color": "hsl(175, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Ball",
+                  "color": "hsl(334, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Baseball",
+                  "color": "hsl(146, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Baseball Bat",
+                  "color": "hsl(13, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Baseball Glove",
+                  "color": "hsl(214, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Blocks",
+                  "color": "hsl(130, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Board Game",
+                  "color": "hsl(153, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Book",
+                  "color": "hsl(221, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Coloring Book",
+                  "color": "hsl(101, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Crayon",
+                  "color": "hsl(240, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Cricket Bat",
+                  "color": "hsl(216, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Dash Mat",
+                  "color": "hsl(169, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Doll",
+                  "color": "hsl(102, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Drawing Supplies",
+                  "color": "hsl(295, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Football",
+                  "color": "hsl(333, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Football Flag",
+                  "color": "hsl(352, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Frisbee",
+                  "color": "hsl(90, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Glow Stick",
+                  "color": "hsl(82, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Hockey Stick",
+                  "color": "hsl(274, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Jump Rope",
+                  "color": "hsl(92, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Notepad",
+                  "color": "hsl(180, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Play Tent",
+                  "color": "hsl(210, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Puzzle",
+                  "color": "hsl(239, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Rainbow Kids Parachute",
+                  "color": "hsl(98, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Scooter",
+                  "color": "hsl(343, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Soccer Ball",
+                  "color": "hsl(45, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Soccer Net",
+                  "color": "hsl(61, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Tricycle",
+                  "color": "hsl(303, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 64.0,
+          "color": "hsl(64, 70%, 50%)",
+          "children": [
+            {
+              "name": "Baby",
+              "color": "hsl(238, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Baby Item",
+                  "color": "hsl(88, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Baby Kit",
+                  "color": "hsl(255, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Blanket",
+                  "color": "hsl(186, 70%, 50%)",
+                  "value": 34.0
+                },
+                {
+                  "name": "Bottle",
+                  "color": "hsl(174, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Diaper",
+                  "color": "hsl(160, 70%, 50%)",
+                  "value": 502.1333333333328
+                },
+                {
+                  "name": "Diaper Rash Cream",
+                  "color": "hsl(256, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Food",
+                  "color": "hsl(319, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Formula",
+                  "color": "hsl(263, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Hat",
+                  "color": "hsl(164, 70%, 50%)",
+                  "value": 2.83333333333333
+                },
+                {
+                  "name": "Lotion",
+                  "color": "hsl(250, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Onesie",
+                  "color": "hsl(39, 70%, 50%)",
+                  "value": 33.25
+                },
+                {
+                  "name": "Outfit",
+                  "color": "hsl(3, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Pacifier",
+                  "color": "hsl(34, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Pacifier Clip",
+                  "color": "hsl(204, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Shampoo",
+                  "color": "hsl(112, 70%, 50%)",
+                  "value": 25.4999999999999
+                },
+                {
+                  "name": "Shoes",
+                  "color": "hsl(358, 70%, 50%)",
+                  "value": 2.83333333333333
+                },
+                {
+                  "name": "Socks",
+                  "color": "hsl(159, 70%, 50%)",
+                  "value": 191.83333333333306
+                },
+                {
+                  "name": "Spoon",
+                  "color": "hsl(67, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Wipes",
+                  "color": "hsl(198, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Cleaning",
+              "color": "hsl(285, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Dish Soap",
+                  "color": "hsl(69, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Clothing",
+              "color": "hsl(243, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bottoms",
+                  "color": "hsl(233, 70%, 50%)",
+                  "value": 143.4166666666666
+                },
+                {
+                  "name": "Bra",
+                  "color": "hsl(342, 70%, 50%)",
+                  "value": 25.16666666666666
+                },
+                {
+                  "name": "Clothes",
+                  "color": "hsl(248, 70%, 50%)",
+                  "value": 2360.4166666666647
+                },
+                {
+                  "name": "Clothing Kit",
+                  "color": "hsl(64, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Coat",
+                  "color": "hsl(225, 70%, 50%)",
+                  "value": 7.499999999999989
+                },
+                {
+                  "name": "Dress",
+                  "color": "hsl(253, 70%, 50%)",
+                  "value": 7.999999999999989
+                },
+                {
+                  "name": "Gloves",
+                  "color": "hsl(103, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Hat",
+                  "color": "hsl(164, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Hospital Gown",
+                  "color": "hsl(111, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Jacket",
+                  "color": "hsl(265, 70%, 50%)",
+                  "value": 106.91666666666644
+                },
+                {
+                  "name": "Jumper",
+                  "color": "hsl(321, 70%, 50%)",
+                  "value": 110.33333333333312
+                },
+                {
+                  "name": "Sandals",
+                  "color": "hsl(169, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Scarf",
+                  "color": "hsl(173, 70%, 50%)",
+                  "value": 148.16666666666652
+                },
+                {
+                  "name": "Sewing Kit",
+                  "color": "hsl(294, 70%, 50%)",
+                  "value": 366.0833333333333
+                },
+                {
+                  "name": "Shoes",
+                  "color": "hsl(358, 70%, 50%)",
+                  "value": 44.74999999999994
+                },
+                {
+                  "name": "Socks",
+                  "color": "hsl(159, 70%, 50%)",
+                  "value": 2397.6666666666624
+                },
+                {
+                  "name": "Thermals",
+                  "color": "hsl(297, 70%, 50%)",
+                  "value": 143.24999999999986
+                },
+                {
+                  "name": "Top",
+                  "color": "hsl(5, 70%, 50%)",
+                  "value": 364.7499999999996
+                },
+                {
+                  "name": "Underwear",
+                  "color": "hsl(185, 70%, 50%)",
+                  "value": 405.83333333333314
+                },
+                {
+                  "name": "Winter Kit",
+                  "color": "hsl(28, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Cooking",
+              "color": "hsl(95, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bowl",
+                  "color": "hsl(152, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Cup",
+                  "color": "hsl(254, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Plate",
+                  "color": "hsl(188, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Utensil",
+                  "color": "hsl(7, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Education",
+              "color": "hsl(205, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Backpack",
+                  "color": "hsl(311, 70%, 50%)",
+                  "value": 221.0
+                },
+                {
+                  "name": "Eraser",
+                  "color": "hsl(40, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Highlighter",
+                  "color": "hsl(338, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Marker",
+                  "color": "hsl(272, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Notebook",
+                  "color": "hsl(66, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Notepad",
+                  "color": "hsl(180, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Pen",
+                  "color": "hsl(201, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Pencil",
+                  "color": "hsl(79, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Pencil Case",
+                  "color": "hsl(245, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Pencil Sharpener",
+                  "color": "hsl(70, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Ruler",
+                  "color": "hsl(21, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "School Supplies",
+                  "color": "hsl(201, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Electronic",
+              "color": "hsl(166, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Phone Charger",
+                  "color": "hsl(120, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Food",
+              "color": "hsl(319, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Beans",
+                  "color": "hsl(4, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Cereal",
+                  "color": "hsl(163, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Coffee/Tea",
+                  "color": "hsl(323, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Cookies",
+                  "color": "hsl(261, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Cornmeal",
+                  "color": "hsl(323, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Couscous",
+                  "color": "hsl(196, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Dried Fruit",
+                  "color": "hsl(324, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Dry Fruit",
+                  "color": "hsl(208, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Flour",
+                  "color": "hsl(14, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Food",
+                  "color": "hsl(319, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Green Beans",
+                  "color": "hsl(169, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Individual Snacks",
+                  "color": "hsl(306, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Lentils",
+                  "color": "hsl(242, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Meat",
+                  "color": "hsl(21, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Nuts",
+                  "color": "hsl(73, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Oats",
+                  "color": "hsl(336, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Olive Oil",
+                  "color": "hsl(188, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Pancake Mix",
+                  "color": "hsl(25, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Pasta",
+                  "color": "hsl(58, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Protein Drink",
+                  "color": "hsl(86, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Rice",
+                  "color": "hsl(306, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Soup",
+                  "color": "hsl(194, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Sugar",
+                  "color": "hsl(154, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Tea Bag",
+                  "color": "hsl(97, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Tomato Sauce",
+                  "color": "hsl(137, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Tomatoes",
+                  "color": "hsl(315, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Vegetables",
+                  "color": "hsl(273, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Health",
+              "color": "hsl(262, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bandaid",
+                  "color": "hsl(357, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Cane",
+                  "color": "hsl(177, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Crutches",
+                  "color": "hsl(223, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "First Aid Kit",
+                  "color": "hsl(189, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Gauze",
+                  "color": "hsl(115, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Medical Supplies",
+                  "color": "hsl(209, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Medicine",
+                  "color": "hsl(119, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Mobility Walker",
+                  "color": "hsl(107, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Prenatal Vitamins",
+                  "color": "hsl(12, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Surgical Gloves",
+                  "color": "hsl(78, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Household",
+              "color": "hsl(17, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Blanket",
+                  "color": "hsl(186, 70%, 50%)",
+                  "value": 17661.0
+                },
+                {
+                  "name": "Cleaning Product",
+                  "color": "hsl(8, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Flashlight",
+                  "color": "hsl(195, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Hand Towel",
+                  "color": "hsl(89, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Kitchen Towel",
+                  "color": "hsl(132, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Luggage",
+                  "color": "hsl(119, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Napkin",
+                  "color": "hsl(113, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Hygiene",
+              "color": "hsl(176, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Bath Towel",
+                  "color": "hsl(262, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Body Lotion",
+                  "color": "hsl(106, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Body Wash",
+                  "color": "hsl(284, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Comb",
+                  "color": "hsl(41, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Conditioner",
+                  "color": "hsl(328, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Deodorant",
+                  "color": "hsl(68, 70%, 50%)",
+                  "value": 7766.994285714272
+                },
+                {
+                  "name": "Diaper",
+                  "color": "hsl(160, 70%, 50%)",
+                  "value": 21.346666666666668
+                },
+                {
+                  "name": "Feminine Pad",
+                  "color": "hsl(329, 70%, 50%)",
+                  "value": 3695.6666666666647
+                },
+                {
+                  "name": "Gloves",
+                  "color": "hsl(103, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Hair Brush",
+                  "color": "hsl(158, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Hair Ties",
+                  "color": "hsl(275, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Lotion",
+                  "color": "hsl(250, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Mask",
+                  "color": "hsl(70, 70%, 50%)",
+                  "value": 2579.5
+                },
+                {
+                  "name": "Razor",
+                  "color": "hsl(214, 70%, 50%)",
+                  "value": 266.6666666666663
+                },
+                {
+                  "name": "Shampoo",
+                  "color": "hsl(112, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Soap",
+                  "color": "hsl(304, 70%, 50%)",
+                  "value": 19293.0
+                },
+                {
+                  "name": "Tampon",
+                  "color": "hsl(241, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Tissue Box",
+                  "color": "hsl(39, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Toilet Paper",
+                  "color": "hsl(75, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Toiletries",
+                  "color": "hsl(75, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Toothbrush",
+                  "color": "hsl(141, 70%, 50%)",
+                  "value": 17653.0
+                },
+                {
+                  "name": "Toothpaste",
+                  "color": "hsl(237, 70%, 50%)",
+                  "value": 29962.07999999997
+                },
+                {
+                  "name": "Washcloth",
+                  "color": "hsl(10, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Infrastructure",
+              "color": "hsl(328, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Generator",
+                  "color": "hsl(291, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Office",
+              "color": "hsl(135, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Folder",
+                  "color": "hsl(143, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            },
+            {
+              "name": "Shelter",
+              "color": "hsl(216, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Hand Warmer",
+                  "color": "hsl(298, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Rain Poncho",
+                  "color": "hsl(184, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Rucksack",
+                  "color": "hsl(272, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Sleeping Bag",
+                  "color": "hsl(3, 70%, 50%)",
+                  "value": 425.0
+                }
+              ]
+            },
+            {
+              "name": "Toys & Activities",
+              "color": "hsl(44, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Baby Toy",
+                  "color": "hsl(238, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Ball",
+                  "color": "hsl(334, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Bike",
+                  "color": "hsl(267, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Car",
+                  "color": "hsl(216, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Colored Pencil",
+                  "color": "hsl(138, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Coloring Book",
+                  "color": "hsl(101, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Construction Paper",
+                  "color": "hsl(339, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Crayon",
+                  "color": "hsl(240, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Crayons",
+                  "color": "hsl(225, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Embroidery Needles",
+                  "color": "hsl(330, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Exercise Mat",
+                  "color": "hsl(138, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Folder",
+                  "color": "hsl(143, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Jump Rope",
+                  "color": "hsl(92, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Knitting Needle",
+                  "color": "hsl(161, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Lego Set",
+                  "color": "hsl(51, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Marker",
+                  "color": "hsl(272, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Scissors",
+                  "color": "hsl(264, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Small Ball",
+                  "color": "hsl(223, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Small Game",
+                  "color": "hsl(167, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Sticker",
+                  "color": "hsl(264, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Stickers",
+                  "color": "hsl(229, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Stuffed Animal",
+                  "color": "hsl(157, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Toy",
+                  "color": "hsl(144, 70%, 50%)",
+                  "value": 0.0
+                },
+                {
+                  "name": "Yarn",
+                  "color": "hsl(352, 70%, 50%)",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 90.0,
+          "color": "hsl(90, 70%, 50%)",
+          "children": [
+            {
+              "name": "Hygiene",
+              "color": "hsl(176, 70%, 50%)",
+              "children": [
+                {
+                  "name": "Mask",
+                  "color": "hsl(70, 70%, 50%)",
+                  "value": 20000.0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
