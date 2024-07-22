@@ -71,7 +71,7 @@ The SunburstChart (documentation from https://nivo.rocks/sunburst/) was created 
 
 ## Code Explanations
 
-### Area Bump Chart
+### [Area Bump Chart](./AreaBumpChart.tsx) 
 
 #### Component Props
 
@@ -201,7 +201,7 @@ If there is no data available for the selected filters, the component displays a
 )}
 ```
 
-### Calendar Chart
+### [Calendar Chart](./CalendarChart.tsx)
 
 #### Component Props
 
@@ -320,7 +320,7 @@ If there is no data available for the selected filters, the component displays a
 )}
 ```
 
-### Sunburst Chart
+### [Sunburst Chart](./SunburstChart.tsx)
 
 #### Component Props
 
