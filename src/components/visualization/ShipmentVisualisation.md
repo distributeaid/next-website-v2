@@ -63,7 +63,7 @@ The AreaBumpChart (documentation from: https://nivo.rocks/area-bump/) was create
 
 ### Calendar Chart: /data/calendar
 
-The CalendarChart (documentation from: https://nivo.rocks/calendar/)was developed to display the distribution of shipments across different segments and over time. This chart provides a clear, day-by-day view of shipment activity, making it easy to spot peak periods and identify days with high or low shipment volumes. By using the calendar chart, we can assess the operational workload, understand the temporal distribution of shipments, and optimize scheduling and resource management. It also helps in identifying patterns related to specific segments like 'Main Leg', 'First Mile', or 'Last Mile'.
+The CalendarChart (documentation from: https://nivo.rocks/calendar/) was developed to display the distribution of shipments across different segments and over time. This chart provides a clear, day-by-day view of shipment activity, making it easy to spot peak periods and identify days with high or low shipment volumes. By using the calendar chart, we can assess the operational workload, understand the temporal distribution of shipments, and optimize scheduling and resource management. It also helps in identifying patterns related to specific segments like 'Main Leg', 'First Mile', or 'Last Mile'.
 
 ### Sunburst Chart: /data/shipment-breakdown
 
