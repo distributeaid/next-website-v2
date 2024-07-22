@@ -272,6 +272,16 @@ const filterDataByYear = (data: CalendarDataItem[], startYear: number, endYear: 
 };
 ```
 
+#### Dynamic Height Calculation
+
+The component dynamically calculates the height of the calendar chart based on the number of years in the selected range. This ensures that the chart adjusts its height appropriately to fit the data. The value "175" was chosen due to aesthetics. 
+
+```javascript
+// Calculate dynamic height based on the number of years
+const numberOfYears = endYear - startYear + 1;
+const dynamicHeight = numberOfYears * 175; // 
+```
+
 #### Chart Rendering
 
 The component uses the ResponsiveCalendar component from the Nivo library to render the calendar heatmap. Key settings and options used include:
@@ -407,6 +417,20 @@ if (data.children) {
 }
 ```
 
+#### Loading State
+
+To improve user experience, the component includes a loading message displayed while data is being fetched:
+
+```javascript
+{loading ? (
+  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '600px' }}>
+    <p>Loading data...</p>
+  </div>
+) : (
+  ...
+)}
+```
+
 #### Chart Rendering
 
 The component uses the ResponsiveSunburst component from the Nivo library to render the sunburst chart. Key settings and options used include:
@@ -416,12 +440,14 @@ The component uses the ResponsiveSunburst component from the Nivo library to ren
 - `id`: The property used to identify each segment.
 - `value`: The property used to determine the size of each segment.
 - `cornerRadius`: The corner radius for the segments.
-- `borderWidth` and `borderColor`: The border settings for the segments.
+- `borderWidth` and `borderColor`: The border settings for the segments. The border settings for the segments, increased to 4 to improve separation of data.
 - `colors`: The color scheme used for the chart.
+- `inheritColorFromParent`: Set to `false` to improve visibility.
 - `childColor`: Configuration for the colors of child segments.
-- `enableArcLabels` and `arcLabelsSkipAngle`: Configuration for arc labels.
+- `enableArcLabels` and `arcLabelsSkipAngle`: Configuration for arc labels, with the skip angle set to 35 to reduce clutter.
 - `layers`: Custom layers for rendering additional elements on the chart.
-- `tooltip`: Configuration for the tooltip.
+- `tooltip`: Configuration for the tooltip to allow user to view details of segments of the chart.
+- `animate`: Set to `false` to reduce lag when allowing user to drill-down to child segments.  
 
 ```javascript
 <ResponsiveSunburst
@@ -488,6 +514,7 @@ The component uses the ResponsiveSunburst component from the Nivo library to ren
     }
   }}
 />
+
 ```
 
 #### Error Handling
