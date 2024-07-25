@@ -274,3 +274,19 @@ export const COUNTRY_CODE_OPTIONS = Object.entries(COUNTRY_CODES_TO_NAME).map(
     value: countryCode    
   })
 )
+
+export const SOCIAL_LINKS = [
+  { name: 'instagram', link: 'https://www.instagram.com/distributeaid' },
+  { name: 'twitter', link: 'https://twitter.com/DistributeAid' },
+  {
+    name: 'linked-in',
+    link: 'https://www.linkedin.com/company/distribute-aid',
+  },
+  { name: 'facebook', link: 'https://www.facebook.com/DistributeAidDotOrg/' },
+  { name: 'github', link: 'https://github.com/distributeaid' },
+];
+
+export enum DIRECTION {
+  LEFT = 'left',
+  RIGHT = 'right',
+}
