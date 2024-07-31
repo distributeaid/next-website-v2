@@ -11,7 +11,7 @@ const AboutOurMission: FC<Props> = ({ content }) => (
             <h2 className="text-2xl font-semibold mb-8 text-gray-800">
                 About our mission
             </h2>
-            <ReactMarkdown children={content} />
+            <ReactMarkdown>{content}</ReactMarkdown>
         </div>
     </section>
 )

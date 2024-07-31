@@ -22,7 +22,7 @@ const MissionStatement: FC<Props> = ({ missionStatement }) => (
                         alt="Distribute Aid Logo: A flock of doves stylized by stacking wings behind the main outline of a dove."
                     />
                     <div className="flex-grow">
-                        <ReactMarkdown children={missionStatement} />
+                        <ReactMarkdown>{missionStatement}</ReactMarkdown>
                     </div>
                 </div>
             </div>

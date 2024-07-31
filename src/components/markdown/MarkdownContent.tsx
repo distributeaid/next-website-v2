@@ -34,5 +34,5 @@ export const MarkdownContent: FC<{
   wrapper?: WrapperFN
 }> = ({ content, wrapper }) =>
   (wrapper ?? defaultWrapper)(
-    <ReactMarkdown children={content} components={COMPONENTS} />,
+    <ReactMarkdown components={COMPONENTS}>{content}</ReactMarkdown>,
   )
