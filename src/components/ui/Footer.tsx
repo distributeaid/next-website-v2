@@ -10,7 +10,7 @@ const Footer = () => {
           href='mailto:hello@distributeaid.org'
           className='text-navy-700 font-medium'
         >
-          hello@distributeaid.org(opens in your email client)
+          hello@distributeaid.org (opens in your email client)
         </a>
       </p>
 
