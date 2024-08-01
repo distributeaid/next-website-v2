@@ -1,7 +1,7 @@
 import { techContent } from '@/data/techData';
 import Image from 'next/image';
 import Link from 'next/link';
-import TechSection from '../components/techSection';
+import TechSection from '../../components/techSection';
 
 const Tech = () => {
   return (

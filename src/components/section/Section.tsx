@@ -2,7 +2,7 @@ import { FC, PropsWithChildren } from 'react'
 import {
   SectionGrid as SectionGridType,
   SectionNode,
-} from '../../types/generic-page.d'
+} from '../../types/generic-page'
 import { Blocks } from './ContentBlock'
 import { SectionGrid } from './sections/SectionGrid'
 import { getBackgroundColor } from '@/utils/site-theme'

@@ -1,4 +1,4 @@
-import { Node, NodeInput } from 'gatsby'
+import { Node, NodeInput } from './node'
 import { LinksList, UpdatesList } from './list.d'
 
 /*
