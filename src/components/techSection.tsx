@@ -1,17 +1,17 @@
 import Link from 'next/link';
 
 interface TechSectionProps {
-    getInTouch: { textStart?: string; linkText?: string; href?: string }[];
-    applicationProcess: { text?: string; textStart?: string; linkText?: string; href?: string }[];
+    getInTouch?: { textStart?: string; linkText?: string; href?: string };
+    applicationProcess?: { text?: string; textStart?: string; linkText?: string; href?: string }[];
     applyLink?: string;
-    description: { text: string; textStart?: string; linkText?: string; href?: string }[];
-    links?: { text: string; href: string }[];
+    description?: { text: string; textStart?: string; linkText?: string; href?: string }[];
+    links?: { textStart?: string; linkText: string; text: string; href: string }[];
     listItems?: string[];
-    nestedLists: { title: string; listItems: string[] }[];
+    nestedLists?: { title: string; listItems: string[] }[];
     specificProjects?: { text?: string; textStart?: string; linkText?: string; href?: string }[];
-    subHeading: string;
-    subHeadingText: string;
-    subHeadingDescription: string;
+    subHeading?: string;
+    subHeadingText?: string;
+    subHeadingDescription?: string;
     title: string;
   }
 
@@ -23,7 +23,7 @@ const TechSection = ({
       <h2 className='border-l-2 pl-4 border-navy-600 mb-8 text-4xl font-bold text-dark-blue'>{title}</h2>
       <article className='border-l-2 pl-4 border-navy-400 mb-8'>
         {description?.map((descObj, index) => (
-            descObj.linkText 
+            (descObj.linkText && descObj.href)
             ?
             <p key={index} className='mb-4'>{descObj.textStart} <strong><Link className='text-brown-800 font-bold underline mt-4' href={descObj.href}>{descObj.linkText}</Link></strong>{descObj.text}</p>
             :
@@ -51,9 +51,9 @@ const TechSection = ({
             <div key={index}>
               <p className='mb-4'>
                 <strong className=' text-text-blue'>{process.textStart}</strong>
-                {process.linkText && (
+                {(process.linkText && process.href) && (
                   <strong>
-                    <Link className='text-brown-800 font-bold underline mt-4' href={process?.href}>{process.linkText}</Link>
+                    <Link className='text-brown-800 font-bold underline mt-4' href={process.href}>{process.linkText}</Link>
                   </strong>
                 )}
                 {process.text}
@@ -106,7 +106,6 @@ const TechSection = ({
               ) : (
                 ""
               )}
-              {getInTouch.text}
             </p>
           )
         }
