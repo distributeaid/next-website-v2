@@ -47,7 +47,11 @@ const CampaignCard: FC<{
             <Progress value={(raised / goal) * 100.0} variant="surface" style={{
               backgroundColor: "var(--green-4)"
             }} />
-            <Text size="2">{(raised / goal) * 100}%</Text>
+            <Text size="2" color="blue" highContrast style={{
+              fontFamily: "var(--font-permanent-marker)"
+            }}>
+              {(raised / goal) * 100}%
+            </Text>
           </Flex>
         </Inset>
         <Box mx="1" my="3">
