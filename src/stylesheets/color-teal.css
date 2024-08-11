@@ -1,0 +1,69 @@
+:root, .light, .light-theme {
+  --teal-1: #fafdfe;
+  --teal-2: #f5fafb;
+  --teal-3: #e9f3f6;
+  --teal-4: #ddecef;
+  --teal-5: #d1e4e8;
+  --teal-6: #c3dae0;
+  --teal-7: #b0cdd3;
+  --teal-8: #94bac2;
+  --teal-9: #89b4bd;
+  --teal-10: #7ea9b2;
+  --teal-11: #466e76;
+  --teal-12: #1c2f33;
+
+  --teal-a1: #0099cc05;
+  --teal-a2: #0080990a;
+  --teal-a3: #00749716;
+  --teal-a4: #00718722;
+  --teal-a5: #006a802e;
+  --teal-a6: #00627c3c;
+  --teal-a7: #005e714f;
+  --teal-a8: #015b6e6b;
+  --teal-a9: #005d7176;
+  --teal-a10: #00556781;
+  --teal-a11: #003742b9;
+  --teal-a12: #00151ae3;
+
+  --teal-contrast: #fff;
+  --teal-surface: #f3f9facc;
+  --teal-indicator: #89b4bd;
+  --teal-track: #89b4bd;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root, .light, .light-theme {
+      --teal-1: oklch(99.3% 0.003 211.9);
+      --teal-2: oklch(98% 0.005 211.9);
+      --teal-3: oklch(95.8% 0.012 211.9);
+      --teal-4: oklch(93.3% 0.017 211.9);
+      --teal-5: oklch(90.6% 0.022 211.9);
+      --teal-6: oklch(87.4% 0.026 211.9);
+      --teal-7: oklch(83% 0.032 211.9);
+      --teal-8: oklch(76.3% 0.042 211.9);
+      --teal-9: oklch(74.3% 0.048 211.9);
+      --teal-10: oklch(70.7% 0.048 211.9);
+      --teal-11: oklch(51.2% 0.047 211.9);
+      --teal-12: oklch(29.2% 0.026 211.9);
+
+      --teal-a1: color(display-p3 0.024 0.514 0.757 / 0.016);
+      --teal-a2: color(display-p3 0.024 0.459 0.565 / 0.036);
+      --teal-a3: color(display-p3 0.008 0.408 0.557 / 0.079);
+      --teal-a4: color(display-p3 0.004 0.392 0.455 / 0.122);
+      --teal-a5: color(display-p3 0.004 0.337 0.431 / 0.165);
+      --teal-a6: color(display-p3 0.004 0.325 0.431 / 0.22);
+      --teal-a7: color(display-p3 0.004 0.306 0.388 / 0.287);
+      --teal-a8: color(display-p3 0.004 0.294 0.376 / 0.389);
+      --teal-a9: color(display-p3 0.004 0.306 0.388 / 0.428);
+      --teal-a10: color(display-p3 0.004 0.278 0.353 / 0.471);
+      --teal-a11: color(display-p3 0 0.173 0.216 / 0.691);
+      --teal-a12: color(display-p3 0 0.063 0.082 / 0.875);
+
+      --teal-contrast: #fff;
+      --teal-surface: color(display-p3 0.957 0.973 0.976 / 0.8);
+      --teal-indicator: oklch(74.3% 0.048 211.9);
+      --teal-track: oklch(74.3% 0.048 211.9);
+    }
+  }
+}

@@ -1,10 +1,9 @@
 import React from "react";
-import "@radix-ui/themes/styles.css";
 import type { Metadata } from "next";
-import "./globals.css";
 import Footer from "@/components/ui/Footer";
 import { Lato } from "next/font/google";
 import NavBar from "../components/nav/navBar";
+import "../stylesheets/main.css"
 import { Theme } from "@radix-ui/themes";
 
 const lato = Lato({
@@ -25,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={lato.className}>
-        <Theme>
+        <Theme accentColor="blue">
           <NavBar />
           <div className="pt-20">{children}</div>
 

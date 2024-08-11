@@ -1,0 +1,10 @@
+@import "tailwindcss/base";
+@import "@radix-ui/themes/styles.css";
+@import "./color-blue.css";
+@import "./color-green.css";
+@import "./color-pink.css";
+@import "./color-teal.css";
+@import "./fonts.css";
+
+@tailwind components;
+@tailwind utilities;
