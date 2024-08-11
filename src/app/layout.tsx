@@ -1,15 +1,33 @@
 import React from "react";
 import type { Metadata } from "next";
-import Footer from "@/components/ui/Footer";
-import { Lato } from "next/font/google";
-import NavBar from "../components/nav/navBar";
-import "../stylesheets/main.css"
-import { Theme } from "@radix-ui/themes";
 
-const lato = Lato({
+import { Theme } from "@radix-ui/themes";
+import {
+  Yantramanav,
+  Roboto,
+  Permanent_Marker
+} from "next/font/google";
+import "../stylesheets/main.css"
+
+import NavBar from "../components/nav/navBar";
+import Footer from "@/components/ui/Footer";
+
+const yantramanav = Yantramanav({
   subsets: ["latin"],
-  weight: ["100", "300", "400", "700", "900"],
+  weight: ["300", "400", "500", "700"],
+  variable: '--font-yantramanav',
 });
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+  variable: '--font-roboto',
+});
+const permanentMarker = Permanent_Marker({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: '--font-permanent-marker',
+});
+
 
 export const metadata: Metadata = {
   title: "Distribute Aid",
@@ -23,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={lato.className}>
+      <body className={`${yantramanav.variable} ${roboto.variable} ${permanentMarker.variable}`}>
         <Theme accentColor="blue">
           <NavBar />
           <div className="pt-20">{children}</div>
