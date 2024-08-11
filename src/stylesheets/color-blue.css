@@ -1,0 +1,69 @@
+:root, .light, .light-theme {
+  --blue-1: #fcfdff;
+  --blue-2: #f5f9ff;
+  --blue-3: #eaf2ff;
+  --blue-4: #dceaff;
+  --blue-5: #ccdfff;
+  --blue-6: #b5d2ff;
+  --blue-7: #9abfff;
+  --blue-8: #76a5ff;
+  --blue-9: #051e5d;
+  --blue-10: #183576;
+  --blue-11: #3760bb;
+  --blue-12: #0f2b6b;
+
+  --blue-a1: #0055ff03;
+  --blue-a2: #0066ff0a;
+  --blue-a3: #0062ff15;
+  --blue-a4: #0066ff23;
+  --blue-a5: #005fff33;
+  --blue-a6: #0164ff4a;
+  --blue-a7: #005eff65;
+  --blue-a8: #0058ff89;
+  --blue-a9: #001a5afa;
+  --blue-a10: #002068e7;
+  --blue-a11: #0034a8c8;
+  --blue-a12: #001e62f0;
+
+  --blue-contrast: #fff;
+  --blue-surface: #f3f8ffcc;
+  --blue-indicator: #051e5d;
+  --blue-track: #051e5d;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root, .light, .light-theme {
+      --blue-1: oklch(99.4% 0.002 263.4);
+      --blue-2: oklch(98.3% 0.011 263.4);
+      --blue-3: oklch(96.1% 0.023 263.4);
+      --blue-4: oklch(93.5% 0.045 263.4);
+      --blue-5: oklch(90.4% 0.067 263.4);
+      --blue-6: oklch(86.3% 0.093 263.4);
+      --blue-7: oklch(80.7% 0.114 263.4);
+      --blue-8: oklch(73% 0.15 263.4);
+      --blue-9: oklch(26.7% 0.117 263.4);
+      --blue-10: oklch(34.9% 0.117 263.4);
+      --blue-11: oklch(51% 0.15 263.4);
+      --blue-12: oklch(31.3% 0.117 263.4);
+
+      --blue-a1: color(display-p3 0.024 0.349 1 / 0.012);
+      --blue-a2: color(display-p3 0.024 0.349 0.894 / 0.036);
+      --blue-a3: color(display-p3 0.008 0.357 0.953 / 0.079);
+      --blue-a4: color(display-p3 0.008 0.349 0.941 / 0.126);
+      --blue-a5: color(display-p3 0.004 0.302 0.937 / 0.185);
+      --blue-a6: color(display-p3 0.004 0.325 0.945 / 0.267);
+      --blue-a7: color(display-p3 0.004 0.31 0.949 / 0.369);
+      --blue-a8: color(display-p3 0.004 0.286 0.945 / 0.499);
+      --blue-a9: color(display-p3 0 0.071 0.318 / 0.953);
+      --blue-a10: color(display-p3 0 0.094 0.369 / 0.879);
+      --blue-a11: color(display-p3 0 0.157 0.612 / 0.746);
+      --blue-a12: color(display-p3 0 0.086 0.349 / 0.914);
+
+      --blue-contrast: #fff;
+      --blue-surface: color(display-p3 0.957 0.973 1 / 0.8);
+      --blue-indicator: oklch(26.7% 0.117 263.4);
+      --blue-track: oklch(26.7% 0.117 263.4);
+    }
+  }
+}

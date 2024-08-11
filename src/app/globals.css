@@ -1,8 +1,0 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@font-face {
-    font-family: "lato";
-    src: url("../fonts/Lato-Regular.ttf");
-  }
