@@ -7,7 +7,7 @@ import {
   Inset,
   Link,
   Progress,
-  Text,
+  Text
 } from "@radix-ui/themes";
 import { FC } from "react";
 
@@ -20,9 +20,9 @@ const CampaignCard: FC<{
   donateLink: string;
 }> = ({ imgSrc, imgAlt, title, raised, goal, donateLink }) => {
   return (
-    <Box maxWidth="400px">
-      <Card size="2">
-        <Inset clip="padding-box" side="top" pb="current">
+    <Box asChild width="373px">
+      <Card>
+        <Inset clip="padding-box" pb="current">
           <img
             src={imgSrc}
             alt={imgAlt}
@@ -30,29 +30,44 @@ const CampaignCard: FC<{
               display: "block",
               objectFit: "cover",
               width: "100%",
-              height: 200,
-              backgroundColor: "var(--gray-5)",
+              height: 150,
+              backgroundColor: "var(--blue-9)",
             }}
           ></img>
-          <Box
-            p="3"
+          <Flex
+            direction="row"
+            align="center"
+            gapX="3"
+            px="4"
+            py="3"
             style={{
-              background: "var(--grass-7)",
+              backgroundColor: "var(--green-9)"
             }}
           >
-            <Progress value={(raised / goal) * 100.0} variant="surface" />
-          </Box>
+            <Progress value={(raised / goal) * 100.0} variant="surface" style={{
+              backgroundColor: "var(--green-4)"
+            }} />
+            <Text size="2">{(raised / goal) * 100}%</Text>
+          </Flex>
         </Inset>
-        <Heading as="h3" size="8" weight="regular" color="indigo">
-          {title}
-        </Heading>
-        <Text>Goal: €{goal}</Text>
-        <Flex>
-          <Button asChild>
-            <Link href={donateLink}>Donate now</Link>
-          </Button>
-          <Button variant="soft">More info</Button>
-        </Flex>
+        <Box mx="1" my="3">
+          <Heading as="h3" size="8" weight="regular" color="blue" highContrast>
+            {title}
+          </Heading>
+          <Box asChild mb="4">
+            <Text size="3">Goal: €{goal}</Text>
+          </Box>
+          <Flex gapX="2">
+            <Box px="4" py="2" asChild>
+              <Button asChild>
+                <Link href={donateLink} size="3">Donate now</Link>
+              </Button>
+            </Box>
+            <Box px="4" py="2" asChild>
+              <Button variant="soft" size="3">More info</Button>
+            </Box>
+          </Flex>
+        </Box>
       </Card>
     </Box>
   );
