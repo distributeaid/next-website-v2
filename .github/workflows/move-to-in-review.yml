@@ -1,0 +1,14 @@
+name: move-card-to-in-review
+
+on:
+  pull_request:
+    types: [opened, reopened, ready_for_review, synchronize, edited]
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: MatrixFrog/pr-extract-issues@2684b0f1d7b1671b7fb9ab8bfbb9b2b88983e6c5
+        with:
+          way: 'body'
+
