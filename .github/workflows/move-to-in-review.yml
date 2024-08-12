@@ -5,10 +5,22 @@ on:
     types: [opened, reopened, ready_for_review, synchronize, edited]
 
 jobs:
-  extract:
+  extract-issue-numbers:
     runs-on: ubuntu-latest
+    outputs:
+      issues: ${{ steps.extract.outputs.issues }}
     steps:
-      - uses: MatrixFrog/pr-extract-issues@2684b0f1d7b1671b7fb9ab8bfbb9b2b88983e6c5
+      - id: extract
+        uses: MatrixFrog/pr-extract-issues@2684b0f1d7b1671b7fb9ab8bfbb9b2b88983e6c5
         with:
           way: 'body'
+  
+  move-issues:
+    needs: extract-issue-numbers
+    runs-on: ubuntu-latest
+    steps:
+      - env: 
+          ISSUES: ${{ needs.extract-issue-numbers.outputs.issues }}
+        run: "echo $ISSUES"
+
 
