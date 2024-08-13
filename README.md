@@ -49,13 +49,13 @@ Here are the steps to set up the project in your local dev environment:
 1. Install Dependencies:
 
 ```Bash
-- npm install
+- yarn install
 ```
 
 2.Then run the development server to launch your app:
 
 ```Bash
-npm run dev
+yarn run dev
 ```
 
 3.Open <http://localhost:3000> with your browser to see the result.
