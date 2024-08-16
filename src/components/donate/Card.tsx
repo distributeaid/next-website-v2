@@ -59,7 +59,7 @@ const Card: FC<{
           'justify-end': position === DIRECTION.RIGHT,
         })}
       >
-        <Button isPrimary>
+        <Button variant="primary">
           <a
             href={donate_link}
             target='_blank'
@@ -67,12 +67,12 @@ const Card: FC<{
             Donate Now
           </a>
         </Button>
-        <Button isOutline>
+        <Button>
           <a
             href={more_link}
             target='_blank'
           >
-            {position === DIRECTION.RIGHT && <span>🢒</span>}
+            {position === DIRECTION.RIGHT && <span>🢐</span>}{' '}
             <span>More Info</span> {position === DIRECTION.LEFT && <span>🢒</span>}
           </a>
         </Button>
