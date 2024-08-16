@@ -3,6 +3,9 @@
 # yarn
 .yarn/install-state.gz
 
+# TypeScript
+tsconfig.tsbuildinfo
+
 # dependencies
 /node_modules
 /.pnp
