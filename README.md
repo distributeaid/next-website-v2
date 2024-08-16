@@ -65,6 +65,20 @@ You can start editing the page by modifying app/page.tsx. The page auto-updates 
 
 We'll have a long-running branch(saga) and short-lived branches that will be used to develop parts of the website. An example of a short-lived branch would be feat/about-us. Always ensure you're working on a seperate branch to avoid merge conflicts
 
+## Running checks
+
+To check types:
+
+```Bash
+yarn run check:types
+```
+
+To run the linter:
+
+```Bash
+yarn run lint
+```
+
 ## Crafting commit messages
 
 When crafting commit messages, try to group commits that are related to a particular topic. For example, if you're making commits related to the styling, only include files that are related to styling. This makes it easier to read through the commits and see the exact files that made changes to the styles.
