@@ -5047,6 +5047,7 @@ __metadata:
     "@types/react-modal": "npm:^3.16.3"
     "@types/three": "npm:^0.164.0"
     "@typescript-eslint/eslint-plugin": "npm:^6.21.0"
+    "@typescript-eslint/parser": "npm:^6.4.0"
     autoprefixer: "npm:^10.0.1"
     classnames: "npm:^2.5.1"
     eslint: "npm:^8.57.0"
