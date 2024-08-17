@@ -5,7 +5,6 @@ import CounterStat from "../components/ui/CounterStat";
 import Hero from "../components/ui/Hero";
 import homepageBanner from "../../public/images/homepage-banner-image.svg";
 import sary from "../../public/images/lettermark_blue.svg"
-import Earth3D from "../components/ui/Earth3D";
 
 
 const Home = () => {
@@ -28,7 +27,7 @@ const Home = () => {
           </div>
           <div className="w-[50%] flex justify-between">
             <div>
-              <Earth3D svgPath={sary.src} />
+             TODO: Implement new Earth visualization
             </div>
             <ul className="flex flex-col gap-4 max-[1024px]:hidden">
               {socials.map((social, index) => (
