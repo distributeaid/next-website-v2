@@ -1620,7 +1620,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tweenjs/tween.js@npm:~23.1.1":
+"@tweenjs/tween.js@npm:~23.1.2":
   version: 23.1.3
   resolution: "@tweenjs/tween.js@npm:23.1.3"
   checksum: 10c0/811b30f5f0e7409fb41833401c501c2d6f600eb5f43039dd9067a7f70aff6dad5f5ce1233848e13f0b33a269a160d9c133f344d986cbff4f1f6b72ddecd06c89
@@ -1756,16 +1756,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/three@npm:^0.164.0":
-  version: 0.164.1
-  resolution: "@types/three@npm:0.164.1"
+"@types/three@npm:^0.167.0":
+  version: 0.167.1
+  resolution: "@types/three@npm:0.167.1"
   dependencies:
-    "@tweenjs/tween.js": "npm:~23.1.1"
+    "@tweenjs/tween.js": "npm:~23.1.2"
     "@types/stats.js": "npm:*"
     "@types/webxr": "npm:*"
     fflate: "npm:~0.8.2"
     meshoptimizer: "npm:~0.18.1"
-  checksum: 10c0/45754dbae4cd3f8b29c9ea8104f18920f1b3ad47ba76a91658ba844182a56bf05a05c14f753ba6870877b9fd221b9cc9fc6b997b7ecf62d57a035d9f3ccf2415
+  checksum: 10c0/26bf7ba43507a80b56ac51517db7a3eab17ec89256c293c98f4842f9816fb0226564337876bad38529ea8790901bfa6358bcae75d819b50a1cef46954ac1ada1
   languageName: node
   linkType: hard
 
@@ -5045,7 +5045,7 @@ __metadata:
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@types/react-modal": "npm:^3.16.3"
-    "@types/three": "npm:^0.164.0"
+    "@types/three": "npm:^0.167.0"
     "@typescript-eslint/eslint-plugin": "npm:^6.21.0"
     autoprefixer: "npm:^10.0.1"
     classnames: "npm:^2.5.1"
@@ -5068,7 +5068,7 @@ __metadata:
     react-modal: "npm:^3.16.1"
     sharp: "npm:^0.33.4"
     tailwindcss: "npm:^3.3.0"
-    three: "npm:^0.164.1"
+    three: "npm:^0.167.0"
     typescript: "npm:^5.4.2"
   languageName: unknown
   linkType: soft
@@ -6480,10 +6480,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"three@npm:^0.164.1":
-  version: 0.164.1
-  resolution: "three@npm:0.164.1"
-  checksum: 10c0/f34dc945444fba814be542a907a2f6f2bed3189315604b8ef936d95513b2a4030807df63dcbb48b658bbe3d3e77a446cf2d164c1c08465578c23d4c278d76bb3
+"three@npm:^0.167.0":
+  version: 0.167.1
+  resolution: "three@npm:0.167.1"
+  checksum: 10c0/3040ffb013b6bb063d96ecff51acc6e6390a92d616a0d0db39550ad516eb0be8e50342f0c2c97892fbd983d03c7319f44b56bde881e1f3e6bc612d559b1276ea
   languageName: node
   linkType: hard
 
