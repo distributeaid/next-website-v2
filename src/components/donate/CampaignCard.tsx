@@ -7,7 +7,7 @@ import {
   Inset,
   Link,
   Progress,
-  Text
+  Text,
 } from "@radix-ui/themes";
 import { FC } from "react";
 
@@ -41,15 +41,24 @@ const CampaignCard: FC<{
             px="4"
             py="3"
             style={{
-              backgroundColor: "var(--green-9)"
+              backgroundColor: "var(--green-9)",
             }}
           >
-            <Progress value={(raised / goal) * 100.0} variant="surface" style={{
-              backgroundColor: "var(--green-4)"
-            }} />
-            <Text size="2" color="blue" highContrast style={{
-              fontFamily: "var(--font-permanent-marker)"
-            }}>
+            <Progress
+              value={(raised / goal) * 100.0}
+              variant="surface"
+              style={{
+                backgroundColor: "var(--green-4)",
+              }}
+            />
+            <Text
+              size="2"
+              color="blue"
+              highContrast
+              style={{
+                fontFamily: "var(--font-permanent-marker)",
+              }}
+            >
               {(raised / goal) * 100}%
             </Text>
           </Flex>
@@ -64,11 +73,15 @@ const CampaignCard: FC<{
           <Flex gapX="2">
             <Box px="4" py="2" asChild>
               <Button asChild>
-                <Link href={donateLink} size="3">Donate now</Link>
+                <Link href={donateLink} size="3">
+                  Donate now
+                </Link>
               </Button>
             </Box>
             <Box px="4" py="2" asChild>
-              <Button variant="soft" size="3">More info</Button>
+              <Button variant="soft" size="3">
+                More info
+              </Button>
             </Box>
           </Flex>
         </Box>

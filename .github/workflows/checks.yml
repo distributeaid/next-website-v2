@@ -17,4 +17,3 @@ jobs:
         run: corepack yarn run lint
       - name: Run type check
         run: corepack yarn run check:types
-

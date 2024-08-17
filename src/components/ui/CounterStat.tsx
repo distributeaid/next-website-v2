@@ -10,7 +10,9 @@ import CountUp from "react-countup";
 import { lato } from "../ui/fonts";
 
 const Icon = ({ srcImg }: { srcImg: string }) => {
-  return <Image src={srcImg} alt="" className="size-28 max-[768px]:size-[7.5rem]" />;
+  return (
+    <Image src={srcImg} alt="" className="size-28 max-[768px]:size-[7.5rem]" />
+  );
 };
 
 const Counter = ({
@@ -33,16 +35,20 @@ const Counter = ({
         <CountUp duration={10} className="counter" end={stat} />
         <span> {unitEnd}</span>
       </p>
-      <span className="text-primary opacity-80 max-[768px]:text-sm">{title}</span>
+      <span className="text-primary opacity-80 max-[768px]:text-sm">
+        {title}
+      </span>
     </div>
   );
 };
 
 const CounterStat = () => {
   return (
-    <section className={`${lato.className} antialiased text-center px-72 max-[1024px]:px-2 py-28 max-[768px]:py-10`}>
+    <section
+      className={`${lato.className} antialiased text-center px-72 max-[1024px]:px-2 py-28 max-[768px]:py-10`}
+    >
       <h2 className="text-4xl font-bold mb-4 max-[768px]:text-3xl">
-      July 2021—June 2022 in numbers
+        July 2021—June 2022 in numbers
       </h2>
       <p>
         Read more in our

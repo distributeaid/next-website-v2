@@ -1,4 +1,4 @@
-import { FC, SVGProps } from 'react'
+import { FC, SVGProps } from "react";
 
 const LogoMark: FC<SVGProps<SVGSVGElement>> = (props) => (
   <svg
@@ -38,6 +38,6 @@ const LogoMark: FC<SVGProps<SVGSVGElement>> = (props) => (
       fill="white"
     />
   </svg>
-)
+);
 
-export default LogoMark
+export default LogoMark;
