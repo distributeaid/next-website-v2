@@ -14,18 +14,17 @@ const NavBar = () => {
     {
       id: 1,
       title: "Home",
-      url: "/"
+      url: "/",
     },
     {
       id: 2,
       title: "About Us",
       url: "/about-us",
-
     },
     {
       id: 3,
       title: "Needs",
-      url: "/needs-assessment"
+      url: "/needs-assessment",
     },
     {
       id: 4,

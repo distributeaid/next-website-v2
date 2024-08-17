@@ -1,11 +1,11 @@
-import { IGatsbyImageData } from 'gatsby-plugin-image'
+import { IGatsbyImageData } from "gatsby-plugin-image";
 
 export type Action = {
-  url: string
-  label: string
-}
+  url: string;
+  label: string;
+};
 
 export type DynamicCardImage = {
-  image: IGatsbyImageData
-  alt: string
-}
+  image: IGatsbyImageData;
+  alt: string;
+};

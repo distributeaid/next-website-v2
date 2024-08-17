@@ -6,8 +6,8 @@ import type { Config } from "tailwindcss";
 const round = (num: number) =>
   num
     .toFixed(7)
-    .replace(/(\.[0-9]+?)0+$/, '$1')
-    .replace(/\.0$/, '');
+    .replace(/(\.[0-9]+?)0+$/, "$1")
+    .replace(/\.0$/, "");
 
 /** @type {(px: number) => string} */
 // const rem = (px) => `${round(px / 16)}rem`
@@ -17,9 +17,9 @@ const em = (px: number, base: number) => `${round(px / base)}em`;
 
 const config: Config = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -74,24 +74,24 @@ const config: Config = {
           50: "#FFFDFA",
         },
         gray: {
-          500: '#4B5563',
-          400: '#e5e7eb',
+          500: "#4B5563",
+          400: "#e5e7eb",
         },
-        'navy-400': 'rgb(139 159 200)',
-        'navy-600': 'rgb(34 75 164)',
+        "navy-400": "rgb(139 159 200)",
+        "navy-600": "rgb(34 75 164)",
         "light-brown": "#E3E5FF",
         "brown-800": "rgb(9 50 139)",
         "brown-600": "rgb(227, 229, 255)",
         "brown-900": "rgb(233, 223, 238)",
-        'green-100': '#F8FAFE',
-        'green-200': '#EEF4FD',
-        'green-500': '#E9FBFE',
-        'dark-blue': '#09328b',
-        'text-blue': '#224ba4',
-        'green-10': '#E9FBFE',       
+        "green-100": "#F8FAFE",
+        "green-200": "#EEF4FD",
+        "green-500": "#E9FBFE",
+        "dark-blue": "#09328b",
+        "text-blue": "#224ba4",
+        "green-10": "#E9FBFE",
       },
       fontFamily: {
-        lato: ["lato", "sans-serif"],  
+        lato: ["lato", "sans-serif"],
       },
       // unfortunately @tailwindcss/typeography doesn't ship types
       /** @ts-ignore */
@@ -102,10 +102,10 @@ const config: Config = {
           css: {
             h1: {
               fontSize: em(54, 16),
-              marginTop: '0',
+              marginTop: "0",
               marginBottom: em(48, 54),
               lineHeight: round(67.5 / 54),
-              textTransform: 'uppercase',
+              textTransform: "uppercase",
             },
             h2: {
               fontSize: em(36, 16),
@@ -113,7 +113,7 @@ const config: Config = {
               marginBottom: em(36, 36),
               lineHeight: round(48 / 36),
             },
-            'h2:first-child': {
+            "h2:first-child": {
               marginTop: 0,
             },
             h3: {
@@ -122,17 +122,17 @@ const config: Config = {
               marginBottom: em(12, 20),
               lineHeight: round(32 / 20),
             },
-            'h3:first-child': {
+            "h3:first-child": {
               marginTop: 0,
             },
           },
         },
       }),
-        primary: "#082B76",
-        secondary: "#F8FAFE",
-      },
+      primary: "#082B76",
+      secondary: "#F8FAFE",
     },
-    plugins: [],
-  }
-  
+  },
+  plugins: [],
+};
+
 export default config;

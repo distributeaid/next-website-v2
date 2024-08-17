@@ -30,7 +30,7 @@ const colors = shuffle(
   getColors({
     swatches: ["navy", "purple", "rosemary", "turquoise", "beige"],
     weights: [50, 100],
-  })
+  }),
 );
 
 export function getBackgroundColor(): string {
