@@ -1,10 +1,17 @@
 import { activities, socials } from "../data/home";
-import { lato } from "../components/ui/fonts";
+import { Lato } from "next/font/google";
+
 import Image from "next/image";
 import CounterStat from "../components/ui/CounterStat";
 import Hero from "../components/ui/Hero";
 import homepageBanner from "../../public/images/homepage-banner-image.svg";
 import sary from "../../public/images/lettermark_blue.svg";
+import Earth3D from "../components/ui/Earth3D";
+
+const lato = Lato({
+  weight: ["100", "300", "400", "700", "900"],
+  subsets: ["latin"],
+});
 
 const Home = () => {
   return (
