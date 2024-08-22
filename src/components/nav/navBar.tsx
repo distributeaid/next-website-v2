@@ -6,6 +6,12 @@ import { FaTimes } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
 import LogoMark from "../../../public/images/LogoMark";
 import Button from "../ui/Button";
+import * as NavigationMenu from "@radix-ui/react-navigation-menu";
+import { Text } from "@radix-ui/themes";
+import DonateButton from "@/components/ui/Button";
+import cx from 'classnames';
+
+
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
@@ -49,62 +55,64 @@ const NavBar = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-navy-900 fixed nav z-40">
-      <div>
-        {/* <h1 className="text-5xl font-signature ml-2"><a className="link-underline hover:transition ease-in-out delay-150 hover:underline hover:decoration-solid" href="">Logo</a></h1> */}
-        <h1 className="text-5xl font-signature ml-2">
-          <Link
-            className="link-underline link-underline-black"
-            href="/"
-            target=""
-            rel="noreferrer"
-          >
-            <LogoMark width="50" height={(60 / 70) * 50} />
-            {/* <Image
-              src={Logo}
-              alt="da-logo"
-              width={50}
-              height={50}
-              priority={true}
-              className=""
-            /> */}
-          </Link>
-        </h1>
-      </div>
+    //We're using a Radix primitive for the navbar which allows custom styling
+    <>
+      <NavigationMenu.Root>
+      <NavigationMenu.List className="flex justify-between md:justify-around px-6 items-center w-full h-20 text-white bg-navy-900 fixed nav z-40">
 
-      <ul className="hidden md:flex">
-        {links.map(({ id, title, url }) => (
-          <li
-            key={id}
-            className="p-3 px-6 cursor-pointer capitalize font-medium text-white hover:scale-105 hover:bg-dark-blue hover:rounded-sm duration-200 link-underline"
-          >
-            <Link href={url}>{title}</Link>
-          </li>
-        ))}
-      </ul>
-
-      <div
-        onClick={() => setNav(!nav)}
-        className="cursor-pointer pr-4 z-10 text-white md:hidden"
-      >
-        {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
-      </div>
-
-      {nav && (
-        <ul className="flex flex-col md:hidden justify-center items-center absolute top-0 left-0 w-full h-screen bg-navy-900 text-white">
-          {links.map(({ id, title, url }) => (
-            <li
-              key={id}
-              className="px-4 cursor-pointer capitalize py-4 text-3xl"
+          <Text className="text-5xl font-signature ml-2">
+            <Link
+              className="link-underline link-underline-black"
+              href="/"
+              target=""
+              rel="noreferrer"
             >
-              <Link onClick={() => setNav(!nav)} href={url}>
-                {title}
-              </Link>
-            </li>
+              <LogoMark width="50" height={(60 / 70) * 50} />
+            </Link>
+          </Text>
+
+        {/* Desktop menu */}
+        <NavigationMenu.Item className="hidden md:flex">
+          {links.map(({ id, title, url }) => (
+            <NavigationMenu.List
+              key={id}
+              className={cx(
+                "p-3 px-12 cursor-pointer capitalize font-medium hover:scale-105 hover:bg-dark-blue hover:rounded-lg duration-200", 
+                { 
+                  "text-dark-blue bg-white rounded-lg hover:text-white  ml-4": id === 7
+                }
+              )}
+            >
+              <Link href={url}>{title}</Link>
+            </NavigationMenu.List>
           ))}
-        </ul>
-      )}
-    </div>
+        </NavigationMenu.Item>
+
+        {/* Mobile menu */}
+        <div
+          onClick={() => setNav(!nav)}
+          className="cursor-pointer pr-4 z-10 text-white md:hidden"
+        >
+          {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
+        </div>
+
+        {nav && (
+          <NavigationMenu.Item className="flex flex-col md:hidden justify-center items-center absolute top-0 left-0 w-full h-screen bg-navy-900 text-white">
+            {links.map(({ id, title, url }) => (
+              <NavigationMenu.List
+                key={id}
+                className="px-4 cursor-pointer capitalize py-4 text-3xl"
+              >
+                <Link onClick={() => setNav(!nav)} href={url}>
+                  {title}
+                </Link>
+              </NavigationMenu.List>
+            ))}
+          </NavigationMenu.Item>
+        )}
+      </NavigationMenu.List>
+      </NavigationMenu.Root>
+    </>
   );
 };
 
