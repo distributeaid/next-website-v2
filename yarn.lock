@@ -499,7 +499,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@radix-ui/colors@npm:3.0.0":
+"@radix-ui/colors@npm:3.0.0, @radix-ui/colors@npm:^3.0.0":
   version: 3.0.0
   resolution: "@radix-ui/colors@npm:3.0.0"
   checksum: 10c0/612c6bb4efe987f2d49aaca2f785687d08150da59a248328bc2b4e187ece4ef731c1dc5c6a9430fffcac4af9e65cf2f89ceb9806f8809940c9eb238b79d2cf2f
@@ -969,7 +969,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@radix-ui/react-navigation-menu@npm:1.2.0":
+"@radix-ui/react-navigation-menu@npm:1.2.0, @radix-ui/react-navigation-menu@npm:^1.2.0":
   version: 1.2.0
   resolution: "@radix-ui/react-navigation-menu@npm:1.2.0"
   dependencies:
@@ -5253,6 +5253,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "next-website-v2@workspace:."
   dependencies:
+    "@radix-ui/colors": "npm:^3.0.0"
+    "@radix-ui/react-navigation-menu": "npm:^1.2.0"
     "@radix-ui/themes": "npm:^3.1.3"
     "@types/lodash": "npm:4.17.12"
     "@types/node": "npm:20.17.3"
