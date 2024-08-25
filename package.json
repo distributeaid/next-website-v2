@@ -46,7 +46,7 @@
     "tailwindcss": "^3.4.9",
     "typescript": "^5.4.2"
   },
-  "packageManager": "yarn@4.4.0",
+  "packageManager": "yarn@4.4.1",
   "engines": {
     "node": ">=20.0.0 <=20.x.x",
     "npm": "please-use-yarn",
