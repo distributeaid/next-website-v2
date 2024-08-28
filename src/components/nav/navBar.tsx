@@ -5,10 +5,8 @@ import React, { useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
 import LogoMark from "../../../public/images/LogoMark";
-import Button from "../ui/Button";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { Text } from "@radix-ui/themes";
-import DonateButton from "@/components/ui/Button";
 import cx from 'classnames';
 
 
