@@ -77,6 +77,7 @@ const config: Config = {
           500: '#4B5563',
           400: '#e5e7eb',
         },
+        'primary-blue': '#1D2F73',
         'navy-400': 'rgb(139 159 200)',
         'navy-600': 'rgb(34 75 164)',
         "light-brown": "#E3E5FF",
