@@ -39,6 +39,8 @@ const Home = () => {
                       src={social.icon}
                       alt={social.name}
                       className="size-8"
+                      width="200"
+                      height="200"
                     />
                   </a>
                 </li>
@@ -60,6 +62,8 @@ const Home = () => {
                   src={activity.image}
                   className="w-full h-auto"
                   alt={activity.title}
+                  width="200"
+                  height="200"
                 />
               </div>
               <div className="px-8 w-[50%] max-[768px]:w-full max-[768px]:px-0">
