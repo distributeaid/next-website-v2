@@ -5,7 +5,7 @@ import {
   moriaFireRelief,
   soapRelief,
   waterRelief,
-} from "@/data/home";
+} from "../../data/home";
 import DynamicBgImg from "./DynamicBgImg";
 
 const Hero = () => {
@@ -19,7 +19,7 @@ const Hero = () => {
       </div>
       <div className="flex w-[48rem] max-[767px]:w-full h-[400px] justify-between items-center flex-none mx-auto px-2">
         <div className="max-[767px]:w-full w-[50%] pr-4 flex-shrink-0">
-          <Image src={logoHero} alt="" className="py-2 max-[767px]:w-full" />
+          <Image src={logoHero} width="10" height="10" alt="" className="py-2 max-[767px]:w-full" />
           <p className="text-primary text-[2.15rem] leading-[3rem]">
             Re-imagine {<br />}Humanitarian Aid {<br />}Delivery
           </p>

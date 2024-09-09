@@ -32,9 +32,9 @@ const Home = () => {
             </p>
           </div>
           <div className="w-[50%] flex justify-between">
-            <div>
+            {/* <div>
               <Earth3D svgPath={sary.src} />
-            </div>
+            </div> */}
             <ul className="flex flex-col gap-4 max-[1024px]:hidden">
               {socials.map((social, index) => (
                 <li key={index}>
@@ -48,6 +48,8 @@ const Home = () => {
                       src={social.icon}
                       alt={social.name}
                       className="size-8"
+                      width="200"
+                      height="200"
                     />
                   </a>
                 </li>
@@ -69,6 +71,8 @@ const Home = () => {
                   src={activity.image}
                   className="w-full h-auto"
                   alt={activity.title}
+                  width="200"
+                  height="200"
                 />
               </div>
               <div className="px-8 w-[50%] max-[768px]:w-full max-[768px]:px-0">

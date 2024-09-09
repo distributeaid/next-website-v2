@@ -10,7 +10,7 @@ import CountUp from "react-countup";
 import { lato } from "../ui/fonts";
 
 const Icon = ({ srcImg }: { srcImg: string }) => {
-  return <Image src={srcImg} alt="" className="size-28 max-[768px]:size-[7.5rem]" />;
+  return <Image src={srcImg} width="10" height="10" alt="" className="size-28 max-[768px]:size-[7.5rem]" />;
 };
 
 const Counter = ({
