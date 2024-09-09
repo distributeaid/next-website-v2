@@ -27,7 +27,7 @@ export function getThemeLargeScreenWidth(): number {
   // const screens = theme?.screens as unknown as
   //   | Record<string, string>
   //   | undefined;
-  // return parseInt(screens?.["lg"]?.replace("px", "") ?? "1024", 10); 
+  // return parseInt(screens?.["lg"]?.replace("px", "") ?? "1024", 10);
   return parseInt(screens["lg"]?.replace("px", "") ?? "1024", 10); //from region-page branch. Commenting out temporaril
 }
 
@@ -36,7 +36,7 @@ const colors = shuffle(
   getColors({
     swatches: ["navy", "purple", "rosemary", "turquoise", "beige"],
     weights: [50, 100],
-  })
+  }),
 );
 
 export function getBackgroundColor(): string {
@@ -51,15 +51,15 @@ export function getColors({
 }: {
   swatches: string[];
   weights: number[];
-// <<<<<<< region-page
-// }) {
-//   const themeColors = theme?.colors as unknown as Record<string, Record<number, string>> | undefined; // {rosemary: {200: '#F2ECF5', 300: '#E9DFEE', etc}, etc}
+  // <<<<<<< region-page
+  // }) {
+  //   const themeColors = theme?.colors as unknown as Record<string, Record<number, string>> | undefined; // {rosemary: {200: '#F2ECF5', 300: '#E9DFEE', etc}, etc}
 
-//   const colors = [];
+  //   const colors = [];
 
-//   for (const swatch of swatches) {
-//     for (const weight of weights) {
-//       const swatchColors = themeColors?.[swatch] ?? {};
+  //   for (const swatch of swatches) {
+  //     for (const weight of weights) {
+  //       const swatchColors = themeColors?.[swatch] ?? {};
 }): string[] {
   const themeColors = theme?.colors as unknown as Record<
     string,
@@ -113,9 +113,9 @@ export function getVisualizationColors({
     }
   }
 
-// <<<<<<< region-page
-//   return colors;
-// }
+  // <<<<<<< region-page
+  //   return colors;
+  // }
   if (randomize) {
     colors.sort(() => Math.random() - 0.5);
   }

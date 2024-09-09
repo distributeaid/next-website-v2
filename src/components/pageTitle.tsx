@@ -1,14 +1,16 @@
 interface PageTitleProps {
-    title: string;
-    bgColor: string;
-  }
+  title: string;
+  bgColor: string;
+}
 
-  const PageTitle = ({ title, bgColor }: PageTitleProps) => {
-    return (
-      <div className={`bg-${bgColor} py-8 text-center`}>
-        <h1 className="text-dark-blue uppercase font-extrabold text-5xl">{title}</h1>
-      </div>
-    );
-  };
+const PageTitle = ({ title, bgColor }: PageTitleProps) => {
+  return (
+    <div className={`bg-${bgColor} py-8 text-center`}>
+      <h1 className="text-dark-blue uppercase font-extrabold text-5xl">
+        {title}
+      </h1>
+    </div>
+  );
+};
 
-export default PageTitle
+export default PageTitle;

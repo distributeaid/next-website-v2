@@ -1,17 +1,10 @@
 import { activities, socials } from "../data/home";
-import { Lato } from "next/font/google";
-
+import { lato } from "../components/ui/fonts";
 import Image from "next/image";
 import CounterStat from "../components/ui/CounterStat";
 import Hero from "../components/ui/Hero";
 import homepageBanner from "../../public/images/homepage-banner-image.svg";
-import sary from "../../public/images/lettermark_blue.svg"
-import Earth3D from "../components/ui/Earth3D";
-
-const lato = Lato({
-  weight: ["100", "300", "400", "700", "900"],
-  subsets: ["latin"],
-})
+import sary from "../../public/images/lettermark_blue.svg";
 
 const Home = () => {
   return (
@@ -32,9 +25,7 @@ const Home = () => {
             </p>
           </div>
           <div className="w-[50%] flex justify-between">
-            {/* <div>
-              <Earth3D svgPath={sary.src} />
-            </div> */}
+            <div>TODO: Implement new Earth visualization</div>
             <ul className="flex flex-col gap-4 max-[1024px]:hidden">
               {socials.map((social, index) => (
                 <li key={index}>
@@ -76,8 +67,12 @@ const Home = () => {
                 />
               </div>
               <div className="px-8 w-[50%] max-[768px]:w-full max-[768px]:px-0">
-                <h3 className="text-2xl max-[768px]:text-[1.35rem]">{activity.title}</h3>
-                <h4 className="text-primary text-xl max-[768px]:text-lg mb-4">{activity.region}</h4>
+                <h3 className="text-2xl max-[768px]:text-[1.35rem]">
+                  {activity.title}
+                </h3>
+                <h4 className="text-primary text-xl max-[768px]:text-lg mb-4">
+                  {activity.region}
+                </h4>
                 <p
                   dangerouslySetInnerHTML={{ __html: activity.description }}
                   className="text-[1rem] text-gray-800"

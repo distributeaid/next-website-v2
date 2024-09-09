@@ -10,5 +10,3 @@ tasks:
     command: npm run dev
   - name: Bash
     command: bash
-
-

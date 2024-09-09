@@ -1,4 +1,6 @@
-:root, .light, .light-theme {
+:root,
+.light,
+.light-theme {
   --blue-1: #fcfdff;
   --blue-2: #f5f9ff;
   --blue-3: #eaf2ff;
@@ -33,7 +35,9 @@
 
 @supports (color: color(display-p3 1 1 1)) {
   @media (color-gamut: p3) {
-    :root, .light, .light-theme {
+    :root,
+    .light,
+    .light-theme {
       --blue-1: oklch(99.4% 0.002 263.4);
       --blue-2: oklch(98.3% 0.011 263.4);
       --blue-3: oklch(96.1% 0.023 263.4);

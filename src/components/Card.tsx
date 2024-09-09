@@ -1,10 +1,10 @@
-import React from 'react';
-import { FC, PropsWithChildren, ReactNode } from 'react';
-import classNames from 'classnames';
-import  Image  from 'next/image';
-import SmartLink from './link/SmartLink';
-import { Action, DynamicCardImage } from '@/types/card';
-import { getBackgroundColor } from '@/utils/site-theme';
+import React from "react";
+import { FC, PropsWithChildren, ReactNode } from "react";
+import classNames from "classnames";
+import Image from "next/image";
+import SmartLink from "./link/SmartLink";
+import { Action, DynamicCardImage } from "@/types/card";
+import { getBackgroundColor } from "@/utils/site-theme";
 
 export enum ImageVariant {
   square,
@@ -21,19 +21,21 @@ const createAction = (action: Action) => (
   </SmartLink>
 );
 
-const Card: FC<PropsWithChildren<{
-  header?: ReactNode
-  dynamicCardImage?: DynamicCardImage
-  imageVariant?: ImageVariant
-  title?: ReactNode
-  subtitle?: string
-  additionalHeaderContent?: ReactNode | ReactNode[]
-  body?: ReactNode
-  actions?: Action[]
-  transparentBorder?: boolean
-  transparentBody?: boolean
-  bodyColor?: string
-}>> = ({
+const Card: FC<
+  PropsWithChildren<{
+    header?: ReactNode;
+    dynamicCardImage?: DynamicCardImage;
+    imageVariant?: ImageVariant;
+    title?: ReactNode;
+    subtitle?: string;
+    additionalHeaderContent?: ReactNode | ReactNode[];
+    body?: ReactNode;
+    actions?: Action[];
+    transparentBorder?: boolean;
+    transparentBody?: boolean;
+    bodyColor?: string;
+  }>
+> = ({
   children,
   header,
   dynamicCardImage,
@@ -49,11 +51,11 @@ const Card: FC<PropsWithChildren<{
 }) => (
   <section
     className={classNames(
-      'border',
+      "border",
       {
-        'border-transparent': transparentBorder,
-        'bg-transparent': transparentBody,
-        'bg-white': !transparentBody,
+        "border-transparent": transparentBorder,
+        "bg-transparent": transparentBody,
+        "bg-white": !transparentBody,
       },
       bodyColor,
     )}
@@ -64,23 +66,23 @@ const Card: FC<PropsWithChildren<{
       <div
         style={{
           backgroundColor: getBackgroundColor(),
-          borderRadius: imageVariant === ImageVariant.circle ? '50%' : 'none',
+          borderRadius: imageVariant === ImageVariant.circle ? "50%" : "none",
         }}
         className={
           imageVariant === ImageVariant.circle
             ? `m-4 min-w-[256px] w-1/2 min-h-[256px] h-1/2 p-1 mx-auto flex items-center justify-center`
-            : ''
+            : ""
         }
       >
         <Image
           src={dynamicCardImage.image}
           alt={dynamicCardImage.alt}
           layout="responsive"
-          loading='lazy'
+          loading="lazy"
           width={0}
           height={0}
           className={
-            imageVariant === ImageVariant.circle ? `rounded-full w-1/2` : ''
+            imageVariant === ImageVariant.circle ? `rounded-full w-1/2` : ""
           }
         />
       </div>
@@ -99,6 +101,3 @@ const Card: FC<PropsWithChildren<{
 );
 
 export default Card;
-
-
-

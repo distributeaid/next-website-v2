@@ -1,4 +1,4 @@
-const subregion= {
+const subregion = {
   name: "Eastern Europe",
   image: "eastern_europe.jpg",
   alt: "Eastern Europe",
@@ -56,6 +56,6 @@ export const regions = {
   newsUpdates: "Latest news updates...",
   stayInformed: "Stay informed...",
   subregions: [subregion], // Include the subregion
-}
+};
 
-export const regionsData = Array(7).fill(regions)
+export const regionsData = Array(7).fill(regions);

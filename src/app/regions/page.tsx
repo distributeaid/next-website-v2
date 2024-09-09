@@ -29,7 +29,7 @@ const Regions = () => {
           <Card
             key={region.name}
             dynamicCardImage={{
-              image: '/images/paypal-color.svg',
+              image: "/images/paypal-color.svg",
               alt: region.map.alt,
             }}
             imageVariant={ImageVariant.circle}
@@ -67,7 +67,7 @@ const createSubregionLinks = (region: Region): JSX.Element[] => {
 
 const createRegionsCardBody = (
   region: Region,
-  currentNeed?: number
+  currentNeed?: number,
 ): JSX.Element => {
   return (
     <>
