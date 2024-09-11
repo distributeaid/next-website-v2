@@ -1,5 +1,8 @@
 name: move-card-to-in-review
 
+permissions:
+  project: write
+
 on:
   pull_request:
     types: [opened, reopened, ready_for_review, synchronize, edited]
