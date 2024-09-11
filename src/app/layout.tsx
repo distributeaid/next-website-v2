@@ -45,7 +45,6 @@ export default function RootLayout({
         <Theme accentColor="blue">
           <NavBar />
           <div className="pt-20">{children}</div>
-
           <Footer />
         </Theme>
       </body>

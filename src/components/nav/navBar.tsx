@@ -6,7 +6,7 @@ import { FaTimes } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
 import LogoMark from "../../../public/images/LogoMark";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import { Text } from "@radix-ui/themes";
+import { Section, Text } from "@radix-ui/themes";
 import cx from 'classnames';
 
 
@@ -57,7 +57,6 @@ const NavBar = () => {
     <>
       <NavigationMenu.Root>
       <NavigationMenu.List className="flex justify-between md:justify-around px-6 items-center w-full h-20 text-white bg-navy-900 fixed nav z-40">
-
           <Text className="text-5xl font-signature ml-2">
             <Link
               className="link-underline link-underline-black"
@@ -82,9 +81,11 @@ const NavBar = () => {
               )}
             >
               <Link href={url}>{title}</Link>
+              
             </NavigationMenu.List>
           ))}
         </NavigationMenu.Item>
+        
 
         {/* Mobile menu */}
         <div

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { FunctionComponent } from 'react'
 import { NavItem } from './MainMenu'
+import { Section } from '@radix-ui/themes'
 
 interface Props {
     nav: NavItem[]
@@ -9,7 +10,7 @@ interface Props {
 const DesktopNavigation: FunctionComponent<Props> = ({ nav }) => {
     return (
         <nav role="navigation" className="hidden md:block">
-            <div className="pl-6 flex space-x-2 items-center">
+            <div className="pl-6 flex space-x-2 items-center ">
                 {nav.map((linkItem) => {
                     if (linkItem._type === 'NavLink') {
                         return (
@@ -69,6 +70,7 @@ const DesktopNavigation: FunctionComponent<Props> = ({ nav }) => {
                     }
                 })}
             </div>
+            
         </nav>
     )
 }
