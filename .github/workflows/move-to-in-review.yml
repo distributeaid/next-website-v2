@@ -1,0 +1,75 @@
+name: move-card-to-in-review
+
+permissions:
+  project: write
+
+on:
+  pull_request:
+    types: [opened, reopened, ready_for_review, synchronize, edited]
+
+jobs:
+  extract-issue-numbers:
+    runs-on: ubuntu-latest
+    outputs:
+      issues: ${{ steps.extract.outputs.issues }}
+    steps:
+      - id: extract
+        uses: MatrixFrog/pr-extract-issues@2684b0f1d7b1671b7fb9ab8bfbb9b2b88983e6c5
+        with:
+          way: 'body'
+  
+  move-issues:
+    needs: extract-issue-numbers
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get project data
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api graphql -f query='
+            query {
+              organization(login: "distributeaid") {
+                projectV2(number: 15) {
+                  id
+                  field(name: "Status") {
+                    ... on ProjectV2SingleSelectField {
+                      id
+                      name
+                      options(names: ["In Review"]) {
+                        id
+                        name
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ' > project_data.json
+          echo PROJECT_ID=$(jq '.data.organization.projectV2.id' project_data.json) >> $GITHUB_ENV
+          echo STATUS_ID=$(jq '.data.organization.projectV2.field.id' project_data.json) >> $GITHUB_ENV
+          echo IN_REVIEW_ID=$(jq '.data.organization.projectV2.field.options[0].id' project_data.json) >> $GITHUB_ENV
+          echo 'GITHUB ENV:'
+          echo $GITHUB_ENV
+
+      # - env: 
+      #     ISSUES: ${{ needs.extract-issue-numbers.outputs.issues }}
+      #   run: |
+      #     gh api graphql -f query='
+      #       mutation($project: ID!, $status_field, $status_value: ID!, ID!, $issue:ID!) {
+      #         updateProjectV2ItemFieldValue(input: {
+      #           projectId: $project
+      #           itemId: $item
+      #           fieldId: $status_field
+      #           value: {
+      #             singleSelectOptionId: $status_value
+      #           }
+      #         }) {
+      #           projectV2Item {
+      #             id
+      #             }
+      #         }
+      #       }' -f project=$PROJECT_ID -f status_field=$STATUS_ID -f status_value=$IN_REVIEW_ID -f issue=$ISSUES # for now, assume there's only one issue number
+
+
+
+
