@@ -70,21 +70,22 @@ const NavBar = () => {
           </Text>
 
         {/* Desktop menu */}
-        <NavigationMenu.Item className="hidden md:flex">
+        <div className="hidden md:flex">
           {links.map(({ id, title, url }) => (
-            <NavigationMenu.List
-              key={id}
-              className={cx(
-                "p-3 px-12 cursor-pointer capitalize font-medium hover:scale-105 hover:bg-dark-blue hover:rounded-lg duration-200", 
-                { 
-                  "text-dark-blue bg-white rounded-lg hover:text-white  ml-4": id === 7
-                }
-              )}
-            >
-              <Link href={url}>{title}</Link>
-            </NavigationMenu.List>
+              <NavigationMenu.Item
+                key={id}
+              >
+                <Link
+                  className={cx(
+                    "p-3 px-12 cursor-pointer capitalize font-medium hover:scale-105 hover:bg-dark-blue hover:rounded-lg duration-200", 
+                    { 
+                      "text-dark-blue bg-white rounded-lg hover:text-white  ml-4": id === 7
+                    }
+                  )} 
+                href={url}>{title}</Link>
+              </NavigationMenu.Item>
           ))}
-        </NavigationMenu.Item>
+        </div>
 
         {/* Mobile menu */}
         <div
