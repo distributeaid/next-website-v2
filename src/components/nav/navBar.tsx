@@ -7,9 +7,7 @@ import { FaBars } from "react-icons/fa";
 import LogoMark from "../../../public/images/LogoMark";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { Text } from "@radix-ui/themes";
-import cx from 'classnames';
-
-
+import cx from "classnames";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
@@ -56,8 +54,7 @@ const NavBar = () => {
     //We're using a Radix primitive for the navbar which allows custom styling
     <>
       <NavigationMenu.Root>
-      <NavigationMenu.List className="flex justify-between md:justify-around px-6 items-center w-full h-20 text-white bg-navy-900 fixed nav z-40">
-
+        <NavigationMenu.List className="flex justify-between md:justify-around px-6 items-center w-full h-20 text-white bg-navy-900 fixed nav z-40">
           <Text className="text-5xl font-signature ml-2">
             <Link
               className="link-underline link-underline-black"
@@ -69,47 +66,49 @@ const NavBar = () => {
             </Link>
           </Text>
 
-        {/* Desktop menu */}
-        <div className="hidden md:flex">
-          {links.map(({ id, title, url }) => (
-              <NavigationMenu.Item
-                key={id}
-              >
+          {/* Desktop menu */}
+          <div className="hidden md:flex">
+            {links.map(({ id, title, url }) => (
+              <NavigationMenu.Item key={id}>
                 <Link
                   className={cx(
-                    "p-3 px-12 cursor-pointer capitalize font-medium hover:scale-105 hover:bg-dark-blue hover:rounded-lg duration-200", 
-                    { 
-                      "text-dark-blue bg-white rounded-lg hover:text-white  ml-4": id === 7
-                    }
-                  )} 
-                href={url}>{title}</Link>
-              </NavigationMenu.Item>
-          ))}
-        </div>
-
-        {/* Mobile menu */}
-        <div
-          onClick={() => setNav(!nav)}
-          className="cursor-pointer pr-4 z-10 text-white md:hidden"
-        >
-          {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
-        </div>
-
-        {nav && (
-          <NavigationMenu.Item className="flex flex-col md:hidden justify-center items-center absolute top-0 left-0 w-full h-screen bg-navy-900 text-white">
-            {links.map(({ id, title, url }) => (
-              <NavigationMenu.List
-                key={id}
-                className="px-4 cursor-pointer capitalize py-4 text-3xl"
-              >
-                <Link onClick={() => setNav(!nav)} href={url}>
+                    "p-3 px-12 cursor-pointer capitalize font-medium hover:scale-105 hover:bg-dark-blue hover:rounded-lg duration-200",
+                    {
+                      "text-dark-blue bg-white rounded-lg hover:text-white  ml-4":
+                        id === 7,
+                    },
+                  )}
+                  href={url}
+                >
                   {title}
                 </Link>
-              </NavigationMenu.List>
+              </NavigationMenu.Item>
             ))}
-          </NavigationMenu.Item>
-        )}
-      </NavigationMenu.List>
+          </div>
+
+          {/* Mobile menu */}
+          <div
+            onClick={() => setNav(!nav)}
+            className="cursor-pointer pr-4 z-10 text-white md:hidden"
+          >
+            {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
+          </div>
+
+          {nav && (
+            <NavigationMenu.Item className="flex flex-col md:hidden justify-center items-center absolute top-0 left-0 w-full h-screen bg-navy-900 text-white">
+              {links.map(({ id, title, url }) => (
+                <NavigationMenu.List
+                  key={id}
+                  className="px-4 cursor-pointer capitalize py-4 text-3xl"
+                >
+                  <Link onClick={() => setNav(!nav)} href={url}>
+                    {title}
+                  </Link>
+                </NavigationMenu.List>
+              ))}
+            </NavigationMenu.Item>
+          )}
+        </NavigationMenu.List>
       </NavigationMenu.Root>
     </>
   );
