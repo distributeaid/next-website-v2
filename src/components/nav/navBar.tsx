@@ -6,7 +6,7 @@ import { FaTimes } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
 import LogoMark from "../../../public/images/LogoMark";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import { Text } from "@radix-ui/themes";
+import { Text, Box, Flex } from "@radix-ui/themes";
 import cx from "classnames";
 
 const NavBar = () => {
@@ -67,14 +67,18 @@ const NavBar = () => {
           </Text>
 
           {/* Desktop menu */}
-          <div className="hidden md:flex">
+          <Flex gap="4" width={"100%"} justify={"center"} className="hidden md:flex">
             {links.map(({ id, title, url }) => (
               <NavigationMenu.Item key={id}>
-                <Link
+                <Box asChild py="3" px={{ sm: '3', md: '6' }}>
+
+                <Text asChild wrap="nowrap">
+                  <Link 
                   className={cx(
-                    "p-3 px-12 cursor-pointer capitalize font-medium hover:scale-105 hover:bg-dark-blue hover:rounded-lg duration-200",
+                    " cursor-pointer capitalize font-medium hover:scale-105 hover:bg-dark-blue hover:rounded-lg duration-200",
+                  
                     {
-                      "text-dark-blue bg-white rounded-lg hover:text-white  ml-4":
+                      "text-dark-blue bg-white rounded-lg hover:text-white ":
                         id === 7,
                     },
                   )}
@@ -82,9 +86,12 @@ const NavBar = () => {
                 >
                   {title}
                 </Link>
+                </Text>
+                
+                </Box>
               </NavigationMenu.Item>
             ))}
-          </div>
+          </Flex>
 
           {/* Mobile menu */}
           <div
