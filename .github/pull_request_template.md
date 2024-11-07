@@ -8,5 +8,5 @@
 
 ## How can you test this change?
 
-[ ] Automated tests
-[ ] Manual tests (describe)
+- [ ] Automated tests
+- [ ] Manual tests (describe)
