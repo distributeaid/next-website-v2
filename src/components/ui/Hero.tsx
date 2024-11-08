@@ -5,7 +5,7 @@ import {
   moriaFireRelief,
   soapRelief,
   waterRelief,
-} from "../../data/home";
+} from "@/data/home";
 import DynamicBgImg from "./DynamicBgImg";
 
 const Hero = () => {
