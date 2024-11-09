@@ -20,7 +20,7 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "target": "ES2017"
+    "target": "ESNext"
   },
   "include": [
     "next-env.d.ts",
