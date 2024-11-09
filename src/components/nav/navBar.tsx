@@ -67,27 +67,30 @@ const NavBar = () => {
           </Text>
 
           {/* Desktop menu */}
-          <Flex gap="4" width={"100%"} justify={"center"} className="hidden md:flex">
+          <Flex
+            gap="4"
+            width={"100%"}
+            justify={"center"}
+            className="hidden md:flex"
+          >
             {links.map(({ id, title, url }) => (
               <NavigationMenu.Item key={id}>
-                <Box asChild py="3" px={{ sm: '3', md: '6' }}>
+                <Box asChild py="3" px={{ sm: "3", md: "6" }}>
+                  <Text asChild wrap="nowrap">
+                    <Link
+                      className={cx(
+                        " cursor-pointer capitalize font-medium hover:scale-105 hover:bg-dark-blue hover:rounded-lg duration-200",
 
-                <Text asChild wrap="nowrap">
-                  <Link 
-                  className={cx(
-                    " cursor-pointer capitalize font-medium hover:scale-105 hover:bg-dark-blue hover:rounded-lg duration-200",
-                  
-                    {
-                      "text-dark-blue bg-white rounded-lg hover:text-white ":
-                        id === 7,
-                    },
-                  )}
-                  href={url}
-                >
-                  {title}
-                </Link>
-                </Text>
-                
+                        {
+                          "text-dark-blue bg-white rounded-lg hover:text-white ":
+                            id === 7,
+                        },
+                      )}
+                      href={url}
+                    >
+                      {title}
+                    </Link>
+                  </Text>
                 </Box>
               </NavigationMenu.Item>
             ))}
