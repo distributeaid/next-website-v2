@@ -25,9 +25,9 @@ const Regions = () => {
         </h1>
       </header>
       <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 px-2 lg:px-4 py-4 lg:py-8 max-w-7xl mx-auto">
-        {regionsData.map((region) => (
+        {regionsData.map((region, index) => (
           <Card
-            key={region.name}
+            key={index}
             dynamicCardImage={{
               image: "/images/paypal-color.svg",
               alt: region.map.alt,

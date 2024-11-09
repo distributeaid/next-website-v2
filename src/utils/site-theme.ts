@@ -1,8 +1,4 @@
-import { useState } from "react";
-// import { shuffle } from "lodash";
 import resolveConfig from "tailwindcss/resolveConfig";
-import config from "../../tailwind.config";
-import { DefaultColors } from "tailwindcss/types/generated/colors.js";
 import tailwindConfig from "../../tailwind.config"; // Adjust the path to your Tailwind config file
 
 interface KeyValuePair<K, V> {
