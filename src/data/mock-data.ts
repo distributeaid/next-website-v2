@@ -58,4 +58,4 @@ export const regions = {
   subregions: [subregion], // Include the subregion
 };
 
-export const regionsData = Array(7).fill(regions);
+export const regionsData: (typeof regions)[] = Array(7).fill(regions);
