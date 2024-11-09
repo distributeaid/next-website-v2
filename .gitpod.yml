@@ -10,3 +10,8 @@ tasks:
     command: yarn run dev
   - name: Bash
     command: bash
+
+ports:
+  - port: 3000
+    name: app
+    onOpen: open-preview
