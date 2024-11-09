@@ -3898,7 +3898,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:^15.0.3":
+"eslint-config-next@npm:15.0.3":
   version: 15.0.3
   resolution: "eslint-config-next@npm:15.0.3"
   dependencies:
@@ -6123,7 +6123,7 @@ __metadata:
     classnames: "npm:^2.5.1"
     eslint: "npm:8.57.1"
     eslint-config-love: "npm:43.1.0"
-    eslint-config-next: "npm:^15.0.3"
+    eslint-config-next: "npm:15.0.3"
     eslint-config-standard-with-typescript: "npm:43.0.1"
     eslint-plugin-import: "npm:2.31.0"
     eslint-plugin-n: "npm:17.13.1"
