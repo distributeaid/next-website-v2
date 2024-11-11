@@ -6135,9 +6135,9 @@ __metadata:
     postcss: "npm:8.4.48"
     postcss-import: "npm:16.1.0"
     prettier: "npm:3.3.3"
-    react: "npm:19.0.0-rc-5c56b873-20241107"
+    react: "npm:19.0.0-rc-fb9a90fa48-20240614"
     react-countup: "npm:^6.5.3"
-    react-dom: "npm:19.0.0-rc-5c56b873-20241107"
+    react-dom: "npm:19.0.0-rc-fb9a90fa48-20240614"
     react-icons: "npm:^5.0.1"
     react-markdown: "npm:^9.0.1"
     react-modal: "npm:^3.16.1"
@@ -6741,14 +6741,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:19.0.0-rc-5c56b873-20241107":
-  version: 19.0.0-rc-5c56b873-20241107
-  resolution: "react-dom@npm:19.0.0-rc-5c56b873-20241107"
+"react-dom@npm:19.0.0-rc-fb9a90fa48-20240614":
+  version: 19.0.0-rc-fb9a90fa48-20240614
+  resolution: "react-dom@npm:19.0.0-rc-fb9a90fa48-20240614"
   dependencies:
-    scheduler: "npm:0.25.0-rc-5c56b873-20241107"
+    scheduler: "npm:0.25.0-rc-fb9a90fa48-20240614"
   peerDependencies:
-    react: 19.0.0-rc-5c56b873-20241107
-  checksum: 10c0/a69a6168fc85eaa8af1b85df2235968a8f2b54c5c8dba95f8c70eea0bee6288364fac6abb97ccbde834b9de77df87ff3dcff81d0407b5c5e24ec10fcbf432f20
+    react: 19.0.0-rc-fb9a90fa48-20240614
+  checksum: 10c0/ab4f49752f71fcf3de910af463d3ec4f2ea17777dbd854df7f08987b1ae4d91e5b59a1f5998063f68c7db3af06e9cb67f26a57f0e78bb71c28884ef5029edf0d
   languageName: node
   linkType: hard
 
@@ -6877,10 +6877,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:19.0.0-rc-5c56b873-20241107":
-  version: 19.0.0-rc-5c56b873-20241107
-  resolution: "react@npm:19.0.0-rc-5c56b873-20241107"
-  checksum: 10c0/05d4a43c4835210190cf744b8e6effb15d7a9de46abacca8ea1462394cfa336f143c75575af9e6037af73a1467b4bb55b6d9c8f78465c7276021caf0ec381653
+"react@npm:19.0.0-rc-fb9a90fa48-20240614":
+  version: 19.0.0-rc-fb9a90fa48-20240614
+  resolution: "react@npm:19.0.0-rc-fb9a90fa48-20240614"
+  checksum: 10c0/99c3d3398d46c8c704c0deb04160f5a7c9cf2ff785a777fb0f1a4d0c91ade044c4d50cd52e008b4c45623eaa8f4d18a80272444df4972a2cc696bf35ef3e59b0
   languageName: node
   linkType: hard
 
@@ -7186,10 +7186,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"scheduler@npm:0.25.0-rc-5c56b873-20241107":
-  version: 0.25.0-rc-5c56b873-20241107
-  resolution: "scheduler@npm:0.25.0-rc-5c56b873-20241107"
-  checksum: 10c0/058d12830cbd562303163532e20ed79fd653e1c8102298f9604da15121ed919b482e300f6c74e55a7c65c531b812a4fe03adcece4066b1c8fff5fed649b399e7
+"scheduler@npm:0.25.0-rc-fb9a90fa48-20240614":
+  version: 0.25.0-rc-fb9a90fa48-20240614
+  resolution: "scheduler@npm:0.25.0-rc-fb9a90fa48-20240614"
+  checksum: 10c0/efd80573e35479d0e47e864ba5747579be2a8b20cfb61f32bcb17a8b945711d2337dd7f92ac6373f3128ed20a8915624dc82fda6b7f761aab352692a6445d411
   languageName: node
   linkType: hard
 
