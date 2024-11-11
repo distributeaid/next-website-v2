@@ -10,6 +10,7 @@ import {
   Text,
 } from "@radix-ui/themes";
 import { FC } from "react";
+import Image from "next/image";
 
 const CampaignCard: FC<{
   imgSrc: string;
@@ -23,9 +24,12 @@ const CampaignCard: FC<{
     <Box asChild width="373px">
       <Card>
         <Inset clip="padding-box" pb="current">
-          <img
+          <Image
             src={imgSrc}
             alt={imgAlt}
+            height={0}
+            width={0}
+            sizes={"100vw"}
             style={{
               display: "block",
               objectFit: "cover",
@@ -33,7 +37,7 @@ const CampaignCard: FC<{
               height: 150,
               backgroundColor: "var(--blue-9)",
             }}
-          ></img>
+          />
           <Flex
             direction="row"
             align="center"
