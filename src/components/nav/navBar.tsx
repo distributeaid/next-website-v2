@@ -129,20 +129,19 @@ const NavBar = () => {
             <Flex gap="4" className="hidden md:flex">
               {links.map(({ id, title, url, isSubMenu, subMenu }) => (
                 <NavigationMenu.Item key={id}>
-                  {/* <NavigationMenu.Trigger > */}
                   <Box asChild py="3" px={{ sm: "3", md: "6" }}>
                     <Text asChild wrap="nowrap">
-                      <Link
-                        className={cx(
-                          " cursor-pointer capitalize font-medium hover:underline decoration-2 underline-offset-8 duration-200",
-                          {
-                            //a separate donate button is used for proper spacing
-                            "hidden ": id === 7,
-                          },
-                        )}
-                        href={url}
-                      >
-                        <NavigationMenu.Trigger>
+                      <NavigationMenu.Trigger>
+                        <Link
+                          className={cx(
+                            " cursor-pointer capitalize font-medium hover:underline decoration-2 underline-offset-8 duration-200",
+                            {
+                              //a separate donate button is used for proper spacing
+                              "hidden ": id === 7,
+                            },
+                          )}
+                          href={url}
+                        >
                           {isSubMenu ? (
                             <Flex position={"relative"} align={"center"}>
                               {title}
@@ -176,8 +175,8 @@ const NavBar = () => {
                           ) : (
                             title
                           )}
-                        </NavigationMenu.Trigger>
-                      </Link>
+                        </Link>
+                      </NavigationMenu.Trigger>
                     </Text>
                   </Box>
                 </NavigationMenu.Item>
