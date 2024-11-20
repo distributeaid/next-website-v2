@@ -6,8 +6,7 @@ import { Separator } from "@radix-ui/themes";
 import TimelineItem from "@/components/about-us/Timeline";
 
 const AboutUsPage: FC = () => {
-  const { aboutOurMission, aboutOurVision, timeline } =
-    missionStatementData;
+  const { aboutOurMission, aboutOurVision, timeline } = missionStatementData;
 
   return (
     <main>

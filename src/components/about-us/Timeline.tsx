@@ -31,8 +31,6 @@ const TimelineItem: React.FC<TimelineProps> = ({ items }) => {
             {items.length - 1 !== index && (
               <div className="absolute top-[50px] translate-x-[49px] md:-translate-x-1/2 md:left-1/2 h-full w-[3px] bg-navy-900"></div>
             )}
-            {/* Vertical Line */}
-            {/* Icon */}
             <div
               className={classNames(
                 "text-[15px] lg:text-[20px] text-center font-semibold leading-[23.44px] absolute left-3 top-3 translate-x-0 md:left-1/2 md:-translate-x-1/2 md:top-[50px] w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] rounded-full border border-white shadow-md flex items-center justify-center flex-col",
@@ -43,7 +41,6 @@ const TimelineItem: React.FC<TimelineProps> = ({ items }) => {
               <div>{item.period.split(" ")[0]}</div>
               <div>{item.period.split(" ")[1]}</div>
             </div>
-            ̥{/* Card */}
             <div
               className={`
                   max-w-full w-[calc(70%)] md:w-[calc(43%)] 
