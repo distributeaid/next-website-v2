@@ -108,7 +108,6 @@ const NavBar = () => {
     //We're using a Radix primitive for the navbar which allows custom styling
     <>
       <NavigationMenu.Root>
-        {/* flex justify-between items-center */}
         <NavigationMenu.List className="w-full h-20 text-white bg-navy-900 fixed nav z-40">
           <Flex
             //radix does not have justify content: space-around
@@ -146,7 +145,7 @@ const NavBar = () => {
                         <NavigationMenu.Trigger>
                           {isSubMenu ? (
                             <Flex position={"relative"} align={"center"}>
-                              {title}{" "}
+                              {title}
                               <FaChevronDown className="ml-2" size={15} />
                               <NavigationMenu.Content>
                                 <NavigationMenu.Sub>
