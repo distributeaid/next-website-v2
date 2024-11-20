@@ -108,91 +108,105 @@ const NavBar = () => {
     //We're using a Radix primitive for the navbar which allows custom styling
     <>
       <NavigationMenu.Root>
-        <NavigationMenu.List className="flex justify-between  items-center w-full h-20 text-white bg-navy-900 fixed nav z-40">
-            
-            <Text className="text-5xl font-signature ml-2">
+        {/* flex justify-between items-center */}
+        <NavigationMenu.List className="w-full h-20 text-white bg-navy-900 fixed nav z-40">
+            <Flex 
+            //radix does not have justify content: space-around
+              className="flex md:justify-around justify-between items-center"     
+              mt={"4"}
+              >
+              <Box>
+                <Link
+                  className="link-underline link-underline-black"
+                  href="/"
+                  target=""
+                  rel="noreferrer"
+                >
+                  <LogoMark width="50" height={(60 / 70) * 50} />
+                </Link>
+              </Box>
+                  
+              {/* Desktop menu */}
+              <Flex
+                gap="4"
+                className="hidden md:flex"
+              >
+                {links.map(({ id, title, url, isSubMenu,subMenu }) => (
+                  <NavigationMenu.Item key={id}>
+                    {/* <NavigationMenu.Trigger > */}
+                      <Box asChild py="3" px={{ sm: "3", md: "6" }}>
+                        <Text asChild wrap="nowrap">
+                          <Link
+                            className={cx(
+                              " cursor-pointer capitalize font-medium hover:underline decoration-2 underline-offset-8 duration-200",
+                              { //a separate donate button is used for proper spacing
+                                "hidden ":
+                                  id === 7,
+                              },
+                            )}
+                            href={url}
+                          >
+                            <NavigationMenu.Trigger >                          
+                            {isSubMenu ? 
+                            (<Flex
+                              position={"relative"}
+                              align={'center'}
+                              >
+                              {title} <FaChevronDown className="ml-2" size={15} />
+                              <NavigationMenu.Content >
+                                <NavigationMenu.Sub>
+                                  <NavigationMenu.List>
+                                    <Box
+                                      className="border bg-navy-900 "
+                                      mt={"6"}
+                                      p="4"
+                                      position={"absolute"}
+                                      top={"0"}
+                                      right={"0"}
+                                      width={"auto"}
+                                      >
+                                        <ul>
+                                          {subMenu?.map(({id,title,url})=>(
+                                            <NavigationMenu.Item key={id}>
+                                              <Box
+                                              className="hover:underline"
+                                                >
+                                                  {title}
+                                              </Box>
+                                            </NavigationMenu.Item>
+                                            
+                                          ))}
+                                        </ul>
+                                    </Box>
+                                  </NavigationMenu.List>
+                                </NavigationMenu.Sub>
+                              </NavigationMenu.Content>
+                            </Flex>): 
+                            title}
+                            </NavigationMenu.Trigger>
+                          </Link>
+                        </Text>
+                      </Box>
+                    
+                  </NavigationMenu.Item>
+                ))}
+              </Flex>
+              
               <Link
-                className="link-underline link-underline-black"
-                href="/"
+                className="hidden md:block cursor-pointer capitalize font-medium  hover:bg-[#4362A6] hover:text-white duration-200 text-dark-blue bg-white rounded-lg py-3 px-6"
+                href="/donate"
                 target=""
                 rel="noreferrer"
               >
-                <LogoMark width="50" height={(60 / 70) * 50} />
+                Donate
               </Link>
-            </Text>
-          
-            {/* Desktop menu */}
-            <Flex
-              gap="4"
-              width={"100%"}
-              justify={"center"}
-              className="hidden md:flex"
-            >
-              {links.map(({ id, title, url, isSubMenu,subMenu }) => (
-                <NavigationMenu.Item key={id}>
-                  <NavigationMenu.Trigger >
-                    <Box asChild py="3" px={{ sm: "3", md: "6" }}>
-                      <Text asChild wrap="nowrap">
-                        <Link
-                          className={cx(
-                            " cursor-pointer capitalize font-medium hover:underline decoration-2 underline-offset-8 duration-200",
-                            {
-                              "text-dark-blue ml-auto bg-white rounded-lg ":
-                                id === 7,
-                            },
-                          )}
-                          href={url}
-                        >
-                          {isSubMenu ? 
-                          (<Flex
-                            position={"relative"}
-                            align={'center'}
-                            gap={"2"}
-                            >
-                            {title} <FaChevronDown size={15} />
-                            <NavigationMenu.Content >
-                              <NavigationMenu.Sub>
-                                <NavigationMenu.List>
-                                  <Box
-                                    className="border bg-navy-900 "
-                                    mt={"6"}
-                                    p="4"
-                                    position={"absolute"}
-                                    top={"0"}
-                                    right={"0"}
-                                    width={"auto"}
-                                    >
-                                      <ul>
-                                        {subMenu?.map(({id,title,url})=>(
-                                          <NavigationMenu.Item key={id}>
-                                            <Box
-                                            className="hover:underline"
-                                              >
-                                                {title}
-                                            </Box>
-                                          </NavigationMenu.Item>
-                                          
-                                        ))}
-                                      </ul>
-                                  </Box>
-                                </NavigationMenu.List>
-                              </NavigationMenu.Sub>
-                            </NavigationMenu.Content>
-                          </Flex>): 
-                          title}
-                        </Link>
-                      </Text>
-                    </Box>
-                  </NavigationMenu.Trigger>
-                </NavigationMenu.Item>
-              ))}
-            </Flex>
-          
+              
+            
 
           {/* Mobile menu */}
           <div
             onClick={() => setNav(!nav)}
-            className="cursor-pointer pr-4 z-10 text-white md:hidden"
+            className="cursor-pointer  pr-4 z-10 text-white md:hidden"
           >
             {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
           </div>
@@ -211,6 +225,7 @@ const NavBar = () => {
               ))}
             </NavigationMenu.Item>
           )}
+          </Flex>
         </NavigationMenu.List>
       </NavigationMenu.Root>
     </>
