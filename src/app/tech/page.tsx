@@ -1,14 +1,16 @@
+import HeroSection from "@/components/tech/HeroSection";
 import PageTitle from "../../components/pageTitle";
 import Tech from "./tech";
 
 const page = () => {
   return (
-    <section>
-      <PageTitle title="OPEN SOURCE EXPLORERS" bgColor="green-100" />
-      <div className="bg-green-10 h-full py-4">
-        <Tech />
-      </div>
-    </section>
+
+    <div className="relative flex justify-center item-center">
+      <div className="absolute inset-0 bg-navy-900 w-full h-[450px] z-0"></div>
+      <HeroSection />
+     </div> 
+     
+    
   );
 };
 
