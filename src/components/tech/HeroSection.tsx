@@ -5,9 +5,9 @@ import heroBackgroundImg from '../../../public/images/tech/tech-hero-background-
 const HeroSection = () => {
     return (
         <div className='block w-[1252px] item-center justify-center p-8 relative '>
-            <h1 className='text-center text-white uppercase font-bold text-6xl p-2 leading-[52.73px] z-20'>TECH AT DISTRIBUTE AID</h1>
+            <h1 className='text-center text-white uppercase font-bold text-6xl py-6 z-20'>TECH AT DISTRIBUTE AID</h1>
            
-                <Box className="lg:w-full md:w-1/2 relative flex align-center items-center justify-center mt-4" >
+                <Box className="w-full relative flex align-center items-center justify-center mt-4" >
                     
                     <Image
                         src={heroBackgroundImg}
