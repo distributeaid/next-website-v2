@@ -1,12 +1,9 @@
-export const theme = {
-  extend: {
-    fontFamily: {
-      yantramanav: ['Yantramanav', 'sans-serif'],
-    },
-  },
+import postcssImport from 'postcss-import';
+import tailwindcss from 'tailwindcss';
+import autoprefixer from 'autoprefixer';
+
+const config = {
+  plugins: [postcssImport(), tailwindcss, autoprefixer],
 };
-export const plugins = [
-  require('postcss-import'),
-  require('tailwindcss'),
-  require('autoprefixer'),
-];
+
+export default config;
