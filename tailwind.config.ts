@@ -90,11 +90,10 @@ const config: Config = {
         "text-blue": "#224ba4",
         "green-10": "#E9FBFE",
         "deep-blue": "#082B76",
-
       },
       fontFamily: {
         lato: ["lato", "sans-serif"],
-        roboto: ["Roboto", "sans-serif"]
+        roboto: ["Roboto", "sans-serif"],
       },
       // unfortunately @tailwindcss/typeography doesn't ship types
       /** @ts-ignore */
@@ -136,7 +135,7 @@ const config: Config = {
     },
   },
   lineHeight: {
-    '28.13': '28.13px',
+    "28.13": "28.13px",
   },
   plugins: [],
 };
