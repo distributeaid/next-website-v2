@@ -2283,12 +2283,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:22.9.3":
-  version: 22.9.3
-  resolution: "@types/node@npm:22.9.3"
+"@types/node@npm:22.9.1":
+  version: 22.9.1
+  resolution: "@types/node@npm:22.9.1"
   dependencies:
     undici-types: "npm:~6.19.8"
-  checksum: 10c0/954ec72bf29436ea62425a9563914a9c1e93f97b18194acd51d74d13998a701977547ed2985ed3a0e97211b785436d28377116e5f613bfcf3182d9bd81d784dc
+  checksum: 10c0/ea489ae603aa8874e4e88980aab6f2dad09c755da779c88dd142983bfe9609803c89415ca7781f723072934066f63daf2b3339ef084a8ad1a8079cf3958be243
   languageName: node
   linkType: hard
 
@@ -3936,9 +3936,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-love@npm:101.0.0":
-  version: 101.0.0
-  resolution: "eslint-config-love@npm:101.0.0"
+"eslint-config-love@npm:106.0.0":
+  version: 106.0.0
+  resolution: "eslint-config-love@npm:106.0.0"
   dependencies:
     "@typescript-eslint/utils": "npm:^8.15.0"
     eslint-plugin-eslint-comments: "npm:^3.2.0"
@@ -3949,7 +3949,7 @@ __metadata:
   peerDependencies:
     eslint: ^9.0.0
     typescript: "*"
-  checksum: 10c0/60ed4e15affa008a73b090ef556934bb8d4681d59b635368af14f836e4e7319a0ce0014a07d144c346e9af2c63e64c59499457fdd9d1640ff4ef9a41388be334
+  checksum: 10c0/93920f0c82c2ff4394b6792167957ef6e20eee73531fd7a63ac1302318a173ec659488f3306ce28b34a1c8fa603dc97bc8dadfe620718c91ca9b2da31d703c91
   languageName: node
   linkType: hard
 
@@ -6133,7 +6133,7 @@ __metadata:
     "@testing-library/jest-dom": "npm:6.6.3"
     "@testing-library/react": "npm:16.0.1"
     "@types/lodash": "npm:4.17.13"
-    "@types/node": "npm:22.9.3"
+    "@types/node": "npm:22.9.1"
     "@types/react": "npm:18.3.12"
     "@types/react-dom": "npm:18.3.1"
     "@types/react-modal": "npm:3.16.3"
@@ -6144,7 +6144,7 @@ __metadata:
     autoprefixer: "npm:10.4.20"
     classnames: "npm:^2.5.1"
     eslint: "npm:8.57.1"
-    eslint-config-love: "npm:101.0.0"
+    eslint-config-love: "npm:106.0.0"
     eslint-config-next: "npm:15.0.3"
     eslint-plugin-import: "npm:2.31.0"
     eslint-plugin-n: "npm:17.14.0"
