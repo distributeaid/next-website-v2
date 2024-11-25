@@ -21,7 +21,7 @@ export const AboutOurMissionVision: FC<Props> = ({ title }) => (
     <Heading size="6" weight="bold">
       About our {title}
     </Heading>
-    <Text className="leading-[35px]" size="4" align="center" >
+    <Text className="leading-[35px]" size="4" align="center">
       {title === "Mission" ? data.aboutOurMission : data.aboutOurVision}
     </Text>
   </Flex>
