@@ -1,65 +1,183 @@
 import React from "react";
-import Images from "../image/Image";
 import classNames from "classnames";
+import { Box, Card, Flex, Heading, Separator, Text } from "@radix-ui/themes";
+import Image from "next/image";
 
-interface TimelineItemProps {
-  imageSrc: string; // Image source
-  period: string;
-  bgColor: string; // Background color of the parent container
-  description: string; // Description text
-}
+const colors = {
+  blue: "navy-500",
+  green: "#5AC597",
+  pink: "#DFCDE8",
+  grey: "#98BEC6",
+};
 
-interface TimelineProps {
-  items: TimelineItemProps[];
-}
+const data = [
+  {
+    period: "Summer 2018",
+    description:
+      "Sara and Taylor (co-founders) spent 3 months visiting and volunteering with 50+ aid organisations in Europe to discover the most effective ways to help.",
+    bgColor: colors.blue,
+    imageSrc: "/images/about-us/20-036-GBR-GRC (OA).png",
+  },
+  {
+    period: "Fall 2018",
+    description:
+      "When sorting donations in Scotland, Sara had the idea for Distribute Aid to make it easier for people to help.",
+    bgColor: colors.pink,
+    imageSrc: "/images/about-us/21-38-USA-FRA (1).png",
+  },
+  {
+    period: "2019",
+    description:
+      "Distribute Aid became a registered charity in Sweden and facilitated its first large in-kind donation.",
+    bgColor: colors.green,
+    imageSrc: "/images/about-us/Water to Calais.png",
+  },
+  {
+    period: "Jan 2020",
+    description:
+      'Distribute Aid received the "Most Direct Human Impact" award by the UN Technology and Innovation Lab.',
+    bgColor: colors.grey,
+    imageSrc:
+      "/images/about-us/WhatsApp Image 2020-11-18 at 09.31.58 (1) - 20-40-DEU-GRC.png",
+  },
+  {
+    period: "March 2020",
+    description:
+      "Flexport.org rewarded Distribute Aid with a $50,000 grant to provide emergency aid shipments.",
+    bgColor: colors.pink,
+    imageSrc: "/images/about-us/20-34-DEU-GRC (1).png",
+  },
+  {
+    period: "Fall 2020",
+    description:
+      "Distribute Aid facilitated the international response to the Moria fire, tripling its number of aid shipments to date.",
+    bgColor: colors.green,
+    imageSrc: "/images/about-us/21-38-USA-FRA (3).png",
+  },
+  {
+    period: "Spring 2021",
+    description:
+      "Distribute Aid set up aid hubs and regular routes from the U.K. to help grassroots organisations continue to send aid after Brexit. We also ran our first shipment of aid to displaced people in Lebanon.",
+    bgColor: colors.grey,
+    imageSrc: "/images/about-us/21-026-DEU-GRC (Drop Nea Kavala 1).png",
+  },
+  {
+    period: "Fall 2021",
+    description:
+      "Led coordination of 20+ charities on the base. Took care of 800,000 aid items that had been donated to people on base, and matched them with resettling agencies in the areas where people were placed. Awarded the Public Service Commendation Medal by the US Army (4th highest army can give to civilian).",
+    bgColor: colors.blue,
+    imageSrc: "/images/about-us/21-013-GBR-FRA (1).png",
+  },
+  {
+    period: "Winter 2021",
+    description:
+      "Began running needs assessments (in a quarterly/seasonal format) for our partners. The largest collection of data on the grassroots response and care for refugees and migrants in Europe. Showed XX needs per month, and XX meals being prepared every XXX by volunteer organisers in their own communities.",
+    bgColor: colors.pink,
+    imageSrc: "/images/about-us/21-014-AUT-GRC.png",
+  },
+  {
+    period: "2022",
+    description:
+      "Big response from us in Ukraine advising and reducing burden of unwanted donations (due to our Brexit guide on humanitarian goods being a leading resource). Got grant to work on aid delivery to Ukraine, and started expanding our reach into the country.",
+    bgColor: colors.green,
+    imageSrc: "/images/about-us/23-006-USA-UKR.png",
+  },
+  {
+    period: "Spring 2023",
+    description:
+      "Received the Olof Palme grant in Sweden.Reached $25 million in aid delivered and $5 million in aid delivered to Ukraine.",
+    bgColor: colors.grey,
+    imageSrc: "/images/about-us/21-033-GBR-BIH (CA 1).png",
+  },
+  {
+    period: "Fall-Winter 2023",
+    description:
+      "Started a Gaza-response coalition, bringing together 20 organisations, doctors, and companies wanting to support the people of Gaza. Begun a huge response of securing medicines, medical devices, food, hygiene, and clothes for people in Gaza, Jordan, and Lebanon.",
+    bgColor: colors.pink,
+    imageSrc:
+      "/images/about-us/WhatsApp Image 2023-07-04 at 10.27.22 - Greece Field Visits - Media.png",
+  },
+  {
+    period: "Spring 2024",
+    description:
+      "Ran Open Source Explorers Programme ( An impactful initiative designed to engage Developers, Designers, and other contributors in collaborative work on Distribute Aid’s projects, providing a comprehensive introduction to open source.) ",
+    bgColor: colors.blue,
+    imageSrc: "/images/about-us/image.png",
+  },
+];
 
-const TimelineItem: React.FC<TimelineProps> = ({ items }) => {
+export const TimelineItem: React.FC = () => {
   return (
     <>
-      <div className="text-[48px] font-bold leading-[56.25px] tracking-[-0.16px] mt-[60px] mb-[40px] text-center text-navy-900">
-        Our history
-      </div>
-      <div
-        className="md:space-y-[-60px] space-y-3 mb-24 overflow-hidden md:mx-32 
-                relative"
+      <Heading
+        size={{ md: "9", initial: "8" }}
+        mb="6"
+        mt="5"
+        weight="bold"
+        className="text-navy-900"
+        align="center"
       >
-        {items.map((item, index) => (
-          <div
-            className="relative flex items-center inset-0 justify-between md:justify-normal md:even:flex-row-reverse group mx-2 sm:mx-10 md:mx-0"
+        Our history
+      </Heading>
+      <Box
+        className="md:space-y-[-60px] space-y-3"
+        mb="8"
+        mx={{ initial: "3", md: "8" }}
+      >
+        {data.map((item, index) => (
+          <Flex
+            className=" justify-end md:justify-normal md:even:flex-row-reverse"
+            align="center"
+            mx={{ md: "9" }}
+            position="relative"
             key={index}
           >
-            {items.length - 1 !== index && (
-              <div className="absolute top-[50px] translate-x-[49px] md:-translate-x-1/2 md:left-1/2 h-full w-[3px] bg-navy-900"></div>
+            {data.length - 1 !== index && (
+              <Separator
+                className=" bg-navy-900 absolute top-[60px] left-12 md:left-1/2 h-full w-[2px]"
+                orientation="vertical"
+              />
             )}
-            <div
+            <Flex
               className={classNames(
-                "text-[15px] lg:text-[20px] text-center font-semibold leading-[23.44px] absolute left-3 top-3 translate-x-0 md:left-1/2 md:-translate-x-1/2 md:top-[50px] w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] rounded-full border border-white shadow-md flex items-center justify-center flex-col",
-                item.bgColor === "#4362A6" ? "text-gray-50" : "turquoise-600",
+                `leading-[23.44px]  rounded-full border-white shadow-md`,
+                item.bgColor === "navy-500"
+                  ? "bg-navy-500 text-gray-50"
+                  : "text-turquoise-600",
               )}
               style={{ backgroundColor: `${item.bgColor}` }}
+              align="center"
+              justify="center"
+              position="absolute"
+              left={{ initial: "3", sm: "46%" }}
+              top={{ initial: "3", sm: "50px" }}
+              height={{ lg: "100px", initial: "80px" }}
+              width={{ lg: "100px", initial: "80px" }}
+              direction="column"
             >
-              <div>{item.period.split(" ")[0]}</div>
-              <div>{item.period.split(" ")[1]}</div>
-            </div>
-            <div
-              className={`
+              <Text weight="bold" align="center">
+                {item.period.split(" ")[0]}
+              </Text>
+              <Text weight="bold" align="center">
+                {item.period.split(" ")[1]}
+              </Text>
+            </Flex>
+            <Card
+              className="
                   max-w-full w-[calc(70%)] md:w-[calc(43%)] 
-                  lg:max-w-[534px] bg-white p-4 rounded-[32px] border border-slate-200 shadow gap-3 h-full`}
+                  lg:max-w-[534px] p-4 rounded-[32px] shadow gap-3"
             >
-              <Images
-                image={item.imageSrc}
-                altText="Timeline"
-                alignment="center"
+              <Image
+                src={item.imageSrc}
+                alt="Timeline"
                 height={10}
                 width={534}
               />
-              <div className="text-navy-900">{item.description}</div>
-            </div>
-          </div>
+              <Text className="text-navy-900">{item.description}</Text>
+            </Card>
+          </Flex>
         ))}
-      </div>
+      </Box>
     </>
   );
 };
-
-export default TimelineItem;
