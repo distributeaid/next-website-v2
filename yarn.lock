@@ -4122,7 +4122,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-promise@npm:7.1.0, eslint-plugin-promise@npm:^7.0.0":
+"eslint-plugin-promise@npm:7.2.0":
+  version: 7.2.0
+  resolution: "eslint-plugin-promise@npm:7.2.0"
+  dependencies:
+    "@eslint-community/eslint-utils": "npm:^4.4.0"
+  peerDependencies:
+    eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
+  checksum: 10c0/c02bfe1938965a6fbadf473b2c87a3b5f450fb088315eb34ea79963819a3dcf3e0f08f31b3a8bc8e54e909d6cece0ff37753bae625aeceb593164456729e1374
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-promise@npm:^7.0.0":
   version: 7.1.0
   resolution: "eslint-plugin-promise@npm:7.1.0"
   peerDependencies:
@@ -6148,7 +6159,7 @@ __metadata:
     eslint-config-next: "npm:15.0.3"
     eslint-plugin-import: "npm:2.31.0"
     eslint-plugin-n: "npm:17.14.0"
-    eslint-plugin-promise: "npm:7.1.0"
+    eslint-plugin-promise: "npm:7.2.0"
     eslint-plugin-react: "npm:7.37.2"
     jsdom: "npm:25.0.1"
     lodash: "npm:^4.17.21"
