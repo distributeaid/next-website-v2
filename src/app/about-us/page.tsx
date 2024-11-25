@@ -26,7 +26,7 @@ const AboutUsPage: FC = () => {
         />
         <AboutOurMissionVision title="Vision" />
       </Flex>
-      <TimelineItem  />
+      <TimelineItem />
     </main>
   );
 };
