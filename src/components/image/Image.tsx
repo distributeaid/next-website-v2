@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { CSSProperties, FC } from "react";
 import Image from "next/image";
 
 type Image = {
@@ -6,10 +6,20 @@ type Image = {
   width: number;
   height: number;
   altText: string;
+  sizes?: string;
+  style?: CSSProperties;
   alignment: "left" | "center" | "right";
 };
 
-const Images: FC<Image> = ({ image, width, height, altText, alignment }) => {
+const Images: FC<Image> = ({
+  image,
+  width,
+  height,
+  altText,
+  alignment,
+  sizes,
+  style,
+}) => {
   let flexAlignment = getFlexAlignment(alignment);
 
   return (
@@ -20,7 +30,14 @@ const Images: FC<Image> = ({ image, width, height, altText, alignment }) => {
         }}
       >
         <div className="relative">
-          <Image src={image} alt={altText} height={height} width={width} />
+          <Image
+            src={image}
+            alt={altText}
+            height={height}
+            width={width}
+            sizes={sizes}
+            style={style}
+          />
         </div>
       </div>
     </div>
