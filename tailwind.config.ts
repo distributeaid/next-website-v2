@@ -89,7 +89,7 @@ const config: Config = {
         "dark-blue": "#09328b",
         "text-blue": "#224ba4",
         "green-10": "#E9FBFE",
-        },
+      },
       fontFamily: {
         lato: ["lato", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
@@ -133,7 +133,7 @@ const config: Config = {
       secondary: "#F8FAFE",
     },
   },
-  
+
   plugins: [],
 };
 
