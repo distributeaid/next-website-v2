@@ -1,4 +1,4 @@
-import ImageComponent from "@/components/image/Image";
+import ImageComponent from "@/components/image/ImageWithCaption";
 import { FC } from "react";
 import boardSrc from "../../../public/images/about-us/board.jpg";
 
