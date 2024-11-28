@@ -1,15 +1,22 @@
 import CampaignCard from "@/components/donate/CampaignCard";
+import { FUND_RAISERS } from "@/data/donate";
 
 const Page = () => {
   return (
-    <CampaignCard
-      imgSrc="/images/donate/european-refugee-relief-hero.webp"
-      imgAlt="Alt"
-      title="Ukraine Response Project"
-      raised={2000.0}
-      goal={4000.0}
-      donateLink="https://www.omprakash.org/global/distribute-aid/donate"
-    />
+    <div>
+      {FUND_RAISERS.map((donate, i) =>
+        <CampaignCard
+          key={i}
+          imgSrc={donate.img || "/images/donate/european-refugee-relief-hero.webp"}
+          imgAlt="Alt"
+          title={donate.title || "Untitled Campaign" }
+          raised={donate.percentage ?? 0}
+          goal={donate.goal_price ?? 0}
+          donateLink={donate.donate_link || "#"}
+          moreLink={donate.more_link || "#"}
+        />
+      )}
+    </div>
   );
 };
 
