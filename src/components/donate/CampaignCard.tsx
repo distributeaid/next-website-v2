@@ -19,13 +19,14 @@ const CampaignCard: FC<{
   raised: number;
   goal: number;
   donateLink: string;
-}> = ({ imgSrc, imgAlt, title, raised, goal, donateLink }) => {
+  moreLink: string;
+}> = ({ imgSrc, imgAlt, title, raised, goal, donateLink, moreLink }) => {
   return (
     <Box asChild width="373px">
       <Card>
         <Inset clip="padding-box" pb="current">
           <Image
-            src={imgSrc}
+            src={imgSrc || "/images/donate/european-refugee-relief-hero.webp"}
             alt={imgAlt}
             height={0}
             width={0}
@@ -49,18 +50,14 @@ const CampaignCard: FC<{
             }}
           >
             <Progress
-              value={(raised / goal) * 100.0}
+              value={raised}
               variant="surface"
               style={{
                 backgroundColor: "var(--green-4)",
               }}
             />
-            <Text
-              size="2"
-              color="blue"
-              highContrast
-            >
-              {(raised / goal) * 100}%
+            <Text size="2" color="blue" highContrast>
+              {raised}%
             </Text>
           </Flex>
         </Inset>
@@ -80,8 +77,10 @@ const CampaignCard: FC<{
               </Button>
             </Box>
             <Box px="4" py="2" asChild>
-              <Button variant="soft" size="3">
-                More info
+              <Button variant="soft" asChild>
+                <Link href={moreLink} size="3" className="no-underline">
+                  More info
+                </Link>
               </Button>
             </Box>
           </Flex>
