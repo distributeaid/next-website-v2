@@ -59,9 +59,6 @@ const CampaignCard: FC<{
               size="2"
               color="blue"
               highContrast
-              style={{
-                fontFamily: "var(--font-permanent-marker)",
-              }}
             >
               {(raised / goal) * 100}%
             </Text>
