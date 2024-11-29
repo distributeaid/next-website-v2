@@ -1,16 +1,21 @@
-import { Flex, Heading, Text, Button } from "@radix-ui/themes";
+import { Flex, Heading, Text, Button, Box } from "@radix-ui/themes";
 
 const HeroSection = () => {
   return (
     <Flex
       direction="column"
       justify="center"
-      className="w-full items-center p-10"
+      className="w-full items-center px-20"
     >
-      <Heading className="text-center text-white uppercase font-bold md:text-5xl md:py-6 py-2 z-20 sm:text-3xl text-xl">
-        TECH AT DISTRIBUTE AID
-      </Heading>
-
+      <Box
+        width="full"
+        py="2"
+        className="text-center text-white uppercase font-bold md:py-8 z-20"
+      >
+        <Heading as="h1" size={{ initial: "5", sm: "7", md: "9" }}>
+          TECH AT DISTRIBUTE AID
+        </Heading>
+      </Box>
       <Flex
         direction="column"
         align="center"
@@ -24,10 +29,19 @@ const HeroSection = () => {
           align="center"
           className="h-full bg-[#252525B2]/60 text-white rounded-bl-[32px] rounded-br-[32px] inset-0 text-center "
         >
-          <Heading className="text-lg lg:text-5xl md:text-4xl sm:text-3xl md:mt-10 mt-4 font-bold drop-shadow-[0px_4px_6px_rgba(5,30,93,0.7)]">
+          <Heading
+            as="h4"
+            size="5"
+            className="text-center md:text-5xl md:mt-10 mt-4 font-bold drop-shadow-[0px_4px_6px_rgba(5,30,93,0.7)]"
+          >
             Open-Source Solutions For Global Aid Delivery
           </Heading>
-          <Text className="text-sm md:text-lg sm:text-md font-roboto font-bold md:mx-32 md:mt-6 p-4 text-center drop-shadow-[0px_4px_6px_rgba(5,30,93,0.6)]">
+          <Text
+            size={{ initial: "2", md: "6" }}
+            weight="bold"
+            align="center"
+            className="font-roboto md:mx-32 md:mt-8 p-2 drop-shadow-[0px_4px_6px_rgba(5,30,93,0.6)]"
+          >
             Our diverse tech team of volunteers works hard to create technical
             solutions that make Distribute Aid’s work more efficient and easier
             to scale even with the limited resources NGOs have. We provide
@@ -36,7 +50,12 @@ const HeroSection = () => {
             is open-sourced.{" "}
           </Text>
 
-          <Text className="text-sm md:text-lg sm:text-md font-roboto font-bold md:mx-32 p-4 text-center drop-shadow-[0px_4px_6px_rgba(5,30,93,0.6)]">
+          <Text
+            size={{ initial: "2", md: "6" }}
+            weight="bold"
+            align="center"
+            className="font-roboto md:mx-32 p-4 drop-shadow-[0px_4px_6px_rgba(5,30,93,0.6)]"
+          >
             Read on to learn more about our tech team and our Open Source
             Explorers program.
           </Text>
@@ -46,12 +65,10 @@ const HeroSection = () => {
             justify={{ initial: "start", md: "center" }}
             align="center"
             gap={{ initial: "1", md: "5" }}
-            className="w-full "
+            className="w-full py-4"
           >
-            <Button className="w-[160px] h-[60px] px-4 py-2 text-sm font-normal">
-              Join Our Team
-            </Button>
-            <Button className="w-[160px] h-[60px] text-sm  bg-white text-blue-950 font-normal">
+            <Button size="4">Join Our Team</Button>
+            <Button size="4" className="bg-white text-blue-950 font-normal">
               Become a Sponsor
             </Button>
           </Flex>
