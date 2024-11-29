@@ -10,7 +10,14 @@ const page = () => {
       className="relative w-full"
       gap={{ initial: "4", lg: "6", xl: "9" }}
     >
-      <Box className="absolute inset-0 bg-navy-900 w-full h-[450px] z-0" />
+      <Box
+        width="full"
+        position="absolute"
+        inset="0"
+        height="450px"
+        className="bg-navy-900 z-0"
+      />
+
       <HeroSection />
     </Flex>
   );
