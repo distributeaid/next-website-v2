@@ -106,7 +106,7 @@ const data = [
   },
 ];
 
-export const TimelineItem: React.FC = () => {
+export const Timeline: React.FC = () => {
   return (
     <>
       <Heading
@@ -170,8 +170,13 @@ export const TimelineItem: React.FC = () => {
               <Image
                 src={item.imageSrc}
                 alt="Timeline"
-                height={10}
-                width={534}
+                height={166}
+                width={510}
+                style={{
+                  height: "166px",
+                  objectFit: "cover",
+                  objectPosition: "center",
+                }}
               />
               <Text className="text-navy-900">{item.description}</Text>
             </Card>

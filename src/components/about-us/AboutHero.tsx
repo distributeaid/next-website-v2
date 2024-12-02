@@ -2,7 +2,7 @@ import { FC } from "react";
 import Image from "next/image";
 import { Box, Flex, Heading, Text } from "@radix-ui/themes";
 
-const AboutHero: FC = () => (
+export const AboutHero: FC = () => (
   <Box
     className="bg-navy-900"
     width="100%"
@@ -75,5 +75,3 @@ const AboutHero: FC = () => (
     </Flex>
   </Box>
 );
-
-export default AboutHero;
