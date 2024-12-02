@@ -2185,7 +2185,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/autoprefixer@npm:^10.2.4":
+"@types/autoprefixer@npm:10.2.4":
   version: 10.2.4
   resolution: "@types/autoprefixer@npm:10.2.4"
   dependencies:
@@ -2308,7 +2308,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/postcss-import@npm:^14.0.3":
+"@types/postcss-import@npm:14.0.3":
   version: 14.0.3
   resolution: "@types/postcss-import@npm:14.0.3"
   dependencies:
@@ -6292,10 +6292,10 @@ __metadata:
     "@testing-library/dom": "npm:10.4.0"
     "@testing-library/jest-dom": "npm:6.6.3"
     "@testing-library/react": "npm:16.0.1"
-    "@types/autoprefixer": "npm:^10.2.4"
+    "@types/autoprefixer": "npm:10.2.4"
     "@types/lodash": "npm:4.17.13"
     "@types/node": "npm:22.10.1"
-    "@types/postcss-import": "npm:^14.0.3"
+    "@types/postcss-import": "npm:14.0.3"
     "@types/react": "npm:18.3.12"
     "@types/react-dom": "npm:18.3.1"
     "@types/react-modal": "npm:3.16.3"
