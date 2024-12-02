@@ -1,17 +1,20 @@
-import { Container, Flex, Box, Heading, Text, Link, Button } from "@radix-ui/themes";
+import {
+  Container,
+  Flex,
+  Box,
+  Heading,
+  Text,
+  Link,
+  Button,
+} from "@radix-ui/themes";
 
 const HeroSection = () => {
   return (
-    <Container size={{xs: "1", sm: "2", md: "3", lg: "4"}} align="center">
-      <Flex
-        width="100%"
-        direction="column"
-        align="center"
-        justify="center"
-      >
+    <Container size={{ xs: "1", sm: "2", md: "3", lg: "4" }} align="center">
+      <Flex width="100%" direction="column" align="center" justify="center">
         <Box
-          pt={{initial: "1", md: "4"}}
-          pb={{initial: "2", md: "6"}}
+          pt={{ initial: "1", md: "4" }}
+          pb={{ initial: "2", md: "6" }}
           asChild={true}
         >
           <Heading
@@ -37,8 +40,8 @@ const HeroSection = () => {
             gap="4"
             justify="center"
             align="center"
-            px={{initial:"4", sm: "6"}}
-            py={{initial:"6", sm: "8"}}
+            px={{ initial: "4", sm: "6" }}
+            py={{ initial: "6", sm: "8" }}
             className="text-white bg-[#252525B2]/60 rounded-bl-[32px] rounded-br-[32px] inset-0 text-center "
           >
             <Heading
@@ -52,21 +55,21 @@ const HeroSection = () => {
               Open-Source Solutions For Global Aid Delivery
             </Heading>
             <Text
-              size={{ initial: "3", sm:"4" }}
+              size={{ initial: "3", sm: "4" }}
               weight="bold"
               align="center"
               className="font-roboto drop-shadow-[0px_4px_6px_rgba(5,30,93,0.6)]"
             >
               Our diverse tech team of volunteers works hard to create technical
-              solutions that make Distribute Aid’s work more efficient and easier
-              to scale even with the limited resources NGOs have. We provide
-              solutions that can be replicated across the sector by our partners
-              and other NGOs in the field which is one of the reasons why our work
-              is open-sourced.
+              solutions that make Distribute Aid’s work more efficient and
+              easier to scale even with the limited resources NGOs have. We
+              provide solutions that can be replicated across the sector by our
+              partners and other NGOs in the field which is one of the reasons
+              why our work is open-sourced.
             </Text>
 
             <Text
-              size={{ initial: "3", sm:"4" }}
+              size={{ initial: "3", sm: "4" }}
               weight="bold"
               align="center"
               className="font-roboto drop-shadow-[0px_4px_6px_rgba(5,30,93,0.6)]"
