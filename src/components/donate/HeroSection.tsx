@@ -1,6 +1,6 @@
-import { Flex, Container ,Heading, Button, Box } from "@radix-ui/themes";
+import { Flex, Heading, Text, Button, Box } from "@radix-ui/themes";
 import Image from "next/image";
-
+import { relative } from "path";
 const HeroSection = () => {
   return (
     <>
@@ -12,10 +12,6 @@ const HeroSection = () => {
         style={{ background: "#1D2F73" }}
         className="shadow-xl"
       >
-        {/* <Container
-        size={"4"}
-        > */}
-          
         <Flex
           position={{ sm: "absolute" }}
           top={{ sm: "0" }}
@@ -91,11 +87,8 @@ const HeroSection = () => {
               </Flex>
             </Box>
           </Flex>
-          
         </Flex>
-        {/* </Container> */}
       </Flex>
-      
     </>
   );
 };
