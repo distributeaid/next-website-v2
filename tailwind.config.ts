@@ -91,6 +91,7 @@ const config: Config = {
         "dark-blue": "#09328b",
         "text-blue": "#224ba4",
         "green-10": "#E9FBFE",
+        "red-50": "#DFCDE8",
       },
       fontFamily: {
         lato: ["lato", "sans-serif"],
