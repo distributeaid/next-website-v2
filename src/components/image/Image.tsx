@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { CSSProperties, FC } from "react";
 import Image from "next/image";
 
 type Image = {
@@ -6,24 +6,21 @@ type Image = {
   width: number;
   height: number;
   altText: string;
-  caption: string;
-  attribution: string;
+  sizes?: string;
+  style?: CSSProperties;
   alignment: "left" | "center" | "right";
 };
-
-// const [isHovering, setIsHovering] = useState(false)
 
 const Images: FC<Image> = ({
   image,
   width,
   height,
   altText,
-  caption,
-  attribution,
   alignment,
+  sizes,
+  style,
 }) => {
   let flexAlignment = getFlexAlignment(alignment);
-  let textAlignment = getTextAlignment(alignment);
 
   return (
     <div className={`flex ${flexAlignment}`}>
@@ -33,12 +30,15 @@ const Images: FC<Image> = ({
         }}
       >
         <div className="relative">
-          <Image src={image} alt={altText} height={height} width={width} />
+          <Image
+            src={image}
+            alt={altText}
+            height={height}
+            width={width}
+            sizes={sizes}
+            style={style}
+          />
         </div>
-        <p className={`text-neutral-500 text-sm ${textAlignment}`}>
-          Photo Credit: {attribution}
-        </p>
-        <p className={`${textAlignment}`}>{caption}</p>
       </div>
     </div>
   );
@@ -53,15 +53,5 @@ export const getFlexAlignment = (alignment: string) => {
     return "justify-start";
   } else {
     return "justify-center";
-  }
-};
-
-export const getTextAlignment = (alignment: string) => {
-  if (alignment === "right") {
-    return "text-right";
-  } else if (alignment === "left") {
-    return "text-left";
-  } else {
-    return "text-center";
   }
 };
