@@ -1,6 +1,16 @@
 import React from "react";
 import classNames from "classnames";
-import { Box, Card, Flex, Heading, Separator, Text } from "@radix-ui/themes";
+import {
+  Box,
+  Flex,
+  Section,
+  Container,
+  Card,
+  Inset,
+  Separator,
+  Heading,
+  Text,
+} from "@radix-ui/themes";
 import Image from "next/image";
 
 const colors = {
@@ -108,81 +118,114 @@ const data = [
 
 export const Timeline: React.FC = () => {
   return (
-    <>
-      <Heading
-        size={{ md: "9", initial: "8" }}
-        mb="6"
-        mt="5"
-        weight="bold"
-        className="text-navy-900"
-        align="center"
-      >
-        Our history
-      </Heading>
-      <Box
-        className="md:space-y-[-60px] space-y-3"
-        mb="8"
-        mx={{ initial: "3", md: "8" }}
-      >
-        {data.map((item, index) => (
-          <Flex
-            className=" justify-end md:justify-normal md:even:flex-row-reverse"
-            align="center"
-            mx={{ md: "9" }}
-            position="relative"
-            key={index}
-          >
-            {data.length - 1 !== index && (
-              <Separator
-                className=" bg-navy-900 absolute top-[60px] left-12 md:left-1/2 h-full w-[2px]"
-                orientation="vertical"
-              />
-            )}
+    <Section>
+      <Container size="4">
+        <Heading
+          as="h2"
+          size={{ initial: "8", md: "9" }}
+          mb="6"
+          weight="bold"
+          className="text-navy-900"
+          align="center"
+        >
+          Our History
+        </Heading>
+        <Box
+          className="space-y-3 md:space-y-[-60px]"
+          mx={{ initial: "4", md: "8" }}
+        >
+          {data.map((item, index) => (
             <Flex
-              className={classNames(
-                `leading-[23.44px]  rounded-full border-white shadow-md`,
-                item.bgColor === "navy-500"
-                  ? "bg-navy-500 text-gray-50"
-                  : "text-turquoise-600",
-              )}
-              style={{ backgroundColor: `${item.bgColor}` }}
+              className="justify-end md:justify-normal md:even:flex-row-reverse"
               align="center"
-              justify="center"
-              position="absolute"
-              left={{ initial: "3", sm: "46%" }}
-              top={{ initial: "3", sm: "50px" }}
-              height={{ lg: "100px", initial: "80px" }}
-              width={{ lg: "100px", initial: "80px" }}
-              direction="column"
+              position="relative"
+              key={index}
             >
-              <Text weight="bold" align="center">
-                {item.period.split(" ")[0]}
-              </Text>
-              <Text weight="bold" align="center">
-                {item.period.split(" ")[1]}
-              </Text>
-            </Flex>
-            <Card
-              className="
-                  max-w-full w-[calc(70%)] md:w-[calc(43%)] 
-                  lg:max-w-[534px] p-4 rounded-[32px] shadow gap-3"
-            >
-              <Image
-                src={item.imageSrc}
-                alt="Timeline"
-                height={166}
-                width={510}
-                style={{
-                  height: "166px",
-                  objectFit: "cover",
-                  objectPosition: "center",
+              {data.length - 1 !== index && (
+                <Box
+                  asChild
+                  position="absolute"
+                  top="5"
+                  left={{ initial: "40px", sm: "50%" }}
+                  width="2px"
+                >
+                  {/* top=5 (24px) accounts for both the top & bottom timeline markers
+                      being moved down via their top=3 (12px each)
+                  */}
+                  <Separator
+                    orientation="vertical"
+                    size="4"
+                    className="bg-navy-900"
+                  />
+                </Box>
+              )}
+              <Flex
+                className={classNames(
+                  `leading-[23.44px]  rounded-full border-white shadow-md`,
+                  item.bgColor === "navy-500"
+                    ? "bg-navy-500 text-gray-50"
+                    : "text-turquoise-600",
+                )}
+                style={{ backgroundColor: `${item.bgColor}` }}
+                align="center"
+                justify="center"
+                position="absolute"
+                left={{
+                  initial: "0",
+                  sm: "calc(50% - 40px)",
+                  lg: "calc(50% - 50px)",
                 }}
-              />
-              <Text className="text-navy-900">{item.description}</Text>
-            </Card>
-          </Flex>
-        ))}
-      </Box>
-    </>
+                top={{
+                  initial: "3",
+                  sm: "calc(50% - 40px)",
+                  lg: "calc(50% - 50px)",
+                }}
+                height={{ initial: "80px", lg: "100px" }}
+                width={{ initial: "80px", lg: "100px" }}
+                direction="column"
+              >
+                <Text weight="bold" align="center">
+                  {item.period.split(" ")[0]}
+                </Text>
+                <Text weight="bold" align="center">
+                  {item.period.split(" ")[1]}
+                </Text>
+              </Flex>
+
+              {/* leave space for the timeline marker plus a bit of separation */}
+              <Box
+                asChild
+                width={{
+                  initial: "calc(100% - 80px - 16px)",
+                  sm: "calc(50% - 40px - 12px)",
+                  lg: "calc(50% - 50px - 12px)",
+                }}
+              >
+                <Card className="shadow">
+                  <Inset clip="padding-box" side="top" pb="current">
+                    <Image
+                      src={item.imageSrc}
+                      alt="Timeline"
+                      height={256}
+                      width={0}
+                      sizes="100vw"
+                      style={{
+                        height: "calc(37.5vh - 30px)",
+                        minHeight: "150px",
+                        maxHeight: "200px",
+                        width: "100%",
+                        objectFit: "cover",
+                        objectPosition: "center",
+                      }}
+                    />
+                  </Inset>
+                  <Text className="text-navy-900">{item.description}</Text>
+                </Card>
+              </Box>
+            </Flex>
+          ))}
+        </Box>
+      </Container>
+    </Section>
   );
 };

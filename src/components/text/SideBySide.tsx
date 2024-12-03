@@ -1,34 +1,33 @@
-import { Flex, Separator } from "@radix-ui/themes";
-import { AboutOurMissionVision } from "../about-us/AboutOurMissionVision";
-import React from "react";
+import { Flex, Section, Separator } from "@radix-ui/themes";
+import React, { ReactNode } from "react";
 
 interface SideBySideProps {
-  missionTitle: string;
-  visionTitle: string;
+  left: ReactNode;
+  right: ReactNode;
   bgColor: string;
 }
 
 export const SideBySide: React.FC<SideBySideProps> = ({
-  missionTitle,
-  visionTitle,
+  left,
+  right,
   bgColor,
 }) => {
   return (
-    <Flex
-      py="9"
-      direction={{ md: "row", initial: "column" }}
-      justify="center"
-      align="center"
-      gap={{ initial: "4", lg: "6", xl: "9" }}
-      px={{ initial: "4", md: "9" }}
-      className={`h-full bg-${bgColor}`}
-    >
-      <AboutOurMissionVision title={missionTitle} />
-      <Separator
-        orientation="vertical"
-        className="hidden lg:block self-stretch h-auto"
-      />
-      <AboutOurMissionVision title={visionTitle} />
-    </Flex>
+    <Section px={{ initial: "4", sm: "9" }} className={`bg-${bgColor}`}>
+      <Flex
+        direction={{ initial: "column", md: "row" }}
+        align="start"
+        justify="center"
+        gap={{ initial: "4", md: "6" }}
+      >
+        {left}
+        <Separator
+          orientation={{ initial: "horizontal", md: "vertical" }}
+          size="4"
+          className="w-2/4 lg:w-px lg:self-stretch lg:h-auto"
+        />
+        {right}
+      </Flex>
+    </Section>
   );
 };
