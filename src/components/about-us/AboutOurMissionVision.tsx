@@ -1,4 +1,4 @@
-import { Flex, Heading, Text } from "@radix-ui/themes";
+import { Box, Heading, Text } from "@radix-ui/themes";
 import { FC } from "react";
 
 type Props = {
@@ -11,18 +11,14 @@ const data = {
 };
 
 export const AboutOurMissionVision: FC<Props> = ({ title }) => (
-  <Flex
-    px={{ md: "4" }}
-    py={{ md: "4" }}
-    direction="column"
-    align="center"
-    gap="4"
-  >
-    <Heading size="6" weight="bold">
-      About our {title}
-    </Heading>
+  <Box>
+    <Box pb="2" asChild>
+      <Heading as="h3" size="8" weight="bold" className="text-navy-800">
+        About Our {title}
+      </Heading>
+    </Box>
     <Text className="leading-[35px]" size="4" align="center">
       {title === "Mission" ? data.aboutOurMission : data.aboutOurVision}
     </Text>
-  </Flex>
+  </Box>
 );
