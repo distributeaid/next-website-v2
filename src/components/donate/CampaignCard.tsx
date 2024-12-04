@@ -13,20 +13,28 @@ import { FC } from "react";
 import Image from "next/image";
 
 const CampaignCard: FC<{
-  imgSrc: string;
-  imgAlt: string;
-  title: string;
-  raised: number;
-  goal: number;
-  donateLink: string;
-  moreLink: string;
-}> = ({ imgSrc, imgAlt, title, raised, goal, donateLink, moreLink }) => {
+  imgSrc: string | undefined;
+  imgAlt: string | undefined;
+  title: string | undefined;
+  raised: number | undefined;
+  goal: number | undefined;
+  donateLink: string | undefined;
+  moreLink: string | undefined;
+}> = ({
+  imgSrc = "/images/donate/european-refugee-relief-hero.webp",
+  imgAlt = "",
+  title = "Untitled Campaign",
+  raised = 0,
+  goal = 0,
+  donateLink = "#",
+  moreLink = "#",
+}) => {
   return (
     <Box asChild width="373px">
       <Card>
         <Inset clip="padding-box" pb="current">
           <Image
-            src={imgSrc || "/images/donate/european-refugee-relief-hero.webp"}
+            src={imgSrc}
             alt={imgAlt}
             height={0}
             width={0}
