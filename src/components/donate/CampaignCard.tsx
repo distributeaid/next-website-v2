@@ -71,7 +71,13 @@ const CampaignCard: FC<{
             </Flex>
           </Inset>
           <Box mx="1" mt="3">
-            <Heading as="h3" size="8" weight="regular" color="blue" highContrast>
+            <Heading
+              as="h3"
+              size="8"
+              weight="regular"
+              color="blue"
+              highContrast
+            >
               {title}
             </Heading>
             <Box asChild mb="4">

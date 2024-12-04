@@ -6,7 +6,8 @@ const Page = () => {
   return (
     <Container px="4">
       <Grid gap="8" columns={{ xs: "2", md: "3" }} pt="4.5rem" pb="9rem">
-        {FUND_RAISERS && FUND_RAISERS.length > 0 && (
+        {FUND_RAISERS &&
+          FUND_RAISERS.length > 0 &&
           FUND_RAISERS.map((donate, i) => (
             <CampaignCard
               key={i}
@@ -18,8 +19,7 @@ const Page = () => {
               donateLink={donate.donate_link}
               moreLink={donate.more_link}
             />
-          ))
-        )}
+          ))}
       </Grid>
     </Container>
   );
