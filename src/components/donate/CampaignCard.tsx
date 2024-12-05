@@ -84,24 +84,22 @@ const CampaignCard: FC<{
               <Text size="3">Goal: €{goal}</Text>
             </Box>
           </Box>
-          <Box mx="1" mb="3" mt="auto">
-            <Flex gap="2" wrap={"wrap"}>
-              <Box px="4" py="2" asChild>
-                <Button asChild>
-                  <Link href={donateLink} size="3">
-                    Donate now
-                  </Link>
-                </Button>
-              </Box>
-              <Box px="4" py="2" asChild>
-                <Button variant="soft" asChild>
-                  <Link href={moreLink} size="3" className="no-underline">
-                    More info
-                  </Link>
-                </Button>
-              </Box>
-            </Flex>
-          </Box>
+          <Flex gap="2" wrap={"wrap"} mx="1" mb="3" mt="auto">
+            <Box px="4" py="2" asChild>
+              <Button asChild>
+                <Link href={donateLink} size="3">
+                  Donate now
+                </Link>
+              </Button>
+            </Box>
+            <Box px="4" py="2" asChild>
+              <Button variant="soft" asChild>
+                <Link href={moreLink} size="3" className="no-underline">
+                  More info
+                </Link>
+              </Button>
+            </Box>
+          </Flex>
         </Flex>
       </Card>
     </Box>

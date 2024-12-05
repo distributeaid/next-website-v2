@@ -1,4 +1,6 @@
-export const FUND_RAISERS = [
+import { Fund } from "@/types/fund";
+
+export const FUND_RAISERS: Fund[] = [
   {
     img: "/images/donate/humanitarian-logistics-hero.webp",
     img_link: "https://distributeaid.org/donate/humanitarian-logistics",
