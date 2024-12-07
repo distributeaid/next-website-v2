@@ -21,11 +21,11 @@ const page = () => {
         className="bg-navy-900 -z-10"
       />
       <Section>
-          <HeroSection />
+        <HeroSection />
       </Section>
 
       <Section>
-          <OpenSourceExplorersSection />
+        <OpenSourceExplorersSection />
       </Section>
       <Section>
         <SponsorSection/>
