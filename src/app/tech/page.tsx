@@ -1,7 +1,7 @@
 import HeroSection from "@/components/tech/HeroSection";
 import SponsorSection from "@/components/tech/SponsorSection";
 import OpenSourceExplorersSection from "@/components/tech/OpenSourceExporersSection";
-import { Box, Flex } from "@radix-ui/themes";
+import { Box, Flex, Section } from "@radix-ui/themes";
 
 const page = () => {
   return (
@@ -20,11 +20,17 @@ const page = () => {
         height="450px"
         className="bg-navy-900 -z-10"
       />
+      <Section>
+          <HeroSection />
+      </Section>
 
-      <HeroSection />
-      <OpenSourceExplorersSection />
-      <SponsorSection />
-
+      <Section>
+          <OpenSourceExplorersSection />
+      </Section>
+      <Section>
+        <SponsorSection/>
+      </Section>
+      
     </Flex>
   );
 };
