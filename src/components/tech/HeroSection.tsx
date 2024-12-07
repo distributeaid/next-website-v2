@@ -60,12 +60,11 @@ const HeroSection = () => {
               align="center"
               className="font-roboto drop-shadow-[0px_4px_6px_rgba(5,30,93,0.6)]"
             >
-              Our diverse tech team of volunteers works hard to create technical
-              solutions that make Distribute Aid’s work more efficient and
-              easier to scale even with the limited resources NGOs have. We
-              provide solutions that can be replicated across the sector by our
-              partners and other NGOs in the field which is one of the reasons
-              why our work is open-sourced.
+              Our diverse, volunteer-driven tech team works hard to develop solutions 
+              that improve Distribute Aid’s efficiency and scalability, despite the resource 
+              limitations faced by NGOs. We provide solutions that can be replicated across the sector, 
+              which is one of the reasons why our work is open-sourced. Read on to learn more about 
+              our tech team and our Open Source Explorers program.
             </Text>
 
             <Text
