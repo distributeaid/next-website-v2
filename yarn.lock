@@ -4244,7 +4244,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-n@npm:17.14.0, eslint-plugin-n@npm:^17.0.0":
+"eslint-plugin-n@npm:17.15.0":
+  version: 17.15.0
+  resolution: "eslint-plugin-n@npm:17.15.0"
+  dependencies:
+    "@eslint-community/eslint-utils": "npm:^4.4.1"
+    enhanced-resolve: "npm:^5.17.1"
+    eslint-plugin-es-x: "npm:^7.8.0"
+    get-tsconfig: "npm:^4.8.1"
+    globals: "npm:^15.11.0"
+    ignore: "npm:^5.3.2"
+    minimatch: "npm:^9.0.5"
+    semver: "npm:^7.6.3"
+  peerDependencies:
+    eslint: ">=8.23.0"
+  checksum: 10c0/e874e77e9e463978ae556cefe70d7b90e53cc3286b0257ac81b639d5eaeffe8cb609e3bbf246c9f1c61f35589c22a449e3723d948e27d1bab5a0dfee9d8cea04
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-n@npm:^17.0.0":
   version: 17.14.0
   resolution: "eslint-plugin-n@npm:17.14.0"
   dependencies:
@@ -6300,7 +6318,7 @@ __metadata:
     eslint-config-love: "npm:101.0.0"
     eslint-config-next: "npm:15.0.3"
     eslint-plugin-import: "npm:2.31.0"
-    eslint-plugin-n: "npm:17.14.0"
+    eslint-plugin-n: "npm:17.15.0"
     eslint-plugin-promise: "npm:7.2.1"
     eslint-plugin-react: "npm:7.37.2"
     jsdom: "npm:25.0.1"
