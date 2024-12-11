@@ -1,6 +1,6 @@
-import { Flex, Heading, Text, Button, Box } from "@radix-ui/themes";
+import { Flex, Container ,Heading, Button, Box } from "@radix-ui/themes";
 import Image from "next/image";
-import { relative } from "path";
+
 const HeroSection = () => {
   return (
     <>
@@ -12,12 +12,17 @@ const HeroSection = () => {
         style={{ background: "#1D2F73" }}
         className="shadow-xl"
       >
+        {/* <Container
+        size={"4"}
+        > */}
+          
         <Flex
           position={{ sm: "absolute" }}
           top={{ sm: "0" }}
           justify={"center"}
           width={"100%"}
           pl={{ sm: "25%" }}
+          pr={{sm:"10%"}}
         >
           <Flex>
             <Box position={"relative"}>
@@ -37,11 +42,11 @@ const HeroSection = () => {
                 px={"4"}
                 width={"100%"}
               >
-                <Box width={"600px"}>
-                  <Text size={{ initial: "8", sm: "9" }} className="text-white">
+                <Box width={{initial: "100%",xs:"520px" }}>
+                  <Heading as="h1" size={{ initial: "8", sm: "9" }} className="text-white">
                     Support us today, <br /> so communities are <br /> prepared
                     for tomorrow.
-                  </Text>
+                  </Heading>
                 </Box>
                 <Flex
                   p={"7"}
@@ -52,12 +57,13 @@ const HeroSection = () => {
                   gap={{ initial: "3", sm: "5" }}
                   className="z-10 rounded-bl-[32px]"
                 >
-                  <Text
+                  <Heading
+                    as="h2"
                     className="text-[#051E5E]"
                     size={{ initial: "6", sm: "8" }}
                   >
                     Ship aid to people in need.
-                  </Text>
+                  </Heading>
                   <Flex
                     direction={{ initial: "column", sm: "row" }}
                     gap={{ initial: "3", sm: "5" }}
@@ -85,8 +91,11 @@ const HeroSection = () => {
               </Flex>
             </Box>
           </Flex>
+          
         </Flex>
+        {/* </Container> */}
       </Flex>
+      
     </>
   );
 };
