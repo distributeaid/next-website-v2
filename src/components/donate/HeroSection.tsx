@@ -1,12 +1,12 @@
-import { Flex, Heading, Text, Button, Box } from "@radix-ui/themes";
+import { Flex, Heading, Button, Box } from "@radix-ui/themes";
 import Image from "next/image";
-import { relative } from "path";
+
 const HeroSection = () => {
   return (
     <>
       {/* blue bg */}
       <Flex
-        mb={"20%"}
+        mb={"10%"}
         position={"relative"}
         height={"550px"}
         style={{ background: "#1D2F73" }}
@@ -18,7 +18,7 @@ const HeroSection = () => {
           justify={"center"}
           width={"100%"}
           pl={{ sm: "25%" }}
-          pr={{sm:"10%"}}
+          pr={{ sm: "10%" }}
         >
           <Flex>
             <Box position={"relative"}>
@@ -38,8 +38,12 @@ const HeroSection = () => {
                 px={"4"}
                 width={"100%"}
               >
-                <Box width={{initial: "100%",xs:"520px" }}>
-                  <Heading as="h1" size={{ initial: "8", sm: "9" }} className="text-white">
+                <Box width={{ initial: "100%", xs: "520px" }}>
+                  <Heading
+                    as="h1"
+                    size={{ initial: "8", md: "9" }}
+                    className="text-white"
+                  >
                     Support us today, <br /> so communities are <br /> prepared
                     for tomorrow.
                   </Heading>
