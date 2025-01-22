@@ -4,7 +4,6 @@ import { Box, Flex } from "@radix-ui/themes";
 
 const page = () => {
   return (
-    <>
       <Flex
         position="relative"
         width="100%"
@@ -24,7 +23,6 @@ const page = () => {
         <HeroSection />
         <SponsorSection />
       </Flex>
-    </>
   );
 };
 

@@ -9,13 +9,13 @@ import {
   Button,
 } from "@radix-ui/themes";
 import Image from "next/image";
-
+import Link from "next/link";
 const SponsorSection = () => {
   return (
     <Container size={{ xs: "1", sm: "2", md: "3", lg: "4" }} align="center">
       <Flex width="100%" direction="column" align="center" justify="center">
-        {/* is there a global title color/theme rather than hard coding it in? */}
-        <Heading align={"center"} size={"8"} className="text-[#051E5E]">
+        {/* color defined in /src/stylesheets/ */}
+        <Heading align={"center"} size={"8"} style={{color:"var(--blue-header)"}}>
           Sponsor Distribute Aid's Tech Team
         </Heading>
         <Grid
@@ -76,9 +76,11 @@ const SponsorSection = () => {
               </Strong>{" "}
             </Text>
 
-            <Button size="4" className=" w-max font-normal cursor-pointer">
-              Become A Sponsor
-            </Button>
+            <Link href="mailto:tech@distributeaid.org">
+                <Button size="4">
+                  Become A Sponsor
+                </Button>
+              </Link>
           </Flex>
         </Grid>
       </Flex>
