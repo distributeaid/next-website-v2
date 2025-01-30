@@ -15,11 +15,7 @@ const SponsorSection = () => {
     <Container size={{ xs: "1", sm: "2", md: "3", lg: "4" }} align="center">
       <Flex width="100%" direction="column" align="center" justify="center">
         {/* color defined in /src/stylesheets/ */}
-        <Heading
-          align={"center"}
-          size={"8"}
-          style={{ color: "var(--blue-header)" }}
-        >
+        <Heading align={"center"} size={"8"} style={{ color: "var(--blue-9)" }}>
           Sponsor Distribute Aid's Tech Team
         </Heading>
         <Grid
