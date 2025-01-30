@@ -28,9 +28,8 @@ const page = () => {
         <OpenSourceExplorersSection />
       </Section>
       <Section>
-        <SponsorSection/>
+        <SponsorSection />
       </Section>
-      
     </Flex>
   );
 };
