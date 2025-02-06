@@ -16,7 +16,7 @@ export const JoinTeam = () => {
     <Section
       mx={{ initial: "2", md: "94px" }}
       className="bg-[#98BEC6] rounded-3xl"
-      px={{  initial: "6",md: "9"}}
+      px={{ initial: "6", md: "9" }}
       py="6"
     >
       <Flex
