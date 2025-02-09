@@ -53,7 +53,7 @@
     "jsdom": "26.0.0",
     "postcss": "8.5.1",
     "postcss-import": "16.1.0",
-    "prettier": "3.4.2",
+    "prettier": "3.5.0",
     "tailwindcss": "3.4.17",
     "typescript": "5.7.3",
     "vitest": "3.0.5"
