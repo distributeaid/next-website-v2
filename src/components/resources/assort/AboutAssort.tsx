@@ -16,7 +16,7 @@ export const AboutAssort = ({ color }: { color: string }) => {
       my="5"
       mx={{ md: "9", initial: "2" }}
     >
-      <Heading size="8" align="center">
+      <Heading size={{ initial: "7", md: "8" }} align="center">
         {heading}
       </Heading>
       <Text align="center" size="5">
