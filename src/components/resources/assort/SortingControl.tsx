@@ -19,6 +19,7 @@ export const SortingControl = ({
       gap="2"
       my={{ md: "8", initial: "2" }}
       width={{ md: "496px" }}
+      className="text-navy-800"
     >
       <Image src={src} alt={`${title}`} width={88} height={86} />
       <Heading align="center">{title}</Heading>

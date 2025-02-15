@@ -1,3 +1,5 @@
+import { Heading } from "@radix-ui/themes";
+
 interface PageTitleProps {
   title: string;
   bgColor: string;
@@ -6,10 +8,14 @@ interface PageTitleProps {
 
 export const PageTitle = ({ textColor, title, bgColor }: PageTitleProps) => {
   return (
-    <div className={`bg-${bgColor} py-8 text-center`}>
-      <h1 className={`text-${textColor} uppercase font-extrabold text-5xl`}>
+    <div className={`bg-${bgColor} py-8`}>
+      <Heading
+        size={{ initial: "8", sm: "9" }}
+        align="center"
+        className={`text-${textColor}`}
+      >
         {title}
-      </h1>
+      </Heading>
     </div>
   );
 };

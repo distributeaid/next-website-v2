@@ -97,8 +97,9 @@ const page = () => {
         />
       </Flex>
       <Heading
-        align="left"
-        size="6"
+        align={{ initial: "center", lg: "left" }}
+        size={{ initial: "5", sm: "7" }}
+        weight={{ initial: "regular", sm: "bold" }}
         className="text-navy-900"
         mx={{ md: "9", initial: "3" }}
       >
