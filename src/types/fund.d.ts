@@ -6,4 +6,5 @@ export interface Fund {
   goal_price?: number;
   donate_link?: string;
   more_link?: string;
+  slug?: string;
 }

@@ -1,5 +1,5 @@
 import DonateGrid from "@/components/donate/DonateGrid";
-import { FUND_RAISERS } from "@/data/donate";
+import FUND_RAISERS from "@/data/donate.json";
 import HeroSection from "@/components/donate/HeroSection";
 
 const Page = () => {
