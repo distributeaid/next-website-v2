@@ -6,11 +6,11 @@ import {
   Heading,
   Inset,
   Link,
-  Progress,
   Text,
 } from "@radix-ui/themes";
 import { FC, forwardRef } from "react";
 import Image from "next/image";
+import FundProgress from "@/components/donate/FundProgress";
 
 type Props = {
   imgSrc: string | undefined;
@@ -58,27 +58,7 @@ const CampaignCard: FC<Props> = forwardRef<HTMLDivElement, Props>(
                   backgroundColor: "var(--blue-9)",
                 }}
               />
-              <Flex
-                direction="row"
-                align="center"
-                gapX="3"
-                px="4"
-                py="3"
-                style={{
-                  backgroundColor: "var(--green-9)",
-                }}
-              >
-                <Progress
-                  value={raised}
-                  variant="surface"
-                  style={{
-                    backgroundColor: "var(--green-4)",
-                  }}
-                />
-                <Text size="2" color="blue" highContrast>
-                  {raised}%
-                </Text>
-              </Flex>
+              <FundProgress raised={raised} />
             </Inset>
             <Box mx="1" mt="3">
               <Heading

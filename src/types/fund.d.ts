@@ -7,4 +7,5 @@ export interface Fund {
   donate_link?: string;
   more_link?: string;
   slug?: string;
+  description?: string;
 }
