@@ -79,7 +79,7 @@ const MobileNavBar = () => {
 
       {/* Social media links */}
       <Flex justify={"center"} gapX={"2"}>
-        {SOCIAL_LINKS.slice(0,3).map((social) => (
+        {SOCIAL_LINKS.slice(0, 3).map((social) => (
           <NavigationMenu.Item key={social.name}>
             <NavigationMenu.Link href={social.link} target="_blank">
               <Image
