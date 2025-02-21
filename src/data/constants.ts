@@ -282,8 +282,8 @@ export const SOCIAL_LINKS = [
     name: "linked-in",
     link: "https://www.linkedin.com/company/distribute-aid",
   },
-  { name: "facebook", link: "https://www.facebook.com/DistributeAidDotOrg/" },
-  { name: "github", link: "https://github.com/distributeaid" },
+  // { name: "facebook", link: "https://www.facebook.com/DistributeAidDotOrg/" },
+  // { name: "github", link: "https://github.com/distributeaid" },
 ];
 
 export enum DIRECTION {
