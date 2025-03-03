@@ -1,0 +1,3 @@
+.rt-Text ul {
+    @apply list-disc pl-10;
+}

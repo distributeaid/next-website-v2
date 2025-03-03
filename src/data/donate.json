@@ -9,7 +9,9 @@
     "img": "/images/donate/european-refugee-relief-hero.webp",
     "img_link": "https://distributeaid.org/donate/ukraine-response",
     "slug": "ukraine-response",
-    "description": "Since Russia invaded Ukraine in February 2022, Distribute Aid has built a Ukraine Response Project to support emergency relief groups in Ukraine and the bordering regions including Poland, Moldova, and Romania."
+    "description": "Since Russia invaded Ukraine in February 2022, Distribute Aid has built a Ukraine Response Project to support emergency relief groups in Ukraine and the bordering regions including Poland, Moldova, and Romania.",
+    "doneColumnLeft": "Coordinated 10 end-to-end shipments of requested critical aid to groups in Moldova and Ukraine.",
+    "doneColumnRight": "Connected aid groups and put them into contact with each other to collaborate and organize efficient resource sharing such as: <ul> <li>Sharing transport options</li> <li>Sharing of material aid</li> <li>Sharing storage space</li> </ul>"
   },
   {
     "title": "Sustainable Supply Chains",

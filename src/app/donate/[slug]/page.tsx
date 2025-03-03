@@ -3,6 +3,7 @@ import { Fund } from "@/types/fund";
 import { Route } from "@/types/route";
 import FUND_RAISERS from "@/data/donate.json";
 import FundHero from "@/components/donate/fund/FundHero";
+import DoneColumns from "@/components/donate/fund/DoneColumns";
 
 export async function generateStaticParams() {
   return FUND_RAISERS.map((fundRoute: Fund) => ({
@@ -22,6 +23,7 @@ const DonateDetails = ({ params }: Route) => {
   return (
     <>
       <FundHero fund={route} />
+      <DoneColumns fund={route} />
     </>
   );
 };

@@ -1,5 +1,5 @@
 import { Flex, Text } from "@radix-ui/themes";
-import Link from "next/link";
+import SmartLink from "../link/SmartLink";
 
 interface Link {
   url: string;
@@ -11,6 +11,7 @@ interface Link {
 interface LinkProps {
   links: Link[];
 }
+// TODO: Set currentLink boolean based on matching Next routing path to link object, instead of a manual link prop
 
 const BreadCrumbs = ({ links }: LinkProps) => {
   return (
@@ -19,14 +20,11 @@ const BreadCrumbs = ({ links }: LinkProps) => {
         const { url, target, title, currentLink } = link;
         return (
           <div key={index}>
-            <Link
-              className={`pb-3 text-[#1F2937] ${currentLink ? "border-b border-b-[#1F2937]" : ""}`}
-              href={url}
-              target={target}
-              rel="noreferrer"
-            >
-              {title}
-            </Link>
+            <SmartLink 
+              className={`pb-2 text-[#1F2937] ${currentLink ? "border-b border-b-[#1F2937]" : ""}`}
+              href={url} target={target}>
+                {title}
+              </SmartLink>
             {index !== links.length - 1 && (
               <Text as="span" className="text-[#1F2937] pl-3">
                 {">"}

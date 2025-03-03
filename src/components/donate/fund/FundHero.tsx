@@ -29,6 +29,7 @@ const FundHero = ({ fund }: HeroSectionProps) => {
       <Box position={"relative"} style={{ background: "#DFCDE8" }}>
         <Container
           pb={{ initial: "6", sm: "36px", md: "40px" }}
+          px="4"
           size={{ initial: "1", sm: "2", md: "3", lg: "4" }}
           align="center"
         >
@@ -37,10 +38,10 @@ const FundHero = ({ fund }: HeroSectionProps) => {
             pt={{ initial: "6", sm: "36px", md: "40px" }}
             pb="7"
             gap={"40px"}
-            align="center"
+            align={{lg: "center"}}
             direction={{ initial: "column", sm: "row" }}
           >
-            <Box flexBasis={{ initial: "100%", sm: "75%" }}>
+            <Box flexBasis={{ initial: "100%", sm: "75%" }} width="100%">
               <Image
                 src={img || "/images/donate/european-refugee-relief-hero.webp"}
                 alt={""}
@@ -48,17 +49,12 @@ const FundHero = ({ fund }: HeroSectionProps) => {
                 width={0}
                 sizes={"100vw"}
                 style={{
-                  width: "100%",
-                  // flexBasis: "75%",
-                  // display: "block",
-                  // objectFit: "cover",
-                  // width: "100%",
-                  // height: 150,
-                  // backgroundColor: "var(--blue-9)",
+                  width: "100%"
                 }}
               />
             </Box>
-            <Box>
+            <Box
+            width={{ initial: "100%", sm: "auto" }}>
               <Text size="3">Goal: €{goal_price}</Text>
               <Heading
                 mt="3"
