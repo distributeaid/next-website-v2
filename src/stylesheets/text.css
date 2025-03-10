@@ -1,3 +1,13 @@
 .rt-Text ul {
     @apply list-disc pl-10;
 }
+
+.donate-icon--upper {
+    transform: "translate(-35%, -35%)"
+}
+
+@media screen and (max-width: 768px) {
+    .donate-icon--upper {
+        transform: "translate(-18%, -35%)"
+    }
+}

@@ -15,3 +15,7 @@ export interface Fund {
   do_CTA_text?: string;
   do_CTA_image?: string;
 }
+
+export interface FundProps {
+  fund: Fund;
+}

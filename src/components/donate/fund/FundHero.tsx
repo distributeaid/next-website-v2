@@ -1,15 +1,11 @@
 import { Flex, Heading, Button, Box, Container, Text } from "@radix-ui/themes";
 import Link from "next/link";
 import Image from "next/image";
-import { Fund } from "@/types/fund";
+import { FundProps } from "@/types/fund";
 import FundProgress from "@/components/donate/FundProgress";
 import BreadCrumbs from "@/components/ui/BreadCrumbs";
 
-interface HeroSectionProps {
-  fund: Fund;
-}
-
-const FundHero = ({ fund }: HeroSectionProps) => {
+const FundHero = ({ fund }: FundProps) => {
   const { title, goal_price, percentage, img, donate_link, slug, description } =
     fund;
   const links = [

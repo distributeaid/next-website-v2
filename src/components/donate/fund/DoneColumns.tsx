@@ -6,13 +6,9 @@ import {
   Container,
   Text,
 } from "@radix-ui/themes";
-import { Fund } from "@/types/fund";
+import { FundProps } from "@/types/fund";
 
-interface HeroSectionProps {
-  fund: Fund;
-}
-
-const DoneColumns = ({ fund }: HeroSectionProps) => {
+const DoneColumns = ({ fund }: FundProps) => {
   const { done_column_left, done_column_right } = fund;
   if (!done_column_left && !done_column_right) {
     return <></>;

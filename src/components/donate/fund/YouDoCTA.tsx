@@ -9,13 +9,9 @@ import {
 } from "@radix-ui/themes";
 import Link from "next/link";
 import Image from "next/image";
-import { Fund } from "@/types/fund";
+import { FundProps } from "@/types/fund";
 
-interface HeroSectionProps {
-  fund: Fund;
-}
-
-const YouDoCTA = ({ fund }: HeroSectionProps) => {
+const YouDoCTA = ({ fund }: FundProps) => {
   const { do_CTA_text, do_CTA_image, donate_link } = fund;
   if (!do_CTA_text && !do_CTA_image) {
     return <></>;
@@ -24,10 +20,11 @@ const YouDoCTA = ({ fund }: HeroSectionProps) => {
     <Container
       size={{ initial: "1", sm: "2", md: "3", lg: "4" }}
       align="center"
+      px="4"
     >
-      <Box position={"relative"} style={{ background: "#051E5E", borderRadius: "32px" }} px={{ initial: "4", md:"9" }}>
-        <Box position={"absolute"} left="0" top="0" px="18.5px" py="36px" style={{ background: "#5AC597", borderRadius: "999px", transform: "translate(-35%, -35%)" }}>
-          <Text size="5" align="center" weight="medium">Donate</Text>
+      <Box position={"relative"} style={{ background: "#051E5E", borderRadius: "32px" }} px={{ initial: "5", sm: "7", md:"9" }}>
+        <Box className="donate-icon--upper" position={"absolute"} left="0" top="0" px={{ initial: "9.5px", sm: "12.5px", md: "18.5px" }} py={{ initial: "19.5px", sm: "26px", md: "36px" }} style={{ background: "#5AC597", borderRadius: "999px" }}>
+          <Text size={{ initial: "2", sm: "3", md: "5" }} align="center" weight="medium">Donate</Text>
         </Box>
         <Flex
           pt="37px"
@@ -78,6 +75,9 @@ const YouDoCTA = ({ fund }: HeroSectionProps) => {
             </>
           )}
         </Flex>
+        <Box className="donate-icon--lower" display={{initial: "none", sm: "block" }} position={"absolute"} right="0" bottom="0" px={{ initial: "9.5px", sm: "12.5px", md: "18.5px" }} py={{ initial: "19.5px", sm: "26px", md: "36px" }} style={{ background: "#5AC597", borderRadius: "999px", transform: "translate(35%, 35%)" }}>
+          <Text size="5" align="center" weight="medium">Donate</Text>
+        </Box>
       </Box>
     </Container>
   );
