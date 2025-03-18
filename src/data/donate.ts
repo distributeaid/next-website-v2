@@ -2,76 +2,57 @@ import { Fund } from "@/types/fund";
 
 export const FUND_RAISERS: Fund[] = [
   {
-    img: "/images/donate/humanitarian-logistics-hero.webp",
-    img_link: "https://distributeaid.org/donate/humanitarian-logistics",
-  },
-  {
-    title: "Humanitarian Logistics",
-    percentage: 23,
+    title: "Ukraine Response Project",
+    percentage: 78,
     goal_price: 2000,
-    donate_link:
-      "https://opencollective.com/distribute-aid-usa/projects/humanitarian-logistics/donate?amount=20&interval=month&platformTip=0",
-    more_link: "/donate/humanitarian-logistics",
-  },
-  {
-    title: "US Disaster & Refugee Relief",
-    percentage: 10,
-    goal_price: 1000,
-    donate_link:
-      "https://opencollective.com/distribute-aid-usa/projects/us-disaster-and-refugee-relief/donate?amount=20&interval=month&platformTip=0",
-    more_link: "/donate/us-disaster-relief",
-  },
-
-  {
-    img: "/images/donate/us-disaster-relief-hero.webp",
-    img_link: "https://distributeaid.org/donate/us-disaster-relief",
-  },
-  {
-    img: "/images/donate/sustainable-supply-chains-hero.webp",
-    img_link: "https://distributeaid.org/donate/sustainable-supply-chains",
+    img: "/images/donate/european-refugee-relief-hero.webp",
+    img_link: "https://distributeaid.org/donate/european-refugee-relief-hero",
+    donate_link:"",
+    more_link: "",
   },
   {
     title: "Sustainable Supply Chains",
-    percentage: 8,
+    percentage: 28,
     goal_price: 1000,
-    donate_link:
-      "https://opencollective.com/distribute-aid-usa/projects/sustainable-supply-chains/donate?amount=20&interval=month&platformTip=0",
-    more_link: "/donate/sustainable-supply-chains",
+    img: "/images/donate/sustainable-supply-chains-hero.webp",
+    img_link: "https://distributeaid.org/donate/sustainable-supply-chains",
+    donate_link:"",
+    more_link: ""
   },
   {
-    title: "Grassroots Refugee Relief",
-    percentage: 15,
-    goal_price: 3500,
-    donate_link:
-      "https://opencollective.com/distribute-aid-usa/projects/european-refugee-response/donate?amount=20&interval=month&platformTip=0",
-    more_link: "/donate/european-refugee-relief",
+    title: "Humanitarian Logistics",
+    percentage: 28,
+    goal_price: 2000,
+    img: "/images/donate/humanitarian-logistics-hero.webp",
+    img_link: "https://distributeaid.org/donate/humanitarian-logistics",
+    donate_link:"",
+    more_link: "",
   },
   {
-    img: "/images/donate/ukraine-response-hero.webp",
-    img_link: "https://distributeaid.org/donate/european-refugee-relief",
-  },
-  {
-    img: "/images/donate/tech-for-good-hero.webp",
-    img_link: "https://distributeaid.org/donate/tech-for-good",
+    title: "US Disaster & Refugee Relief",
+    percentage: 78,
+    goal_price: 1000,
+    img: "/images/donate/us-disaster-relief-hero.webp",
+    img_link: "https://distributeaid.org/donate/us-disaster-relief",
+    donate_link:"",
+    more_link: ""
   },
   {
     title: "Tech 4 Good",
-    percentage: 5,
+    percentage: 78,
     goal_price: 2500,
-    donate_link:
-      "https://opencollective.com/distribute-aid-usa/projects/tech-4-good/donate?amount=20&interval=month&platformTip=0",
-    more_link: "/donate/tech-for-good",
+    img: "/images/donate/tech-for-good-hero.webp",
+    img_link: "https://distributeaid.org/donate/tech-for-good",
+    donate_link:"",
+    more_link: "",
   },
   {
-    title: "Ukraine Response Project",
-    percentage: 83,
-    goal_price: 2000,
-    donate_link:
-      "https://opencollective.com/distribute-aid-usa/projects/ukraine-response/donate?amount=20&interval=month&platformTip=0",
-    more_link: "/donate/ukraine-response",
-  },
-  {
-    img: "/images/donate/european-refugee-relief-hero.webp",
-    img_link: "https://distributeaid.org/donate/ukraine-response",
-  },
+    title: "Grassroots Refugee Relief",
+    percentage: 78,
+    goal_price: 3500,
+    img: "/images/donate/grassroots-refugee-relief.webp",
+    img_link: "https://distributeaid.org/donate/grassroots-refugee-relief",
+    donate_link: "",
+    more_link: "",
+  }
 ];
