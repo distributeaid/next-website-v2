@@ -7,7 +7,7 @@ export const FUND_RAISERS: Fund[] = [
     goal_price: 2000,
     img: "/images/donate/european-refugee-relief-hero.webp",
     img_link: "https://distributeaid.org/donate/european-refugee-relief-hero",
-    donate_link:"",
+    donate_link: "",
     more_link: "",
   },
   {
@@ -16,8 +16,8 @@ export const FUND_RAISERS: Fund[] = [
     goal_price: 1000,
     img: "/images/donate/sustainable-supply-chains-hero.webp",
     img_link: "https://distributeaid.org/donate/sustainable-supply-chains",
-    donate_link:"",
-    more_link: ""
+    donate_link: "",
+    more_link: "",
   },
   {
     title: "Humanitarian Logistics",
@@ -25,7 +25,7 @@ export const FUND_RAISERS: Fund[] = [
     goal_price: 2000,
     img: "/images/donate/humanitarian-logistics-hero.webp",
     img_link: "https://distributeaid.org/donate/humanitarian-logistics",
-    donate_link:"",
+    donate_link: "",
     more_link: "",
   },
   {
@@ -34,8 +34,8 @@ export const FUND_RAISERS: Fund[] = [
     goal_price: 1000,
     img: "/images/donate/us-disaster-relief-hero.webp",
     img_link: "https://distributeaid.org/donate/us-disaster-relief",
-    donate_link:"",
-    more_link: ""
+    donate_link: "",
+    more_link: "",
   },
   {
     title: "Tech 4 Good",
@@ -43,7 +43,7 @@ export const FUND_RAISERS: Fund[] = [
     goal_price: 2500,
     img: "/images/donate/tech-for-good-hero.webp",
     img_link: "https://distributeaid.org/donate/tech-for-good",
-    donate_link:"",
+    donate_link: "",
     more_link: "",
   },
   {
@@ -54,5 +54,5 @@ export const FUND_RAISERS: Fund[] = [
     img_link: "https://distributeaid.org/donate/grassroots-refugee-relief",
     donate_link: "",
     more_link: "",
-  }
+  },
 ];
