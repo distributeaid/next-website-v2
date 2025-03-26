@@ -11,7 +11,6 @@ const DonateGrid: FC<{
     <Container pt={"9"} px="4">
       <Flex gap={"4"} direction={"column"} align={"center"}>
         <Heading
-          className="text-center"
           as="h1"
           weight="medium"
           size={{ initial: "8", sm: "9" }}
@@ -24,7 +23,6 @@ const DonateGrid: FC<{
           Donate Money <FaArrowDown />
         </Heading>
         <Heading
-          className="text-center"
           as="h2"
           weight={"medium"}
           size={{ initial: "7", sm: "8" }}
