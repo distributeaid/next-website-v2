@@ -1,13 +1,39 @@
 import { FC } from "react";
 import CampaignCard from "@/components/donate/CampaignCard";
-import { Grid, Box, Container } from "@radix-ui/themes";
+import { Grid, Box, Container, Heading, Flex } from "@radix-ui/themes";
 import { Fund } from "@/types/fund";
+import { FaArrowDown } from "react-icons/fa";
 
 const DonateGrid: FC<{
   funds: Fund[];
 }> = ({ funds }) => {
   return (
-    <Container px="4">
+    <Container pt={"9"} px="4">
+      <Flex gap={"4"} direction={"column"} align={"center"}>
+        <Heading
+          className="text-center"
+          as="h1"
+          weight="medium"
+          size={{ initial: "8", sm: "9" }}
+          style={{
+            color: "var(--blue-header)",
+            display: "inline-flex",
+            gap: "15px",
+          }}
+        >
+          Donate Money <FaArrowDown />
+        </Heading>
+        <Heading
+          className="text-center"
+          as="h2"
+          weight={"medium"}
+          size={{ initial: "7", sm: "8" }}
+          style={{ color: "var(--blue-header)" }}
+        >
+          Campaigns
+        </Heading>
+      </Flex>
+
       <Grid gap="8" columns={{ sm: "2", md: "3" }} pt="4.5rem" pb="9rem">
         {funds.map((fund, i) => (
           <Box key={i} width="100%" mx="auto" asChild>
