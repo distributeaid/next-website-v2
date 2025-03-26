@@ -8,6 +8,7 @@ import {
   Link,
   Progress,
   Text,
+  Badge,
 } from "@radix-ui/themes";
 import { FC, forwardRef } from "react";
 import Image from "next/image";
@@ -44,6 +45,14 @@ const CampaignCard: FC<Props> = forwardRef<HTMLDivElement, Props>(
         <Card>
           <Flex direction="column" justify={"between"} height={"100%"}>
             <Inset clip="padding-box" pb="current">
+              {/* if rasied >= 75% of goal show "close" pill */}
+              {raised >= 75 && (
+                <Box top={"3"} left={"4"} position={"absolute"}>
+                  <Badge style={{ background: "white", color: "black" }}>
+                    Close!!
+                  </Badge>
+                </Box>
+              )}
               <Image
                 src={imgSrc}
                 alt={imgAlt}
@@ -75,6 +84,7 @@ const CampaignCard: FC<Props> = forwardRef<HTMLDivElement, Props>(
                     backgroundColor: "var(--green-4)",
                   }}
                 />
+                {/* Note: the percentage should be raised/goal where goal != 0 */}
                 <Text size="2" color="blue" highContrast>
                   {raised}%
                 </Text>
@@ -96,7 +106,7 @@ const CampaignCard: FC<Props> = forwardRef<HTMLDivElement, Props>(
             </Box>
             <Flex gap="2" wrap={"wrap"} mx="1" mb="3" mt="auto">
               <Box px="4" py="2" asChild>
-                <Button asChild>
+                <Button className="bg-[#224BA4] hover:bg-[#4362A6]" asChild>
                   <Link href={donateLink} size="3">
                     Donate now
                   </Link>
