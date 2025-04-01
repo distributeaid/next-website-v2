@@ -40,7 +40,7 @@ const DoneColumns = ({ fund }: FundProps) => {
           >
             What We've Done
           </Heading>
-          {done_column_left && <Text size="3">{done_column_left}</Text>}
+          {done_column_left && <Text as="div" size="3" align={{ initial: "center", sm: "left" }}>{done_column_left}</Text>}
         </Box>
         {done_column_right && (
           <>
@@ -52,6 +52,8 @@ const DoneColumns = ({ fund }: FundProps) => {
             />
             <Box flexBasis={{ initial: "100%", md: "50%" }}>
               <Text
+                as="div"
+                className="[&>ul]:pt-3"
                 size="3"
                 dangerouslySetInnerHTML={{ __html: done_column_right }}
               />

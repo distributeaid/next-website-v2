@@ -62,7 +62,7 @@ const FundHero = ({ fund }: FundProps) => {
               {title}
             </Heading>
             <FundProgress raised={percentage} />
-            <Button mt="20px" className="bg-[#224BA4] w-full">
+            <Button mt="20px" size="2" className="bg-[#224BA4] w-full py-[10px] h-auto">
               <Link
                 className="no-underline"
                 href={donate_link || ""}

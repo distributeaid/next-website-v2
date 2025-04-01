@@ -3,11 +3,11 @@
 }
 
 .donate-icon--upper {
-    transform: "translate(-35%, -35%)"
+    transform: translate(-35%, -35%);
 }
 
 @media screen and (max-width: 768px) {
     .donate-icon--upper {
-        transform: "translate(-18%, -35%)"
+        transform: translate(-18%, -35%);
     }
 }

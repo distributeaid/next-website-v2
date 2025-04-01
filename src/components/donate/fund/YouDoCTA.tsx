@@ -45,8 +45,8 @@ const YouDoCTA = ({ fund }: FundProps) => {
             >
               What YOU can do!
             </Heading>
-            {do_CTA_text && <Text size="3" className="text-gray-400" dangerouslySetInnerHTML={{ __html: do_CTA_text }} />}
-            <Button mt="20px" className="bg-[#224BA4] w-full">
+            {do_CTA_text && <Text as="div" size="3" className="text-gray-400 [&>p]:pb-3" dangerouslySetInnerHTML={{ __html: do_CTA_text }} />}
+            <Button mt="27px" className="bg-[#224BA4] w-full max-w-[400px] py-[10px] h-auto">
                 <Link
                   className="no-underline"
                   href={donate_link || ""}
