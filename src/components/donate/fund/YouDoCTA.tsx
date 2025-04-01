@@ -21,14 +21,15 @@ const YouDoCTA = ({ fund }: FundProps) => {
       size={{ initial: "1", sm: "2", md: "3", lg: "4" }}
       align="center"
       px="4"
+      mb={{ initial: "78px", sm:"60px"}}
     >
-      <Box position={"relative"} style={{ background: "#051E5E", borderRadius: "32px" }} px={{ initial: "5", sm: "7", md:"9" }}>
+      <Box position={"relative"} style={{ background: "#051E5E", borderRadius: "32px" }} px={{ initial: "20px", sm: "7", md:"9" }}>
         <Box className="donate-icon--upper" position={"absolute"} left="0" top="0" px={{ initial: "9.5px", sm: "12.5px", md: "18.5px" }} py={{ initial: "19.5px", sm: "26px", md: "36px" }} style={{ background: "#5AC597", borderRadius: "999px" }}>
           <Text size={{ initial: "2", sm: "3", md: "5" }} align="center" weight="medium">Donate</Text>
         </Box>
         <Flex
-          pt="37px"
-          pb="53px"
+          pt="7"
+          pb={{initial: "32px", md: "42px"}}
           gap="24px"
           direction={{ initial: "column", md: "row" }}
           justify="between"
@@ -41,7 +42,7 @@ const YouDoCTA = ({ fund }: FundProps) => {
               size={{ initial: "7", md: "8" }}
               weight="bold"
               className="text-gray-400"
-              align={{ initial: "center", xs: "left" }}
+              align={{ initial: "center", sm: "left" }}
             >
               What YOU can do!
             </Heading>
@@ -59,7 +60,7 @@ const YouDoCTA = ({ fund }: FundProps) => {
           </Box>
           {do_CTA_image && (
             <>
-              <Box flexBasis={{ initial: "100%", md: "50%" }}>
+              <Box flexBasis={{ initial: "100%", md: "50%" }} width={"100%"}>
                 <Image
                   src={do_CTA_image || "/images/donate/ukraine-response-gallery-02.png"}
                   alt={""}
