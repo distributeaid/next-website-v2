@@ -40,7 +40,11 @@ const DoneColumns = ({ fund }: FundProps) => {
           >
             What We've Done
           </Heading>
-          {done_column_left && <Text as="div" size="3" align={{ initial: "center", sm: "left" }}>{done_column_left}</Text>}
+          {done_column_left && (
+            <Text as="div" size="3" align={{ initial: "center", sm: "left" }}>
+              {done_column_left}
+            </Text>
+          )}
         </Box>
         {done_column_right && (
           <>

@@ -5,7 +5,7 @@ import {
   Box,
   Container,
   Text,
-  Button
+  Button,
 } from "@radix-ui/themes";
 import Link from "next/link";
 import Image from "next/image";
@@ -21,15 +21,33 @@ const YouDoCTA = ({ fund }: FundProps) => {
       size={{ initial: "1", sm: "2", md: "3", lg: "4" }}
       align="center"
       px="4"
-      mb={{ initial: "78px", sm:"60px"}}
+      mb={{ initial: "78px", sm: "60px" }}
     >
-      <Box position={"relative"} style={{ background: "#051E5E", borderRadius: "32px" }} px={{ initial: "20px", sm: "7", md:"9" }}>
-        <Box className="donate-icon--upper" position={"absolute"} left="0" top="0" px={{ initial: "9.5px", sm: "12.5px", md: "18.5px" }} py={{ initial: "19.5px", sm: "26px", md: "36px" }} style={{ background: "#5AC597", borderRadius: "999px" }}>
-          <Text size={{ initial: "2", sm: "3", md: "5" }} align="center" weight="medium">Donate</Text>
+      <Box
+        position={"relative"}
+        style={{ background: "#051E5E", borderRadius: "32px" }}
+        px={{ initial: "20px", sm: "7", md: "9" }}
+      >
+        <Box
+          className="donate-icon--upper"
+          position={"absolute"}
+          left="0"
+          top="0"
+          px={{ initial: "9.5px", sm: "12.5px", md: "18.5px" }}
+          py={{ initial: "19.5px", sm: "26px", md: "36px" }}
+          style={{ background: "#5AC597", borderRadius: "999px" }}
+        >
+          <Text
+            size={{ initial: "2", sm: "3", md: "5" }}
+            align="center"
+            weight="medium"
+          >
+            Donate
+          </Text>
         </Box>
         <Flex
           pt="7"
-          pb={{initial: "32px", md: "42px"}}
+          pb={{ initial: "32px", md: "42px" }}
           gap="24px"
           direction={{ initial: "column", md: "row" }}
           justify="between"
@@ -46,23 +64,36 @@ const YouDoCTA = ({ fund }: FundProps) => {
             >
               What YOU can do!
             </Heading>
-            {do_CTA_text && <Text as="div" size="3" className="text-gray-400 [&>p]:pb-3" dangerouslySetInnerHTML={{ __html: do_CTA_text }} />}
-            <Button mt="27px" className="bg-[#224BA4] w-full max-w-[400px] py-[10px] h-auto">
-                <Link
-                  className="no-underline"
-                  href={donate_link || ""}
-                  target={"_blank"}
-                  rel="noreferrer"
-                >
-                  Donate now
-                </Link>
+            {do_CTA_text && (
+              <Text
+                as="div"
+                size="3"
+                className="text-gray-400 [&>p]:pb-3"
+                dangerouslySetInnerHTML={{ __html: do_CTA_text }}
+              />
+            )}
+            <Button
+              mt="27px"
+              className="bg-[#224BA4] w-full max-w-[400px] py-[10px] h-auto"
+            >
+              <Link
+                className="no-underline"
+                href={donate_link || ""}
+                target={"_blank"}
+                rel="noreferrer"
+              >
+                Donate now
+              </Link>
             </Button>
           </Box>
           {do_CTA_image && (
             <>
               <Box flexBasis={{ initial: "100%", md: "50%" }} width={"100%"}>
                 <Image
-                  src={do_CTA_image || "/images/donate/ukraine-response-gallery-02.png"}
+                  src={
+                    do_CTA_image ||
+                    "/images/donate/ukraine-response-gallery-02.png"
+                  }
                   alt={""}
                   height={0}
                   width={0}
@@ -76,8 +107,23 @@ const YouDoCTA = ({ fund }: FundProps) => {
             </>
           )}
         </Flex>
-        <Box className="donate-icon--lower" display={{initial: "none", sm: "block" }} position={"absolute"} right="0" bottom="0" px={{ initial: "9.5px", sm: "12.5px", md: "18.5px" }} py={{ initial: "19.5px", sm: "26px", md: "36px" }} style={{ background: "#5AC597", borderRadius: "999px", transform: "translate(35%, 35%)" }}>
-          <Text size="5" align="center" weight="medium">Donate</Text>
+        <Box
+          className="donate-icon--lower"
+          display={{ initial: "none", sm: "block" }}
+          position={"absolute"}
+          right="0"
+          bottom="0"
+          px={{ initial: "9.5px", sm: "12.5px", md: "18.5px" }}
+          py={{ initial: "19.5px", sm: "26px", md: "36px" }}
+          style={{
+            background: "#5AC597",
+            borderRadius: "999px",
+            transform: "translate(35%, 35%)",
+          }}
+        >
+          <Text size="5" align="center" weight="medium">
+            Donate
+          </Text>
         </Box>
       </Box>
     </Container>
