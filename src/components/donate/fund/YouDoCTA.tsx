@@ -74,7 +74,8 @@ const YouDoCTA = ({ fund }: FundProps) => {
             )}
             <Button
               mt="27px"
-              className="bg-[#224BA4] w-full max-w-[400px] py-[10px] h-auto"
+              className="bg-[#224BA4] hover:bg-[#4362A6] w-full max-w-[400px] py-[10px] h-auto"
+              asChild
             >
               <Link
                 className="no-underline"

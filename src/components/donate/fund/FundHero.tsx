@@ -65,7 +65,8 @@ const FundHero = ({ fund }: FundProps) => {
             <Button
               mt="20px"
               size="2"
-              className="bg-[#224BA4] w-full py-[10px] h-auto"
+              className="bg-[#224BA4] hover:bg-[#4362A6] w-full py-[10px] h-auto"
+              asChild
             >
               <Link
                 className="no-underline"
