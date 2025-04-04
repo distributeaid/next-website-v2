@@ -2,7 +2,7 @@ import { Box, Container, Heading, Flex, Button, Grid } from "@radix-ui/themes";
 import Image from "next/image";
 import Link from "next/link";
 import siteSettings from "../../../data/site-settings.json";
-import BankInfoPopover from "../BankInfoPopover";
+import BankInfoDialog from "../BankInfoDialog";
 
 const DonationCTA = () => {
   const { donate } = siteSettings;
@@ -84,7 +84,7 @@ const DonationCTA = () => {
               sizes={"100vw"}
               className="mx-auto"
             />
-            <BankInfoPopover />
+            <BankInfoDialog />
           </Flex>
         </Grid>
       </Container>
