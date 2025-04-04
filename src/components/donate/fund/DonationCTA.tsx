@@ -1,14 +1,8 @@
-import {
-  Box,
-  Container,
-  Heading,
-  Flex,
-  Button,
-  Link,
-  Grid,
-} from "@radix-ui/themes";
+import { Box, Container, Heading, Flex, Button, Grid } from "@radix-ui/themes";
 import Image from "next/image";
+import Link from "next/link";
 import siteSettings from "../../../data/site-settings.json";
+import BankInfoPopover from "../BankInfoPopover";
 
 const DonationCTA = () => {
   const { donate } = siteSettings;
@@ -19,18 +13,21 @@ const DonationCTA = () => {
         px="4"
         size={{ initial: "1", sm: "2", md: "3", lg: "4" }}
         align="center"
+        pt={{ initial: "28px", sm: "38px", md: "28px" }}
       >
         <Heading
           as="h2"
           className="text-[#051E5E]"
           size={{ initial: "6", sm: "8" }}
+          mb={{ initial: "7", sm: "5" }}
+          weight="regular"
         >
           Ship aid to people in need.
         </Heading>
         <Grid
           columns={{ initial: "1", sm: "3" }}
           align="baseline"
-          gap={{ initial: "3", sm: "5" }}
+          gap={{ initial: "52px", md: "88px" }}
         >
           <Flex direction="column" gap="3" align="center">
             <Image
@@ -42,14 +39,14 @@ const DonationCTA = () => {
               className="mx-auto max-w-[122px] md:max-w-[150px] w-full"
             />
             <Button
-              className="bg-white text-black group hover:bg-[#4362A6] hover:text-white transition-200 cursor-pointer"
+              className="bg-white text-black group hover:bg-[#4362A6] hover:text-white transition-200 cursor-pointer w-full px-3"
               size={{ initial: "2", sm: "3" }}
               asChild
             >
               <Link
-                href={siteSettings.donate.byPaypal}
+                href={donate.byPaypal}
                 target="_blank"
-                underline="none"
+                rel="noopener noreferrer"
               >
                 Donate with Paypal
               </Link>
@@ -65,14 +62,14 @@ const DonationCTA = () => {
               className="mx-auto"
             />
             <Button
-              className="cursor-pointer"
+              className="cursor-pointer w-full px-3"
               size={{ initial: "2", sm: "3" }}
               asChild
             >
               <Link
-                href={siteSettings.donate.byOmprakash}
+                href={donate.byOmprakash}
                 target="_blank"
-                underline="none"
+                rel="noopener noreferrer"
               >
                 Use a Debit/Credit card
               </Link>
@@ -87,9 +84,7 @@ const DonationCTA = () => {
               sizes={"100vw"}
               className="mx-auto"
             />
-            <Button className="cursor-pointer" size={{ initial: "2", sm: "3" }}>
-              Make a Bank Transfer
-            </Button>
+            <BankInfoPopover />
           </Flex>
         </Grid>
       </Container>

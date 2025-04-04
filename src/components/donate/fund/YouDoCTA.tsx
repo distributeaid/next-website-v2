@@ -1,12 +1,4 @@
-import {
-  Flex,
-  Heading,
-  Separator,
-  Box,
-  Container,
-  Text,
-  Button,
-} from "@radix-ui/themes";
+import { Flex, Heading, Box, Container, Text, Button } from "@radix-ui/themes";
 import Link from "next/link";
 import Image from "next/image";
 import { FundProps } from "@/types/fund";
@@ -74,14 +66,14 @@ const YouDoCTA = ({ fund }: FundProps) => {
             )}
             <Button
               mt="27px"
-              className="bg-[#224BA4] hover:bg-[#4362A6] w-full max-w-[400px] py-[10px] h-auto"
+              mx={{ initial: "auto", md: "0" }}
+              className="bg-[#224BA4] hover:bg-[#4362A6] w-full max-w-[400px] py-[10px] h-auto block"
               asChild
             >
               <Link
-                className="no-underline"
                 href={donate_link || ""}
                 target={"_blank"}
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 Donate now
               </Link>
@@ -122,7 +114,7 @@ const YouDoCTA = ({ fund }: FundProps) => {
             transform: "translate(35%, 35%)",
           }}
         >
-          <Text size="5" align="center" weight="medium">
+          <Text size={{ initial: "3", md: "5" }} align="center" weight="medium">
             Donate
           </Text>
         </Box>
