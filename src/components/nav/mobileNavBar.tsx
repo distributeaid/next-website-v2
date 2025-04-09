@@ -19,7 +19,6 @@ const MobileNavBar = () => {
       width={"100vw"}
       height={"100vh"}
       p={"6"}
-      // my={"9"}
       gapY={"8"}
       className="border z-30"
       align={"start"}
@@ -47,12 +46,25 @@ const MobileNavBar = () => {
                       <NavigationMenu.List className="w-full border-y border-thin">
                         {subMenu?.map(({ id, title, url }) => (
                           <NavigationMenu.Item
-                            className="p-2 w-full hover:underline decoration-2 underline-offset-8 duration-200"
+                            asChild
+                            // className="p-2 w-full hover:underline decoration-2 underline-offset-8 duration-200"
                             key={id}
                           >
-                            <NavigationMenu.Link href={url}>
-                              {title}
-                            </NavigationMenu.Link>
+                            <Flex
+                              as="div"
+                              p={"1"}
+                              width={"100%"}
+                              style={{
+                                textDecorationThickness: "2px",
+                                textUnderlineOffset: "8px",
+                              }}
+                              className="hover:underline"
+                              asChild
+                            >
+                              <NavigationMenu.Link href={url}>
+                                {title}
+                              </NavigationMenu.Link>
+                            </Flex>
                           </NavigationMenu.Item>
                         ))}
                       </NavigationMenu.List>
@@ -95,13 +107,21 @@ const MobileNavBar = () => {
 
       {/* Donate Button (Ensure it appears last) */}
       <NavigationMenu.Item className="w-full ">
-        <NavigationMenu.Link
-          className=" w-full block text-center cursor-pointer font-medium hover:bg-[#4362A6] hover:text-white duration-200 text-dark-blue bg-white rounded-lg py-3 px-6"
-          href="/donate"
-          target=""
-          rel="noreferrer"
-        >
-          Donate
+        <NavigationMenu.Link href="/donate" target="" rel="noreferrer">
+          <Flex
+            as="div"
+            width={"100%"}
+            justify={"center"}
+            p={"2"}
+            style={{
+              fontWeight: "500",
+              cursor: "pointer",
+              borderRadius: "0.5rem",
+            }}
+            className="hover:bg-[#4362A6] hover:text-white duration-200 text-dark-blue bg-white"
+          >
+            Donate
+          </Flex>
         </NavigationMenu.Link>
       </NavigationMenu.Item>
     </Flex>
