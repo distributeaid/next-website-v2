@@ -1,6 +1,6 @@
 import { Flex, Heading, Button, Box, Link } from "@radix-ui/themes";
 import Image from "next/image";
-
+import siteSettings from "@/data/site-settings.json";
 const HeroSection = () => {
   return (
     <>
@@ -84,47 +84,51 @@ const HeroSection = () => {
                 ml={{ initial: "auto", sm: "0" }}
               >
                 {/* should donate links open up new tab? and are these the correct links */}
-                <Box width={{ initial: "100%", sm: "auto" }}>
-                  <Link
-                    wrap={"nowrap"}
-                    target="_blank"
-                    href="https://www.paypal.com/donate/?hosted_button_id=VCREWCLA6WTB4"
+                <Box asChild width={{ initial: "100%", sm: "auto" }}>
+                  <Button
+                    className="bg-white text-black hover:bg-[#4362A6] hover:text-white transition-200"
+                    size={{ initial: "3", sm: "2", md: "3" }}
+                    asChild
                   >
-                    <Button
-                      className="bg-white text-black hover:bg-[#4362A6] hover:text-white transition-200 cursor-pointer w-full"
-                      size={{ initial: "3", sm: "2", md: "3" }}
+                    <Link
+                      wrap={"nowrap"}
+                      target="_blank"
+                      href={siteSettings.donate.byPaypal}
                     >
                       Donate with Paypal
-                    </Button>
-                  </Link>
+                    </Link>
+                  </Button>
                 </Box>
-                <Box width={{ initial: "100%", sm: "auto" }}>
-                  <Link
-                    wrap={"nowrap"}
-                    target="_blank"
-                    href="https://www.paypal.com/donate/?hosted_button_id=VCREWCLA6WTB4"
+                <Box asChild width={{ initial: "100%", sm: "auto" }}>
+                  <Button
+                    className=" bg-[#224BA4] hover:bg-[#4362A6]"
+                    size={{ initial: "3", sm: "2", md: "3" }}
+                    asChild
                   >
-                    <Button
-                      className="cursor-pointer bg-[#224BA4] hover:bg-[#4362A6] w-full"
-                      size={{ initial: "3", sm: "2", md: "3" }}
+                    <Link
+                      wrap={"nowrap"}
+                      target="_blank"
+                      href={siteSettings.donate.byOmprakash}
                     >
                       Use a Debit/Credit card
-                    </Button>
-                  </Link>
+                    </Link>
+                  </Button>
                 </Box>
-                <Box width={{ initial: "100%", sm: "auto" }}>
-                  <Link
-                    wrap={"nowrap"}
-                    target="_blank"
-                    href="https://www.omprakash.org/global/distribute-aid/donate"
+                <Box asChild width={{ initial: "100%", sm: "auto" }}>
+                  <Button
+                    className="bg-[#224BA4] hover:bg-[#4362A6] "
+                    size={{ initial: "3", sm: "2", md: "3" }}
+                    asChild
                   >
-                    <Button
-                      className="cursor-pointer bg-[#224BA4] hover:bg-[#4362A6] w-full"
-                      size={{ initial: "3", sm: "2", md: "3" }}
+                    <Link
+                      wrap={"nowrap"}
+                      target="_blank"
+                      // bank transer link TBD
+                      href=""
                     >
                       Make a Bank Transfer
-                    </Button>
-                  </Link>
+                    </Link>
+                  </Button>
                 </Box>
               </Flex>
             </Flex>
