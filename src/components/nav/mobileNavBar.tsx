@@ -118,7 +118,7 @@ const MobileNavBar = () => {
               cursor: "pointer",
               borderRadius: "0.5rem",
             }}
-            className="hover:bg-[#4362A6] hover:text-white duration-200 text-dark-blue bg-white"
+            className="hover:bg-navy-500 hover:text-white duration-200 text-dark-blue bg-white"
           >
             Donate
           </Flex>
