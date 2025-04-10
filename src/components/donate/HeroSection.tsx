@@ -8,7 +8,8 @@ const HeroSection = () => {
       <Flex
         mb={{ initial: "30%", sm: "10%" }}
         height={"550px"}
-        style={{ background: "#1D2F73" }}
+        // color also used in sponsor section, so maybe save it as background?
+        style={{ background: "var(--blue-background)" }}
         className="shadow-xl"
       >
         <Flex
@@ -86,7 +87,7 @@ const HeroSection = () => {
                 {/* should donate links open up new tab? and are these the correct links */}
                 <Box asChild width={{ initial: "100%", sm: "auto" }}>
                   <Button
-                    className="bg-white text-black hover:bg-[#4362A6] hover:text-white transition-200"
+                    className="bg-white text-black hover:bg-navy-500 hover:text-white transition-200"
                     size={{ initial: "3", sm: "2", md: "3" }}
                     asChild
                   >
@@ -101,7 +102,7 @@ const HeroSection = () => {
                 </Box>
                 <Box asChild width={{ initial: "100%", sm: "auto" }}>
                   <Button
-                    className=" bg-[#224BA4] hover:bg-[#4362A6]"
+                    className=" bg-navy-600 hover:bg-navy-500"
                     size={{ initial: "3", sm: "2", md: "3" }}
                     asChild
                   >
@@ -116,7 +117,7 @@ const HeroSection = () => {
                 </Box>
                 <Box asChild width={{ initial: "100%", sm: "auto" }}>
                   <Button
-                    className="bg-[#224BA4] hover:bg-[#4362A6] "
+                    className="bg-navy-600 hover:bg-navy-500 "
                     size={{ initial: "3", sm: "2", md: "3" }}
                     asChild
                   >

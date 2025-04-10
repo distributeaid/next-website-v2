@@ -106,7 +106,7 @@ const CampaignCard: FC<Props> = forwardRef<HTMLDivElement, Props>(
             </Box>
             <Flex gap="2" wrap={"wrap"} mx="1" mb="3" mt="auto">
               <Box px="4" py="2" asChild>
-                <Button className="bg-[#224BA4] hover:bg-[#4362A6]" asChild>
+                <Button className="bg-navy-600 hover:bg-navy-500" asChild>
                   <Link href={donateLink} size="3">
                     Donate now
                   </Link>
