@@ -91,7 +91,7 @@ const NavBar = () => {
                     "font-medium  decoration-2 underline-offset-8 duration-200",
                     {
                       "hover:underline": id !== 7,
-                      "hover:bg-[#4362A6] decoration-none cursor-pointer hover:text-white duration-200 text-dark-blue bg-white rounded-lg py-3 px-6 ":
+                      "hover:bg-navy-500 decoration-none cursor-pointer hover:text-white duration-200 text-dark-blue bg-white rounded-lg py-3 px-6 ":
                         id === 7,
                     },
                   )}
@@ -129,7 +129,7 @@ const NavBar = () => {
                                     width={"100%"}
                                     style={{ color: "black" }}
                                     p={"1"}
-                                    className="hover:bg-[#DEE5F4]"
+                                    className="hover:bg-navy-200"
                                     asChild
                                   >
                                     <NavigationMenu.Link href={url}>
@@ -166,7 +166,7 @@ const NavBar = () => {
                   px={"5"}
                   py={"3"}
                   style={{ fontWeight: "500", borderRadius: "0.5rem" }}
-                  className="hover:bg-[#4362A6] hover:text-white duration-200 text-dark-blue bg-white"
+                  className="hover:bg-navy-500 hover:text-white duration-200 text-dark-blue bg-white"
                 >
                   <Link href="/donate" rel="noreferrer">
                     Donate
