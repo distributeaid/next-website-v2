@@ -17,7 +17,7 @@ const DonationCTA = () => {
       >
         <Heading
           as="h2"
-          className="text-[#051E5E]"
+          className="text-[var(--blue-header)]"
           size={{ initial: "6", sm: "8" }}
           mb={{ initial: "7", sm: "5" }}
           weight="regular"
@@ -38,19 +38,21 @@ const DonationCTA = () => {
               sizes={"100vw"}
               className="mx-auto max-w-[122px] md:max-w-[150px] w-full"
             />
-            <Button
-              className="bg-white text-black group hover:bg-[#4362A6] hover:text-white transition-200 cursor-pointer w-full px-3"
-              size={{ initial: "2", sm: "3" }}
-              asChild
-            >
-              <Link
-                href={donate.byPaypal}
-                target="_blank"
-                rel="noopener noreferrer"
+            <Box width="100%" px="3" asChild>
+              <Button
+                className="bg-white text-black group hover:bg-navy-500 hover:text-white transition-200 cursor-pointer"
+                size={{ initial: "2", sm: "3" }}
+                asChild
               >
-                Donate with Paypal
-              </Link>
-            </Button>
+                <Link
+                  href={donate.byPaypal}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Donate with Paypal
+                </Link>
+              </Button>
+            </Box>
           </Flex>
           <Flex direction="column" gap="3" align="center">
             <Image
@@ -61,19 +63,21 @@ const DonationCTA = () => {
               sizes={"100vw"}
               className="mx-auto"
             />
-            <Button
-              className="cursor-pointer w-full px-3"
-              size={{ initial: "2", sm: "3" }}
-              asChild
-            >
-              <Link
-                href={donate.byOmprakash}
-                target="_blank"
-                rel="noopener noreferrer"
+            <Box width="100%" px="3" asChild>
+              <Button
+                className="cursor-pointer"
+                size={{ initial: "2", sm: "3" }}
+                asChild
               >
-                Use a Debit/Credit card
-              </Link>
-            </Button>
+                <Link
+                  href={donate.byOmprakash}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Use a Debit/Credit card
+                </Link>
+              </Button>
+            </Box>
           </Flex>
           <Flex direction="column" gap="3" align="center">
             <Image

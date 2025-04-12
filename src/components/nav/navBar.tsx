@@ -185,7 +185,7 @@ const NavBar = () => {
             </Flex>
 
             <Link
-              className="hidden md:block cursor-pointer capitalize font-medium  hover:bg-[#4362A6] hover:text-white duration-200 text-dark-blue bg-white rounded-lg py-3 px-6"
+              className="hidden md:block cursor-pointer capitalize font-medium hover:bg-navy-500 hover:text-white duration-200 text-dark-blue bg-white rounded-lg py-3 px-6"
               href="/donate"
               target=""
               rel="noreferrer"

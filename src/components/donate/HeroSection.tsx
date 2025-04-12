@@ -59,7 +59,7 @@ const HeroSection = () => {
                 >
                   <Heading
                     as="h2"
-                    className="text-[#051E5E]"
+                    className="text-[var(--blue-header)]"
                     size={{ initial: "6", sm: "8" }}
                   >
                     Ship aid to people in need.
@@ -69,7 +69,7 @@ const HeroSection = () => {
                     gap={{ initial: "3", sm: "5" }}
                   >
                     <Button
-                      className="bg-white text-black hover:bg-[#4362A6] hover:text-white transition-200 cursor-pointer "
+                      className="bg-white text-black hover:bg-navy-500 hover:text-white transition-200 cursor-pointer"
                       size={{ initial: "2", sm: "3" }}
                     >
                       Donate with Paypal

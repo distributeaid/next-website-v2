@@ -17,7 +17,7 @@ const YouDoCTA = ({ fund }: FundProps) => {
     >
       <Box
         position={"relative"}
-        style={{ background: "#051E5E", borderRadius: "32px" }}
+        style={{ background: "var(--blue-header)", borderRadius: "32px" }}
         px={{ initial: "20px", sm: "7", md: "9" }}
       >
         <Box
@@ -27,7 +27,7 @@ const YouDoCTA = ({ fund }: FundProps) => {
           top="0"
           px={{ initial: "9.5px", sm: "12.5px", md: "18.5px" }}
           py={{ initial: "19.5px", sm: "26px", md: "36px" }}
-          style={{ background: "#5AC597", borderRadius: "999px" }}
+          style={{ background: "var(--green-9)", borderRadius: "999px" }}
         >
           <Text
             size={{ initial: "2", sm: "3", md: "5" }}
@@ -46,16 +46,17 @@ const YouDoCTA = ({ fund }: FundProps) => {
           align="center"
         >
           <Box flexBasis={{ initial: "100%", md: "50%" }}>
-            <Heading
-              mb="20px"
-              as="h2"
-              size={{ initial: "7", md: "8" }}
-              weight="bold"
-              className="text-gray-400"
-              align={{ initial: "center", sm: "left" }}
-            >
-              What YOU can do!
-            </Heading>
+            <Box mb="20px" asChild>
+              <Heading
+                as="h2"
+                size={{ initial: "7", md: "8" }}
+                weight="bold"
+                className="text-gray-400"
+                align={{ initial: "center", sm: "left" }}
+              >
+                What YOU can do!
+              </Heading>
+            </Box>
             {do_CTA_text && (
               <Text
                 as="div"
@@ -64,20 +65,25 @@ const YouDoCTA = ({ fund }: FundProps) => {
                 dangerouslySetInnerHTML={{ __html: do_CTA_text }}
               />
             )}
-            <Button
+            <Box
               mt="27px"
               mx={{ initial: "auto", md: "0" }}
-              className="bg-[#224BA4] hover:bg-[#4362A6] w-full max-w-[400px] py-[10px] h-auto block"
+              width={"100%"}
+              maxWidth={"400px"}
+              py="10px"
+              height={"auto"}
               asChild
             >
-              <Link
-                href={donate_link || ""}
-                target={"_blank"}
-                rel="noopener noreferrer"
-              >
-                Donate now
-              </Link>
-            </Button>
+              <Button className="bg-navy-600 hover:bg-navy-500" asChild>
+                <Link
+                  href={donate_link || ""}
+                  target={"_blank"}
+                  rel="noopener noreferrer"
+                >
+                  Donate now
+                </Link>
+              </Button>
+            </Box>
           </Box>
           {do_CTA_image && (
             <>
@@ -109,7 +115,7 @@ const YouDoCTA = ({ fund }: FundProps) => {
           px={{ initial: "9.5px", sm: "12.5px", md: "18.5px" }}
           py={{ initial: "19.5px", sm: "26px", md: "36px" }}
           style={{
-            background: "#5AC597",
+            background: "var(--green-9)",
             borderRadius: "999px",
             transform: "translate(35%, 35%)",
           }}

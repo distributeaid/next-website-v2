@@ -10,7 +10,7 @@ const FundProgress = ({ raised }: Props) => {
       direction="row"
       align="center"
       gapX="3"
-      px="19.5px"
+      px="20px"
       py="6px"
       style={{
         backgroundColor: "var(--green-9)",

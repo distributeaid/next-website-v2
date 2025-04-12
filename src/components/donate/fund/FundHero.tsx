@@ -50,33 +50,34 @@ const FundHero = ({ fund }: FundProps) => {
           </Box>
           <Box width={{ initial: "100%", sm: "auto" }}>
             <Text size="3">Goal: €{goal_price}</Text>
-            <Heading
-              mt="3"
-              mb="28px"
-              as="h1"
-              size={{ initial: "7", sm: "8", md: "9" }}
-              weight="regular"
-              color="blue"
-              highContrast
-            >
-              {title}
-            </Heading>
-            <FundProgress raised={percentage} />
-            <Button
-              mt="20px"
-              size="2"
-              className="bg-[#224BA4] hover:bg-[#4362A6] w-full py-[10px] h-auto"
-              asChild
-            >
-              <Link
-                className="no-underline"
-                href={donate_link || ""}
-                target={"_blank"}
-                rel="noreferrer"
+            <Box mt="3" mb="28px" asChild>
+              <Heading
+                as="h1"
+                size={{ initial: "7", sm: "8", md: "9" }}
+                weight="regular"
+                color="blue"
+                highContrast
               >
-                Donate now
-              </Link>
-            </Button>
+                {title}
+              </Heading>
+            </Box>
+            <FundProgress raised={percentage} />
+            <Box mt="20px" width="100%" py="10px" height="auto" asChild>
+              <Button
+                size="2"
+                className="bg-navy-600 hover:bg-navy-500"
+                asChild
+              >
+                <Link
+                  className="no-underline"
+                  href={donate_link || ""}
+                  target={"_blank"}
+                  rel="noreferrer"
+                >
+                  Donate now
+                </Link>
+              </Button>
+            </Box>
           </Box>
         </Flex>
         {description && (

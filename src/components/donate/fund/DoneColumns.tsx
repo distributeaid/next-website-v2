@@ -29,17 +29,18 @@ const DoneColumns = ({ fund }: FundProps) => {
         align="center"
       >
         <Box flexBasis={{ initial: "100%", md: "50%" }}>
-          <Heading
-            mb="20px"
-            as="h2"
-            size={{ initial: "7", sm: "8", md: "9" }}
-            weight="bold"
-            color="blue"
-            highContrast
-            className="lg:max-w-[90%]"
-          >
-            What We've Done
-          </Heading>
+          <Box mb="20px" maxWidth={{ sm: "30%", md: "90%" }} asChild>
+            <Heading
+              as="h2"
+              size={{ initial: "7", sm: "8", md: "9" }}
+              align={{ initial: "center", sm: "left" }}
+              weight="bold"
+              color="blue"
+              highContrast
+            >
+              What We've Done
+            </Heading>
+          </Box>
           {done_column_left && (
             <Text as="div" size="3" align={{ initial: "center", sm: "left" }}>
               {done_column_left}
@@ -48,12 +49,18 @@ const DoneColumns = ({ fund }: FundProps) => {
         </Box>
         {done_column_right && (
           <>
-            <Separator
-              orientation={{ initial: "horizontal", md: "vertical" }}
-              color="blue"
-              size="4"
-              className="max-lg:h-[0.6px] lg:w-[0.6px] lg:min-h-[200px]"
-            />
+            <Box
+              minHeight={{ md: "200px" }}
+              height={{ initial: "0.6px", lg: "auto" }}
+              width={{ md: "0.6px" }}
+              asChild
+            >
+              <Separator
+                orientation={{ initial: "horizontal", md: "vertical" }}
+                color="blue"
+                size="4"
+              />
+            </Box>
             <Box flexBasis={{ initial: "100%", md: "50%" }}>
               <Text
                 as="div"
