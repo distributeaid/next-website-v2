@@ -50,7 +50,7 @@
     "eslint-plugin-n": "17.17.0",
     "eslint-plugin-promise": "7.2.1",
     "eslint-plugin-react": "7.37.5",
-    "jsdom": "26.0.0",
+    "jsdom": "26.1.0",
     "postcss": "8.5.3",
     "postcss-import": "16.1.0",
     "prettier": "3.5.3",
