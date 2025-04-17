@@ -59,11 +59,7 @@ const YouDoCTA = ({ fund }: FundProps) => {
               </Heading>
             </Box>
             {do_CTA_text && (
-              <Text
-                as="div"
-                size="3"
-                className="text-gray-400 [&>p]:pb-3"
-              >
+              <Text as="div" size="3" className="text-gray-400 [&>p]:pb-3">
                 <MarkdownContent content={do_CTA_text} />
               </Text>
             )}

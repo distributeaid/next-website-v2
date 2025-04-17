@@ -63,10 +63,7 @@ const DoneColumns = ({ fund }: FundProps) => {
               />
             </Box>
             <Box flexBasis={{ initial: "100%", md: "50%" }}>
-              <Text
-                as="div"
-                className="[&>ul]:pt-3"
-                size="3">
+              <Text as="div" className="[&>ul]:pt-3" size="3">
                 <MarkdownContent content={done_column_right} />
               </Text>
             </Box>

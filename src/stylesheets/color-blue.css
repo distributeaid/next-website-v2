@@ -32,6 +32,7 @@
   --blue-indicator: #051e5d;
   --blue-track: #051e5d;
   --blue-header: #051e5e;
+  --blue-background: #1d2f73;
 }
 
 @supports (color: color(display-p3 1 1 1)) {
