@@ -2,6 +2,7 @@ import { Flex, Heading, Box, Container, Text, Button } from "@radix-ui/themes";
 import Link from "next/link";
 import Image from "next/image";
 import { FundProps } from "@/types/fund";
+import { MarkdownContent } from "@/components/markdown/MarkdownContent";
 
 const YouDoCTA = ({ fund }: FundProps) => {
   const { do_CTA_text, do_CTA_image, donate_link } = fund;
@@ -62,8 +63,9 @@ const YouDoCTA = ({ fund }: FundProps) => {
                 as="div"
                 size="3"
                 className="text-gray-400 [&>p]:pb-3"
-                dangerouslySetInnerHTML={{ __html: do_CTA_text }}
-              />
+              >
+                <MarkdownContent content={do_CTA_text} />
+              </Text>
             )}
             <Box
               mt="27px"

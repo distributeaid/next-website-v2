@@ -7,6 +7,7 @@ import {
   Text,
 } from "@radix-ui/themes";
 import { FundProps } from "@/types/fund";
+import { MarkdownContent } from "@/components/markdown/MarkdownContent";
 
 const DoneColumns = ({ fund }: FundProps) => {
   const { done_column_left, done_column_right } = fund;
@@ -43,7 +44,7 @@ const DoneColumns = ({ fund }: FundProps) => {
           </Box>
           {done_column_left && (
             <Text as="div" size="3" align={{ initial: "center", sm: "left" }}>
-              {done_column_left}
+              <MarkdownContent content={done_column_left} />
             </Text>
           )}
         </Box>
@@ -65,9 +66,9 @@ const DoneColumns = ({ fund }: FundProps) => {
               <Text
                 as="div"
                 className="[&>ul]:pt-3"
-                size="3"
-                dangerouslySetInnerHTML={{ __html: done_column_right }}
-              />
+                size="3">
+                <MarkdownContent content={done_column_right} />
+              </Text>
             </Box>
           </>
         )}
