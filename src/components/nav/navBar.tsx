@@ -98,51 +98,54 @@ const NavBar = () => {
                   key={id}
                 >
                   {isSubMenu ? (
-                    <Box>
-                      <NavigationMenu.Trigger className="group">
-                        <Flex
-                          style={{ fontWeight: "500" }}
-                          position={"relative"}
-                          align={"center"}
-                        >
+                    <Box className="group">
+                      <Flex
+                        style={{ fontWeight: "500" }}
+                        position={"relative"}
+                        align={"center"}
+                        asChild
+                      >
+                        <NavigationMenu.Trigger>
                           {title}{" "}
                           <FaChevronDown className="ml-2 transition-transform duration-200 group-hover:rotate-180" />
-                        </Flex>
-                      </NavigationMenu.Trigger>
-                      <NavigationMenu.Content asChild>
-                        <Flex
-                          as="div"
-                          position={"absolute"}
-                          style={{
-                            background: "white",
-                            zIndex: "10",
-                            borderWidth: "1px",
-                            borderRadius: "0.375rem",
-                          }}
-                          className="shadow-md"
-                        >
+                        </NavigationMenu.Trigger>
+                      </Flex>
+                      <Flex
+                        as="div"
+                        asChild
+                        position={"absolute"}
+                        style={{
+                          background: "white",
+                          zIndex: "10",
+                          borderWidth: "1px",
+                          borderRadius: "0.375rem",
+                        }}
+                        className="shadow-md "
+                      >
+                        <NavigationMenu.Content>
                           <NavigationMenu.Sub>
                             <NavigationMenu.List>
                               {subMenu?.map(({ id, title, url }) => (
-                                <NavigationMenu.Item key={id}>
-                                  <Box
-                                    width={"100%"}
-                                    style={{ color: "black" }}
-                                    p={"1"}
-                                    className="hover:bg-navy-200"
-                                    asChild
-                                  >
+                                <Flex
+                                  key={id}
+                                  width={"100%"}
+                                  style={{ color: "black" }}
+                                  p={"1"}
+                                  className="hover:bg-navy-200"
+                                  asChild
+                                >
+                                  <NavigationMenu.Item>
                                     <NavigationMenu.Link href={url}>
                                       {title}
                                     </NavigationMenu.Link>
-                                  </Box>
-                                </NavigationMenu.Item>
+                                  </NavigationMenu.Item>
+                                </Flex>
                               ))}
                             </NavigationMenu.List>
                             <NavigationMenu.Viewport />
                           </NavigationMenu.Sub>
-                        </Flex>
-                      </NavigationMenu.Content>
+                        </NavigationMenu.Content>
+                      </Flex>
                     </Box>
                   ) : (
                     <NavigationMenu.Link href={url}>

@@ -45,27 +45,24 @@ const MobileNavBar = () => {
                     <NavigationMenu.Sub>
                       <NavigationMenu.List className="w-full border-y border-thin">
                         {subMenu?.map(({ id, title, url }) => (
-                          <NavigationMenu.Item
-                            asChild
-                            // className="p-2 w-full hover:underline decoration-2 underline-offset-8 duration-200"
+                          <Flex
                             key={id}
+                            as="div"
+                            p={"1"}
+                            width={"100%"}
+                            style={{
+                              textDecorationThickness: "2px",
+                              textUnderlineOffset: "8px",
+                            }}
+                            className="hover:underline"
+                            asChild
                           >
-                            <Flex
-                              as="div"
-                              p={"1"}
-                              width={"100%"}
-                              style={{
-                                textDecorationThickness: "2px",
-                                textUnderlineOffset: "8px",
-                              }}
-                              className="hover:underline"
-                              asChild
-                            >
+                            <NavigationMenu.Item>
                               <NavigationMenu.Link href={url}>
                                 {title}
                               </NavigationMenu.Link>
-                            </Flex>
-                          </NavigationMenu.Item>
+                            </NavigationMenu.Item>
+                          </Flex>
                         ))}
                       </NavigationMenu.List>
                     </NavigationMenu.Sub>
@@ -106,24 +103,25 @@ const MobileNavBar = () => {
       </Flex>
 
       {/* Donate Button (Ensure it appears last) */}
-      <NavigationMenu.Item className="w-full ">
-        <NavigationMenu.Link href="/donate" target="" rel="noreferrer">
-          <Flex
-            as="div"
-            width={"100%"}
-            justify={"center"}
-            p={"2"}
-            style={{
-              fontWeight: "500",
-              cursor: "pointer",
-              borderRadius: "0.5rem",
-            }}
-            className="hover:bg-navy-500 hover:text-white duration-200 text-dark-blue bg-white"
-          >
+      <Flex
+        as="div"
+        asChild
+        width={"100%"}
+        justify={"center"}
+        p={"2"}
+        style={{
+          fontWeight: "500",
+          cursor: "pointer",
+          borderRadius: "0.5rem",
+        }}
+        className="hover:bg-navy-500 hover:text-white duration-200 text-dark-blue bg-white"
+      >
+        <NavigationMenu.Item>
+          <NavigationMenu.Link href="/donate" target="" rel="noreferrer">
             Donate
-          </Flex>
-        </NavigationMenu.Link>
-      </NavigationMenu.Item>
+          </NavigationMenu.Link>
+        </NavigationMenu.Item>
+      </Flex>
     </Flex>
   );
 };
