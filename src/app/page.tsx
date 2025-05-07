@@ -70,9 +70,9 @@ const Home = () => {
                 <h4 className="text-primary text-xl max-[768px]:text-lg mb-4">
                   {activity.region}
                 </h4>
-                <p className="text-[1rem] text-gray-800 [&_a]:text-primary [&_a]:underline">
+                <div className="text-[1rem] text-gray-800 [&_a]:text-primary [&_a]:underline">
                   <MarkdownContent content={activity.description} />
-                </p>
+                </div>
               </div>
             </li>
           ))}
