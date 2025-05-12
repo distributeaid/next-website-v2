@@ -1,5 +1,3 @@
 export interface Route {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }>;
 }
