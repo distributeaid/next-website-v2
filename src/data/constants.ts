@@ -1,3 +1,5 @@
+import Home from "@/app/page";
+
 export const MONTHS = [
   "January",
   "February",
@@ -282,8 +284,74 @@ export const SOCIAL_LINKS = [
     name: "linked-in",
     link: "https://www.linkedin.com/company/distribute-aid",
   },
-  // { name: "facebook", link: "https://www.facebook.com/DistributeAidDotOrg/" },
-  // { name: "github", link: "https://github.com/distributeaid" },
+];
+
+export const FOOTER_COLUMNS = [
+  {
+    title: "Explore",
+    links: [
+      {
+        name: "Home",
+        link: "/",
+      },
+      {
+        name: "About us",
+        link: "/about-us",
+      },
+      {
+        name: "Resources",
+        link: "/resources/assort",
+      },
+      {
+        name: "Tech",
+        link: "/",
+      },
+      {
+        name: "Newsletter",
+        link: "/",
+      },
+    ],
+  },
+
+  {
+    title: "Needs",
+    links: [
+      {
+        name: "Overview",
+        link: "/",
+      },
+      {
+        name: "Data Explorer",
+        link: "/",
+      },
+      {
+        name: "Methodology",
+        link: "/",
+      },
+    ],
+  },
+
+  {
+    title: "Regions",
+    links: [
+      {
+        name: "Overview",
+        link: "/",
+      },
+      {
+        name: "USA",
+        link: "/",
+      },
+      {
+        name: "Europe",
+        link: "/",
+      },
+      {
+        name: "Middle East",
+        link: "/",
+      },
+    ],
+  },
 ];
 
 export enum DIRECTION {
