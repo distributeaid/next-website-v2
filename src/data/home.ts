@@ -6,7 +6,6 @@ import facebook from "../../public/images/social-icons/facebook.svg";
 import github from "../../public/images/social-icons/github.svg";
 import instagram from "../../public/images/social-icons/instagram.svg";
 import linkedin from "../../public/images/social-icons/linked-in.svg";
-import twitter from "../../public/images/social-icons/twitter.svg";
 import logoHero from "../../public/images/home/carousel/distributeAidHero.svg";
 import loadingTruck from "../../public/images/home/carousel/loading_truck.png";
 import moriaFireRelief from "../../public/images/home/carousel/moria_fire_relief.png";
@@ -50,11 +49,7 @@ export const socials = [
     name: "instagram",
     href: "https://www.instagram.com/distributeaid/",
   },
-  {
-    icon: twitter,
-    name: "twitter",
-    href: "https://twitter.com/DistributeAid",
-  },
+
   {
     icon: linkedin,
     name: "linkedin",

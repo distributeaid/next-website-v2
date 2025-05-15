@@ -279,7 +279,11 @@ export const COUNTRY_CODE_OPTIONS = Object.entries(COUNTRY_CODES_TO_NAME).map(
 
 export const SOCIAL_LINKS = [
   { name: "instagram", link: "https://www.instagram.com/distributeaid" },
-  { name: "twitter", link: "https://twitter.com/DistributeAid" },
+
+  {
+    name: "bluesky",
+    link: "https://bsky.app/profile/distributeaid.org",
+  },
   {
     name: "linked-in",
     link: "https://www.linkedin.com/company/distribute-aid",

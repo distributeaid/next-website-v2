@@ -7,7 +7,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <Box
-      className="bg-[#082B76] text-white"
+      className="bg-navy-800 text-white"
       width="100%"
       px={{ md: "9", sm: "8", initial: "6" }}
       py={{ md: "8", sm: "8", initial: "6" }}
@@ -55,7 +55,7 @@ const Footer = () => {
                 transition: "all 200ms",
               }}
               display={{ initial: "block", sm: "none" }}
-              className="hover:bg-[#4362A6] hover:text-white"
+              className="hover:!bg-navy-500 hover:!text-white"
             >
               <Link href="/donate" target="_blank" rel="noreferrer">
                 Donate
@@ -111,12 +111,12 @@ const Footer = () => {
                 Email us at{" "}
                 <Link
                   href="mailto:hello@distributeaid.org"
-                  className="underline"
+                  style={{ textDecoration: "underline" }}
                 >
                   hello@distributeaid.org
                 </Link>
               </Text>
-              <Text className="font-bold text-md">
+              <Text weight="bold" size="3">
                 Connect with us on social media!
               </Text>
               <Flex gap="2">
@@ -147,7 +147,7 @@ const Footer = () => {
                   transition: "all 200ms",
                 }}
                 display={{ initial: "none", sm: "block" }}
-                className="hover:bg-[#4362A6] hover:text-white"
+                className="hover:!bg-navy-500 hover:!text-white"
               >
                 <Link href="/donate" target="_blank" rel="noreferrer">
                   Donate
