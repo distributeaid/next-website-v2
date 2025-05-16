@@ -1,4 +1,4 @@
-// import OSEHero from "@/components/ose/OSEHero"; An example import. Remove if not needed.
+// import OSEHero from "@/components/ose-program/HeroSection"; An example import. Remove if not needed.
 
 const Page = () => {
   return <></>;
