@@ -19,10 +19,10 @@ export const AboutHero: FC = () => (
           align="center"
           className="text-white"
         >
-          Distribute Aid
+          About Us
         </Heading>
         <Text as="p" size="7" align="center" className="text-white">
-          To provide for basic human needs at scale by connecting communities
+          We provide for basic human needs at scale by connecting communities
           and empowering people to uphold human dignity.
         </Text>
       </Container>
