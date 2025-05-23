@@ -14,14 +14,22 @@ export const AboutHero: FC = () => (
       <Container size="3">
         <Heading
           as="h1"
-          size="9"
           weight="bold"
           align="center"
-          className="text-white"
+          className="text-white pb-8 text-[32px] sm:text-[48px] md:text-[60px]"
         >
           About Us
         </Heading>
-        <Text as="p" size="7" align="center" className="text-white">
+        <Text
+          as="p"
+          size={{
+            initial: "6",
+            sm: "7",
+            md: "8"
+          }}
+          align="center"
+          className="text-white"
+        >
           We provide for basic human needs at scale by connecting communities
           and empowering people to uphold human dignity.
         </Text>
