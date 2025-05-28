@@ -100,6 +100,7 @@ const OSE3upText = () => {
           as="p"
           size={{ initial: "5", sm: "6" }}
           align={{ initial: "center", sm: "left" }}
+          mt="1em"
         >
           <SmartLink href="/" className="underline">
             Sign up
