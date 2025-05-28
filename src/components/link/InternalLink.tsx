@@ -8,7 +8,9 @@ type Props = {
 };
 
 const InternalLink: FC<Props> = ({ children, to, className }) => (
-  <Link href={to} className={className}>{children}</Link>
+  <Link href={to} className={className}>
+    {children}
+  </Link>
 );
 
 export default InternalLink;
