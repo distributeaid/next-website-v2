@@ -22,7 +22,6 @@ const HeroSection = () => {
       px={{ initial: "4", sm: "9" }}
       gapY={"4"}
       pb={"9"}
-      
     >
       <BreadCrumbs links={links} />
       {/* logo + OSE title */}
@@ -37,7 +36,7 @@ const HeroSection = () => {
           ></Image>
         </Box>
         <Heading
-          size={{ initial: "6", sm: "8", md:"9" }}
+          size={{ initial: "6", sm: "8", md: "9" }}
           as="h1"
           style={{
             color: "var(--blue-header)",
