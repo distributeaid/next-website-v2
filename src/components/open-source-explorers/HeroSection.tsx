@@ -1,4 +1,3 @@
-import colors from "@/components/about-us/Timeline";
 import BreadCrumbs from "@/components/ui/BreadCrumbs";
 
 import { Flex, Box, Heading, Text, Link, Button } from "@radix-ui/themes";
@@ -19,16 +18,17 @@ const HeroSection = () => {
   return (
     <Flex
       direction={"column"}
-      // is it ok to imnport this color from timeline, or should we create a new grey bg color
-      style={{ backgroundColor: colors.grey }}
-      p={{ initial: "4", sm: "9" }}
+      className="bg-gray-300"
+      px={{ initial: "4", sm: "9" }}
       gapY={"4"}
+      pb={"9"}
+      
     >
       <BreadCrumbs links={links} />
       {/* logo + OSE title */}
-      <Flex align={"center"} mt={"4"}>
+      <Flex align={"center"} gap={"2"} mt={"4"}>
         {/* logo */}
-        <Box width={{ initial: "80px", sm: "fit-content" }}>
+        <Box width={{ initial: "75px", sm: "fit-content" }}>
           <Image
             src={"/images/tech/ose-program/ose-logo.png"}
             alt="Distribute aid OSE logo"
@@ -37,7 +37,7 @@ const HeroSection = () => {
           ></Image>
         </Box>
         <Heading
-          size={{ initial: "6", sm: "8" }}
+          size={{ initial: "6", sm: "8", md:"9" }}
           as="h1"
           style={{
             color: "var(--blue-header)",
@@ -65,9 +65,9 @@ const HeroSection = () => {
         cohort.
       </Text>
       {/* what should sign up button link to */}
-      <Box>
-        <Button size={"4"} style={{ fontSize: ".875rem" }} asChild>
-          <Link wrap={"nowrap"} target="_blank" href="">
+      <Box mt={"2"}>
+        <Button asChild>
+          <Link wrap={"nowrap"} size={"4"} target="_blank" href="">
             Sign up
           </Link>
         </Button>

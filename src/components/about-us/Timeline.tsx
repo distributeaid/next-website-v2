@@ -20,7 +20,6 @@ const colors = {
   grey: "#98BEC6",
 };
 
-export default colors;
 const data = [
   {
     period: "Summer 2018",

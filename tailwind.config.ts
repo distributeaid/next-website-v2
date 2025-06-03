@@ -76,6 +76,7 @@ const config: Config = {
         gray: {
           500: "#4B5563",
           400: "#e5e7eb",
+          300: "#98BEC6",
         },
         "navy-400": "rgb(139 159 200)",
         "navy-600": "rgb(34 75 164)",
