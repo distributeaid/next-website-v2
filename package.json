@@ -36,7 +36,7 @@
     "@types/node": "22.15.29",
     "@types/postcss-import": "14.0.3",
     "@types/react": "19.1.6",
-    "@types/react-dom": "19.1.5",
+    "@types/react-dom": "19.1.6",
     "@types/react-modal": "3.16.3",
     "@types/three": "0.177.0",
     "@typescript-eslint/eslint-plugin": "8.33.1",
