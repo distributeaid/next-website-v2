@@ -4,6 +4,28 @@ Distribute Aid (DA) delivers humanitarian aid to communities in need.
 
 By coordinating end-to-end shipments, we make it easy for donors to connect with frontline aid organisations, understand the needs on the ground, and get their aid delivered.
 
+## Table of Contents
+
+- [About Distribute Aid](#about-distribute-aid)
+- [Open Source Explorer's Program](#about-distribute-aid)
+- [About Project](#about-the-project)
+- [Technologies Used](#technologies-used)
+- [Getting started](#-getting-started-with-gitpod)
+  - [Setup](#setup)
+  - [Installation](#installation)
+  - [Choosing an Issue](#choosing-an-issue)
+  - [Branching & Workflow](#branching--workflows)
+  - [Coding Conventions / Best Practices](#coding-conventions--best-practices)
+  - [Project Structure](#project-structure)
+  - [Running Checks](#running-checks)
+  - [Crafting Commit Messages](#crafting-commit-messages)
+  - [Crafting a Pull Request (PR)](#crafting-a-pull-request-pr)
+- [Advanced](#advanced)
+  - [Creating Issues](#creating-issues)
+    - [Sub Issues](#sub-issues)
+  - [Reviewing Pull Requests](#reviewing-pull-requests)
+  - [Merging Branches](#merging-branches)
+
 ## About Open Source Explorers Program
 
 Open Source Explorers is Distribute Aid’s open source outreach program. It uses contributions to Distribute Aid’s projects as a well-structured and impactful introduction to open source. The program is aimed at developers, designers, and other types of contributors. Read more about the program here: [ose](https://distributeaid.org/tech/oss-explorers/)
@@ -16,6 +38,7 @@ This repository contains the scaffolding for DA's new website, powered by Nextjs
 
 - [Nextjs](https://nextjs.org/docs) - Frontendframework
 - [Typescript](https://www.typescriptlang.org/) - scripting language
+- [Radix UI](https://www.radix-ui.com/) - component libary
 - [Tailwind.css](https://tailwindcss.com/) CSS framework
 - [npm](https://docs.npmjs.com/getting-started) - package manager
 - [Prettier](https://prettier.io/) - code formatter (via the pretty-quick node module)
@@ -62,9 +85,38 @@ yarn run dev
 3.Open <http://localhost:3000> with your browser to see the result.
 You can start editing the page by modifying app/page.tsx. The page auto-updates as you edit the file.
 
+## Choosing an Issue
+
+Choose an unassigned issue from the [Issue's page on Github](https://github.com/distributeaid/next-website-v2/issues) or see which issues are `Ready for Work` in the [DA Project Board](https://github.com/orgs/distributeaid/projects/15). Note: issues labeled `Good first issue` are ideal for newcomers. Once chosen, be sure to assign yourself to the issue and mark the issue as `In Progress`.
+
 ## Branching & Workflows
 
-We'll have a long-running branch(saga) and short-lived branches that will be used to develop parts of the website. An example of a short-lived branch would be feat/about-us. Always ensure you're working on a seperate branch to avoid merge conflicts
+We'll have a long-running branch(**saga**) and short-lived branches that will be used to develop parts of the website. An example of a short-lived branch would be feat/about-us. Always ensure you're working on a seperate branch to avoid merge conflicts.
+
+## Coding Conventions / Best Practices
+
+- Try to avoid using raw #hexadecimal values. View `/src/stylesheets/` or `tailwind.config.ts` to see color value names.
+- Try to use Radix Ui's component library and use tailwind Css for supplimentary styling.
+
+## Project Structure
+
+We are using a [Next project structure](https://nextjs.org/docs/app/getting-started/project-structure).
+
+### `/public/`
+
+Contains images and documents that are used in different pages or components.
+
+### `/src/`
+
+Most of the files you may be working with live inside the `/src/` folder.
+
+#### `/src/app/`
+
+Contains the main pages for routing, meaning `/src/app/[foldername]/page.tsx` would route to the `/[foldername]` page on the website.
+
+#### `/src/components/`
+
+Each page is made up of multiple components that will be imported onto that specific page.
 
 ## Running checks
 
@@ -82,7 +134,7 @@ yarn run lint
 
 ## Crafting commit messages
 
-When crafting commit messages, try to group commits that are related to a particular topic. For example, if you're making commits related to the styling, only include files that are related to styling. This makes it easier to read through the commits and see the exact files that made changes to the styles.
+When crafting commit messages, try to group commits that are related to a particular topic. For example, if you're making commits related to the styling, only include files that are related to styling. This makes it easier to read through the commits and see the exact files that made changes to the styles. See [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for more information.
 
 A good commit message will ideally have the following attributes:
 
@@ -92,7 +144,7 @@ A good commit message will ideally have the following attributes:
 
 ## Crafting a Pull Request (PR)
 
-- Include the purpose of the Pull Request and link the issue related to the PR
+- Include the purpose of the Pull Request and link the issue related to the PR (with the `#` sign)
 
 - Consider providing an overview of why the work is taking place (with any relevant links). Don't assume familiarity with the history
 
@@ -103,5 +155,32 @@ A good commit message will ideally have the following attributes:
 - @mention individuals that you specifically want to involve in the discussion and explain the help or input you need from them.
 
 Happy coding!!!
+
+# Advanced
+
+## Creating Issues
+
+On the [Issue's page on Github](https://github.com/distributeaid/next-website-v2/issues), click the green `New Issue` button or this [New Issue Link](https://github.com/distributeaid/next-website-v2/issues/new). Add a descriptive title with an optional `[type tag]` such as [component] or [page]. In the description body summarize the issue. Add external links like such as to figma designs, if applicable. Add parts of the codebase where changes would be made. You can assign the issue to yourself or someone else, or leave for another person to pick it up. Add appropriate labels and types. Then add the issue to the project **DA Tech**.
+
+### Sub Issues
+
+For larger issues that can be split up into separate independent parts. For example a new parent page with multiple children components. You can create a parent issue, with multiple child issues. [See these slides](https://docs.google.com/presentation/d/1ToMum70-qDlaCv6m7X3HfGr3XjaX-UjyA36K4IElO5Y/edit?slide=id.g2dd259a195e_0_9#slide=id.g2dd259a195e_0_9) on how to create sub issues.
+
+## Reviewing Pull Requests
+
+When reviewing changes, try to first give praise for the work done. Leave a general summary of the changes needed to be made. Individual comments can be put to show specific instances or examples directly in the codebase. See [Conventional Comments](https://conventionalcomments.org/) for more information.
+
+A good comment will ideally have the following attributes:
+
+- Label => Signifies what kind of comment is being left
+- Subject => Main message of the comment
+- Decorations (_optional_) => These are extra decorating labels for the comment. They are surrounded by parentheses and comma-separated.
+- Discussion (_optional_) =>This contains supporting statements, context, reasoning, and anything else to help communicate the “why” and “next steps” for resolving the comment.
+
+Labeling comments encourages collaboration and saves hours of undercommunication and misunderstandings.
+
+## Merging Branches
+
+Use [`git rebase`](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase) to resolve any merge conflicts between branches.
 
 ## License
