@@ -2,6 +2,8 @@ import React from "react";
 import type { Metadata } from "next";
 
 import { Theme } from "@radix-ui/themes";
+import "@radix-ui/themes/styles.css";
+
 import { Yantramanav, Roboto, Permanent_Marker } from "next/font/google";
 import "../stylesheets/main.css";
 
