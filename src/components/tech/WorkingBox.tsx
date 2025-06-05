@@ -1,5 +1,6 @@
-import { Badge, Box, Container, Flex, Link, Text } from "@radix-ui/themes";
+import { Badge, Box, Container, Flex, Heading, Text } from "@radix-ui/themes";
 import React from "react";
+import SmartLink from "../link/SmartLink";
 
 interface WorkingBoxProps {
   title: string;
@@ -24,14 +25,25 @@ export const WorkingBox = ({ title, para, link, tech }: WorkingBoxProps) => {
       align="left"
       width="full"
     >
-      <Flex gap="4" p="5" direction="column" className="bg-navy-50">
-        <Text size="7" weight="medium" className="text-navy-800">
+      <Flex gap="4" p="5" direction="column" className="bg-navy-50 rounded-lg">
+        <Heading
+          as="h3"
+          size={{ initial: "7", sm: "8" }}
+          weight="medium"
+          className="text-navy-800"
+        >
           {title}
+        </Heading>
+        <Text
+          as="p"
+          size={{ initial: "3", sm: "5" }}
+          className="sm:leading-[2]"
+        >
+          {para}{" "}
+          <SmartLink href={link} className="text-navy-800 underline">
+            [GitHub Repo]
+          </SmartLink>
         </Text>
-        <Text size="4" className="leading-10">
-          {para} <Link href={`https://${link}`}>[GitHub Repo]</Link>
-        </Text>
-
         <Box>
           {data.map((item, index) => {
             return (

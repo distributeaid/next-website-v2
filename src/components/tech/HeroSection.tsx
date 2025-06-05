@@ -10,7 +10,11 @@ import {
 
 const HeroSection = () => {
   return (
-    <Container size={{ xs: "1", sm: "2", md: "3", lg: "4" }} align="center">
+    <Container
+      size={{ xs: "1", sm: "2", md: "3", lg: "4" }}
+      align="center"
+      px="4"
+    >
       <Flex width="100%" direction="column" align="center" justify="center">
         <Box
           pt={{ initial: "1", md: "4" }}

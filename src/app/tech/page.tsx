@@ -17,7 +17,6 @@ const page = () => {
       direction="column"
       align="center"
       justify="start"
-      gap={{ initial: "4", lg: "6", xl: "9" }}
     >
       <Box
         width="100%"
@@ -29,7 +28,7 @@ const page = () => {
       <Section size={{ initial: "1", md: "2" }}>
         <HeroSection />
       </Section>
-      <Section>
+      <Section size={{ initial: "1", md: "2" }}>
         <WorkingSection />
       </Section>
       <Section size={{ initial: "1", md: "2" }}>
