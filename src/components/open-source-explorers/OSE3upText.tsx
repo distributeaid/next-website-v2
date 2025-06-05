@@ -96,7 +96,8 @@ const OSE3upText = () => {
           been reorganising our tech team, preparing to run the next cohort and
           integrating contributors into our team.
         </Text>
-        {/* <Text
+        {/* TODO: Add Beehive integration to sign up link 
+          <Text
           as="p"
           size={{ initial: "5", sm: "6" }}
           align={{ initial: "center", sm: "left" }}
