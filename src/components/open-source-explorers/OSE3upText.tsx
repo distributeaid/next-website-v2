@@ -96,7 +96,7 @@ const OSE3upText = () => {
           been reorganising our tech team, preparing to run the next cohort and
           integrating contributors into our team.
         </Text>
-        <Text
+        {/* <Text
           as="p"
           size={{ initial: "5", sm: "6" }}
           align={{ initial: "center", sm: "left" }}
@@ -107,7 +107,7 @@ const OSE3upText = () => {
           </SmartLink>{" "}
           for our mailing list and we’ll let you know when we open applications
           for the next cohort.
-        </Text>
+        </Text> */}
       </Box>
     </Container>
   );
