@@ -59,18 +59,17 @@ const HeroSection = () => {
         into open source.
       </Text>
       <Text>
-        Participant applications are currently closed but you can sign up for
-        our mailing list and we’ll let you know when we’re running the next
-        cohort.
+        Participant applications are currently closed but stay tuned for another
+        Open Source Explorers cohort!
       </Text>
       {/* what should sign up button link to */}
-      <Box mt={"2"}>
+      {/* <Box mt={"2"}>
         <Button asChild>
           <Link wrap={"nowrap"} size={"4"} target="_blank" href="">
             Sign up
           </Link>
         </Button>
-      </Box>
+      </Box> */}
     </Flex>
   );
 };
