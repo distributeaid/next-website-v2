@@ -21,15 +21,14 @@ const page = () => {
         height="450px"
         className="bg-navy-900 -z-10"
       />
-      <Section>
+      <Section size={{ initial: "1", md: "2" }}>
         <HeroSection />
       </Section>
-
-      <Section>
-        <OpenSourceExplorersSection />
-      </Section>
-      <Section>
+      <Section size={{ initial: "1", md: "2" }}>
         <TechStackSection />
+      </Section>
+      <Section size={{ initial: "1", md: "2" }}>
+        <OpenSourceExplorersSection />
       </Section>
       <Section>
         <SponsorSection />
