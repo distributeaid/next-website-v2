@@ -1,15 +1,14 @@
 import {
   Box,
+  Container,
   Flex,
   Grid,
   Heading,
-  Link,
-  Section,
   Separator,
   Text,
 } from "@radix-ui/themes";
-import Image from "next/image";
-import React from "react";
+import BorderedImage from "../ui/BorderedImage";
+import SmartLink from "../link/SmartLink";
 
 const technologies = [
   "TypeScript",
@@ -27,14 +26,26 @@ const technologies = [
 
 export const TechStackSection = () => {
   return (
-    <Section mx={{ initial: "2", sm: "9", md: "94px" }}>
+    <Container
+      px="4"
+      size={{ initial: "1", sm: "2", md: "3", lg: "4" }}
+      align="center"
+    >
       <Separator orientation="horizontal" className="w-full bg-navy-900" />
       <Grid gap="5" my="7" columns={{ initial: "1", md: "2" }}>
         <Flex gap="4" direction="column">
-          <Heading size="8" className="text-navy-900">
+          <Heading
+            size={{ initial: "7", sm: "8" }}
+            align={{ initial: "center", md: "left" }}
+            className="text-navy-900"
+          >
             Our Tech Stack
           </Heading>
-          <Text size="5" className="text-navy-900">
+          <Text
+            size={{ initial: "3", sm: "4", md: "5" }}
+            color="blue"
+            highContrast
+          >
             We use the following technologies (and more). No need for deep
             familiarity with each — this just gives you an idea of what to
             expect.
@@ -43,36 +54,36 @@ export const TechStackSection = () => {
             {technologies.map((item, index) => (
               <li
                 key={index}
-                className="text-navy-900 font-medium leading-7 text-2xl"
+                className="text-navy-900 font-medium text-md sm:text-[18px] md:text-[22px] pl-3"
               >
                 {item}
               </li>
             ))}
           </Box>
-          <Text size="4" className="text-navy-900">
+          <Text
+            size={{ initial: "3", sm: "4", md: "5" }}
+            color="blue"
+            highContrast
+          >
             Check out our{" "}
-            <Link href="https://github.com/distributeaid">Github</Link> for more
-            info!
+            <SmartLink
+              href="https://github.com/distributeaid"
+              className="underline"
+            >
+              Github
+            </SmartLink>{" "}
+            for more info!
           </Text>
         </Flex>
-        <Box
-          className="bg-[var(--green-9)] rounded-ss-3xl rounded-es-3xl"
-          px="8"
-          py="7"
-        >
-          <Image
-            src="/images/tech/tech-stack-image.png"
-            alt="Tech stack image"
-            style={{
-              width: "100%",
-              height: "100%",
-            }}
-            width={537}
-            height={357}
-          />
-        </Box>
+        <BorderedImage
+          bgColor="var(--green-9)"
+          image={{
+            src: "/images/tech/tech-stack-image.png",
+            alt: "Tech stack image",
+          }}
+        />
       </Grid>
       <Separator orientation="horizontal" className="w-full bg-navy-900" />
-    </Section>
+    </Container>
   );
 };
