@@ -1,0 +1,73 @@
+[
+  {
+    "title": "Ukraine Response Project",
+    "percentage": 78,
+    "goal_price": 2000,
+    "donate_link": "https://www.omprakash.org/global/distribute-aid/donate",
+    "more_link": "/donate/ukraine-response",
+    "img": "/images/donate/european-refugee-relief-hero.webp",
+    "img_link": "https://distributeaid.org/donate/european-refugee-relief-hero",
+    "slug": "ukraine-response",
+    "description": "Since Russia invaded Ukraine in February 2022, Distribute Aid has built a Ukraine Response Project to support emergency relief groups in Ukraine and the bordering regions including Poland, Moldova, and Romania.",
+    "done_column_left": "Coordinated 10 end-to-end shipments of requested critical aid to groups in Moldova and Ukraine.",
+    "done_column_right": "Connected aid groups and put them into contact with each other to collaborate and organize efficient resource sharing such as: \n - Sharing transport options \n - Sharing of material aid \n - Sharing storage space",
+    "gallery_images": [
+      "/images/donate/ukraine-response-gallery-03.png",
+      "/images/donate/ukraine-response-gallery-04.png",
+      "/images/donate/ukraine-response-gallery-05.png",
+      "/images/donate/ukraine-response-gallery-06.png"
+    ],
+    "do_CTA_text": "Your donation will allow us to continue to provide support to Ukraine relief responses, such as: \n\n Supplying groups with extensive guides so as to facilitate the export and import of critical aid across different regions. \n - Expanding networks and connections to increase the collective impact and capacity of operations. \n - Further our understanding of the real situation on the ground, and create solutions to any inefficiencies that may exist. \n - Increase our data collection on what the needs of aid groups are, and adapt the supply chain to fit the needs accordingly.",
+    "do_CTA_image": "/images/donate/ukraine-response-gallery-02.png"
+  },
+  {
+    "title": "Sustainable Supply Chains",
+    "percentage": 28,
+    "goal_price": 1000,
+    "donate_link": "https://www.omprakash.org/global/distribute-aid/donate",
+    "more_link": "/donate/sustainable-supply-chains",
+    "img": "/images/donate/sustainable-supply-chains-hero.webp",
+    "img_link": "https://distributeaid.org/donate/sustainable-supply-chains",
+    "slug": "sustainable-supply-chains"
+  },
+  {
+    "title": "Humanitarian Logistics",
+    "percentage": 28,
+    "goal_price": 2000,
+    "donate_link": "https://www.omprakash.org/global/distribute-aid/donate",
+    "more_link": "/donate/humanitarian-logistics",
+    "img": "/images/donate/humanitarian-logistics-hero.webp",
+    "img_link": "https://distributeaid.org/donate/humanitarian-logistics",
+    "slug": "humanitarian-logistics"
+  },
+  {
+    "title": "US Disaster & Refugee Relief",
+    "percentage": 78,
+    "goal_price": 1000,
+    "donate_link": "https://www.omprakash.org/global/distribute-aid/donate",
+    "more_link": "/donate/us-disaster-relief",
+    "img": "/images/donate/us-disaster-relief-hero.webp",
+    "img_link": "https://distributeaid.org/donate/us-disaster-relief",
+    "slug": "us-disaster-relief"
+  },
+  {
+    "title": "Tech 4 Good",
+    "percentage": 78,
+    "goal_price": 2500,
+    "donate_link": "https://www.omprakash.org/global/distribute-aid/donate",
+    "more_link": "/donate/tech-for-good",
+    "img": "/images/donate/tech-for-good-hero.webp",
+    "img_link": "https://distributeaid.org/donate/tech-for-good",
+    "slug": "tech-for-good"
+  },
+  {
+    "title": "Grassroots Refugee Relief",
+    "percentage": 78,
+    "goal_price": 3500,
+    "donate_link": "https://www.omprakash.org/global/distribute-aid/donate",
+    "more_link": "/donate/grassroots-refugee-relief",
+    "img": "/images/donate/grassroots-refugee-relief.webp",
+    "img_link": "https://distributeaid.org/donate/grassroots-refugee-relief",
+    "slug": "grassroots-refugee-relief"
+  }
+]

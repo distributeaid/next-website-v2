@@ -6,7 +6,6 @@ import facebook from "../../public/images/social-icons/facebook.svg";
 import github from "../../public/images/social-icons/github.svg";
 import instagram from "../../public/images/social-icons/instagram.svg";
 import linkedin from "../../public/images/social-icons/linked-in.svg";
-import twitter from "../../public/images/social-icons/twitter.svg";
 import logoHero from "../../public/images/home/carousel/distributeAidHero.svg";
 import loadingTruck from "../../public/images/home/carousel/loading_truck.png";
 import moriaFireRelief from "../../public/images/home/carousel/moria_fire_relief.png";
@@ -33,14 +32,14 @@ export const activities = [
     region: "Global",
     image: inKindDonations,
     description:
-      'Distribute Aid runs a successful in-kind donation programme where we connect companies with aid organisations. Through our network of hundreds of charities, we can handle coordinating large volumes of donations. To date, we have secured over 5 million items through our in-kind donor programme. Email <span class="text-primary underline cursor-pointer">donate-aid@distributeaid.org</span> if you can donate in-kind.',
+      "Distribute Aid runs a successful in-kind donation programme where we connect companies with aid organisations. Through our network of hundreds of charities, we can handle coordinating large volumes of donations. To date, we have secured over 5 million items through our in-kind donor programme. Email <donate-aid@distributeaid.org> if you can donate in-kind.",
   },
   {
     title: "Fort Pickett",
     region: "USA",
     image: fortPickett,
     description:
-      'Distribute Aid was officially invited to join Operation <span class="italic">Allies</span> Welcome at Fort Pickett in November. Our role on base is to manage all the donated aid. We work with NGOs and departments across the base to assess the needs of our guests, and work with the community of external organizations supporting the Operation Allies Welcome mission to help facilitate aid deliveries. Once aid arrives on base we work with the US Marines to distribute items to guests, and supply materials for NGOs running education & activity programs to use in their classes. In November & December, our efforts resulted in more than 750,000 items being distributed to or used by 7,500 guests at Fort Pickett. You can support our work by <a href="https://opencollective.com/distribute-aid-usa/projects/fort-pickett?slug=fort-pickett" target="_blank" rel="noopener" class="text-primary font-bold underline cursor-pointer">donating to us through our Open Collective page!</a>',
+      "Distribute Aid was officially invited to join Operation *Allies* Welcome at Fort Pickett in November. Our role on base is to manage all the donated aid. We work with NGOs and departments across the base to assess the needs of our guests, and work with the community of external organizations supporting the Operation Allies Welcome mission to help facilitate aid deliveries. Once aid arrives on base we work with the US Marines to distribute items to guests, and supply materials for NGOs running education & activity programs to use in their classes. In November & December, our efforts resulted in more than 750,000 items being distributed to or used by 7,500 guests at Fort Pickett. You can support our work by **[donating to us through our Open Collective page!](https://opencollective.com/distribute-aid-usa/projects/fort-pickett?slug=fort-pickett)**",
   },
 ];
 
@@ -50,11 +49,7 @@ export const socials = [
     name: "instagram",
     href: "https://www.instagram.com/distributeaid/",
   },
-  {
-    icon: twitter,
-    name: "twitter",
-    href: "https://twitter.com/DistributeAid",
-  },
+
   {
     icon: linkedin,
     name: "linkedin",

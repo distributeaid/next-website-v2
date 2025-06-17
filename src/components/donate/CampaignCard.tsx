@@ -6,11 +6,12 @@ import {
   Heading,
   Inset,
   Link,
-  Progress,
   Text,
+  Badge,
 } from "@radix-ui/themes";
 import { FC, forwardRef } from "react";
 import Image from "next/image";
+import FundProgress from "@/components/donate/FundProgress";
 
 type Props = {
   imgSrc: string | undefined;
@@ -44,6 +45,14 @@ const CampaignCard: FC<Props> = forwardRef<HTMLDivElement, Props>(
         <Card>
           <Flex direction="column" justify={"between"} height={"100%"}>
             <Inset clip="padding-box" pb="current">
+              {/* if rasied >= 75% of goal show "close" pill */}
+              {raised >= 75 && (
+                <Box top={"3"} left={"4"} position={"absolute"}>
+                  <Badge style={{ background: "white", color: "black" }}>
+                    Close!!
+                  </Badge>
+                </Box>
+              )}
               <Image
                 src={imgSrc}
                 alt={imgAlt}
@@ -58,27 +67,7 @@ const CampaignCard: FC<Props> = forwardRef<HTMLDivElement, Props>(
                   backgroundColor: "var(--blue-9)",
                 }}
               />
-              <Flex
-                direction="row"
-                align="center"
-                gapX="3"
-                px="4"
-                py="3"
-                style={{
-                  backgroundColor: "var(--green-9)",
-                }}
-              >
-                <Progress
-                  value={raised}
-                  variant="surface"
-                  style={{
-                    backgroundColor: "var(--green-4)",
-                  }}
-                />
-                <Text size="2" color="blue" highContrast>
-                  {raised}%
-                </Text>
-              </Flex>
+              <FundProgress raised={raised} />
             </Inset>
             <Box mx="1" mt="3">
               <Heading
@@ -96,7 +85,7 @@ const CampaignCard: FC<Props> = forwardRef<HTMLDivElement, Props>(
             </Box>
             <Flex gap="2" wrap={"wrap"} mx="1" mb="3" mt="auto">
               <Box px="4" py="2" asChild>
-                <Button asChild>
+                <Button className="bg-navy-600 hover:bg-navy-500" asChild>
                   <Link href={donateLink} size="3">
                     Donate now
                   </Link>

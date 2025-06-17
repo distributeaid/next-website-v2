@@ -5,6 +5,7 @@
 @import "./color-pink.css";
 @import "./color-teal.css";
 @import "./fonts.css";
+@import "./text.css";
 
 @tailwind components;
 @tailwind utilities;
