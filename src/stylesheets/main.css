@@ -6,6 +6,7 @@
 @import "./color-teal.css";
 @import "./fonts.css";
 @import "./text.css";
+@import "./radix-overrides.css";
 
 @tailwind components;
 @tailwind utilities;
