@@ -1,3 +1,5 @@
+import Home from "@/app/page";
+
 export const MONTHS = [
   "January",
   "February",
@@ -277,13 +279,83 @@ export const COUNTRY_CODE_OPTIONS = Object.entries(COUNTRY_CODES_TO_NAME).map(
 
 export const SOCIAL_LINKS = [
   { name: "instagram", link: "https://www.instagram.com/distributeaid" },
-  { name: "twitter", link: "https://twitter.com/DistributeAid" },
+
+  {
+    name: "bluesky",
+    link: "https://bsky.app/profile/distributeaid.org",
+  },
   {
     name: "linked-in",
     link: "https://www.linkedin.com/company/distribute-aid",
   },
-  { name: "facebook", link: "https://www.facebook.com/DistributeAidDotOrg/" },
-  { name: "github", link: "https://github.com/distributeaid" },
+];
+
+export const FOOTER_COLUMNS = [
+  {
+    title: "Explore",
+    links: [
+      {
+        name: "Home",
+        link: "/",
+      },
+      {
+        name: "About us",
+        link: "/about-us",
+      },
+      {
+        name: "Resources",
+        link: "/resources/assort",
+      },
+      {
+        name: "Tech",
+        link: "/",
+      },
+      {
+        name: "Newsletter",
+        link: "/",
+      },
+    ],
+  },
+
+  {
+    title: "Needs",
+    links: [
+      {
+        name: "Overview",
+        link: "/",
+      },
+      {
+        name: "Data Explorer",
+        link: "/",
+      },
+      {
+        name: "Methodology",
+        link: "/",
+      },
+    ],
+  },
+
+  {
+    title: "Regions",
+    links: [
+      {
+        name: "Overview",
+        link: "/",
+      },
+      {
+        name: "USA",
+        link: "/",
+      },
+      {
+        name: "Europe",
+        link: "/",
+      },
+      {
+        name: "Middle East",
+        link: "/",
+      },
+    ],
+  },
 ];
 
 export enum DIRECTION {
