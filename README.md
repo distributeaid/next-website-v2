@@ -7,7 +7,6 @@ By coordinating end-to-end shipments, we make it easy for donors to connect with
 ## Table of Contents
 
 - [About Distribute Aid](#about-distribute-aid)
-- [Open Source Explorer's Program](#about-distribute-aid)
 - [About Project](#about-the-project)
 - [Technologies Used](#technologies-used)
 - [Getting started](#-getting-started-with-gitpod)
@@ -20,15 +19,10 @@ By coordinating end-to-end shipments, we make it easy for donors to connect with
   - [Running Checks](#running-checks)
   - [Crafting Commit Messages](#crafting-commit-messages)
   - [Crafting a Pull Request (PR)](#crafting-a-pull-request-pr)
-- [Advanced](#advanced)
   - [Creating Issues](#creating-issues)
     - [Sub Issues](#sub-issues)
-  - [Reviewing Pull Requests](#reviewing-pull-requests)
-  - [Merging Branches](#merging-branches)
-
-## About Open Source Explorers Program
-
-Open Source Explorers is Distribute Aid’s open source outreach program. It uses contributions to Distribute Aid’s projects as a well-structured and impactful introduction to open source. The program is aimed at developers, designers, and other types of contributors. Read more about the program here: [ose](https://distributeaid.org/tech/oss-explorers/)
+- [Reviewing Pull Requests](#reviewing-pull-requests)
+- [Merging Branches](#merging-branches)
 
 ## About the Project
 
@@ -91,12 +85,12 @@ Choose an unassigned issue from the [Issue's page on Github](https://github.com/
 
 ## Branching & Workflows
 
-We'll have a long-running branch(**saga**) and short-lived branches that will be used to develop parts of the website. An example of a short-lived branch would be feat/about-us. Always ensure you're working on a seperate branch to avoid merge conflicts.
+We have a long-running branch (**saga**) and create short-lived branches to develop parts of the website. Our branch naming convention is type/issue#/condensed-issue-name. An example of a short-lived branch would be feat/365/about-us. Connect words using a "-" as branch names cannot include empty spaces. Always ensure you're working on a separate branch to avoid merge conflicts.
 
 ## Coding Conventions / Best Practices
 
-- Try to avoid using raw #hexadecimal values. View `/src/stylesheets/` or `tailwind.config.ts` to see color value names.
-- Try to use Radix Ui's component library and use tailwind Css for supplimentary styling.
+- Avoid using raw #hexadecimal values. View `/src/stylesheets/` or `tailwind.config.ts` to see color value names.
+- Use Radix UI's component library and use tailwind CSS for supplementary styling.
 
 ## Project Structure
 
@@ -134,7 +128,7 @@ yarn run lint
 
 ## Crafting commit messages
 
-When crafting commit messages, try to group commits that are related to a particular topic. For example, if you're making commits related to the styling, only include files that are related to styling. This makes it easier to read through the commits and see the exact files that made changes to the styles. See [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for more information.
+When crafting commit messages, group commits that are related to a particular topic. For example, if you're making commits related to the styling, only include files that are related to styling. This makes it easier to read through the commits and see the exact files that made changes to the styles. See [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for more information.
 
 A good commit message will ideally have the following attributes:
 
@@ -154,21 +148,30 @@ A good commit message will ideally have the following attributes:
 
 - @mention individuals that you specifically want to involve in the discussion and explain the help or input you need from them.
 
+- assign the issue owner as a reviewer
+
 Happy coding!!!
 
-# Advanced
 
 ## Creating Issues
 
-On the [Issue's page on Github](https://github.com/distributeaid/next-website-v2/issues), click the green `New Issue` button or this [New Issue Link](https://github.com/distributeaid/next-website-v2/issues/new). Add a descriptive title with an optional `[type tag]` such as [component] or [page]. In the description body summarize the issue. Add external links like such as to figma designs, if applicable. Add parts of the codebase where changes would be made. You can assign the issue to yourself or someone else, or leave for another person to pick it up. Add appropriate labels and types. Then add the issue to the project **DA Tech**.
+On the [Issues page on Github](https://github.com/distributeaid/next-website-v2/issues), click the green `New Issue` button or this [New Issue Link](https://github.com/distributeaid/next-website-v2/issues/new). 
+- Add a descriptive title with an optional `[type tag]` such as [component] or [page]. In the description body summarize the issue. 
+- Add external links, such as to figma designs or external documentation, if applicable. If a figma design exists, be sure to add screenshots. Visual explanations go a long way towards making things super clear.
+- Add parts of the codebase where changes would be made. 
+- Assign the issue to yourself or someone else, or leave for another person to pick it up. 
+- Add appropriate labels and types. 
+- Add the issue to the project **DA Tech**.
+
+If the issue needs some precursor set up before someone can work on the issue (particularly for parents of sub issues) such as library installations and page or folder creations, then you must first set the issue as `Triage` until those appropriate changes are made and reviewed in a pull request. Otherwise, set the issue as `Ready for Work`. 
 
 ### Sub Issues
 
 For larger issues that can be split up into separate independent parts. For example a new parent page with multiple children components. You can create a parent issue, with multiple child issues. [See these slides](https://docs.google.com/presentation/d/1ToMum70-qDlaCv6m7X3HfGr3XjaX-UjyA36K4IElO5Y/edit?slide=id.g2dd259a195e_0_9#slide=id.g2dd259a195e_0_9) on how to create sub issues.
 
-## Reviewing Pull Requests
+# Reviewing Pull Requests
 
-When reviewing changes, try to first give praise for the work done. Leave a general summary of the changes needed to be made. Individual comments can be put to show specific instances or examples directly in the codebase. See [Conventional Comments](https://conventionalcomments.org/) for more information.
+When reviewing changes, first give praise for the work done. Leave a general summary of the changes needed to be made. Individual comments can be put to show specific instances or examples directly in the codebase. See [Conventional Comments](https://conventionalcomments.org/) for more information.
 
 A good comment will ideally have the following attributes:
 
@@ -179,8 +182,10 @@ A good comment will ideally have the following attributes:
 
 Labeling comments encourages collaboration and saves hours of undercommunication and misunderstandings.
 
-## Merging Branches
+# Merging Branches
 
-Use [`git rebase`](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase) to resolve any merge conflicts between branches.
+Use [`git rebase`](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase) to resolve any merge conflicts between branches. Once the incoming branch is merged into saga, it is safe to delete.
 
-## License
+<!-- ## License -->
+<!-- Check with Taylor -->
+
