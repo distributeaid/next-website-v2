@@ -152,18 +152,18 @@ A good commit message will ideally have the following attributes:
 
 Happy coding!!!
 
-
 ## Creating Issues
 
-On the [Issues page on Github](https://github.com/distributeaid/next-website-v2/issues), click the green `New Issue` button or this [New Issue Link](https://github.com/distributeaid/next-website-v2/issues/new). 
-- Add a descriptive title with an optional `[type tag]` such as [component] or [page]. In the description body summarize the issue. 
+On the [Issues page on Github](https://github.com/distributeaid/next-website-v2/issues), click the green `New Issue` button or this [New Issue Link](https://github.com/distributeaid/next-website-v2/issues/new).
+
+- Add a descriptive title with an optional `[type tag]` such as [component] or [page]. In the description body summarize the issue.
 - Add external links, such as to figma designs or external documentation, if applicable. If a figma design exists, be sure to add screenshots. Visual explanations go a long way towards making things super clear.
-- Add parts of the codebase where changes would be made. 
-- Assign the issue to yourself or someone else, or leave for another person to pick it up. 
-- Add appropriate labels and types. 
+- Add parts of the codebase where changes would be made.
+- Assign the issue to yourself or someone else, or leave for another person to pick it up.
+- Add appropriate labels and types.
 - Add the issue to the project **DA Tech**.
 
-If the issue needs some precursor set up before someone can work on the issue (particularly for parents of sub issues) such as library installations and page or folder creations, then you must first set the issue as `Triage` until those appropriate changes are made and reviewed in a pull request. Otherwise, set the issue as `Ready for Work`. 
+If the issue needs some precursor set up before someone can work on the issue (particularly for parents of sub issues) such as library installations and page or folder creations, then you must first set the issue as `Triage` until those appropriate changes are made and reviewed in a pull request. Otherwise, set the issue as `Ready for Work`.
 
 ### Sub Issues
 
@@ -188,4 +188,3 @@ Use [`git rebase`](https://www.atlassian.com/git/tutorials/rewriting-history/git
 
 <!-- ## License -->
 <!-- Check with Taylor -->
-
