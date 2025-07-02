@@ -21,7 +21,7 @@ const BreadCrumbs = ({ links }: LinkProps) => {
         return (
           <div key={index}>
             <SmartLink
-              className={`pb-2 text-[#1F2937] ${currentLink ? "border-b border-b-[#1F2937]" : ""}`}
+              className={`pb-2 text-[#1F2937] ${currentLink ? "border-b-2 border-b-[#1F2937]" : ""}`}
               href={url}
               target={target}
             >

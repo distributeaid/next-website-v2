@@ -1,7 +1,11 @@
-// import HeroSection from "@/components/open-source-explorers/HeroSection"; An example import. Remove if not needed.
+import HeroSection from "@/components/open-source-explorers/HeroSection";
 
 const Page = () => {
-  return <></>;
+  return (
+    <>
+      <HeroSection />
+    </>
+  );
 };
 
 export default Page;
