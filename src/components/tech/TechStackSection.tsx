@@ -31,7 +31,9 @@ export const TechStackSection = () => {
       size={{ initial: "1", sm: "2", md: "3", lg: "4" }}
       align="center"
     >
-      <Separator orientation="horizontal" className="w-full bg-navy-900" />
+      <Box width={"100%"} asChild>
+        <Separator color="blue" orientation="horizontal" />
+      </Box>
       <Grid gap="5" my="7" columns={{ initial: "1", md: "2" }}>
         <Flex gap="4" direction="column">
           <Heading
@@ -83,7 +85,9 @@ export const TechStackSection = () => {
           }}
         />
       </Grid>
-      <Separator orientation="horizontal" className="w-full bg-navy-900" />
+      <Box width={"100%"} asChild>
+        <Separator color="blue" orientation="horizontal" />
+      </Box>
     </Container>
   );
 };
