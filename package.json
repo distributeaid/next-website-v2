@@ -47,7 +47,7 @@
     "eslint-config-love": "120.0.0",
     "eslint-config-next": "15.3.4",
     "eslint-plugin-import": "2.32.0",
-    "eslint-plugin-n": "17.20.0",
+    "eslint-plugin-n": "17.21.0",
     "eslint-plugin-promise": "7.2.1",
     "eslint-plugin-react": "7.37.5",
     "jsdom": "26.1.0",
