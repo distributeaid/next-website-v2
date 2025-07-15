@@ -60,7 +60,7 @@
   },
   "packageManager": "yarn@4.9.2",
   "engines": {
-    "node": ">=20.0.0 <=22.17.0",
+    "node": ">=20.0.0 <=22.17.1",
     "npm": "please-use-yarn",
     "yarn": ">=4.4.0"
   }
