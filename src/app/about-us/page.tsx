@@ -14,7 +14,7 @@ const AboutUsPage: FC = () => {
       <SideBySide
         left={<AboutOurMissionVision title="Mission" />}
         right={<AboutOurMissionVision title="Vision" />}
-        bgColor="[#3e63dd]/[.05]"
+        bgClass="bg-[#f5f9ff]"
       />
       <Timeline />
     </main>
