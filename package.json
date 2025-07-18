@@ -41,7 +41,7 @@
     "@types/three": "0.178.1",
     "@typescript-eslint/eslint-plugin": "8.35.1",
     "@typescript-eslint/parser": "8.35.1",
-    "@vitejs/plugin-react": "4.6.0",
+    "@vitejs/plugin-react": "4.7.0",
     "autoprefixer": "10.4.21",
     "eslint": "9.31.0",
     "eslint-config-love": "120.0.0",
