@@ -53,7 +53,7 @@ const NavBar = () => {
                 justify={"center"}
                 gapX={"2"}
               >
-                {SOCIAL_LINKS.slice(0, 3).map((social) => (
+                {SOCIAL_LINKS.map((social) => (
                   <NavigationMenu.Item key={social.name}>
                     <NavigationMenu.Link href={social.link} target="_blank">
                       <Image
@@ -106,11 +106,14 @@ const NavBar = () => {
                         asChild
                       >
                         <NavigationMenu.Trigger>
-                          {title}{" "}
+                          <NavigationMenu.Link href={url}>
+                            {title}
+                          </NavigationMenu.Link>
                           <FaChevronDown className="ml-2 transition-transform duration-200 group-hover:rotate-180" />
                         </NavigationMenu.Trigger>
                       </Flex>
                       <Flex
+                        mt={"3"}
                         as="div"
                         asChild
                         position={"absolute"}
