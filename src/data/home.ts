@@ -25,7 +25,7 @@ export const activities = [
     region: "Europe & USA",
     image: covid19Response,
     description:
-      "Distribute Aid is actively working to prevent the spread of COVID-19 globally. We regularly send hygiene and PPE shipments to our European partners who continue to work to protect people in crowded refugee camps. Because COVID-19 affects everybody, our response grew as the virus spread. We now also collaborate with multiple grassroots networks in the US to support their response.",
+      "Distribute Aid is actively working to prevent the spread of COVID globally. We regularly send hygiene and PPE shipments to our European partners who continue to work to protect people in crowded refugee camps. Because COVID affects everybody, our response grew as the virus spread. We now also collaborate with multiple grassroots networks in the US to support their response.",
   },
   {
     title: "In-kind Donations",

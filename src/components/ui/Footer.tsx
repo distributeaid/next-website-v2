@@ -68,8 +68,8 @@ const Footer = () => {
             style={{ textAlign: "justify" }}
           >
             <Text>
-              Distribute aid delivers humanitarian aid to communities in need by
-              coordinating end-to-end shipments, we make it easy for donors to
+              Distribute Aid delivers humanitarian aid to communities in need by
+              coordinating end-to-end shipments. We make it easy for donors to
               connect with frontline aid organisations, understand the needs on
               the ground, and get their aid delivered.
             </Text>
