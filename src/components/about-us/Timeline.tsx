@@ -81,7 +81,7 @@ const data = [
   {
     period: "Winter 2021",
     description:
-      "Began running needs assessments (in a quarterly/seasonal format) for our partners. The largest collection of data on the grassroots response and care for refugees and migrants in Europe. Showed XX needs per month, and XX meals being prepared every XXX by volunteer organisers in their own communities.",
+      "Began running Needs Assessments (in a quarterly/seasonal format) for our partners, the largest collection of data on the grassroots response and care for refugees and migrants in Europe. The data showed 845,818 needs being met per month, and 245,972 meals being prepared every month by volunteer organisers in their own communities.",
     bgColor: colors.pink,
     imageSrc: "/images/about-us/21-014-AUT-GRC.png",
   },
@@ -95,14 +95,14 @@ const data = [
   {
     period: "Spring 2023",
     description:
-      "Received the Olof Palme grant in Sweden.Reached $25 million in aid delivered and $5 million in aid delivered to Ukraine.",
+      "Received the Olof Palme grant in Sweden. Reached $25 million in aid delivered and $5 million in aid delivered to Ukraine.",
     bgColor: colors.grey,
     imageSrc: "/images/about-us/21-033-GBR-BIH (CA 1).png",
   },
   {
     period: "Fall-Winter 2023",
     description:
-      "Started a Gaza-response coalition, bringing together 20 organisations, doctors, and companies wanting to support the people of Gaza. Begun a huge response of securing medicines, medical devices, food, hygiene, and clothes for people in Gaza, Jordan, and Lebanon.",
+      "Started a Gaza-response coalition, bringing together 20 organisations, doctors, and companies wanting to support the people of Gaza. Began a huge response of securing medicines, medical devices, food, hygiene, and clothes for people in Gaza, Jordan, and Lebanon.",
     bgColor: colors.pink,
     imageSrc:
       "/images/about-us/WhatsApp Image 2023-07-04 at 10.27.22 - Greece Field Visits - Media.png",
@@ -110,7 +110,7 @@ const data = [
   {
     period: "Spring 2024",
     description:
-      "Ran Open Source Explorers Programme ( An impactful initiative designed to engage Developers, Designers, and other contributors in collaborative work on Distribute Aid’s projects, providing a comprehensive introduction to open source.) ",
+      "Ran Open Source Explorers Programme, an impactful initiative designed to engage developers, designers, and other contributors in collaborative work on Distribute Aid’s tech projects, providing a comprehensive introduction to open source.",
     bgColor: colors.blue,
     imageSrc: "/images/about-us/image.png",
   },

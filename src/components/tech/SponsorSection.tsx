@@ -65,8 +65,7 @@ const SponsorSection = () => {
               Ultimately, our tech-based solutions allow workers from the entire
               global aid community to act faster and more efficiently. Funding
               also allows us to run more Open Source Explorers cohorts, which
-              benefits the OSS ecosystem at large. If you’re interested in
-              becoming a sponsor, please get in touch with us.
+              benefits the OSS ecosystem at large.
             </Text>
 
             <Text size={"4"}>
