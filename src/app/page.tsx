@@ -17,10 +17,15 @@ const Home = () => {
         <div className="flex pb-32 max-[1024px]:flex-col">
           <div className="w-[50%] text-3xl text-primary tracking-wide max-[1024px]:w-full max-[1024px]:text-2xl max-[768px]:text-[1.65rem]">
             <p>
-              Distribute Aid is a grassroots-to-grassroots humanitarian aid organization.
+              Distribute Aid is a grassroots-to-grassroots humanitarian aid
+              organization.
             </p>
             <p className="mt-10 max-[1024px]:mt-4">
-              Founded in 2019, we coordinate relief shipments and manage logistics for disaster response efforts around the world. Our open-source tools and a committed team of volunteers allow us to deliver more aid for less money, while also minimizing waste and emissions.
+              Founded in 2019, we coordinate relief shipments and manage
+              logistics for disaster response efforts around the world. Our
+              open-source tools and a committed team of volunteers allow us to
+              deliver more aid for less money, while also minimizing waste and
+              emissions.
             </p>
           </div>
           <div className="w-[50%] flex justify-between">
