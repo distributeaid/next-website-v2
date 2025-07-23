@@ -9,7 +9,6 @@ import Image from "next/image";
 const MobileNavBar = () => {
   return (
     <Flex
-      style={{ backgroundColor: "var(--blue-9)" }}
       display={{ initial: "flex", md: "none" }}
       direction={"column"}
       justify={"center"}
@@ -20,7 +19,7 @@ const MobileNavBar = () => {
       height={"100vh"}
       p={"6"}
       gapY={"8"}
-      className="border z-30"
+      className="bg-navy-800 border z-30"
       align={"start"}
     >
       {/* Accordion - Ensuring only one section is open */}
