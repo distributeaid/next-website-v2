@@ -13,7 +13,12 @@ const data = {
 export const AboutOurMissionVision: FC<Props> = ({ title }) => (
   <Box>
     <Box pb="4" asChild>
-      <Heading as="h3" size="8" align="center" weight="bold" className="text-navy-800">
+      <Heading
+        as="h3"
+        size={{ initial: "6", sm: "7" }}
+        weight="bold"
+        className="text-navy-800 text-center lg:text-left"
+      >
         Our {title}
       </Heading>
     </Box>
