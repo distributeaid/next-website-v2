@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { Container, Flex, Separator, Text } from "@radix-ui/themes";
 import Image from "next/image";
 import { PageTitle } from "@/components/resources/assort/PageTitle";
@@ -43,7 +44,7 @@ const page = () => {
           {columns &&
             columns.map((col, index) => {
               return (
-                <>
+                <Fragment key={index}>
                   <SortingControl
                     title={col.title}
                     description={col.description}
@@ -51,17 +52,17 @@ const page = () => {
                   />
                   {columns.length > 0 && index === 0 && (
                     <Separator
-                      orientation="vertical"
-                      className="h-auto self-stretch hidden md:block"
+                      orientation={{ initial: "horizontal", md: "vertical" }}
+                      className="max-lg:w-auto lg:h-auto self-stretch"
                     />
                   )}
-                </>
+                </Fragment>
               );
             })}
         </Flex>
         <Separator
           orientation="horizontal"
-          className="w-auto mx-16 my-3 lg:block hidden"
+          className="w-auto my-3"
         />
         <Flex
           gap="3"
