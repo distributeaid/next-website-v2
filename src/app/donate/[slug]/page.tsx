@@ -5,7 +5,7 @@ import FUND_RAISERS from "@/data/donate.json";
 import FundHero from "@/components/donate/fund/FundHero";
 import DoneColumns from "@/components/donate/fund/DoneColumns";
 import ImageGallery from "@/components/donate/fund/ImageGallery";
-import YouDoCTA from "@/components/donate/fund/YouDoCTA";
+import ImageTextCTA from "@/components/cta/ImageTextCTA";
 import DonationCTA from "@/components/donate/fund/DonationCTA";
 
 export async function generateStaticParams() {
@@ -28,7 +28,13 @@ const DonateDetails = async ({ params }: Route) => {
       <FundHero fund={route} />
       <DoneColumns fund={route} />
       <ImageGallery fund={route} />
-      <YouDoCTA fund={route} />
+      <ImageTextCTA
+        image={route.do_CTA_image}
+        text={route.do_CTA_text}
+        link={route.donate_link}
+        showDonateIcons={true}
+        buttonClasses="bg-navy-600 hover:bg-navy-500"
+      />
       <DonationCTA />
     </>
   );
