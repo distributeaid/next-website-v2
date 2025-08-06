@@ -11,3 +11,11 @@
     transform: translate(-18%, -35%);
   }
 }
+
+.prose > p {
+  @apply pb-3;
+}
+
+.prose > p > a {
+  @apply underline;
+}
