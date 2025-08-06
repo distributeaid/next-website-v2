@@ -38,7 +38,7 @@ const page = () => {
         <Flex
           gap={{ md: "124px", initial: "6" }}
           align="center"
-          direction={{ md: "row", initial: "column" }}
+          direction={{ sm: "row", initial: "column" }}
           justify="between"
         >
           {columns &&
@@ -52,18 +52,15 @@ const page = () => {
                   />
                   {columns.length > 0 && index === 0 && (
                     <Separator
-                      orientation={{ initial: "horizontal", md: "vertical" }}
-                      className="max-lg:w-auto lg:h-auto self-stretch"
+                      orientation={{ initial: "horizontal", sm: "vertical" }}
+                      className="max-md:w-auto md:h-auto self-stretch"
                     />
                   )}
                 </Fragment>
               );
             })}
         </Flex>
-        <Separator
-          orientation="horizontal"
-          className="w-auto my-3"
-        />
+        <Separator orientation="horizontal" className="w-auto my-3" />
         <Flex
           gap="3"
           className="text-navy-800"
