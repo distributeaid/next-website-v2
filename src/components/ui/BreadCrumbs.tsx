@@ -21,14 +21,14 @@ const BreadCrumbs = ({ links }: LinkProps) => {
         return (
           <div key={index}>
             <SmartLink
-              className={`pb-2 text-[#1F2937] ${currentLink ? "border-b-2 border-b-[#1F2937]" : ""}`}
+              className={`pb-2 text-gray-800 ${currentLink ? "border-b-2 border-b-gray-800" : ""}`}
               href={url}
               target={target}
             >
               {title}
             </SmartLink>
             {index !== links.length - 1 && (
-              <Text as="span" className="text-[#1F2937] pl-3">
+              <Text as="span" className="text-gray-800 pl-3">
                 {">"}
               </Text>
             )}
