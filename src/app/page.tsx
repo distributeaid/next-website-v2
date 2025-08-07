@@ -1,4 +1,4 @@
-import { activities, socials } from "../data/home";
+import { activities } from "../data/home";
 import { lato } from "../components/ui/fonts";
 import Image from "next/image";
 import CounterStat from "../components/ui/CounterStat";
@@ -27,24 +27,6 @@ const Home = () => {
           </div>
           <div className="w-[50%] flex justify-between">
             {/* <div>TODO: Implement new Earth visualization</div> */}
-            <ul className="flex flex-col gap-4 max-[1024px]:hidden">
-              {socials.map((social, index) => (
-                <li key={index}>
-                  <a
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener"
-                    className="text-primary"
-                  >
-                    <Image
-                      src={social.icon}
-                      alt={social.name}
-                      className="size-8"
-                    />
-                  </a>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
         <h2 className="text-4xl font-bold mb-12">How we help</h2>
