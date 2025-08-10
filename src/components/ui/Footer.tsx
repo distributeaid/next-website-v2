@@ -94,7 +94,7 @@ const Footer = () => {
                   {column.links.map((link) => (
                     <Link
                       key={link.name}
-                      href="{link.link}"
+                      href={link.link}
                       className="hover:underline"
                     >
                       {link.name}
