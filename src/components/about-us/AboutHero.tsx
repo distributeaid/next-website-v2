@@ -79,7 +79,7 @@ export const AboutHero: FC = () => (
     <Section>
       <Box
         px={{ initial: "7", sm: "8"}}
-        pt={{ initial: "2", sm: "9", md: "120px", lg: "140px" }}
+        pt={{ initial: "2", xs: "7", sm: "9", md: "120px", lg: "140px" }}
         className="lg:px-[240px]"
       >
         <Heading
