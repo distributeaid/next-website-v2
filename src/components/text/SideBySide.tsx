@@ -15,24 +15,28 @@ export const SideBySide: React.FC<SideBySideProps> = ({
   return (
     <Section
       maxWidth="7xl"
-      px={{ initial: "4", md: "9" }}
+      px={{ initial: "7", sm: "8", md: "9" }}
       className={bgClass}
     >
       <Flex
-        direction={{ initial: "column", sm: "column", md: "row" }}
-        align="center"
+        direction={{ initial: "column", md: "row" }}
+        align={{ initial: "center", md: "start" }}
         justify="center"
-        gap={{ initial: "4" }}
+        gap= "8"
       >
-        <Box width={{ initial: "100%", md: "1/2" }}>
+        <Box flexBasis={{ md: "50%" }} flexGrow="1">
           {left}
         </Box>
-        <Separator
-          orientation={{ initial: "horizontal", md: "vertical" }}
-          size="4"
-          className="w-full sm:my-4 md:w-px md:self-stretch md:h-auto md:mx-4"
-        />
-        <Box width={{ initial: "100%", md: "1/2" }}>
+        <Box
+          mx={{ initial: "0", md: "4" }}
+          className="self-stretch"
+        >
+          <Separator
+            orientation={{ initial: "horizontal", md: "vertical" }}
+            size="4"
+          />
+        </Box>
+        <Box flexBasis={{ md: "50%" }} flexGrow="1">
           {right}
         </Box>
       </Flex>
