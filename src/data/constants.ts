@@ -315,47 +315,47 @@ export const FOOTER_COLUMNS = [
         link: "/",
       },
     ],
-  },
+  }
 
-  {
-    title: "Needs",
-    links: [
-      {
-        name: "Overview",
-        link: "/",
-      },
-      {
-        name: "Data Explorer",
-        link: "/",
-      },
-      {
-        name: "Methodology",
-        link: "/",
-      },
-    ],
-  },
+  // {
+  //   title: "Needs",
+  //   links: [
+  //     {
+  //       name: "Overview",
+  //       link: "/",
+  //     },
+  //     {
+  //       name: "Data Explorer",
+  //       link: "/",
+  //     },
+  //     {
+  //       name: "Methodology",
+  //       link: "/",
+  //     },
+  //   ],
+  // },
 
-  {
-    title: "Regions",
-    links: [
-      {
-        name: "Overview",
-        link: "/",
-      },
-      {
-        name: "USA",
-        link: "/",
-      },
-      {
-        name: "Europe",
-        link: "/",
-      },
-      {
-        name: "Middle East",
-        link: "/",
-      },
-    ],
-  },
+  // {
+  //   title: "Regions",
+  //   links: [
+  //     {
+  //       name: "Overview",
+  //       link: "/",
+  //     },
+  //     {
+  //       name: "USA",
+  //       link: "/",
+  //     },
+  //     {
+  //       name: "Europe",
+  //       link: "/",
+  //     },
+  //     {
+  //       name: "Middle East",
+  //       link: "/",
+  //     },
+  //   ],
+  // },
 ];
 
 export enum DIRECTION {
