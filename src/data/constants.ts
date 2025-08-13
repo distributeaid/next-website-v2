@@ -315,7 +315,7 @@ export const FOOTER_COLUMNS = [
         link: "/",
       },
     ],
-  }
+  },
 
   // {
   //   title: "Needs",
