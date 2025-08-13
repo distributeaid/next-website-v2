@@ -22,7 +22,11 @@ export const AboutOurMissionVision: FC<Props> = ({ title }) => (
         Our {title}
       </Heading>
     </Box>
-    <Text as="p" className="leading-[35px] whitespace-pre-line text-center lg:text-left" size="4">
+    <Text
+      as="p"
+      size={{ initial: "3", md: "4" }}
+      className="leading-6 whitespace-pre-line text-center lg:text-left"
+    >
       {title === "Mission" ? data.aboutOurMission : data.aboutOurVision}
     </Text>
   </Box>
