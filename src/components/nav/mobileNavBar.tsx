@@ -43,9 +43,9 @@ const MobileNavBar = () => {
                   <Accordion.Content className="w-full">
                     <NavigationMenu.Sub>
                       <NavigationMenu.List className="w-full border-y border-thin">
-                        {subMenu?.map(({ id, title, url }) => (
+                        {subMenu?.map(({ title, url }) => (
                           <Flex
-                            key={id}
+                            key={title}
                             as="div"
                             p={"1"}
                             width={"100%"}

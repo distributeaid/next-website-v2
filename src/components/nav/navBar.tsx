@@ -128,9 +128,9 @@ const NavBar = () => {
                         <NavigationMenu.Content>
                           <NavigationMenu.Sub>
                             <NavigationMenu.List>
-                              {subMenu?.map(({ id, title, url }) => (
+                              {subMenu?.map(({title, url }) => (
                                 <Flex
-                                  key={id}
+                                  key={title}
                                   width={"100%"}
                                   style={{ color: "black" }}
                                   p={"1"}
