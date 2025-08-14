@@ -10,16 +10,16 @@ export const links = [
     title: "About Us",
     url: "/about-us",
     isSubMenu: true,
-    subMenu:[
+    subMenu: [
       {
         title: "Overview",
-        url:"/about-us"
+        url: "/about-us",
       },
       {
         title: "Contact Us",
         url: "/contact-us",
       },
-    ]
+    ],
   },
   // {
   //   id: 3,
@@ -86,13 +86,12 @@ export const links = [
     subMenu: [
       {
         title: "Overview",
-        url:"/tech"
+        url: "/tech",
       },
       {
         title: "Open Source Explorers",
         url: "/tech/open-source-explorers",
       },
-      
     ],
   },
   {

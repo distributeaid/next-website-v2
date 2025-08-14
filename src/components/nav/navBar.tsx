@@ -129,7 +129,7 @@ const NavBar = () => {
                         <NavigationMenu.Content>
                           <NavigationMenu.Sub>
                             <NavigationMenu.List>
-                              {subMenu?.map(({title, url }) => (
+                              {subMenu?.map(({ title, url }) => (
                                 <Flex
                                   key={title}
                                   width={"100%"}
