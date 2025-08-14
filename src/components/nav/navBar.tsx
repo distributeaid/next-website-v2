@@ -83,6 +83,7 @@ const NavBar = () => {
               justify={"between"}
               align={"center"}
               mx={"4"}
+              mr={"100px"}
               display={{ initial: "none", md: "flex" }}
             >
               {links.map(({ id, title, url, isSubMenu, subMenu }) => (
