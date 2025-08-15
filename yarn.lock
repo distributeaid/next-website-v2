@@ -4466,20 +4466,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-love@npm:120.0.0":
-  version: 120.0.0
-  resolution: "eslint-config-love@npm:120.0.0"
+"eslint-config-love@npm:121.0.0":
+  version: 121.0.0
+  resolution: "eslint-config-love@npm:121.0.0"
   dependencies:
     "@typescript-eslint/utils": "npm:^8.32.0"
     eslint-plugin-eslint-comments: "npm:^3.2.0"
-    eslint-plugin-import: "npm:^2.31.0"
+    eslint-plugin-import: "npm:^2.32.0"
     eslint-plugin-n: "npm:^17.0.0"
     eslint-plugin-promise: "npm:^7.0.0"
     typescript-eslint: "npm:^8.32.0"
   peerDependencies:
     eslint: ^9.12.0
     typescript: "*"
-  checksum: 10c0/7e19ba824e3fb76ca1cd850acda63c887e3474e30fb4167601611339169691147882062402280681df098924fb6ed0b04d4cc8513c6ef65d2222d9aedd091b29
+  checksum: 10c0/2a39832ebbfbe78809b61824c071611a4d96a9a454a1770bd84dc2df05aece2f22c5fb666c7a5b7c2ed4e31ada0a83cab4f56c6841f843e14e59a5c90df7c497
   languageName: node
   linkType: hard
 
@@ -4579,7 +4579,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-import@npm:2.32.0, eslint-plugin-import@npm:^2.31.0":
+"eslint-plugin-import@npm:2.32.0, eslint-plugin-import@npm:^2.32.0":
   version: 2.32.0
   resolution: "eslint-plugin-import@npm:2.32.0"
   dependencies:
@@ -6630,7 +6630,7 @@ __metadata:
     autoprefixer: "npm:10.4.21"
     classnames: "npm:^2.5.1"
     eslint: "npm:9.33.0"
-    eslint-config-love: "npm:120.0.0"
+    eslint-config-love: "npm:121.0.0"
     eslint-config-next: "npm:15.4.6"
     eslint-plugin-import: "npm:2.32.0"
     eslint-plugin-n: "npm:17.21.3"
