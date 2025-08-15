@@ -1,5 +1,4 @@
 import { Grid, Heading, Box, Container, Text } from "@radix-ui/themes";
-import SmartLink from "../link/SmartLink";
 import OSEColumn from "./OSEColumn";
 
 const OSE3upText = () => {
@@ -37,17 +36,17 @@ const OSE3upText = () => {
           circleText={"Week \n\n 1–4"}
           circleColor="rgba(67, 98, 166, 1)"
           circleTextColor="#F9FAFB"
-          title="Participants are introduced to the OSS ecosystem, its etiquette and infrastructure in sessions with Distribute Aid maintainers and external guest speakers."
+          content="Participants are introduced to the OSS ecosystem, its etiquette and infrastructure in sessions with Distribute Aid maintainers and external guest speakers."
         />
         <OSEColumn
           circleText={"Week \n\n 5–8"}
           circleColor="rgba(223, 205, 232, 1)"
-          title="Participants integrate into the existing contributor team with guidance from mentors and attend their first monthly sprint meeting."
+          content="Participants integrate into the existing contributor team with guidance from mentors and attend their first monthly sprint meeting."
         />
         <OSEColumn
           circleText={"Week \n\n 9–12"}
           circleColor="rgba(90, 197, 151, 1)"
-          title="Participants become more self-sufficient, switching from mentor support to peer-to-peer support, picking up issues and collaborating in tech hangs."
+          content="Participants become more self-sufficient, switching from mentor support to peer-to-peer support, picking up issues and collaborating in tech hangs."
         />
       </Grid>
       <Box mb="20px">
