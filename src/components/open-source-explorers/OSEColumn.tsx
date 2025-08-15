@@ -3,14 +3,14 @@ import OSECircle from "./OSECircle";
 import { Box, Text } from "@radix-ui/themes";
 
 type Props = {
-  title: string;
+  content: string;
   circleText: string;
   circleColor: string;
   circleTextColor?: string;
 };
 
 const OSEColumn: FC<Props> = ({
-  title,
+  content,
   circleText,
   circleColor,
   circleTextColor,
@@ -22,9 +22,9 @@ const OSEColumn: FC<Props> = ({
         color={circleColor}
         textColor={circleTextColor}
       />
-      {title && (
+      {content && (
         <Text align="center" as="p" mt="2">
-          {title}
+          {content}
         </Text>
       )}
     </Box>
