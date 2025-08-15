@@ -4,6 +4,7 @@ import OpenSourceExplorersSection from "@/components/tech/OpenSourceExporersSect
 import { Box, Flex, Section } from "@radix-ui/themes";
 import { TechStackSection } from "@/components/tech/TechStackSection";
 import ImageTextCTA from "@/components/cta/ImageTextCTA";
+import { WorkingSection } from "@/components/tech/WorkingSection";
 
 const ctaText =
   "**We’re usually looking to onboard new volunteers, especially experienced backend and frontend developers.** \n\n You don’t need experience with our specific stack, as long as you’re self-motivated and happy to expand your skills. It would be best if you have at least some experience contributing to open-source software. If you don’t yet, check out our [Open Source Explorers program](/tech/open-source-explorers) instead. Our team meets once a month for a sprint meeting to coordinate. We also host two casual weekly tech hangs on Zoom to give folks a chance to collaborate. \n\n If you’re interested in joining our team, please tell us a bit about yourself, why you want to join Distribute Aid and your skills. A link to your GitHub profile would also be helpful!";
@@ -16,7 +17,6 @@ const page = () => {
       direction="column"
       align="center"
       justify="start"
-      gap={{ initial: "4", lg: "6", xl: "9" }}
     >
       <Box
         width="100%"
@@ -27,6 +27,9 @@ const page = () => {
       />
       <Section size={{ initial: "1", md: "2" }}>
         <HeroSection />
+      </Section>
+      <Section size={{ initial: "1", md: "2" }}>
+        <WorkingSection />
       </Section>
       <Section size={{ initial: "1", md: "2" }}>
         <ImageTextCTA

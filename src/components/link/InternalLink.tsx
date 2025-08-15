@@ -8,8 +8,8 @@ type Props = {
 };
 
 const InternalLink: FC<Props> = ({ children, to, className }) => (
-  <Link href={to} legacyBehavior>
-    <a className={className}>{children}</a>
+  <Link href={to} className={className}>
+    {children}
   </Link>
 );
 
