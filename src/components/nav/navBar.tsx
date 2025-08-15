@@ -118,32 +118,32 @@ const NavBar = () => {
                         as="div"
                         asChild
                         position={"absolute"}
+                        maxWidth={"140px"}
                         style={{
                           background: "white",
                           zIndex: "10",
                           borderWidth: "1px",
                           borderRadius: "0.375rem",
                         }}
-                        className="shadow-md "
+                        className="shadow-md"
                       >
                         <NavigationMenu.Content>
                           <NavigationMenu.Sub>
                             <NavigationMenu.List>
                               {subMenu?.map(({ title, url }) => (
-                                <Flex
-                                  key={title}
-                                  width={"100%"}
-                                  style={{ color: "black" }}
-                                  p={"1"}
-                                  className="hover:bg-navy-200"
-                                  asChild
-                                >
-                                  <NavigationMenu.Item>
-                                    <NavigationMenu.Link href={url}>
+                                <NavigationMenu.Item key={title}>
+                                  <NavigationMenu.Link href={url}>
+                                    <Flex
+                                      width="100%"
+                                      p="1"
+                                      px="4"
+                                      className="hover:bg-navy-200"
+                                      style={{ color: "black" }}
+                                    >
                                       {title}
-                                    </NavigationMenu.Link>
-                                  </NavigationMenu.Item>
-                                </Flex>
+                                    </Flex>
+                                  </NavigationMenu.Link>
+                                </NavigationMenu.Item>
                               ))}
                             </NavigationMenu.List>
                             <NavigationMenu.Viewport />
