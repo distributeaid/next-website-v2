@@ -6,7 +6,7 @@ interface WorkingBoxProps {
   title: string;
   para: string;
   link: string;
-  tech: string;
+  tech: Array<string>;
 }
 
 const colors: { [key: number]: string } = {
@@ -18,7 +18,6 @@ const colors: { [key: number]: string } = {
 };
 
 export const WorkingBox = ({ title, para, link, tech }: WorkingBoxProps) => {
-  const data = tech.split(",");
   return (
     <Container
       maxWidth={{ initial: "auto", md: "610px" }}
@@ -45,7 +44,7 @@ export const WorkingBox = ({ title, para, link, tech }: WorkingBoxProps) => {
           </SmartLink>
         </Text>
         <Box>
-          {data.map((item, index) => {
+          {tech.map((item, index) => {
             return (
               <Badge
                 key={index}
