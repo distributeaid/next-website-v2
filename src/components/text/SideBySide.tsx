@@ -14,7 +14,6 @@ export const SideBySide: React.FC<SideBySideProps> = ({
 }) => {
   return (
     <Section
-      maxWidth="7xl"
       px={{ initial: "7", sm: "8", md: "9" }}
       className={bgClass}
     >
