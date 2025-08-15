@@ -1,7 +1,9 @@
+import React from "react";
+
 export function getOxfordCommaSeparator(
   index: number,
   array: any[],
-): JSX.Element {
+): React.JSX.Element {
   if (index === 0) {
     return <></>;
   } else if (index === 1 && array.length == 2) {
@@ -13,7 +15,7 @@ export function getOxfordCommaSeparator(
   }
 }
 
-export function getCommaSeparator(index: number, array: any[]): JSX.Element {
+export function getCommaSeparator(index: number, array: any[]): React.JSX.Element {
   if (index === 0) {
     return <></>;
   } else {

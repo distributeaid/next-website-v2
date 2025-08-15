@@ -51,7 +51,7 @@ const Regions = () => {
   );
 };
 
-const createSubregionLinks = (region: Region): JSX.Element[] => {
+const createSubregionLinks = (region: Region): React.JSX.Element[] => {
   return region.subregions.map((subregion, index, array) => {
     const seperator = getCommaSeparator(index, array);
     return (
@@ -68,7 +68,7 @@ const createSubregionLinks = (region: Region): JSX.Element[] => {
 const createRegionsCardBody = (
   region: Region,
   currentNeed?: number,
-): JSX.Element => {
+): React.JSX.Element => {
   return (
     <>
       {region.population?.ngoBeneficiaries && (
