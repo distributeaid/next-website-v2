@@ -5,22 +5,22 @@ import { Box, Text } from "@radix-ui/themes";
 type Props = {
   content: string;
   circleText: string;
-  circleColor: string;
-  circleTextColor?: string;
+  circleColorClass: string;
+  circleTextColorClass?: string;
 };
 
 const OSEColumn: FC<Props> = ({
   content,
   circleText,
-  circleColor,
-  circleTextColor,
+  circleColorClass,
+  circleTextColorClass,
 }) => {
   return (
     <Box mb={{ initial: "4", sm: "8" }}>
       <OSECircle
         text={circleText}
-        color={circleColor}
-        textColor={circleTextColor}
+        colorClass={circleColorClass}
+        textColorClass={circleTextColorClass}
       />
       {content && (
         <Text align="center" as="p" mt="2">

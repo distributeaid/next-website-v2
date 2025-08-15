@@ -34,18 +34,18 @@ const OSE3upText = () => {
       >
         <OSEColumn
           circleText={"Week \n\n 1–4"}
-          circleColor="rgba(67, 98, 166, 1)"
-          circleTextColor="#F9FAFB"
+          circleColorClass="bg-circle-blue"
+          circleTextColorClass="text-circle-white"
           content="Participants are introduced to the OSS ecosystem, its etiquette and infrastructure in sessions with Distribute Aid maintainers and external guest speakers."
         />
         <OSEColumn
           circleText={"Week \n\n 5–8"}
-          circleColor="rgba(223, 205, 232, 1)"
+          circleColorClass="bg-circle-pink"
           content="Participants integrate into the existing contributor team with guidance from mentors and attend their first monthly sprint meeting."
         />
         <OSEColumn
           circleText={"Week \n\n 9–12"}
-          circleColor="rgba(90, 197, 151, 1)"
+          circleColorClass="bg-circle-green"
           content="Participants become more self-sufficient, switching from mentor support to peer-to-peer support, picking up issues and collaborating in tech hangs."
         />
       </Grid>
