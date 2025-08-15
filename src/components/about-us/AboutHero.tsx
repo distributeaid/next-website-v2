@@ -13,8 +13,8 @@ export const AboutHero: FC = () => (
     >
       <Box
         pt={{ initial: "1", md: "4" }}
-        pb={{ initial: "1", md: "6", lg: "9" }}
-        px={{ initial: "6", sm: "6", md: "9", lg: "200px" }}
+        pb={{ initial: "1", md: "8" }}
+        px={{ initial: "6", md: "9", lg: "180px"}}
       >
         <Heading
           as="h1"
@@ -36,58 +36,57 @@ export const AboutHero: FC = () => (
           and empowering people to uphold human dignity.
         </Text>
       </Box>
-    <Flex
-      position="absolute"
-      bottom="0"
-      width="100%"
-      gap={{ initial: "2", sm: "4" }}
-      className="translate-y-[40%] sm:translate-y-1/2 justify-center"
-      wrap="nowrap"
-    >
-      <Box className="rounded-2xl overflow-hidden flex-shrink-0 w-[100px] sm:w-[160px] md:w-[200px] lg:w-[320px]">
-        <Image
-          src={"/images/about-us/hero-1.png"}
-          alt="Hero Image"
-          width={0}
-          height={0}
-          sizes="(min-width: 1024px) 600px, (min-width: 768px) 200px, (min-width: 640px) 160px, 120px"
-          style={{ width: "100%", height: "auto", objectFit: "cover" }}
-        />
-      </Box>
-      <Box className="rounded-2xl overflow-hidden flex-shrink-0 w-[100px] sm:w-[160px] md:w-[200px] lg:w-[320px]">
-        <Image
-          src={"/images/about-us/hero-2.png"}
-          alt="Hero Image"
-          width={0}
-          height={0}
-          sizes="(min-width: 1024px) 600px, (min-width: 768px) 200px, (min-width: 640px) 160px, 120px"
-          style={{ width: "100%", height: "auto", objectFit: "cover" }}
-        />
-      </Box>
-      <Box className="rounded-2xl overflow-hidden flex-shrink-0 w-[100px] sm:w-[160px] md:w-[200px] lg:w-[320px]">
-        <Image
-          src={"/images/about-us/hero-3.png"}
-          alt="Hero Image"
-          width={0}
-          height={0}
-          sizes="(min-width: 1024px) 600px, (min-width: 768px) 200px, (min-width: 640px) 160px, 120px"
-          style={{ width: "100%", height: "auto", objectFit: "cover" }}
-        />
-      </Box>
-    </Flex>
+      <Flex
+        position="absolute"
+        bottom="0"
+        width="100%"
+        gap={{ initial: "2", sm: "4" }}
+        className="translate-y-[40%] sm:translate-y-1/2 justify-center"
+        wrap="nowrap"
+      >
+        <Box className="rounded-2xl overflow-hidden flex-shrink-0 w-[100px] sm:w-[160px] md:w-[200px] lg:w-[280px]">
+          <Image
+            src={"/images/about-us/hero-1.png"}
+            alt="Hero Image"
+            width={0}
+            height={0}
+            sizes="(min-width: 1024px) 600px, (min-width: 768px) 200px, (min-width: 640px) 160px, 120px"
+            style={{ width: "100%", height: "auto", objectFit: "cover" }}
+          />
+        </Box>
+        <Box className="rounded-2xl overflow-hidden flex-shrink-0 w-[100px] sm:w-[160px] md:w-[200px] lg:w-[280px]">
+          <Image
+            src={"/images/about-us/hero-2.png"}
+            alt="Hero Image"
+            width={0}
+            height={0}
+            sizes="(min-width: 1024px) 600px, (min-width: 768px) 200px, (min-width: 640px) 160px, 120px"
+            style={{ width: "100%", height: "auto", objectFit: "cover" }}
+          />
+        </Box>
+        <Box className="rounded-2xl overflow-hidden flex-shrink-0 w-[100px] sm:w-[160px] md:w-[200px] lg:w-[280px]">
+          <Image
+            src={"/images/about-us/hero-3.png"}
+            alt="Hero Image"
+            width={0}
+            height={0}
+            sizes="(min-width: 1024px) 600px, (min-width: 768px) 200px, (min-width: 640px) 160px, 120px"
+            style={{ width: "100%", height: "auto", objectFit: "cover" }}
+          />
+        </Box>
+      </Flex>
     </Section>
     <Section>
       <Box
-        px={{ initial: "7", sm: "8"}}
-        pt={{ initial: "2", xs: "7", sm: "9", md: "120px", lg: "140px" }}
-        className="lg:px-[240px]"
+        px={{ initial: "7", sm: "140px", md: "160px" }}
+        pt={{ initial: "2", sm: "80px", md: "120px" }}
       >
         <Heading
           as="h1"
           size={{ initial: "7", sm: "8" }}
           weight="bold"
           align="center"
-          className="text-navy-900 lg:text-[48px] lg:leading-tight"
+          className="text-navy-900 lg:leading-tight"
         >
           Support us today, so communities are prepared for tomorrow.
         </Heading>
