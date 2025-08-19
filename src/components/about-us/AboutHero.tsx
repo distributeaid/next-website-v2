@@ -14,7 +14,7 @@ export const AboutHero: FC = () => (
       <Box
         pt={{ initial: "1", md: "4" }}
         pb={{ initial: "1", md: "8" }}
-        px={{ initial: "6", md: "9", lg: "180px"}}
+        px={{ initial: "6", md: "9", lg: "180px" }}
       >
         <Heading
           as="h1"
