@@ -28,6 +28,7 @@ const HeroSection = () => {
           >
             <Image
               fill
+              style={{ objectFit: "contain" }}
               src="/images/donate/european-refugee-relief-hero-tinted.png"
               alt="european-refugee-relief-hero-tinted"
             />
