@@ -145,11 +145,11 @@ export const Timeline: React.FC = () => {
                 <Box
                   asChild
                   position="absolute"
-                  top="5"
                   left={{ initial: "40px", sm: "50%" }}
                   width="2px"
+                  className="top-6 md:top-32"
                 >
-                  {/* top=5 (24px) accounts for both the top & bottom timeline markers
+                  {/* top-6 (24px) accounts for both the top & bottom timeline markers
                       being moved down via their top=3 (12px each)
                   */}
                   <Separator
