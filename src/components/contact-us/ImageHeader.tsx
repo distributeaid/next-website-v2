@@ -7,9 +7,6 @@ interface ImageHeaderProps {
 
 const ImageHeader = (props: ImageHeaderProps) => {
   const { heading, imageUrl } = props;
-  if (!imageUrl && !heading) {
-    return <></>;
-  }
   return (
     <>
       <Flex align={"center"} gap={"3"}>
@@ -17,7 +14,12 @@ const ImageHeader = (props: ImageHeaderProps) => {
           width={{ initial: "60px", md: "80px" }}
           height={{ initial: "60px", md: "80px" }}
         >
-          <Image src={imageUrl} alt="graphic img" width={80} height={80} />
+          <Image
+            src={imageUrl}
+            alt={`${heading} graphic`}
+            width={80}
+            height={80}
+          />
         </Box>
         <Heading
           as="h2"

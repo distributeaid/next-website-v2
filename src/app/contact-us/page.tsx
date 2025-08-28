@@ -3,6 +3,7 @@ import GotAidSection from "@/components/contact-us/GotAidSection";
 import ImageHeader from "@/components/contact-us/ImageHeader";
 import SupportUsSection from "@/components/contact-us/SupportUsSection";
 import VolunteerSection from "@/components/contact-us/VolunteerSection";
+import { Section } from "@radix-ui/themes";
 const page = () => {
   return (
     <>
@@ -11,10 +12,18 @@ const page = () => {
         imageUrl="/images/contact-us/gift-graphic.png"
         heading="Support Us"
       /> */}
-      <ContactForm />
-      <GotAidSection />
-      <SupportUsSection />
-      <VolunteerSection />
+      <Section>
+        <ContactForm />
+      </Section>
+      <Section>
+        <GotAidSection />
+      </Section>
+      <Section>
+        <SupportUsSection />
+      </Section>
+      <Section>
+        <VolunteerSection />
+      </Section>
     </>
   );
 };
