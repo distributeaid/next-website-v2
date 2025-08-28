@@ -1,10 +1,10 @@
 import { Box, Flex, Separator, Table, Text } from "@radix-ui/themes";
 
 const data = [
-  "How to quality check donated items meant for distribution;",
-  "How to sort donations into standard categories;",
-  "How to size clothing donations with a printable ASSORT sizing chart;",
-  "How to box and label the sorted donations and ready them for shipment.",
+  "How to quality check donated items meant for distribution",
+  "How to sort donations into standard categories",
+  "How to size clothing donations with a printable ASSORT sizing chart",
+  "How to box and label the sorted donations and ready them for shipment",
 ];
 
 export const Guide = () => {
