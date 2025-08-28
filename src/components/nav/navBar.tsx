@@ -35,11 +35,10 @@ const NavBar = () => {
             justify={"between"}
             align={"center"}
           >
-            {/* left side about 40% width */}
             <Flex
-              width={{ initial: "100%", md: "40%" }}
               align={"center"}
               mx={"4"}
+              ml={{ initial: "3", lg: "100px" }}
               justify={{ initial: "start", md: "center" }}
               gap={"6"}
             >
@@ -79,13 +78,11 @@ const NavBar = () => {
                 </NavigationMenu.Item>
               </Box>
             </Flex>
-
-            {/* Page Links about 60% width*/}
+            {/* page links */}
             <Flex
-              width={"60%"}
-              justify={"between"}
+              gapX={"40px"}
+              justify={"end"}
               align={"center"}
-              mx={"4"}
               mr={"100px"}
               display={{ initial: "none", md: "flex" }}
             >
