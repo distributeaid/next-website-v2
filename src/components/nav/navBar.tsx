@@ -11,6 +11,7 @@ import Image from "next/image";
 import cx from "classnames";
 import MobileNavBar from "./mobileNavBar";
 import { links } from "@/data/navBarLinks";
+
 const NavBar = () => {
   const [nav, setNav] = useState(false);
 
@@ -24,6 +25,8 @@ const NavBar = () => {
             style={{
               color: "white",
               zIndex: "50",
+              borderBottom: "2px solid ",
+              borderColor: "var(--green-9)",
             }}
             className="bg-navy-800"
             position={"fixed"}
