@@ -65,6 +65,7 @@ const Footer = () => {
       width="100%"
       px={{ md: "9", sm: "8", initial: "6" }}
       py={{ md: "8", sm: "8", initial: "6" }}
+      pt={{ md: "6" }}
     >
       <Flex
         width="100%"
@@ -73,7 +74,7 @@ const Footer = () => {
         gap="9"
       >
         <Flex
-          width={{ initial: "100%", md: "40%" }}
+          width={{ initial: "100%", md: "32%" }}
           direction="column"
           gap="4"
           pr={{ md: "9" }}
@@ -99,10 +100,7 @@ const Footer = () => {
             </Box>
           </Flex>
 
-          <Box
-            display={{ initial: "none", sm: "block" }}
-            style={{ textAlign: "justify" }}
-          >
+          <Box display={{ initial: "none", sm: "block" }}>
             <Text>
               Distribute aid delivers humanitarian aid to communities in need by
               coordinating end-to-end shipments, we make it easy for donors to
@@ -114,7 +112,13 @@ const Footer = () => {
             <FooterLinks />
           </Box>
         </Flex>
-        <Flex width={{ initial: "100%", md: "60%" }} ml={{ md: "9" }}>
+        <Flex
+          width={{ initial: "100%", md: "60%" }}
+          ml={{ md: "9" }}
+          pt={{
+            md: "4",
+          }}
+        >
           <Flex
             width="100%"
             gap={{ initial: "6", sm: "9" }}
