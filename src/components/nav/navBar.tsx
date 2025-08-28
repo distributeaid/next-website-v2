@@ -22,10 +22,10 @@ const NavBar = () => {
           <Flex
             width={"100%"}
             style={{
-              backgroundColor: "var(--blue-9)",
               color: "white",
               zIndex: "50",
             }}
+            className="bg-navy-800"
             position={"fixed"}
             height={"80px"}
             px={"4"}
@@ -185,7 +185,11 @@ const NavBar = () => {
                 onClick={() => setNav(!nav)}
               >
                 {nav ? (
-                  <Button style={{ cursor: "pointer" }} size={"4"}>
+                  <Button
+                    className="bg-navy-800"
+                    style={{ cursor: "pointer" }}
+                    size={"4"}
+                  >
                     Close <FaTimes size={30} />
                   </Button>
                 ) : (
