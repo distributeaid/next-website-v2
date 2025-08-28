@@ -1,15 +1,23 @@
 export const links = [
   {
-    id: 1,
     title: "Home",
     url: "/",
     isSubMenu: false,
   },
   {
-    id: 2,
     title: "About Us",
     url: "/about-us",
-    isSubMenu: false,
+    isSubMenu: true,
+    subMenu: [
+      {
+        title: "Overview",
+        url: "/about-us",
+      },
+      {
+        title: "Contact Us",
+        url: "/contact-us",
+      },
+    ],
   },
   // {
   //   id: 3,
@@ -63,26 +71,26 @@ export const links = [
   //   ],
   // },
   {
-    id: 5,
     title: "Resources",
     url: "/resources/assort",
     isSubMenu: false,
   },
   {
-    id: 6,
     title: "Tech",
     url: "/tech",
     isSubMenu: true,
     subMenu: [
       {
-        id: 6.1,
+        title: "Overview",
+        url: "/tech",
+      },
+      {
         title: "Open Source Explorers",
         url: "/tech/open-source-explorers",
       },
     ],
   },
   {
-    id: 7,
     title: "Donate",
     url: "/donate",
     isSubMenu: false,

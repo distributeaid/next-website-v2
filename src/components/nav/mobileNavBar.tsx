@@ -26,10 +26,10 @@ const MobileNavBar = () => {
       {/* Accordion - Ensuring only one section is open */}
       <Accordion.Root type="single" collapsible className="w-full">
         {links
-          .filter(({ id }) => id !== 7) // Hide Donate button here
-          .map(({ id, title, url, isSubMenu, subMenu }) => (
+          .filter(({ title }) => title !== "Donate") // Hide Donate button here
+          .map(({ title, url, isSubMenu, subMenu }) => (
             <Accordion.Item
-              key={id}
+              key={title}
               value={title}
               className="font-medium py-4 "
             >
@@ -44,9 +44,9 @@ const MobileNavBar = () => {
                   <Accordion.Content className="w-full">
                     <NavigationMenu.Sub>
                       <NavigationMenu.List className="w-full border-y border-thin">
-                        {subMenu?.map(({ id, title, url }) => (
+                        {subMenu?.map(({ title, url }) => (
                           <Flex
-                            key={id}
+                            key={title}
                             as="div"
                             p={"1"}
                             width={"100%"}

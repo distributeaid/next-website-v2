@@ -53,7 +53,7 @@ const NavBar = () => {
                 justify={"center"}
                 gapX={"2"}
               >
-                {SOCIAL_LINKS.slice(0, 3).map((social) => (
+                {SOCIAL_LINKS.map((social) => (
                   <NavigationMenu.Item key={social.name}>
                     <NavigationMenu.Link href={social.link} target="_blank">
                       <Image
@@ -85,17 +85,17 @@ const NavBar = () => {
               mx={"4"}
               display={{ initial: "none", md: "flex" }}
             >
-              {links.map(({ id, title, url, isSubMenu, subMenu }) => (
+              {links.map(({ title, url, isSubMenu, subMenu }) => (
                 <NavigationMenu.Item
                   className={cx(
                     "font-medium  decoration-2 underline-offset-8 duration-200",
                     {
-                      "hover:underline": id !== 7,
+                      "hover:underline": title !== "Donate",
                       "hover:bg-navy-500 decoration-none cursor-pointer hover:text-white duration-200 text-dark-blue bg-white rounded-lg py-3 px-6 ":
-                        id === 7,
+                        title === "Donate",
                     },
                   )}
-                  key={id}
+                  key={title}
                 >
                   {isSubMenu ? (
                     <Box className="group">
@@ -106,7 +106,9 @@ const NavBar = () => {
                         asChild
                       >
                         <NavigationMenu.Trigger>
-                          {title}{" "}
+                          <NavigationMenu.Link href={url}>
+                            {title}
+                          </NavigationMenu.Link>
                           <FaChevronDown className="ml-2 transition-transform duration-200 group-hover:rotate-180" />
                         </NavigationMenu.Trigger>
                       </Flex>
@@ -114,6 +116,7 @@ const NavBar = () => {
                         as="div"
                         asChild
                         position={"absolute"}
+                        mt={"3"}
                         style={{
                           background: "white",
                           zIndex: "10",
@@ -125,9 +128,9 @@ const NavBar = () => {
                         <NavigationMenu.Content>
                           <NavigationMenu.Sub>
                             <NavigationMenu.List>
-                              {subMenu?.map(({ id, title, url }) => (
+                              {subMenu?.map(({ title, url }) => (
                                 <Flex
-                                  key={id}
+                                  key={title}
                                   width={"100%"}
                                   style={{ color: "black" }}
                                   p={"1"}
