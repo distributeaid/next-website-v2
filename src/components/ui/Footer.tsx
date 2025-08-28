@@ -39,7 +39,6 @@ const FooterLinks = () => (
 const DonateLink = () => (
   <Box
     asChild
-    mt="4"
     style={{
       cursor: "pointer",
       borderRadius: "var(--radius-3)",
@@ -49,7 +48,6 @@ const DonateLink = () => (
       fontWeight: 500,
       ...buttonStyle,
     }}
-    display={{ initial: "none", sm: "block" }}
     className="hover:!bg-navy-500 hover:!text-white"
   >
     <Link href="/donate" target="_blank" rel="noreferrer">
@@ -69,17 +67,17 @@ const Footer = () => {
     >
       <Flex
         width="100%"
-        direction={{ initial: "column", md: "row" }}
+        direction={{ initial: "column", lg: "row" }}
         justify="center"
         gap="9"
       >
         <Flex
-          width={{ initial: "100%", md: "32%" }}
+          width={{ initial: "100%", lg: "32%" }}
           direction="column"
           gap="4"
           pr={{ md: "9" }}
         >
-          <Flex width="100%" justify="between">
+          <Flex width="100%" justify="between" align="center">
             <Flex direction="row" gap="4" align="center">
               <LogoMark width="50" height="65"></LogoMark>
 
@@ -95,7 +93,7 @@ const Footer = () => {
               </Text>
             </Flex>
 
-            <Box className="lg:hidden">
+            <Box display={{ initial: "block", lg: "none" }}>
               <DonateLink />
             </Box>
           </Flex>
@@ -115,7 +113,7 @@ const Footer = () => {
           </Box>
         </Flex>
         <Flex
-          width={{ initial: "100%", md: "60%" }}
+          width={{ initial: "100%", lg: "60%" }}
           ml={{ md: "9" }}
           pt={{
             md: "4",
@@ -181,7 +179,7 @@ const Footer = () => {
                   </a>
                 ))}
               </Flex>
-              <Box className="max-lg:hidden">
+              <Box display={{ initial: "none", lg: "block" }} mt="4">
                 <DonateLink />
               </Box>
             </Flex>
