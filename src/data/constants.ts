@@ -1,3 +1,4 @@
+import { RiInstagramFill, RiBlueskyFill, RiLinkedinFill } from "react-icons/ri";
 import Home from "@/app/page";
 
 export const MONTHS = [
@@ -278,15 +279,21 @@ export const COUNTRY_CODE_OPTIONS = Object.entries(COUNTRY_CODES_TO_NAME).map(
 );
 
 export const SOCIAL_LINKS = [
-  { name: "instagram", link: "https://www.instagram.com/distributeaid" },
+  {
+    name: "instagram",
+    link: "https://www.instagram.com/distributeaid",
+    icon: RiInstagramFill,
+  },
 
   {
     name: "bluesky",
     link: "https://bsky.app/profile/distributeaid.org",
+    icon: RiBlueskyFill,
   },
   {
     name: "linked-in",
     link: "https://www.linkedin.com/company/distribute-aid",
+    icon: RiLinkedinFill,
   },
 ];
 
