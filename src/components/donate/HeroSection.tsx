@@ -89,6 +89,7 @@ const HeroSection = () => {
                   <Button
                     className="bg-white text-black hover:bg-navy-500 hover:text-white transition-200"
                     size={{ initial: "3", sm: "2", md: "3" }}
+                    style={{ height: "44px" }}
                     asChild
                   >
                     <Link
@@ -104,6 +105,7 @@ const HeroSection = () => {
                   <Button
                     className=" bg-navy-600 hover:bg-navy-500"
                     size={{ initial: "3", sm: "2", md: "3" }}
+                    style={{ height: "44px" }}
                     asChild
                   >
                     <Link
@@ -119,6 +121,7 @@ const HeroSection = () => {
                   <Button
                     className="bg-navy-600 hover:bg-navy-500 "
                     size={{ initial: "3", sm: "2", md: "3" }}
+                    style={{ height: "44px" }}
                     asChild
                   >
                     <Link
