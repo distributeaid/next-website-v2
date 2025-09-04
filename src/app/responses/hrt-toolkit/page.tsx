@@ -1,9 +1,10 @@
 import React, { FC } from "react";
+import { HrtToolkitHero } from "@/components/responses/hrt-toolkit/HrtToolkitHero";
 
 const HrtToolkit: FC = () => {
   return (
     <main>
-      This is where the HRT Harm Reduction Toolkit page will be!
+      <HrtToolkitHero />
     </main>
   );
 };
