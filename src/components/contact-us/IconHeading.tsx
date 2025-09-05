@@ -9,20 +9,28 @@ interface IconHeadingProps {
 }
 
 const IconHeading = ({ Icon, title, color = "blue" }: IconHeadingProps) => {
+  const classes = cx("rounded-full p-2 flex items-center justify-center", {
+    "bg-circle-blue": color === "blue",
+    "bg-circle-green": color === "green",
+    "bg-circle-pink": color === "pink",
+    "bg-circle-grey": color === "grey",
+  });
+
   return (
     <Flex align="center" gap="5">
       <Box
-        className={cx("rounded-full p-2 flex items-center justify-center", {
-          "bg-circle-blue": color === "blue",
-          "bg-circle-green": color === "green",
-          "bg-circle-pink": color === "pink",
-          "bg-circle-grey": color === "grey",
-        })}
-        style={{ width: "80px", height: "80px" }}
+        className={classes}
+        style={{ aspectRatio: "1/1" }}
+        width={{ initial: "70px", md: "80px" }}
+        height={{ initial: "70px", md: "80px" }}
       >
         <Icon size={40} className={cx({ "text-white": color === "blue" })} />
       </Box>
-      <Text size="8" weight="medium">
+      <Text
+        size={{ initial: "6", md: "7" }}
+        style={{ color: "#224BA4" }}
+        weight="bold"
+      >
         {title}
       </Text>
     </Flex>
