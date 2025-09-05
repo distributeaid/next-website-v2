@@ -48,7 +48,7 @@ const ContactForm = () => {
       }}
       gap="8"
       my="8"
-      mx="auto"
+      mx={{ initial: "5", lg: "auto" }}
       maxWidth={{ initial: "auto", md: "1240px" }}
     >
       <Flex width={{ initial: "100%", md: "50%" }} direction="column" gap="5">
@@ -72,6 +72,7 @@ const ContactForm = () => {
                   placeholder="Type your first name here"
                   name="firstName"
                   style={inputStyle}
+                  required
                 />
               </Box>
               <Box>
@@ -83,6 +84,7 @@ const ContactForm = () => {
                   placeholder="Type your last name here"
                   name="lastName"
                   style={inputStyle}
+                  required
                 />
               </Box>
             </Grid>
@@ -95,6 +97,8 @@ const ContactForm = () => {
                 placeholder="Type your email here"
                 name="email"
                 style={inputStyle}
+                type="email"
+                required
               />
             </Box>
             <Box>
@@ -106,9 +110,14 @@ const ContactForm = () => {
                 placeholder="Type your message here"
                 name="message"
                 style={inputStyle}
+                required
               />
             </Box>
-            <Button type="submit" style={{ height: "44px" }}>
+            <Button
+              type="submit"
+              style={{ height: "44px" }}
+              className="bg-navy-600 hover:bg-navy-500"
+            >
               Send message
             </Button>
           </Flex>
