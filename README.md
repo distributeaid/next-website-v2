@@ -1,4 +1,6 @@
-# About Distribute Aid
+# About the Project
+
+This repository contains the scaffolding for Distributor Aid(DA)'s new website, powered by Nextjs, TypeScript & Strapi.
 
 Distribute Aid (DA) delivers humanitarian aid to communities in need.
 
@@ -24,9 +26,6 @@ By coordinating end-to-end shipments, we make it easy for donors to connect with
 - [Reviewing Pull Requests](#reviewing-pull-requests)
 - [Merging Branches](#merging-branches)
 
-## About the Project
-
-This repository contains the scaffolding for DA's new website, powered by Nextjs, TypeScript & Strapi.
 
 ## Technologies Used
 
