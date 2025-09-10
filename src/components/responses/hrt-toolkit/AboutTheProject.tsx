@@ -24,7 +24,8 @@ export const AboutTheProject: FC = () => (
 
           <Container
             px="24px"
-            maxWidth={{ sm: "calc(100% - 48px)", md: "calc(100% - 240px)" }}
+            mb="2"
+            maxWidth={{ sm: "calc(100% - 48px)", md: "calc(100% - 160px)" }}
           >
             <ul className="list-disc list-inside">
               {list_items?.map((item, index) => (
