@@ -2,13 +2,15 @@ import cx from "classnames";
 import { Box, Flex, Text } from "@radix-ui/themes";
 import type { IconType } from "react-icons";
 
-interface IconHeadingProps {
+export type IconHeaderColor = "blue" | "green" | "pink" | "grey";
+
+interface IconHeaderProps {
   Icon: IconType;
   title: string;
-  color?: "blue" | "green" | "pink" | "grey";
+  color?: IconHeaderColor;
 }
 
-const IconHeading = ({ Icon, title, color = "blue" }: IconHeadingProps) => {
+const IconHeader = ({ Icon, title, color = "blue" }: IconHeaderProps) => {
   const classes = cx("rounded-full p-2 flex items-center justify-center", {
     "bg-circle-blue": color === "blue",
     "bg-circle-green": color === "green",
@@ -37,4 +39,4 @@ const IconHeading = ({ Icon, title, color = "blue" }: IconHeadingProps) => {
   );
 };
 
-export default IconHeading;
+export default IconHeader;
