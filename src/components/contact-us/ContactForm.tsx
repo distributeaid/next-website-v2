@@ -13,7 +13,7 @@ import {
 } from "@radix-ui/themes";
 import Image from "next/image";
 
-import IconHeading from "./IconHeading";
+import IconHeader from "../text/IconHeader";
 
 const ContactForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -52,8 +52,8 @@ const ContactForm = () => {
       maxWidth={{ initial: "auto", md: "1240px" }}
     >
       <Flex width={{ initial: "100%", md: "50%" }} direction="column" gap="5">
-        <IconHeading Icon={RxQuestionMarkCircled} title="General Inquiries" />
-        <Text>
+        <IconHeader Icon={RxQuestionMarkCircled} title="General Inquiries" />
+        <Text className="text-lg">
           The best way to get in touch with Distribute Aid is to email us at{" "}
           <Link href="mailto:hello@distributeaid.org">
             hello@distributeaid.org
