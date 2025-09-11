@@ -14,11 +14,13 @@ jobs:
       - name: Install modules
         run: corepack yarn
       - name: Run lint check
-        run: corepack yarn run lint
+        run: corepack yarn run check:lint
       - name: Run format check
         run: corepack yarn run check:format
       - name: Run type check
         run: corepack yarn run check:types
+      - name: Run test check
+        run: corepack yarn run check:test
   test:
     runs-on: ubuntu-latest
     steps:

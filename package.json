@@ -3,14 +3,20 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
     "build": "next build",
+    "dev": "next dev --turbo",
     "start": "next start",
-    "check:types": "yarn tsc",
-    "check:format": "yarn prettier --check .",
-    "format": "yarn prettier --write .",
+    "tsc": "tsc",
+    "test": "vitest",
+    "format": "yarn prettier --check .",
+    "format:fix": "yarn prettier --write .",
     "lint": "next lint",
-    "test": "vitest"
+    "lint:fix": "next lint --fix",
+    "check:types": "yarn tsc",
+    "check:lint": "next lint",
+    "check:format": "yarn prettier --check .",
+    "check:test": "vitest",
+    "check:all": "yarn check:types && yarn check:lint && yarn check:format && yarn check:test"
   },
   "dependencies": {
     "@radix-ui/colors": "^3.0.0",
