@@ -20,7 +20,6 @@
     "classnames": "^2.5.1",
     "lodash": "^4.17.21",
     "next": "15.5.2",
-    "radix-ui": "^1.4.3",
     "react": "19.1.1",
     "react-countup": "^6.5.3",
     "react-dom": "19.1.1",
