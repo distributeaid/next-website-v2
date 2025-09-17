@@ -1271,7 +1271,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@radix-ui/react-collapsible@npm:1.1.12, @radix-ui/react-collapsible@npm:^1.1.12":
+"@radix-ui/react-collapsible@npm:1.1.12":
   version: 1.1.12
   resolution: "@radix-ui/react-collapsible@npm:1.1.12"
   dependencies:
@@ -6787,7 +6787,6 @@ __metadata:
   resolution: "next-website-v2@workspace:."
   dependencies:
     "@radix-ui/colors": "npm:^3.0.0"
-    "@radix-ui/react-collapsible": "npm:^1.1.12"
     "@radix-ui/react-navigation-menu": "npm:^1.2.3"
     "@radix-ui/themes": "npm:^3.1.6"
     "@testing-library/dom": "npm:10.4.1"
