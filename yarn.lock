@@ -2813,12 +2813,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:22.18.5":
-  version: 22.18.5
-  resolution: "@types/node@npm:22.18.5"
+"@types/node@npm:22.18.6":
+  version: 22.18.6
+  resolution: "@types/node@npm:22.18.6"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10c0/2a664e24f1b4bc7d49905cd2a416c2e2dbf8dd09d35d783922e447983817100fb637135a9d3fa1d98b790b48f214a68fda941afed56641c172bd2ce23b5cf57a
+  checksum: 10c0/7ba190da2e64e56c59270661af8cd682c830a1375b6f965ab153be90baabfdaa867aa1d63f87b42de80956996d46dfe1cf93ecefe982d9a16e485b6756949f9a
   languageName: node
   linkType: hard
 
@@ -6783,7 +6783,7 @@ __metadata:
     "@testing-library/react": "npm:16.3.0"
     "@types/autoprefixer": "npm:10.2.4"
     "@types/lodash": "npm:4.17.20"
-    "@types/node": "npm:22.18.5"
+    "@types/node": "npm:22.18.6"
     "@types/postcss-import": "npm:14.0.3"
     "@types/react": "npm:19.1.13"
     "@types/react-dom": "npm:19.1.9"
