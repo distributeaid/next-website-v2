@@ -58,7 +58,7 @@
     "typescript": "5.9.2",
     "vitest": "3.2.4"
   },
-  "packageManager": "yarn@4.10.0",
+  "packageManager": "yarn@4.10.3",
   "engines": {
     "node": ">=20.0.0 <=22.19.0",
     "npm": "please-use-yarn",
