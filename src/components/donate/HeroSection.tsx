@@ -25,10 +25,12 @@ const HeroSection = () => {
             position={"absolute"}
             height={{ initial: "400px", sm: "550px", lg: "733px" }}
             width={{ initial: "100%", sm: "70%" }}
+            overflow="hidden"
+            className="xl:rounded-br-[32px]"
           >
             <Image
               fill
-              style={{ objectFit: "contain" }}
+              style={{ objectFit: "cover" }}
               src="/images/donate/european-refugee-relief-hero-tinted.png"
               alt="european-refugee-relief-hero-tinted"
             />
