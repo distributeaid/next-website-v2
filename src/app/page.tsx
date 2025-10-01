@@ -1,5 +1,5 @@
 import {
-  HeroSection,
+  Hero,
   SubscribeCTA,
   WhatWeDo,
   WhereWeWork,
@@ -12,7 +12,7 @@ import {
 const Home = () => {
   return (
     <main>
-      <HeroSection />
+      <Hero />
       <SubscribeCTA />
       <WhatWeDo />
       <WhereWeWork />
