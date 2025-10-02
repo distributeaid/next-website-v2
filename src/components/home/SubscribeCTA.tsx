@@ -1,3 +1,4 @@
+"use client";
 import { Box, Flex, Text, Button } from "@radix-ui/themes";
 
 const SubscribeCTA = () => {
