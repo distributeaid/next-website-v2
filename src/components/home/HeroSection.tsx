@@ -1,5 +1,5 @@
-const Hero = () => {
+const HeroSection = () => {
   return <h1>Hero</h1>;
 };
 
-export default Hero;
+export default HeroSection;
