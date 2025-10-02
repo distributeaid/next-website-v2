@@ -1,5 +1,5 @@
 import {
-  Hero,
+  HeroSection,
   SubscribeCTA,
   WhatWeDo,
   WhereWeWork,
@@ -14,7 +14,7 @@ import HeroSection from "@/components/ui/HeroSection";
 const Home = () => {
   return (
     <main>
-      <Hero />
+      <HeroSection />
       <SubscribeCTA />
       <WhatWeDo />
       <WhereWeWork />
