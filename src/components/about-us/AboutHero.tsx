@@ -5,11 +5,11 @@ import { Box, Flex, Container, Section, Heading, Text } from "@radix-ui/themes";
 export const AboutHero: FC = () => (
   <>
     <Section
-      position="relative"
       width="100%"
       pt={{ initial: "2", sm: "7", md: "9" }}
+      pb={{ initial: "80px", sm: "140px", md: "148px" }}
       mb="0"
-      className="bg-navy-900 pb-[80px] sm:pb-[120px] md:pb-[140px] lg:pb-[148px]"
+      className="bg-navy-800"
     >
       <Box
         pt={{ initial: "1", md: "4" }}
@@ -36,51 +36,45 @@ export const AboutHero: FC = () => (
           and empowering people to uphold human dignity.
         </Text>
       </Box>
-      <Flex
-        position="absolute"
-        bottom="0"
-        width="100%"
-        gap={{ initial: "2", sm: "4" }}
-        className="translate-y-[40%] sm:translate-y-1/2 justify-center"
-        wrap="nowrap"
-      >
-        <Box className="rounded-2xl overflow-hidden flex-shrink-0 w-[100px] sm:w-[160px] md:w-[200px] lg:w-[280px]">
-          <Image
-            src={"/images/about-us/hero-1.png"}
-            alt="Hero Image"
-            width={0}
-            height={0}
-            sizes="(min-width: 1024px) 600px, (min-width: 768px) 200px, (min-width: 640px) 160px, 120px"
-            style={{ width: "100%", height: "auto", objectFit: "cover" }}
-          />
-        </Box>
-        <Box className="rounded-2xl overflow-hidden flex-shrink-0 w-[100px] sm:w-[160px] md:w-[200px] lg:w-[280px]">
-          <Image
-            src={"/images/about-us/hero-2.png"}
-            alt="Hero Image"
-            width={0}
-            height={0}
-            sizes="(min-width: 1024px) 600px, (min-width: 768px) 200px, (min-width: 640px) 160px, 120px"
-            style={{ width: "100%", height: "auto", objectFit: "cover" }}
-          />
-        </Box>
-        <Box className="rounded-2xl overflow-hidden flex-shrink-0 w-[100px] sm:w-[160px] md:w-[200px] lg:w-[280px]">
-          <Image
-            src={"/images/about-us/hero-3.png"}
-            alt="Hero Image"
-            width={0}
-            height={0}
-            sizes="(min-width: 1024px) 600px, (min-width: 768px) 200px, (min-width: 640px) 160px, 120px"
-            style={{ width: "100%", height: "auto", objectFit: "cover" }}
-          />
-        </Box>
-      </Flex>
     </Section>
+    <Flex
+      width="100%"
+      gap={{ initial: "2", sm: "4" }}
+      wrap="nowrap"
+      justify="center"
+      mt={{ initial: "-60px", sm: "-100px", md: "-140px" }}
+      mb={{ initial: "-10px" }}
+    >
+      <Box className="rounded-2xl overflow-hidden flex-shrink-0 w-[100px] sm:w-[160px] md:w-[200px] lg:w-[280px]">
+        <Image
+          src={"/images/about-us/hero-1.png"}
+          alt="Hero Image"
+          width={280}
+          height={280}
+          style={{ width: "100%", height: "auto", objectFit: "cover" }}
+        />
+      </Box>
+      <Box className="rounded-2xl overflow-hidden flex-shrink-0 w-[100px] sm:w-[160px] md:w-[200px] lg:w-[280px]">
+        <Image
+          src={"/images/about-us/hero-2.png"}
+          alt="Hero Image"
+          width={280}
+          height={280}
+          style={{ width: "100%", height: "auto", objectFit: "cover" }}
+        />
+      </Box>
+      <Box className="rounded-2xl overflow-hidden flex-shrink-0 w-[100px] sm:w-[160px] md:w-[200px] lg:w-[280px]">
+        <Image
+          src={"/images/about-us/hero-3.png"}
+          alt="Hero Image"
+          width={280}
+          height={280}
+          style={{ width: "100%", height: "auto", objectFit: "cover" }}
+        />
+      </Box>
+    </Flex>
     <Section>
-      <Box
-        px={{ initial: "7", sm: "140px", md: "160px" }}
-        pt={{ initial: "2", sm: "80px", md: "120px" }}
-      >
+      <Box px={{ initial: "7", sm: "140px", md: "160px" }}>
         <Heading
           as="h1"
           size={{ initial: "7", sm: "8" }}
