@@ -25,9 +25,12 @@ const HeroSection = () => {
             position={"absolute"}
             height={{ initial: "400px", sm: "550px", lg: "733px" }}
             width={{ initial: "100%", sm: "70%" }}
+            overflow="hidden"
+            className="xl:rounded-br-[32px]"
           >
             <Image
               fill
+              style={{ objectFit: "cover" }}
               src="/images/donate/european-refugee-relief-hero-tinted.png"
               alt="european-refugee-relief-hero-tinted"
             />
@@ -89,6 +92,7 @@ const HeroSection = () => {
                   <Button
                     className="bg-white text-black hover:bg-navy-500 hover:text-white transition-200"
                     size={{ initial: "3", sm: "2", md: "3" }}
+                    style={{ height: "44px" }}
                     asChild
                   >
                     <Link
@@ -104,6 +108,7 @@ const HeroSection = () => {
                   <Button
                     className=" bg-navy-600 hover:bg-navy-500"
                     size={{ initial: "3", sm: "2", md: "3" }}
+                    style={{ height: "44px" }}
                     asChild
                   >
                     <Link
@@ -119,6 +124,7 @@ const HeroSection = () => {
                   <Button
                     className="bg-navy-600 hover:bg-navy-500 "
                     size={{ initial: "3", sm: "2", md: "3" }}
+                    style={{ height: "44px" }}
                     asChild
                   >
                     <Link
