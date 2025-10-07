@@ -3,7 +3,7 @@ import { AboutHero } from "@/components/about-us/AboutHero";
 import { Timeline } from "@/components/about-us/Timeline";
 import { CallOutText } from "@/components/callout/Callout";
 import { SideBySide } from "@/components/text/SideBySide";
-import { AboutOurMissionVision } from "@/components/about-us/AboutOurMissionVision";
+import { AboutOurMissionVision, data } from "@/components/about-us/AboutOurMissionVision";
 
 const AboutUsPage: FC = () => {
   const showCallOut = false; //toggle to display callout
@@ -12,9 +12,8 @@ const AboutUsPage: FC = () => {
       {showCallOut && <CallOutText message="some message here" color="green" />}
       <AboutHero />
       <SideBySide
-        left={<AboutOurMissionVision title="Mission" />}
-        right={<AboutOurMissionVision title="Vision" />}
-        bgClass="bg-[var(--blue-2)]"
+        left={<AboutOurMissionVision title="Mission" content={data.mission} />}
+        right={<AboutOurMissionVision title="Vision" content={data.vision} />}
       />
       <Timeline />
     </main>
