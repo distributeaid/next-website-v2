@@ -6,10 +6,7 @@ interface SideBySideProps {
   right: ReactNode;
 }
 
-export const SideBySide: React.FC<SideBySideProps> = ({
-  left,
-  right,
-}) => {
+export const SideBySide: React.FC<SideBySideProps> = ({ left, right }) => {
   return (
     <Section
       px={{ initial: "7", sm: "8", md: "9" }}
