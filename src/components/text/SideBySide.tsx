@@ -4,16 +4,17 @@ import React, { ReactNode } from "react";
 interface SideBySideProps {
   left: ReactNode;
   right: ReactNode;
-  bgClass: string;
 }
 
 export const SideBySide: React.FC<SideBySideProps> = ({
   left,
   right,
-  bgClass,
 }) => {
   return (
-    <Section px={{ initial: "7", sm: "8", md: "9" }} className={bgClass}>
+    <Section
+      px={{ initial: "7", sm: "8", md: "9" }}
+      style={{ backgroundColor: "var(--blue-2)" }}
+    >
       <Flex
         direction={{ initial: "column", md: "row" }}
         align={{ initial: "center", md: "start" }}
