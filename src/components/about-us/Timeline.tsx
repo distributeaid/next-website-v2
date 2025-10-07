@@ -140,12 +140,14 @@ export const Timeline: React.FC = () => {
               align="center"
               position="relative"
               key={index}
+              pt="96px"
             >
               {data.length - 1 !== index && (
                 <Box
                   asChild
                   position="absolute"
-                  left={{ initial: "40px", sm: "50%" }}
+                  top="5"
+                  left={{ initial: "50%", sm: "50%" }}
                   width="2px"
                   className="top-6 md:top-32"
                 >
@@ -171,7 +173,7 @@ export const Timeline: React.FC = () => {
                 justify="center"
                 position="absolute"
                 left={{
-                  initial: "0",
+                  initial: "calc(50% - 40px)",
                   sm: "calc(50% - 40px)",
                   lg: "calc(50% - 50px)",
                 }}
@@ -196,7 +198,7 @@ export const Timeline: React.FC = () => {
               <Box
                 asChild
                 width={{
-                  initial: "calc(100% - 80px - 16px)",
+                  initial: "100%",
                   sm: "calc(50% - 40px - 12px)",
                   lg: "calc(50% - 50px - 12px)",
                 }}
