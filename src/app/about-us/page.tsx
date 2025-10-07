@@ -3,7 +3,10 @@ import { AboutHero } from "@/components/about-us/AboutHero";
 import { Timeline } from "@/components/about-us/Timeline";
 import { CallOutText } from "@/components/callout/Callout";
 import { SideBySide } from "@/components/text/SideBySide";
-import { AboutOurMissionVision, data } from "@/components/about-us/AboutOurMissionVision";
+import {
+  AboutOurMissionVision,
+  data,
+} from "@/components/about-us/AboutOurMissionVision";
 
 const AboutUsPage: FC = () => {
   const showCallOut = false; //toggle to display callout
