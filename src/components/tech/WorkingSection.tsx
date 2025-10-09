@@ -5,27 +5,31 @@ import { WorkingBox } from "./WorkingBox";
 const data = [
   {
     title: "Distribute Aid Website",
-    para: "Since relaunching our website, we have been continually developing new ways to share information and insights from our projects, such as through data visualisations",
+    para: "Since relaunching our website, we have been continually developing new ways to share information and insights from our projects, for example, through data visualisations.",
     link: "https://github.com/distributeaid/next-website-v2",
+    linklabel: "The website repo on GitHub",
     tech: ["TypeScript", "Next.js", "React", "Radix UI", "Tailwind"],
   },
   {
     title: "Needs Assessment",
-    para: "The goal of this project is to provide a way for Distribute Aid to run needs assessments using forms that can be modified using a low-code or zero-code approach",
+    para: "The goal of this project is to provide a way for Distribute Aid to run needs assessments using forms that can be modified using a low-code or zero-code approach.",
     link: "https://github.com/distributeaid/aggregated-public-information",
+    linklabel: "The Needs Assessment repo GitHub",
     tech: ["Postgres", "Typescript", "NodeJS", "Strapi", "Jest", "SuperTest"],
   },
   {
     title: "Shipment Data Reporting Pipeline",
-    para: "Our Shipment Data Reporting Pipeline ingests data that we record for each shipment, processes it into impact stats, and presents it through a public API that is consumed by our landing site and shared with researchers/other third parties",
+    para: "Our Shipment Data Reporting Pipeline ingests data that we record for each shipment, processes it into impact stats, and presents it through a public API that is consumed by our landing site and shared with researchers and other third parties.",
     link: "https://github.com/distributeaid/aggregated-public-information",
+    linklabel: "The SDR Pipeline repo on GitHub",
     tech: ["Postgres", "Typescript", "NodeJS", "Strapi", "Jest", "SuperTest"],
   },
   {
     title: "Documentation Platform",
-    para: "We always encourage people to be diligent with documentation. To make it easier for developers to create documentation, we are currently setting up a centralized platform to streamline the documentation process",
+    para: "We always encourage people to be diligent with documentation. To make it easier for developers to create documentation, we are currently setting up a centralized platform to streamline the documentation process.",
     link: "https://github.com/distributeaid/docs",
-    tech: ["Mintlify"],
+    linklabel: "The docs repo on GitHub",
+    tech: ["Astro"],
   },
 ];
 
@@ -54,7 +58,7 @@ export const WorkingSection = () => {
         color="blue"
         highContrast
       >
-        These are some of the ways our team of volunteer contributors currently
+        Here are some of the ways our team of volunteer contributors currently
         supports Distribute Aid and the global aid work community with
         tech-based solutions.
       </Text>
@@ -70,6 +74,7 @@ export const WorkingSection = () => {
             title={item.title}
             para={item.para}
             link={item.link}
+            linklabel={item.linklabel}
             key={index}
             tech={item.tech}
           />

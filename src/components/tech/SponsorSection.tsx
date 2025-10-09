@@ -58,7 +58,7 @@ const SponsorSection = () => {
               Funding allows us to create a stable base for our team, cover the
               cost of the tools we use to do our work and make faster progress
               on the issues we work on. This allows us to better support
-              Distribute Aid directly.
+              Distribute Aid’s primary efforts.
             </Text>
 
             <Text size={"4"}>
