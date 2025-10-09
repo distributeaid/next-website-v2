@@ -34,8 +34,8 @@ const OpenSourceExplorersSection = () => {
           align="center"
         >
           <Text size={{ initial: "2", sm: "3" }} align="center">
-            If you’re experienced in your field but have not had a chance
-            to participate in open source yet, we recommend our Open Source
+            If you’re experienced in your field but have not had a chance to
+            participate in open source yet, we recommend our Open Source
             Explorers program. Open Source Explorers is a structured
             educational/participatory program that gives developers, designers,
             and technical writers who are new to open source a hands-on
