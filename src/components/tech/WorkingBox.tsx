@@ -6,6 +6,7 @@ interface WorkingBoxProps {
   title: string;
   para: string;
   link: string;
+  linklabel: string;
   tech: Array<string>;
 }
 
@@ -17,7 +18,7 @@ const colors: { [key: number]: string } = {
   4: "#4362A6",
 };
 
-export const WorkingBox = ({ title, para, link, tech }: WorkingBoxProps) => {
+export const WorkingBox = ({ title, para, link, linklabel, tech }: WorkingBoxProps) => {
   return (
     <Container
       maxWidth={{ initial: "auto", md: "610px" }}
@@ -40,7 +41,7 @@ export const WorkingBox = ({ title, para, link, tech }: WorkingBoxProps) => {
         >
           {para}{" "}
           <SmartLink href={link} className="text-navy-800 underline">
-            [GitHub Repo]
+            {linklabel}
           </SmartLink>
         </Text>
         <Box>
