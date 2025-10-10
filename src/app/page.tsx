@@ -6,6 +6,7 @@ import Hero from "../components/ui/Hero";
 import { MarkdownContent } from "@/components/markdown/MarkdownContent";
 import homepageBanner from "../../public/images/homepage-banner-image.svg";
 import sary from "../../public/images/lettermark_blue.svg";
+import WhatWeDo from "@/components/home/WhatWeDo";
 
 const Home = () => {
   return (
@@ -64,6 +65,7 @@ const Home = () => {
         </ul>
       </section>
       <CounterStat />
+      <WhatWeDo />
     </main>
   );
 };
