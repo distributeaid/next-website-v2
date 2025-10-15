@@ -21,6 +21,7 @@ export const HrtKitsInNumbers: FC = () => {
             color="white"
             direction="column"
             icon="/images/responses/hrt-toolkit/medical-kit.svg"
+            iconAlt="medical kit"
           >
             <Text as="p" size="7" weight="light">PARTIAL KITS</Text>
             <Text as="p" size="5" weight="bold" align="center"><Em>donate to get remaining supplies!</Em></Text>
@@ -41,6 +42,7 @@ export const HrtKitsInNumbers: FC = () => {
               color="navy-800"
               direction="row"
               icon="/images/responses/hrt-toolkit/medical-kit-blue.svg"
+              iconAlt="medical kit"
             >
               <Text size="6" weight="light">KITS PRODUCED SO FAR</Text>
             </HRTNumbersCard>
@@ -50,6 +52,7 @@ export const HrtKitsInNumbers: FC = () => {
               color="white"
               direction="row"
               icon="/images/responses/hrt-toolkit/money-dollar.svg"
+              iconAlt="money"
               amountPrefix="$"
             >
               <Text size="4" weight="light">SAVED FOR THE TRANS COMMUNITY</Text>
