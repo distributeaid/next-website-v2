@@ -1,25 +1,29 @@
+"use client";
 import { FC, ReactNode } from "react";
 import { Box, Flex, Section, Text } from "@radix-ui/themes";
 import Image from "next/image";
+import CountUp from "react-countup";
 
 export type HrtNumbersCardProps = {
-  icon: string;
   amount: number;
   amountPrefix?: string;
-  direction?: "column" | "row";
   background: string;
   color: string;
   children?: ReactNode;
+  direction?: "column" | "row";
+  icon: string;
+  iconAlt: string;
 };
 
 export const HRTNumbersCard: FC<HrtNumbersCardProps> = ({
-  direction,
   amount,
   amountPrefix,
   background,
   color,
   children,
+  direction,
   icon,
+  iconAlt,
 }) => {
   return (
     <Flex
@@ -31,11 +35,11 @@ export const HRTNumbersCard: FC<HrtNumbersCardProps> = ({
       height={direction === "column" ? "100%" : "45%"}
       maxWidth="300px"
     >
-      <Image src={icon} width="100" height="100"/>
+      <Image src={icon} width="100" height="100" alt={iconAlt}/>
       <Box>
         <Text as="p" size="9" align={direction === "column" ? "center" : "left"} weight="bold">
           {amountPrefix}
-          {amount.toLocaleString()}
+          <CountUp start={0} end={amount} duration={5} />
         </Text>
         <Box align={direction === "column" ? "center" : "left"}>
           {children}
