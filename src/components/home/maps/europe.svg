@@ -1,5 +1,4 @@
-const EuropeMap = () => (
-  <svg
+ <svg
     width="248"
     height="194"
     viewBox="0 0 248 194"
@@ -272,6 +271,3 @@ const EuropeMap = () => (
       stroke-linejoin="round"
     />
   </svg>
-);
-
-export default EuropeMap;
