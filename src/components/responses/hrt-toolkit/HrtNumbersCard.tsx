@@ -32,18 +32,30 @@ export const HRTNumbersCard: FC<HrtNumbersCardProps> = ({
       align="center"
       mx="4"
       p="2"
-      height={direction === "column" ? "100%" : "45%"}
-      maxWidth="300px"
+      height={direction === "column" ? "360px" : "47%"}
+      width="100%"
+      maxWidth="350px"
     >
-      <Image src={icon} width="100" height="100" alt={iconAlt}/>
+      <Image src={icon} width="100" height="100" alt={iconAlt} />
       <Box>
-        <Text as="p" size="9" align={direction === "column" ? "center" : "left"} weight="bold">
+        <Text
+          as="p"
+          size="9"
+          align={direction === "column" ? "center" : "left"}
+          weight="bold"
+        >
           {amountPrefix}
           <CountUp start={0} end={amount} duration={5} />
         </Text>
-        <Box align={direction === "column" ? "center" : "left"}>
+        <Flex
+          direction={direction}
+          align="center"
+          className="justify-around"
+          height="100%"
+          flexGrow="1"
+        >
           {children}
-        </Box>
+        </Flex>
       </Box>
     </Flex>
   );
