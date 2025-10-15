@@ -1,10 +1,11 @@
+import Image from "next/image";
 import { Box, Card, Flex, Grid, Heading, Text } from "@radix-ui/themes";
 
 type BackgroundColor = `bg-[#${string}]`;
 
-import EuropeMap from "./maps/Europe";
-import MiddleEastMap from "./maps/MiddleEast";
-import UnitedStatesMap from "./maps/UnitedStates";
+import europeMap from "./maps/europe.svg";
+import middleEastMap from "./maps/middle-east.svg";
+import unitedStatesMap from "./maps/united-states.svg";
 
 const WhereWeWork = () => {
   const mapKey: {
@@ -26,22 +27,22 @@ const WhereWeWork = () => {
   ];
 
   const cardContent: {
-    map: React.ReactNode;
+    map: React.SVGElementType;
     title: string;
     summary: string;
   }[] = [
     {
-      map: <EuropeMap />,
+      map: europeMap,
       title: "Europe",
       summary: "Refugee populations across the Mediterranean and Balkans.",
     },
     {
-      map: <MiddleEastMap />,
+      map: middleEastMap,
       title: "The Middle East",
       summary: "Survivors of conflict and displacement in the Levant regions.",
     },
     {
-      map: <UnitedStatesMap />,
+      map: unitedStatesMap,
       title: "USA",
       summary:
         "Vulnerable communities facing disasters both natural and manmade.",
@@ -75,10 +76,22 @@ const WhereWeWork = () => {
         {cardContent.map(({ map, title, summary }) => (
           <Card key={title}>
             <Box m="4">
-              <Flex height="191px" justify="center" mb="4">
-                {map}
+              <Flex
+                height={{ md: "191px" }}
+                width={{ initial: "100%", md: "auto" }}
+                justify="center"
+                mb="4"
+              >
+                <Image src={map} alt="" className="w-full" />
               </Flex>
-              <Heading size="8" weight="medium" mb="4">
+              <Heading
+                size={{
+                  initial: "7",
+                  md: "8",
+                }}
+                weight="medium"
+                mb="4"
+              >
                 {title}
               </Heading>
               <Text>{summary}</Text>

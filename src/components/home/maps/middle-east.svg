@@ -1,5 +1,4 @@
-const MiddleEastMap = () => (
-  <svg
+ <svg
     width="318"
     height="178"
     viewBox="0 0 318 178"
@@ -42,6 +41,3 @@ const MiddleEastMap = () => (
       </clipPath>
     </defs>
   </svg>
-);
-
-export default MiddleEastMap;
