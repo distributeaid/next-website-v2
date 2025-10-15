@@ -40,11 +40,7 @@ export const HrtKitsInNumbers: FC = () => {
             </Link>
           </Button>
         </HRTNumbersCard>
-        <Flex
-          height="360px"
-          justify="between"
-          direction="column"
-        >
+        <Flex height="360px" justify="between" direction="column">
           <HRTNumbersCard
             amount={1000}
             background="navy-300"
