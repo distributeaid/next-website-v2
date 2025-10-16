@@ -10,7 +10,6 @@ const HrtToolkit: FC = () => {
   return (
     <main>
       <HrtToolkitHero />
-      <AboutTheProject />
       <HrtKitsInNumbers />
       <AboutTheProject />
       <HowItWorks />
