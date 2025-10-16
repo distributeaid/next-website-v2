@@ -30,7 +30,7 @@ export const HRTNumbersCard: FC<HrtNumbersCardProps> = ({
       className={`text-${color} bg-${background} rounded-xl box-border`}
       direction={direction}
       align="center"
-      mx="4"
+      m="4"
       p="2"
       height={direction === "column" ? "360px" : "47%"}
       width="100%"

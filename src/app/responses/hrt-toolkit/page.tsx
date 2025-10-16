@@ -12,6 +12,7 @@ const HrtToolkit: FC = () => {
       <HrtToolkitHero />
       <AboutTheProject />
       <HrtKitsInNumbers />
+      <AboutTheProject />
       <HowItWorks />
       <GetInvolved />
       <HrtFaq />
