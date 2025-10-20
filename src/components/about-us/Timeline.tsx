@@ -140,8 +140,10 @@ export const Timeline: React.FC = () => {
               align="center"
               position="relative"
               key={index}
-              pt="96px"
+              pt={{  initial: "108px", md: "96px" }}
+              pb={{  initial: "20px" }}
             >
+              {/* Separator */}
               {data.length - 1 !== index && (
                 <Box
                   asChild
@@ -161,6 +163,7 @@ export const Timeline: React.FC = () => {
                   />
                 </Box>
               )}
+              {/* Time/Year */}
               <Flex
                 className={classNames(
                   `leading-[23.44px]  rounded-full border-white shadow-md`,
@@ -194,6 +197,7 @@ export const Timeline: React.FC = () => {
                 </Text>
               </Flex>
 
+              {/* Image */}
               {/* leave space for the timeline marker plus a bit of separation */}
               <Box
                 asChild
