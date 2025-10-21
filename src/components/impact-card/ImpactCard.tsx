@@ -27,11 +27,14 @@ const ImpactCard: React.FC<ImpactCardProps> = ({
         className="bg-navy-200 rounded-lg p-10"
         direction="column"
         gap="8"
-        justify="between"
+        justify="end"
       >
         <Flex align="start" justify="center" gap="5">
           {icon}
-          <Text className="text-navy-900" weight="light" size="9">
+          <Text
+            className="text-navy-900 text-[40px] lg:text-[65px]"
+            weight="light"
+          >
             {value}
           </Text>
         </Flex>
@@ -40,7 +43,7 @@ const ImpactCard: React.FC<ImpactCardProps> = ({
           className="text-navy-900"
           as="h2"
           weight="regular"
-          size="8"
+          size={{ initial: "6", md: "6", lg: "8" }}
           align="center"
         >
           {label}
