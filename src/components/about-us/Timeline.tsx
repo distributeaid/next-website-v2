@@ -179,13 +179,12 @@ export const Timeline: React.FC = () => {
         >
           {[...data].reverse().map((item, index) => (
             <Flex
-              id={item.id}
-              className="scroll-mt-28 justify-center md:justify-normal md:even:flex-row-reverse"
+              className="justify-center md:justify-normal md:even:flex-row-reverse"
               align="center"
               position="relative"
               key={index}
-              pt={{  initial: "108px", md: "96px" }}
-              pb={{  initial: "20px" }}
+              pt={{  initial: "116px", md: "96px" }}
+              pb={{  initial: "40px" }}
             >
               {/* Separator */}
               {data.length - 1 !== index && (
@@ -248,7 +247,7 @@ export const Timeline: React.FC = () => {
                   sm: "calc(50% - 40px - 12px)",
                   lg: "calc(50% - 50px - 12px)",
                 }}
-                mx={{ initial: "5", md: "2" }}
+                mx={{ initial: "5" }}
               >
                 <Card
                   variant="ghost"
@@ -271,12 +270,7 @@ export const Timeline: React.FC = () => {
                         borderRadius: "15px",
                       }}
                     />
-                    <Text
-                      as="div"
-                      size="2"
-                      align="center"
-                      className="text-navy-900"
-                    >
+                    <Text as="div" size="2" align="center" className="text-navy-900">
                       {item.description}
                     </Text>
                   </Flex>
