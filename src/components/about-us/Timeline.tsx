@@ -195,7 +195,6 @@ export const Timeline: React.FC = () => {
                   left={{ initial: "50%", sm: "50%" }}
                   width="2px"
                   display={{ initial: "block", sm: "none", md: "block" }}
-                  height="50%"
                 >
                   <Separator
                     orientation="vertical"
@@ -211,14 +210,16 @@ export const Timeline: React.FC = () => {
                   item.bgColor === "navy-500"
                     ? "bg-navy-500 text-gray-50"
                     : "text-turquoise-600",
-                  "absolute md:relative lg:absolute",
+                  "absolute md:relative lg:absolute"
                 )}
                 style={{ backgroundColor: `${item.bgColor}` }}
                 align="center"
                 justify="center"
+                // position="absolute"
                 left={{
                   initial: "calc(50% - 40px)",
-                  sm: "calc(50% - 40px)",
+                  sm: "auto",
+                  md: "calc(50% - 40px)",
                   lg: "calc(50% - 50px)",
                 }}
                 top={{
@@ -244,7 +245,8 @@ export const Timeline: React.FC = () => {
                 asChild
                 width={{
                   initial: "100%",
-                  sm: "calc(50% - 40px - 12px)",
+                  sm: "80%",
+                  md: "calc(50% - 40px - 12px)",
                   lg: "calc(50% - 50px - 12px)",
                 }}
                 mx={{ initial: "5" }}
