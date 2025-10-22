@@ -136,12 +136,12 @@ export const Timeline: React.FC = () => {
         >
           {[...data].reverse().map((item, index) => (
             <Flex
-              className="justify-end md:justify-normal md:even:flex-row-reverse"
+              className="justify-center md:justify-normal md:even:flex-row-reverse"
               align="center"
               position="relative"
               key={index}
-              pt={{  initial: "108px", md: "96px" }}
-              pb={{  initial: "20px" }}
+              pt={{  initial: "116px", md: "96px" }}
+              pb={{  initial: "40px" }}
             >
               {/* Separator */}
               {data.length - 1 !== index && (
@@ -206,9 +206,13 @@ export const Timeline: React.FC = () => {
                   sm: "calc(50% - 40px - 12px)",
                   lg: "calc(50% - 50px - 12px)",
                 }}
+                mx={{ initial: "5" }}
               >
-                <Card className="shadow">
-                  <Inset clip="padding-box" side="top" pb="current">
+                <Card
+                  variant="ghost"
+                  className="shadow-lg bg-white rounded-3xl"
+                >
+                  <Flex gap="3" direction="column" align="center">
                     <Image
                       src={item.imageSrc}
                       alt="Timeline"
@@ -222,10 +226,13 @@ export const Timeline: React.FC = () => {
                         width: "100%",
                         objectFit: "cover",
                         objectPosition: "center",
+                        borderRadius: "15px",
                       }}
                     />
-                  </Inset>
-                  <Text className="text-navy-900">{item.description}</Text>
+                    <Text as="div" size="2" align="center" className="text-navy-900">
+                      {item.description}
+                    </Text>
+                  </Flex>
                 </Card>
               </Box>
             </Flex>
