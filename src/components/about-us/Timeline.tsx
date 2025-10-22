@@ -132,7 +132,7 @@ export const Timeline: React.FC = () => {
         </Heading>
         <Box
           className="space-y-3 md:space-y-[-60px]"
-          mx={{ initial: "4", md: "8" }}
+          mx={{ initial: "4", sm: "8" }}
         >
           {[...data].reverse().map((item, index) => (
             <Flex
@@ -151,7 +151,7 @@ export const Timeline: React.FC = () => {
                   top="5"
                   left={{ initial: "50%", sm: "50%" }}
                   width="2px"
-                  className="top-6 md:top-32"
+                  display={{ initial: "block", sm: "none", md: "block" }}
                 >
                   {/* top-6 (24px) accounts for both the top & bottom timeline markers
                       being moved down via their top=3 (12px each)
@@ -170,14 +170,16 @@ export const Timeline: React.FC = () => {
                   item.bgColor === "navy-500"
                     ? "bg-navy-500 text-gray-50"
                     : "text-turquoise-600",
+                  "absolute md:relative lg:absolute"
                 )}
                 style={{ backgroundColor: `${item.bgColor}` }}
                 align="center"
                 justify="center"
-                position="absolute"
+                // position="absolute"
                 left={{
                   initial: "calc(50% - 40px)",
-                  sm: "calc(50% - 40px)",
+                  sm: "auto",
+                  md: "calc(50% - 40px)",
                   lg: "calc(50% - 50px)",
                 }}
                 top={{
@@ -203,7 +205,8 @@ export const Timeline: React.FC = () => {
                 asChild
                 width={{
                   initial: "100%",
-                  sm: "calc(50% - 40px - 12px)",
+                  sm: "80%",
+                  md: "calc(50% - 40px - 12px)",
                   lg: "calc(50% - 50px - 12px)",
                 }}
                 mx={{ initial: "5" }}
