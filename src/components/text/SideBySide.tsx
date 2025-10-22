@@ -1,32 +1,35 @@
-import { Flex, Section, Separator } from "@radix-ui/themes";
+import { Box, Flex, Section, Separator } from "@radix-ui/themes";
 import React, { ReactNode } from "react";
 
 interface SideBySideProps {
   left: ReactNode;
   right: ReactNode;
-  bgColor: string;
 }
 
-export const SideBySide: React.FC<SideBySideProps> = ({
-  left,
-  right,
-  bgColor,
-}) => {
+export const SideBySide: React.FC<SideBySideProps> = ({ left, right }) => {
   return (
-    <Section px={{ initial: "4", sm: "9" }} className={`bg-${bgColor}`}>
+    <Section
+      px={{ initial: "7", sm: "8", md: "9" }}
+      style={{ backgroundColor: "var(--blue-2)" }}
+    >
       <Flex
         direction={{ initial: "column", md: "row" }}
-        align="start"
+        align={{ initial: "center", md: "start" }}
         justify="center"
-        gap={{ initial: "4", md: "6" }}
+        gap="8"
       >
-        {left}
-        <Separator
-          orientation={{ initial: "horizontal", md: "vertical" }}
-          size="4"
-          className="w-2/4 lg:w-px lg:self-stretch lg:h-auto"
-        />
-        {right}
+        <Box flexBasis={{ md: "50%" }} flexGrow="1">
+          {left}
+        </Box>
+        <Box mx={{ initial: "0", md: "4" }} className="self-stretch">
+          <Separator
+            orientation={{ initial: "horizontal", md: "vertical" }}
+            size="4"
+          />
+        </Box>
+        <Box flexBasis={{ md: "50%" }} flexGrow="1">
+          {right}
+        </Box>
       </Flex>
     </Section>
   );
