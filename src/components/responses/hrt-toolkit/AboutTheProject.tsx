@@ -36,9 +36,13 @@ export const AboutTheProject: FC = () => (
             retail value. Using our existing mutual aid networks, the kits are delivered to local
             frontline organizations who distribute the kits for free to trans people in need.
           </Text>
-          <Flex justify="between">
-            <Image src={fortPickett} className="w-[47%] h-auto rounded-lg" alt="The first about image" />
-            <Image src={fortPickett} className="w-[47%] h-auto rounded-lg" alt="The second about image" />
+          <Flex justify="between" wrap="wrap" >
+            <Box width={{sm: "100vw", md: "48%"}} p="2">
+              <Image src={fortPickett} className="w-full h-auto rounded-lg" alt="The first about image" />
+            </Box>
+            <Box width={{sm: "100vw", md: "48%"}} p="2">
+              <Image src={fortPickett} className="w-full h-auto rounded-lg" alt="The second about image" />
+            </Box>
           </Flex>
           <ul className="list-disc list-inside pl-2">
             {list_items?.map((item, index) => (
