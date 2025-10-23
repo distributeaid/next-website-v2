@@ -1,50 +1,79 @@
 import { FC } from "react";
-import { Container, Flex, Heading, Section, Text } from "@radix-ui/themes";
+import { Box, Button, Container, Flex, Heading, Section, Text } from "@radix-ui/themes";
+import Link from "next/link";
+import Image from "next/image";
+import fortPickett from "../../../../public/images/home/fort-pickett.jpg";
 
 export const AboutTheProject: FC = () => (
-  <>
-    <Section position="relative" width="100%" size="1" className="bg-red-50">
-      <Container>
-        <Flex
-          width="100%"
-          direction="column"
+  <Section position="relative" width="100%" size="1">
+    <Container className="bg-red-50" p="4">
+      <Flex
+        width="100%"
+        direction="column"
+        align="center"
+        justify="center"
+        gap="5"
+      >
+        <Heading
+          as="h2"
+          size="7"
+          weight="bold"
           align="center"
-          justify="center"
-          gap="5"
+          className="text-navy-800"
         >
-          <Heading
-            as="h2"
-            size="7"
-            weight="bold"
-            align="center"
-            className="text-navy-800"
-          >
-            About The Project
-          </Heading>
+          About The HRT Harm Reduction Toolkit Project
+        </Heading>
 
-          <Container
-            px="24px"
-            mb="2"
-            maxWidth={{ sm: "calc(100% - 48px)", md: "calc(100% - 160px)" }}
-          >
-            <ul className="list-disc list-inside">
-              {list_items?.map((item, index) => (
-                <li className="text-xl" key={`about_the_project_li_${index}`}>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </Container>
-        </Flex>
-      </Container>
-    </Section>
-  </>
+        <Container
+          px="24px"
+          mb="2"
+          maxWidth={{ sm: "calc(100% - 48px)", md: "calc(100% - 160px)" }}
+          className="text-xl"
+        >
+          <Text as="p">
+            Each kit includes a 1-year supply of medical equipment necessary to administer
+            injection-based hormone therapy. Each kit is worth approximately $65 when purchased at
+            retail value. Using our existing mutual aid networks, the kits are delivered to local
+            frontline organizations who distribute the kits for free to trans people in need.
+          </Text>
+          <Flex justify="between">
+            <Image src={fortPickett} className="w-[47%] h-auto rounded-lg" alt="The first about image" />
+            <Image src={fortPickett} className="w-[47%] h-auto rounded-lg" alt="The second about image" />
+          </Flex>
+          <ul className="list-disc list-inside pl-2">
+            {list_items?.map((item, index) => (
+              <li key={`about_the_project_li_${index}`}>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </Flex>
+    </Container>
+    <Flex
+      className="bg-circle-green rounded-bl-lg justify-around"
+      p="2"
+      width={{sm: "100%", md: "50%"}}
+      mx="auto"
+      style={{"margin-top": "-15px"}}
+      align="center"
+    >
+      <Text className="text-navy-800" size={{sm: "3", md: "6"}} weight="bold" as="p">Help Us Fund More Kits</Text>
+      <Button className="bg-white text-navy-800" size="2" asChild>
+        <Link
+          href="https://www.omprakash.org/global/distribute-aid/crowdfund/hrt---harm-reduction-toolkit"
+          target={"_blank"}
+          rel="noopener noreferrer"
+        >
+          Donate via Omprakash
+        </Link>
+      </Button>
+    </Flex>
+  </Section>
 );
 
 const list_items = [
-  "we don’t provide HRT but sundries needed to administer HRT safely for trans people who are often already in a precarious financial situation",
-  "harm reduction (needle sharing or reuse)",
-  "privacy for trans people in dangerous climate in US (needs better phrasing ofc)",
-  "using existing mutual aid networks",
-  "show $ impact made (based on production count) (?x multiplier)",
+  "The kits do not provide hormones but the sundries needed to administer safely",
+  "Harm reduction kits reduce risks from needle sharing or reuse and provide trans people with privacy in a hostile political climate",
+  "Access to gender-affirming hormone therapy saves lives"
 ];
