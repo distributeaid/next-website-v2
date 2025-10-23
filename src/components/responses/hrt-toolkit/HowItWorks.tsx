@@ -11,7 +11,6 @@ export const HowItWorks: FC = () => (
     <Flex justify="center" p="4">
       <Image
         src={graph}
-        className="w-5/6"
         alt="Materials purchased with monetary donations and obtained through in-kind donations are assembled to make the kits. The kits are sent to frontline groups who distribute them in their area."
       />
     </Flex>
