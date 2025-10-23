@@ -12,7 +12,7 @@ export const HrtToolkitHero: FC = () => (
           align="center"
           className="text-white"
         >
-          HRT KITS PROJECT
+          HRT - Harm Reduction Toolkit
         </Heading>
       </Container>
     </Section>
@@ -20,9 +20,7 @@ export const HrtToolkitHero: FC = () => (
     <Section>
       <Container size="3">
         <Text as="p" size="5" align="center" className="text-navy-800">
-          The Aid Standards for Sorting (ASSORT) are a set of interoperability
-          standards for humanitarian aid that are designed to save grassroots
-          organisations time, effort, and money.
+          We source harm reduction kits with medical equipment that our partners then distribute to trans people who take injection-based gender affirming hormone therapy.
         </Text>
       </Container>
     </Section>

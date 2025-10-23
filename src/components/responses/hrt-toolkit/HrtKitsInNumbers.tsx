@@ -15,6 +15,16 @@ import { HRTNumbersCard, HrtNumbersCardProps } from "./HrtNumbersCard";
 export const HrtKitsInNumbers: FC = () => {
   return (
     <Section p="0" my="4">
+      <Heading
+        as="h2"
+        size="7"
+        weight="bold"
+        align="center"
+        className="text-navy-800"
+        mb="5"
+      >
+        HRT Kits In Numbers
+      </Heading>
       <Flex gap="2" className="flex-wrap" align="center" justify="center">
         <HRTNumbersCard
           amount={1000}
@@ -28,7 +38,7 @@ export const HrtKitsInNumbers: FC = () => {
             PARTIAL KITS
           </Text>
           <Text as="p" size="5" weight="bold" align="center">
-            <Em>donate to get remaining supplies!</Em>
+            <Em>Donate to complete kits!</Em>
           </Text>
           <Button className="bg-white text-navy-800" size="4" asChild>
             <Link
