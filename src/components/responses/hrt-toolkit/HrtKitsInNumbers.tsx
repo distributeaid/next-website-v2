@@ -14,7 +14,7 @@ import { HRTNumbersCard, HrtNumbersCardProps } from "./HrtNumbersCard";
 
 export const HrtKitsInNumbers: FC = () => {
   return (
-    <Section p="0">
+    <Section p="0" my="4">
       <Flex gap="2" className="flex-wrap" align="center" justify="center">
         <HRTNumbersCard
           amount={1000}
