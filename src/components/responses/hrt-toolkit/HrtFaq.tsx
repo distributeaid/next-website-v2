@@ -23,13 +23,17 @@ export const HrtFaq: FC = () => (
       </Heading>
       <Container px="8" py="4" className="bg-navy-300">
         {faqs?.map((item, index) => (
-          <Box key={`faq-${index}`}>
-            <Text as="div" weight="bold" size="4">
-              Q: "{item[0]}"
-            </Text>
-            <Text as="div" size="3" className="pl-8">
-              A: {item[1]}
-            </Text>
+          <Box key={`faq-${index}`} my="1">
+            <details>
+              <summary>
+                <Text weight="bold" size="4">
+                  Q: "{item[0]}"
+                </Text>
+              </summary>
+              <Text as="div" size="3" className="pl-8">
+                A: {item[1]}
+              </Text>
+            </details>
           </Box>
         ))}
       </Container>
