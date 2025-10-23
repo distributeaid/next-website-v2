@@ -12,6 +12,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { HRTNumbersCard, HrtNumbersCardProps } from "./HrtNumbersCard";
 
+const values = {
+  partialKits: 1000,
+  producedKits: 1000,
+  saved: 10000,
+};
+
 export const HrtKitsInNumbers: FC = () => {
   return (
     <Section p="0" my="4">
@@ -27,7 +33,7 @@ export const HrtKitsInNumbers: FC = () => {
       </Heading>
       <Flex gap="2" className="flex-wrap" align="center" justify="center">
         <HRTNumbersCard
-          amount={1000}
+          amount={values.partialKits}
           background="circle-green"
           color="white"
           direction="column"
@@ -52,7 +58,7 @@ export const HrtKitsInNumbers: FC = () => {
         </HRTNumbersCard>
         <Flex height="360px" justify="between" direction="column">
           <HRTNumbersCard
-            amount={1000}
+            amount={values.producedKits}
             background="navy-300"
             color="navy-800"
             direction="row"
@@ -64,7 +70,7 @@ export const HrtKitsInNumbers: FC = () => {
             </Text>
           </HRTNumbersCard>
           <HRTNumbersCard
-            amount={10000}
+            amount={values.saved}
             background="navy-800"
             color="white"
             direction="row"

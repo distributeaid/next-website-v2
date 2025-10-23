@@ -20,7 +20,9 @@ export const HrtToolkitHero: FC = () => (
     <Section>
       <Container size="3">
         <Text as="p" size="5" align="center" className="text-navy-800">
-          We source harm reduction kits with medical equipment that our partners then distribute to trans people who take injection-based gender affirming hormone therapy.
+          We source harm reduction kits with medical equipment that our partners
+          then distribute to trans people who take injection-based gender
+          affirming hormone therapy.
         </Text>
       </Container>
     </Section>

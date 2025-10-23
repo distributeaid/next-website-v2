@@ -1,5 +1,13 @@
 import { FC } from "react";
-import { Box, Button, Container, Flex, Heading, Section, Text } from "@radix-ui/themes";
+import {
+  Box,
+  Button,
+  Container,
+  Flex,
+  Heading,
+  Section,
+  Text,
+} from "@radix-ui/themes";
 import Link from "next/link";
 import Image from "next/image";
 import fortPickett from "../../../../public/images/home/fort-pickett.jpg";
@@ -31,24 +39,32 @@ export const AboutTheProject: FC = () => (
           className="text-xl"
         >
           <Text as="p">
-            Each kit includes a 1-year supply of medical equipment necessary to administer
-            injection-based hormone therapy. Each kit is worth approximately $65 when purchased at
-            retail value. Using our existing mutual aid networks, the kits are delivered to local
-            frontline organizations who distribute the kits for free to trans people in need.
+            Each kit includes a 1-year supply of medical equipment necessary to
+            administer injection-based hormone therapy. Each kit is worth
+            approximately $65 when purchased at retail value. Using our existing
+            mutual aid networks, the kits are delivered to local frontline
+            organizations who distribute the kits for free to trans people in
+            need.
           </Text>
-          <Flex justify="between" wrap="wrap" >
-            <Box width={{sm: "100vw", md: "48%"}} p="2">
-              <Image src={fortPickett} className="w-full h-auto rounded-lg" alt="The first about image" />
+          <Flex justify="between" wrap="wrap">
+            <Box width={{ sm: "100vw", md: "48%" }} p="2">
+              <Image
+                src={fortPickett}
+                className="w-full h-auto rounded-lg"
+                alt="The first about image"
+              />
             </Box>
-            <Box width={{sm: "100vw", md: "48%"}} p="2">
-              <Image src={fortPickett} className="w-full h-auto rounded-lg" alt="The second about image" />
+            <Box width={{ sm: "100vw", md: "48%" }} p="2">
+              <Image
+                src={fortPickett}
+                className="w-full h-auto rounded-lg"
+                alt="The second about image"
+              />
             </Box>
           </Flex>
           <ul className="list-disc list-inside pl-2">
             {list_items?.map((item, index) => (
-              <li key={`about_the_project_li_${index}`}>
-                {item}
-              </li>
+              <li key={`about_the_project_li_${index}`}>{item}</li>
             ))}
           </ul>
         </Container>
@@ -57,12 +73,19 @@ export const AboutTheProject: FC = () => (
     <Flex
       className="bg-circle-green rounded-bl-lg justify-around"
       p="2"
-      width={{sm: "100%", md: "50%"}}
+      width={{ sm: "100%", md: "50%" }}
       mx="auto"
-      style={{"margin-top": "-15px"}}
+      style={{ marginTop: "-15px" }}
       align="center"
     >
-      <Text className="text-navy-800" size={{sm: "3", md: "6"}} weight="bold" as="p">Help Us Fund More Kits</Text>
+      <Text
+        className="text-navy-800"
+        size={{ sm: "3", md: "6" }}
+        weight="bold"
+        as="p"
+      >
+        Help Us Fund More Kits
+      </Text>
       <Button className="bg-white text-navy-800" size="2" asChild>
         <Link
           href="https://www.omprakash.org/global/distribute-aid/crowdfund/hrt---harm-reduction-toolkit"
@@ -79,5 +102,5 @@ export const AboutTheProject: FC = () => (
 const list_items = [
   "The kits do not provide hormones but the sundries needed to administer safely",
   "Harm reduction kits reduce risks from needle sharing or reuse and provide trans people with privacy in a hostile political climate",
-  "Access to gender-affirming hormone therapy saves lives"
+  "Access to gender-affirming hormone therapy saves lives",
 ];
