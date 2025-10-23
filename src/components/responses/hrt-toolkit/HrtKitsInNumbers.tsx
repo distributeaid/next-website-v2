@@ -13,6 +13,12 @@ import Link from "next/link";
 import { HRTNumbersCard, HrtNumbersCardProps } from "./HrtNumbersCard";
 import { kitsInNumbersValues as values } from "../../../data/hrtToolkitData";
 
+const values = {
+  partialKits: 1000,
+  producedKits: 1000,
+  saved: 10000,
+};
+
 export const HrtKitsInNumbers: FC = () => {
   return (
     <Section p="0" my="4">
