@@ -17,7 +17,7 @@ const SubscribeCTA = () => {
       }}
       my="5"
     >
-      <Text size="7" align="center" className="max-w-[1000px]">
+      <Text size="6" align="center" className="max-w-[1000px]">
         Distribute Aid connects donors with frontline aid organizations serving
         communities in need. Our logistics experts help deliver more aid more
         quickly—at lower costs.
@@ -25,7 +25,7 @@ const SubscribeCTA = () => {
       <Box>
         <Button
           onClick={handleClick}
-          className="py-7 px-9 flex-grow-0 text-[16px]"
+          className="py-7 px-11 flex-grow-0 text-[16px] cursor-pointer"
           style={{ borderRadius: "0.5rem", fontWeight: "500" }}
         >
           Subscribe
