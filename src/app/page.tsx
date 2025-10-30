@@ -9,6 +9,8 @@ import {
   GetInvolved,
 } from "@/components/home";
 
+import HeroSection from "@/components/ui/HeroSection";
+
 const Home = () => {
   return (
     <main>
