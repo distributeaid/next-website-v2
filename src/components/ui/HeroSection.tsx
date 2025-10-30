@@ -45,6 +45,7 @@ const HeroSection = ({
             position={"absolute"}
             height={{ initial: "400px", sm: "550px", lg: "733px" }}
             width={{ initial: "100%", sm: "70%" }}
+            className="lg:rounded-br-[32px] overflow-hidden"
           >
             <Image fill src={imgSrc} alt={imgAlt} />
           </Box>
@@ -52,7 +53,7 @@ const HeroSection = ({
           <Flex
             direction={"column"}
             position={"relative"}
-            top={"329px"}
+            bottom={"-209px"}
             left={{ lg: "-27%" }}
             gap={"7"}
             width={"100%"}
@@ -65,14 +66,19 @@ const HeroSection = ({
               className="text-white"
               align={{ initial: "center", sm: "left" }}
             >
-              {heading}
+              {heading.split("\n").map((line) => (
+                <span key={line}>
+                  {line}
+                  <br />
+                </span>
+              ))}
             </Heading>
 
             {/* ship aid */}
             <Flex
               p={{ initial: "6", sm: "5", lg: "7" }}
               direction={{ initial: "column", sm: "row", lg: "column" }}
-              style={{ background: "var(--green-9)" }}
+              style={{ background: "#DFCDE8" }}
               width={{ initial: "auto", sm: "100%", lg: "670px" }}
               height={{ initial: "auto", sm: "130px", lg: "184px" }}
               gap={{ initial: "3", sm: "1", lg: "5" }}
@@ -100,12 +106,16 @@ const HeroSection = ({
                 ml={{ initial: "auto", sm: "0" }}
               >
                 {buttons.map(({ label, href, invertColors, targetBlank }) => (
-                  <Box asChild width={{ initial: "100%", sm: "auto" }}>
+                  <Box
+                    asChild
+                    width={{ initial: "100%", sm: "auto" }}
+                    key={href}
+                  >
                     <Button
                       className={
                         invertColors
-                          ? "bg-white text-black hover:bg-navy-500 hover:text-white transition-200"
-                          : "bg-navy-600 hover:bg-navy-500 "
+                          ? "bg-navy-600 hover:bg-navy-500 "
+                          : "bg-white text-black hover:bg-navy-500 hover:text-white transition-200"
                       }
                       size={{ initial: "3", sm: "2", md: "3" }}
                       asChild
