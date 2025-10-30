@@ -39,7 +39,8 @@ export const AboutTheProject: FC = () => (
           className="text-xl"
         >
           <Text as="p">
-            Each kit includes a 1-year supply of medical equipment necessary to
+            Each kit includes a{" "}
+            <strong>1-year supply of medical equipment</strong> necessary to
             administer injection-based hormone therapy. Each kit is worth
             approximately $65 when purchased at retail value. Using our existing
             mutual aid networks, the kits are delivered to local frontline
