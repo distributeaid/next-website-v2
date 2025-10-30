@@ -7,7 +7,7 @@ const faqs = [
   [
     "What is HRT?",
     <>
-      <Text as="p" className="mb-3">
+      <Text as="p">
         <strong>A:</strong> HRT is short for Hormone Replacement Therapy, which
         is also known as Gender Affirming Hormone Therapy (GAHT). HRT also
         happens to be the beginning letters of <strong>H</strong>arm{" "}
@@ -19,14 +19,14 @@ const faqs = [
         Gender Affirming Hormone Therapy has been linked to better mental health
         outcomes for trans and nonbinary people, lowering suicidal ideation and
         increasing happiness. You can find out more about this via the{" "}
-        <a href="https://ustranssurvey.org">2022 U.S. Trans Survey</a>."
+        <a href="https://ustranssurvey.org">2022 U.S. Trans Survey</a>.
       </Text>
     </>,
   ],
   [
     "What’s in an HRT kit? Are you distributing hormones?",
     <>
-      <Text as="p" className="mb-3">
+      <Text as="p">
         <strong>A:</strong> We do not distribute hormones. We only assemble the
         sundries needed to administer hormone replacement therapy. These include
         syringes, needles in various gauges, disinfectant wipes, and a sharps
@@ -43,7 +43,7 @@ const faqs = [
   [
     "Why do trans people need these things and why can’t they just buy them?",
     <>
-      <Text as="p" className="mb-3">
+      <Text as="p">
         <strong>A:</strong> While $65 for yearly supplies may not seem like a
         lot of money for many people, it’s an expense that many trans people who
         are already more likely to be in precarious economical situations cannot
@@ -87,7 +87,7 @@ const faqs = [
   [
     "I’m a trans person in need of an HRT Harm Reduction Toolkit. How do I get one?",
     <>
-      <Text as="p" className="mb-3">
+      <Text as="p">
         <strong>A:</strong> If you are in need of an HRT Harm Reduction Toolkit,
         we recommend getting in touch with your local frontline organisation,
         mutual aid hub, etc. and asking them if they want to get involved.
@@ -104,13 +104,13 @@ const faqs = [
   [
     "How did this project start?",
     <>
-      <Text as="p" className="mb-3">
+      <Text as="p">
         <strong>A:</strong> The escalating attacks on transgender people in the
         US after November 2024 led to our decision to do something to
         specifically support trans people. We{" "}
         <a href="https://bsky.app/profile/borderless.bsky.social/post/3lda7sebxqk2e">
           started our campaign
-        </a>
+        </a>{" "}
         in December 2024 and fairly quickly raised an impressive amount of
         funds, which we then put to use sourcing the materials needed to safely
         administer gender-affirming hormone therapy or Hormone Replacement
@@ -133,7 +133,7 @@ const faqs = [
     "I’m a journalist and want to cover this project. Who do I contact?",
     <>
       <Text as="p">
-        <strong>A:</strong> [tbd]
+        <strong>A:</strong> [TBD]
       </Text>
     </>,
   ],
@@ -153,7 +153,7 @@ export const HrtFaq: FC = () => (
                 Q: "{item[0]}"
               </Text>
             </summary>
-            <Box as="div" className="pl-8">
+            <Box as="div" className="pl-8 faq-answer">
               {item[1]}
             </Box>
           </details>
