@@ -215,7 +215,6 @@ export const Timeline: React.FC = () => {
                 style={{ backgroundColor: `${item.bgColor}` }}
                 align="center"
                 justify="center"
-                // position="absolute"
                 left={{
                   initial: "calc(50% - 40px)",
                   sm: "auto",
@@ -249,7 +248,7 @@ export const Timeline: React.FC = () => {
                   md: "calc(50% - 40px - 12px)",
                   lg: "calc(50% - 50px - 12px)",
                 }}
-                mx={{ initial: "5" }}
+                mx={{ initial: "5", md: "2" }}
               >
                 <Card
                   variant="ghost"
