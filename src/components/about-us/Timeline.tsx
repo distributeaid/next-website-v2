@@ -134,7 +134,7 @@ export const Timeline: React.FC = () => {
           className="space-y-3 md:space-y-[-60px]"
           mx={{ initial: "4", md: "8" }}
         >
-          {[...data].map((item, index) => (
+          {[...data].reverse().map((item, index) => (
             <Flex
               className="justify-end md:justify-normal md:even:flex-row-reverse"
               align="center"
