@@ -12,6 +12,12 @@ import moriaFireRelief from "../../public/images/home/carousel/moria_fire_relief
 import soapRelief from "../../public/images/home/carousel/soap_relief.png";
 import waterRelief from "../../public/images/home/carousel/water_relief.png";
 
+// what we do images
+import twoPeopleHoldingBoxes from "../../public/images/home/what-we-do/two-people-holding-boxes.png";
+import wareHouseWIthSupplies from "../../public/images/home/what-we-do/warehouse-with-supplies.png";
+import peopleCarryingBoxes from "../../public/images/home/what-we-do/people-carrying-boxes-from-truck.png";
+import writingDataOnPaper from "../../public/images/home/what-we-do/writing-data-on-paper.png";
+
 export const activities = [
   {
     title: "Refugee Aid",
@@ -25,7 +31,7 @@ export const activities = [
     region: "Europe & USA",
     image: covid19Response,
     description:
-      "Distribute Aid is actively working to prevent the spread of COVID-19 globally. We regularly send hygiene and PPE shipments to our European partners who continue to work to protect people in crowded refugee camps. Because COVID-19 affects everybody, our response grew as the virus spread. We now also collaborate with multiple grassroots networks in the US to support their response.",
+      "Distribute Aid is actively working to prevent the spread of COVID globally. We regularly send hygiene and PPE shipments to our European partners who continue to work to protect people in crowded refugee camps. Because COVID affects everybody, our response grew as the virus spread. We now also collaborate with multiple grassroots networks in the US to support their response.",
   },
   {
     title: "In-Kind Donations",
@@ -64,6 +70,37 @@ export const socials = [
     icon: github,
     name: "github",
     href: "https://github.com/distributeaid",
+  },
+];
+
+export const whatWeDoData = [
+  {
+    title: "Deliver Aid",
+    description:
+      "We bring food, medicine, and vital supplies to people suffering because of natural or man-made disasters.",
+    img: twoPeopleHoldingBoxes,
+    alt: "two volunteers holding boxes of aid supplies",
+  },
+  {
+    title: "Minimize Waste",
+    description:
+      "We ensure the right aid is delivered in an efficient manner, reducing costs, emissions, and unwanted supplies.",
+    img: wareHouseWIthSupplies,
+    alt: "a warehouse filled with organized supplies",
+  },
+  {
+    title: "Coordinate Relief Efforts",
+    description:
+      "We build coalitions of local grassroots groups, charities, and companies that respond quickly and effectively to crises.",
+    img: peopleCarryingBoxes,
+    alt: "people carrying boxes from a truck",
+  },
+  {
+    title: "Share Knowledge",
+    description:
+      "We develop needs assessments, guides, trainings, and open-source tech tools to drive systemic change.",
+    img: writingDataOnPaper,
+    alt: "writing data on paper",
   },
 ];
 

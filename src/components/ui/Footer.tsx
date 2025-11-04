@@ -68,10 +68,12 @@ const Footer = () => {
             style={{ textAlign: "justify" }}
           >
             <Text>
-              Distribute aid delivers humanitarian aid to communities in need by
-              coordinating end-to-end shipments, we make it easy for donors to
-              connect with frontline aid organisations, understand the needs on
-              the ground, and get their aid delivered.
+              Distribute Aid is a grassroots-to-grassroots humanitarian aid
+              organization. Founded in 2019, we coordinate relief shipments and
+              manage logistics for disaster response efforts around the world.
+              Our open-source tools and a committed team of volunteers allow us
+              to deliver more aid for less money, while also minimizing waste
+              and emissions.
             </Text>
           </Box>
         </Flex>

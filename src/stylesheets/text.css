@@ -2,6 +2,10 @@
   @apply list-disc pl-10;
 }
 
+.list-inside ul {
+  list-style-position: inside;
+}
+
 .donate-icon--upper {
   transform: translate(-35%, -35%);
 }

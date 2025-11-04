@@ -20,7 +20,7 @@ const DonateLandingText = () => {
         </Text>
         <Text align={"center"} weight={"bold"}>
           If you have food, clothing, medical equipment, or other items you’d
-          like to span donate, please contact:
+          like to donate, please contact:
         </Text>
       </Flex>
       <Flex gap={"5"} direction={"column"}>

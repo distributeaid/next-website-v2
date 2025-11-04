@@ -68,9 +68,7 @@ const HeroSection = () => {
               solutions that improve Distribute Aid’s efficiency and
               scalability, despite the resource limitations faced by NGOs. We
               provide solutions that can be replicated across the sector, which
-              is one of the reasons why our work is open-sourced. Read on to
-              learn more about our tech team and our Open Source Explorers
-              program.
+              is one of the reasons why our work is open-sourced.
             </Text>
 
             <Text

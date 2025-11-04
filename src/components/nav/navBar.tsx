@@ -11,6 +11,7 @@ import Image from "next/image";
 import cx from "classnames";
 import MobileNavBar from "./mobileNavBar";
 import { links } from "@/data/navBarLinks";
+
 const NavBar = () => {
   const [nav, setNav] = useState(false);
 
@@ -22,21 +23,22 @@ const NavBar = () => {
           <Flex
             width={"100%"}
             style={{
-              backgroundColor: "var(--blue-9)",
               color: "white",
               zIndex: "50",
+              borderBottom: "2px solid ",
+              borderColor: "var(--green-9)",
             }}
+            className="bg-navy-800"
             position={"fixed"}
             height={"80px"}
             px={"4"}
             justify={"between"}
             align={"center"}
           >
-            {/* left side about 40% width */}
             <Flex
-              width={{ initial: "100%", md: "40%" }}
               align={"center"}
               mx={"4"}
+              ml={{ initial: "3", lg: "100px" }}
               justify={{ initial: "start", md: "center" }}
               gap={"6"}
             >
@@ -53,7 +55,7 @@ const NavBar = () => {
                 justify={"center"}
                 gapX={"2"}
               >
-                {SOCIAL_LINKS.slice(0, 3).map((social) => (
+                {SOCIAL_LINKS.map((social) => (
                   <NavigationMenu.Item key={social.name}>
                     <NavigationMenu.Link href={social.link} target="_blank">
                       <Image
@@ -71,31 +73,30 @@ const NavBar = () => {
               <Box display={{ initial: "none", sm: "block" }}>
                 <NavigationMenu.Item>
                   <NavigationMenu.Link href="/newsletter">
-                    NewsLetter
+                    Newsletter
                   </NavigationMenu.Link>
                 </NavigationMenu.Item>
               </Box>
             </Flex>
-
-            {/* Page Links about 60% width*/}
+            {/* page links */}
             <Flex
-              width={"60%"}
-              justify={"between"}
+              gapX={"40px"}
+              justify={"end"}
               align={"center"}
-              mx={"4"}
+              mr={"100px"}
               display={{ initial: "none", md: "flex" }}
             >
-              {links.map(({ id, title, url, isSubMenu, subMenu }) => (
+              {links.map(({ title, url, isSubMenu, subMenu }) => (
                 <NavigationMenu.Item
                   className={cx(
                     "font-medium  decoration-2 underline-offset-8 duration-200",
                     {
-                      "hover:underline": id !== 7,
+                      "hover:underline": title !== "Donate",
                       "hover:bg-navy-500 decoration-none cursor-pointer hover:text-white duration-200 text-dark-blue bg-white rounded-lg py-3 px-6 ":
-                        id === 7,
+                        title === "Donate",
                     },
                   )}
-                  key={id}
+                  key={title}
                 >
                   {isSubMenu ? (
                     <Box className="group">
@@ -106,7 +107,9 @@ const NavBar = () => {
                         asChild
                       >
                         <NavigationMenu.Trigger>
-                          {title}{" "}
+                          <NavigationMenu.Link href={url}>
+                            {title}
+                          </NavigationMenu.Link>
                           <FaChevronDown className="ml-2 transition-transform duration-200 group-hover:rotate-180" />
                         </NavigationMenu.Trigger>
                       </Flex>
@@ -114,6 +117,8 @@ const NavBar = () => {
                         as="div"
                         asChild
                         position={"absolute"}
+                        maxWidth={"140px"}
+                        mt={"3"}
                         style={{
                           background: "white",
                           zIndex: "10",
@@ -125,21 +130,20 @@ const NavBar = () => {
                         <NavigationMenu.Content>
                           <NavigationMenu.Sub>
                             <NavigationMenu.List>
-                              {subMenu?.map(({ id, title, url }) => (
-                                <Flex
-                                  key={id}
-                                  width={"100%"}
-                                  style={{ color: "black" }}
-                                  p={"1"}
-                                  className="hover:bg-navy-200"
-                                  asChild
-                                >
-                                  <NavigationMenu.Item>
-                                    <NavigationMenu.Link href={url}>
+                              {subMenu?.map(({ title, url }) => (
+                                <NavigationMenu.Item key={title}>
+                                  <NavigationMenu.Link href={url}>
+                                    <Flex
+                                      width="100%"
+                                      py="1"
+                                      px="4"
+                                      className="hover:bg-navy-200"
+                                      style={{ color: "black" }}
+                                    >
                                       {title}
-                                    </NavigationMenu.Link>
-                                  </NavigationMenu.Item>
-                                </Flex>
+                                    </Flex>
+                                  </NavigationMenu.Link>
+                                </NavigationMenu.Item>
                               ))}
                             </NavigationMenu.List>
                             <NavigationMenu.Viewport />
@@ -182,7 +186,11 @@ const NavBar = () => {
                 onClick={() => setNav(!nav)}
               >
                 {nav ? (
-                  <Button style={{ cursor: "pointer" }} size={"4"}>
+                  <Button
+                    className="bg-navy-800"
+                    style={{ cursor: "pointer" }}
+                    size={"4"}
+                  >
                     Close <FaTimes size={30} />
                   </Button>
                 ) : (

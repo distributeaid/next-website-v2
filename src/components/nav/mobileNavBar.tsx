@@ -9,7 +9,6 @@ import Image from "next/image";
 const MobileNavBar = () => {
   return (
     <Flex
-      style={{ backgroundColor: "var(--blue-9)" }}
       display={{ initial: "flex", md: "none" }}
       direction={"column"}
       justify={"center"}
@@ -20,16 +19,16 @@ const MobileNavBar = () => {
       height={"100vh"}
       p={"6"}
       gapY={"8"}
-      className="border z-30"
+      className="border bg-navy-800 z-30"
       align={"start"}
     >
       {/* Accordion - Ensuring only one section is open */}
       <Accordion.Root type="single" collapsible className="w-full">
         {links
-          .filter(({ id }) => id !== 7) // Hide Donate button here
-          .map(({ id, title, url, isSubMenu, subMenu }) => (
+          .filter(({ title }) => title !== "Donate") // Hide Donate button here
+          .map(({ title, url, isSubMenu, subMenu }) => (
             <Accordion.Item
-              key={id}
+              key={title}
               value={title}
               className="font-medium py-4 "
             >
@@ -44,9 +43,9 @@ const MobileNavBar = () => {
                   <Accordion.Content className="w-full">
                     <NavigationMenu.Sub>
                       <NavigationMenu.List className="w-full border-y border-thin">
-                        {subMenu?.map(({ id, title, url }) => (
+                        {subMenu?.map(({ title, url }) => (
                           <Flex
-                            key={id}
+                            key={title}
                             as="div"
                             p={"1"}
                             width={"100%"}
@@ -83,7 +82,7 @@ const MobileNavBar = () => {
 
       {/* NewsLetter */}
       <NavigationMenu.Item>
-        <NavigationMenu.Link href="/newsletter">NewsLetter</NavigationMenu.Link>
+        <NavigationMenu.Link href="/newsletter">Newsletter</NavigationMenu.Link>
       </NavigationMenu.Item>
 
       {/* Social media links */}
