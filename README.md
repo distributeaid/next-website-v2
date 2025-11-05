@@ -1,4 +1,4 @@
-## About the Project
+# README 
 
 This repository contains the scaffolding for DA's new website, powered by Nextjs, TypeScript & Strapi.
 
