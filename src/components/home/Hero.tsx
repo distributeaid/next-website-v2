@@ -3,9 +3,8 @@ import HeroSection from "../ui/HeroSection";
 const Hero = () => {
   return (
     <HeroSection
-      heading={`Your Mutual
-        Aid Logistic
-        Experts`}
+      heading="Your Mutual Aid Logistic
+        Experts"
       imgSrc="/images/home/hero-image.jpg"
       imgAlt=""
       buttonHeading="Ship aid to people in need."
