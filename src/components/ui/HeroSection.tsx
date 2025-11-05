@@ -26,8 +26,8 @@ const HeroSection = ({
   return (
     <Box>
       <Flex
-        mb={{ initial: "30%", sm: "18%" }}
-        height={"550px"}
+        mb={{ initial: "270px", sm: "180px", lg: "245px" }}
+        height={{ initial: "590px", sm: "550px" }}
         style={{ background: "var(--blue-background)" }}
         className="shadow-xl"
       >
@@ -44,7 +44,7 @@ const HeroSection = ({
             position={"absolute"}
             height={{ initial: "400px", sm: "550px", lg: "733px" }}
             width={{ initial: "100%", sm: "70%" }}
-            className="lg:rounded-br-[32px] overflow-hidden"
+            className="min-[1280px]:rounded-br-[32px] overflow-hidden"
           >
             <Image fill src={imgSrc} alt={imgAlt} className="object-cover" />
           </Box>
@@ -52,27 +52,25 @@ const HeroSection = ({
           <Flex
             direction={"column"}
             position={"relative"}
-            bottom="0"
+            bottom={{ initial: "-240px", sm: "-131px", lg: "0" }}
             justify="end"
+            align={{ initial: "center", sm: "start" }}
             left={{ lg: "-27%" }}
             gap={"5"}
             height={{ lg: "733px" }}
             width={"100%"}
           >
-            <TextMark width="200px" />
-            <Heading
-              as="h1"
-              size={{ initial: "8", sm: "9" }}
-              className="text-white leading-[4.5rem]"
-              align={{ initial: "center", sm: "left" }}
-            >
-              {heading.split("\n").map((line) => (
-                <span key={line}>
-                  {line}
-                  <br />
-                </span>
-              ))}
-            </Heading>
+            <TextMark width="240px" />
+            <Box maxWidth={{ initial: "400px" }}>
+              <Heading
+                as="h1"
+                size={{ initial: "8", sm: "9" }}
+                className="text-white md:leading-[4.5rem]"
+                align={{ initial: "center", sm: "left" }}
+              >
+                {heading}
+              </Heading>
+            </Box>
             {/* link container */}
             <Flex
               p={{ initial: "6", sm: "5", lg: "7" }}
@@ -80,9 +78,9 @@ const HeroSection = ({
               style={{ background: "#DFCDE8" }}
               width={{ initial: "auto", sm: "100%", lg: "670px" }}
               height={{ initial: "auto", sm: "130px", lg: "184px" }}
-              gap={{ initial: "3", sm: "1", lg: "5" }}
+              gap={{ initial: "3", sm: "5" }}
               align={{ sm: "center", lg: "start" }}
-              className="z-10 rounded-bl-[32px] "
+              className="z-10 rounded-bl-[32px]"
             >
               <Heading
                 as="h2"
