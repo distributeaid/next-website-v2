@@ -5,71 +5,86 @@ import { Box, Flex, Container, Section, Heading, Text } from "@radix-ui/themes";
 export const AboutHero: FC = () => (
   <>
     <Section
-      position="relative"
       width="100%"
-      pb="164px"
-      mb="100px"
-      className="bg-navy-900"
+      pt={{ initial: "2", sm: "7", md: "9" }}
+      pb={{ initial: "80px", sm: "140px", md: "148px" }}
+      mb="0"
+      className="bg-navy-800"
     >
-      <Container size="3">
+      <Box
+        pt={{ initial: "1", md: "4" }}
+        pb={{ initial: "1", md: "8" }}
+        px={{ initial: "6", md: "9", lg: "180px" }}
+      >
         <Heading
           as="h1"
-          size="9"
+          size={{ initial: "7", sm: "8", md: "9" }}
           weight="bold"
           align="center"
           className="text-white"
+          mb={{ initial: "3", sm: "4" }}
         >
-          Distribute Aid
+          About Us
         </Heading>
-        <Text as="p" size="7" align="center" className="text-white">
-          To provide for basic human needs at scale by connecting communities
+        <Text
+          as="p"
+          size={{ initial: "5", sm: "6", md: "7" }}
+          align="center"
+          className="text-white"
+        >
+          We provide for basic human needs at scale by connecting communities
           and empowering people to uphold human dignity.
         </Text>
-      </Container>
-      <Flex
-        position="absolute"
-        bottom="-100px"
-        width="100%"
-        align="start"
-        justify="center"
-        wrap="wrap"
-        gap="5"
-        px="4"
-      >
+      </Box>
+    </Section>
+    <Flex
+      width="100%"
+      gap={{ initial: "2", sm: "4" }}
+      wrap="nowrap"
+      justify="center"
+      mt={{ initial: "-60px", sm: "-100px", md: "-140px" }}
+      mb={{ initial: "-10px" }}
+    >
+      <Box className="rounded-2xl overflow-hidden flex-shrink-0 w-[100px] sm:w-[160px] md:w-[200px] lg:w-[280px]">
         <Image
           src={"/images/about-us/hero-1.png"}
           alt="Hero Image"
-          width={200}
-          height={200}
+          width={280}
+          height={280}
+          style={{ width: "100%", height: "auto", objectFit: "cover" }}
         />
+      </Box>
+      <Box className="rounded-2xl overflow-hidden flex-shrink-0 w-[100px] sm:w-[160px] md:w-[200px] lg:w-[280px]">
         <Image
           src={"/images/about-us/hero-2.png"}
           alt="Hero Image"
-          width={200}
-          height={200}
-          className="hidden sm:block"
+          width={280}
+          height={280}
+          style={{ width: "100%", height: "auto", objectFit: "cover" }}
         />
+      </Box>
+      <Box className="rounded-2xl overflow-hidden flex-shrink-0 w-[100px] sm:w-[160px] md:w-[200px] lg:w-[280px]">
         <Image
           src={"/images/about-us/hero-3.png"}
           alt="Hero Image"
-          width={200}
-          height={200}
-          className="hidden md:block "
+          width={280}
+          height={280}
+          style={{ width: "100%", height: "auto", objectFit: "cover" }}
         />
-      </Flex>
-    </Section>
+      </Box>
+    </Flex>
     <Section>
-      <Container size="3">
+      <Box px={{ initial: "7", sm: "140px", md: "160px" }}>
         <Heading
-          as="h2"
-          size="9"
+          as="h1"
+          size={{ initial: "7", sm: "8" }}
           weight="bold"
           align="center"
-          className="text-navy-900"
+          className="text-navy-900 lg:leading-tight"
         >
           Support us today, so communities are prepared for tomorrow.
         </Heading>
-      </Container>
+      </Box>
     </Section>
   </>
 );

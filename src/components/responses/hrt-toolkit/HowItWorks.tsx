@@ -1,7 +1,8 @@
 import { FC } from "react";
 import { Box, Flex, Heading, Section } from "@radix-ui/themes";
 import Image from "next/image";
-import graph from "../../../../public/images/responses/hrt-toolkit/how-it-works-graph.png";
+import graphHorizontal from "../../../../public/images/responses/hrt-toolkit/how-it-works-graph.png";
+import graphVertical from "../../../../public/images/responses/hrt-toolkit/how-it-works-vertical.png";
 
 export const HowItWorks: FC = () => (
   <Section>
@@ -10,8 +11,13 @@ export const HowItWorks: FC = () => (
     </Heading>
     <Flex justify="center" p="4">
       <Image
-        src={graph}
-        className="w-5/6"
+        src={graphHorizontal}
+        className="w-1/2 h-auto hidden md:block"
+        alt="Materials purchased with monetary donations and obtained through in-kind donations are assembled to make the kits. The kits are sent to frontline groups who distribute them in their area."
+      />
+      <Image
+        src={graphVertical}
+        className="w-full h-auto block md:hidden"
         alt="Materials purchased with monetary donations and obtained through in-kind donations are assembled to make the kits. The kits are sent to frontline groups who distribute them in their area."
       />
     </Flex>

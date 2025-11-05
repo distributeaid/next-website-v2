@@ -21,7 +21,7 @@ const technologies = [
   "Strapi",
   "Jest",
   "Supertest",
-  "Mintlify",
+  "Astro",
 ];
 
 export const TechStackSection = () => {
