@@ -7,7 +7,7 @@ import ImageTextCTA from "@/components/cta/ImageTextCTA";
 import { WorkingSection } from "@/components/tech/WorkingSection";
 
 const ctaText =
-  "**We’re usually looking to onboard new volunteers, especially experienced backend and frontend developers.** \n\n You don’t need experience with our specific stack, as long as you’re self-motivated and happy to expand your skills. It would be best if you have at least some experience contributing to open-source software. If you don’t yet, check out our [Open Source Explorers program](/tech/open-source-explorers) instead. Our team meets once a month for a sprint meeting to coordinate. We also host two casual weekly tech hangs on Zoom to give folks a chance to collaborate. \n\n If you’re interested in joining our team, please tell us a bit about yourself, why you want to join Distribute Aid and your skills. A link to your GitHub profile would also be helpful!";
+  "**We continuously grow our diverse and international team of frontend, backend, and design volunteers!** \n\n We’re looking for experienced engineers, but you don’t need to know our entire stack, as long as you’re self-motivated and happy to expand your skills. Some experience contributing to open-source software is helpful. \n\n Our team meets once a month for a sprint meeting. We also host two casual weekly tech hangs on Zoom to give folks a chance to collaborate. Contributors are expected to join at least 1x tech hang per month and 1x sprint meeting per quarter. You can read more about how we run our tech team on [GitHub](https://github.com/distributeaid/docs/blob/saga/how-to-DA/contributing.md).\n\n If you’re interested in joining our team, please tell us a bit about yourself, why you want to join Distribute Aid and your skills. A link to your GitHub profile would also be helpful!";
 
 const page = () => {
   return (
@@ -34,7 +34,7 @@ const page = () => {
       <Section size={{ initial: "1", md: "2" }}>
         <ImageTextCTA
           image="/images/tech/ukraine-response-gallery-02.png"
-          heading="How To Join Our Team!"
+          heading="How To Join Our Tech Team!"
           text={ctaText}
           link="mailto:tech@distributeaid.org"
           bgColor="gray-300"
