@@ -15,7 +15,7 @@ const IconHeader = ({ Icon, title, color = "blue" }: IconHeaderProps) => {
     "bg-circle-blue": color === "blue",
     "bg-circle-green": color === "green",
     "bg-circle-pink": color === "pink",
-    "bg-circle-grey": color === "grey",
+    "bg-circle-gray": color === "grey",
   });
 
   return (
