@@ -158,10 +158,10 @@ export const Timeline: React.FC = () => {
                 width={{ initial: "80px", lg: "100px" }}
                 direction="column"
               >
-                <Text weight="bold" align="center">
+                <Text weight="bold" align="center" size="2">
                   {item.period.split(" ")[0]}
                 </Text>
-                <Text weight="bold" align="center">
+                <Text weight="bold" align="center" size="2">
                   {item.period.split(" ")[1]}
                 </Text>
               </Flex>
