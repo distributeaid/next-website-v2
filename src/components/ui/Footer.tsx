@@ -11,7 +11,14 @@ const buttonStyle = {
 };
 
 const ColumnHeading = ({ children }: { children: React.ReactNode }) => (
-  <Heading size={{ initial: "5" }}>{children}</Heading>
+  <Heading
+    size={{ initial: "5" }}
+    style={{
+      fontFamily: "var(--font-roboto)",
+    }}
+  >
+    {children}
+  </Heading>
 );
 
 const FooterLinks = () => (
