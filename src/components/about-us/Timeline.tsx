@@ -166,8 +166,12 @@ export const Timeline: React.FC = () => {
             2018
           </Link>
         </Flex>
-        <Box width="76%" mx="auto" display={{ initial: "none", sm: "block", md: "none" }}>
-          <Separator mt="6" size="4" className="bg-navy-900 h-[2px]"/>
+        <Box
+          width="76%"
+          mx="auto"
+          display={{ initial: "none", sm: "block", md: "none" }}
+        >
+          <Separator mt="6" size="4" className="bg-navy-900 h-[2px]" />
         </Box>
         <Box
           className="space-y-3 md:space-y-[-60px]"
@@ -180,8 +184,8 @@ export const Timeline: React.FC = () => {
               align="center"
               position="relative"
               key={index}
-              pt={{  initial: "116px",sm: "100px", md: "96px" }}
-              pb={{  initial: "40px" }}
+              pt={{ initial: "116px", sm: "100px", md: "96px" }}
+              pb={{ initial: "40px" }}
             >
               {/* Separator */}
               {index === 0 && (
@@ -241,7 +245,7 @@ export const Timeline: React.FC = () => {
                   item.bgColor === "navy-500"
                     ? "bg-navy-500 text-gray-50"
                     : "text-turquoise-600",
-                  "absolute md:relative lg:absolute"
+                  "absolute md:relative lg:absolute",
                 )}
                 style={{ backgroundColor: `${item.bgColor}` }}
                 align="center"
@@ -302,7 +306,12 @@ export const Timeline: React.FC = () => {
                         borderRadius: "15px",
                       }}
                     />
-                    <Text as="div" size="2" align="center" className="text-navy-900">
+                    <Text
+                      as="div"
+                      size="2"
+                      align="center"
+                      className="text-navy-900"
+                    >
                       {item.description}
                     </Text>
                   </Flex>
