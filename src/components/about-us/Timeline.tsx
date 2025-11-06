@@ -166,12 +166,8 @@ export const Timeline: React.FC = () => {
             2018
           </Link>
         </Flex>
-        <Box
-          width="76%"
-          mx="auto"
-          display={{ initial: "none", sm: "block", md: "none" }}
-        >
-          <Separator mt="6" size="4" className="bg-navy-900 h-[2px]" />
+        <Box width="76%" mx="auto" display={{ initial: "none", sm: "block", md: "none" }}>
+          <Separator mt="6" size="4" className="bg-navy-900 h-[2px]"/>
         </Box>
         <Box
           className="space-y-3 md:space-y-[-60px]"
@@ -179,15 +175,33 @@ export const Timeline: React.FC = () => {
         >
           {[...data].reverse().map((item, index) => (
             <Flex
-              className="justify-center md:justify-normal md:even:flex-row-reverse"
+              id={item.id}
+              className="scroll-mt-28 justify-center md:justify-normal md:even:flex-row-reverse"
               align="center"
               position="relative"
               key={index}
-              pt={{  initial: "116px", md: "96px" }}
+              pt={{  initial: "116px",sm: "100px", md: "96px" }}
               pb={{  initial: "40px" }}
             >
               {/* Separator */}
-              {data.length - 1 !== index && (
+              {index === 0 && (
+                <Box
+                  asChild
+                  position="absolute"
+                  top="50%"
+                  left={{ initial: "50%", sm: "50%" }}
+                  width="2px"
+                  display={{ initial: "block", sm: "none", md: "block" }}
+                  height="50%"
+                >
+                  <Separator
+                    orientation="vertical"
+                    size="4"
+                    className="bg-navy-900"
+                  />
+                </Box>
+              )}
+              {index !== 0 && data.length - 1 !== index && (
                 <Box
                   asChild
                   position="absolute"
@@ -203,7 +217,24 @@ export const Timeline: React.FC = () => {
                   />
                 </Box>
               )}
-              {/* Time/Year */}
+              {index !== 0 && data.length - 1 === index && (
+                <Box
+                  asChild
+                  position="absolute"
+                  top="5"
+                  left={{ initial: "50%", sm: "50%" }}
+                  width="2px"
+                  display={{ initial: "block", sm: "none", md: "block" }}
+                  height="50%"
+                >
+                  <Separator
+                    orientation="vertical"
+                    size="4"
+                    className="bg-navy-900"
+                  />
+                </Box>
+              )}
+              {/* Marker */}
               <Flex
                 className={classNames(
                   `leading-[23.44px]  rounded-full border-white shadow-md`,
