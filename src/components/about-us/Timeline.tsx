@@ -13,7 +13,7 @@ import {
 } from "@radix-ui/themes";
 import Image from "next/image";
 
-import { data }  from "@/data/timeline-data";
+import { data } from "@/data/timeline-data";
 
 export const Timeline: React.FC = () => {
   return (
