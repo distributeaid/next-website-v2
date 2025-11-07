@@ -12,7 +12,7 @@ export const HrtToolkitHero: FC = () => (
           align="center"
           className="text-white"
         >
-          HRT - Harm Reduction Toolkit
+          HRT — Harm Reduction Toolkit
         </Heading>
       </Container>
     </Section>
