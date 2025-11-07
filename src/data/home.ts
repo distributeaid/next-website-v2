@@ -104,4 +104,55 @@ export const whatWeDoData = [
   },
 ];
 
+export const partnerTestimonials: {
+  name: string;
+  role: string;
+  quote: string;
+  img: {
+    src: string;
+    alt: string;
+  };
+}[] = [
+  {
+    name: "Emily Johnson",
+    role: "Community Engagement Officer at Local Charity",
+    quote:
+      "Distribute Aid’s commitment to transparency and collaboration has been a game-changer for our initiatives.",
+    img: {
+      src: "unhcr.png",
+      alt: "",
+    },
+  },
+  {
+    name: "John Doe Mark",
+    role: "Executive Director of IRC",
+    quote:
+      "Working with Distribute Aid has been truly inspiring. Their dedication to creating positive change in our community is unmatched.",
+    img: {
+      src: "care.png",
+      alt: "",
+    },
+  },
+  {
+    name: "Michael Brown",
+    role: "Chief Operations Officer at Help Network",
+    quote:
+      "The partnership with Distribute Aid has allowed us to streamline our processes and maximize impact in disaster relief.",
+    img: {
+      src: "care.png",
+      alt: "",
+    },
+  },
+  {
+    name: "Jane Smith",
+    role: "Program Manager at NGO Connect",
+    quote:
+      "Collaborating with Distribute Aid has enhanced our outreach efforts, enabling us to better serve those in need.",
+    img: {
+      src: "unhcr.png",
+      alt: "",
+    },
+  },
+];
+
 export { logoHero, loadingTruck, moriaFireRelief, soapRelief, waterRelief };
