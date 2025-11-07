@@ -10,7 +10,8 @@ import {
 } from "@radix-ui/themes";
 import Link from "next/link";
 import Image from "next/image";
-import fortPickett from "../../../../public/images/home/fort-pickett.jpg";
+import aboutOne from "../../../../public/images/responses/hrt-toolkit/about-project-1.jpg";
+import aboutTwo from "../../../../public/images/responses/hrt-toolkit/about-project-2.jpg";
 
 export const AboutTheProject: FC = () => (
   <Section position="relative" width="100%" size="1">
@@ -50,14 +51,14 @@ export const AboutTheProject: FC = () => (
           <Flex justify="between" wrap="wrap">
             <Box width={{ sm: "100vw", md: "48%" }} p="2">
               <Image
-                src={fortPickett}
+                src={aboutOne}
                 className="w-full h-auto rounded-lg"
                 alt="The first about image"
               />
             </Box>
             <Box width={{ sm: "100vw", md: "48%" }} p="2">
               <Image
-                src={fortPickett}
+                src={aboutTwo}
                 className="w-full h-auto rounded-lg"
                 alt="The second about image"
               />

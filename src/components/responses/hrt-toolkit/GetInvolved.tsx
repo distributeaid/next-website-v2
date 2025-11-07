@@ -1,7 +1,8 @@
 import { FC, ReactNode } from "react";
 import { Button, Heading, Section, Text } from "@radix-ui/themes";
 import Image, { StaticImageData } from "next/image";
-import fortPickett from "../../../../public/images/home/fort-pickett.jpg";
+import frontlineGroups from "../../../../public/images/responses/hrt-toolkit/frontline_groups.jpg";
+import inKind from "../../../../public/images/responses/hrt-toolkit/in-kind.jpg";
 
 export const GetInvolved: FC = () => {
   return (
@@ -14,7 +15,7 @@ export const GetInvolved: FC = () => {
         <div className="flex justify-center flex-wrap">
           <GetInvolvedBox
             title="Frontline Groups"
-            image={fortPickett}
+            image={frontlineGroups}
             buttonText="Sign up for the waitlist"
           >
             This is the information for frontline groups. Lorem ipsum dolor sit
@@ -28,7 +29,7 @@ export const GetInvolved: FC = () => {
           </GetInvolvedBox>
           <GetInvolvedBox
             title="In-kind Donations"
-            image={fortPickett}
+            image={inKind}
             buttonText="Reach out to donate in kind"
           >
             This is the information for in-kind donations.
