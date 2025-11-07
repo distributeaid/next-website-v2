@@ -17,7 +17,7 @@ import { data }  from "@/data/timeline-data";
 
 export const Timeline: React.FC = () => {
   return (
-    <Section>
+    <Section aria-labelledby="our-history-heading">
       <Container size="4">
         <Heading
           as="h2"
@@ -26,6 +26,7 @@ export const Timeline: React.FC = () => {
           weight="bold"
           className="text-navy-900"
           align="center"
+          id="our-history-heading"
         >
           Our History
         </Heading>
