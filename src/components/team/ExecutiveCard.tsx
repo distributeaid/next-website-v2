@@ -11,6 +11,8 @@ export type ExecutiveCardProps = {
 
 export const ExecutiveCard: FC<ExecutiveCardProps> = ({name, title, photo}) => (
   <Box>
-    <Image src={photo}>
+    <Image src={photo} width={100} height={100} alt={`Headshot of ${name}`}/>
+    <Text as="p">{name}</Text>
+    <Text as="p">{title}</Text>
   </Box>
 );
