@@ -45,7 +45,7 @@ const data = [
     description:
       "Distribute Aid became a registered charity in Sweden and facilitated its first large in-kind donation.",
     bgColor: colors.green,
-    imageSrc: "/images/about-us/Water to Calais.png",
+    imageSrc: "/images/about-us/Water-to-Calais.png",
   },
   {
     anchor: "2020",
