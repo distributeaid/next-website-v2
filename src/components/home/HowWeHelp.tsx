@@ -39,6 +39,7 @@ interface CircleIconProps {
 const CircleIcon = ({ color = "bg-navy-900" }: CircleIconProps) => (
   <span
     className={`inline-flex items-center justify-center w-6 h-6 rounded-full ${color}`}
+    aria-hidden="true"
   ></span>
 );
 
@@ -73,12 +74,15 @@ const GridColumn = ({ items }: { items: string[] }) => (
 );
 const HowWeHelp = () => {
   return (
-    <section className="mb-12">
+    <section className="mb-12" aria-labelledby="how-we-help-heading">
       {/* Banner */}
-      <div className="bg-[--purple-7] text-navy-900 py-4 px-4 mb-6 text-center text-lg md:text-2xl shadow">
+      <h2
+        id="how-we-help-heading"
+        className="bg-[--purple-7] text-navy-900 py-4 px-4 mb-6 text-center text-lg md:text-2xl shadow"
+      >
         How we help get <span className="font-semibold">the right</span> aid
         delivered
-      </div>
+      </h2>
       {/* Radix UI Grid */}
       <Grid
         columns="3"
@@ -86,11 +90,12 @@ const HowWeHelp = () => {
         rows="repeat(2, 64px)"
         width="auto"
         className="px-4"
+        role="list"
       >
         <div className="col-span-3 w-full flex justify-center">
           <img
             src="images/homepage-banner-image.svg"
-            alt="image demonstrating the flow of donations, to hub and finally to grassroots aid"
+            alt="Flow of donations: to hub, then to grassroots aid."
             className="w-full max-w-[800px] h-auto object-cover rounded-lg"
           />
         </div>
