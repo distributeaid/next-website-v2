@@ -98,6 +98,9 @@ const config: Config = {
         "circle-pink": "#DFCDE8",
         "circle-grey": "#98BEC6",
         "circle-white": "#F9FAFB",
+        "key-dark-blue": "#000080",
+        "key-light-blue": "#5FBCD3",
+        "key-green": "#5FD38D",
       },
       fontFamily: {
         lato: ["lato", "sans-serif"],
