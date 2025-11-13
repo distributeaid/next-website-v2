@@ -54,37 +54,37 @@ const GetInvolved = () => {
           <path
             d="M69.3335 69.3332L78.0002 77.9998L95.3335 60.6665"
             stroke="#082B76"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M91 43.3336V34.6669C90.9984 33.1471 90.5973 31.6544 89.8367 30.3386C89.0761 29.0228 87.9829 27.9301 86.6667 27.1702L56.3333 9.83689C55.0158 9.07624 53.5213 8.67578 52 8.67578C50.4787 8.67578 48.9842 9.07624 47.6667 9.83689L17.3333 27.1702C16.0171 27.9301 14.9239 29.0228 14.1633 30.3386C13.4028 31.6544 13.0016 33.1471 13 34.6669V69.3336C13.0016 70.8534 13.4028 72.3461 14.1633 73.6619C14.9239 74.9777 16.0171 76.0703 17.3333 76.8302L47.6667 94.1636C48.9842 94.9242 50.4787 95.3247 52 95.3247C53.5213 95.3247 55.0158 94.9242 56.3333 94.1636L65 89.2236"
             stroke="#082B76"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M71.4999 40.733L32.7166 18.373"
             stroke="#082B76"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M14.2566 30.3335L51.9999 52.0002L89.7432 30.3335"
             stroke="#082B76"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M52 95.3338V52.0005"
             stroke="#082B76"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       ),
@@ -105,30 +105,30 @@ const GetInvolved = () => {
           <path
             d="M88.4865 19.8463C86.3126 17.6648 83.7294 15.9339 80.8851 14.7529C78.0408 13.5718 74.9913 12.9639 71.9115 12.9639C68.8318 12.9639 65.7823 13.5718 62.938 14.7529C60.0937 15.9339 57.5105 17.6648 55.3366 19.8463L51.9999 23.2263L48.6632 19.8463C46.4893 17.6648 43.9061 15.9339 41.0618 14.7529C38.2175 13.5718 35.168 12.9639 32.0882 12.9639C29.0085 12.9639 25.959 13.5718 23.1147 14.7529C20.2704 15.9339 17.6872 17.6648 15.5132 19.8463C6.32655 29.033 5.76322 44.5463 17.3332 56.333L51.9999 90.9996L86.6665 56.333C98.2365 44.5463 97.6732 29.033 88.4865 19.8463Z"
             stroke="#F9FAFB"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M52 23.2266L38.4367 36.8332C36.7219 38.562 35.7598 40.8983 35.7598 43.3332C35.7598 45.7682 36.7219 48.1045 38.4367 49.8332C40.1654 51.548 42.5017 52.5101 44.9367 52.5101C47.3716 52.5101 49.7079 51.548 51.4367 49.8332L61.23 40.2566C63.6639 37.8485 66.9495 36.4977 70.3733 36.4977C73.7972 36.4977 77.0828 37.8485 79.5167 40.2566L89.9167 50.6566"
             stroke="#F9FAFB"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M78.0002 64.9997L69.3335 56.333"
             stroke="#F9FAFB"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M65.0002 78.0002L56.3335 69.3335"
             stroke="#F9FAFB"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       ),
@@ -171,7 +171,7 @@ const GetInvolved = () => {
         <ul>
           {getInvolvedItems.map(
             ({ label, buttonLabel, href, bgColor, Icon }) => (
-              <li>
+              <li key={label}>
                 <Flex key={label} direction="column" align="center" gap="6">
                   <Flex
                     style={{
@@ -188,7 +188,9 @@ const GetInvolved = () => {
                   <Text weight="medium" size="8">
                     {label}
                   </Text>
-                  <Button size="3">{buttonLabel ?? label}</Button>
+                  <Button size="3">
+                    <a href={href}>{buttonLabel ?? label}</a>
+                  </Button>
                 </Flex>
               </li>
             ),
@@ -211,7 +213,15 @@ const GetInvolved = () => {
             logistics, inspiring impact stories, and ways to support grassroots
             aid efforts. No spam—just meaningful insights, once a month.
           </Text>
-          <Flex gap="5" mt="4" asChild>
+          <Flex
+            gap="5"
+            mt="4"
+            direction={{
+              initial: "column",
+              lg: "row",
+            }}
+            asChild
+          >
             <form onSubmit={handleSubmit}>
               <TextField.Root
                 size="3"
