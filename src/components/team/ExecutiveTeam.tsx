@@ -56,7 +56,7 @@ export const ExecutiveTeam: FC = () => (
         backgroundPositionY: "25%",
       }}
     >
-      <Heading as="h1" size={{initial: "8", md: "9"}} align="center">
+      <Heading as="h1" size={{ initial: "8", md: "9" }} align="center">
         EXECUTIVE TEAM
       </Heading>
     </Box>
