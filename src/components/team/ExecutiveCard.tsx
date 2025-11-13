@@ -18,20 +18,20 @@ export const ExecutiveCard: FC<ExecutiveCardProps> = ({
   <Flex
     display="inline-flex"
     direction="row"
-    m="5"
-    p="5"
-    className={`${background(index)} rounded-md`}
-    width="40%"
+    m={{ initial: "3", md: "5" }}
+    p={{ initial: "4", md: "6" }}
+    className="bg-navy-300 rounded-md"
+    width={{ initial: "90%", md: "35%" }}
   >
-    <Box>
+    <Flex display="inline-flex">
       <Image
         src={photo}
-        width={300}
-        height={300}
+        width={250}
+        height={250}
         alt={`Headshot of ${name}`}
         className="rounded-md"
       />
-    </Box>
+    </Flex>
     <Flex
       display="inline-flex"
       direction="column"
@@ -40,24 +40,12 @@ export const ExecutiveCard: FC<ExecutiveCardProps> = ({
       p="3"
       align="start"
     >
-      <Text as="p" size="8" weight="bold">
+      <Text as="p" size={{ initial: "5", md: "8" }} weight="bold" align="left">
         {name}
       </Text>
-      <Text as="p" size="5" weight="bold">
+      <Text as="p" size={{ initial: "2", md: "5" }} weight="bold" align="left">
         {title}
       </Text>
     </Flex>
   </Flex>
 );
-
-// Makes a checkerboard pattern in the backgrounds of the tiles
-// There's probably a better way to do this
-function background(index: number) {
-  if (index % 4 < 2 && index % 2 == 0) {
-    return "bg-navy-300";
-  } else if (index % 4 >= 2 && index % 2 == 1) {
-    return "bg-navy-300";
-  }
-
-  return "bg-navy-400";
-}
