@@ -21,9 +21,11 @@ const colors = {
   grey: "#98BEC6",
 };
 
+// 'anchor' is used only for scroll navigation(e.g. <Link href="2018">).
+// Only the first timeline entry get an anchor so that navigation jumps to the first event of that year.
 const data = [
   {
-    id: "2018",
+    anchor: "2018",
     period: "Summer 2018",
     description:
       "Sara and Taylor (co-founders) spent 3 months visiting and volunteering with 50+ aid organisations in Europe to discover the most effective ways to help.",
@@ -38,7 +40,7 @@ const data = [
     imageSrc: "/images/about-us/21-38-USA-FRA (1).png",
   },
   {
-    id: "2019",
+    anchor: "2019",
     period: "2019",
     description:
       "Distribute Aid became a registered charity in Sweden and facilitated its first large in-kind donation.",
@@ -46,7 +48,7 @@ const data = [
     imageSrc: "/images/about-us/Water to Calais.png",
   },
   {
-    id: "2020",
+    anchor: "2020",
     period: "Jan 2020",
     description:
       'Distribute Aid received the "Most Direct Human Impact" award by the UN Technology and Innovation Lab.',
@@ -69,7 +71,7 @@ const data = [
     imageSrc: "/images/about-us/21-38-USA-FRA (3).png",
   },
   {
-    id: "2021",
+    anchor: "2021",
     period: "Spring 2021",
     description:
       "Distribute Aid set up aid hubs and regular routes from the U.K. to help grassroots organisations continue to send aid after Brexit. We also ran our first shipment of aid to displaced people in Lebanon.",
@@ -91,7 +93,7 @@ const data = [
     imageSrc: "/images/about-us/21-014-AUT-GRC.png",
   },
   {
-    id: "2022",
+    anchor: "2022",
     period: "2022",
     description:
       "Big response from us in Ukraine advising and reducing burden of unwanted donations (due to our Brexit guide on humanitarian goods being a leading resource). Got grant to work on aid delivery to Ukraine, and started expanding our reach into the country.",
@@ -99,7 +101,7 @@ const data = [
     imageSrc: "/images/about-us/23-006-USA-UKR.png",
   },
   {
-    id: "2023",
+    anchor: "2023",
     period: "Spring 2023",
     description:
       "Received the Olof Palme grant in Sweden. Reached $25 million in aid delivered and $5 million in aid delivered to Ukraine.",
@@ -115,7 +117,7 @@ const data = [
       "/images/about-us/WhatsApp Image 2023-07-04 at 10.27.22 - Greece Field Visits - Media.png",
   },
   {
-    id: "2024",
+    anchor: "2024",
     period: "Spring 2024",
     description:
       "Ran Open Source Explorers Programme, an impactful initiative designed to engage developers, designers, and other contributors in collaborative work on Distribute Aid’s tech projects, providing a comprehensive introduction to open source.",
@@ -179,7 +181,7 @@ export const Timeline: React.FC = () => {
         >
           {[...data].reverse().map((item, index) => (
             <Flex
-              id={item.id}
+              id={item.anchor}
               className="scroll-mt-28 justify-center md:justify-normal md:even:flex-row-reverse"
               align="center"
               position="relative"
