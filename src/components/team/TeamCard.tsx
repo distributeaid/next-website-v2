@@ -2,26 +2,18 @@ import { FC } from "react";
 import { Box, Container, Flex, Heading, Section, Text } from "@radix-ui/themes";
 import Image from "next/image";
 
-export type ExecutiveCardProps = {
+export type TeamCardProps = {
   name: string;
   title: string;
   photo: string;
-  index: number;
 };
 
-export const ExecutiveCard: FC<ExecutiveCardProps> = ({
-  name,
-  title,
-  photo,
-  index,
-}) => (
+export const TeamCard: FC<TeamCardProps> = ({ name, title, photo }) => (
   <Flex
-    display="inline-flex"
     direction="row"
     m={{ initial: "3", md: "5" }}
     p={{ initial: "4", md: "6" }}
     className="bg-navy-300 rounded-md"
-    width={{ initial: "90%", md: "35%" }}
   >
     <Flex display="inline-flex">
       <Image
