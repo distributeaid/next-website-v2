@@ -1,4 +1,4 @@
-import { FC } from "react"; 
+import { FC } from "react";
 import { TeamMembers } from "./TeamMembers";
 
 const executives = [
