@@ -201,13 +201,13 @@ export const Timeline: React.FC = () => {
                       }}
                     />
                     {item.title && (
-                    <Heading 
-                      as="h3" 
-                      className="text-navy-900"
-                      align={{ initial: "center", sm: "left" }}
-                    >
-                      {item.title}
-                    </Heading>
+                      <Heading
+                        as="h3"
+                        className="text-navy-900"
+                        align={{ initial: "center", sm: "left" }}
+                      >
+                        {item.title}
+                      </Heading>
                     )}
                     <Text
                       as="div"
