@@ -5,20 +5,20 @@ import VolunteerTech from "@/components/home/icons/VolunteerTech";
 export const getInvolvedLinks = [
   {
     label: "Give Money",
-    href: "/",
+    href: "/donate",
     bgColor: "#5AC597",
     Icon: GiveMoney,
   },
   {
     label: "Donate Supplies",
-    href: "/",
+    href: "/donate",
     bgColor: "var(--pink-5)",
     Icon: DonateSupplies,
   },
   {
     label: "Volunteer via Tech",
     buttonLabel: "Volunteer",
-    href: "/",
+    href: "/tech",
     bgColor: "#4362A6",
     Icon: VolunteerTech,
   },
