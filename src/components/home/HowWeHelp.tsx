@@ -1,4 +1,6 @@
 import { Grid } from "@radix-ui/themes";
+import { ReactNode } from "react";
+import { FaRegFileAlt, FaTruck, FaBook } from "react-icons/fa";
 
 const informationColumn = [
   "Information",
@@ -26,10 +28,14 @@ const informationColumnColors = [
 ];
 const items = [informationColumn, logisticsColumn, knowledgeSharingColumn];
 
-const headerToSvgMap: { [key: string]: string } = {
-  Information: "images/regular-routes/icons/noun_net_2428552.svg",
-  Logistics: "images/regular-routes/icons/noun_Truck_1731459.svg",
-  "Knowledge Sharing": "images/regular-routes/icons/noun_Heart_Bill_98293.svg",
+const headerToIconMap: { [key: string]: ReactNode } = {
+  Information: (
+    <FaRegFileAlt className="w-6 h-6 text-navy-900" aria-hidden="true" />
+  ),
+  Logistics: <FaTruck className="w-6 h-6 text-navy-900" aria-hidden="true" />,
+  "Knowledge Sharing": (
+    <FaBook className="w-6 h-6 text-navy-900" aria-hidden="true" />
+  ),
 };
 
 interface CircleIconProps {
@@ -57,7 +63,7 @@ const GridItem = ({
 );
 const GridHeader = ({ text }: { text: string }) => (
   <div className="flex items-center gap-2">
-    <img src={headerToSvgMap[text]} alt="" className="w-6 h-6" />
+    {headerToIconMap[text]}
     <span className="text-navy-900 font-large font-semibold">{text}</span>
   </div>
 );
@@ -94,9 +100,9 @@ const HowWeHelp = () => {
       >
         <div className="col-span-3 w-full flex justify-center">
           <img
-            src="images/homepage-banner-image.svg"
+            src="images/home/da-circular-economy.png"
             alt="Flow of donations: to hub, then to grassroots aid."
-            className="w-full max-w-[800px] h-auto object-cover rounded-lg"
+            className="w-full max-w-[800px] min-h-[600px] h-auto object-cover rounded-lg"
           />
         </div>
         {items.map((column, idx) => (
