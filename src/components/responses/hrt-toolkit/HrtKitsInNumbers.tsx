@@ -11,12 +11,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { HRTNumbersCard, HrtNumbersCardProps } from "./HrtNumbersCard";
-
-const values = {
-  partialKits: 1068,
-  producedKits: 398330,
-  saved: 37390,
-};
+import { kitsInNumbersValues as values } from "../../../data/hrtToolkitData";
 
 export const HrtKitsInNumbers: FC = () => {
   return (
