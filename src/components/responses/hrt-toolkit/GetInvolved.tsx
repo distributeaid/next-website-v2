@@ -1,6 +1,7 @@
 import { FC, ReactNode } from "react";
 import { Button, Heading, Section, Text } from "@radix-ui/themes";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 import frontlineGroups from "../../../../public/images/responses/hrt-toolkit/frontline_groups.jpg";
 import inKind from "../../../../public/images/responses/hrt-toolkit/in-kind.jpg";
 
@@ -17,22 +18,25 @@ export const GetInvolved: FC = () => {
             title="Frontline Groups"
             image={frontlineGroups}
             buttonText="Sign up for the waitlist"
+            link="https://docs.google.com/forms/d/e/1FAIpQLSeGWidm_jn_qj9aR3hQLmLHe4096xc4EVL4Xf7-rB6Mq6kQZQ/viewform?usp=header"
           >
-            This is the information for frontline groups. Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
+            We’ve received a lot of demand from frontline groups. Please note
+            that the form below is designed to signal interest in the project
+            but does not gaurantee receiving supplies or any sort of timeline.
+            We will reach out to relevant groups as the project grows and
+            opportunities to participate arise in their location.
           </GetInvolvedBox>
           <GetInvolvedBox
             title="In-kind Donations"
             image={inKind}
             buttonText="Reach out to donate in kind"
+            link="mailto:donate-aid@distributeaid.org"
           >
-            This is the information for in-kind donations.
+            We’re always looking for organizations and companies who can donate
+            supplies. The items needed for the HRT Harm Reduction Toolkit
+            include draw needles, injection needles, syringes, alcohol wipes,
+            sharps containers, and band-aids. Please get in touch to ask for the
+            exact specifications.
           </GetInvolvedBox>
         </div>
       </Section>
@@ -44,6 +48,7 @@ type GetInvolvedBoxType = {
   buttonText: string;
   children?: ReactNode;
   image: StaticImageData;
+  link: string;
   title: string;
 };
 
@@ -51,10 +56,16 @@ const GetInvolvedBox: FC<GetInvolvedBoxType> = ({
   buttonText,
   children,
   image,
+  link,
   title,
 }) => (
   <div className="get-involved bg-navy-300 rounded-md m-4 w-full md:w-1/3">
-    <Image src={image} className="w-full h-auto rounded-t-md" alt={title} />
+    <Image
+      src={image}
+      className="w-full h-auto rounded-t-md max-h-[390px]"
+      objectFit="cover"
+      alt={title}
+    />
     <div className="p-5">
       <div className="mb-4">
         <Text size="7" className="uppercase text-navy-800 mb-6 font-bold">
@@ -62,8 +73,15 @@ const GetInvolvedBox: FC<GetInvolvedBoxType> = ({
         </Text>
       </div>
       <div className="font-bold mb-2">{children}</div>
-      <Button size="2" mt="auto" className="bg-navy-600 hover:bg-navy-500 p-2">
-        {buttonText}
+      <Button
+        size="2"
+        mt="auto"
+        className="bg-navy-600 hover:bg-navy-500 p-2"
+        asChild
+      >
+        <Link href={link} target={"_blank"} rel="noopener noreferrer">
+          {buttonText}
+        </Link>
       </Button>
     </div>
   </div>
