@@ -19,7 +19,8 @@ const BoardCard = (props: CardProps) => {
   return (
     <>
       <Box
-        className={`w-[600px] flex justify-center h-auto rounded-md ${colors[Math.floor(Math.random() * colors.length)]}`}>
+        className={`w-[600px] flex justify-center h-auto rounded-md ${colors[Math.floor(Math.random() * colors.length)]}`}
+      >
         <Grid>
           <div className="flex justify-center pt-7">
             <Image
@@ -28,13 +29,15 @@ const BoardCard = (props: CardProps) => {
               width={50}
               height={50}
               style={{ width: "90%", height: "auto", objectFit: "cover" }}
-              className="rounded-md"/>
+              className="rounded-md"
+            />
           </div>
           <Heading
             as="h6"
             color="gray"
             weight="bold"
-            className="pt-3 flex justify-center">
+            className="pt-3 flex justify-center"
+          >
             {props.name.toUpperCase()}
           </Heading>
           <Text
@@ -42,7 +45,8 @@ const BoardCard = (props: CardProps) => {
             color="gray"
             align="center"
             wrap="pretty"
-            className="text-center pt-10 px-2 pb-8">
+            className="text-center pt-10 px-2 pb-8"
+          >
             {props.blurb}
           </Text>
         </Grid>
