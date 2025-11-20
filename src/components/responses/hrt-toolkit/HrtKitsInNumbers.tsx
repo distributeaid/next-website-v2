@@ -13,9 +13,9 @@ import Link from "next/link";
 import { HRTNumbersCard, HrtNumbersCardProps } from "./HrtNumbersCard";
 
 const values = {
-  partialKits: 1000,
-  producedKits: 1000,
-  saved: 10000,
+  partialKits: 1068,
+  producedKits: 398330,
+  saved: 37390,
 };
 
 export const HrtKitsInNumbers: FC = () => {
