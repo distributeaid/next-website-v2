@@ -13,6 +13,12 @@ import Image from "next/image";
 import aboutOne from "../../../../public/images/responses/hrt-toolkit/about-project-1.jpg";
 import aboutTwo from "../../../../public/images/responses/hrt-toolkit/about-project-2.jpg";
 
+const list_items = [
+  "The kits do not provide hormones but the sundries needed to administer safely",
+  "Harm reduction kits reduce risks from needle sharing or reuse and provide trans people with privacy in a hostile political climate",
+  "Access to gender-affirming hormone therapy saves lives",
+];
+
 export const AboutTheProject: FC = () => (
   <Section position="relative" width="100%" size="1">
     <Container className="bg-red-50" p="4">
@@ -100,9 +106,3 @@ export const AboutTheProject: FC = () => (
     </Flex>
   </Section>
 );
-
-const list_items = [
-  "The kits do not provide hormones but the sundries needed to administer safely",
-  "Harm reduction kits reduce risks from needle sharing or reuse and provide trans people with privacy in a hostile political climate",
-  "Access to gender-affirming hormone therapy saves lives",
-];
