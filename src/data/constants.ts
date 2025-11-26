@@ -310,59 +310,40 @@ export const FOOTER_COLUMNS = [
         link: "/about-us",
       },
       {
+        name: "Team",
+        link: "/team",
+      },
+      {
+        name: "Tech",
+        link: "/tech",
+      },
+      {
+        name: "Regions",
+        link: "/regions",
+      },
+      {
         name: "Resources",
         link: "/resources/assort",
       },
       {
-        name: "Tech",
-        link: "/",
-      },
-      {
-        name: "Newsletter",
-        link: "/",
+        name: "Responses",
+        link: "/responses/hrt-toolkit",
       },
     ],
   },
-
-  // {
-  //   title: "Needs",
-  //   links: [
-  //     {
-  //       name: "Overview",
-  //       link: "/",
-  //     },
-  //     {
-  //       name: "Data Explorer",
-  //       link: "/",
-  //     },
-  //     {
-  //       name: "Methodology",
-  //       link: "/",
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   title: "Regions",
-  //   links: [
-  //     {
-  //       name: "Overview",
-  //       link: "/",
-  //     },
-  //     {
-  //       name: "USA",
-  //       link: "/",
-  //     },
-  //     {
-  //       name: "Europe",
-  //       link: "/",
-  //     },
-  //     {
-  //       name: "Middle East",
-  //       link: "/",
-  //     },
-  //   ],
-  // },
+  {
+    title: "Get involved",
+    links: [
+      {
+        name: "Donate",
+        link: "/donate",
+      },
+      {
+        name: "Newsletter",
+        link: "/newsletter",
+      }
+    ]
+  }
 ];
 
 export enum DIRECTION {
