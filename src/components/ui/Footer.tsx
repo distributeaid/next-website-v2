@@ -134,8 +134,7 @@ const Footer = () => {
           >
             <Flex
               width={{ initial: "100%", sm: "58%" }}
-              gap={{ initial: "6" }}
-              justify="between"
+              gap={{ initial: "9" }}
               direction={{ initial: "row" }}
             >
               {FOOTER_COLUMNS.map((column) => (
