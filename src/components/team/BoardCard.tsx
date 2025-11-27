@@ -6,20 +6,14 @@ interface CardProps {
   alt: string;
   name: string;
   blurb: string;
+  bgColor: string;
 }
 
 const BoardCard = (props: CardProps) => {
-  const colors = [
-    "bg-blue-100",
-    "bg-blue-200",
-    "bg-blue-300",
-    "bg-blue-400",
-    "bg-blue-500",
-  ];
   return (
     <>
       <Box
-        className={`w-[600px] flex justify-center h-auto rounded-md ${colors[Math.floor(Math.random() * colors.length)]}`}
+        className={`w-[600px] flex justify-center h-auto rounded-md ${props.bgColor}`}
       >
         <Grid>
           <div className="flex justify-center pt-7">
