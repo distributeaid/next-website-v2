@@ -5,16 +5,30 @@ import {
   Section,
   Container,
   Card,
-  Inset,
   Separator,
   Heading,
   Text,
   Link,
 } from "@radix-ui/themes";
-import SmartLink from "../link/SmartLink";
 import Image from "next/image";
 
 import { data } from "@/data/timeline-data";
+
+function renderTextWithLinks(text: string) {
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  const parts = text.split(urlRegex);
+  
+  return parts.map((part, index) => {
+    if (part.match(urlRegex)) {
+      return (
+        <a key={index} href={part} target="_blank" rel="noopener noreferrer" className="underline">
+          {part}
+        </a>
+      );
+    }
+    return part;
+  });
+}
 
 export const Timeline: React.FC = () => {
   return (
@@ -216,14 +230,8 @@ export const Timeline: React.FC = () => {
                       align={{ initial: "center", sm: "left" }}
                       className="text-navy-900"
                     >
-                      {item.description}
+                      {renderTextWithLinks(item.description)}
                     </Text>
-                    <SmartLink
-                      href={item.link}
-                      className="text-navy-800 underline"
-                    >
-                      {item.link}
-                    </SmartLink>
                   </Flex>
                 </Card>
               </Box>
