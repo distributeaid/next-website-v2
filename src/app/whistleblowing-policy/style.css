@@ -1,0 +1,13 @@
+h2,
+h3,
+h4 {
+  @apply pb-6;
+}
+
+address {
+  @apply not-italic mb-6;
+}
+
+address > h5 {
+  @apply font-bold;
+}
