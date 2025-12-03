@@ -5,7 +5,6 @@ import {
   Section,
   Container,
   Card,
-  Inset,
   Separator,
   Heading,
   Text,
@@ -14,6 +13,28 @@ import {
 import Image from "next/image";
 
 import { data } from "@/data/timeline-data";
+
+function renderTextWithLinks(text: string) {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+
+  return parts.map((part, index) => {
+    const match = part.match(/\[([^\]]+)\]\(([^)]+)\)/);
+    if (match) {
+      return (
+        <a
+          key={index}
+          href={match[2]}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline"
+        >
+          {match[1]}
+        </a>
+      );
+    }
+    return part;
+  });
+}
 
 export const Timeline: React.FC = () => {
   return (
@@ -69,7 +90,7 @@ export const Timeline: React.FC = () => {
           <Separator mt="6" size="4" className="bg-navy-900 h-[2px]" />
         </Box>
         <Box
-          className="space-y-3 md:space-y-[-60px]"
+          className="space-y-3 md:space-y-[-45px]"
           mx={{ initial: "4", sm: "8" }}
         >
           {[...data].reverse().map((item, index) => (
@@ -186,7 +207,7 @@ export const Timeline: React.FC = () => {
                   <Flex gap="3" direction="column">
                     <Image
                       src={item.imageSrc}
-                      alt="Timeline"
+                      alt={item.imgAlt ?? item.title ?? ""}
                       height={256}
                       width={1200}
                       sizes="100vw"
@@ -215,7 +236,7 @@ export const Timeline: React.FC = () => {
                       align={{ initial: "center", sm: "left" }}
                       className="text-navy-900"
                     >
-                      {item.description}
+                      {renderTextWithLinks(item.description)}
                     </Text>
                   </Flex>
                 </Card>
