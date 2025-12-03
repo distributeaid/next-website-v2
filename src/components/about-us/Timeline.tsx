@@ -16,12 +16,18 @@ import { data } from "@/data/timeline-data";
 
 function renderTextWithLinks(text: string) {
   const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
-  
+
   return parts.map((part, index) => {
     const match = part.match(/\[([^\]]+)\]\(([^)]+)\)/);
     if (match) {
       return (
-        <a key={index} href={match[2]} target="_blank" rel="noopener noreferrer" className="underline">
+        <a
+          key={index}
+          href={match[2]}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline"
+        >
           {match[1]}
         </a>
       );
