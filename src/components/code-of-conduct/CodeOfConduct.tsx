@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FC } from 'react'
+import { FC } from "react";
 
 export const CodeOfConduct: FC = () => (
   <>
@@ -125,8 +125,11 @@ export const CodeOfConduct: FC = () => (
           <p>
             Instances of abusive, harassing, or otherwise unacceptable behavior
             may be reported to the community leaders responsible for enforcement
-            as outlined in our{' '}
-            <Link className="underline font-bold text-blue-800" href="/whistleblowing-policy">
+            as outlined in our{" "}
+            <Link
+              className="underline font-bold text-blue-800"
+              href="/whistleblowing-policy"
+            >
               Whistleblowing Policy
             </Link>
             . All complaints will be reviewed and investigated promptly and
@@ -204,7 +207,7 @@ export const CodeOfConduct: FC = () => (
           </p>
           <p>
             <strong>Consequence</strong>: A permanent ban from any sort of
-            public interaction within the community.{' '}
+            public interaction within the community.{" "}
           </p>
         </div>
       </section>
@@ -216,7 +219,10 @@ export const CodeOfConduct: FC = () => (
           </h2>
           <p>
             This Code of Conduct is adapted from the{" "}
-            <a className="underline font-bold text-blue-800" href="https://www.contributor-covenant.org/">
+            <a
+              className="underline font-bold text-blue-800"
+              href="https://www.contributor-covenant.org/"
+            >
               Contributor Covenant
             </a>
             , version 2.0, available at{" "}
@@ -230,7 +236,10 @@ export const CodeOfConduct: FC = () => (
           </p>
           <p>
             Community Impact Guidelines were inspired by{" "}
-            <a className="underline font-bold text-blue-800" href="https://github.com/mozilla/diversity">
+            <a
+              className="underline font-bold text-blue-800"
+              href="https://github.com/mozilla/diversity"
+            >
               Mozilla’s code of conduct enforcement ladder
             </a>
             .
@@ -238,7 +247,10 @@ export const CodeOfConduct: FC = () => (
           <p>
             For answers to common questions about this code of conduct, see the
             FAQ at{" "}
-            <a className="underline font-bold text-blue-800" href="https://www.contributor-covenant.org/faq">
+            <a
+              className="underline font-bold text-blue-800"
+              href="https://www.contributor-covenant.org/faq"
+            >
               https://www.contributor-covenant.org/faq
             </a>
             . Translations are available at{" "}
@@ -254,6 +266,6 @@ export const CodeOfConduct: FC = () => (
       </footer>
     </div>
   </>
-)
+);
 
-export default CodeOfConduct
+export default CodeOfConduct;
