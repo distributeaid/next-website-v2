@@ -299,7 +299,7 @@ export const SOCIAL_LINKS = [
 
 export const FOOTER_COLUMNS = [
   {
-    title: "Explore",
+    title: "",
     links: [
       {
         name: "Home",
@@ -318,31 +318,19 @@ export const FOOTER_COLUMNS = [
         link: "/tech",
       },
       {
-        name: "Regions",
-        link: "/regions",
-      },
-      {
-        name: "Resources",
-        link: "/resources/assort",
-      },
-      {
-        name: "Responses",
-        link: "/responses/hrt-toolkit",
-      },
-    ],
-  },
-  {
-    title: "Get involved",
-    links: [
-      {
         name: "Donate",
         link: "/donate",
       },
       {
+        name: "Contact",
+        link: "/contact-us",
+      },
+      {
         name: "Newsletter",
-        link: "/newsletter",
-      }
-    ]
+        link: "https://distribute-aid.beehiiv.com/",
+        external: true,
+      },
+    ],
   }
 ];
 
