@@ -331,7 +331,7 @@ export const FOOTER_COLUMNS = [
         external: true,
       },
     ],
-  }
+  },
 ];
 
 export enum DIRECTION {
