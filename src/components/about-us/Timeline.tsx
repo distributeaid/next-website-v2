@@ -15,14 +15,14 @@ import Image from "next/image";
 import { data } from "@/data/timeline-data";
 
 function renderTextWithLinks(text: string) {
-  const urlRegex = /(https?:\/\/[^\s]+)/g;
-  const parts = text.split(urlRegex);
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
   
   return parts.map((part, index) => {
-    if (part.match(urlRegex)) {
+    const match = part.match(/\[([^\]]+)\]\(([^)]+)\)/);
+    if (match) {
       return (
-        <a key={index} href={part} target="_blank" rel="noopener noreferrer" className="underline">
-          {part}
+        <a key={index} href={match[2]} target="_blank" rel="noopener noreferrer" className="underline">
+          {match[1]}
         </a>
       );
     }
