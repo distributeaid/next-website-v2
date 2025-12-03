@@ -69,7 +69,7 @@ export const Timeline: React.FC = () => {
         >
           <Separator mt="6" size="4" className="bg-navy-900 h-[2px]" />
         </Box>
-        <Box          
+        <Box
           className="space-y-3 md:space-y-[-45px]"
           mx={{ initial: "4", sm: "8" }}
         >
@@ -218,7 +218,10 @@ export const Timeline: React.FC = () => {
                     >
                       {item.description}
                     </Text>
-                    <SmartLink href={item.link} className="text-navy-800 underline">
+                    <SmartLink
+                      href={item.link}
+                      className="text-navy-800 underline"
+                    >
                       {item.link}
                     </SmartLink>
                   </Flex>
