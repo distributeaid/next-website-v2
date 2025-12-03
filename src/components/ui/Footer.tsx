@@ -139,13 +139,13 @@ const Footer = () => {
             >
               {FOOTER_COLUMNS.map((column) => (
                 <Flex key={column.title || "main"} direction="column" gap="3">
-
                   {column.title && (
                     <ColumnHeading>{column.title}</ColumnHeading>
                   )}
 
                   {column.links.map((link) => {
-                    const isExternal = link.external || link.link.startsWith("http");
+                    const isExternal =
+                      link.external || link.link.startsWith("http");
 
                     if (isExternal) {
                       return (
