@@ -11,6 +11,7 @@ import {
   Text,
   Link,
 } from "@radix-ui/themes";
+import SmartLink from "../link/SmartLink";
 import Image from "next/image";
 
 import { data } from "@/data/timeline-data";
@@ -68,8 +69,8 @@ export const Timeline: React.FC = () => {
         >
           <Separator mt="6" size="4" className="bg-navy-900 h-[2px]" />
         </Box>
-        <Box
-          className="space-y-3 md:space-y-[-60px]"
+        <Box          
+          className="space-y-3 md:space-y-[-45px]"
           mx={{ initial: "4", sm: "8" }}
         >
           {[...data].reverse().map((item, index) => (
@@ -186,7 +187,7 @@ export const Timeline: React.FC = () => {
                   <Flex gap="3" direction="column">
                     <Image
                       src={item.imageSrc}
-                      alt="Timeline"
+                      alt={item.imgAlt ?? item.title ?? ""}
                       height={256}
                       width={1200}
                       sizes="100vw"
@@ -217,6 +218,9 @@ export const Timeline: React.FC = () => {
                     >
                       {item.description}
                     </Text>
+                    <SmartLink href={item.link} className="text-navy-800 underline">
+                      {item.link}
+                    </SmartLink>
                   </Flex>
                 </Card>
               </Box>
