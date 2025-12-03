@@ -56,7 +56,7 @@ export const TechStackSection = () => {
             {technologies.map((item, index) => (
               <li
                 key={index}
-                className="text-navy-900 font-medium text-md sm:text-[18px] md:text-[22px] pl-3"
+                className="text-navy-900 font-medium text-md sm:text-[18px] md:text-md pl-3"
               >
                 {item}
               </li>
@@ -80,7 +80,7 @@ export const TechStackSection = () => {
         <BorderedImage
           bgColor="var(--green-9)"
           image={{
-            src: "/images/tech/tech-stack-image.png",
+            src: "/images/tech/tech-stack-image.jpg",
             alt: "Tech stack image",
           }}
         />
