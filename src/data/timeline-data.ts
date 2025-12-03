@@ -138,12 +138,11 @@ export const data = [
     period: "2024",
     title: "Levant Response",
     description:
-      "Following the outbreak of violence in Palestine in 2023, Distribute Aid coordinated with regional partners to provide urgent humanitarian support. Shipments originally intended for Gaza were rerouted to the West Bank due to the blockade, including multiple pallets of essential aid such as personal hygiene kits and medical equipment. Additional shipments delivered an ultrasound machine to Jordan and hygiene items to Lebanon which also helped displaced people and Palestinian refugees. Working closely with partners, all shipments were documented, inventoried, and delivered to local organizations for distribution. These efforts ensured timely aid reached families affected by the conflict, supporting both immediate needs and ongoing humanitarian relief in the region. [© Anera]",
+      "Following the outbreak of violence in Palestine in 2023, Distribute Aid coordinated with regional partners to provide urgent humanitarian support. Shipments originally intended for Gaza were rerouted to the West Bank due to the blockade, including multiple pallets of essential aid such as personal hygiene kits and medical equipment. Additional shipments delivered an ultrasound machine to Jordan and hygiene items to Lebanon which also helped displaced people and Palestinian refugees. Working closely with partners, all shipments were documented, inventoried, and delivered to local organizations for distribution. These efforts ensured timely aid reached families affected by the conflict, supporting both immediate needs and ongoing humanitarian relief in the region. [© Anera](https://www.anera.org/)",
     bgColor: colors.gray,
     imageSrc: "/images/about-us/24-LevantResponse.jpg",
     imgAlt:
       "Women and children in Gaza are congregating around a man with a clipboard next to a sign by Distribute Aid partner organisation Anera which reads “Medical Healthcare. Free Health Day. Gaza Strip”. Photo by Anera.",
-    link: "https://www.anera.org/",
   },
   {
     anchor: "2024",
@@ -171,7 +170,7 @@ export const data = [
     description:
       "When unprecedented wildfires began in LA in January 2025, Distribute Aid connected with local groups responding to the disaster, sending furniture, hygiene, medical supplies, clothes, and more. In collaboration with Community Solidarity Project, essential items were delivered to a community hub, sorted and inventoried, then delivered directly to displaced families. During the acute response throughout January and February, Distribute Aid coordinated with Lifting Hands International and the Afya Foundation to supply seven semi-trucks worth of supplies to Los Angeles. Through the collaboration with Community Solidarity Project, Distribute Aid’s support helped over 250 families that had survived the fires.",
     bgColor: colors.pink,
-    imageSrc: "/images/about-us/25-Jan-LAFireResponse.png",
+    imageSrc: "/images/about-us/25-Jan-LAFireResponse1.png",
     imgAlt:
       "Group photo of the Community Solidarity Project team in LA in front of a 99c only store. They’re holding up a banner that says, “thank you, Distribute Aid”.",
   },
