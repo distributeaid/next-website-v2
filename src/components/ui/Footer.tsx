@@ -138,17 +138,39 @@ const Footer = () => {
               direction={{ initial: "row" }}
             >
               {FOOTER_COLUMNS.map((column) => (
-                <Flex key={column.title} direction="column" gap="3">
-                  <ColumnHeading>{column.title}</ColumnHeading>
-                  {column.links.map((link) => (
-                    <Link
-                      key={link.name}
-                      href={link.link}
-                      className="hover:underline"
-                    >
-                      {link.name}
-                    </Link>
-                  ))}
+                <Flex key={column.title || "main"} direction="column" gap="3">
+
+                  {column.title && (
+                    <ColumnHeading>{column.title}</ColumnHeading>
+                  )}
+
+                  {column.links.map((link) => {
+                    const isExternal = link.external || link.link.startsWith("http");
+
+                    if (isExternal) {
+                      return (
+                        <a
+                          key={link.name}
+                          href={link.link}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="hover:underline"
+                        >
+                          {link.name}
+                        </a>
+                      );
+                    }
+
+                    return (
+                      <Link
+                        key={link.name}
+                        href={link.link}
+                        className="hover:underline"
+                      >
+                        {link.name}
+                      </Link>
+                    );
+                  })}
                 </Flex>
               ))}
             </Flex>
