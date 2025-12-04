@@ -103,6 +103,8 @@ const GridItem = ({
   columnIndex: number;
 }) => {
   const colorArray = columnColorArrays[columnIndex] || informationColumnColors;
+  // colorIdx is 1, 2, 3 (since idx starts at 1 for items after header)
+  // but array indices are 0, 1, 2, so we subtract 1
   const arrayIndex = colorIdx - 1;
   return (
     <Flex gap="2" align="center">
