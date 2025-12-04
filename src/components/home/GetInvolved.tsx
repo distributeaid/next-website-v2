@@ -45,6 +45,7 @@ const GetInvolved = () => {
         gap="9"
         asChild
         mt="8"
+        mb="9"
       >
         <ul>
           {getInvolvedLinks.map(
@@ -76,11 +77,11 @@ const GetInvolved = () => {
         </ul>
       </Grid>
 
-      <Box
+      {/*<Box
         style={{
           backgroundColor: "var(--pink-5)",
         }}
-        mt="170px"
+
       >
         <Box py="8" px="4" maxWidth="1242px" mx="auto">
           <Heading as="h3" size="8">
@@ -114,7 +115,7 @@ const GetInvolved = () => {
             </form>
           </Flex>
         </Box>
-      </Box>
+      </Box>*/}
     </section>
   );
 };

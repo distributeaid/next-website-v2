@@ -22,7 +22,7 @@ const SubscribeCTA = () => {
         communities in need. Our logistics experts help deliver more aid more
         quickly—at lower costs.
       </Text>
-      <Box>
+      {/*<Box>
         <Button
           onClick={handleClick}
           className="py-7 px-11 flex-grow-0 text-[16px] cursor-pointer"
@@ -30,7 +30,7 @@ const SubscribeCTA = () => {
         >
           Subscribe
         </Button>
-      </Box>
+      </Box>*/}
     </Flex>
   );
 };
