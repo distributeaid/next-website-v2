@@ -73,7 +73,7 @@ interface CircleIconProps {
   color?: string;
 }
 
-const CircleIcon = ({ color = "bg-navy-900" }: CircleIconProps) => (
+const CircleIcon = ({ color }: CircleIconProps) => (
   <Box
     className={`w-5 h-5 md:w-6 md:h-6 rounded-full ${color}`}
     aria-hidden="true"
@@ -99,13 +99,13 @@ const GridItem = ({
   columnIndex,
 }: {
   label: string;
-  colorIdx?: number;
+  colorIdx: number;
   columnIndex: number;
 }) => {
   const colorArray = columnColorArrays[columnIndex] || informationColumnColors;
   return (
     <Flex gap="2" align="center">
-      <CircleIcon color={colorArray[colorIdx ?? 0]} />
+      <CircleIcon color={colorArray[arrayIndex]} />
       <Text
         className="text-navy-900"
         size={{ initial: "3", md: "4" }}
