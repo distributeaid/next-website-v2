@@ -103,6 +103,7 @@ const GridItem = ({
   columnIndex: number;
 }) => {
   const colorArray = columnColorArrays[columnIndex] || informationColumnColors;
+  const arrayIndex = colorIdx - 1;
   return (
     <Flex gap="2" align="center">
       <CircleIcon color={colorArray[arrayIndex]} />
