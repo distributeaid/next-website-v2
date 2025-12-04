@@ -78,7 +78,7 @@ export const links = [
   {
     title: "Tech",
     url: "/tech",
-    isSubMenu: true,
+    isSubMenu: false, //temporarily set to false
     subMenu: [
       {
         title: "Overview",
