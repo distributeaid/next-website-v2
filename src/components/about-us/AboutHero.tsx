@@ -47,7 +47,7 @@ export const AboutHero: FC = () => (
     >
       <Box className="rounded-2xl overflow-hidden flex-shrink-0 w-[100px] sm:w-[160px] md:w-[200px] lg:w-[280px]">
         <Image
-          src={"/images/about-us/hero-1.png"}
+          src={"/images/about-us/hero-1.jpg"}
           alt="Hero Image"
           width={280}
           height={280}
