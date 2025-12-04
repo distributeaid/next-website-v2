@@ -1,5 +1,5 @@
 "use client";
-import { type FormEvent, useRef } from "react";
+import { type FormEvent, useRef, useState } from "react";
 import {
   Box,
   Button,
@@ -11,15 +11,27 @@ import {
 } from "@radix-ui/themes";
 
 import { getInvolvedLinks } from "@/data/home/get-involved";
+import { handleNewsletterSignup } from "@/utils/newsletter";
 
 const GetInvolved = () => {
   const emailInputRef = useRef<HTMLInputElement>(null);
+  const [newsletterSuccess, setNewsletterSuccess] = useState(true);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    try {
+      const email = emailInputRef.current?.value;
 
-    const email = emailInputRef.current?.value;
-    console.log(email);
+      if (!email) {
+        throw Error("Email is missing :(");
+      }
+
+      await handleNewsletterSignup(email);
+    } catch (error) {
+      throw error;
+    } finally {
+      setNewsletterSuccess(true);
+    }
   };
 
   return (
@@ -77,11 +89,11 @@ const GetInvolved = () => {
         </ul>
       </Grid>
 
-      {/*<Box
+      <Box
         style={{
           backgroundColor: "var(--pink-5)",
         }}
-
+        id="newsletter-signup"
       >
         <Box py="8" px="4" maxWidth="1242px" mx="auto">
           <Heading as="h3" size="8">
@@ -92,30 +104,42 @@ const GetInvolved = () => {
             logistics, inspiring impact stories, and ways to support grassroots
             aid efforts. No spam—just meaningful insights, once a month.
           </Text>
-          <Flex
-            gap="5"
-            mt="4"
-            direction={{
-              initial: "column",
-              lg: "row",
-            }}
-            asChild
-          >
-            <form onSubmit={handleSubmit}>
-              <TextField.Root
-                size="3"
-                placeholder="Enter email address"
-                aria-label="Email"
-                className="grow"
-                ref={emailInputRef}
-              />
-              <Button size="3" className="grow" type="submit">
-                Subscribe Now
-              </Button>
-            </form>
-          </Flex>
+          {newsletterSuccess ? (
+            <Box className="text-center" m="5">
+              <Heading size="7">Success!</Heading>
+              <Text size="4">
+                Thanks for signing up! Please check your email to confirm your
+                subscription.
+              </Text>
+            </Box>
+          ) : (
+            <Flex
+              gap="5"
+              mt="4"
+              direction={{
+                initial: "column",
+                lg: "row",
+              }}
+              asChild
+            >
+              <form onSubmit={handleSubmit}>
+                <TextField.Root
+                  size="3"
+                  placeholder="Enter email address"
+                  aria-label="Email"
+                  className="grow"
+                  ref={emailInputRef}
+                  required
+                  type="email"
+                />
+                <Button size="3" className="grow" type="submit">
+                  Subscribe Now
+                </Button>
+              </form>
+            </Flex>
+          )}
         </Box>
-      </Box>*/}
+      </Box>
     </section>
   );
 };

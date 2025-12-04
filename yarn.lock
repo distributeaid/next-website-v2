@@ -253,6 +253,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@beehiiv/sdk@npm:^0.1.9":
+  version: 0.1.9
+  resolution: "@beehiiv/sdk@npm:0.1.9"
+  checksum: 10c0/40b56272ae615db8f1333fcd8136cea0936245b7c3ad1515340e67a885e16f41c5ef03b1f0b86b19f77c3a60991a696a1fb9a336afd983ee12d6f0149bafb959
+  languageName: node
+  linkType: hard
+
 "@csstools/color-helpers@npm:^5.0.2":
   version: 5.0.2
   resolution: "@csstools/color-helpers@npm:5.0.2"
@@ -6864,6 +6871,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "next-website-v2@workspace:."
   dependencies:
+    "@beehiiv/sdk": "npm:^0.1.9"
     "@radix-ui/colors": "npm:^3.0.0"
     "@radix-ui/react-navigation-menu": "npm:^1.2.3"
     "@radix-ui/themes": "npm:^3.1.6"
