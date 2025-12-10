@@ -1,5 +1,5 @@
 import {
-  HeroSection,
+  Hero,
   SubscribeCTA,
   WhatWeDo,
   WhereWeWork,
@@ -9,12 +9,10 @@ import {
   GetInvolved,
 } from "@/components/home";
 
-import HeroSection from "@/components/ui/HeroSection";
-
 const Home = () => {
   return (
     <main>
-      <HeroSection />
+      <Hero />
       <SubscribeCTA />
       <WhatWeDo />
       <WhereWeWork />
