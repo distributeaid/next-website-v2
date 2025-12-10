@@ -100,8 +100,8 @@ export const Timeline: React.FC = () => {
               align="center"
               position="relative"
               key={index}
-              pt={{  initial: "108px", md: "96px" }}
-              pb={{  initial: "20px" }}
+              pt={{ initial: "108px", md: "96px" }}
+              pb={{ initial: "20px" }}
             >
               {/* Separator */}
               {data.length - 1 !== index && (
