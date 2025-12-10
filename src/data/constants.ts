@@ -1,5 +1,6 @@
 import { RiInstagramFill, RiBlueskyFill, RiLinkedinFill } from "react-icons/ri";
 import Home from "@/app/page";
+import { Title } from "@radix-ui/themes/dist/cjs/components/alert-dialog";
 
 export const MONTHS = [
   "January",
@@ -297,7 +298,16 @@ export const SOCIAL_LINKS = [
   },
 ];
 
-export const FOOTER_COLUMNS = [
+export interface FooterColumn {
+  title: string;
+  links: {
+    name: string;
+    link: string;
+    external?: boolean;
+  }[];
+}
+
+export const FOOTER_COLUMNS: FooterColumn[] = [
   {
     title: "",
     links: [
@@ -306,20 +316,16 @@ export const FOOTER_COLUMNS = [
         link: "/",
       },
       {
-        name: "About us",
+        name: "About Us",
         link: "/about-us",
-      },
-      {
-        name: "Team",
-        link: "/team",
-      },
-      {
-        name: "Tech",
-        link: "/tech",
       },
       {
         name: "Donate",
         link: "/donate",
+      },
+      {
+        name: "Team",
+        link: "/team",
       },
       {
         name: "Contact",
@@ -329,6 +335,23 @@ export const FOOTER_COLUMNS = [
         name: "Newsletter",
         link: "https://distribute-aid.beehiiv.com/",
         external: true,
+      },
+    ],
+  },
+  {
+    title: "",
+    links: [
+      {
+        name: "Tech",
+        link: "/tech",
+      },
+      {
+        name: "Resources",
+        link: "/resources/assort",
+      },
+      {
+        name: "HRT Harm Reduction Toolkit",
+        link: "/responses/hrt-toolkit",
       },
     ],
   },
