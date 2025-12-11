@@ -1,9 +1,10 @@
 import { FC } from "react";
 import { Box, Container, Flex, Heading, Section, Text } from "@radix-ui/themes";
 import { TeamCard, TeamCardProps } from "./TeamCard";
+import { TeamMember } from "@/data/team";
 
 export type TeamMembersProps = {
-  people: TeamCardProps[];
+  people: TeamMember[];
   bannerImage: string;
   header: string;
 };
@@ -31,7 +32,7 @@ export const TeamMembers: FC<TeamMembersProps> = ({
         {header}
       </Heading>
     </Box>
-    <ul className="text-center">
+    <ul className="text-center grid grid-cols-2">
       {people.map((item, index) => (
         <li key={`exec-${index}`} className="inline-block">
           <TeamCard name={item.name} title={item.title} photo={item.photo} />

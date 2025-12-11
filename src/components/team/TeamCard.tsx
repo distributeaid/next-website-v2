@@ -21,13 +21,13 @@ export const TeamCard: FC<TeamCardProps> = ({ name, title, photo }) => (
         width={250}
         height={250}
         alt={`Headshot of ${name}`}
-        className="rounded-md"
+        className="rounded-md h-[250px] min-w-[250px] aspect-square"
       />
     </Flex>
     <Flex
-      display="inline-flex"
       direction="column"
-      className="justify-around"
+      justify="center"
+      gap="6"
       ml="20px"
       p="3"
       align="start"
