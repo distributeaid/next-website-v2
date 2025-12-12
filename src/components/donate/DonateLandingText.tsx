@@ -2,7 +2,15 @@ import { Container, Heading, Text, Flex, Link, Strong } from "@radix-ui/themes";
 
 const DonateLandingText = () => {
   return (
-    <Container size={{ sm: "3", lg: "4" }} px={"9"} pb={"9"}>
+    <Container
+      size={{ sm: "3", lg: "4" }}
+      px={"9"}
+      pb={"9"}
+      id="donate-supplies"
+      style={{
+        scrollMarginTop: "100px",
+      }}
+    >
       <Heading
         as="h1"
         weight={"medium"}

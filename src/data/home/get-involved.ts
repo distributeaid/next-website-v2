@@ -11,7 +11,7 @@ export const getInvolvedLinks = [
   },
   {
     label: "Donate Supplies",
-    href: "/donate",
+    href: "/donate#donate-supplies",
     bgColor: "var(--pink-5)",
     Icon: DonateSupplies,
   },
