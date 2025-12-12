@@ -27,7 +27,7 @@ const Board = () => {
             align="center"
             className="uppercase"
           >
-            Board
+            Board Members
           </Heading>
         </Box>
         <Box className="grid grid-cols-1 md:grid-cols-2 gap-5">
