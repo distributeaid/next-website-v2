@@ -22,9 +22,21 @@ const DonateLandingText = () => {
       </Heading>
       <Flex gap={"4"} p={"4"} m={"4"} direction={"column"} align={"center"}>
         <Text align={"center"}>
-          While we help distribute shipments, we can’t collect items ourselves.
-          However, we can usually let you know which local hub you can turn to
-          with your donations.
+          At Distribute Aid we handle large surplus donations of supplies (4
+          pallets or more). If you’re a business owner or friends with one,
+          consider us for your in-kind donation program. We’ll turn your surplus
+          stock into a social good by connecting you with a local hub that can
+          collect your donations.
+        </Text>
+        <Text align={"center"}>
+          If that’s you, reach out to{" "}
+          <Link
+            href="mailto:donate-aid@distributeaid.org"
+            underline="always"
+            color="blue"
+          >
+            donate-aid@distributeaid.org
+          </Link>
         </Text>
         <Text align={"center"} weight={"bold"}>
           If you have food, clothing, medical equipment, or other items you’d
