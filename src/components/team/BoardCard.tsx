@@ -1,5 +1,6 @@
-import { Box, Grid, Heading, Text } from "@radix-ui/themes";
+import { Box, Flex, Heading, Text } from "@radix-ui/themes";
 import Image from "next/image";
+import { MarkdownContent } from "../markdown/MarkdownContent";
 
 interface CardProps {
   source: string;
@@ -12,38 +13,43 @@ interface CardProps {
 const BoardCard = (props: CardProps) => {
   return (
     <>
-      <Box
-        className={`w-[600px] flex justify-center h-auto rounded-md ${props.bgColor}`}
-      >
-        <Grid>
-          <div className="flex justify-center pt-7">
-            <Image
-              src={props.source}
-              alt={props.alt}
-              width={50}
-              height={50}
-              style={{ width: "90%", height: "auto", objectFit: "cover" }}
-              className="rounded-md"
-            />
+      <Box className={`flex justify-center h-auto rounded-md ${props.bgColor}`}>
+        <Flex direction="column" align="center">
+          <div className="pt-7 px-7 w-full">
+            <Box className="rounded-md overflow-hidden aspect-[4/3] w-full">
+              <Image
+                src={props.source}
+                alt={props.alt}
+                width={400}
+                height={400}
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "center",
+                  width: "100%",
+                  transform: "translateY(-15%)",
+                }}
+              />
+            </Box>
+            <Heading
+              as="h6"
+              color="gray"
+              weight="bold"
+              className="pt-3 flex justify-center"
+            >
+              {props.name.toUpperCase()}
+            </Heading>
           </div>
-          <Heading
-            as="h6"
-            color="gray"
-            weight="bold"
-            className="pt-3 flex justify-center"
-          >
-            {props.name.toUpperCase()}
-          </Heading>
           <Text
-            as="p"
+            as="div"
             color="gray"
             align="center"
             wrap="pretty"
-            className="text-center pt-10 px-2 pb-8"
+            weight="medium"
+            className="text-center h-full pt-10 px-4 pb-8 flex flex-col justify-center"
           >
-            {props.blurb}
+            <MarkdownContent content={props.blurb} />
           </Text>
-        </Grid>
+        </Flex>
       </Box>
     </>
   );

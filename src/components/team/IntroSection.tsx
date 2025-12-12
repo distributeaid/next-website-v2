@@ -1,7 +1,7 @@
 import { Flex, Heading, Text, Container } from "@radix-ui/themes";
 const IntroSection = () => {
   const introText =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue  tempus aliquam. Suspendisse molestie nisl sit amet dui cursus placerat.  Sed lacinia pulvinar ligula, non pellentesque risus dapibus eget. Proin  porta efficitur risus. Aliquam eget maximus elit, nec sodales dui.  Curabitur venenatis congue arcu eget luctus. Vestibulum ante ipsum  primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean et sollicitudin tortor, ac auctor ligula. Mauris eget nunc vestibulum,  ullamcorper libero vitae, cursus turpis. Etiam vulputate libero vitae  diam blandit, id porta nisi consequat. Maecenas sed lobortis quam.  Pellentesque lobortis erat eros, pellentesque feugiat mi sodales et.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum et  malesuada fames ac ante ipsum primis in faucibus. Nunc id erat  efficitur, facilisis est vitae, consequat mi. Donec at leo nibh.";
+    "We’re a small, diverse, and international team. Our team members are highly-skilled volunteers and experienced community organisers serving their local communities. They actively choose to spend several hours a week putting their skillset to good use to help Distribute Aid to deliver more aid for less money and create impact far greater than our organisation’s size would imply.";
   return (
     <>
       <Container m={"3"}>
