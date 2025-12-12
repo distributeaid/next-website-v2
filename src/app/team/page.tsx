@@ -7,8 +7,8 @@ const Team: FC = () => {
   return (
     <main>
       <IntroSection />
-      <Board />
       <ExecutiveTeam />
+      <Board />
     </main>
   );
 };

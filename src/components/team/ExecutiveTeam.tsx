@@ -7,6 +7,6 @@ export const ExecutiveTeam: FC = () => (
   <TeamMembers
     people={team.executiveTeam}
     bannerImage="/images/about-us/Water-to-Calais.png"
-    header="Executive Team"
+    header="Team Members"
   />
 );
