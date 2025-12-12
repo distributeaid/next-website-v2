@@ -35,7 +35,11 @@ export const TeamMembers: FC<TeamMembersProps> = ({
     <ul className="text-center grid grid-cols-2">
       {people.map((item, index) => (
         <li key={`exec-${index}`} className="inline-block">
-          <TeamCard name={item.name} title={item.title} photo={item.photo} />
+          <TeamCard
+            name={`${item.name} ${item?.pronouns && `(${item.pronouns})`}`}
+            title={item.title}
+            photo={item.photo}
+          />
         </li>
       ))}
     </ul>

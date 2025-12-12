@@ -1,15 +1,9 @@
 import BoardCard from "./BoardCard";
-import { Box, Flex, Grid } from "@radix-ui/themes";
+import { Box, Heading } from "@radix-ui/themes";
 import { boardMembers } from "./BoardMembers";
 const Board = () => {
   const getColorFromSeed = (seed: string) => {
-    const colors = [
-      "bg-blue-100",
-      "bg-blue-200",
-      "bg-blue-300",
-      "bg-blue-400",
-      "bg-blue-500",
-    ];
+    const colors = ["bg-navy-400"];
     let hash = 0;
     for (let i = 0; i < seed.length; i++) {
       hash = (hash << 5) - hash + seed.charCodeAt(i);
@@ -26,7 +20,17 @@ const Board = () => {
         pb={{ initial: "1", md: "8" }}
         px={{ initial: "6", md: "9", lg: "180px" }}
       >
-        <Box className="flex justify-center flex-wrap gap-5">
+        <Box p="4" my="6" className="border-t-black border-t-2">
+          <Heading
+            as="h1"
+            size={{ initial: "8", md: "9" }}
+            align="center"
+            className="uppercase"
+          >
+            Board
+          </Heading>
+        </Box>
+        <Box className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {boardMembers.map((member) => (
             <BoardCard
               key={member.id}
