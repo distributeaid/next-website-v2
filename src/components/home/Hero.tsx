@@ -9,12 +9,7 @@ const Hero = () => {
         style={{
           backgroundColor: "#5AC597",
         }}
-      >
-        <Flex p="3" align="center" gap="2" mx="2">
-          <FaRegCircleCheck />
-          <Text>Join our team of open source tech volunteers!</Text>
-        </Flex>
-      </Box>
+      ></Box>
       <HeroSection
         heading="Your Mutual Aid Logistic
         Experts"
