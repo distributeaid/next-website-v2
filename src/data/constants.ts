@@ -332,7 +332,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
         link: "/contact-us",
       },
       {
-        name: "Newsletter",
+        name: "Newsletter Archive",
         link: "https://distribute-aid.beehiiv.com/",
         external: true,
       },
