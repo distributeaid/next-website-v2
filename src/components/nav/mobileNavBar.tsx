@@ -82,7 +82,9 @@ const MobileNavBar = () => {
 
       {/* NewsLetter */}
       <NavigationMenu.Item>
-        <NavigationMenu.Link href="#newsletter-signup">Newsletter</NavigationMenu.Link>
+        <NavigationMenu.Link href="#newsletter-signup">
+          Newsletter
+        </NavigationMenu.Link>
       </NavigationMenu.Item>
 
       {/* Social media links */}
