@@ -95,7 +95,7 @@ const GetInvolved = () => {
         }}
         id="newsletter-signup"
       >
-        <Box py="8" px="4" maxWidth="1242px" mx="auto">
+        <Box id="newsletter-signup" py="8" px="4" maxWidth="1242px" mx="auto">
           <Heading as="h3" size="8">
             Stay Connected With Distribute Aid
           </Heading>

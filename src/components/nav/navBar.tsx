@@ -72,7 +72,7 @@ const NavBar = () => {
               {/*NewsLetter  */}
               <Box display={{ initial: "none", sm: "block" }}>
                 <NavigationMenu.Item>
-                  <NavigationMenu.Link href="/newsletter">
+                  <NavigationMenu.Link href="#newsletter-signup">
                     Newsletter
                   </NavigationMenu.Link>
                 </NavigationMenu.Item>
