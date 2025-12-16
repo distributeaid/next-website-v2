@@ -11,7 +11,7 @@ const WhatWeDo = () => {
         weight="bold"
         align="center"
         className="text-navy-900"
-        size="7"
+        size="9"
       >
         What We Do
       </Heading>
