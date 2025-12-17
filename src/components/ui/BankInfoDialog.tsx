@@ -5,8 +5,8 @@ const BankInfoDialog = () => (
   <Dialog.Root>
     <Dialog.Trigger>
       <Box asChild width={{ initial: "100%", sm: "auto" }}>
-        <Button 
-          className="bg-navy-600 hover:bg-navy-500 cursor-pointer" 
+        <Button
+          className="bg-navy-600 hover:bg-navy-500 cursor-pointer"
           size={{ initial: "3", sm: "2", md: "3" }}
           style={{ height: "44px" }}
         >
