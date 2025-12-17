@@ -29,36 +29,39 @@ const Testimonials = () => {
       >
         <ul>
           {partnerTestimonials.map(({ name, role, quote, img }, index) => (
-            <li key={`${index}-${name}}`}>
-              <Flex
-                className="bg-slate-50 rounded-2xl border border-slate-200 p-8"
-                direction="column"
-                gap="5"
-                asChild
-              >
-                <article aria-labelledby={`t-${index}-name`}>
-                  <Flex gap="4" align="center">
-                    <Image
-                      className="rounded-lg"
-                      src={`/images/home/partner-testimonials/${img.src}`}
-                      alt={img.alt}
-                      loading="lazy"
-                      width={112}
-                      height={112}
-                    />
-                    <Flex direction="column" gap="2">
-                      <Text className="text-2xl" id={`t-${index}-name`}>
-                        {name}
-                      </Text>
-                      <Text className="text-lg">{role}</Text>
+            <Box
+              key={`${index}-${name}}`}
+              className="bg-slate-50 rounded-2xl border border-slate-200 p-8"
+              asChild
+            >
+              <li>
+                <Flex direction="column" gap="5" asChild>
+                  <article aria-labelledby={`t-${index}-name`}>
+                    <Flex gap="4" align="center">
+                      {img && (
+                        <Image
+                          className="rounded-lg"
+                          src={`/images/home/partner-testimonials/${img.src}`}
+                          alt={img.alt}
+                          loading="lazy"
+                          width={112}
+                          height={112}
+                        />
+                      )}
+                      <Flex direction="column" gap="2">
+                        <Text className="text-2xl" id={`t-${index}-name`}>
+                          {name}
+                        </Text>
+                        <Text className="text-lg">{role}</Text>
+                      </Flex>
                     </Flex>
-                  </Flex>
-                  <blockquote className="font-bold italic text-2xl">
-                    "{quote}"
-                  </blockquote>
-                </article>
-              </Flex>
-            </li>
+                    <blockquote className="font-bold italic text-2xl">
+                      "{quote}"
+                    </blockquote>
+                  </article>
+                </Flex>
+              </li>
+            </Box>
           ))}
         </ul>
       </Grid>

@@ -108,50 +108,34 @@ export const partnerTestimonials: {
   name: string;
   role: string;
   quote: string;
-  img: {
+  img?: {
     src: string;
     alt: string;
   };
 }[] = [
   {
-    name: "Emily Johnson",
-    role: "Community Engagement Officer at Local Charity",
+    name: "Kompass71",
+    role: "European Refugee Response",
     quote:
-      "Distribute Aid’s commitment to transparency and collaboration has been a game-changer for our initiatives.",
-    img: {
-      src: "unhcr.png",
-      alt: "",
-    },
+      "These hygiene items were among our most urgently needed supplies. They are helping people on the move maintain health and dignity during a harsh winter in the under-resourced Sarajevo camps.",
   },
   {
-    name: "John Doe Mark",
-    role: "Executive Director of IRC",
+    name: "Mutual Aid Disaster Relief",
+    role: "Hurricane Helene Response",
     quote:
-      "Working with Distribute Aid has been truly inspiring. Their dedication to creating positive change in our community is unmatched.",
-    img: {
-      src: "care.png",
-      alt: "",
-    },
+      "Being able to ensure clean water to working crews and having additional protective gear gave us the space to focus on other aspects of organizing. Before trying to organize water deliveries and sourcing more PPE was a large task.",
   },
   {
-    name: "Michael Brown",
-    role: "Chief Operations Officer at Help Network",
+    name: "Anera M&E Officer in South Lebanon",
+    role: " Levant Response",
     quote:
-      "The partnership with Distribute Aid has allowed us to streamline our processes and maximize impact in disaster relief.",
-    img: {
-      src: "care.png",
-      alt: "",
-    },
+      "With the generous support of Distribute Ad, Anera recently received and distributed a full container of essential medical and mobility supplies to support people living with disabilities across Lebanon. This shipment included more than 120 mobility aids, including wheelchairs and crutches, and over 2,000 units of supplies such as gloves and underpads. The donation was distributed to ten health centers, reaching vulnerable Lebanese outside refugee camps and Palestinians inside refugee camps.",
   },
   {
-    name: "Jane Smith",
-    role: "Program Manager at NGO Connect",
+    name: "Community Solidarity Project",
+    role: "LA Fires Response",
     quote:
-      "Collaborating with Distribute Aid has enhanced our outreach efforts, enabling us to better serve those in need.",
-    img: {
-      src: "unhcr.png",
-      alt: "",
-    },
+      "With the support of Distribute Aid, we were able to rapidly scale up our fire-related mutual aid efforts. During the acute response period, we supported over 250 families and individuals with essential supply deliveries. Due to the influx of infrastructure and supplies, Community Solidarity Project expanded to open a free store for families and individuals impacted by the fires. We are extremely grateful for the trust and support that was extended to us by Distribute Aid, which empowered us to have a robust mutual aid effort supporting people displaced by fires.",
   },
 ];
 
