@@ -4,9 +4,13 @@ import siteSettings from "../../data/site-settings.json";
 const BankInfoDialog = () => (
   <Dialog.Root>
     <Dialog.Trigger>
-      <Box px="3" width={"100%"} asChild>
-        <Button className="cursor-pointer" size={{ initial: "2", sm: "3" }}>
-          Make a Bank Transfer
+      <Box asChild width={{ initial: "100%", sm: "auto" }}>
+        <Button 
+          className="bg-navy-600 hover:bg-navy-500 cursor-pointer" 
+          size={{ initial: "3", sm: "2", md: "3" }}
+          style={{ height: "44px" }}
+        >
+          <span style={{ whiteSpace: "nowrap" }}>Make a Bank Transfer</span>
         </Button>
       </Box>
     </Dialog.Trigger>
