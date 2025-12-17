@@ -16,7 +16,7 @@ const Testimonials = () => {
           Partner Testimonials
         </Heading>
         <Text size="4" m="4">
-          Insights from organizations working alongside us.
+          Insights from organizations working alongside us
         </Text>
       </Flex>
       <Grid

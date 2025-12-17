@@ -36,7 +36,7 @@ const WhereWeWork = () => {
       map: europeMap,
       title: "Europe",
       summary:
-        "In Europe, we work with local grassroots organizers who support people on the move, asylum seekers, houseless and low-income people, and those displaced due to war or disaster. Our partners provide support ranging from medical services, legal support, advocacy, hot meals, and NFI distributions.",
+        "In Europe, we work with local grassroots organizers who support people on the move, asylum seekers, houseless and low-income people, and those displaced due to war or disaster. Our partners provide support ranging from medical services, legal support, advocacy, and hot meals to non-food items.",
       alt: `Color-coded map of Europe showing three aid-flow categories. Receiving aid: France, Croatia, Bosnia & Herzegovina, Serbia, Romania, Moldova. Sending aid: Spain, United Kingdom, Norway, Austria, Hungary, Lithuania. Both: Netherlands, Germany, Poland, Italy, Ukraine, Greece.`,
     },
     {
