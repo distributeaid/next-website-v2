@@ -1,6 +1,8 @@
 import { Flex, Heading, Button, Box, Link } from "@radix-ui/themes";
 import Image from "next/image";
 import siteSettings from "@/data/site-settings.json";
+import BankInfoDialog from "../ui/BankInfoDialog";
+
 const HeroSection = () => {
   return (
     <>
@@ -120,23 +122,7 @@ const HeroSection = () => {
                     </Link>
                   </Button>
                 </Box>
-                <Box asChild width={{ initial: "100%", sm: "auto" }}>
-                  <Button
-                    className="bg-navy-600 hover:bg-navy-500 "
-                    size={{ initial: "3", sm: "2", md: "3" }}
-                    style={{ height: "44px" }}
-                    asChild
-                  >
-                    <Link
-                      wrap={"nowrap"}
-                      target="_blank"
-                      // bank transer link TBD
-                      href=""
-                    >
-                      Make a Bank Transfer
-                    </Link>
-                  </Button>
-                </Box>
+                <BankInfoDialog />
               </Flex>
             </Flex>
           </Flex>

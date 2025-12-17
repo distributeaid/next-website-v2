@@ -2,6 +2,7 @@ import { Flex, Heading, Button, Box, Link } from "@radix-ui/themes";
 import Image from "next/image";
 import siteSettings from "@/data/site-settings.json";
 import TextMark from "../brand/TextMark";
+import BankInfoDialog from "./BankInfoDialog";
 
 interface HeroSectionProps {
   heading: string;
@@ -101,7 +102,8 @@ const HeroSection = ({
                 mr={{ initial: "auto", sm: "9" }}
                 ml={{ initial: "auto", sm: "0" }}
               >
-                {buttons.map(({ label, href, bgWhite, targetBlank }) => (
+                //temporarily remove buttons map
+                {/* {buttons.map(({ label, href, bgWhite, targetBlank }) => (
                   <Box
                     asChild
                     width={{ initial: "100%", sm: "auto" }}
@@ -125,7 +127,40 @@ const HeroSection = ({
                       </Link>
                     </Button>
                   </Box>
-                ))}
+                ))} */}
+                <Box asChild width={{ initial: "100%", sm: "auto" }}>
+                  <Button
+                    className="bg-white text-black hover:bg-navy-500 hover:text-white transition-200"
+                    size={{ initial: "3", sm: "2", md: "3" }}
+                    style={{ height: "44px" }}
+                    asChild
+                  >
+                    <Link
+                      wrap={"nowrap"}
+                      target="_blank"
+                      href={siteSettings.donate.byPaypal}
+                    >
+                      Donate with Paypal
+                    </Link>
+                  </Button>
+                </Box>
+                <Box asChild width={{ initial: "100%", sm: "auto" }}>
+                  <Button
+                    className=" bg-navy-600 hover:bg-navy-500"
+                    size={{ initial: "3", sm: "2", md: "3" }}
+                    style={{ height: "44px" }}
+                    asChild
+                  >
+                    <Link
+                      wrap={"nowrap"}
+                      target="_blank"
+                      href={siteSettings.donate.byOmprakash}
+                    >
+                      Use a Debit/Credit card
+                    </Link>
+                  </Button>
+                </Box>
+                <BankInfoDialog />                
               </Flex>
             </Flex>
           </Flex>

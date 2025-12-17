@@ -2,7 +2,7 @@ import { Box, Container, Heading, Flex, Button, Grid } from "@radix-ui/themes";
 import Image from "next/image";
 import Link from "next/link";
 import siteSettings from "../../../data/site-settings.json";
-import BankInfoDialog from "../BankInfoDialog";
+import BankInfoDialog from "../../ui/BankInfoDialog";
 
 const DonationCTA = () => {
   const { donate } = siteSettings;
