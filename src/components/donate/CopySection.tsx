@@ -18,8 +18,8 @@ const CopySection = () => (
     <Text as="p" align={"center"} size={{ initial: "5", md: "6" }}>
       Distribute Aid ensures every dollar and diaper donated is put to good use.
       Our logistics management system reduces wasted items and shipping costs,
-      including carbon emissions, by significant margins. We don&apos;t pay our
-      executives lavish salaries, and we don&apos;t spend money on advertising.
+      including carbon emissions, by significant margins. We don’t pay our
+      executives lavish salaries, and we don’t spend money on advertising.
     </Text>
   </Box>
 );
