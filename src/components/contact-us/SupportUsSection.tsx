@@ -31,9 +31,9 @@ const SupportUsSection = () => (
   <Flex direction="column" gap="8" mb="4">
     <SupportSectionWrapper Icon={LuPackageCheck} title="Got Aid?" color="pink">
       <p>
-        While we help distribute shipments, we can&apos;t collect items
-        ourselves. However, we can usually let you know which local hub you can
-        turn to with your donations.
+        While we help distribute shipments, we can’t collect items ourselves.
+        However, we can usually let you know which local hub you can turn to
+        with your donations.
       </p>
       <ul>
         <li>

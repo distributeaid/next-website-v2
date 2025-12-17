@@ -39,7 +39,7 @@ const DoneColumns = ({ fund }: FundProps) => {
               color="blue"
               highContrast
             >
-              What We've Done
+              What We’ve Done
             </Heading>
           </Box>
           {done_column_left && (
