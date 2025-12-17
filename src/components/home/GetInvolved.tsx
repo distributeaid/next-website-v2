@@ -15,7 +15,7 @@ import { handleNewsletterSignup } from "@/utils/newsletter";
 
 const GetInvolved = () => {
   const emailInputRef = useRef<HTMLInputElement>(null);
-  const [newsletterSuccess, setNewsletterSuccess] = useState(true);
+  const [newsletterSuccess, setNewsletterSuccess] = useState(false);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
