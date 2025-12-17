@@ -137,8 +137,8 @@ const Footer = () => {
               gap={{ initial: "9" }}
               direction={{ initial: "row" }}
             >
-              {FOOTER_COLUMNS.map((column) => (
-                <Flex key={column.title || "main"} direction="column" gap="3">
+              {FOOTER_COLUMNS.map((column, index) => (
+                <Flex key={`column-${index + 1}`} direction="column" gap="3">
                   {column.title && (
                     <ColumnHeading>{column.title}</ColumnHeading>
                   )}
