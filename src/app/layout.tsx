@@ -9,6 +9,7 @@ import "../stylesheets/main.css";
 
 import NavBar from "../components/nav/navBar";
 import Footer from "@/components/ui/Footer";
+import GetInvolved from "@/components/ui/GetInvolved";
 
 const yantramanav = Yantramanav({
   subsets: ["latin"],
@@ -44,7 +45,7 @@ export default function RootLayout({
         <Theme accentColor="blue">
           <NavBar />
           <div className="pt-20">{children}</div>
-
+          <GetInvolved />
           <Footer />
         </Theme>
       </body>
