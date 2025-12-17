@@ -160,7 +160,7 @@ const HeroSection = ({
                     </Link>
                   </Button>
                 </Box>
-                <BankInfoDialog />                
+                <BankInfoDialog />
               </Flex>
             </Flex>
           </Flex>
