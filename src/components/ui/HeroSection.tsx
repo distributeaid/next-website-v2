@@ -102,7 +102,7 @@ const HeroSection = ({
                 mr={{ initial: "auto", sm: "9" }}
                 ml={{ initial: "auto", sm: "0" }}
               >
-                //temporarily remove buttons map
+                {/* temporarily remove buttons map */}
                 {/* {buttons.map(({ label, href, bgWhite, targetBlank }) => (
                   <Box
                     asChild
