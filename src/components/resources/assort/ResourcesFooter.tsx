@@ -77,7 +77,7 @@ export const ResourcesFooter = () => {
             </Card>
           ))}
         </Flex>
-        <Text as="p" mt="28px" className="text-gray-900">
+        {/* <Text as="p" mt="28px" className="text-gray-900">
           If you are an organisation intending to adopt the standards, we
           strongly encourage you to fill out this form to receive updates when
           revised versions of the standards come out: 
@@ -87,7 +87,7 @@ export const ResourcesFooter = () => {
           >
             Stay Up To Date!
           </SmartLink>
-        </Text>
+        </Text> */}
       </Container>
     </Box>
   );
