@@ -136,7 +136,8 @@ export const faqs = [
     "I’m a journalist and want to cover this project. Who do I contact?",
     <>
       <Text as="p">
-        <strong>A:</strong> Please reach out to <a href="mailto:hello@distributeaid.org">hello@distributeaid.org</a>.
+        <strong>A:</strong> Please reach out to{" "}
+        <a href="mailto:hello@distributeaid.org">hello@distributeaid.org</a>.
       </Text>
     </>,
   ],
