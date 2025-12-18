@@ -129,7 +129,7 @@ export const partnerTestimonials: {
     name: "Anera M&E Officer in South Lebanon",
     role: " Levant Response",
     quote:
-      "With the generous support of Distribute Ad, Anera recently received and distributed a full container of essential medical and mobility supplies to support people living with disabilities across Lebanon. This shipment included more than 120 mobility aids, including wheelchairs and crutches, and over 2,000 units of supplies such as gloves and underpads. The donation was distributed to ten health centers, reaching vulnerable Lebanese outside refugee camps and Palestinians inside refugee camps.",
+      "With the generous support of Distribute Aid, Anera recently received and distributed a full container of essential medical and mobility supplies to support people living with disabilities across Lebanon. This shipment included more than 120 mobility aids, including wheelchairs and crutches, and over 2,000 units of supplies such as gloves and underpads. The donation was distributed to ten health centers, reaching vulnerable Lebanese outside refugee camps and Palestinians inside refugee camps.",
   },
   {
     name: "Community Solidarity Project",

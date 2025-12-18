@@ -6,6 +6,7 @@ import ShakingHandsIcon from "@/icons/ShakingHands.icon";
 import ShirtIcon from "@/icons/Shirt.icon";
 import TentFilledIcon from "@/icons/TentFilled.icon";
 import TruckIcon from "@/icons/Truck.icon";
+import GlobeIcon from "@/icons/Globe.icon";
 
 export const IconsRepository = {
   MoneyFilledIcon,
@@ -16,4 +17,5 @@ export const IconsRepository = {
   BowlFoodFillIcon,
   TentFilledIcon,
   ShakingHandsIcon,
+  GlobeIcon,
 };

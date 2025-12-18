@@ -21,7 +21,7 @@ const OurImpact = () => {
         mb="8"
         as="p"
       >
-        July 2021—June 2024 in numbers
+        July 2020—June 2025 in numbers
       </Text>
 
       <Grid asChild columns={{ initial: "1", md: "2", lg: "3" }} gap="4">

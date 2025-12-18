@@ -22,13 +22,12 @@ const DonateLandingText = () => {
       </Heading>
       <Flex gap={"4"} p={"4"} m={"4"} direction={"column"} align={"center"}>
         <Text align={"center"}>
-          At Distribute Aid we handle large surplus donations of supplies (4
-          pallets or more). If you’re a business owner or friends with one,
+          At Distribute Aid we handle large surplus donations of food, clothing, medical equipment or other supplies. If you’re a business owner or friends with one,
           consider us for your in-kind donation program. We’ll turn your surplus
-          stock into a social good by connecting you with a local hub that can
+          stock (4 pallets or more) into a social good by connecting you with a local hub that can
           collect your donations.
         </Text>
-        <Text align={"center"}>
+        <Text align={"center"} weight={"bold"}>
           If that’s you, reach out to{" "}
           <Link
             href="mailto:donate-aid@distributeaid.org"
@@ -38,49 +37,8 @@ const DonateLandingText = () => {
             donate-aid@distributeaid.org
           </Link>
         </Text>
-        <Text align={"center"} weight={"bold"}>
-          If you have food, clothing, medical equipment, or other items you’d
-          like to donate, please contact:
-        </Text>
       </Flex>
-      <Flex gap={"5"} direction={"column"}>
-        <Flex
-          gap={"4"}
-          direction={{ initial: "column", sm: "row" }}
-          align={"center"}
-        >
-          <Text size={"8"}>🇬🇧</Text>
-          <Text align={{ initial: "center", sm: "left" }}>
-            <Strong>U.K. -</Strong> email us at 
-            <Link
-              underline="always"
-              color="blue"
-              href="mailto:huib@distributeaid.org"
-            >
-              hubs@distributeaid.org 
-            </Link>
-          </Text>
-        </Flex>
-        <Flex
-          gap={"4"}
-          direction={{ initial: "column", sm: "row" }}
-          align={"center"}
-        >
-          <Text size={"8"}>🌎</Text>
-          <Text align={{ initial: "center", sm: "left" }}>
-            <Strong>Based elsewhere -</Strong> If you don’t know of any
-            collection groups local to you, email us at{" "}
-            <Link
-              underline="always"
-              color="blue"
-              href="mailto:hello@distributeaid.org"
-            >
-              hello@distributeaid.org
-            </Link>
-            .
-          </Text>
-        </Flex>
-
+      <Flex gap={"5"} direction={"column"} align={"center"}>       
         <Flex
           gap={"4"}
           direction={{ initial: "column", sm: "row" }}
