@@ -24,10 +24,9 @@ const ImpactCard: React.FC<ImpactCardProps> = ({
       <Flex
         width="100%"
         height="100%"
-        className="bg-navy-200 rounded-lg px-10 pb-10 pt-16"
+        className="bg-navy-200 rounded-lg p-10"
         direction="column"
-        gap="8"
-        justify="end"
+        justify="between"
       >
         <Flex align="center" justify="center" gap="5">
           <span aria-hidden="true">
@@ -50,6 +49,7 @@ const ImpactCard: React.FC<ImpactCardProps> = ({
           weight="regular"
           size={{ initial: "6", md: "6", lg: "8" }}
           align="center"
+          // wrap="nowrap"
         >
           {label}
         </Heading>
