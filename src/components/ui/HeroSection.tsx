@@ -9,8 +9,8 @@ interface HeroSectionProps {
   imgSrc: string;
   imgAlt: string;
   buttonHeading: string;
-  buttonBGColor:string
-  hasLogo?:boolean
+  buttonBGColor: string;
+  hasLogo?: boolean;
   // buttons: {
   //   label: string;
   //   href: string;
