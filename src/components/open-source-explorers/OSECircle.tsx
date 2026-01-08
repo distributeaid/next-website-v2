@@ -6,9 +6,15 @@ type Props = {
   text: string;
   colorClass: string;
   textColorClass?: string;
+  isMarkdown?: boolean;
 };
 
-const OSECircle: FC<Props> = ({ text, colorClass, textColorClass }) => {
+const OSECircle: FC<Props> = ({
+  text,
+  colorClass,
+  textColorClass,
+  isMarkdown,
+}) => {
   return (
     <Flex
       width="80px"
@@ -24,7 +30,7 @@ const OSECircle: FC<Props> = ({ text, colorClass, textColorClass }) => {
           className={textColorClass || "text-gray-900"}
           as="div"
         >
-          <MarkdownContent content={text} />
+          {isMarkdown ? <MarkdownContent content={text} /> : text}
         </Text>
       )}
     </Flex>
