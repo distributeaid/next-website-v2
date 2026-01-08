@@ -3,6 +3,7 @@ import FUND_RAISERS from "@/data/donate.json";
 import HeroSection from "@/components/donate/HeroSection";
 import CopySection from "@/components/donate/CopySection";
 import DonateLandingText from "@/components/donate/DonateLandingText";
+import WingOfHonor from "@/components/donate/WingOfHonor";
 
 const Page = () => {
   return (
@@ -13,6 +14,7 @@ const Page = () => {
         <DonateGrid funds={FUND_RAISERS} />
       )}
       <DonateLandingText />
+      <WingOfHonor />
     </>
   );
 };
