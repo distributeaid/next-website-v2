@@ -1,4 +1,3 @@
-export { default as Hero } from "./Hero";
 export { default as SubscribeCTA } from "./SubscribeCTA";
 export { default as WhatWeDo } from "./WhatWeDo";
 export { default as WhereWeWork } from "./WhereWeWork";
