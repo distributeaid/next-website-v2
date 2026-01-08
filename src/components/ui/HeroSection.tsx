@@ -9,12 +9,14 @@ interface HeroSectionProps {
   imgSrc: string;
   imgAlt: string;
   buttonHeading: string;
-  buttons: {
-    label: string;
-    href: string;
-    bgWhite?: boolean;
-    targetBlank?: boolean;
-  }[];
+  buttonBGColor:string
+  hasLogo?:boolean
+  // buttons: {
+  //   label: string;
+  //   href: string;
+  //   bgWhite?: boolean;
+  //   targetBlank?: boolean;
+  // }[];
 }
 
 const HeroSection = ({
@@ -22,7 +24,9 @@ const HeroSection = ({
   imgAlt,
   imgSrc,
   buttonHeading,
-  buttons,
+  buttonBGColor,
+  hasLogo = true,
+  // buttons,
 }: HeroSectionProps) => {
   return (
     <Box>
@@ -61,8 +65,8 @@ const HeroSection = ({
             height={{ lg: "733px" }}
             width={"100%"}
           >
-            <TextMark width="240px" />
-            <Box maxWidth={{ initial: "400px" }}>
+            {hasLogo && <TextMark width="240px" />}
+            <Box maxWidth={{ initial: "410px" }}>
               <Heading
                 as="h1"
                 size={{ initial: "8", sm: "9" }}
@@ -76,7 +80,7 @@ const HeroSection = ({
             <Flex
               p={{ initial: "6", sm: "5", lg: "7" }}
               direction={{ initial: "column", sm: "row", lg: "column" }}
-              style={{ background: "#DFCDE8" }}
+              style={{ background: buttonBGColor }}
               width={{ initial: "auto", sm: "100%", lg: "670px" }}
               height={{ initial: "auto", sm: "130px", lg: "184px" }}
               gap={{ initial: "3", sm: "5" }}

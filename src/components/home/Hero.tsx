@@ -5,35 +5,18 @@ import { FaRegCircleCheck } from "react-icons/fa6";
 const Hero = () => {
   return (
     <>
-      <Box
+      {/* <Box
         style={{
           backgroundColor: "#5AC597",
         }}
-      ></Box>
+      ></Box> */}
       <HeroSection
         heading="Your Mutual Aid Logistic
         Experts"
         imgSrc="/images/home/hero-image.jpg"
-        imgAlt=""
+        imgAlt="hero image"
         buttonHeading="Ship aid to people in need."
-        buttons={[
-          {
-            label: "Donate with PayPal",
-            href: "",
-            bgWhite: true,
-            targetBlank: true,
-          },
-          {
-            label: "Use a Debit/Credit Card",
-            href: "",
-            targetBlank: true,
-          },
-          {
-            label: "Make a Bank Transfer",
-            href: "",
-            targetBlank: true,
-          },
-        ]}
+        buttonBGColor="#DFCDE8"
       />
     </>
   );

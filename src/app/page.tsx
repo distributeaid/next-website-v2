@@ -1,5 +1,4 @@
 import {
-  Hero,
   SubscribeCTA,
   WhatWeDo,
   WhereWeWork,
@@ -7,11 +6,18 @@ import {
   Impact,
   Testimonials,
 } from "@/components/home";
-
+import HeroSection from "@/components/ui/HeroSection";
 const Home = () => {
   return (
     <main>
-      <Hero />
+      <HeroSection
+        heading="Your Mutual Aid Logistic
+        Experts"
+        imgSrc="/images/home/hero-image.jpg"
+        imgAlt="hero image"
+        buttonHeading="Ship aid to people in need."
+        buttonBGColor="#DFCDE8"
+      />
       <SubscribeCTA />
       <WhatWeDo />
       <WhereWeWork />
