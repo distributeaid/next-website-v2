@@ -2480,15 +2480,15 @@ __metadata:
   linkType: hard
 
 "@react-email/render@npm:^2.0.0":
-  version: 2.0.1
-  resolution: "@react-email/render@npm:2.0.1"
+  version: 2.0.2
+  resolution: "@react-email/render@npm:2.0.2"
   dependencies:
     html-to-text: "npm:^9.0.5"
     prettier: "npm:^3.5.3"
   peerDependencies:
     react: ^18.0 || ^19.0 || ^19.0.0-rc
     react-dom: ^18.0 || ^19.0 || ^19.0.0-rc
-  checksum: 10c0/cca58ccbd90d9a3496db6e89ce2d3eeff0e79a226bb981f29276751b2ffc07ddd675239f8553a04b6f33396790c59cff077e696799d539d2433efdcc1e101843
+  checksum: 10c0/c6975b42728ab1aafd7fd1b36b027825ba9c300eeb1533ae606505840438069e51a0d86774c807866c1c53f55c8b760811bbefef380dddb4f555684261611cb2
   languageName: node
   linkType: hard
 
