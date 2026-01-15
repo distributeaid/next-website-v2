@@ -1,7 +1,7 @@
 import { Box, Flex, Grid, Heading, Text } from "@radix-ui/themes";
 import Image from "next/image";
 
-import { partnerTestimonials } from "@/data/home";
+import { partnerTestimonials } from "@/data/home/partnerTestimonials";
 
 const Testimonials = () => {
   return (

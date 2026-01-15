@@ -1,4 +1,4 @@
-import { IconsRepository } from "./icons-repository";
+import { IconsRepository } from "../icons-repository";
 
 export const ImpactData = [
   {

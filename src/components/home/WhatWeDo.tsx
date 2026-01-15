@@ -1,5 +1,5 @@
-import { whatWeDoData } from "@/data/home";
-import { Box, Grid, Heading, Section } from "@radix-ui/themes";
+import { whatWeDoData } from "@/data/home/whatWeDo";
+import { Grid, Heading, Section } from "@radix-ui/themes";
 import React from "react";
 import ServiceCard from "../service-card/ServiceCard";
 

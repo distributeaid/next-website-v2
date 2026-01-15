@@ -1,5 +1,5 @@
 "use client";
-import { Box, Flex, Text, Button, Link } from "@radix-ui/themes";
+import { Flex, Text } from "@radix-ui/themes";
 
 const SubscribeCTA = () => {
   return (
@@ -18,17 +18,6 @@ const SubscribeCTA = () => {
         communities in need. Our logistics experts help deliver more aid more
         quickly—at lower costs.
       </Text>
-      {/* temporarily disabled the subcribe button until we know where this should link to */}
-      {/* <Box>
-        <Button
-          className="py-7 px-11 flex-grow-0 text-[16px] cursor-pointer"
-          style={{ borderRadius: "0.5rem", fontWeight: "500" }}
-        >
-          <Link className="text-white" href="#newsletter-signup">
-            Subscribe
-          </Link>
-        </Button>
-      </Box> */}
     </Flex>
   );
 };
