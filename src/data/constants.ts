@@ -1,6 +1,4 @@
 import { RiInstagramFill, RiBlueskyFill, RiLinkedinFill } from "react-icons/ri";
-import Home from "@/app/page";
-import { Title } from "@radix-ui/themes/dist/cjs/components/alert-dialog";
 
 export const MONTHS = [
   "January",
