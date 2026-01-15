@@ -10,7 +10,7 @@ import {
   Grid,
 } from "@radix-ui/themes";
 
-import { getInvolvedLinks } from "@/data/home/get-involved";
+import { getInvolvedLinks } from "@/data/getInvolved";
 import { handleNewsletterSignup } from "@/utils/newsletter";
 
 const GetInvolved = () => {

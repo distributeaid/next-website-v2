@@ -1,6 +1,6 @@
 import { Heading, Text, Grid, Section } from "@radix-ui/themes";
 import ImpactCard from "../impact-card/ImpactCard";
-import { ImpactData } from "@/data/ourImpact";
+import { ImpactData } from "@/data/home/ourImpact";
 
 const OurImpact = () => {
   return (
