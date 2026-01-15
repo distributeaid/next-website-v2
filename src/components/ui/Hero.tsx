@@ -1,11 +1,10 @@
 import Image from "next/image";
-import {
-  logoHero,
-  loadingTruck,
-  moriaFireRelief,
-  soapRelief,
-  waterRelief,
-} from "@/data/home";
+import logoHero from "../../public/images/home/carousel/distributeAidHero.svg";
+import loadingTruck from "../../public/images/home/carousel/loading_truck.png";
+import moriaFireRelief from "../../public/images/home/carousel/moria_fire_relief.png";
+import soapRelief from "../../public/images/home/carousel/soap_relief.png";
+import waterRelief from "../../public/images/home/carousel/water_relief.png";
+
 import DynamicBgImg from "./DynamicBgImg";
 
 const Hero = () => {
