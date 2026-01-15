@@ -13,6 +13,8 @@ import {
 import { getInvolvedLinks } from "@/data/getInvolved";
 import { handleNewsletterSignup } from "@/utils/newsletter";
 
+import Section from "./SectionWithTitle";
+
 const GetInvolved = () => {
   const emailInputRef = useRef<HTMLInputElement>(null);
   const [newsletterSuccess, setNewsletterSuccess] = useState(false);
@@ -35,20 +37,11 @@ const GetInvolved = () => {
   };
 
   return (
-    <section>
-      <Flex direction="column" align="center">
-        <Heading
-          as="h2"
-          className="text-navy-900 text-6xl"
-          m="4"
-          id="testimonial-heading"
-        >
-          Get Involved
-        </Heading>
-        <Text size="4" m="4">
-          Three Ways To Make A Difference
-        </Text>
-      </Flex>
+    <Section
+      title="Get Involved"
+      subTitle="Three Ways To Make A Difference"
+      noPadding
+    >
       <Grid
         columns={{
           initial: "1",
@@ -140,7 +133,7 @@ const GetInvolved = () => {
           )}
         </Box>
       </Box>
-    </section>
+    </Section>
   );
 };
 

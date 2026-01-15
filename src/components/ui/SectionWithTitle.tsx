@@ -5,6 +5,7 @@ interface HomeSectionProps {
   title: String;
   subTitle?: String;
   backgroundColor?: String;
+  noPadding?: boolean;
   children: React.ReactNode;
 }
 
@@ -12,13 +13,14 @@ const Section = ({
   title,
   subTitle,
   backgroundColor,
+  noPadding,
   children,
 }: HomeSectionProps) => {
   const headingId = `${title.toLowerCase().replaceAll(" ", "-")}-section-title`;
 
   return (
     <RadixSection
-      className={`px-6 md:px-16 ${backgroundColor && `bg-${backgroundColor}`}`}
+      className={`${noPadding ? "p-0" : "px-6 md:px-16"} ${backgroundColor && `bg-${backgroundColor}`}`}
       aria-labelledby={headingId}
     >
       <SectionHeading id={headingId}>{title}</SectionHeading>
