@@ -1,6 +1,6 @@
-import europeMap from "./maps/europe.svg";
-import middleEastMap from "./maps/middle-east.svg";
-import unitedStatesMap from "./maps/united-states.svg";
+import europeMap from "./assets/map-europe.svg";
+import middleEastMap from "./assets/map-middle-east.svg";
+import unitedStatesMap from "./assets/map-united-states.svg";
 
 type BackgroundColor = `bg-${string}`;
 

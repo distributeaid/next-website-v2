@@ -1,6 +1,6 @@
 import { Grid } from "@radix-ui/themes";
 import ImpactCard from "../impact-card/ImpactCard";
-import { ImpactData } from "@/data/home/ourImpact";
+import { ImpactData } from "@/data/stats";
 
 import Section from "../ui/SectionWithTitle";
 

@@ -1,7 +1,7 @@
-import { Box, Flex, Grid, Heading, Text } from "@radix-ui/themes";
+import { Box, Flex, Grid, Text } from "@radix-ui/themes";
 import Image from "next/image";
 
-import { partnerTestimonials } from "@/data/home/partnerTestimonials";
+import { partnerTestimonials } from "@/data/testimonials";
 
 import Section from "../ui/SectionWithTitle";
 

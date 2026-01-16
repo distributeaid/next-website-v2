@@ -1,4 +1,4 @@
-import { whatWeDoData } from "@/data/home/whatWeDo";
+import { whatWeDoData } from "@/data/whatWeDo";
 import { Grid } from "@radix-ui/themes";
 import React from "react";
 import ServiceCard from "../service-card/ServiceCard";
