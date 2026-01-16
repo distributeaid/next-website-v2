@@ -9,7 +9,7 @@ import {
   Section,
 } from "@radix-ui/themes";
 
-import { cardContent, type MapKey } from "../../data/home/whereWeWork";
+import { cardContent, type MapKey } from "../../data/whereWeWork";
 
 import { SectionHeading } from "../ui/SectionWithTitle";
 
