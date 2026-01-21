@@ -22,7 +22,7 @@ const nextConfig: NextConfig = {
               img-src 'self' data: image/png image/jpg;
               font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com;
               style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-           `,
+            `,
           },
           {
             key: "X-Content-Type-Options",
