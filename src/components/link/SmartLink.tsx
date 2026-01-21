@@ -8,7 +8,6 @@ const SmartLink: FC<AnchorHTMLAttributes<HTMLAnchorElement>> = ({
   href = "/",
   ...props
 }) => {
-  console.log(href, "href");
   // return <div>{}</div>
   const useInternalLink =
     //  href.startsWith('/') || originsMatch(href, window.location.origin)
