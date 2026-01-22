@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        source: "/:path*",
+        source: "/:path((?!donor-recognition).*)",
         headers: [
           {
             key: "X-Frame-Options",
