@@ -1,29 +1,12 @@
-import { Heading, Text, Grid, Section } from "@radix-ui/themes";
+import { Grid } from "@radix-ui/themes";
 import ImpactCard from "../impact-card/ImpactCard";
-import { ImpactData } from "@/data/ourImpact";
+import { ImpactData } from "@/data/stats";
+
+import Section from "../ui/SectionWithTitle";
 
 const OurImpact = () => {
   return (
-    <Section className="px-6 md:px-16" aria-labelledby="impact-section-title">
-      <Heading
-        as="h2"
-        weight="bold"
-        align="center"
-        mb="4"
-        className="font-yantramanav font-bold text-[60px] leading-[60px] tracking-[-0.16px] text-navy-700"
-        id="impact-section-title"
-      >
-        Our Impact
-      </Heading>
-      <Text
-        align="center"
-        className="font-roboto font-normal text-[20px] leading-[24px] tracking-[0] text-navy-900"
-        mb="8"
-        as="p"
-      >
-        July 2020—June 2025 in numbers
-      </Text>
-
+    <Section title="Our Impact" subTitle="July 2020—June 2025 in numbers">
       <Grid asChild columns={{ initial: "1", md: "2", lg: "3" }} gap="4">
         <ul>
           {ImpactData.map((item, index) => (

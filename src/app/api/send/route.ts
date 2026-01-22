@@ -17,7 +17,6 @@ export async function POST(request: Request) {
   const requestBody = (await request.json()) as EmailMessageProps;
 
   const body = EmailMessage.parse(requestBody);
-  console.log(body);
 
   const { CONTACT_TO_EMAIL } = process.env;
 
@@ -35,13 +34,11 @@ export async function POST(request: Request) {
     });
 
     if (error) {
-      console.log(error);
       return Response.json({ error }, { status: 500 });
     }
 
     return Response.json(data);
   } catch (error) {
-    console.log(error);
     return Response.json({ error }, { status: 500 });
   }
 }

@@ -1,24 +1,16 @@
-import { Box, Flex, Grid, Heading, Text } from "@radix-ui/themes";
+import { Box, Flex, Grid, Text } from "@radix-ui/themes";
 import Image from "next/image";
 
-import { partnerTestimonials } from "@/data/home";
+import { partnerTestimonials } from "@/data/testimonials";
+
+import Section from "../ui/SectionWithTitle";
 
 const Testimonials = () => {
   return (
-    <Box p="7" aria-labelledby="testimonial-heading">
-      <Flex direction="column" align="center" mb="8">
-        <Heading
-          as="h2"
-          className="text-navy-900 text-6xl"
-          m="4"
-          id="testimonial-heading"
-        >
-          Partner Testimonials
-        </Heading>
-        <Text size="4" m="4">
-          Insights from organizations working alongside us
-        </Text>
-      </Flex>
+    <Section
+      title="Partner Testimonials"
+      subTitle="Insights from organizations working alongside us"
+    >
       <Grid
         columns={{
           initial: "1",
@@ -65,7 +57,7 @@ const Testimonials = () => {
           ))}
         </ul>
       </Grid>
-    </Box>
+    </Section>
   );
 };
 

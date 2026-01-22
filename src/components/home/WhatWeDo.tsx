@@ -1,20 +1,13 @@
-import { whatWeDoData } from "@/data/home";
-import { Box, Grid, Heading, Section } from "@radix-ui/themes";
+import { whatWeDoData } from "@/data/whatWeDo";
+import { Grid } from "@radix-ui/themes";
 import React from "react";
 import ServiceCard from "../service-card/ServiceCard";
 
+import Section from "../ui/SectionWithTitle";
+
 const WhatWeDo = () => {
   return (
-    <Section className="px-6  md:px-16">
-      <Heading
-        as="h1"
-        weight="bold"
-        align="center"
-        className="text-navy-900"
-        size="9"
-      >
-        What We Do
-      </Heading>
+    <Section title="What We Do">
       <Grid
         columns={{ initial: "1", md: "2" }}
         gapX="6"
