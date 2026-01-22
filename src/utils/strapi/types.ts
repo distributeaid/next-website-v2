@@ -1,10 +1,9 @@
 export interface TeamMember {
-  id: string;
+  Id: string;
   Name: string;
   Bio: string;
   Pronouns: string;
   Profile: StrapiMedia;
-  Bio: string;
   Roles: TeamMemberRole[];
 }
 
