@@ -9,10 +9,10 @@ const nextConfig: NextConfig = {
       {
         source: "/(.*)",
         headers: [
-          // {
-          //   key: "X-Frame-Options",
-          //   value: "DENY",
-          // },
+          {
+            key: "X-Frame-Options",
+            value: "SAMEORIGIN",
+          },
           {
             key: "Content-Security-Policy",
             value:
@@ -30,17 +30,6 @@ const nextConfig: NextConfig = {
           {
             key: "Referrer-Policy",
             value: "strict-origin-when-cross-origin",
-          },
-        ],
-      },
-      {
-        source: "/donor-recognition/:path*.{jpg,jpeg,png,gif,webp}",
-        headers: [
-          { key: "Access-Control-Allow-Origin", value: "*" },
-          { key: "Access-Control-Allow-Methods", value: "GET" },
-          {
-            key: "Access-Control-Allow-Headers",
-            value: "X-Requested-With, Content-Type, Accept, Origin",
           },
         ],
       },
