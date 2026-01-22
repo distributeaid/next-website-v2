@@ -16,12 +16,5 @@ export async function getTeam() {
   const { STRAPI_URL } = process.env;
   const response = await strapiGet("members?populate=*");
   const jsonData = await response.json();
-  return jsonData.data.map((d: TeamMember) => ({
-    id: d.Id,
-    blurb: d.Bio,
-    name: d.Name,
-    pronouns: d.Pronouns,
-    title: d.Roles[0].Title,
-    photo: `${STRAPI_URL}${d.Profile.url}`,
-  }));
+  return jsonData.data;
 }

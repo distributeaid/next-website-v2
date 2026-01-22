@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Box, Container, Flex, Heading, Section, Text } from "@radix-ui/themes";
 import { TeamCard, TeamCardProps } from "./TeamCard";
-import { TeamMember } from "@/data/team";
+import { TeamMember } from "@/utils/strapi/types";
 
 export type TeamMembersProps = {
   people: TeamMember[];
@@ -36,9 +36,9 @@ export const TeamMembers: FC<TeamMembersProps> = ({
       {people.map((item, index) => (
         <li key={`exec-${index}`} className="inline-block">
           <TeamCard
-            name={`${item.name} ${item?.pronouns && `(${item.pronouns})`}`}
-            title={item.title}
-            photo={item.photo}
+            name={`${item.Name} ${item.Pronouns}`}
+            title={item.Roles[0].Title}
+            photo={item.Profile.url}
           />
         </li>
       ))}

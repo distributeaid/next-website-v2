@@ -1,25 +1,23 @@
 import { Box, Flex, Heading, Text } from "@radix-ui/themes";
 import Image from "next/image";
 import { MarkdownContent } from "../markdown/MarkdownContent";
+import { TeamMember } from "@/utils/strapi/types";
 
-interface CardProps {
-  source: string;
-  alt: string;
-  name: string;
-  blurb: string;
+export interface CardProps {
+  teamMember: TeamMember;
   bgColor: string;
 }
 
-const BoardCard = (props: CardProps) => {
+export const BoardCard = ({ bgColor, teamMember }: CardProps) => {
   return (
     <>
-      <Box className={`flex justify-center h-auto rounded-md ${props.bgColor}`}>
+      <Box className={`flex justify-center h-auto rounded-md ${bgColor}`}>
         <Flex direction="column" align="center">
           <div className="pt-7 px-7 w-full">
             <Box className="rounded-md overflow-hidden aspect-[4/3] w-full">
               <Image
-                src={props.source}
-                alt={props.alt}
+                src={teamMember.Profile.url}
+                alt={`Photo of ${teamMember.Name}`}
                 width={400}
                 height={400}
                 style={{
@@ -36,7 +34,7 @@ const BoardCard = (props: CardProps) => {
               weight="bold"
               className="pt-3 flex justify-center"
             >
-              {props.name.toUpperCase()}
+              {teamMember.Name.toUpperCase()}
             </Heading>
           </div>
           <Text
@@ -47,12 +45,10 @@ const BoardCard = (props: CardProps) => {
             weight="medium"
             className="text-center h-full pt-10 px-4 pb-8 flex flex-col justify-center"
           >
-            <MarkdownContent content={props.blurb} />
+            <MarkdownContent content={teamMember.Bio} />
           </Text>
         </Flex>
       </Box>
     </>
   );
 };
-
-export default BoardCard;
