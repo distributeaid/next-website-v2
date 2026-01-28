@@ -1,6 +1,6 @@
 "use client";
 import { FC, ReactNode } from "react";
-import { Box, Flex, Section, Text } from "@radix-ui/themes";
+import { Box, Flex, Text } from "@radix-ui/themes";
 import Image from "next/image";
 import CountUp from "react-countup";
 

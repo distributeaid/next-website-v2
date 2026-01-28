@@ -11,12 +11,6 @@ interface HeroSectionProps {
   buttonHeading: string;
   buttonBGColor: string;
   hasLogo?: boolean;
-  // buttons: {
-  //   label: string;
-  //   href: string;
-  //   bgWhite?: boolean;
-  //   targetBlank?: boolean;
-  // }[];
 }
 
 const HeroSection = ({
@@ -26,7 +20,6 @@ const HeroSection = ({
   buttonHeading,
   buttonBGColor,
   hasLogo = true,
-  // buttons,
 }: HeroSectionProps) => {
   return (
     <Box>
@@ -106,32 +99,6 @@ const HeroSection = ({
                 mr={{ initial: "auto", sm: "9" }}
                 ml={{ initial: "auto", sm: "0" }}
               >
-                {/* temporarily remove buttons map */}
-                {/* {buttons.map(({ label, href, bgWhite, targetBlank }) => (
-                  <Box
-                    asChild
-                    width={{ initial: "100%", sm: "auto" }}
-                    key={href}
-                  >
-                    <Button
-                      className={
-                        bgWhite
-                          ? "bg-white text-navy-700 no-underline hover:bg-navy-50"
-                          : ""
-                      }
-                      size={{ initial: "3", sm: "2", md: "3" }}
-                      asChild
-                    >
-                      <Link
-                        wrap={"nowrap"}
-                        target={targetBlank ? "_blank" : undefined}
-                        href={href}
-                      >
-                        {label}
-                      </Link>
-                    </Button>
-                  </Box>
-                ))} */}
                 <Box asChild width={{ initial: "100%", sm: "auto" }}>
                   <Button
                     className="bg-white text-black hover:bg-navy-500 hover:text-white transition-200"

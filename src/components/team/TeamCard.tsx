@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Box, Container, Flex, Heading, Section, Text } from "@radix-ui/themes";
+import { Flex, Text } from "@radix-ui/themes";
 import Image from "next/image";
 
 export type TeamCardProps = {

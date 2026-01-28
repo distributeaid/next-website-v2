@@ -8,7 +8,6 @@ import {
   Heading,
   Text,
 } from "@radix-ui/themes";
-import SmartLink from "@/components/link/SmartLink";
 
 const data = [
   {

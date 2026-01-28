@@ -1,7 +1,6 @@
 import { Flex, Heading, Box, Container, Text, Button } from "@radix-ui/themes";
 import Link from "next/link";
 import Image from "next/image";
-import { FundProps } from "@/types/fund";
 import { MarkdownContent } from "@/components/markdown/MarkdownContent";
 
 interface ctaProps {

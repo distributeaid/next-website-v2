@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Image from "next/image";
-import { Box, Flex, Container, Section, Heading, Text } from "@radix-ui/themes";
+import { Box, Flex, Section, Heading, Text } from "@radix-ui/themes";
 
 export const AboutHero: FC = () => (
   <>
