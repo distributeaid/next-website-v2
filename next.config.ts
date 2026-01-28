@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   images: {
-    domains: [process.env.STRAPI_DOMAIN || "localhost"]
+    domains: [process.env.STRAPI_DOMAIN || "localhost"],
   },
 
   async headers() {
