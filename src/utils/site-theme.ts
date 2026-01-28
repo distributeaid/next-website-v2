@@ -1,29 +1,10 @@
 import resolveConfig from "tailwindcss/resolveConfig";
 import tailwindConfig from "../../tailwind.config"; // Adjust the path to your Tailwind config file
 
-interface KeyValuePair<K, V> {
-  [key: string]: V;
-}
-
-interface TimelineItem {
-  period: string;
-  description: string;
-}
-
-interface MissionStatement {
-  missionStatement: string;
-  aboutOurMission: string;
-  timeline: TimelineItem[];
-}
-
 const theme = resolveConfig(tailwindConfig).theme;
 
 export function getThemeLargeScreenWidth(): number {
-  const screens = theme?.screens ?? {}; // {sm: '640px', md: '768px', lg: '1024px', xl: '1280px', 2xl: '1536px'}
-  // const screens = theme?.screens as unknown as
-  //   | Record<string, string>
-  //   | undefined;
-  // return parseInt(screens?.["lg"]?.replace("px", "") ?? "1024", 10);
+  const screens = theme?.screens ?? {};
   return parseInt(screens["lg"]?.replace("px", "") ?? "1024", 10); //from region-page branch. Commenting out temporaril
 }
 
@@ -47,15 +28,6 @@ export function getColors({
 }: {
   swatches: string[];
   weights: number[];
-  // <<<<<<< region-page
-  // }) {
-  //   const themeColors = theme?.colors as unknown as Record<string, Record<number, string>> | undefined; // {rosemary: {200: '#F2ECF5', 300: '#E9DFEE', etc}, etc}
-
-  //   const colors = [];
-
-  //   for (const swatch of swatches) {
-  //     for (const weight of weights) {
-  //       const swatchColors = themeColors?.[swatch] ?? {};
 }): string[] {
   const themeColors = theme?.colors as unknown as Record<
     string,
@@ -109,9 +81,6 @@ export function getVisualizationColors({
     }
   }
 
-  // <<<<<<< region-page
-  //   return colors;
-  // }
   if (randomize) {
     colors.sort(() => Math.random() - 0.5);
   }
