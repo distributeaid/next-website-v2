@@ -38,7 +38,7 @@ export const TeamMembers: FC<TeamMembersProps> = ({
           <TeamCard
             name={`${item.Name} ${item.Pronouns}`}
             title={item.Roles[0].Title}
-            photo={item.Profile.url}
+            photo={`${item.Profile.url}`}
           />
         </li>
       ))}

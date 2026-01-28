@@ -13,8 +13,17 @@ async function strapiGet(url: string) {
 }
 
 export async function getTeam() {
-  const { STRAPI_URL } = process.env;
   const response = await strapiGet("members?populate=*");
   const jsonData = await response.json();
-  return jsonData.data;
+  return processTeamData(jsonData.data);
+}
+
+function processTeamData(data: TeamMember[]) {
+  const { STRAPI_URL } = process.env;
+
+  data.forEach((teamMember: TeamMember) => {
+    teamMember.Profile.url = `${STRAPI_URL}${teamMember.Profile.url}`;
+  });
+
+  return data;
 }

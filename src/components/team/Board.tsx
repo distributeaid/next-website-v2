@@ -1,7 +1,7 @@
 import { BoardCard } from "./BoardCard";
 import { Box, Heading } from "@radix-ui/themes";
-import { getTeam } from "../../utils/strapi/api";
-import { TeamMember } from "../../utils/strapi/types";
+import { getTeam } from "@/utils/strapi/api";
+import { TeamMember } from "@/utils/strapi/types";
 
 const Board = async () => {
   const getColorFromSeed = (seed: string) => {
@@ -16,7 +16,8 @@ const Board = async () => {
   };
 
   const data = await getTeam();
-
+  const { STRAPI_URL } = process.env;
+  console.log(STRAPI_URL);
   return (
     <>
       <Box
@@ -36,7 +37,11 @@ const Board = async () => {
         </Box>
         <Box className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {data.map((member: TeamMember) => (
-            <BoardCard teamMember={member} bgColor={"bg-navy-400"} />
+            <BoardCard
+              key={member.id}
+              teamMember={member}
+              bgColor={"bg-navy-400"}
+            />
           ))}
         </Box>
       </Box>
