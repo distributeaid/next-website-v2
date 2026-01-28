@@ -1,6 +1,5 @@
 import DonateGrid from "@/components/donate/DonateGrid";
 import FUND_RAISERS from "@/data/donate.json";
-// import HeroSection from "@/components/donate/HeroSection";
 import CopySection from "@/components/donate/CopySection";
 import DonateLandingText from "@/components/donate/DonateLandingText";
 import WingOfHonor from "@/components/donate/WingOfHonor";
@@ -9,7 +8,6 @@ import HeroSection from "@/components/ui/HeroSection";
 const Page = () => {
   return (
     <>
-      {/* <HeroSection /> */}
       <HeroSection
         heading="Support us today, so communities are prepared for
               tomorrow."

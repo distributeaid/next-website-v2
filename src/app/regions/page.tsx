@@ -5,13 +5,11 @@ import SmartLink from "@/components/link/SmartLink";
 import { MarkdownContent } from "@/components/markdown/MarkdownContent";
 import { getCommaSeparator } from "@/utils/string";
 import { Region } from "@/types/place";
-import { regions, regionsData } from "@/data/mock-data";
+import { regionsData } from "@/data/mock-data";
 
 const Regions = () => {
   const needsByRegion: Record<string, number> = {};
-  // needs.byRegion.forEach(({ regionName, currentNeed }) => {
-  //   needsByRegion[regionName] = currentNeed
-  // })
+
   return (
     <section>
       <header className="prose max-w-none text-center text-navy-700 text-[3.375rem] uppercase font-lato font-extrabold">
