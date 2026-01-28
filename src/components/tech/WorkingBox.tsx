@@ -1,5 +1,4 @@
 import { Badge, Box, Container, Flex, Heading, Text } from "@radix-ui/themes";
-import React from "react";
 import SmartLink from "../link/SmartLink";
 
 interface WorkingBoxProps {

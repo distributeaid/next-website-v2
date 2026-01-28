@@ -1,5 +1,4 @@
 import { getBackgroundColor } from "@/utils/site-theme";
-import React from "react";
 import Card, { ImageVariant } from "@/components/Card";
 import SmartLink from "@/components/link/SmartLink";
 import { MarkdownContent } from "@/components/markdown/MarkdownContent";
