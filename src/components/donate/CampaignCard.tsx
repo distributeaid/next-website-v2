@@ -21,7 +21,6 @@ type Props = {
   goal: number | undefined;
   donateLink: string | undefined;
   moreLink: string | undefined;
-  [key: string]: any;
 };
 
 // enable RadixUI's asChild functionality for callig code

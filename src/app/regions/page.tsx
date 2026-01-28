@@ -5,7 +5,7 @@ import SmartLink from "@/components/link/SmartLink";
 import { MarkdownContent } from "@/components/markdown/MarkdownContent";
 import { getCommaSeparator } from "@/utils/string";
 import { Region } from "@/types/place";
-import { regions, regionsData } from "@/data/mock-data";
+import { regionsData } from "@/data/mock-data";
 
 const Regions = () => {
   const needsByRegion: Record<string, number> = {};
@@ -52,8 +52,8 @@ const Regions = () => {
 };
 
 const createSubregionLinks = (region: Region): React.JSX.Element[] => {
-  return region.subregions.map((subregion, index, array) => {
-    const seperator = getCommaSeparator(index, array);
+  return region.subregions.map((subregion, index) => {
+    const seperator = getCommaSeparator(index);
     return (
       <span key={subregion.name}>
         {seperator}
