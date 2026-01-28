@@ -1,12 +1,5 @@
 import { FC } from "react";
-import {
-  Button,
-  Em,
-  Flex,
-  Heading,
-  Section,
-  Text,
-} from "@radix-ui/themes";
+import { Button, Em, Flex, Heading, Section, Text } from "@radix-ui/themes";
 import Link from "next/link";
 import { HRTNumbersCard } from "./HrtNumbersCard";
 import { kitsInNumbersValues as values } from "../../../data/hrtToolkitData";
