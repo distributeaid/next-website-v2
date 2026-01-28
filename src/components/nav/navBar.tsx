@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaBars, FaChevronDown, FaTimes } from "react-icons/fa";
 import LogoMark from "../../../public/images/LogoMark";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";

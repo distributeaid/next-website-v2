@@ -1,4 +1,3 @@
-import React from "react";
 import { FC, PropsWithChildren, ReactNode } from "react";
 import classNames from "classnames";
 import Image from "next/image";

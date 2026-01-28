@@ -1,5 +1,5 @@
 import { Box, Flex, Section, Separator } from "@radix-ui/themes";
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 
 interface SideBySideProps {
   left: ReactNode;
