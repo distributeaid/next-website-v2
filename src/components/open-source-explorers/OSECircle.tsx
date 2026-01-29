@@ -16,8 +16,7 @@ const OSECircle: FC<Props> = ({ text, colorClass, textColorClass }) => {
       mx="auto"
       align="center"
       justify="center"
-      className={colorClass || "bg-circle-blue"}
-      style={{ borderRadius: "50%" }}
+      className={`${colorClass || "bg-circle-blue"} rounded-[50%]`}
     >
       {text && (
         <Text

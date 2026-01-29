@@ -52,16 +52,9 @@ const ContactForm = () => {
   const toggleError = () =>
     setFormState((prev) => ({ ...prev, error: !prev.error }));
 
-  const labelStyle: React.CSSProperties = {
-    color: "#224BA4",
-    fontWeight: 500,
-    font: "14px",
-  };
+  const labelStyle = "text-text-blue font-medium text-sm";
 
-  const inputStyle: React.CSSProperties = {
-    padding: "8px",
-    minHeight: "46px",
-  };
+  const inputStyle = "p-2 min-h-[46px]";
 
   return (
     <>
@@ -94,59 +87,66 @@ const ContactForm = () => {
               <Flex direction="column" gap="4">
                 <Grid gap="4" columns={{ initial: "1", sm: "2" }}>
                   <Box>
-                    <Text as="label" id="first-name-label" style={labelStyle}>
+                    <Text
+                      as="label"
+                      id="first-name-label"
+                      className={labelStyle}
+                    >
                       First Name
                     </Text>
                     <TextField.Root
                       aria-labelledby="first-name-label"
                       placeholder="Type your first name here"
                       name="firstName"
-                      style={inputStyle}
+                      className={inputStyle}
                       required
                     />
                   </Box>
                   <Box>
-                    <Text as="label" id="last-name-label" style={labelStyle}>
+                    <Text
+                      as="label"
+                      id="last-name-label"
+                      className={labelStyle}
+                    >
                       Last Name
                     </Text>
                     <TextField.Root
                       aria-labelledby="last-name-label"
                       placeholder="Type your last name here"
                       name="lastName"
-                      style={inputStyle}
+                      className={inputStyle}
                       required
                     />
                   </Box>
                 </Grid>
                 <Box>
-                  <Text as="label" id="email-label" style={labelStyle}>
+                  <Text as="label" id="email-label" className={labelStyle}>
                     Email Address
                   </Text>
                   <TextField.Root
                     aria-labelledby="email-label"
                     placeholder="Type your email here"
                     name="email"
-                    style={inputStyle}
+                    className={inputStyle}
                     type="email"
                     required
                   />
                 </Box>
                 <Box>
-                  <Text as="label" id="message-label" style={labelStyle}>
+                  <Text as="label" id="message-label" className={labelStyle}>
                     Your Message
                   </Text>
                   <TextArea
                     aria-labelledby="message-label"
                     placeholder="Type your message here"
                     name="message"
-                    style={inputStyle}
+                    className={inputStyle}
                     required
                   />
                 </Box>
                 <Button
                   type="submit"
-                  style={{ height: "44px" }}
-                  className="bg-navy-600 hover:bg-navy-500"
+                  className="bg-navy-600 hover:bg-navy-500 h-11"
                   disabled={formState.loading}
                   loading={formState.loading}
                 >

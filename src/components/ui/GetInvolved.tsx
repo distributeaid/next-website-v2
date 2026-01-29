@@ -58,11 +58,9 @@ const GetInvolved = () => {
               <li key={label}>
                 <Flex key={label} direction="column" align="center" gap="6">
                   <Flex
+                    className="h-[228px] w-[228px] rounded-full"
                     style={{
                       backgroundColor: bgColor,
-                      height: "228px",
-                      width: "228px",
-                      borderRadius: "100%",
                     }}
                     justify="center"
                     align="center"
@@ -82,12 +80,7 @@ const GetInvolved = () => {
         </ul>
       </Grid>
 
-      <Box
-        style={{
-          backgroundColor: "var(--pink-5)",
-        }}
-        id="newsletter-signup"
-      >
+      <Box className="bg-fuchsia-100" id="newsletter-signup">
         <Box id="newsletter-signup" py="8" px="4" maxWidth="1242px" mx="auto">
           <Heading as="h3" size="8">
             Stay Connected With Distribute Aid

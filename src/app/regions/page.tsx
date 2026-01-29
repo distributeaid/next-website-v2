@@ -15,6 +15,7 @@ const Regions = () => {
         <h1
           className="py-8"
           style={{
+            // Randomizes the background color
             backgroundColor: getBackgroundColor(),
           }}
         >
@@ -36,9 +37,7 @@ const Regions = () => {
               </SmartLink>
             }
             additionalHeaderContent={
-              <div style={{ minHeight: "48px" }}>
-                {createSubregionLinks(region)}
-              </div>
+              <div className="min-h-[48px]">{createSubregionLinks(region)}</div>
             }
             body={createRegionsCardBody(region, needsByRegion[region.name])}
           />

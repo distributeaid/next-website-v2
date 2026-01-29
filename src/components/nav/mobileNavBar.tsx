@@ -110,12 +110,7 @@ const MobileNavBar = () => {
         width={"100%"}
         justify={"center"}
         p={"2"}
-        style={{
-          fontWeight: "500",
-          cursor: "pointer",
-          borderRadius: "0.5rem",
-        }}
-        className="hover:bg-navy-500 hover:text-white duration-200 text-dark-blue bg-white"
+        className="hover:bg-navy-500 hover:text-white duration-200 text-dark-blue bg-white font-medium cursor-pointer rounded-lg"
       >
         <NavigationMenu.Item>
           <NavigationMenu.Link href="/donate" target="" rel="noreferrer">

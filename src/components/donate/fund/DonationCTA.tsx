@@ -7,7 +7,7 @@ import BankInfoDialog from "../../ui/BankInfoDialog";
 const DonationCTA = () => {
   const { donate } = siteSettings;
   return (
-    <Box style={{ background: "#DFCDE8" }}>
+    <Box className="bg-red-50">
       <Container
         pb={{ initial: "6", sm: "36px", md: "40px" }}
         px="4"

@@ -21,7 +21,7 @@ const FundHero = ({ fund }: FundProps) => {
     },
   ];
   return (
-    <Box position={"relative"} style={{ background: "#DFCDE8" }}>
+    <Box position={"relative"} className="bg-red-50">
       <Container
         pb={{ initial: "6", sm: "36px", md: "40px" }}
         px="4"
@@ -43,9 +43,7 @@ const FundHero = ({ fund }: FundProps) => {
               height={0}
               width={0}
               sizes={"100vw"}
-              style={{
-                width: "100%",
-              }}
+              className="w-full"
             />
           </Box>
           <Box width={{ initial: "100%", sm: "auto" }}>
