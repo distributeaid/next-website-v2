@@ -22,7 +22,6 @@ This repository contains the scaffolding for DA's new website, powered by Nextjs
 - [Reviewing Pull Requests](#reviewing-pull-requests)
 - [Merging Branches](#merging-branches)
 
-
 ## Technologies Used
 
 - [Nextjs](https://nextjs.org/docs) - Frontendframework
