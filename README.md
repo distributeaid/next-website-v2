@@ -1,8 +1,6 @@
-# About Distribute Aid
+# About the Project
 
-Distribute Aid is a grassroots-to-grassroots humanitarian aid organization.
-
-Founded in 2019, we coordinate relief shipments and manage logistics for disaster response efforts around the world. Our open-source tools and a committed team of volunteers allow us to deliver more aid for less money, while also minimizing waste and emissions.
+This repository contains the scaffolding for DA's new website, powered by Nextjs, TypeScript & Strapi.
 
 ## Table of Contents
 
@@ -23,10 +21,6 @@ Founded in 2019, we coordinate relief shipments and manage logistics for disaste
     - [Sub Issues](#sub-issues)
 - [Reviewing Pull Requests](#reviewing-pull-requests)
 - [Merging Branches](#merging-branches)
-
-## About the Project
-
-This repository contains the scaffolding for DA's new website, powered by Nextjs, TypeScript & Strapi.
 
 ## Technologies Used
 
