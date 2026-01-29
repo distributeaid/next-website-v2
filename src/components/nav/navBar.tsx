@@ -21,14 +21,7 @@ const NavBar = () => {
       <NavigationMenu.Root orientation="horizontal">
         <NavigationMenu.List>
           <Flex
-            width={"100%"}
-            style={{
-              color: "white",
-              zIndex: "50",
-              borderBottom: "2px solid ",
-              borderColor: "var(--green-9)",
-            }}
-            className="bg-navy-800"
+            className="w-full text-white z-50 border-b-2 border-seafoam-500 bg-navy-800"
             position={"fixed"}
             height={"80px"}
             px={"4"}
@@ -101,7 +94,7 @@ const NavBar = () => {
                   {isSubMenu ? (
                     <Box className="group">
                       <Flex
-                        style={{ fontWeight: "500" }}
+                        className="font-medium"
                         position={"relative"}
                         align={"center"}
                         asChild
@@ -119,13 +112,7 @@ const NavBar = () => {
                         position={"absolute"}
                         maxWidth={"140px"}
                         mt={"3"}
-                        style={{
-                          background: "white",
-                          zIndex: "10",
-                          borderWidth: "1px",
-                          borderRadius: "0.375rem",
-                        }}
-                        className="shadow-md "
+                        className="shadow-md bg-white z-10 border rounded-md"
                       >
                         <NavigationMenu.Content>
                           <NavigationMenu.Sub>
@@ -137,8 +124,7 @@ const NavBar = () => {
                                       width="100%"
                                       py="1"
                                       px="4"
-                                      className="hover:bg-navy-200"
-                                      style={{ color: "black" }}
+                                      className="hover:bg-navy-200 text-black"
                                     >
                                       {title}
                                     </Flex>
@@ -172,8 +158,7 @@ const NavBar = () => {
                   asChild
                   px={"5"}
                   py={"3"}
-                  style={{ fontWeight: "500", borderRadius: "0.5rem" }}
-                  className="hover:bg-navy-500 hover:text-white duration-200 text-dark-blue bg-white"
+                  className="hover:bg-navy-500 hover:text-white duration-200 text-dark-blue bg-white font-medium rounded-lg"
                 >
                   <Link href="/donate" rel="noreferrer">
                     Donate
@@ -182,15 +167,11 @@ const NavBar = () => {
               )}
               {/* Hamburger Icon */}
               <Box
-                style={{ cursor: "pointer", zIndex: "40", color: "white" }}
+                className="text-white z-40 cursor-pointer"
                 onClick={() => setNav(!nav)}
               >
                 {nav ? (
-                  <Button
-                    className="bg-navy-800"
-                    style={{ cursor: "pointer" }}
-                    size={"4"}
-                  >
+                  <Button className="bg-navy-800 cursor-pointer" size={"4"}>
                     Close <FaTimes size={30} />
                   </Button>
                 ) : (

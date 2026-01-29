@@ -26,7 +26,7 @@ const FooterLinks = () => (
     <Text as="p" weight="medium">
       <Link
         href="https://distributeaid.org/whistleblowing-policy"
-        style={{ textDecoration: "underline" }}
+        className="underline"
       >
         Whistleblowing Policy
       </Link>
@@ -35,7 +35,7 @@ const FooterLinks = () => (
     <Text as="p" weight="medium">
       <Link
         href="https://distributeaid.org/code-of-conduct"
-        style={{ textDecoration: "underline" }}
+        className="underline"
       >
         Code of Conduct
       </Link>
@@ -47,15 +47,9 @@ const DonateLink = () => (
   <Box
     asChild
     style={{
-      cursor: "pointer",
-      borderRadius: "var(--radius-3)",
-      padding: "var(--space-3) var(--space-5)",
-      width: "max-content",
-      textTransform: "capitalize",
-      fontWeight: 500,
       ...buttonStyle,
     }}
-    className="hover:!bg-navy-500 hover:!text-white"
+    className="hover:!bg-navy-500 hover:!text-white cursor-pointer font-medium capitalize w-max py-3 px-5 rounded-md"
   >
     <Link href="/donate" target="_blank" rel="noreferrer">
       Donate
@@ -182,7 +176,7 @@ const Footer = () => {
                 Email us at{" "}
                 <Link
                   href="mailto:hello@distributeaid.org"
-                  style={{ textDecoration: "underline" }}
+                  className="underline"
                 >
                   hello@distributeaid.org
                 </Link>

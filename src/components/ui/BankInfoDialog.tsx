@@ -6,11 +6,10 @@ const BankInfoDialog = () => (
     <Dialog.Trigger>
       <Box asChild width={{ initial: "100%", sm: "auto" }}>
         <Button
-          className="bg-navy-600 hover:bg-navy-500 cursor-pointer"
+          className="bg-navy-600 hover:bg-navy-500 cursor-pointer h-[44px]"
           size={{ initial: "3", sm: "2", md: "3" }}
-          style={{ height: "44px" }}
         >
-          <span style={{ whiteSpace: "nowrap" }}>Make a Bank Transfer</span>
+          <span className="whitespace-nowrap">Make a Bank Transfer</span>
         </Button>
       </Box>
     </Dialog.Trigger>

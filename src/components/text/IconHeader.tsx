@@ -21,8 +21,7 @@ const IconHeader = ({ Icon, title, color = "blue" }: IconHeaderProps) => {
   return (
     <Flex align="center" gap="5">
       <Box
-        className={classes}
-        style={{ aspectRatio: "1/1" }}
+        className={`${classes} aspect-square`}
         width={{ initial: "70px", md: "80px" }}
         height={{ initial: "70px", md: "80px" }}
       >
