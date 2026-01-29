@@ -43,21 +43,17 @@ const ImageTextCTA = (props: ctaProps) => {
     >
       <Box
         position={"relative"}
-        className={bgColor ? `bg-${bgColor}` : "bg-[var(--blue-header)]"}
-        style={{
-          borderRadius: "32px",
-        }}
+        className={`${bgColor ? `bg-${bgColor}` : "bg-[var(--blue-header)]"} rounded-[32px]`}
         px={{ initial: "20px", sm: "7", md: "9" }}
       >
         {showDonateIcons && (
           <Box
-            className="donate-icon--upper"
+            className="donate-icon--upper bg-seafoam-500 rounded-[999px]"
             position={"absolute"}
             left="0"
             top="0"
             px={{ initial: "9.5px", sm: "12.5px", md: "18.5px" }}
             py={{ initial: "19.5px", sm: "26px", md: "36px" }}
-            style={{ background: "var(--green-9)", borderRadius: "999px" }}
           >
             <Text
               size={{ initial: "2", sm: "3", md: "5" }}
@@ -137,10 +133,7 @@ const ImageTextCTA = (props: ctaProps) => {
                   height={0}
                   width={0}
                   sizes={"100vw"}
-                  style={{
-                    width: "100%",
-                    borderRadius: "20px",
-                  }}
+                  className="w-full rounded-[20px]"
                 />
               </Box>
             </>
@@ -148,18 +141,13 @@ const ImageTextCTA = (props: ctaProps) => {
         </Flex>
         {showDonateIcons && (
           <Box
-            className="donate-icon--lower"
+            className="donate-icon--lower bg-seafoam-500 rounded-[999px] translate-x-[35%] translate-y-[35%]"
             display={{ initial: "none", sm: "block" }}
             position={"absolute"}
             right="0"
             bottom="0"
             px={{ initial: "9.5px", sm: "12.5px", md: "18.5px" }}
             py={{ initial: "19.5px", sm: "26px", md: "36px" }}
-            style={{
-              background: "var(--green-9)",
-              borderRadius: "999px",
-              transform: "translate(35%, 35%)",
-            }}
           >
             <Text
               size={{ initial: "3", md: "5" }}

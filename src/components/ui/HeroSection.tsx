@@ -26,8 +26,7 @@ const HeroSection = ({
       <Flex
         mb={{ initial: "270px", sm: "180px", lg: "245px" }}
         height={{ initial: "590px", sm: "550px" }}
-        style={{ background: "var(--blue-background)" }}
-        className="shadow-xl"
+        className="shadow-xl bg-blue-900"
       >
         <Flex
           position={"relative"}
@@ -82,8 +81,7 @@ const HeroSection = ({
             >
               <Heading
                 as="h2"
-                style={{ color: "var(--blue-header)" }}
-                className="min-w-40"
+                className="min-w-40 text-navy-900"
                 size={{ initial: "7", sm: "6", md: "7", lg: "8" }}
                 wrap={"pretty"}
                 align={{ initial: "center", sm: "left" }}
@@ -101,9 +99,8 @@ const HeroSection = ({
               >
                 <Box asChild width={{ initial: "100%", sm: "auto" }}>
                   <Button
-                    className="bg-white text-black hover:bg-navy-500 hover:text-white transition-200"
+                    className="bg-white text-black hover:bg-navy-500 hover:text-white transition-200 h-[44px]"
                     size={{ initial: "3", sm: "2", md: "3" }}
-                    style={{ height: "44px" }}
                     asChild
                   >
                     <Link
@@ -117,9 +114,8 @@ const HeroSection = ({
                 </Box>
                 <Box asChild width={{ initial: "100%", sm: "auto" }}>
                   <Button
-                    className=" bg-navy-600 hover:bg-navy-500"
+                    className=" bg-navy-600 hover:bg-navy-500 h-[44px]"
                     size={{ initial: "3", sm: "2", md: "3" }}
-                    style={{ height: "44px" }}
                     asChild
                   >
                     <Link
