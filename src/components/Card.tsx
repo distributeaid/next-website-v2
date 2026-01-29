@@ -65,12 +65,12 @@ const Card: FC<
     {dynamicCardImage && (
       <div
         style={{
+          // Randomizes the background color
           backgroundColor: getBackgroundColor(),
-          borderRadius: imageVariant === ImageVariant.circle ? "50%" : "none",
         }}
         className={
           imageVariant === ImageVariant.circle
-            ? `m-4 min-w-[256px] w-1/2 min-h-[256px] h-1/2 p-1 mx-auto flex items-center justify-center`
+            ? `m-4 min-w-[256px] w-1/2 min-h-[256px] h-1/2 rounded-[50%] p-1 mx-auto flex items-center justify-center`
             : ""
         }
       >
