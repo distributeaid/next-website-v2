@@ -72,8 +72,7 @@ export type Subregion = {
   population?: Population;
   newsUpdates: UpdatesList;
   stayInformed: LinksList;
-  // region: Region
-  region: any;
+  region: Region | null;
 };
 
 /*
