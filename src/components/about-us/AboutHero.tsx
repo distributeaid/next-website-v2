@@ -47,7 +47,7 @@ export const AboutHero: FC = () => (
     >
       <Box className="rounded-2xl overflow-hidden flex-shrink-0 w-[100px] sm:w-[160px] md:w-[200px] lg:w-[280px]">
         <Image
-          src={"/images/about-us/hero-1.jpg"}
+          src={"/images/photos/photo-ukr-donation.jpg"}
           alt="Hero Image"
           width={280}
           height={280}
@@ -56,7 +56,7 @@ export const AboutHero: FC = () => (
       </Box>
       <Box className="rounded-2xl overflow-hidden flex-shrink-0 w-[100px] sm:w-[160px] md:w-[200px] lg:w-[280px]">
         <Image
-          src={"/images/about-us/hero-2.png"}
+          src={"/images/photos/photo-donation.png"}
           alt="Hero Image"
           width={280}
           height={280}
@@ -65,7 +65,7 @@ export const AboutHero: FC = () => (
       </Box>
       <Box className="rounded-2xl overflow-hidden flex-shrink-0 w-[100px] sm:w-[160px] md:w-[200px] lg:w-[280px]">
         <Image
-          src={"/images/about-us/hero-3.png"}
+          src={"/images/photos/photo-volunteers.png"}
           alt="Hero Image"
           width={280}
           height={280}

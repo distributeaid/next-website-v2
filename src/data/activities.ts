@@ -1,7 +1,7 @@
-import refugeeAid from "../../../public/images/home/how-we-help-refugees.jpg";
-import covid19Response from "../../../public/images/home/how-we-help-covid.jpg";
-import inKindDonations from "../../../public/images/home/in-kind-donations.webp";
-import fortPickett from "../../../public/images/home/fort-pickett.jpg";
+import refugeeAid from "../../public/images/photos/photo-warehouse-baby-carriers.jpg";
+import covid19Response from "../../public/images/photos/photo-person-sewing.jpg";
+import inKindDonations from "../../public/images/photos/photo-people-hugging.webp";
+import fortPickett from "../../public/images/photos/photo-usa-fort-pickett.jpg";
 
 export const activities = [
   {

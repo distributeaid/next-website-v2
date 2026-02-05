@@ -13,8 +13,8 @@ const Page = () => {
       <HeroSection
         heading="Support us today, so communities are prepared for
               tomorrow."
-        imgSrc="/images/donate/european-refugee-relief-hero-tinted.png"
-        imgAlt="european-refugee-relief-hero-tinted"
+        imgSrc="/images/photos/photo-ukr-donation-01.png"
+        imgAlt="Refugee Relief"
         buttonHeading="Ship aid to people in need."
         buttonBGColor="var(--green-9)"
         hasLogo={false}

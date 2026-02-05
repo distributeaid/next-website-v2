@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FunctionComponent } from "react";
-import LogoMark from "../../brand/LogoMark";
+import LogoMark from "../../../../public/images/LogoMark";
 import DesktopNavigation from "./MainMenuDesktop";
 import MobileNavigation from "./MainMenuMobile";
 

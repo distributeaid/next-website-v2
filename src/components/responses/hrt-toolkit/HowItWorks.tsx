@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { Box, Flex, Heading, Section } from "@radix-ui/themes";
 import Image from "next/image";
-import graphHorizontal from "../../../../public/images/responses/hrt-toolkit/how-it-works-graph.png";
-import graphVertical from "../../../../public/images/responses/hrt-toolkit/how-it-works-vertical.png";
+import graphHorizontal from "../../../../public/images/illus/illus-how-it-works-graph.png";
+import graphVertical from "../../../../public/images/illus/illus-how-it-works-vertical.png";
 
 export const HowItWorks: FC = () => (
   <Section>

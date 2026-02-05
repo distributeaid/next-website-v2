@@ -28,7 +28,7 @@ const ImageGallery = ({ fund }: FundProps) => {
               <Box key={index}>
                 <Image
                   src={
-                    image || "/images/donate/ukraine-response-gallery-03.png"
+                    image || "/images/photos/photo-ukr-response-02.png"
                   }
                   alt={""}
                   height={0}

@@ -38,7 +38,7 @@ const SponsorSection = () => {
                 className="rounded-l-[32px]"
                 width={"540"}
                 height={"340"}
-                src={"/images/tech/Sponsor-DA-Tech.jpg"}
+                src={"/images/photos/photo-hands.jpg"}
                 alt="img of hands coming together"
               ></Image>
             </Box>
