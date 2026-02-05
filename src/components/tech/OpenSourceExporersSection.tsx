@@ -21,7 +21,7 @@ const OpenSourceExplorersSection = () => {
             size={{ initial: "6", sm: "7", md: "8" }}
             weight="bold"
             align="center"
-            style={{ color: "var(--blue-9)" }}
+            className="text-blue-900"
           >
             Open Source Explorers
           </Heading>

@@ -1,4 +1,4 @@
-import { Box, Flex, Separator, Table, Text } from "@radix-ui/themes";
+import { Box, Flex, Separator, Text } from "@radix-ui/themes";
 
 const data = [
   "How to quality check donated items meant for distribution",

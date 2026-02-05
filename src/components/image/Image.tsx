@@ -11,8 +11,6 @@ type Image = {
   alignment: "left" | "center" | "right";
 };
 
-// const [isHovering, setIsHovering] = useState(false)
-
 const Images: FC<Image> = ({
   image,
   width,

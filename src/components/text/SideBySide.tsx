@@ -1,5 +1,5 @@
 import { Box, Flex, Section, Separator } from "@radix-ui/themes";
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 
 interface SideBySideProps {
   left: ReactNode;
@@ -8,10 +8,7 @@ interface SideBySideProps {
 
 export const SideBySide: React.FC<SideBySideProps> = ({ left, right }) => {
   return (
-    <Section
-      px={{ initial: "7", sm: "8", md: "9" }}
-      style={{ backgroundColor: "var(--blue-2)" }}
-    >
+    <Section px={{ initial: "7", sm: "8", md: "9" }} className="bg-blue-100">
       <Flex
         direction={{ initial: "column", md: "row" }}
         align={{ initial: "center", md: "start" }}

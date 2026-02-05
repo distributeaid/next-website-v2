@@ -1,21 +1,6 @@
 import resolveConfig from "tailwindcss/resolveConfig";
 import tailwindConfig from "../../tailwind.config"; // Adjust the path to your Tailwind config file
 
-interface KeyValuePair<K, V> {
-  [key: string]: V;
-}
-
-interface TimelineItem {
-  period: string;
-  description: string;
-}
-
-interface MissionStatement {
-  missionStatement: string;
-  aboutOurMission: string;
-  timeline: TimelineItem[];
-}
-
 const theme = resolveConfig(tailwindConfig).theme;
 
 export function getThemeLargeScreenWidth(): number {

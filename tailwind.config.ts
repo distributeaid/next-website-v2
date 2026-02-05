@@ -80,6 +80,9 @@ const config: Config = {
           800: "#1F2937",
           900: "#111827",
         },
+        seafoam: {
+          500: "#5ac597",
+        },
         "navy-400": "rgb(139 159 200)",
         "navy-600": "rgb(34 75 164)",
         "light-brown": "#E3E5FF",

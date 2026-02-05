@@ -21,6 +21,7 @@ const OSEColumn: FC<Props> = ({
         text={circleText}
         colorClass={circleColorClass}
         textColorClass={circleTextColorClass}
+        isMarkdown
       />
       {content && (
         <Text align="center" as="p" mt="2">
