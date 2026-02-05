@@ -79,11 +79,10 @@ export const AboutTheProject: FC = () => (
       </Flex>
     </Container>
     <Flex
-      className="bg-circle-green rounded-bl-lg justify-around"
+      className="bg-circle-green rounded-bl-lg justify-around mt-[-15px]"
       p="2"
       width={{ sm: "100%", md: "50%" }}
       mx="auto"
-      style={{ marginTop: "-15px" }}
       align="center"
     >
       <Text

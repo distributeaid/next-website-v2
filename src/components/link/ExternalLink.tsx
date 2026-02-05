@@ -1,4 +1,4 @@
-import React, { AnchorHTMLAttributes, FC } from "react";
+import { AnchorHTMLAttributes, FC } from "react";
 
 const ExternalLink: FC<AnchorHTMLAttributes<HTMLAnchorElement>> = ({
   ...otherProps

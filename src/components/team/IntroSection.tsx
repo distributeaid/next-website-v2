@@ -7,9 +7,8 @@ const IntroSection = () => {
       <Container m={"3"}>
         <Flex align={"center"} gapY={"9"} direction={"column"}>
           <Heading
-            className="underline decoration-2 underline-offset-[30px] uppercase"
+            className="underline decoration-2 underline-offset-[30px] uppercase text-navy-900"
             size={{ initial: "8", sm: "9" }}
-            style={{ color: "var(--blue-header)" }}
             as="h1"
             align={"center"}
           >
@@ -17,7 +16,7 @@ const IntroSection = () => {
           </Heading>
           <Text
             weight={"bold"}
-            style={{ color: "var(--blue-background)" }}
+            className="text-blue-900"
             align={"center"}
             as="p"
           >

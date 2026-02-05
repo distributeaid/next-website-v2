@@ -8,7 +8,6 @@ import {
   Heading,
   Text,
 } from "@radix-ui/themes";
-import SmartLink from "@/components/link/SmartLink";
 
 const data = [
   {
@@ -56,11 +55,8 @@ export const ResourcesFooter = () => {
                   <Button
                     size="2"
                     mt="auto"
-                    className="bg-navy-600 hover:bg-navy-500"
+                    className="bg-navy-600 hover:bg-navy-500 h-[44px]"
                     asChild
-                    style={{
-                      height: "44px",
-                    }}
                   >
                     <Link
                       href={item.link}

@@ -22,12 +22,7 @@ const BoardCard = (props: CardProps) => {
                 alt={props.alt}
                 width={400}
                 height={400}
-                style={{
-                  objectFit: "cover",
-                  objectPosition: "center",
-                  width: "100%",
-                  transform: "translateY(-15%)",
-                }}
+                className="object-cover object-center w-full translate-y-[-50%]"
               />
             </Box>
             <Heading

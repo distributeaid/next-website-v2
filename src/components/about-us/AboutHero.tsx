@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Image from "next/image";
-import { Box, Flex, Container, Section, Heading, Text } from "@radix-ui/themes";
+import { Box, Flex, Section, Heading, Text } from "@radix-ui/themes";
 
 export const AboutHero: FC = () => (
   <>
@@ -45,13 +45,14 @@ export const AboutHero: FC = () => (
       mt={{ initial: "-60px", sm: "-100px", md: "-140px" }}
       mb={{ initial: "-10px" }}
     >
+      {/* This could probably be cleaned up to avoid repeated code */}
       <Box className="rounded-2xl overflow-hidden flex-shrink-0 w-[100px] sm:w-[160px] md:w-[200px] lg:w-[280px]">
         <Image
           src={"/images/photos/photo-ukr-donation.jpg"}
           alt="Hero Image"
           width={280}
           height={280}
-          style={{ width: "100%", height: "auto", objectFit: "cover" }}
+          className="w-full h-auto object-cover"
         />
       </Box>
       <Box className="rounded-2xl overflow-hidden flex-shrink-0 w-[100px] sm:w-[160px] md:w-[200px] lg:w-[280px]">
@@ -60,7 +61,7 @@ export const AboutHero: FC = () => (
           alt="Hero Image"
           width={280}
           height={280}
-          style={{ width: "100%", height: "auto", objectFit: "cover" }}
+          className="w-full h-auto object-cover"
         />
       </Box>
       <Box className="rounded-2xl overflow-hidden flex-shrink-0 w-[100px] sm:w-[160px] md:w-[200px] lg:w-[280px]">
@@ -69,7 +70,7 @@ export const AboutHero: FC = () => (
           alt="Hero Image"
           width={280}
           height={280}
-          style={{ width: "100%", height: "auto", objectFit: "cover" }}
+          className="w-full h-auto object-cover"
         />
       </Box>
     </Flex>

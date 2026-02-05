@@ -7,15 +7,13 @@ const DonateLandingText = () => {
       px={"9"}
       pb={"9"}
       id="donate-supplies"
-      style={{
-        scrollMarginTop: "100px",
-      }}
+      className="scroll-mt-[100px]"
     >
       <Heading
         as="h1"
         weight={"medium"}
         size={{ initial: "8", sm: "9" }}
-        style={{ color: "var(--blue-header)" }}
+        className="text-navy-900"
         align={"center"}
       >
         Donate Supplies

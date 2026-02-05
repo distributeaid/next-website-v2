@@ -1,5 +1,3 @@
-import { title } from "process";
-
 const colors = {
   blue: "bg-circle-blue",
   green: "bg-circle-green",

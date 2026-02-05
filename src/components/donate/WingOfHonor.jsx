@@ -9,7 +9,7 @@ const WingOfHonor = () => (
           as="h2"
           weight={"medium"}
           size={{ initial: "8", sm: "9" }}
-          style={{ color: "var(--blue-header)" }}
+          className="text-navy-900"
           align={"center"}
         >
           Donor Wing of Honor
@@ -28,10 +28,7 @@ const WingOfHonor = () => (
       height={1250}
       alt="Distribute Aid Logo: A flock of doves stylized by stacking wings behind the main outline of a dove."
       id="donor-wing-of-honor"
-      style={{
-        marginLeft: "auto",
-        marginRight: "auto",
-      }}
+      className="mx-auto"
     />
   </Box>
 );

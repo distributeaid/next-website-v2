@@ -1,23 +1,21 @@
 import { getBackgroundColor } from "@/utils/site-theme";
-import React from "react";
 import Card, { ImageVariant } from "@/components/Card";
 import SmartLink from "@/components/link/SmartLink";
 import { MarkdownContent } from "@/components/markdown/MarkdownContent";
 import { getCommaSeparator } from "@/utils/string";
 import { Region } from "@/types/place";
-import { regions, regionsData } from "@/data/mock-data";
+import { regionsData } from "@/data/mock-data";
 
 const Regions = () => {
   const needsByRegion: Record<string, number> = {};
-  // needs.byRegion.forEach(({ regionName, currentNeed }) => {
-  //   needsByRegion[regionName] = currentNeed
-  // })
+
   return (
     <section>
       <header className="prose max-w-none text-center text-navy-700 text-[3.375rem] uppercase font-lato font-extrabold">
         <h1
           className="py-8"
           style={{
+            // Randomizes the background color
             backgroundColor: getBackgroundColor(),
           }}
         >
@@ -39,9 +37,7 @@ const Regions = () => {
               </SmartLink>
             }
             additionalHeaderContent={
-              <div style={{ minHeight: "48px" }}>
-                {createSubregionLinks(region)}
-              </div>
+              <div className="min-h-[48px]">{createSubregionLinks(region)}</div>
             }
             body={createRegionsCardBody(region, needsByRegion[region.name])}
           />

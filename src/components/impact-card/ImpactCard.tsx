@@ -49,7 +49,6 @@ const ImpactCard: React.FC<ImpactCardProps> = ({
           weight="regular"
           size={{ initial: "6", md: "6", lg: "8" }}
           align="center"
-          // wrap="nowrap"
         >
           {label}
         </Heading>

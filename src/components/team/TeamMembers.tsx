@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { Box, Container, Flex, Heading, Section, Text } from "@radix-ui/themes";
-import { TeamCard, TeamCardProps } from "./TeamCard";
+import { Box, Heading, Section } from "@radix-ui/themes";
+import { TeamCard } from "./TeamCard";
 import { TeamMember } from "@/data/team";
 
 export type TeamMembersProps = {
