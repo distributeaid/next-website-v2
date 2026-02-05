@@ -13,7 +13,7 @@ const Home = () => {
       <HeroSection
         heading="Your Mutual Aid Logistic
         Experts"
-        imgSrc="/images/home/hero-image.jpg"
+        imgSrc="/images/photos/photo-grc-moria-fire-relief.jpg"
         imgAlt="hero image"
         buttonHeading="Ship aid to people in need."
         buttonBGColor="#DFCDE8"

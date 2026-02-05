@@ -127,7 +127,7 @@ const ImageTextCTA = (props: ctaProps) => {
               <Box flexBasis={{ initial: "100%", md: "50%" }} width={"100%"}>
                 <Image
                   src={
-                    image || "/images/donate/ukraine-response-gallery-02.png"
+                    image || "/images/photos/ukr-response-01.png"
                   }
                   alt={""}
                   height={0}

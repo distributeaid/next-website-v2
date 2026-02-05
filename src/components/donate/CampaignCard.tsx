@@ -29,7 +29,7 @@ type Props = {
 const CampaignCard: FC<Props> = forwardRef<HTMLDivElement, Props>(
   (
     {
-      imgSrc = "/images/donate/european-refugee-relief-hero.webp",
+      imgSrc = "/images/photos/photo-ukr-donation-02.webp",
       imgAlt = "",
       title = "Untitled Campaign",
       raised = 0,

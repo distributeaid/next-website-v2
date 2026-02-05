@@ -162,7 +162,7 @@ const ContactForm = () => {
           minHeight={{ md: "500px" }}
         >
           <Image
-            src="/images/contact-us/contact-form-img.jpg"
+            src="/images/photos/photo-collaborating.jpg"
             alt="Four people sit around a wooden table with laptops and a tablet, collaborating."
             className="h-full w-full object-cover"
             width={500}

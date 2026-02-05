@@ -19,13 +19,13 @@ const columns: Array<ColumnData> = [
     title: "Quality Control",
     description:
       "The receiver may have to pay to dispose of items that are culturally inappropriate, out of season, or poor in quality.",
-    src: "/images/resources/resources_qualitycontrol.png",
+    src: "/images/icons/icon-parcel-check-02.png",
   },
   {
     title: "Sorting",
     description:
       "100,000 aid items on a shipment might be sorted one way by the sender and then re-sorted another way by the receiver. Sorting takes time.",
-    src: "/images/resources/resources_sorting.png",
+    src: "/images/icons/icon-sort-ascending.png",
   },
 ];
 
@@ -74,7 +74,7 @@ const page = () => {
             receiving aid can know ahead of time what is on an aid shipment.
           </Text>
           <Image
-            src="/images/resources/arrow-down.png"
+            src="/images/icons/icon-arrow-down.png"
             alt="ASSORT"
             width={22}
             height={38}
@@ -96,7 +96,7 @@ const page = () => {
         >
           <Guide />
           <Image
-            src="/images/resources/resources_guide.png"
+            src="/images/photos/photo-210000-000002-aut-grc-01.png"
             alt="ASSORT"
             width={548}
             height={282}
