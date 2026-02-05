@@ -38,7 +38,7 @@ const FundHero = ({ fund }: FundProps) => {
         >
           <Box flexBasis={{ initial: "100%", sm: "75%" }} width="100%">
             <Image
-              src={img || "/images/donate/european-refugee-relief-hero.webp"}
+              src={img || "/images/photos/photo-ukr-donation-02.webp"}
               alt={""}
               height={0}
               width={0}

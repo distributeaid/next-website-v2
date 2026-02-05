@@ -27,7 +27,7 @@ const Regions = () => {
           <Card
             key={index}
             dynamicCardImage={{
-              image: "/images/paypal-color.svg",
+              image: "/images/logos/logo-paypal.svg",
               alt: region.map.alt,
             }}
             imageVariant={ImageVariant.circle}

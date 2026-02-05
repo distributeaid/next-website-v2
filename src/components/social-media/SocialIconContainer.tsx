@@ -6,11 +6,11 @@ import { getThemeLargeScreenWidth } from "@/utils/site-theme";
 import siteSettings from "@/data/site-settings.json";
 import SocialMediaLink from "./SocialMediaLink";
 
-import facebookSrc from "../../../public/images/social-icons/facebook.svg";
-import githubSrc from "../../../public/images/social-icons/github.svg";
-import instagramSrc from "../../../public/images/social-icons/instagram.svg";
-import linkedInSrc from "../../../public/images/social-icons/linked-in.svg";
-import twitterSrc from "../../../public/images/social-icons/twitter.svg";
+import facebookSrc from "../../../public/images/icons/icon-social-facebook.svg";
+import githubSrc from "../../../public/images/icons/icon-social-github.svg";
+import instagramSrc from "../../../public/images/icons/icon-social-instagram.svg";
+import linkedInSrc from "../../../public/images/icons/icon-social-linked-in.svg";
+import twitterSrc from "../../../public/images/icons/icon-social-twitter.svg";
 
 const socialMediaDetails = [
   {

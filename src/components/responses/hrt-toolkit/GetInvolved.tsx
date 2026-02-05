@@ -2,8 +2,8 @@ import { FC, ReactNode } from "react";
 import { Button, Heading, Section, Text } from "@radix-ui/themes";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import frontlineGroups from "../../../../public/images/responses/hrt-toolkit/frontline_groups.jpg";
-import inKind from "../../../../public/images/responses/hrt-toolkit/in-kind.jpg";
+import frontlineGroups from "../../../../public/images/photos/photo-250000-000003-usa-hrt-toolkit.jpg";
+import inKind from "../../../../public/images/photos/photo-250000-000004-usa-hrt-toolkit.jpg";
 
 export const GetInvolved: FC = () => {
   return (

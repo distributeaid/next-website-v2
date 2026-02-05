@@ -1,7 +1,7 @@
 import { Flex, Heading, Button, Box, Link } from "@radix-ui/themes";
 import Image from "next/image";
 import siteSettings from "@/data/site-settings.json";
-import TextMark from "../brand/TextMark";
+import TextMark from "../../../public/images/TextMark";
 import BankInfoDialog from "./BankInfoDialog";
 
 interface HeroSectionProps {

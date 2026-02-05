@@ -1,9 +1,9 @@
 import Image from "next/image";
-import logoHero from "../../public/images/home/carousel/distributeAidHero.svg";
-import loadingTruck from "../../public/images/home/carousel/loading_truck.png";
-import moriaFireRelief from "../../public/images/home/carousel/moria_fire_relief.png";
-import soapRelief from "../../public/images/home/carousel/soap_relief.png";
-import waterRelief from "../../public/images/home/carousel/water_relief.png";
+import logoHero from "../../public/images/logos/logo-distribute-aid-logotype.svg";
+import loadingTruck from "../../public/images/photos/photo-loading-truck.png";
+import moriaFireRelief from "../../public/images/photos/photo-grc-moria-fire-relief-01.png";
+import soapRelief from "../../public/images/photos/photo-soap-relief.png";
+import waterRelief from "../../public/images/photos/photo-fra-calais-water-01.png";
 
 import DynamicBgImg from "./DynamicBgImg";
 

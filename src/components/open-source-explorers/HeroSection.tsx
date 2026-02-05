@@ -29,7 +29,7 @@ const HeroSection = () => {
         {/* logo */}
         <Box width={{ initial: "75px", sm: "fit-content" }}>
           <Image
-            src={"/images/tech/ose-program/ose-logo.png"}
+            src={"/images/logos/logo-distribute-aid-explorers.png"}
             alt="Distribute aid OSE logo"
             width={100}
             height={100}

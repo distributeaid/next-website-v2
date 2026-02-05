@@ -80,7 +80,7 @@ export const TechStackSection = () => {
         <BorderedImage
           bgColor="var(--green-9)"
           image={{
-            src: "/images/tech/tech-stack-image.jpg",
+            src: "/images/photos/photo-tech-pairing.jpg",
             alt: "Tech stack image",
           }}
         />
