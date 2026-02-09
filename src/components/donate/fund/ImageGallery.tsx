@@ -27,9 +27,7 @@ const ImageGallery = ({ fund }: FundProps) => {
             gallery_images.map((image, index) => (
               <Box key={index}>
                 <Image
-                  src={
-                    image || "/images/photos/photo-ukr-response-02.png"
-                  }
+                  src={image || "/images/photos/photo-ukr-response-02.png"}
                   alt={""}
                   height={0}
                   width={0}
