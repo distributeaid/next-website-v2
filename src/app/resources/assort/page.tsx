@@ -96,7 +96,7 @@ const page = () => {
         >
           <Guide />
           <Image
-            src="/images/photos/photo-210000-000002-aut-grc-01.png"
+            src="/images/photos/photo-210000-000001-aut-grc-01.png"
             alt="ASSORT"
             width={548}
             height={282}
