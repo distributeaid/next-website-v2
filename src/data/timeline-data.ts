@@ -136,7 +136,7 @@ export const data = [
     description:
       "Following the outbreak of violence in Palestine in 2023, Distribute Aid coordinated with regional partners to provide urgent humanitarian support. Shipments originally intended for Gaza were rerouted to the West Bank due to the blockade, including multiple pallets of essential aid such as personal hygiene kits and medical equipment. Additional shipments delivered an ultrasound machine to Jordan and hygiene items to Lebanon which also helped displaced people and Palestinian refugees. Working closely with partners, all shipments were documented, inventoried, and delivered to local organizations for distribution. These efforts ensured timely aid reached families affected by the conflict, supporting both immediate needs and ongoing humanitarian relief in the region. ©[Anera](https://www.anera.org/)",
     bgColor: colors.gray,
-    imageSrc: "/images/photos/photo-240000-levant-response.jpg",
+    imageSrc: "/images/photos/photo-240000-000001-levant-response.jpg",
     imgAlt:
       "Women and children in Gaza are congregating around a man with a clipboard next to a sign by Distribute Aid partner organisation Anera which reads “Medical Healthcare. Free Health Day. Gaza Strip”. Photo by Anera.",
   },
