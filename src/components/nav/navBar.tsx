@@ -82,7 +82,7 @@ const NavBar = () => {
               {links.map(({ title, url, isSubMenu, subMenu }) => (
                 <NavigationMenu.Item
                   className={cx(
-                    "font-medium  decoration-2 underline-offset-8 duration-200",
+                    "font-normal  decoration-2 underline-offset-8 duration-200",
                     {
                       "hover:underline": title !== "Donate",
                       "hover:bg-navy-500 decoration-none cursor-pointer hover:text-white duration-200 text-dark-blue bg-white rounded-lg py-3 px-6 ":
@@ -94,7 +94,7 @@ const NavBar = () => {
                   {isSubMenu ? (
                     <Box className="group">
                       <Flex
-                        className="font-medium"
+                        className="font-normal"
                         position={"relative"}
                         align={"center"}
                         asChild
@@ -158,7 +158,7 @@ const NavBar = () => {
                   asChild
                   px={"5"}
                   py={"3"}
-                  className="hover:bg-navy-500 hover:text-white duration-200 text-dark-blue bg-white font-medium rounded-lg"
+                  className="hover:bg-navy-500 hover:text-white duration-200 text-dark-blue bg-white font-normal rounded-lg"
                 >
                   <Link href="/donate" rel="noreferrer">
                     Donate
