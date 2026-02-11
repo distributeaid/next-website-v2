@@ -23,7 +23,7 @@ const WingOfHonor = () => (
       </Flex>
     </Container>
     <Image
-      src="/images/donate/wing-of-honor.png"
+      src="/images/illus/illus-wing-of-honor.png"
       width={2500}
       height={1250}
       alt="Distribute Aid Logo: A flock of doves stylized by stacking wings behind the main outline of a dove."
