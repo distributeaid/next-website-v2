@@ -35,7 +35,7 @@ export async function POST(request: Request) {
       from: CONTACT_FROM_EMAIL,
       replyTo: `${fromName} <${body.email}>`,
       to: CONTACT_TO_EMAIL,
-      subject: `You've recieved message from ${fromName}`,
+      subject: `You've received message from ${fromName}`,
       react: EmailTemplate({
         message: body.message,
         fromName,
