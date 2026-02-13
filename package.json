@@ -10,7 +10,8 @@
     "check:format": "yarn prettier --check .",
     "format": "yarn prettier --write .",
     "lint": "next lint",
-    "test": "vitest"
+    "test": "vitest",
+    "all": "yarn check:types && yarn check:format && yarn lint && yarn test"
   },
   "dependencies": {
     "@beehiiv/sdk": "^0.1.9",
