@@ -48,8 +48,8 @@ const Regions = () => {
 };
 
 const createSubregionLinks = (region: Region): React.JSX.Element[] => {
-  return region.subregions.map((subregion, index, array) => {
-    const seperator = getCommaSeparator(index, array);
+  return region.subregions.map((subregion, index) => {
+    const seperator = getCommaSeparator(index);
     return (
       <span key={subregion.name}>
         {seperator}
