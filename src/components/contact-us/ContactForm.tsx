@@ -19,17 +19,15 @@ import ErrorModal from "./ErrorModal";
 const ContactForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
 
-  const [formState, setFormState] = useState({
-    success: false,
-    error: false,
-    loading: false,
-  });
+  const [formState, setFormState] = useState<
+    "idle" | "success" | "error" | "loading"
+  >("idle");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
-      setFormState((prev) => ({ ...prev, loading: true }));
+      setFormState("loading");
       const form = formRef.current;
       const data = new FormData(form!);
       const body = JSON.stringify(Object.fromEntries(data.entries()));
@@ -40,17 +38,22 @@ const ContactForm = () => {
       });
 
       if (res.status === 200) {
-        setFormState((prev) => ({ ...prev, success: true, loading: false }));
+        setFormState("success");
       } else {
-        setFormState((prev) => ({ ...prev, error: true, loading: false }));
+        setFormState("error");
       }
     } catch (error) {
-      setFormState((prev) => ({ ...prev, error: true, loading: false }));
+      setFormState("error");
     }
   };
 
-  const toggleError = () =>
-    setFormState((prev) => ({ ...prev, error: !prev.error }));
+  const toggleError = () => {
+    if (formState === "error") {
+      setFormState("idle");
+    } else {
+      setFormState("error");
+    }
+  };
 
   const labelStyle = "text-text-blue font-medium text-sm";
 
@@ -77,7 +80,7 @@ const ContactForm = () => {
             </Link>
             . You can also fill out the form below.
           </Text>
-          {formState.success ? (
+          {formState === "success" ? (
             <Text className="text-lg">
               Thank you for reaching out. We'll get back to you as quickly as
               possible.
@@ -147,10 +150,10 @@ const ContactForm = () => {
                 <Button
                   type="submit"
                   className="bg-navy-600 hover:bg-navy-500 h-11"
-                  disabled={formState.loading}
-                  loading={formState.loading}
+                  disabled={formState === "loading"}
+                  loading={formState === "loading"}
                 >
-                  {formState.loading ? "Sending" : "Send message"}
+                  {formState === "loading" ? "Sending" : "Send message"}
                 </Button>
               </Flex>
             </form>
@@ -170,7 +173,7 @@ const ContactForm = () => {
           />
         </Box>
       </Flex>
-      <ErrorModal open={formState.error} toggleOpen={toggleError} />
+      <ErrorModal open={formState === "error"} toggleOpen={toggleError} />
     </>
   );
 };
