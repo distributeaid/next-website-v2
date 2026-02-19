@@ -19,28 +19,16 @@ export const HrtKitsInNumbers: FC = () => {
       </Heading>
       <Flex gap="2" className="flex-wrap" align="center" justify="center">
         <HRTNumbersCard
-          amount={values.partialKits}
+          amount={values.yearsSupported}
           background="circle-green"
           color="white"
           direction="column"
-          icon="/images/icons/icon-medical-kit.svg"
-          iconAlt="medical kit"
+          icon="/images/icons/icon-heart-handshake-circle.png"
+          iconAlt="years"
         >
           <Text as="p" size="8" weight="light">
-            PARTIAL KITS
+            YEARS OF HRT SUPPORTED
           </Text>
-          <Text as="p" size="5" weight="bold" align="center">
-            <Em>Donate to complete kits!</Em>
-          </Text>
-          <Button className="bg-white text-navy-800" size="4" asChild>
-            <Link
-              href="https://www.omprakash.org/global/distribute-aid/crowdfund/hrt---harm-reduction-toolkit"
-              target={"_blank"}
-              rel="noopener noreferrer"
-            >
-              Donate
-            </Link>
-          </Button>
         </HRTNumbersCard>
         <Flex height="360px" justify="between" direction="column">
           <HRTNumbersCard
@@ -52,7 +40,7 @@ export const HrtKitsInNumbers: FC = () => {
             iconAlt="medical kit"
           >
             <Text size="6" weight="light">
-              KITS PRODUCED SO FAR
+              ITEMS SOURCED
             </Text>
           </HRTNumbersCard>
           <HRTNumbersCard
@@ -69,6 +57,30 @@ export const HrtKitsInNumbers: FC = () => {
             </Text>
           </HRTNumbersCard>
         </Flex>
+        <HRTNumbersCard
+          amount={values.partialKits}
+          background="circle-green"
+          color="white"
+          direction="column"
+          icon="/images/icons/icon-medical-kit.svg"
+          iconAlt="medical kit"
+        >
+          <Text as="p" size="8" weight="light">
+            KITS BEING BUILT
+          </Text>
+          <Text as="p" size="5" weight="bold" align="center">
+            <Em>Donate to complete the kits!</Em>
+          </Text>
+          <Button className="bg-white text-navy-800" size="4" asChild>
+            <Link
+              href="https://www.omprakash.org/global/distribute-aid/crowdfund/hrt---harm-reduction-toolkit"
+              target={"_blank"}
+              rel="noopener noreferrer"
+            >
+              Donate
+            </Link>
+          </Button>
+        </HRTNumbersCard>
       </Flex>
     </Section>
   );
