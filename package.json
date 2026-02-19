@@ -37,7 +37,7 @@
     "@testing-library/react": "16.3.2",
     "@types/autoprefixer": "10.2.4",
     "@types/lodash": "4.17.23",
-    "@types/node": "22.19.7",
+    "@types/node": "24.10.9",
     "@types/postcss-import": "14.0.3",
     "@types/react": "19.2.8",
     "@types/react-dom": "19.2.3",
@@ -64,7 +64,7 @@
   },
   "packageManager": "yarn@4.12.0",
   "engines": {
-    "node": ">=20.0.0 <=22.22.0",
+    "node": ">=20.0.0 <=24.13.0",
     "npm": "please-use-yarn",
     "yarn": ">=4.4.0"
   }
