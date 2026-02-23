@@ -97,8 +97,9 @@ yarn lint
 To run tests:
 
 ```Bash
-yarn run test
+yarn test
 ```
+
 
 ## Crafting commit messages
 =======
