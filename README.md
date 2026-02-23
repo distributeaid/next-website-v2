@@ -100,8 +100,8 @@ To run tests:
 yarn test
 ```
 
-
 ## Crafting commit messages
+
 =======
 Check formatting:
 
