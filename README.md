@@ -120,6 +120,12 @@ To run the linter:
 yarn run lint
 ```
 
+To run tests:
+
+```Bash
+yarn test
+```
+
 ## Crafting commit messages
 
 When crafting commit messages, group commits that are related to a particular topic. For example, if you're making commits related to the styling, only include files that are related to styling. This makes it easier to read through the commits and see the exact files that made changes to the styles. See [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for more information.
