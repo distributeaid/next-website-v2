@@ -1,5 +1,5 @@
 import { RiInstagramFill, RiBlueskyFill, RiLinkedinFill } from "react-icons/ri";
-import * as Messages from "./messages.ts";
+import * as Messages from "@/data/messages";
 
 export const MONTHS = [
   "January",

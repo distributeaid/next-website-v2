@@ -1,4 +1,4 @@
-import * as Messages from "./messages.ts";
+import * as Messages from "@/data/messages";
 
 export const links = [
   {
