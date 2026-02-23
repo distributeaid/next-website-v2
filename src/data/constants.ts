@@ -1,4 +1,5 @@
 import { RiInstagramFill, RiBlueskyFill, RiLinkedinFill } from "react-icons/ri";
+import * as Messages from "./messages.ts";
 
 export const MONTHS = [
   "January",
@@ -314,11 +315,11 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
         link: "/",
       },
       {
-        name: "About Us",
+        name: Messages.ABOUT_US_PAGE_TITLE,
         link: "/about-us",
       },
       {
-        name: "Donate",
+        name: Messages.DONATE_PAGE_TITLE,
         link: "/donate",
       },
       {
@@ -340,11 +341,11 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     title: "",
     links: [
       {
-        name: "Tech",
+        name: Messages.TECH_PAGE_TITLE,
         link: "/tech",
       },
       {
-        name: "Resources",
+        name: Messages.RESOURCES_PAGE_TITLE,
         link: "/resources/assort",
       },
       {

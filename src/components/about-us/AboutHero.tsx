@@ -1,6 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
 import { Box, Flex, Section, Heading, Text } from "@radix-ui/themes";
+import * as Messages from "@/data/messages";
 
 export const AboutHero: FC = () => (
   <>
@@ -24,7 +25,7 @@ export const AboutHero: FC = () => (
           className="text-white"
           mb={{ initial: "3", sm: "4" }}
         >
-          About Us
+          {Messages.ABOUT_US_PAGE_TITLE}
         </Heading>
         <Text
           as="p"
