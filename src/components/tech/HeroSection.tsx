@@ -37,7 +37,7 @@ const HeroSection = () => {
           direction="column"
           align="center"
           justify="center"
-          className="rounded-bl-[32px] rounded-br-[32px] bg-cover bg-center bg-[url('/images/tech/tech-hero-background-img.jpg')]"
+          className="rounded-bl-[32px] rounded-br-[32px] bg-cover bg-center bg-[url('/images/photos/photo-hands-circle.jpg')]"
         >
           <Flex
             direction="column"

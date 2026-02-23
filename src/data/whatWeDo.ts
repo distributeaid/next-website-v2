@@ -1,7 +1,7 @@
-import twoPeopleHoldingBoxes from "../../public/images/home/what-we-do/two-people-holding-boxes.png";
-import wareHouseWIthSupplies from "../../public/images/home/what-we-do/warehouse-with-supplies.png";
-import peopleCarryingBoxes from "../../public/images/home/what-we-do/people-carrying-boxes-from-truck.png";
-import writingDataOnPaper from "../../public/images/home/what-we-do/writing-data-on-paper.png";
+import twoPeopleHoldingBoxes from "../../public/images/photos/photo-two-people-holding-boxes.png";
+import wareHouseWIthSupplies from "../../public/images/photos/photo-warehouse-with-supplies.png";
+import peopleCarryingBoxes from "../../public/images/photos/photo-people-carrying-boxes-from-truck.png";
+import writingDataOnPaper from "../../public/images/photos/photo-writing-data-on-paper.png";
 
 export const whatWeDoData = [
   {

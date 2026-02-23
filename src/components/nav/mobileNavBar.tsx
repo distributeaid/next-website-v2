@@ -93,7 +93,7 @@ const MobileNavBar = () => {
           <NavigationMenu.Item key={social.name}>
             <NavigationMenu.Link href={social.link} target="_blank">
               <Image
-                src={`/images/social-icons/${social.name}.svg`}
+                src={`/images/icons/icon-social-${social.name}.svg`}
                 alt={social.name}
                 width={30}
                 height={30}

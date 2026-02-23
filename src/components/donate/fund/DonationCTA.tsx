@@ -31,7 +31,7 @@ const DonationCTA = () => {
         >
           <Flex direction="column" gap="3" align="center">
             <Image
-              src="/images/donate/paypal.svg"
+              src="/images/logos/logo-paypal.svg"
               alt={""}
               height={0}
               width={0}
@@ -56,7 +56,7 @@ const DonationCTA = () => {
           </Flex>
           <Flex direction="column" gap="3" align="center">
             <Image
-              src="/images/donate/omprakash.png"
+              src="/images/logos/logo-omprakash.png"
               alt={""}
               height={0}
               width={96}
@@ -81,7 +81,7 @@ const DonationCTA = () => {
           </Flex>
           <Flex direction="column" gap="3" align="center">
             <Image
-              src="/images/donate/dollar.svg"
+              src="/images/icons/icon-dollar-circle-outline.svg"
               alt={""}
               height={0}
               width={52}
