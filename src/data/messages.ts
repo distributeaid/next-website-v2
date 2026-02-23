@@ -16,4 +16,3 @@ export const RESOURCES_PAGE_TITLE = "Resources";
 export const TECH_PAGE_TITLE = "Tech";
 
 export const DONATE_PAGE_TITLE = "Donate";
-
