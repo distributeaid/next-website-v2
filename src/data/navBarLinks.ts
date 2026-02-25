@@ -1,3 +1,5 @@
+import * as Messages from "@/data/messages";
+
 export const links = [
   {
     title: "Home",
@@ -5,16 +7,16 @@ export const links = [
     isSubMenu: false,
   },
   {
-    title: "About Us",
+    title: Messages.ABOUT_US_PAGE_TITLE,
     url: "/about-us",
     isSubMenu: true,
     subMenu: [
       {
-        title: "Overview",
+        title: Messages.OVERVIEW_NAV_ITEM_TITLE,
         url: "/about-us",
       },
       {
-        title: "Contact Us",
+        title: Messages.CONTACT_US_PAGE_TITLE,
         url: "/contact-us",
       },
     ],
@@ -71,17 +73,17 @@ export const links = [
   //   ],
   // },
   {
-    title: "Resources",
+    title: Messages.RESOURCES_PAGE_TITLE,
     url: "/resources/assort",
     isSubMenu: false,
   },
   {
-    title: "Tech",
+    title: Messages.TECH_PAGE_TITLE,
     url: "/tech",
     isSubMenu: false, //temporarily set to false
     subMenu: [
       {
-        title: "Overview",
+        title: Messages.OVERVIEW_NAV_ITEM_TITLE,
         url: "/tech",
       },
       {
@@ -91,7 +93,7 @@ export const links = [
     ],
   },
   {
-    title: "Donate",
+    title: Messages.DONATE_PAGE_TITLE,
     url: "/donate",
     isSubMenu: false,
   },

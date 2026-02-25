@@ -100,3 +100,9 @@ Check formatting:
 yarn check:format
 yarn format
 ```
+
+To run tests:
+
+```bash
+yarn test
+```
