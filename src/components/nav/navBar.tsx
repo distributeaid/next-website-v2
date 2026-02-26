@@ -15,6 +15,9 @@ import { links } from "@/data/navBarLinks";
 const NavBar = () => {
   const [nav, setNav] = useState(false);
 
+  const donateButtonClassNames =
+    "hover:bg-navy-500 cursor-pointer hover:text-white duration-200 text-dark-blue bg-white rounded-lg py-3 px-6 ";
+
   return (
     <>
       {/* Desktop Menu */}
@@ -78,27 +81,20 @@ const NavBar = () => {
               align={"center"}
               mr={"100px"}
               display={{ initial: "none", md: "flex" }}
+              className="font-medium"
             >
               {links.map(({ title, url, isSubMenu, subMenu }) => (
                 <NavigationMenu.Item
-                  className={cx(
-                    "font-medium  decoration-2 underline-offset-8 duration-200",
-                    {
-                      "hover:underline": title !== "Donate",
-                      "hover:bg-navy-500 decoration-none cursor-pointer hover:text-white duration-200 text-dark-blue bg-white rounded-lg py-3 px-6 ":
-                        title === "Donate",
-                    },
-                  )}
+                  className={cx({
+                    "hover:underline decoration-2 underline-offset-8":
+                      title !== "Donate",
+                    [donateButtonClassNames]: title === "Donate",
+                  })}
                   key={title}
                 >
                   {isSubMenu ? (
                     <Box className="group">
-                      <Flex
-                        className="font-medium"
-                        position={"relative"}
-                        align={"center"}
-                        asChild
-                      >
+                      <Flex position={"relative"} align={"center"} asChild>
                         <NavigationMenu.Trigger>
                           <NavigationMenu.Link href={url}>
                             {title}
@@ -107,7 +103,6 @@ const NavBar = () => {
                         </NavigationMenu.Trigger>
                       </Flex>
                       <Flex
-                        as="div"
                         asChild
                         position={"absolute"}
                         maxWidth={"140px"}
@@ -158,7 +153,7 @@ const NavBar = () => {
                   asChild
                   px={"5"}
                   py={"3"}
-                  className="hover:bg-navy-500 hover:text-white duration-200 text-dark-blue bg-white font-medium rounded-lg"
+                  className={donateButtonClassNames}
                 >
                   <Link href="/donate" rel="noreferrer">
                     Donate
