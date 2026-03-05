@@ -10,10 +10,11 @@ const nextConfig: NextConfig = {
         source: "/donor-recognition/:path*",
         headers: [
           { key: "Access-Control-Allow-Origin", value: "*" },
-          { key: "Access-Control-AlLow-Methods", value: "GET, OPTIONS" },
+          { key: "Access-Control-Allow-Methods", value: "GET, OPTIONS" },
           { key: "Access-Control-AlLow-Headers", value: "Content-Type" },
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "Strict-Transport-Security", value: "max-age=63072000" },
         ],
       },
       {
@@ -41,6 +42,7 @@ const nextConfig: NextConfig = {
             key: "Referrer-Policy",
             value: "strict-origin-when-cross-origin",
           },
+          { key: "Strict-Transport-Security", value: "max-age=63072000" },
         ],
       },
     ];
