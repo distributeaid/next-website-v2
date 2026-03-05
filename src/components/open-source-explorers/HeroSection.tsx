@@ -29,7 +29,7 @@ const HeroSection = () => {
         {/* logo */}
         <Box width={{ initial: "75px", sm: "fit-content" }}>
           <Image
-            src={"/images/tech/ose-program/ose-logo.png"}
+            src={"/images/logos/logo-distribute-aid-explorers.png"}
             alt="Distribute aid OSE logo"
             width={100}
             height={100}
@@ -39,10 +39,9 @@ const HeroSection = () => {
           size={{ initial: "6", sm: "8", md: "9" }}
           as="h1"
           style={{
-            color: "var(--blue-header)",
             textShadow: "2px 2px 4px rgba(5, 30, 93, 0.7)",
           }}
-          className="text-shadow-lg"
+          className="text-shadow-lg text-navy-900"
         >
           OPEN SOURCE EXPLORERS
         </Heading>

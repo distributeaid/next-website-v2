@@ -1,16 +1,7 @@
 import { FC } from "react";
-import {
-  Box,
-  Button,
-  Em,
-  Flex,
-  Heading,
-  Section,
-  Text,
-} from "@radix-ui/themes";
-import Image from "next/image";
+import { Button, Em, Flex, Heading, Section, Text } from "@radix-ui/themes";
 import Link from "next/link";
-import { HRTNumbersCard, HrtNumbersCardProps } from "./HrtNumbersCard";
+import { HRTNumbersCard } from "./HrtNumbersCard";
 import { kitsInNumbersValues as values } from "../../../data/hrtToolkitData";
 
 export const HrtKitsInNumbers: FC = () => {
@@ -32,7 +23,7 @@ export const HrtKitsInNumbers: FC = () => {
           background="circle-green"
           color="white"
           direction="column"
-          icon="/images/responses/hrt-toolkit/medical-kit.svg"
+          icon="/images/icons/icon-medical-kit.svg"
           iconAlt="medical kit"
         >
           <Text as="p" size="8" weight="light">
@@ -57,7 +48,7 @@ export const HrtKitsInNumbers: FC = () => {
             background="navy-300"
             color="navy-800"
             direction="row"
-            icon="/images/responses/hrt-toolkit/medical-kit-blue.svg"
+            icon="/images/icons/icon-medical-kit-blue.svg"
             iconAlt="medical kit"
           >
             <Text size="6" weight="light">
@@ -69,7 +60,7 @@ export const HrtKitsInNumbers: FC = () => {
             background="navy-800"
             color="white"
             direction="row"
-            icon="/images/responses/hrt-toolkit/money-dollar.svg"
+            icon="/images/icons/icon-currency-dollar.svg"
             iconAlt="money"
             amountPrefix="$"
           >

@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { AboutHero } from "@/components/about-us/AboutHero";
 import { Timeline } from "@/components/about-us/Timeline";
 import { CallOutText } from "@/components/callout/Callout";

@@ -18,19 +18,29 @@ export async function POST(request: Request) {
 
   const body = EmailMessage.parse(requestBody);
 
-  const { CONTACT_TO_EMAIL } = process.env;
+  const { CONTACT_TO_EMAIL, CONTACT_FROM_EMAIL } = process.env;
 
   if (!CONTACT_TO_EMAIL) {
     throw Error("Missing environment variable: CONTACT_TO_EMAIL");
   }
 
+  if (!CONTACT_FROM_EMAIL) {
+    throw Error("Missing environment variable: CONTACT_FROM_EMAIL");
+  }
+
   try {
+    const fromName = `${body.firstName} ${body.lastName}`;
+
     const { data, error } = await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>",
-      replyTo: `${body.firstName} ${body.lastName} <${body.email}>`,
-      to: [CONTACT_TO_EMAIL],
-      subject: "Hello world",
-      react: EmailTemplate({ message: body.message }),
+      from: CONTACT_FROM_EMAIL,
+      replyTo: `${fromName} <${body.email}>`,
+      to: CONTACT_TO_EMAIL,
+      subject: `You've received message from ${fromName}`,
+      react: EmailTemplate({
+        message: body.message,
+        fromName,
+        fromEmail: body.email,
+      }),
     });
 
     if (error) {

@@ -10,8 +10,8 @@ import {
 } from "@radix-ui/themes";
 import Link from "next/link";
 import Image from "next/image";
-import aboutOne from "../../../../public/images/responses/hrt-toolkit/about-project-1.jpg";
-import aboutTwo from "../../../../public/images/responses/hrt-toolkit/about-project-2.jpg";
+import aboutOne from "../../../../public/images/photos/photo-250000-000001-usa-hrt-toolkit.jpg";
+import aboutTwo from "../../../../public/images/photos/photo-250000-000002-usa-hrt-toolkit.jpg";
 
 const list_items = [
   "The kits do not provide hormones but the sundries needed to administer safely",
@@ -79,11 +79,10 @@ export const AboutTheProject: FC = () => (
       </Flex>
     </Container>
     <Flex
-      className="bg-circle-green rounded-bl-lg justify-around"
+      className="bg-circle-green rounded-bl-lg justify-around mt-[-15px]"
       p="2"
       width={{ sm: "100%", md: "50%" }}
       mx="auto"
-      style={{ marginTop: "-15px" }}
       align="center"
     >
       <Text

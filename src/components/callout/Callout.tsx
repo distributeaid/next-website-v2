@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { Callout } from "@radix-ui/themes";
 
 interface ICallOutText {

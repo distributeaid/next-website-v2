@@ -20,12 +20,7 @@ export const BoardCard = ({ bgColor, teamMember }: CardProps) => {
                 alt={`Photo of ${teamMember.Name}`}
                 width={400}
                 height={400}
-                style={{
-                  objectFit: "cover",
-                  objectPosition: "center",
-                  width: "100%",
-                  transform: "translateY(-15%)",
-                }}
+                className="object-cover object-center w-full translate-y-[-15%]"
               />
             </Box>
             <Heading

@@ -29,7 +29,7 @@ type Props = {
 const CampaignCard: FC<Props> = forwardRef<HTMLDivElement, Props>(
   (
     {
-      imgSrc = "/images/donate/european-refugee-relief-hero.webp",
+      imgSrc = "/images/photos/photo-ukr-donation-02.webp",
       imgAlt = "",
       title = "Untitled Campaign",
       raised = 0,
@@ -48,24 +48,16 @@ const CampaignCard: FC<Props> = forwardRef<HTMLDivElement, Props>(
               {/* if rasied >= 75% of goal show "close" pill */}
               {raised >= 75 && (
                 <Box top={"3"} left={"4"} position={"absolute"}>
-                  <Badge style={{ background: "white", color: "black" }}>
-                    Close!!
-                  </Badge>
+                  <Badge className="text-black bg-white">Close!!</Badge>
                 </Box>
               )}
               <Image
                 src={imgSrc}
                 alt={imgAlt}
-                height={0}
-                width={0}
+                height={256}
+                width={1200}
                 sizes={"100vw"}
-                style={{
-                  display: "block",
-                  objectFit: "cover",
-                  width: "100%",
-                  height: 150,
-                  backgroundColor: "var(--blue-9)",
-                }}
+                className="block object-cover width-full bg-blue-900 h-[150px]"
               />
               <FundProgress raised={raised} />
             </Inset>
@@ -86,8 +78,7 @@ const CampaignCard: FC<Props> = forwardRef<HTMLDivElement, Props>(
             <Flex gap="2" wrap={"wrap"} mx="1" mb="3" mt="auto">
               <Box px="4" py="2" asChild>
                 <Button
-                  className="bg-navy-600 hover:bg-navy-500"
-                  style={{ height: "44px" }}
+                  className="bg-navy-600 hover:bg-navy-500 h-[44px]"
                   asChild
                 >
                   <Link href={donateLink} size="3">
@@ -96,7 +87,7 @@ const CampaignCard: FC<Props> = forwardRef<HTMLDivElement, Props>(
                 </Button>
               </Box>
               <Box px="4" py="2" asChild>
-                <Button variant="soft" style={{ height: "44px" }} asChild>
+                <Button variant="soft" className="h-[44px]" asChild>
                   <Link href={moreLink} size="3" className="no-underline">
                     More info
                   </Link>

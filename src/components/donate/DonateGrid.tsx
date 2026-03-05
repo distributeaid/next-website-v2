@@ -14,11 +14,7 @@ const DonateGrid: FC<{
           as="h1"
           weight="medium"
           size={{ initial: "8", sm: "9" }}
-          style={{
-            color: "var(--blue-header)",
-            display: "inline-flex",
-            gap: "15px",
-          }}
+          className="text-navy-900 inline-flex gap-[15px]"
         >
           Donate Money <FaArrowDown />
         </Heading>
@@ -26,7 +22,7 @@ const DonateGrid: FC<{
           as="h2"
           weight={"medium"}
           size={{ initial: "7", sm: "8" }}
-          style={{ color: "var(--blue-header)" }}
+          className="text-navy-900"
         >
           Campaigns
         </Heading>

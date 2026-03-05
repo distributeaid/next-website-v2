@@ -1,5 +1,4 @@
 import { Container, Grid, Heading, Text } from "@radix-ui/themes";
-import React from "react";
 import { WorkingBox } from "./WorkingBox";
 
 const data = [

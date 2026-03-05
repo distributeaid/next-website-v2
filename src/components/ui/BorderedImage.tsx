@@ -19,12 +19,7 @@ const BorderedImage = (props: imageProps) => {
       py={{ initial: "5", sm: "52px", md: "45px" }}
     >
       <Box
-        className={rightSide ? "rounded-l-3xl" : "rounded-r-3xl"}
-        style={{
-          width: "100%",
-          height: "100%",
-          overflow: "hidden",
-        }}
+        className={`${rightSide ? "rounded-l-3xl" : "rounded-r-3xl"} w-full h-full overflow-hidden`}
       >
         <Image
           className="object-cover size-full"

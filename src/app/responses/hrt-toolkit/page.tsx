@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { HrtToolkitHero } from "@/components/responses/hrt-toolkit/HrtToolkitHero";
 import { AboutTheProject } from "@/components/responses/hrt-toolkit/AboutTheProject";
 import { HrtKitsInNumbers } from "@/components/responses/hrt-toolkit/HrtKitsInNumbers";

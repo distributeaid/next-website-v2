@@ -93,7 +93,7 @@ const MobileNavBar = () => {
           <NavigationMenu.Item key={social.name}>
             <NavigationMenu.Link href={social.link} target="_blank">
               <Image
-                src={`/images/social-icons/${social.name}.svg`}
+                src={`/images/icons/icon-social-${social.name}.svg`}
                 alt={social.name}
                 width={30}
                 height={30}
@@ -110,12 +110,7 @@ const MobileNavBar = () => {
         width={"100%"}
         justify={"center"}
         p={"2"}
-        style={{
-          fontWeight: "500",
-          cursor: "pointer",
-          borderRadius: "0.5rem",
-        }}
-        className="hover:bg-navy-500 hover:text-white duration-200 text-dark-blue bg-white"
+        className="hover:bg-navy-500 hover:text-white duration-200 text-dark-blue bg-white font-medium cursor-pointer rounded-lg"
       >
         <NavigationMenu.Item>
           <NavigationMenu.Link href="/donate" target="" rel="noreferrer">

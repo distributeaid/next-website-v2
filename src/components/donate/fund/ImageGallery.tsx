@@ -27,19 +27,12 @@ const ImageGallery = ({ fund }: FundProps) => {
             gallery_images.map((image, index) => (
               <Box key={index}>
                 <Image
-                  src={
-                    image || "/images/donate/ukraine-response-gallery-03.png"
-                  }
+                  src={image || "/images/photos/photo-ukr-response-02.png"}
                   alt={""}
                   height={0}
                   width={0}
                   sizes={"100vw"}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    objectPosition: "center",
-                  }}
+                  className="w-full h-full object-cover object-center"
                 />
               </Box>
             ))}

@@ -12,17 +12,9 @@ const FundProgress = ({ raised }: Props) => {
       gapX="3"
       px="20px"
       py="6px"
-      style={{
-        backgroundColor: "var(--green-9)",
-      }}
+      className="bg-[#5ac597]"
     >
-      <Progress
-        value={raised}
-        variant="surface"
-        style={{
-          backgroundColor: "var(--green-4)",
-        }}
-      />
+      <Progress value={raised} variant="surface" className="bg-[#d2f2e1]" />
       <Text size="2" color="blue" highContrast>
         {raised}%
       </Text>

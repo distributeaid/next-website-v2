@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Container, Flex, Heading, Section, Text } from "@radix-ui/themes";
+import { Container, Heading, Section, Text } from "@radix-ui/themes";
 
 export const HrtToolkitHero: FC = () => (
   <>

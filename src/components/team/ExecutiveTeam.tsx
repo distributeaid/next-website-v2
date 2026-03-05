@@ -7,7 +7,7 @@ export async function ExecutiveTeam() {
   return (
     <TeamMembers
       people={data}
-      bannerImage="/images/about-us/Water-to-Calais.png"
+      bannerImage="/images/photos/photo-fra-calais-water.png"
       header="Team Members"
     />
   );

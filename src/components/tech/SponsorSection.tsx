@@ -15,7 +15,7 @@ const SponsorSection = () => {
     <Container size={{ xs: "1", sm: "2", md: "3", lg: "4" }} align="center">
       <Flex width="100%" direction="column" align="center" justify="center">
         {/* color defined in /src/stylesheets/ */}
-        <Heading align={"center"} size={"8"} style={{ color: "var(--blue-9)" }}>
+        <Heading align={"center"} size={"8"} className="text-blue-900">
           Sponsor Distribute Aid's Tech Team
         </Heading>
         <Grid
@@ -38,7 +38,7 @@ const SponsorSection = () => {
                 className="rounded-l-[32px]"
                 width={"540"}
                 height={"340"}
-                src={"/images/tech/Sponsor-DA-Tech.jpg"}
+                src={"/images/photos/photo-hands.jpg"}
                 alt="img of hands coming together"
               ></Image>
             </Box>

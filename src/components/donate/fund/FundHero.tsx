@@ -21,7 +21,7 @@ const FundHero = ({ fund }: FundProps) => {
     },
   ];
   return (
-    <Box position={"relative"} style={{ background: "#DFCDE8" }}>
+    <Box position={"relative"} className="bg-red-50">
       <Container
         pb={{ initial: "6", sm: "36px", md: "40px" }}
         px="4"
@@ -38,14 +38,12 @@ const FundHero = ({ fund }: FundProps) => {
         >
           <Box flexBasis={{ initial: "100%", sm: "75%" }} width="100%">
             <Image
-              src={img || "/images/donate/european-refugee-relief-hero.webp"}
+              src={img || "/images/photos/photo-ukr-donation-02.webp"}
               alt={""}
               height={0}
               width={0}
               sizes={"100vw"}
-              style={{
-                width: "100%",
-              }}
+              className="w-full"
             />
           </Box>
           <Box width={{ initial: "100%", sm: "auto" }}>

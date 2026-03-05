@@ -1,10 +1,4 @@
 .radix-themes {
   --default-font-family: var(--font-roboto);
   --heading-font-family: var(--font-yantramanav);
-  /*
-  --code-font-family:
-  --strong-font-family:
-  --em-font-family:
-  --quote-font-family:
-  */
 }

@@ -1,5 +1,5 @@
 import { Section as RadixSection, Heading, Text } from "@radix-ui/themes";
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 
 interface HomeSectionProps {
   title: String;
