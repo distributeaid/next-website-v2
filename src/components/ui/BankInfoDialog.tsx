@@ -47,7 +47,7 @@ const BankInfoDialog = () => (
             </Text>
             <Text asChild>
               <Table.Cell py="1" pl="2" className="font-semibold text-navy-700">
-                {siteSettings.donate.byBankTransfer.IBAN}
+                {process.env.IBAN}
               </Table.Cell>
             </Text>
           </Table.Row>
@@ -59,7 +59,7 @@ const BankInfoDialog = () => (
             </Text>
             <Text asChild>
               <Table.Cell py="1" pl="2" className="font-semibold text-navy-700">
-                {siteSettings.donate.byBankTransfer.BIC}
+                {process.env.BIC}
               </Table.Cell>
             </Text>
           </Table.Row>
