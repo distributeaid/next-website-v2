@@ -15,6 +15,7 @@ import Image from "next/image";
 
 import IconHeader from "../text/IconHeader";
 import ErrorModal from "./ErrorModal";
+
 import CapWidget from "./CapWidget";
 
 type FormState = "idle" | "loading" | "success" | "error";
@@ -93,7 +94,7 @@ const ContactForm = () => {
             . You can also fill out the form below.
           </Text>
           {formState == "success" ? (
-            <Text className="text-lg" data-testid="success">
+            <Text className="text-lg" data-testid="contact-us-success">
               Thank you for reaching out. We'll get back to you as quickly as
               possible.
             </Text>
