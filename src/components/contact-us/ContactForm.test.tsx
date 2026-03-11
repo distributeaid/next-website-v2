@@ -5,7 +5,7 @@ import userEvent from "@testing-library/user-event";
 import ContactForm from "./ContactForm";
 
 const setup = () => {
-  const fetchSpy = vi.spyOn(global, 'fetch');
+  const fetchSpy = vi.spyOn(global, "fetch");
 
   render(<ContactForm />);
 
