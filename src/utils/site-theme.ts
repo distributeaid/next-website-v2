@@ -9,47 +9,16 @@ export function getThemeLargeScreenWidth(): number {
 }
 
 let backgroundColorIndex = 0;
-const colors = shuffle(
-  getColors({
-    swatches: ["navy", "purple", "rosemary", "turquoise", "beige"],
-    weights: [50, 100],
-  }),
-);
+const colors = getVisualizationColors({
+  swatches: ["navy", "purple", "rosemary", "turquoise", "beige"],
+  weights: [50, 100],
+  randomize: true,
+});
 
 export function getBackgroundColor(): string {
   const color = colors[backgroundColorIndex];
   backgroundColorIndex = (backgroundColorIndex + 1) % colors.length;
   return color;
-}
-
-export function getColors({
-  swatches,
-  weights,
-}: {
-  swatches: string[];
-  weights: number[];
-}): string[] {
-  const themeColors = theme?.colors as unknown as Record<
-    string,
-    Record<number, string>
-  >;
-
-  const colors: string[] = [];
-  if (!themeColors) return colors;
-
-  for (const swatch of swatches) {
-    const swatchColors = themeColors[swatch];
-    if (!swatchColors) continue;
-
-    for (const weight of weights) {
-      const color = swatchColors[weight];
-      if (color) {
-        colors.push(color);
-      }
-    }
-  }
-
-  return colors;
 }
 
 export function getVisualizationColors({
@@ -81,11 +50,7 @@ export function getVisualizationColors({
     }
   }
 
-  if (randomize) {
-    colors.sort(() => Math.random() - 0.5);
-  }
-
-  return colors;
+  return randomize ? shuffle(colors) : colors;
 }
 
 // Utility function to shuffle an array
