@@ -158,7 +158,7 @@ describe("when all fields are populated correctly", () => {
 
     expect(fetchSpy).toHaveBeenCalledOnce();
     const [path, contents] = fetchSpy.mock.calls[0];
-    expect(path).toEqual("/api/send");
+    expect(path).toEqual("/api/send");:
     expect(contents).toEqual({
       body: `{"firstName":"${firstName}","lastName":"${lastName}","email":"${email}","message":"${message}","capToken":"12345captcha_token"}`,
       method: "POST",
