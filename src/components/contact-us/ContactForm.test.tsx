@@ -5,12 +5,7 @@ import userEvent from "@testing-library/user-event";
 import ContactForm from "./ContactForm";
 
 const setup = () => {
-  const fetchSpy = vi.fn(() =>
-    Promise.resolve({
-      json: () => Promise.resolve(),
-    }),
-  );
-  global.fetch = fetchSpy;
+  const fetchSpy = vi.spyOn(global, 'fetch');
 
   render(<ContactForm />);
 
@@ -29,6 +24,8 @@ const setup = () => {
   }) as HTMLInputElement;
   const submitButton = screen.getByRole("button", { name: "Send message" });
 
+  // Utility functions - consider separating these into a dedicated harness if
+  // test becomes more complex.
   const setAllValidInputs = async () => {
     await user.type(firstNameInput, "Jane");
     await user.type(lastNameInput, "Doe");
