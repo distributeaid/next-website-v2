@@ -58,34 +58,6 @@ afterEach(() => {
   cleanup();
 });
 
-// describe("when no input in required field", () => {
-//   describe("first name", () => {
-//     // it("displays a field error", async () => {
-//     //   const { user, submitButton, firstNameInput } = setup();
-
-//     //   await user.click(submitButton);
-
-//     //   console.log(firstNameInput.validationMessage);
-//     //   console.log(firstNameInput.checkValidity());
-//     //   console.log(firstNameInput.validity);
-//     //   const error = screen.getByText(/Please fill out this field/i);
-//     //   expect(error).toBeInTheDocument();
-//     // });
-
-//     it("makes no API call", async () => {
-//       const { user, submitButton, setAllValidInputs, firstNameInput } = setup();
-//       await setAllValidInputs();
-
-//       await user.clear(firstNameInput);
-//       await user.click(submitButton);
-
-//       expect(fetch).not.toHaveBeenCalled();
-//     });
-//   });
-
-//   // TODO: add more fields here
-// });
-
 describe("does not call post API when required field", () => {
   it("first name is empty", async () => {
     const { user, submitButton, setAllValidInputs, firstNameInput } = setup();
