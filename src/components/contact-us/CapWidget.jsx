@@ -8,29 +8,34 @@ export default function CapWidget({ onVerified }) {
     const el = widgetRef.current;
     if (!el) return;
 
-    const onSolve = async (e) => {
-      const { token, solutions } = e.detail ?? {};
-      if (!token || !solutions) return;
+    // lazy-load the widget script
+    import("@cap.js/widget").then(() => {
+      const onSolve = (e) => {
+        // event.detail commonly contains the token (names vary: token/redeem/etc.)
+        const token =
+          e?.detail?.token ||
+          e?.detail?.redeem || // common names
+          el.querySelector('input[name="cap-token"]')?.value; // fallback to hidden input
 
-      try {
-        const resp = await fetch("/api/cap/redeem", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ token, solutions }),
-        });
-        const data = await resp.json();
-        if (data?.success && data?.token) onVerified?.(data.token);
-      } catch (err) {
-        console.error("Cap redeem failed:", err);
-      }
-    };
+        if (token && typeof onVerified === "function") {
+          onVerified(token);
+        }
+      };
 
-    el.addEventListener("solve", onSolve);
-    import("@cap.js/widget");
+      const onError = (e) => {
+        // optional: handle errors
+        console.error("cap-widget error", e);
+      };
 
-    return () => {
-      el.removeEventListener("solve", onSolve);
-    };
+      el.addEventListener("solve", onSolve);
+      el.addEventListener("error", onError);
+
+      // cleanup
+      return () => {
+        el.removeEventListener("solve", onSolve);
+        el.removeEventListener("error", onError);
+      };
+    });
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return <cap-widget ref={widgetRef} data-cap-api-endpoint="/api/cap/" />;

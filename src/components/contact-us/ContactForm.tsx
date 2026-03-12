@@ -22,6 +22,11 @@ const ContactForm = () => {
 
   const [capToken, setCapToken] = useState<string | null>(null);
 
+  const onCaptchaSuccess = (token: string) => {
+    console.log("SUCCESS");
+    setCapToken(token);
+  };
+
   const [formState, setFormState] = useState({
     success: false,
     error: false,
@@ -37,7 +42,10 @@ const ContactForm = () => {
       setFormState((prev) => ({ ...prev, loading: true }));
       const form = formRef.current;
       const data = new FormData(form!);
-      const body = JSON.stringify({ ...Object.fromEntries(data.entries()), capToken });
+      const body = JSON.stringify({
+        ...Object.fromEntries(data.entries()),
+        capToken,
+      });
 
       const res = await fetch("/api/send", {
         method: "POST",
@@ -149,10 +157,10 @@ const ContactForm = () => {
                     required
                   />
                 </Box>
-                <CapWidget onVerified={setCapToken} />
+                <CapWidget onVerified={onCaptchaSuccess} />
                 <Button
                   type="submit"
-                  className="bg-navy-600 hover:bg-navy-500 h-11"
+                  className="bg-navy-600 hover:bg-navy-500 h-11 text-white disabled:opacity-55"
                   disabled={formState.loading || !capToken}
                   loading={formState.loading}
                 >
