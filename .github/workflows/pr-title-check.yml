@@ -1,0 +1,13 @@
+name: PR Title Check
+on:
+  pull_request_target:
+    types: [opened, edited, reopened, synchronize]
+
+jobs:
+  check-title:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate PR title and link to Issue
+        uses: distributeaid/centralised-github-actions/.github/actions/pr-title-check-linking@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
