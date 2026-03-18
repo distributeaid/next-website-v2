@@ -13,6 +13,16 @@ body:
     validations:
       required: true
 
+  - type: dropdown
+    id: bug-type
+    attributes:
+      label: Is the bug visual or functionality?
+      multiple: false
+      options:
+        - Visual
+        - Funcionality
+        - Both
+
   - type: textarea
     id: what-happened
     attributes:
@@ -39,8 +49,8 @@ body:
   - type: textarea
     id: area-of-website
     attributes:
-      label: What parts of the site does the request invovle?
-      description: If the request is for a change to an existing page, link to that page and include a below. If the request is for a new page, indicate that.
+      label: What parts of the site does the problem invovle?
+      description: Link to the affected page and attach a screenshot, or specify the starting page of the process and describe where the issue occurs.
     validations:
       required: true
 
@@ -48,25 +58,15 @@ body:
     id: screenshots
     attributes:
       label: Upload screenshots
-      description: If applicable, add screenshots to help explain your request.
+      description: If applicable, add screenshots to help explain the problem.
     validations:
       required: false
-
-  - type: dropdown
-    id: bug-type
-    attributes:
-      label: Is the bug visual or functionality?
-      multiple: false
-      options:
-        - Visual
-        - Funcionality
-        - Both
 
   - type: textarea
     id: inspiration
     attributes:
-      label: Is there inspiration for your request?
-      description: List links or screenshots of good sites which demonstrate the functionality you're requesting.
+      label: Is there inspiration for how this should work?
+      description: List links or screenshots of good sites which demonstrate the fix you're requesting.
     validations:
       required: false
 

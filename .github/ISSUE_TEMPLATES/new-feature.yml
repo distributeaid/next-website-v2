@@ -28,7 +28,7 @@ body:
       multiple: false
       options:
         - Evergreen
-        - File an Issue
+        - File a Change Request
         - Strapi CMS
         - External Datasource
 
@@ -72,8 +72,16 @@ body:
   - type: textarea
     id: existing-content
     attributes:
-      label: Links or descriptions of existing content.
+      label: Links or descriptions of content you'd like to show.
       description: Please provide as much relevant content as you can up front!
+    validations:
+      required: false
+
+  - type: upload
+    id: content-files
+    attributes:
+      label: Upload files
+      description: If applicable, any images , PDFs, etc, with content you'd like to add.
     validations:
       required: false
 
@@ -83,6 +91,8 @@ body:
       label: Is additional content needed?
       multiple: true
       options:
+        - No, I've provided the content.
+        - No, I will provide the content.
         - I need help choosing relevant images.
         - I need help creating copy.
         - I need help generating stats.
