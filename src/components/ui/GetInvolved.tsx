@@ -27,7 +27,7 @@ const GetInvolved = () => {
         throw Error("Email is missing :(");
       }
 
-      const body = JSON.stringify({email});
+      const body = JSON.stringify({ email });
 
       await fetch("/api/newsletter", {
         method: "POST",
