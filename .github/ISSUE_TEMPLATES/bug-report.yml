@@ -19,7 +19,7 @@ body:
       label: Is the bug visual or functionality?
       multiple: true
       options:
-        - "Visual/Design
+        - Visual/Design
         - Funcionality
         - Missing Content
         - Other (Tell us more in the fields below)
