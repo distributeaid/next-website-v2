@@ -17,11 +17,12 @@ body:
     id: bug-type
     attributes:
       label: Is the bug visual or functionality?
-      multiple: false
+      multiple: true
       options:
-        - Visual
+        - "Visual/Design
         - Funcionality
-        - Both
+        - Missing Content
+        - Other (Tell us more in the fields below)
 
   - type: textarea
     id: what-happened
