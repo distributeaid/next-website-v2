@@ -4856,7 +4856,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:^10.1.8":
+"eslint-config-prettier@npm:10.1.8":
   version: 10.1.8
   resolution: "eslint-config-prettier@npm:10.1.8"
   peerDependencies:
@@ -4968,7 +4968,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-prettier@npm:^5.5.5":
+"eslint-plugin-prettier@npm:5.5.5":
   version: 5.5.5
   resolution: "eslint-plugin-prettier@npm:5.5.5"
   dependencies:
@@ -7061,16 +7061,16 @@ __metadata:
     classnames: "npm:^2.5.1"
     eslint: "npm:9.39.4"
     eslint-config-next: "npm:15.5.12"
-    eslint-config-prettier: "npm:^10.1.8"
+    eslint-config-prettier: "npm:10.1.8"
     eslint-plugin-import: "npm:2.32.0"
-    eslint-plugin-prettier: "npm:^5.5.5"
+    eslint-plugin-prettier: "npm:5.5.5"
     eslint-plugin-react: "npm:7.37.5"
     jsdom: "npm:26.1.0"
     next: "npm:15.5.12"
     postcss: "npm:8.5.8"
     postcss-import: "npm:16.1.1"
     prettier: "npm:3.8.1"
-    prettier-plugin-tailwindcss: "npm:^0.7.2"
+    prettier-plugin-tailwindcss: "npm:0.7.2"
     react: "npm:19.2.3"
     react-countup: "npm:^6.5.3"
     react-dom: "npm:19.2.3"
@@ -7638,7 +7638,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-tailwindcss@npm:^0.7.2":
+"prettier-plugin-tailwindcss@npm:0.7.2":
   version: 0.7.2
   resolution: "prettier-plugin-tailwindcss@npm:0.7.2"
   peerDependencies:
