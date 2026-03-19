@@ -1,0 +1,115 @@
+name: New Feature Reuqest
+description: Request a new feature.
+title: "[Feature]: "
+labels: ["triage"]
+projects: ["distributeaid/projects"]
+type: enhancement
+body:
+  - type: textarea
+    id: who-are-you
+    attributes:
+      label: Who are you?
+      description: Give us enough information so that the designer & developer working on this can reach out and ask you followup questions. Let folks know explicitly if you're a DA volunteer, coordinator, etc
+    validations:
+      required: true
+
+  - type: textarea
+    id: request-description
+    attributes:
+      label: What needs to be done?
+      description: A sentence, paragraph, bulletpoints, or checkboxes of specific additions or changes.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: future-updates
+    attributes:
+      label: How will this stay up to date going forwards?
+      multiple: false
+      options:
+        - Evergreen
+        - File a Change Request
+        - Strapi CMS
+        - External Datasource
+
+  - type: textarea
+    id: benefits
+    attributes:
+      label: Why are you requesting this?
+      description: Who benefits? How do people currently do this?
+    validations:
+      required: true
+
+  - type: textarea
+    id: area-of-website
+    attributes:
+      label: What parts of the site does the request invovle?
+      description: If the request is for a change to an existing page, link to that page and include a below. If the request is for a new page, indicate that.
+    validations:
+      required: true
+
+  - type: upload
+    id: screenshots
+    attributes:
+      label: Upload screenshots
+      description: If applicable, add screenshots to help explain your request.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: design-needed
+    attributes:
+      label: Is design needed?
+      multiple: false
+      options:
+        - Yes - new page / new component on a page
+        - Yes - high impact page (home page, donate page, hero section)
+        - Review - changes to multiple parts of a page or component
+        - Review - addition of existing component
+        - No - clone of existing page
+        - No - very simple change
+
+  - type: textarea
+    id: existing-content
+    attributes:
+      label: Links or descriptions of content you'd like to show.
+      description: Please provide as much relevant content as you can up front!
+    validations:
+      required: false
+
+  - type: upload
+    id: content-files
+    attributes:
+      label: Upload files
+      description: If applicable, any images , PDFs, etc, with content you'd like to add.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: additional-content
+    attributes:
+      label: Is additional content needed?
+      multiple: true
+      options:
+        - No, I've provided the content.
+        - No, I will provide the content.
+        - I need help choosing relevant images.
+        - I need help creating copy.
+        - I need help generating stats.
+        - I need help providing other content.
+
+  - type: textarea
+    id: inspiration
+    attributes:
+      label: Is there inspiration for your request?
+      description: List links or screenshots of good sites which demonstrate the functionality you're requesting.
+    validations:
+      required: false
+
+  - type: upload
+    id: additional-images
+    attributes:
+      label: Upload images
+      description: If applicable, add any additional images or screenshots to help explain your request.
+    validations:
+      required: false

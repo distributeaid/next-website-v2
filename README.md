@@ -58,6 +58,11 @@ yarn dev
 3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
    The page auto-updates as you edit the file.
 
+## Environment variables
+
+In order to exercise local code using custom environment variables, you'll need to
+add an `.env.yarn` file at the project root containing the relevant variables.
+
 ## Coding Conventions / Best Practices
 
 - Avoid using raw #hexadecimal values. View `/src/stylesheets/` or `tailwind.config.ts` to see color value names.
