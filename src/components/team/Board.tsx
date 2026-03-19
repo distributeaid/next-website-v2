@@ -15,9 +15,8 @@ const Board = async () => {
     return colors[Math.abs(hash) % colors.length];
   };
 
-  const data = await getTeam();
+  const team = await getTeam();
   const { STRAPI_URL } = process.env;
-  console.log(STRAPI_URL);
   return (
     <>
       <Box
@@ -36,7 +35,7 @@ const Board = async () => {
           </Heading>
         </Box>
         <Box className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {data.map((member: TeamMember) => (
+          {team.map((member: TeamMember) => (
             <BoardCard
               key={member.id}
               teamMember={member}
