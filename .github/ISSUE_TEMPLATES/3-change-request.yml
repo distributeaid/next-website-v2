@@ -8,7 +8,7 @@ body:
   - type: markdown
     id: who-are-you
     attributes:
-      label:" Who are you?"
+      label: "Who are you?"
       description: "Give us enough information so that the designer & developer working on this can reach out and ask you followup questions. Let folks know explicitly if you're a DA volunteer, coordinator, etc"
     validations:
       required: true
@@ -17,7 +17,7 @@ body:
     id: request-description
     attributes:
       label: "What needs to be done?"
-      description:" A sentence, paragraph, bulletpoints, or checkboxes of specific additions or changes."
+      description: "A sentence, paragraph, bulletpoints, or checkboxes of specific additions or changes."
     validations:
       required: true
 
