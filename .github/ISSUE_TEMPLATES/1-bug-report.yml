@@ -1,22 +1,22 @@
-name: Bug Report
-description: File a bug report.
+name: "Bug Report"
+description: "File a bug report."
 title: "[Bug]: "
-labels: ["bug", "triage"]
-projects: ["distributeaid/projects"]
+labels: ["Bug", "Triage"]
+projects: ["distributeaid/15"]
 type: bug
 body:
-  - type: textarea
+  - type: markdown
     id: who-are-you
     attributes:
-      label: Who are you?
-      description: Give us enough information so that the designer & developer working on this can reach out and ask you followup questions. Let folks know explicitly if you're a DA volunteer, coordinator, etc
+      label: "Who are you?"
+      description: "Give us enough information so that the designer & developer working on this can reach out and ask you followup questions. Let folks know explicitly if you're a DA volunteer, coordinator, etc"
     validations:
       required: true
 
   - type: dropdown
     id: bug-type
     attributes:
-      label: Is the bug visual or functionality?
+      label:"Is the bug visual or functionality?"
       multiple: true
       options:
         - Visual/Design
@@ -24,57 +24,57 @@ body:
         - Missing Content
         - Other (Tell us more in the fields below)
 
-  - type: textarea
+  - type: markdown
     id: what-happened
     attributes:
-      label: What actually happens?
-      description: Please provide step-by-step details if possible.
+      label: "What actually happens?"
+      description: "Please provide step-by-step details if possible."
     validations:
       required: true
 
-  - type: textarea
+  - type: markdown
     id: expected-behavior
     attributes:
-      label: What are you expecting to happen?
-      description: A concise description of what you expected to happen.
+      label: "What are you expecting to happen?"
+      description: "A concise description of what you expected to happen."
     validations:
       required: true
 
-  - type: textarea
+  - type: markdown
     id: workarounds
     attributes:
-      label: What current workarounds are you using? Or are you stuck?
+      label: "What current workarounds are you using? Or are you stuck?"
     validations:
       required: true
 
-  - type: textarea
+  - type: markdown
     id: area-of-website
     attributes:
-      label: What parts of the site does the problem invovle?
-      description: Link to the affected page and attach a screenshot, or specify the starting page of the process and describe where the issue occurs.
+      label: "What parts of the site does the problem invovle?"
+      description: "Link to the affected page and attach a screenshot, or specify the starting page of the process and describe where the issue occurs."
     validations:
       required: true
 
   - type: upload
     id: screenshots
     attributes:
-      label: Upload screenshots
-      description: If applicable, add screenshots to help explain the problem.
+      label: "Upload screenshots"
+      description: "If applicable, add screenshots to help explain the problem."
     validations:
       required: false
 
-  - type: textarea
+  - type: markdown
     id: inspiration
     attributes:
-      label: Is there inspiration for how this should work?
-      description: List links or screenshots of good sites which demonstrate the fix you're requesting.
+      label: "Is there inspiration for how this should work?"
+      description: "List links or screenshots of good sites which demonstrate the fix you're requesting."
     validations:
       required: false
 
   - type: upload
     id: additional-images
     attributes:
-      label: Upload images
-      description: If applicable, add any additional images or screenshots to help explain the problemm you encountered.
+      label: "Upload images"
+      description: "If applicable, add any additional images or screenshots to help explain the problemm you encountered."
     validations:
       required: false
