@@ -24,7 +24,7 @@ body:
   - type: dropdown
     id: future-updates
     attributes:
-      label:" How will this stay up to date going forwards?"
+      label: "How will this stay up to date going forwards?"
       multiple: false
       options:
         - Evergreen
@@ -52,7 +52,7 @@ body:
     id: screenshots
     attributes:
       label: "Upload screenshots"
-      description:" If applicable, add screenshots to help explain your request."
+      description: "If applicable, add screenshots to help explain your request."
     validations:
       required: false
 
