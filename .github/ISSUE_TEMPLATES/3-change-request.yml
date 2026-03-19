@@ -5,7 +5,7 @@ labels: ["Content"]
 projects: ["distributeaid/15"]
 type: content
 body:
-  - type: textarea
+  - type: markdown
     id: who-are-you
     attributes:
       label: "Who are you?"
@@ -13,7 +13,7 @@ body:
     validations:
       required: true
 
-  - type: textarea
+  - type: markdown
     id: request-description
     attributes:
       label: "What needs to be done?"
@@ -32,7 +32,7 @@ body:
         - Strapi CMS
         - External Datasource
 
-  - type: textarea
+  - type: markdown
     id: benefits
     attributes:
       label: "Why are you requesting this?"
@@ -40,7 +40,7 @@ body:
     validations:
       required: true
 
-  - type: textarea
+  - type: markdown
     id: area-of-website
     attributes:
       label: "What parts of the site does the request invovle?"
@@ -69,7 +69,7 @@ body:
         - No - clone of existing page
         - No - very simple change
 
-  - type: textarea
+  - type: markdown
     id: existing-content
     attributes:
       label: "Links or descriptions of content you'd like to show."
@@ -98,7 +98,7 @@ body:
         - I need help generating stats.
         - I need help providing other content.
 
-  - type: textarea
+  - type: markdown
     id: inspiration
     attributes:
       label: "Is there inspiration for your request?"

@@ -5,7 +5,7 @@ labels: ["Bug", "Triage"]
 projects: ["distributeaid/15"]
 type: bug
 body:
-  - type: textarea
+  - type: markdown
     id: who-are-you
     attributes:
       label: "Who are you?"
@@ -24,7 +24,7 @@ body:
         - Missing Content
         - Other (Tell us more in the fields below)
 
-  - type: textarea
+  - type: markdown
     id: what-happened
     attributes:
       label: "What actually happens?"
@@ -32,7 +32,7 @@ body:
     validations:
       required: true
 
-  - type: textarea
+  - type: markdown
     id: expected-behavior
     attributes:
       label: "What are you expecting to happen?"
@@ -40,14 +40,14 @@ body:
     validations:
       required: true
 
-  - type: textarea
+  - type: markdown
     id: workarounds
     attributes:
       label: "What current workarounds are you using? Or are you stuck?"
     validations:
       required: true
 
-  - type: textarea
+  - type: markdown
     id: area-of-website
     attributes:
       label: "What parts of the site does the problem invovle?"
@@ -63,7 +63,7 @@ body:
     validations:
       required: false
 
-  - type: textarea
+  - type: markdown
     id: inspiration
     attributes:
       label: "Is there inspiration for how this should work?"
