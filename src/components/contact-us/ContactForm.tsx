@@ -83,7 +83,11 @@ const ContactForm = () => {
               possible.
             </Text>
           ) : (
-            <form ref={formRef} onSubmit={handleSubmit} data-testid="contact-us-form">
+            <form
+              ref={formRef}
+              onSubmit={handleSubmit}
+              data-testid="contact-us-form"
+            >
               <Flex direction="column" gap="4">
                 <Grid gap="4" columns={{ initial: "1", sm: "2" }}>
                   <Box>
