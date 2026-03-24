@@ -29,13 +29,13 @@ export default function CapWidget({ onVerified }) {
 
       el.addEventListener("solve", onSolve);
       el.addEventListener("error", onError);
-
-      // cleanup
-      return () => {
-        el.removeEventListener("solve", onSolve);
-        el.removeEventListener("error", onError);
-      };
     });
+
+    // cleanup
+    return () => {
+      el.removeEventListener("solve", onSolve);
+      el.removeEventListener("error", onError);
+    };
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return <cap-widget ref={widgetRef} data-cap-api-endpoint="/api/cap/" />;

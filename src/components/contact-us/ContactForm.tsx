@@ -23,7 +23,6 @@ const ContactForm = () => {
   const [capToken, setCapToken] = useState<string | null>(null);
 
   const onCaptchaSuccess = (token: string) => {
-    console.log("SUCCESS");
     setCapToken(token);
   };
 
