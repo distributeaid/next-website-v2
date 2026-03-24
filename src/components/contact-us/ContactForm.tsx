@@ -90,12 +90,12 @@ const ContactForm = () => {
             . You can also fill out the form below.
           </Text>
           {formState.success ? (
-            <Text className="text-lg">
+            <Text className="text-lg" data-testid="success">
               Thank you for reaching out. We'll get back to you as quickly as
               possible.
             </Text>
           ) : (
-            <form ref={formRef} onSubmit={handleSubmit}>
+            <form ref={formRef} onSubmit={handleSubmit} data-testid="form">
               <Flex direction="column" gap="4">
                 <Grid gap="4" columns={{ initial: "1", sm: "2" }}>
                   <Box>
