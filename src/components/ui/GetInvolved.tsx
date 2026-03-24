@@ -46,7 +46,7 @@ const GetInvolved = () => {
       subTitle="Three Ways To Make A Difference"
       noPadding
     >
-      <Grid
+      {/* <Grid
         columns={{
           initial: "1",
           md: "3",
@@ -82,7 +82,7 @@ const GetInvolved = () => {
             ),
           )}
         </ul>
-      </Grid>
+      </Grid> */}
 
       <Box className="bg-fuchsia-100" id="newsletter-signup">
         <Box id="newsletter-signup" py="8" px="4" maxWidth="1242px" mx="auto">
@@ -95,7 +95,7 @@ const GetInvolved = () => {
             aid efforts. No spam—just meaningful insights, once a month.
           </Text>
           {newsletterSuccess ? (
-            <Box className="text-center" m="5">
+            <Box className="text-center" m="5" data-testid="newsletter-success">
               <Heading size="7">Success!</Heading>
               <Text size="4">
                 Thanks for signing up! Please check your email to confirm your
@@ -110,6 +110,7 @@ const GetInvolved = () => {
                 initial: "column",
                 lg: "row",
               }}
+              data-testid="newsletter-form"
               asChild
             >
               <form onSubmit={handleSubmit}>

@@ -1,4 +1,3 @@
-import "@testing-library/jest-dom/vitest";
 import { afterEach, expect, it, describe, vi } from "vitest";
 import { render, screen, cleanup } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
@@ -53,6 +52,12 @@ const setup = () => {
 afterEach(() => {
   vi.clearAllMocks(); // Reset all mocked calls between tests
   cleanup();
+});
+
+it("displays form by default", async () => {
+  setup();
+
+  expect(await screen.findByTestId("contact-us-form")).toBeVisible();
 });
 
 describe("does not call post API when required field", () => {
@@ -124,6 +129,7 @@ describe("when all fields are populated correctly", () => {
     const email = "maria.hill@gmail.com";
     const message = "Maria's message here";
 
+    expect(await screen.findByTestId("contact-us-form")).toBeVisible();
     await user.type(firstNameInput, firstName);
     await user.type(lastNameInput, lastName);
     await user.type(emailInput, email);
@@ -149,7 +155,7 @@ describe("on API success", () => {
 
     await user.click(submitButton);
 
-    expect(await screen.getByTestId("success")).toBeVisible();
+    expect(await screen.getByTestId("contact-us-success")).toBeVisible();
   });
 
   it("hides the form", async () => {
@@ -160,7 +166,7 @@ describe("on API success", () => {
 
     await user.click(submitButton);
 
-    expect(await screen.queryByTestId("form")).toBeNull();
+    expect(await screen.queryByTestId("contact-us-form")).toBeNull();
   });
 
   it("does not show error dialog", async () => {
