@@ -11,7 +11,6 @@ import {
 } from "@radix-ui/themes";
 
 import { getInvolvedLinks } from "@/data/getInvolved";
-import { handleNewsletterSignup } from "@/utils/newsletter";
 
 import Section from "./SectionWithTitle";
 
@@ -28,7 +27,12 @@ const GetInvolved = () => {
         throw Error("Email is missing :(");
       }
 
-      await handleNewsletterSignup(email);
+      const body = JSON.stringify({ email });
+
+      await fetch("/api/newsletter", {
+        method: "POST",
+        body,
+      });
     } catch (error) {
       throw error;
     } finally {
