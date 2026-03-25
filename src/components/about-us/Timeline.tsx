@@ -176,7 +176,7 @@ export const Timeline: React.FC = () => {
                       height={256}
                       width={1200}
                       sizes="100vw"
-                      className="min-h-[150px] max-h-[200px] w-full object-fit object-center rounded-[15px]"
+                      className="min-h-[150px] max-h-[200px] w-full object-cover object-center rounded-[15px]"
                       style={{
                         height: "calc(37.5vh - 30px)",
                       }}

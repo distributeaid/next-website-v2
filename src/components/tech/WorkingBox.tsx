@@ -1,5 +1,6 @@
 import { Badge, Box, Container, Flex, Heading, Text } from "@radix-ui/themes";
 import SmartLink from "../link/SmartLink";
+import { MarkdownContent } from "../markdown/MarkdownContent";
 
 interface WorkingBoxProps {
   title: string;
@@ -39,16 +40,18 @@ export const WorkingBox = ({
         >
           {title}
         </Heading>
-        <Text
-          as="p"
-          size={{ initial: "3", sm: "5" }}
-          className="sm:leading-[2]"
-        >
-          {para} <br />
-          <SmartLink href={link} className="text-navy-800 underline">
-            {linklabel}
-          </SmartLink>
-        </Text>
+        <MarkdownContent
+          content={para}
+          wrapper={(children) => (
+            <Text size={{ initial: "3", sm: "5" }} className="sm:leading-[2]">
+              {children}
+              <SmartLink href={link} className="text-navy-800 underline">
+                {linklabel}
+              </SmartLink>
+            </Text>
+          )}
+        />
+
         <Box>
           {tech.map((item, index) => {
             return (

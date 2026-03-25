@@ -178,7 +178,7 @@ const HowWeHelp = () => {
         {/* Image Section */}
         <Flex justify="center" mb={{ initial: "5", md: "8" }}>
           <Image
-            src="/images/home/da-circular-economy.png"
+            src="/images/illus/illus-circular-economy.png"
             alt="Flow of donations: to hub, then to grassroots aid."
             width={800}
             height={480}

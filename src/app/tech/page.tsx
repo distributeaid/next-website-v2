@@ -33,7 +33,7 @@ const page = () => {
       </Section>
       <Section size={{ initial: "1", md: "2" }}>
         <ImageTextCTA
-          image="/images/tech/ukraine-response-gallery-02.png"
+          image="/images/photos/photo-ukr-response-01.png"
           heading="How To Join Our Tech Team!"
           text={ctaText}
           link="mailto:tech@distributeaid.org"
