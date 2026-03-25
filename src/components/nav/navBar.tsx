@@ -5,7 +5,7 @@ import { useState } from "react";
 import { FaBars, FaChevronDown, FaTimes } from "react-icons/fa";
 import LogoMark from "../../../public/images/LogoMark";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import { Box, Flex, Button } from "@radix-ui/themes";
+import { Box, Flex } from "@radix-ui/themes";
 import { SOCIAL_LINKS } from "@/data/constants";
 import Image from "next/image";
 import cx from "classnames";
@@ -167,7 +167,7 @@ const NavBar = () => {
                 </Box>
               )}
               {/* Hamburger Icon */}
-              <Button
+              <button
                 className="text-white z-40 cursor-pointer bg-transparent border-none"
                 onClick={() => setNav(!nav)}
                 aria-label={
@@ -181,7 +181,7 @@ const NavBar = () => {
                 ) : (
                   <FaBars size={30} aria-hidden="true" />
                 )}
-              </Button>
+              </button>
             </Flex>
             {/* Mobile Menu */}
             {nav && <MobileNavBar />}
