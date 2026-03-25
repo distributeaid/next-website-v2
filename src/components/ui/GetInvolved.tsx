@@ -74,7 +74,7 @@ const GetInvolved = () => {
                   <Text weight="medium" size="8">
                     {label}
                   </Text>
-                  <Button size="3">
+                  <Button size="3" asChild>
                     <a href={href}>{buttonLabel ?? label}</a>
                   </Button>
                 </Flex>
