@@ -11,8 +11,9 @@ const setup = () => {
   render(<ContactForm />);
 
   vi.mock("./CapWidget", () => ({
-    default: ({ onVerified }) => {
+    default: ({ onVerified }: { onVerified: (t: string) => void }) => {
       // mockInput(props);
+      // eslint-disable-next-line react-hooks/rules-of-hooks
       useEffect(() => {
         // This seems to get called no matter what, which is fine for now
         // but we might want to actually test success vs failure later
@@ -22,7 +23,7 @@ const setup = () => {
         <div>
           <span>Stub captcha</span>
           <input type="checkbox" id="captcha"></input>
-          <label for="captcha">Fake captcha</label>
+          <label htmlFor="captcha">Fake captcha</label>
         </div>
       );
     },
