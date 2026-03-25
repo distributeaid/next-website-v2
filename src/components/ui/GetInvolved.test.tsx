@@ -1,5 +1,5 @@
 import "@testing-library/jest-dom/vitest";
-import { afterEach, expect, it, describe, vi } from "vitest";
+import { afterEach, beforeEach, expect, it, describe, vi } from "vitest";
 import { render, screen, cleanup } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import GetInvolved from "./GetInvolved";
@@ -29,17 +29,19 @@ const setup = () => {
 
 afterEach(() => {
   vi.clearAllMocks(); // Reset all mocked calls between tests
+  vi.unstubAllGlobals();
   cleanup();
 });
 
 describe("does not call post API when required field", () => {
   it("email is empty", async () => {
     const { user, submitButton, setAllValidInputs, emailInput } = setup();
-    global.fetch = vi.fn(
-      (input: URL | RequestInfo, init?: RequestInit | undefined) => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn((input: URL | RequestInfo, init?: RequestInit | undefined) => {
         const res = new Response();
         return Promise.resolve(res);
-      },
+      }),
     );
     await setAllValidInputs();
 
@@ -51,11 +53,12 @@ describe("does not call post API when required field", () => {
 
   it("email is malformed", async () => {
     const { user, submitButton, setAllValidInputs, emailInput } = setup();
-    global.fetch = vi.fn(
-      (input: URL | RequestInfo, init?: RequestInit | undefined) => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn((input: URL | RequestInfo, init?: RequestInit | undefined) => {
         const res = new Response();
         return Promise.resolve(res);
-      },
+      }),
     );
     await setAllValidInputs();
 
@@ -71,11 +74,12 @@ describe("when all fields are populated correctly", () => {
   it("sends form data to API", async () => {
     const { emailInput, submitButton, user } = setup();
 
-    global.fetch = vi.fn(
-      (input: URL | RequestInfo, init?: RequestInit | undefined) => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn((input: URL | RequestInfo, init?: RequestInit | undefined) => {
         const res = new Response();
         return Promise.resolve(res);
-      },
+      }),
     );
 
     const email = "fish.crow@example.com";
@@ -92,12 +96,15 @@ describe("when all fields are populated correctly", () => {
 });
 
 describe("on API success", () => {
-  global.fetch = vi.fn(
-    (input: URL | RequestInfo, init?: RequestInit | undefined) => {
-      // 200 is the default but explicit is better than implicit (wrong language?)
-      const res = new Response(null, { status: 200 });
-      return Promise.resolve(res);
-    },
+  beforeEach(() =>
+    vi.stubGlobal(
+      "fetch",
+      vi.fn((input: URL | RequestInfo, init?: RequestInit | undefined) => {
+        // 200 is the default but explicit is better than implicit (wrong language?)
+        const res = new Response(null, { status: 200 });
+        return Promise.resolve(res);
+      }),
+    ),
   );
   it("shows success text", async () => {
     const { user, submitButton, setAllValidInputs } = setup();
