@@ -33,9 +33,8 @@ afterEach(() => {
   cleanup();
 });
 
-describe("does not call post API when required field", () => {
-  it("email is empty", async () => {
-    const { user, submitButton, setAllValidInputs, emailInput } = setup();
+describe("calls the API correctly", () => {
+  beforeEach(() => {
     vi.stubGlobal(
       "fetch",
       vi.fn((input: URL | RequestInfo, init?: RequestInit | undefined) => {
@@ -43,54 +42,46 @@ describe("does not call post API when required field", () => {
         return Promise.resolve(res);
       }),
     );
-    await setAllValidInputs();
+  });
+  describe("does not call post API when required field", () => {
+    it("email is empty", async () => {
+      const { user, submitButton, setAllValidInputs, emailInput } = setup();
 
-    await user.clear(emailInput);
-    await user.click(submitButton);
+      await setAllValidInputs();
 
-    expect(fetch).not.toHaveBeenCalled();
+      await user.clear(emailInput);
+      await user.click(submitButton);
+
+      expect(fetch).not.toHaveBeenCalled();
+    });
+
+    it("email is malformed", async () => {
+      const { user, submitButton, setAllValidInputs, emailInput } = setup();
+
+      await setAllValidInputs();
+
+      await user.clear(emailInput);
+      await user.type(emailInput, "bademail@");
+      await user.click(submitButton);
+
+      expect(fetch).not.toHaveBeenCalled();
+    });
   });
 
-  it("email is malformed", async () => {
-    const { user, submitButton, setAllValidInputs, emailInput } = setup();
-    vi.stubGlobal(
-      "fetch",
-      vi.fn((input: URL | RequestInfo, init?: RequestInit | undefined) => {
-        const res = new Response();
-        return Promise.resolve(res);
-      }),
-    );
-    await setAllValidInputs();
+  describe("when all fields are populated correctly", () => {
+    it("sends form data to API", async () => {
+      const { emailInput, submitButton, user } = setup();
 
-    await user.clear(emailInput);
-    await user.type(emailInput, "bademail@");
-    await user.click(submitButton);
+      const email = "fish.crow@example.com";
 
-    expect(fetch).not.toHaveBeenCalled();
-  });
-});
+      await user.type(emailInput, email);
+      await user.click(submitButton);
 
-describe("when all fields are populated correctly", () => {
-  it("sends form data to API", async () => {
-    const { emailInput, submitButton, user } = setup();
-
-    vi.stubGlobal(
-      "fetch",
-      vi.fn((input: URL | RequestInfo, init?: RequestInit | undefined) => {
-        const res = new Response();
-        return Promise.resolve(res);
-      }),
-    );
-
-    const email = "fish.crow@example.com";
-
-    await user.type(emailInput, email);
-    await user.click(submitButton);
-
-    expect(fetch).toHaveBeenCalledOnce();
-    expect(fetch).toHaveBeenCalledWith("/api/newsletter", {
-      method: "POST",
-      body: JSON.stringify({ email: email }),
+      expect(fetch).toHaveBeenCalledOnce();
+      expect(fetch).toHaveBeenCalledWith("/api/newsletter", {
+        method: "POST",
+        body: JSON.stringify({ email: email }),
+      });
     });
   });
 });
