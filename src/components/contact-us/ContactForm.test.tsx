@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "@testing-library/jest-dom/vitest";
 import { afterEach, expect, it, describe, vi } from "vitest";
 import { render, screen, cleanup } from "@testing-library/react";
@@ -8,6 +9,24 @@ const setup = () => {
   const fetchSpy = vi.spyOn(global, "fetch");
 
   render(<ContactForm />);
+
+  vi.mock("./CapWidget", () => ({
+    default: ({ onVerified }) => {
+      // mockInput(props);
+      useEffect(() => {
+        // This seems to get called no matter what, which is fine for now
+        // but we might want to actually test success vs failure later
+        onVerified("12345captcha_token");
+      });
+      return (
+        <div>
+          <span>Stub captcha</span>
+          <input type="checkbox" id="captcha"></input>
+          <label for="captcha">Fake captcha</label>
+        </div>
+      );
+    },
+  }));
 
   const user = userEvent.setup();
   const firstNameInput = screen.getByRole("textbox", {
@@ -134,7 +153,7 @@ describe("when all fields are populated correctly", () => {
     const [path, contents] = fetchSpy.mock.calls[0];
     expect(path).toEqual("/api/send");
     expect(contents).toEqual({
-      body: `{"firstName":"${firstName}","lastName":"${lastName}","email":"${email}","message":"${message}"}`,
+      body: `{"firstName":"${firstName}","lastName":"${lastName}","email":"${email}","message":"${message}","capToken":"12345captcha_token"}`,
       method: "POST",
     });
   });
