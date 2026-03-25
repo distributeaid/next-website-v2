@@ -46,7 +46,7 @@ const GetInvolved = () => {
       subTitle="Three Ways To Make A Difference"
       noPadding
     >
-      {/* <Grid
+      <Grid
         columns={{
           initial: "1",
           md: "3",
@@ -82,7 +82,7 @@ const GetInvolved = () => {
             ),
           )}
         </ul>
-      </Grid> */}
+      </Grid>
 
       <Box className="bg-fuchsia-100" id="newsletter-signup">
         <Box id="newsletter-signup" py="8" px="4" maxWidth="1242px" mx="auto">
@@ -110,10 +110,9 @@ const GetInvolved = () => {
                 initial: "column",
                 lg: "row",
               }}
-              data-testid="newsletter-form"
               asChild
             >
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} data-testid="newsletter-form">
                 <TextField.Root
                   size="3"
                   placeholder="Enter email address"
