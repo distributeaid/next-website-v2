@@ -5,7 +5,7 @@ import { useState } from "react";
 import { FaBars, FaChevronDown, FaTimes } from "react-icons/fa";
 import LogoMark from "../../../public/images/LogoMark";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import { Box, Flex, Button } from "@radix-ui/themes";
+import { Box, Flex } from "@radix-ui/themes";
 import { SOCIAL_LINKS } from "@/data/constants";
 import Image from "next/image";
 import cx from "classnames";
@@ -148,6 +148,7 @@ const NavBar = () => {
 
             {/* Mobile Top Navbar */}
             <Flex
+              id="mobile-nav"
               gap={"4"}
               align={"center"}
               display={{ initial: "flex", md: "none" }}
@@ -166,18 +167,21 @@ const NavBar = () => {
                 </Box>
               )}
               {/* Hamburger Icon */}
-              <Box
-                className="text-white z-40 cursor-pointer"
+              <button
+                className="text-white z-40 cursor-pointer bg-transparent border-none"
                 onClick={() => setNav(!nav)}
+                aria-label={
+                  nav ? "Close navigation menu" : "Open navigation menu"
+                }
+                aria-expanded={nav}
+                aria-controls="mobile-nav"
               >
                 {nav ? (
-                  <Button className="bg-navy-800 cursor-pointer" size={"4"}>
-                    Close <FaTimes size={30} />
-                  </Button>
+                  <FaTimes size={30} aria-hidden="true" />
                 ) : (
-                  <FaBars size={30} />
+                  <FaBars size={30} aria-hidden="true" />
                 )}
-              </Box>
+              </button>
             </Flex>
             {/* Mobile Menu */}
             {nav && <MobileNavBar />}
