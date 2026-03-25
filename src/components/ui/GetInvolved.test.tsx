@@ -5,8 +5,6 @@ import userEvent from "@testing-library/user-event";
 import GetInvolved from "./GetInvolved";
 
 const setup = () => {
-  const fetchSpy = vi.spyOn(global, "fetch");
-
   render(<GetInvolved />);
 
   const user = userEvent.setup();
@@ -21,14 +19,8 @@ const setup = () => {
     await user.type(emailInput, "jane.doe@gmail.com");
   };
 
-  const mockResolvedStatus = (status: number) => {
-    fetchSpy.mockResolvedValueOnce(new Response(null, { status }));
-  };
-
   return {
     emailInput,
-    fetchSpy,
-    mockResolvedStatus,
     setAllValidInputs,
     submitButton,
     user,
@@ -43,6 +35,12 @@ afterEach(() => {
 describe("does not call post API when required field", () => {
   it("email is empty", async () => {
     const { user, submitButton, setAllValidInputs, emailInput } = setup();
+    global.fetch = vi.fn(
+      (input: URL | RequestInfo, init?: RequestInit | undefined) => {
+        const res = new Response();
+        return Promise.resolve(res);
+      },
+    );
     await setAllValidInputs();
 
     await user.clear(emailInput);
@@ -53,6 +51,12 @@ describe("does not call post API when required field", () => {
 
   it("email is malformed", async () => {
     const { user, submitButton, setAllValidInputs, emailInput } = setup();
+    global.fetch = vi.fn(
+      (input: URL | RequestInfo, init?: RequestInit | undefined) => {
+        const res = new Response();
+        return Promise.resolve(res);
+      },
+    );
     await setAllValidInputs();
 
     await user.clear(emailInput);
@@ -65,23 +69,24 @@ describe("does not call post API when required field", () => {
 
 describe("when all fields are populated correctly", () => {
   it("sends form data to API", async () => {
-    const {
-      fetchSpy,
-      emailInput,
-      submitButton,
-      user,
-    } = setup();
-    const email = "maria.hill@gmail.com";
+    const { emailInput, submitButton, user } = setup();
+
+    global.fetch = vi.fn(
+      (input: URL | RequestInfo, init?: RequestInit | undefined) => {
+        const res = new Response();
+        return Promise.resolve(res);
+      },
+    );
+
+    const email = "fish.crow@example.com";
 
     await user.type(emailInput, email);
     await user.click(submitButton);
 
-    expect(fetchSpy).toHaveBeenCalledOnce();
-    const [path, contents] = fetchSpy.mock.calls[0];
-    expect(path).toEqual("/api/newsletter");
-    expect(contents).toEqual({
-      body: `{"email":"${email}"}`,
+    expect(fetch).toHaveBeenCalledOnce();
+    expect(fetch).toHaveBeenCalledWith("/api/newsletter", {
       method: "POST",
+      body: JSON.stringify({ email: email }),
     });
   });
 });
