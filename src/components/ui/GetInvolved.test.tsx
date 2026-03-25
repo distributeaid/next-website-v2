@@ -16,7 +16,7 @@ const setup = () => {
   // Utility functions - consider separating these into a dedicated harness if
   // test becomes more complex.
   const setAllValidInputs = async () => {
-    await user.type(emailInput, "jane.doe@gmail.com");
+    await user.type(emailInput, "fish.crow@example.com");
   };
 
   return {
@@ -91,60 +91,31 @@ describe("when all fields are populated correctly", () => {
   });
 });
 
-// describe("on API success", () => {
-//   it("shows success text", async () => {
-//     const { user, submitButton, mockResolvedStatus, setAllValidInputs } =
-//       setup();
-//     await setAllValidInputs();
-//     mockResolvedStatus(200);
+describe("on API success", () => {
+  global.fetch = vi.fn(
+    (input: URL | RequestInfo, init?: RequestInit | undefined) => {
+      // 200 is the default but explicit is better than implicit (wrong language?)
+      const res = new Response(null, { status: 200 });
+      return Promise.resolve(res);
+    },
+  );
+  it("shows success text", async () => {
+    const { user, submitButton, setAllValidInputs } = setup();
+    await setAllValidInputs();
 
-//     await user.click(submitButton);
+    await user.click(submitButton);
 
-//     expect(await screen.getByTestId("success")).toBeVisible();
-//   });
+    expect(await screen.getByText("Success!")).toBeVisible();
+  });
 
-//   it("hides the form", async () => {
-//     const { user, submitButton, mockResolvedStatus, setAllValidInputs } =
-//       setup();
-//     await setAllValidInputs();
-//     mockResolvedStatus(200);
+  it("hides the form", async () => {
+    const { user, submitButton, setAllValidInputs } = setup();
+    await setAllValidInputs();
 
-//     await user.click(submitButton);
+    await user.click(submitButton);
 
-//     expect(await screen.queryByTestId("form")).toBeNull();
-//   });
-
-//   it("does not show error dialog", async () => {
-//     const { user, submitButton, mockResolvedStatus, setAllValidInputs } =
-//       setup();
-//     await setAllValidInputs();
-//     mockResolvedStatus(200);
-
-//     await user.click(submitButton);
-
-//     expect(await screen.queryByTestId("error")).toBeNull();
-//   });
-// });
-
-// describe("on API error", () => {
-//   it("with error response: shows error dialog", async () => {
-//     const { user, submitButton, mockResolvedStatus, setAllValidInputs } =
-//       setup();
-//     await setAllValidInputs();
-//     mockResolvedStatus(404);
-
-//     await user.click(submitButton);
-
-//     expect(await screen.getByTestId("error")).toBeVisible();
-//   });
-
-//   it("with promise rejection: shows error dialog", async () => {
-//     const { fetchSpy, user, submitButton, setAllValidInputs } = setup();
-//     await setAllValidInputs();
-//     fetchSpy.mockRejectedValueOnce(new Error());
-
-//     await user.click(submitButton);
-
-//     expect(await screen.getByTestId("error")).toBeVisible();
-//   });
-// });
+    expect(
+      await screen.queryByRole("button", { name: "Subscribe Now" }),
+    ).toBeNull();
+  });
+});
