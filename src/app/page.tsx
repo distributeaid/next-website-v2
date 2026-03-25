@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <main>
       <HeroSection
-        heading="Your Mutual Aid Logistic
+        heading="Your Mutual Aid Logistics
         Experts"
         imgSrc="/images/photos/photo-grc-moria-fire-relief.jpg"
         imgAlt="hero image"
