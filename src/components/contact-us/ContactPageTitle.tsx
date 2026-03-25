@@ -1,5 +1,12 @@
 import { PageTitle } from "../resources/assort/PageTitle";
+import * as Messages from "@/data/messages";
 
 export const ContactPageTitle = () => {
-  return <PageTitle title="CONTACT US" bgColor="navy-900" textColor="white" />;
+  return (
+    <PageTitle
+      title={Messages.CONTACT_US_PAGE_TITLE}
+      bgColor="navy-900"
+      textColor="white"
+    />
+  );
 };

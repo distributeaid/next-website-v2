@@ -5,7 +5,7 @@ import { useState } from "react";
 import { FaBars, FaChevronDown, FaTimes } from "react-icons/fa";
 import LogoMark from "../../../public/images/LogoMark";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import { Box, Flex, Button } from "@radix-ui/themes";
+import { Box, Flex } from "@radix-ui/themes";
 import { SOCIAL_LINKS } from "@/data/constants";
 import Image from "next/image";
 import cx from "classnames";
@@ -82,7 +82,7 @@ const NavBar = () => {
               {links.map(({ title, url, isSubMenu, subMenu }) => (
                 <NavigationMenu.Item
                   className={cx(
-                    "font-medium  decoration-2 underline-offset-8 duration-200",
+                    "font-normal  decoration-2 underline-offset-8 duration-200",
                     {
                       "hover:underline": title !== "Donate",
                       "hover:bg-navy-500 decoration-none cursor-pointer hover:text-white duration-200 text-dark-blue bg-white rounded-lg py-3 px-6 ":
@@ -94,7 +94,7 @@ const NavBar = () => {
                   {isSubMenu ? (
                     <Box className="group">
                       <Flex
-                        className="font-medium"
+                        className="font-normal"
                         position={"relative"}
                         align={"center"}
                         asChild
@@ -148,6 +148,7 @@ const NavBar = () => {
 
             {/* Mobile Top Navbar */}
             <Flex
+              id="mobile-nav"
               gap={"4"}
               align={"center"}
               display={{ initial: "flex", md: "none" }}
@@ -158,7 +159,7 @@ const NavBar = () => {
                   asChild
                   px={"5"}
                   py={"3"}
-                  className="hover:bg-navy-500 hover:text-white duration-200 text-dark-blue bg-white font-medium rounded-lg"
+                  className="hover:bg-navy-500 hover:text-white duration-200 text-dark-blue bg-white font-normal rounded-lg"
                 >
                   <Link href="/donate" rel="noreferrer">
                     Donate
@@ -166,18 +167,21 @@ const NavBar = () => {
                 </Box>
               )}
               {/* Hamburger Icon */}
-              <Box
-                className="text-white z-40 cursor-pointer"
+              <button
+                className="text-white z-40 cursor-pointer bg-transparent border-none"
                 onClick={() => setNav(!nav)}
+                aria-label={
+                  nav ? "Close navigation menu" : "Open navigation menu"
+                }
+                aria-expanded={nav}
+                aria-controls="mobile-nav"
               >
                 {nav ? (
-                  <Button className="bg-navy-800 cursor-pointer" size={"4"}>
-                    Close <FaTimes size={30} />
-                  </Button>
+                  <FaTimes size={30} aria-hidden="true" />
                 ) : (
-                  <FaBars size={30} />
+                  <FaBars size={30} aria-hidden="true" />
                 )}
-              </Box>
+              </button>
             </Flex>
             {/* Mobile Menu */}
             {nav && <MobileNavBar />}
