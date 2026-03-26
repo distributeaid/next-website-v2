@@ -33,7 +33,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       </Box>
 
       <Heading
-        as="h2"
+        as="h3"
         align="center"
         weight="bold"
         className="text-navy-900"
