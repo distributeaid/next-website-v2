@@ -13,6 +13,7 @@ export type HrtNumbersCardProps = {
   direction?: "column" | "row";
   icon: string;
   iconAlt: string;
+  maxWidth: string;
 };
 
 export const HRTNumbersCard: FC<HrtNumbersCardProps> = ({
@@ -24,6 +25,7 @@ export const HRTNumbersCard: FC<HrtNumbersCardProps> = ({
   direction,
   icon,
   iconAlt,
+  maxWidth,
 }) => {
   return (
     <Flex
@@ -34,7 +36,7 @@ export const HRTNumbersCard: FC<HrtNumbersCardProps> = ({
       p="2"
       height={direction === "column" ? "360px" : "47%"}
       width="100%"
-      maxWidth="350px"
+      maxWidth={maxWidth}
     >
       <Image src={icon} width="100" height="100" alt={iconAlt} />
       <Box>

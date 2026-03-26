@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Button, Em, Flex, Heading, Section, Text } from "@radix-ui/themes";
+import { Button, Em, Flex, Heading, Section, Text, Box } from "@radix-ui/themes";
 import Link from "next/link";
 import { HRTNumbersCard } from "./HrtNumbersCard";
 import { kitsInNumbersValues as values } from "../../../data/hrtToolkitData";
@@ -25,6 +25,7 @@ export const HrtKitsInNumbers: FC = () => {
           direction="column"
           icon="/images/icons/icon-medical-kit.svg"
           iconAlt="medical kit"
+          maxWidth="350px"
         >
           <Text as="p" size="8" weight="light" align="center">
             YEARS OF HRT SUPPORTED
@@ -38,6 +39,7 @@ export const HrtKitsInNumbers: FC = () => {
             direction="row"
             icon="/images/icons/icon-medical-kit-blue.svg"
             iconAlt="medical kit"
+            maxWidth="350px"
           >
             <Text size="6" weight="light">
               KITS PRODUCED SO FAR
@@ -51,6 +53,7 @@ export const HrtKitsInNumbers: FC = () => {
             icon="/images/icons/icon-currency-dollar.svg"
             iconAlt="money"
             amountPrefix="$"
+            maxWidth="350px"
           >
             <Text size="4" weight="light">
               SAVED FOR THE TRANS COMMUNITY
@@ -58,7 +61,7 @@ export const HrtKitsInNumbers: FC = () => {
           </HRTNumbersCard>
         </Flex>
       </Flex>
-      <Flex align="center" justify="center" mt="2">
+      <Flex align="center" justify="center" mt="4">
         <HRTNumbersCard
             amount={values.partialKits}
             background="navy-800"
@@ -66,19 +69,22 @@ export const HrtKitsInNumbers: FC = () => {
             direction="row"
             icon="/images/icons/icon-currency-dollar.svg"
             iconAlt="money"
+            maxWidth="740px"
           >
             <Text size="6" weight="light">
                 Partial Kits - Donate to complete kits!
             </Text>
-            <Button className="bg-white text-navy-800" size="4" asChild>
-              <Link
-                href="https://www.omprakash.org/global/distribute-aid/crowdfund/hrt---harm-reduction-toolkit"
-                target={"_blank"}
-                rel="noopener noreferrer"
-              >
-                Donate
-              </Link>
-            </Button>
+            <Box>
+              <Button className="bg-white text-navy-800" size="4" asChild mb="2" ml="5">
+                <Link
+                  href="https://www.omprakash.org/global/distribute-aid/crowdfund/hrt---harm-reduction-toolkit"
+                  target={"_blank"}
+                  rel="noopener noreferrer"
+                >
+                  Donate
+                </Link>
+              </Button>
+            </Box>
           </HRTNumbersCard>
         </Flex>
     </Section>
