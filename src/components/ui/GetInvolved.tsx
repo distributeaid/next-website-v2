@@ -29,15 +29,14 @@ const GetInvolved = () => {
 
       const body = JSON.stringify({ email });
 
-      await fetch("/api/newsletter", {
+      const res = await fetch("/api/newsletter", {
         method: "POST",
         body,
       });
-    } catch (error) {
-      throw error;
-    } finally {
-      setNewsletterSuccess(true);
-    }
+      if (res.status === 200) {
+        setNewsletterSuccess(true);
+      }
+    } catch (error) {}
   };
 
   return (

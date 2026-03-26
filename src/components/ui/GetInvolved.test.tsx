@@ -19,8 +19,6 @@ const setup = () => {
     fetchSpy.mockResolvedValueOnce(new Response(null, { status }));
   };
 
-  mockResolvedStatus(200);
-
   return {
     fetchSpy,
     user,
@@ -85,6 +83,7 @@ describe("on signup success", () => {
     const { user, emailInput, subscribeButton, mockResolvedStatus } = setup();
     await user.type(emailInput, "some@email.com");
     mockResolvedStatus(200);
+
     await user.click(subscribeButton);
 
     expect(await screen.getByTestId("newsletter-success")).toBeVisible();
@@ -94,26 +93,31 @@ describe("on signup success", () => {
     const { user, emailInput, subscribeButton, mockResolvedStatus } = setup();
     await user.type(emailInput, "some@email.com");
     mockResolvedStatus(200);
+
     await user.click(subscribeButton);
+
     expect(await screen.queryByTestId("newsletter-form")).toBeNull();
   });
 });
 
 describe("on API error", () => {
-  it("with error response: shows error dialog", async () => {
-    // const { user, subscribeButton, mockResolvedStatus } =
-    //   setup();
-    // await user.type(emailInput, "some@email.com");
-    // mockResolvedStatus(404);
-    // await user.click(subscribeButton);
-    // expect(await screen.getByTestId("error")).toBeVisible();
+  it("with error response: does not show success text", async () => {
+    const { user, emailInput, subscribeButton, mockResolvedStatus } = setup();
+    await user.type(emailInput, "some@email.com");
+    mockResolvedStatus(404);
+
+    await user.click(subscribeButton);
+
+    expect(await screen.queryByTestId("newsletter-success")).toBeNull();
   });
 
-  it("with promise rejection: shows error dialog", async () => {
-    // const { fetchSpy, user, subscribeButton } = setup();
-    // await user.type(emailInput, "some@email.com");
-    // fetchSpy.mockRejectedValueOnce(new Error());
-    // await user.click(subscribeButton);
-    // expect(await screen.getByTestId("error")).toBeVisible();
+  it("with promise rejection: does not show success text", async () => {
+    const { user, emailInput, subscribeButton, fetchSpy } = setup();
+    fetchSpy.mockRejectedValueOnce(new Error());
+    await user.type(emailInput, "some@email.com");
+
+    await user.click(subscribeButton);
+
+    expect(await screen.queryByTestId("newsletter-success")).toBeNull();
   });
 });
