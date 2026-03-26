@@ -15,22 +15,36 @@ import Image from "next/image";
 
 import IconHeader from "../text/IconHeader";
 import ErrorModal from "./ErrorModal";
+import CapWidget from "./CapWidget";
 
 const ContactForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
 
-  const [formState, setFormState] = useState<
-    "idle" | "success" | "error" | "loading"
-  >("idle");
+  const [capToken, setCapToken] = useState<string | null>(null);
+
+  const onCaptchaSuccess = (token: string) => {
+    setCapToken(token);
+  };
+
+  const [formState, setFormState] = useState({
+    success: false,
+    error: false,
+    loading: false,
+  });
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
-      setFormState("loading");
+      if (!capToken) return;
+
+      setFormState((prev) => ({ ...prev, loading: true }));
       const form = formRef.current;
       const data = new FormData(form!);
-      const body = JSON.stringify(Object.fromEntries(data.entries()));
+      const body = JSON.stringify({
+        ...Object.fromEntries(data.entries()),
+        capToken,
+      });
 
       const res = await fetch("/api/send", {
         method: "POST",
@@ -147,11 +161,12 @@ const ContactForm = () => {
                     required
                   />
                 </Box>
+                <CapWidget onVerified={onCaptchaSuccess} />
                 <Button
                   type="submit"
-                  className="bg-navy-600 hover:bg-navy-500 h-11"
-                  disabled={formState === "loading"}
-                  loading={formState === "loading"}
+                  className="bg-navy-600 hover:bg-navy-500 h-11 text-white disabled:opacity-55"
+                  disabled={formState.loading || !capToken}
+                  loading={formState.loading}
                 >
                   {formState === "loading" ? "Sending" : "Send message"}
                 </Button>
