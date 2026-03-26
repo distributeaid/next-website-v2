@@ -1,123 +1,118 @@
-import { afterEach, expect, it, describe, vi } from "vitest";
+import { afterEach, beforeEach, expect, it, describe, vi } from "vitest";
 import { render, screen, cleanup } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-
 import GetInvolved from "./GetInvolved";
 
 const setup = () => {
-  const fetchSpy = vi.spyOn(global, "fetch");
-
   render(<GetInvolved />);
 
   const user = userEvent.setup();
   const emailInput = screen.getByRole("textbox", {
     name: "Email",
   }) as HTMLInputElement;
-  const subscribeButton = screen.getByRole("button", { name: "Subscribe Now" });
+  const submitButton = screen.getByRole("button", { name: "Subscribe Now" });
 
-  const mockResolvedStatus = (status: number) => {
-    fetchSpy.mockResolvedValueOnce(new Response(null, { status }));
+  // Utility functions - consider separating these into a dedicated harness if
+  // test becomes more complex.
+  const setAllValidInputs = async () => {
+    await user.type(emailInput, "fish.crow@example.com");
   };
 
   return {
-    fetchSpy,
-    user,
     emailInput,
-    subscribeButton,
-    mockResolvedStatus,
+    setAllValidInputs,
+    submitButton,
+    user,
   };
 };
 
 afterEach(() => {
   vi.clearAllMocks(); // Reset all mocked calls between tests
+  vi.unstubAllGlobals();
   cleanup();
 });
 
-it("displays form by default", async () => {
-  setup();
+describe("calls the API correctly", () => {
+  beforeEach(() => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn((input: URL | RequestInfo, init?: RequestInit | undefined) => {
+        const res = new Response();
+        return Promise.resolve(res);
+      }),
+    );
+  });
+  describe("does not call post API when required field", () => {
+    it("email is empty", async () => {
+      const { user, submitButton, setAllValidInputs, emailInput } = setup();
 
-  expect(await screen.findByTestId("newsletter-form")).toBeVisible();
-});
+      await setAllValidInputs();
 
-describe("does not call signup handler when required field", () => {
-  it("email is empty", async () => {
-    const { user, subscribeButton, emailInput, fetchSpy } = setup();
+      await user.clear(emailInput);
+      await user.click(submitButton);
 
-    await user.clear(emailInput);
-    await user.click(subscribeButton);
+      expect(fetch).not.toHaveBeenCalled();
+    });
 
-    expect(fetchSpy).not.toHaveBeenCalled();
+    it("email is malformed", async () => {
+      const { user, submitButton, setAllValidInputs, emailInput } = setup();
+
+      await setAllValidInputs();
+
+      await user.clear(emailInput);
+      await user.type(emailInput, "bademail@");
+      await user.click(submitButton);
+
+      expect(fetch).not.toHaveBeenCalled();
+    });
   });
 
-  it("email is malformed", async () => {
-    const { user, subscribeButton, emailInput, fetchSpy } = setup();
+  describe("when all fields are populated correctly", () => {
+    it("sends form data to API", async () => {
+      const { emailInput, submitButton, user } = setup();
 
-    await user.type(emailInput, "bademail@");
-    await user.click(subscribeButton);
+      const email = "fish.crow@example.com";
 
-    expect(fetchSpy).not.toHaveBeenCalled();
-  });
-});
+      await user.type(emailInput, email);
+      await user.click(submitButton);
 
-describe("when all fields are populated correctly", () => {
-  it("sends form data to API", async () => {
-    const { user, emailInput, subscribeButton, fetchSpy } = setup();
-    const email = "maria.hill@gmail.com";
-
-    expect(await screen.findByTestId("newsletter-form")).toBeVisible();
-    await user.type(emailInput, email);
-    await user.click(subscribeButton);
-
-    expect(fetchSpy).toHaveBeenCalledOnce();
-    const [path, contents] = fetchSpy.mock.calls[0];
-    expect(path).toEqual("/api/newsletter");
-    expect(contents).toEqual({
-      body: `{"email":"${email}"}`,
-      method: "POST",
+      expect(fetch).toHaveBeenCalledOnce();
+      expect(fetch).toHaveBeenCalledWith("/api/newsletter", {
+        method: "POST",
+        body: JSON.stringify({ email: email }),
+      });
     });
   });
 });
 
-describe("on signup success", () => {
+describe("on API success", () => {
+  beforeEach(() =>
+    vi.stubGlobal(
+      "fetch",
+      vi.fn((input: URL | RequestInfo, init?: RequestInit | undefined) => {
+        // 200 is the default but explicit is better than implicit (wrong language?)
+        const res = new Response(null, { status: 200 });
+        return Promise.resolve(res);
+      }),
+    ),
+  );
   it("shows success text", async () => {
-    const { user, emailInput, subscribeButton, mockResolvedStatus } = setup();
-    await user.type(emailInput, "some@email.com");
-    mockResolvedStatus(200);
+    const { user, submitButton, setAllValidInputs } = setup();
+    await setAllValidInputs();
 
-    await user.click(subscribeButton);
+    await user.click(submitButton);
 
-    expect(await screen.getByTestId("newsletter-success")).toBeVisible();
+    expect(await screen.getByText("Success!")).toBeVisible();
   });
 
   it("hides the form", async () => {
-    const { user, emailInput, subscribeButton, mockResolvedStatus } = setup();
-    await user.type(emailInput, "some@email.com");
-    mockResolvedStatus(200);
+    const { user, submitButton, setAllValidInputs } = setup();
+    await setAllValidInputs();
 
-    await user.click(subscribeButton);
+    await user.click(submitButton);
 
-    expect(await screen.queryByTestId("newsletter-form")).toBeNull();
-  });
-});
-
-describe("on API error", () => {
-  it("with error response: does not show success text", async () => {
-    const { user, emailInput, subscribeButton, mockResolvedStatus } = setup();
-    await user.type(emailInput, "some@email.com");
-    mockResolvedStatus(404);
-
-    await user.click(subscribeButton);
-
-    expect(await screen.queryByTestId("newsletter-success")).toBeNull();
-  });
-
-  it("with promise rejection: does not show success text", async () => {
-    const { user, emailInput, subscribeButton, fetchSpy } = setup();
-    fetchSpy.mockRejectedValueOnce(new Error());
-    await user.type(emailInput, "some@email.com");
-
-    await user.click(subscribeButton);
-
-    expect(await screen.queryByTestId("newsletter-success")).toBeNull();
+    expect(
+      await screen.queryByRole("button", { name: "Subscribe Now" }),
+    ).toBeNull();
   });
 });
