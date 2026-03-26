@@ -86,13 +86,6 @@ const CampaignCard: FC<Props> = forwardRef<HTMLDivElement, Props>(
                   </Link>
                 </Button>
               </Box>
-              <Box px="4" py="2" asChild>
-                <Button variant="soft" className="h-[44px]" asChild>
-                  <Link href={moreLink} size="3" className="no-underline">
-                    More info
-                  </Link>
-                </Button>
-              </Box>
             </Flex>
           </Flex>
         </Card>
