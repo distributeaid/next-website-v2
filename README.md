@@ -202,3 +202,7 @@ To deploy the website on the staging or production server:
    exit
    exit
    ```
+   
+## License
+
+This project is licensed under [AGPL](LICENSE.md).
