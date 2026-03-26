@@ -33,19 +33,6 @@ export const HrtKitsInNumbers: FC = () => {
         </HRTNumbersCard>
         <Flex height="360px" justify="between" direction="column">
           <HRTNumbersCard
-            amount={values.producedKits}
-            background="navy-300"
-            color="navy-800"
-            direction="row"
-            icon="/images/icons/icon-medical-kit-blue.svg"
-            iconAlt="medical kit"
-            maxWidth="350px"
-          >
-            <Text size="6" weight="light">
-              KITS PRODUCED SO FAR
-            </Text>
-          </HRTNumbersCard>
-          <HRTNumbersCard
             amount={values.saved}
             background="navy-800"
             color="white"
@@ -57,6 +44,19 @@ export const HrtKitsInNumbers: FC = () => {
           >
             <Text size="4" weight="light">
               SAVED FOR THE TRANS COMMUNITY
+            </Text>
+          </HRTNumbersCard>
+          <HRTNumbersCard
+            amount={values.itemsSourced}
+            background="navy-300"
+            color="navy-800"
+            direction="row"
+            icon="/images/icons/icon-medical-kit-blue.svg"
+            iconAlt="medical kit"
+            maxWidth="350px"
+          >
+            <Text size="6" weight="light">
+              ITEMS SOURCED
             </Text>
           </HRTNumbersCard>
         </Flex>

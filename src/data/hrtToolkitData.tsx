@@ -1,10 +1,10 @@
 import { Text } from "@radix-ui/themes";
 
 export const kitsInNumbersValues = {
-  partialKits: 969,
-  producedKits: 398330,
+  yearsSupported: 810,
   saved: 53913,
-  yearsSupported: 810
+  itemsSourced: 548634,
+  partialKits: 969,
 };
 
 export const faqs = [
