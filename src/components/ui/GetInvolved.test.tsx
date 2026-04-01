@@ -1,4 +1,3 @@
-import "@testing-library/jest-dom/vitest";
 import { afterEach, beforeEach, expect, it, describe, vi } from "vitest";
 import { render, screen, cleanup } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
