@@ -40,8 +40,17 @@ const NavBar = () => {
             >
               {/*DA logo */}
               <NavigationMenu.Item className="z-40">
-                <NavigationMenu.Link href="/" target="" rel="noreferrer">
-                  <LogoMark width="50" height={(60 / 70) * 50} />
+                <NavigationMenu.Link
+                  href="/"
+                  target=""
+                  rel="noreferrer"
+                  aria-label="Distribute Aid — go to homepage"
+                >
+                  <LogoMark
+                    width="50"
+                    height={(60 / 70) * 50}
+                    aria-hidden="true"
+                  />
                 </NavigationMenu.Link>
               </NavigationMenu.Item>
 
@@ -52,7 +61,10 @@ const NavBar = () => {
                 gapX={"2"}
               >
                 {SOCIAL_LINKS.map((social) => (
-                  <NavigationMenu.Item key={social.name}>
+                  <NavigationMenu.Item
+                    key={social.name}
+                    aria-label={social.ariaLabel}
+                  >
                     <NavigationMenu.Link href={social.link} target="_blank">
                       <Image
                         src={`/images/icons/icon-social-${social.name}.svg`}
