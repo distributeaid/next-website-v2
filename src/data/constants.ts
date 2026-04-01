@@ -333,7 +333,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
         link: "/donate",
       },
       {
-        name: "Team",
+        name: Messages.TEAM_PAGE_TITLE,
         link: "/team",
       },
       {
