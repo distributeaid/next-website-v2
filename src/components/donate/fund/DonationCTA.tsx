@@ -49,7 +49,7 @@ const DonationCTA = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Donate with Paypal
+                  Donate with PayPal
                 </Link>
               </Button>
             </Box>
