@@ -40,8 +40,17 @@ const NavBar = () => {
             >
               {/*DA logo */}
               <NavigationMenu.Item className="z-40">
-                <NavigationMenu.Link href="/" target="" rel="noreferrer" aria-label="Distribute Aid — go to homepage">
-                  <LogoMark width="50" height={(60 / 70) * 50} aria-hidden="true" />
+                <NavigationMenu.Link
+                  href="/"
+                  target=""
+                  rel="noreferrer"
+                  aria-label="Distribute Aid — go to homepage"
+                >
+                  <LogoMark
+                    width="50"
+                    height={(60 / 70) * 50}
+                    aria-hidden="true"
+                  />
                 </NavigationMenu.Link>
               </NavigationMenu.Item>
 
