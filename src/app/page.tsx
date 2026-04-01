@@ -9,7 +9,7 @@ import {
 import HeroSection from "@/components/ui/HeroSection";
 const Home = () => {
   return (
-    <main>
+    <main id="main-content">
       <HeroSection
         heading="Your Mutual Aid Logistics
         Experts"
