@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Box, Heading, Section } from "@radix-ui/themes";
-import { TeamCard, TeampCardProp } from "./TeamCard";
-import { TeamMember } from "@/data/team";
+import { TeamCard, TeamCardProps } from "./TeamCard";
+import { TeamMember } from "@/utils/strapi/types";
 
 export type TeamMembersProps = {
   people: TeamMember[];
