@@ -19,15 +19,5 @@ async function strapiGet(urlPath: string): Promise<any> {
 export async function getTeam(): Promise<TeamMember[]> {
   const response = await strapiGet("members?populate=*");
   const jsonData = await response.json();
-  return processTeamData(jsonData.data);
-}
-
-function processTeamData(data: TeamMember[]) {
-  const { STRAPI_URL } = process.env;
-
-  data.forEach((teamMember: TeamMember) => {
-    teamMember.Profile.url = `${STRAPI_URL}${teamMember.Profile.url}`;
-  });
-
-  return data;
+  return jsonData.data;
 }
