@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import "@testing-library/jest-dom/vitest";
 import { afterEach, expect, it, describe, vi } from "vitest";
 import { render, screen, cleanup } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
@@ -12,7 +11,6 @@ const setup = () => {
 
   vi.mock("./CapWidget", () => ({
     default: ({ onVerified }: { onVerified: (t: string) => void }) => {
-      // mockInput(props);
       // eslint-disable-next-line react-hooks/rules-of-hooks
       useEffect(() => {
         // This seems to get called no matter what, which is fine for now
