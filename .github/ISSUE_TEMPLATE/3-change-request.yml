@@ -43,7 +43,7 @@ body:
   - type: textarea
     id: area-of-website
     attributes:
-      label: "What parts of the site does the request invovle?"
+      label: "What parts of the site does the request involve?"
       description: "If the request is for a change to an existing page, link to that page and include a below. If the request is for a new page, indicate that."
     validations:
       required: true
