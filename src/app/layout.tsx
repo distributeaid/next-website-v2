@@ -55,6 +55,12 @@ export default function RootLayout({
         className={`${yantramanav.variable} ${roboto.variable} ${permanentMarker.variable}`}
       >
         <Theme accentColor="blue">
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:z-50 focus:absolute focus:left-2 focus:top-20 focus:px-4 focus:py-2 focus:bg-white focus:text-dark-blue focus:rounded-lg focus:outline-none focus:ring-4 focus:ring-navy-700 focus:font-medium"
+          >
+            Skip to main content
+          </a>
           <NavBar />
           <div className="pt-20">{children}</div>
           <GetInvolved />
