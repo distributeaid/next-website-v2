@@ -108,7 +108,7 @@ const HeroSection = ({
                       target="_blank"
                       href={siteSettings.donate.byPaypal}
                     >
-                      Donate with Paypal
+                      Donate with PayPal
                     </Link>
                   </Button>
                 </Box>
