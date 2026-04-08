@@ -74,7 +74,7 @@ const DonationCTA = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Use a Debit/Credit card
+                  Use a Debit/Credit Card
                 </Link>
               </Button>
             </Box>
