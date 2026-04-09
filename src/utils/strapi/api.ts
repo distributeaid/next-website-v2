@@ -6,13 +6,19 @@ import { TeamMember } from "./types";
 // as defined in https://github.com/distributeaid/aggregated-public-information
 async function strapiGet(urlPath: string): Promise<any> {
   const { STRAPI_URL, STRAPI_KEY } = process.env;
-  console.log(STRAPI_URL);
-  return await fetch(`${STRAPI_URL}/api/${urlPath}`, {
+
+  const url = `${STRAPI_URL}/api/${urlPath}`;
+  const headers = {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${STRAPI_KEY}`,
+  };
+
+  console.log("URL: ", url);
+  console.log("HEADERS: ", headers);
+
+  return await fetch(url, {
     cache: "force-cache",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${STRAPI_KEY}`,
-    },
+    headers,
   });
 }
 
