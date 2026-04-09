@@ -6,6 +6,7 @@ import { TeamMember } from "./types";
 // as defined in https://github.com/distributeaid/aggregated-public-information
 async function strapiGet(urlPath: string): Promise<any> {
   const { STRAPI_URL, STRAPI_KEY } = process.env;
+  console.log(STRAPI_URL);
   return await fetch(`${STRAPI_URL}/api/${urlPath}`, {
     cache: "force-cache",
     headers: {
@@ -18,6 +19,8 @@ async function strapiGet(urlPath: string): Promise<any> {
 // Pulls a list of team members from the strapi API
 export async function getTeam(): Promise<TeamMember[]> {
   const response = await strapiGet("members?populate=*");
+  console.log("STATUS: ", response.status);
   const jsonData = await response.json();
+  console.log("DATA: ", jsonData);
   return jsonData.data;
 }
