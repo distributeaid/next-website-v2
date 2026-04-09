@@ -22,9 +22,7 @@ async function strapiGet(
   url.pathname = `/api/${urlPath}`;
 
   if (query) {
-    console.log(query);
     for (let [key, value] of Object.entries(query)) {
-      console.log(key);
       url.searchParams.append(key, value);
     }
   }
@@ -33,9 +31,6 @@ async function strapiGet(
     "Content-Type": "application/json",
     Authorization: `Bearer ${STRAPI_KEY}`,
   };
-
-  console.log("URL: ", url);
-  console.log("HEADERS: ", headers);
 
   return await fetch(url, {
     cache: "no-cache",
@@ -47,6 +42,5 @@ async function strapiGet(
 export async function getTeam(): Promise<TeamMember[]> {
   const response = await strapiGet("members", { populate: "*" });
   const jsonData = await response.json();
-  console.log("DATA: ", jsonData);
   return jsonData.data;
 }
