@@ -19,7 +19,7 @@ async function strapiGet(urlPath: string): Promise<any> {
 // Pulls a list of team members from the strapi API
 export async function getTeam(): Promise<TeamMember[]> {
   const response = await strapiGet("members?populate=*");
-  console.log("STATUS: ", response.status);
+  console.log("RESPONSE: ", response.status);
   const jsonData = await response.json();
   console.log("DATA: ", jsonData);
   return jsonData.data;
