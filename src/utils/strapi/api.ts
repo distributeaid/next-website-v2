@@ -38,7 +38,7 @@ async function strapiGet(
   console.log("HEADERS: ", headers);
 
   return await fetch(url, {
-    cache: "force-cache",
+    cache: "no-cache",
     headers,
   });
 }
