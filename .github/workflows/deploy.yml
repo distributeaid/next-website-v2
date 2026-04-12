@@ -28,5 +28,5 @@ jobs:
           repo_name: next-website-v2
           infra_checkout_token: ${{ secrets.INFRA_CHECKOUT_TOKEN }}
           upcloud_token: ${{ secrets.UPCLOUD_TOKEN }}
-          ansible_ssh_private_key: ${{ (inputs.environment || 'staging') == 'staging' && secrets.ANSIBLE_API_STAGING_SSH_PRIVATE_KEY || secrets.ANSIBLE_API_PROD_SSH_PRIVATE_KEY }}
+          ansible_ssh_private_key: ${{ (inputs.environment || 'staging') == 'staging' && secrets.ANSIBLE_NEXT_WEBSITE_STAGING_SSH_PRIVATE_KEY || secrets.ANSIBLE_NEXT_WEBSITE_PROD_SSH_PRIVATE_KEY }}
           sops_age_key: ${{ (inputs.environment || 'staging') == 'staging' && secrets.SOPS_STAGING_AGE_KEY || secrets.SOPS_PROD_AGE_KEY }}
