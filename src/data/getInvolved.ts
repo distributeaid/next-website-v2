@@ -4,7 +4,7 @@ import VolunteerTech from "../../public/images/VolunteerTech";
 
 export const getInvolvedLinks = [
   {
-    label: "Give Money",
+    label: "Donate Money",
     href: "/donate",
     bgColor: "#5AC597",
     Icon: GiveMoney,

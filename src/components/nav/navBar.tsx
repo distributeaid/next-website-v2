@@ -67,7 +67,7 @@ const NavBar = () => {
                   >
                     <NavigationMenu.Link href={social.link} target="_blank">
                       <Image
-                        src={`/images/icons/icon-social-${social.name}.svg`}
+                        src={`/images/icons/icon-social-${social.name.toLowerCase()}.svg`}
                         alt={social.name}
                         width={30}
                         height={30}

@@ -21,7 +21,7 @@ export const TeamCard: FC<TeamCardProps> = ({ name, title, photo }) => (
         width={250}
         height={250}
         alt={`Headshot of ${name}`}
-        className="rounded-md h-[250px] min-w-[250px] aspect-square"
+        className="rounded-md h-[250px] min-w-[250px] aspect-square object-cover"
       />
     </Flex>
     <Flex
