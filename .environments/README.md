@@ -81,10 +81,10 @@ age-keygen -o "$env:AppData\sops\age\keys.txt"
              - age1<new-key-here>
    ```
 
-2. Re-encrypt all secrets files:
+2. Re-encrypt all secrets files (run this command from within the .environments folder):
 
    ```sh
-   sops updatekeys .environments/staging.secrets.enc.yaml
+   sops updatekeys staging.secrets.enc.yaml
    ```
 
 3. Commit the updated `.sops.yaml` and re-encrypted files.
