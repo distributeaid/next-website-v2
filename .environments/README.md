@@ -33,10 +33,12 @@ winget install --id=FiloSottile.age -e
 
 Store your age private key at:
 
-| OS            | Path                          |
-| ------------- | ----------------------------- |
-| macOS / Linux | `~/.config/sops/age/keys.txt` |
-| Windows       | `%AppData%\sops\age\keys.txt` |
+| OS      | Path                                                 |
+| ------- | ---------------------------------------------------- |
+| macOS   | `~/Library/Application Support/sops/age/keys.txt`    |
+| Linux   | `~/.config/sops/age/keys.txt`                        |
+| Windows | `%AppData%\sops\age\keys.txt`                        |
+
 
 ## Granting access
 
@@ -85,9 +87,17 @@ SOPS decrypts the file, opens it in your editor, and re-encrypts on save. Rememb
 
 Generate an age key pair and share the public key with someone who already has access:
 
-**macOS / Linux**
+**macOS**
 
 ```sh
+mkdir -p "$HOME/Library/Application Support/sops/age"
+age-keygen -o "$HOME/Library/Application Support/sops/age/keys.txt"
+```
+
+**Linux**
+
+```sh
+mkdir -p ~/.config/sops/age
 age-keygen -o ~/.config/sops/age/keys.txt
 ```
 
