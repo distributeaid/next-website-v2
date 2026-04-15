@@ -16,12 +16,12 @@ import { SectionHeading } from "../ui/SectionWithTitle";
 const WhereWeWork = () => {
   const mapKey: MapKey[] = [
     {
-      label: "Receiving Aid",
-      color: "bg-key-dark-blue",
+      label: "Sending Aid From",
+      color: "bg-key-light-blue",
     },
     {
-      label: "Sending Aid",
-      color: "bg-key-light-blue",
+      label: "Receiving Aid",
+      color: "bg-key-dark-blue",
     },
     {
       label: "Both",
@@ -34,7 +34,7 @@ const WhereWeWork = () => {
   return (
     <Section className="bg-slate-100 p-12" aria-labelledby={headingId}>
       <Box mb="9">
-        <SectionHeading id={headingId}>Where We Work</SectionHeading>
+        <SectionHeading id={headingId}>Global Aid Network</SectionHeading>
         <Flex gap="6" justify="center" mt="5" asChild>
           <ul>
             {mapKey.map(({ label, color }) => (
