@@ -38,32 +38,6 @@ Store your age private key at:
 | macOS / Linux | `~/.config/sops/age/keys.txt` |
 | Windows       | `%AppData%\sops\age\keys.txt` |
 
-## Editing secrets
-
-```sh
-sops .environments/staging.secrets.enc.yaml
-```
-
-SOPS decrypts the file, opens it in your editor, and re-encrypts on save.
-
-## Getting access
-
-Generate an age key pair and share the public key with someone who already has access:
-
-**macOS / Linux**
-
-```sh
-age-keygen -o ~/.config/sops/age/keys.txt
-```
-
-**Windows** (PowerShell)
-
-```powershell
-age-keygen -o "$env:AppData\sops\age\keys.txt"
-```
-
-`age-keygen` prints your public key (`age1...`) to stdout. Share that value, not the file.
-
 ## Granting access
 
 1. Add the new public key to `.sops.yaml` under the `age` list in the relevant `key_groups` entry:
@@ -98,3 +72,31 @@ age-keygen -o "$env:AppData\sops\age\keys.txt"
    ```
 3. Commit the changes.
 4. Rotate any secrets they had access to, as re-encrypting does not invalidate what was previously decrypted.
+
+## Editing secrets
+
+```sh
+sops staging.secrets.enc.yaml
+```
+
+SOPS decrypts the file, opens it in your editor, and re-encrypts on save. Remember to run the command from within the .environments folder!
+
+## Getting access
+
+Generate an age key pair and share the public key with someone who already has access:
+
+**macOS / Linux**
+
+```sh
+age-keygen -o ~/.config/sops/age/keys.txt
+```
+
+**Windows** (PowerShell)
+
+```powershell
+age-keygen -o "$env:AppData\sops\age\keys.txt"
+```
+
+`age-keygen` prints your public key (`age1...`) to stdout. Share that value, not the file.
+
+
