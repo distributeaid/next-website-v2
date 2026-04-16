@@ -190,11 +190,6 @@ const HowWeHelp = () => {
         {/* Grid Section */}
 
         <Flex
-          columns={{
-            initial: "1",
-            md: "2",
-            lg: "3",
-          }}
           width={{
             initial: "200px",
             md: "100%",
