@@ -188,27 +188,32 @@ const HowWeHelp = () => {
           />
         </Flex>
         {/* Grid Section */}
-        <Flex justify="center" width="100%">
-          <Grid
-            columns={{
-              initial: "1",
-              md: "2",
-              lg: "3",
-            }}
-            width="100%"
-            gap={{ initial: "5", md: "7", lg: "8" }}
-            asChild
-          >
-            <ul aria-label="How We Help Columns">
-              {items.map((column, idx) => (
-                <li key={idx} aria-label={`How We Help Column ${idx + 1}`}>
-                  <Flex justify="center" width="100%">
-                    <GridColumn column={column} columnIndex={idx} />
-                  </Flex>
-                </li>
-              ))}
-            </ul>
-          </Grid>
+
+        <Flex
+          columns={{
+            initial: "1",
+            md: "2",
+            lg: "3",
+          }}
+          width={{
+            initial: "200px",
+            md: "100%",
+          }}
+          gap={{ initial: "5", md: "7", lg: "8" }}
+          direction={{
+            initial: "column",
+            md: "row",
+          }}
+          className="justify-around mx-auto"
+          asChild
+        >
+          <ul aria-label="How We Help Columns">
+            {items.map((column, idx) => (
+              <li key={idx} aria-label={`How We Help Column ${idx + 1}`}>
+                <GridColumn column={column} columnIndex={idx} />
+              </li>
+            ))}
+          </ul>
         </Flex>
       </Section>
     </Box>
