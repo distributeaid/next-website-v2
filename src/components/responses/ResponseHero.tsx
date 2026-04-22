@@ -1,7 +1,12 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import { Container, Heading, Section, Text } from "@radix-ui/themes";
 
-export const HrtToolkitHero: FC = () => (
+interface ResponseHeroProps {
+  title: string;
+  children: ReactNode;
+}
+
+export const ResponseHero: FC<ResponseHeroProps> = ({title, children}) => (
   <>
     <Section position="relative" width="100%" size="1" className="bg-navy-900">
       <Container>
@@ -12,7 +17,7 @@ export const HrtToolkitHero: FC = () => (
           align="center"
           className="text-white"
         >
-          HRT — Harm Reduction Toolkit
+          {title}
         </Heading>
       </Container>
     </Section>
@@ -20,9 +25,7 @@ export const HrtToolkitHero: FC = () => (
     <Section>
       <Container size="3">
         <Text as="p" size="5" align="center" className="text-navy-800">
-          We source harm reduction kits with medical equipment that our partners
-          then distribute to trans people who take injection-based gender
-          affirming hormone therapy.
+          {children}
         </Text>
       </Container>
     </Section>
