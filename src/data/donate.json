@@ -1,73 +1,32 @@
 [
   {
-    "title": "Ukraine Response Project",
-    "percentage": 78,
-    "goal_price": 2000,
-    "donate_link": "https://www.omprakash.org/global/distribute-aid/donate",
-    "more_link": "/donate/ukraine-response",
-    "img": "/images/photos/photo-ukr-donation-02.webp",
-    "img_link": "https://distributeaid.org/donate/european-refugee-relief-hero",
-    "slug": "ukraine-response",
-    "description": "Since Russia invaded Ukraine in February 2022, Distribute Aid has built a Ukraine Response Project to support emergency relief groups in Ukraine and the bordering regions including Poland, Moldova, and Romania.",
-    "done_column_left": "Coordinated 10 end-to-end shipments of requested critical aid to groups in Moldova and Ukraine.",
-    "done_column_right": "Connected aid groups and put them into contact with each other to collaborate and organize efficient resource sharing such as: \n - Sharing transport options \n - Sharing of material aid \n - Sharing storage space",
-    "gallery_images": [
-      "/images/photos/photo-ukr-response-02.png",
-      "/images/photos/photo-ukr-response-03.png",
-      "/images/photos/photo-ukr-response-04.png",
-      "/images/photos/photo-ukr-response-05.png"
-    ],
-    "do_CTA_text": "Your donation will allow us to continue to provide support to Ukraine relief responses, such as: \n\n Supplying groups with extensive guides so as to facilitate the export and import of critical aid across different regions. \n - Expanding networks and connections to increase the collective impact and capacity of operations. \n - Further our understanding of the real situation on the ground, and create solutions to any inefficiencies that may exist. \n - Increase our data collection on what the needs of aid groups are, and adapt the supply chain to fit the needs accordingly.",
-    "do_CTA_image": "/images/photos/photo-ukr-response-01.png"
+    "title": "HRT Harm Reduction Toolkit",
+    "raised": 142054.24,
+    "goal_price": 150000,
+    "donate_link": "https://www.omprakash.org/global/distribute-aid/crowdfund/hrt---harm-reduction-toolkit",
+    "more_link": "",
+    "img": "/images/photos/e7211f53-dcb3-4961-bc34-929547aea311.webp",
+    "img_link": "",
+    "slug": "hrt-harm-reduction"
   },
   {
-    "title": "Sustainable Supply Chains",
-    "percentage": 28,
-    "goal_price": 1000,
-    "donate_link": "https://www.omprakash.org/global/distribute-aid/donate",
-    "more_link": "/donate/sustainable-supply-chains",
-    "img": "/images/photos/photo-210000-000001-afg-safe-haven-01.webp",
-    "img_link": "https://distributeaid.org/donate/sustainable-supply-chains",
-    "slug": "sustainable-supply-chains"
-  },
-  {
-    "title": "Humanitarian Logistics",
-    "percentage": 28,
-    "goal_price": 2000,
-    "donate_link": "https://www.omprakash.org/global/distribute-aid/donate",
-    "more_link": "/donate/humanitarian-logistics",
-    "img": "/images/photos/photo-shipping-containers-crains.webp",
-    "img_link": "https://distributeaid.org/donate/humanitarian-logistics",
-    "slug": "humanitarian-logistics"
-  },
-  {
-    "title": "US Disaster & Refugee Relief",
-    "percentage": 78,
-    "goal_price": 1000,
-    "donate_link": "https://www.omprakash.org/global/distribute-aid/donate",
-    "more_link": "/donate/us-disaster-relief",
-    "img": "/images/photos/photo-usa-disaster-relief.webp",
-    "img_link": "https://distributeaid.org/donate/us-disaster-relief",
+    "title": "US Disaster Relief",
+    "raised": 10250,
+    "goal_price": 25000,
+    "donate_link": "https://www.omprakash.org/global/distribute-aid/crowdfund/us-disaster-relief",
+    "more_link": "",
+    "img": "/images/photos/bedfe5f5-40c2-4416-9199-7d7a279c3d4b.webp",
+    "img_link": "",
     "slug": "us-disaster-relief"
   },
   {
-    "title": "Tech 4 Good",
-    "percentage": 78,
-    "goal_price": 2500,
-    "donate_link": "https://www.omprakash.org/global/distribute-aid/donate",
-    "more_link": "/donate/tech-for-good",
-    "img": "/images/photos/photo-tech-screen-computer-code.webp",
-    "img_link": "https://distributeaid.org/donate/tech-for-good",
-    "slug": "tech-for-good"
-  },
-  {
-    "title": "Grassroots Refugee Relief",
-    "percentage": 78,
-    "goal_price": 3500,
-    "donate_link": "https://www.omprakash.org/global/distribute-aid/donate",
-    "more_link": "/donate/grassroots-refugee-relief",
-    "img": "/images/photos/photo-refugee-camp.webp",
-    "img_link": "https://distributeaid.org/donate/grassroots-refugee-relief",
-    "slug": "grassroots-refugee-relief"
+    "title": "Send Aid to the Levant",
+    "raised": 11375.56,
+    "goal_price": 25000,
+    "donate_link": "https://www.omprakash.org/global/distribute-aid/crowdfund/send-aid-to-the-levant",
+    "more_link": "",
+    "img": "/images/photos/0636b318-b9d2-45b5-b2f1-61bf8ab76ee3.webp",
+    "img_link": "",
+    "slug": "aid-to-levant"
   }
 ]

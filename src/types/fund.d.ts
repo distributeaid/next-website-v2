@@ -3,7 +3,7 @@ export interface Fund {
   img?: string;
   img_link?: string;
   title?: string;
-  percentage?: number;
+  raised?: number;
   goal_price?: number;
   donate_link?: string;
   more_link?: string;
