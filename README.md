@@ -203,6 +203,15 @@ To deploy the website on the staging or production server:
    exit
    ```
 
+## Testing
+
+### Client-side
+
+- [Guide](https://medium.com/@kaanfurkanc/unit-testing-best-practices-3a8b0ddd88b5) to testing best practices
+- Prefer the [setup function](https://v17.angular.io/guide/testing-services#testing-without-beforeeach) pattern over use of beforeEach with semi-local variables, which can leak state between tests
+- When possible, interact with the DOM using queries in the order laid out in [these docs](https://testing-library.com/docs/queries/about/#priority). Try to avoid queries lower on the list. 
+  * Caveat: sometimes it makes more sense to use a testId as a handle to access a UI element that would be otherwise awkward to locate. For instance, if you display success text after an action, those can be difficult to locate semantically, and duplicating the text content into the test just makes the test more fragile. Using a testId in this case is a reasonable choice.
+
 ## License
 
 This project is licensed under [AGPL](LICENSE.md).
