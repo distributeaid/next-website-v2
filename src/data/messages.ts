@@ -13,6 +13,8 @@ export const CONTACT_US_PAGE_TITLE = "Contact Us";
 
 export const RESOURCES_PAGE_TITLE = "Resources";
 
+export const TEAM_PAGE_TITLE = "Team";
+
 export const TECH_PAGE_TITLE = "Tech";
 
 export const DONATE_PAGE_TITLE = "Donate";

@@ -9,9 +9,7 @@
     "byOmprakash": "https://www.omprakash.org/global/distribute-aid/donate",
     "byPaypal": "https://www.paypal.com/donate/?hosted_button_id=VCREWCLA6WTB4",
     "byBankTransfer": {
-      "emailSupport": "hello@distributeaid.org",
-      "IBAN": "BE72 9672 1338 5616",
-      "BIC": "TRWIBEB1XXX"
+      "emailSupport": "hello@distributeaid.org"
     }
   }
 }

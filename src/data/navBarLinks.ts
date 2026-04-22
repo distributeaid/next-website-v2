@@ -16,6 +16,10 @@ export const links = [
         url: "/about-us",
       },
       {
+        title: Messages.TEAM_PAGE_TITLE,
+        url: "/team",
+      },
+      {
         title: Messages.CONTACT_US_PAGE_TITLE,
         url: "/contact-us",
       },

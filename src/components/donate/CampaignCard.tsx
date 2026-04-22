@@ -21,7 +21,6 @@ type Props = {
   goal: number | undefined;
   donateLink: string | undefined;
   moreLink: string | undefined;
-  [key: string]: any;
 };
 
 // enable RadixUI's asChild functionality for callig code
@@ -83,13 +82,6 @@ const CampaignCard: FC<Props> = forwardRef<HTMLDivElement, Props>(
                 >
                   <Link href={donateLink} size="3">
                     Donate now
-                  </Link>
-                </Button>
-              </Box>
-              <Box px="4" py="2" asChild>
-                <Button variant="soft" className="h-[44px]" asChild>
-                  <Link href={moreLink} size="3" className="no-underline">
-                    More info
                   </Link>
                 </Button>
               </Box>

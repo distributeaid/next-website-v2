@@ -99,15 +99,17 @@ const Footer = () => {
             </Box>
           </Flex>
 
-          <Box display={{ initial: "none", sm: "block" }}>
-            <Text>
-              Distribute Aid is a grassroots-to-grassroots humanitarian aid
-              organization. Founded in 2019, we coordinate relief shipments and
-              manage logistics for disaster response efforts around the world.
-              Our open-source tools and a committed team of volunteers allow us
-              to deliver more aid for less money, while also minimizing waste
-              and emissions.
-            </Text>
+          <Box width={"fit-content"}>
+            <a
+              aria-label="Distribute Aid"
+              href="https://app.candid.org/profile/16537426/distribute-aid/?pkId=21cd7735-e72c-4c49-9924-58521ccf1eef"
+              target="_blank"
+            >
+              <img
+                alt="Candid Silver Seal of Transparency widget"
+                src="https://widgets.guidestar.org/prod/v1/pdp/transparency-seal/16537426/svg"
+              />{" "}
+            </a>
           </Box>
           <Box className="max-xl:hidden">
             <FooterLinks />
@@ -191,6 +193,7 @@ const Footer = () => {
                     key={social.name}
                     target="_blank"
                     className="hover:!bg-navy-500 hover:!text-white"
+                    aria-label={social.ariaLabel}
                     style={{
                       ...buttonStyle,
                       borderRadius: "100%",

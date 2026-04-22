@@ -108,7 +108,7 @@ const HeroSection = ({
                       target="_blank"
                       href={siteSettings.donate.byPaypal}
                     >
-                      Donate with Paypal
+                      Donate with PayPal
                     </Link>
                   </Button>
                 </Box>
@@ -123,7 +123,7 @@ const HeroSection = ({
                       target="_blank"
                       href={siteSettings.donate.byOmprakash}
                     >
-                      Use a Debit/Credit card
+                      Use a Debit/Credit Card
                     </Link>
                   </Button>
                 </Box>

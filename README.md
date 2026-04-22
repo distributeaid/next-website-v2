@@ -1,5 +1,3 @@
-# README
-
 This repository contains the scaffolding for DA's new website, powered by Next.js, TypeScript & Strapi. For most information about contributing to DA (e.g. our dev process and asking for help), please refer first to the [general contributing guide](https://github.com/distributeaid/docs/blob/193d6eaaedb5b9e453f97ae15619d07e6b1e7ba1/how-to-DA/contributing.md). This guide contains other information specific to contributing to this repo.
 
 ## Table of Contents
@@ -10,6 +8,9 @@ This repository contains the scaffolding for DA's new website, powered by Next.j
 - [Coding Conventions / Best Practices](#coding-conventions--best-practices)
 - [Project Structure](#project-structure)
 - [Running Checks](#running-checks)
+- [Server Management](#server-management)
+  - [Adding a New Admin User](#adding-a-new-admin-user)
+  - [Deploying the Website](#deploying-the-website)
 
 ## Technologies Used
 
@@ -57,6 +58,11 @@ yarn dev
 
 3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
    The page auto-updates as you edit the file.
+
+## Environment variables
+
+In order to exercise local code using custom environment variables, you'll need to
+add an `.env.yarn` file at the project root containing the relevant variables.
 
 ## Coding Conventions / Best Practices
 
@@ -106,3 +112,97 @@ To run tests:
 ```bash
 yarn test
 ```
+
+## Server Management
+
+### Adding a New Admin User
+
+To add a new admin user to one of the webservers:
+
+1. SSH into the server
+
+   ```bash
+   ssh your-username@server-address
+   ```
+
+2. Add new admin
+
+   ```bash
+   sudo adduser new-username
+   sudo usermod -aG sudo new-username
+   ```
+
+3. Confirm it works
+
+   ```bash
+    id new-username
+   ```
+
+4. Add to AllowUsers setting for ssh access
+
+   ```bash
+   sudo vim /etc/ssh/sshd_config
+   sudo systemctl reload ssh
+   ```
+
+5. Add their public ssh key
+
+   ```bash
+   sudo su - new-username
+   mkdir -p ~/.ssh && chmod 700 ~/.ssh && touch ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys
+   vim ./.ssh/authorized_keys
+   exit
+   ```
+
+6. (Optional) log out of the server
+
+   ```bash
+   exit
+   ```
+
+### Deploying the Website
+
+To deploy the website on the staging or production server:
+
+1. SSH into the server
+
+   ```bash
+   ssh your-username@server-address
+   ```
+
+2. Change to the deploy user
+
+   ```bash
+   sudo su - deploy
+   ```
+
+3. Update the relevant branch
+
+   ```bash
+   cd ./next-website-v2/
+   git branch
+   git checkout main # or the branch you want
+   git pull
+   yarn install
+   ```
+
+4. Build and deploy the site
+
+   ```bash
+   yarn build
+   pm2 list
+   pm2 restart 0 # or id of instance you want to restart
+   ```
+
+5. Visit the site to make sure it works.
+
+6. Log out of the deploy user, and optionally the server
+
+   ```bash
+   exit
+   exit
+   ```
+
+## License
+
+This project is licensed under [AGPL](LICENSE.md).

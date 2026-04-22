@@ -1,7 +1,10 @@
 export function getBaseURL(): URL {
   // HACK: made prod build
   //  return new URL('/', window.location.origin)
-  return new URL("/", "https://distributeaid.org");
+  return new URL(
+    "/",
+    process.env.NEXT_PUBLIC_BASE_URL ?? "https://distributeaid.org",
+  );
 }
 
 export function originsMatch(

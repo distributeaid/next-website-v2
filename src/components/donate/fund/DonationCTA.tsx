@@ -7,7 +7,7 @@ import BankInfoDialog from "../../ui/BankInfoDialog";
 const DonationCTA = () => {
   const { donate } = siteSettings;
   return (
-    <Box className="bg-red-50">
+    <Box style={{ background: "#DFCDE8" }}>
       <Container
         pb={{ initial: "6", sm: "36px", md: "40px" }}
         px="4"
@@ -31,7 +31,7 @@ const DonationCTA = () => {
         >
           <Flex direction="column" gap="3" align="center">
             <Image
-              src="/images/logos/logo-paypal.svg"
+              src="/images/donate/paypal.svg"
               alt={""}
               height={0}
               width={0}
@@ -49,14 +49,14 @@ const DonationCTA = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Donate with Paypal
+                  Donate with PayPal
                 </Link>
               </Button>
             </Box>
           </Flex>
           <Flex direction="column" gap="3" align="center">
             <Image
-              src="/images/logos/logo-omprakash.png"
+              src="/images/donate/omprakash.png"
               alt={""}
               height={0}
               width={96}
@@ -74,14 +74,14 @@ const DonationCTA = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Use a Debit/Credit card
+                  Use a Debit/Credit Card
                 </Link>
               </Button>
             </Box>
           </Flex>
           <Flex direction="column" gap="3" align="center">
             <Image
-              src="/images/icons/icon-dollar-circle-outline.svg"
+              src="/images/donate/dollar.svg"
               alt={""}
               height={0}
               width={52}
