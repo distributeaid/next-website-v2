@@ -32,6 +32,7 @@ This repository contains the scaffolding for DA's new website, powered by Nextjs
 - [Prettier](https://prettier.io/) - code formatter (via the pretty-quick node module)
 - [ESLint](https://eslint.org/) - Linting
 - [Vercel](https://vercel.com/home) - Production and deployment
+<<<<<<< Updated upstream
 <!-- - [Playwright](https://playwright.dev/) - end-to-end (E2E) test framework -->
 
 # 🚀 Getting started with Gitpod
@@ -44,6 +45,11 @@ Gitpod provides a fully automated development environment for your Next.js proje
 2. Click the `Continue` button.
 3. Relax, a development environment is being set up for you in the first terminal.
 4. To access your workspace later, go to [Gitpod Workspaces](https://gitpod.io/workspaces). Pin the `next-website-v2` workspace to prevent auto-deletion after 14 days by clicking the three dots next to the workspace name and selecting "Pin".
+=======
+- [Vitest](https://vitest.dev/) - Test framework and runner
+- [React testing library](https://testing-library.com/) - DOM testing
+- [jest-dom](https://testing-library.com/docs/ecosystem-jest-dom/) - DOM testing assertions
+>>>>>>> Stashed changes
 
 ## Setup
 
@@ -186,5 +192,29 @@ Labeling comments encourages collaboration and saves hours of undercommunication
 
 Use [`git rebase`](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase) to resolve any merge conflicts between branches. Once the incoming branch is merged into saga, it is safe to delete.
 
+<<<<<<< Updated upstream
 <!-- ## License -->
 <!-- Check with Taylor -->
+=======
+5. Visit the site to make sure it works.
+
+6. Log out of the deploy user, and optionally the server
+
+   ```bash
+   exit
+   exit
+   ```
+
+## License
+
+This project is licensed under [AGPL](LICENSE.md).
+
+## Testing
+
+### Client-side
+
+- [Guide](https://medium.com/@kaanfurkanc/unit-testing-best-practices-3a8b0ddd88b5) to testing best practices
+- Prefer the [setup function](https://v17.angular.io/guide/testing-services#testing-without-beforeeach) pattern over use of beforeEach with semi-local variables, which can leak state between tests
+- When possible, interact with the DOM using queries in the order laid out in [these docs](https://testing-library.com/docs/queries/about/#priority). Try to avoid queries lower on the list. 
+  * Caveat: sometimes it makes more sense to use a testId as a handle to access a UI element that would be otherwise awkward to locate. For instance, if you display success text after an action, those can be difficult to locate semantically, and duplicating the text content into the test just makes the test more fragile. Using a testId in this case is a reasonable choice.
+>>>>>>> Stashed changes
