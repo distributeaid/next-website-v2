@@ -40,7 +40,7 @@ const DonateGrid: FC<{
               imgSrc={fund.img}
               imgAlt=""
               title={fund.title}
-              raised={percentage(fund.raised, fund.goal_price)}
+              raised={percentage(fund.raised ?? 0, fund.goal_price ?? 0)}
               goal={fund.goal_price}
               donateLink={fund.donate_link}
               moreLink={fund.more_link}
