@@ -90,10 +90,10 @@ const MobileNavBar = () => {
       {/* Social media links */}
       <Flex justify={"center"} gapX={"2"}>
         {SOCIAL_LINKS.slice(0, 3).map((social) => (
-          <NavigationMenu.Item key={social.name}>
+          <NavigationMenu.Item key={social.name} aria-label={social.ariaLabel}>
             <NavigationMenu.Link href={social.link} target="_blank">
               <Image
-                src={`/images/social-icons/${social.name}.svg`}
+                src={`/images/icons/icon-social-${social.name}.svg`}
                 alt={social.name}
                 width={30}
                 height={30}

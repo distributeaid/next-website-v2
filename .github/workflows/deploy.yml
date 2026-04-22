@@ -1,0 +1,32 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Deployment environment"
+        required: true
+        type: choice
+        options:
+          - staging
+          - prod
+      branch:
+        description: "Branch to deploy"
+        required: true
+        default: main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment || 'staging' }}
+    steps:
+      - name: Deploy application
+        uses: distributeaid/centralised-github-actions/.github/actions/ansible-deploy@main
+        with:
+          environment: ${{ inputs.environment || 'staging' }}
+          branch: ${{ inputs.branch || github.ref_name }}
+          repo_name: next-website-v2
+          infra_checkout_token: ${{ secrets.INFRA_CHECKOUT_TOKEN }}
+          upcloud_token: ${{ secrets.UPCLOUD_TOKEN }}
+          ansible_ssh_private_key: ${{ (inputs.environment || 'staging') == 'staging' && secrets.ANSIBLE_NEXT_WEBSITE_STAGING_SSH_PRIVATE_KEY || secrets.ANSIBLE_NEXT_WEBSITE_PROD_SSH_PRIVATE_KEY }}
+          sops_age_key: ${{ (inputs.environment || 'staging') == 'staging' && secrets.SOPS_STAGING_AGE_KEY || secrets.SOPS_PROD_AGE_KEY }}

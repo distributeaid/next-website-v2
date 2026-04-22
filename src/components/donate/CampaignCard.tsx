@@ -21,7 +21,6 @@ type Props = {
   goal: number | undefined;
   donateLink: string | undefined;
   moreLink: string | undefined;
-  [key: string]: any;
 };
 
 // enable RadixUI's asChild functionality for callig code
@@ -29,7 +28,7 @@ type Props = {
 const CampaignCard: FC<Props> = forwardRef<HTMLDivElement, Props>(
   (
     {
-      imgSrc = "/images/donate/european-refugee-relief-hero.webp",
+      imgSrc = "/images/photos/photo-ukr-donation-02.webp",
       imgAlt = "",
       title = "Untitled Campaign",
       raised = 0,
@@ -54,10 +53,10 @@ const CampaignCard: FC<Props> = forwardRef<HTMLDivElement, Props>(
               <Image
                 src={imgSrc}
                 alt={imgAlt}
-                height={0}
-                width={0}
+                height={256}
+                width={1200}
                 sizes={"100vw"}
-                className="block object-cover width-full bg-blue-900 block object-cover width-full bg-blue-900 h-[150px]"
+                className="block object-cover width-full bg-blue-900 h-[150px]"
               />
               <FundProgress raised={raised} />
             </Inset>
@@ -83,13 +82,6 @@ const CampaignCard: FC<Props> = forwardRef<HTMLDivElement, Props>(
                 >
                   <Link href={donateLink} size="3">
                     Donate now
-                  </Link>
-                </Button>
-              </Box>
-              <Box px="4" py="2" asChild>
-                <Button variant="soft" className="h-[44px]" asChild>
-                  <Link href={moreLink} size="3" className="no-underline">
-                    More info
                   </Link>
                 </Button>
               </Box>

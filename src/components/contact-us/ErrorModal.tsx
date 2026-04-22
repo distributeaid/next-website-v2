@@ -9,7 +9,7 @@ export default function ErrorModal({
 }) {
   return (
     <AlertDialog.Root open={open}>
-      <AlertDialog.Content maxWidth="450px">
+      <AlertDialog.Content maxWidth="450px" data-testid="error">
         <AlertDialog.Title>Oh no!</AlertDialog.Title>
         <AlertDialog.Description size="2">
           There was a problem on our end. Please try again later.

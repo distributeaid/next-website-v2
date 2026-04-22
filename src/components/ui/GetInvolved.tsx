@@ -11,7 +11,6 @@ import {
 } from "@radix-ui/themes";
 
 import { getInvolvedLinks } from "@/data/getInvolved";
-import { handleNewsletterSignup } from "@/utils/newsletter";
 
 import Section from "./SectionWithTitle";
 
@@ -28,7 +27,12 @@ const GetInvolved = () => {
         throw Error("Email is missing :(");
       }
 
-      await handleNewsletterSignup(email);
+      const body = JSON.stringify({ email });
+
+      await fetch("/api/newsletter", {
+        method: "POST",
+        body,
+      });
     } catch (error) {
       throw error;
     } finally {
@@ -70,7 +74,7 @@ const GetInvolved = () => {
                   <Text weight="medium" size="8">
                     {label}
                   </Text>
-                  <Button size="3">
+                  <Button size="3" asChild>
                     <a href={href}>{buttonLabel ?? label}</a>
                   </Button>
                 </Flex>
@@ -81,7 +85,7 @@ const GetInvolved = () => {
       </Grid>
 
       <Box className="bg-fuchsia-100" id="newsletter-signup">
-        <Box id="newsletter-signup" py="8" px="4" maxWidth="1242px" mx="auto">
+        <Box py="8" px="4" maxWidth="1242px" mx="auto">
           <Heading as="h3" size="8">
             Stay Connected With Distribute Aid
           </Heading>

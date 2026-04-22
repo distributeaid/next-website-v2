@@ -1,10 +1,10 @@
-import GiveMoney from "@/components/home/icons/GiveMoney";
-import DonateSupplies from "@/components/home/icons/DonateSupplies";
-import VolunteerTech from "@/components/home/icons/VolunteerTech";
+import GiveMoney from "../../public/images/GiveMoney";
+import DonateSupplies from "../../public/images/DonateSupplies";
+import VolunteerTech from "../../public/images/VolunteerTech";
 
 export const getInvolvedLinks = [
   {
-    label: "Give Money",
+    label: "Donate Money",
     href: "/donate",
     bgColor: "#5AC597",
     Icon: GiveMoney,

@@ -5,7 +5,7 @@ import { useState } from "react";
 import { FaBars, FaChevronDown, FaTimes } from "react-icons/fa";
 import LogoMark from "../../../public/images/LogoMark";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import { Box, Flex, Button } from "@radix-ui/themes";
+import { Box, Flex } from "@radix-ui/themes";
 import { SOCIAL_LINKS } from "@/data/constants";
 import Image from "next/image";
 import cx from "classnames";
@@ -14,6 +14,9 @@ import { links } from "@/data/navBarLinks";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
+
+  const donateButtonClassNames =
+    "hover:bg-navy-500 cursor-pointer hover:text-white duration-200 text-dark-blue bg-white rounded-lg py-3 px-6 ";
 
   return (
     <>
@@ -37,8 +40,17 @@ const NavBar = () => {
             >
               {/*DA logo */}
               <NavigationMenu.Item className="z-40">
-                <NavigationMenu.Link href="/" target="" rel="noreferrer">
-                  <LogoMark width="50" height={(60 / 70) * 50} />
+                <NavigationMenu.Link
+                  href="/"
+                  target=""
+                  rel="noreferrer"
+                  aria-label="Distribute Aid — go to homepage"
+                >
+                  <LogoMark
+                    width="50"
+                    height={(60 / 70) * 50}
+                    aria-hidden="true"
+                  />
                 </NavigationMenu.Link>
               </NavigationMenu.Item>
 
@@ -49,10 +61,13 @@ const NavBar = () => {
                 gapX={"2"}
               >
                 {SOCIAL_LINKS.map((social) => (
-                  <NavigationMenu.Item key={social.name}>
+                  <NavigationMenu.Item
+                    key={social.name}
+                    aria-label={social.ariaLabel}
+                  >
                     <NavigationMenu.Link href={social.link} target="_blank">
                       <Image
-                        src={`/images/social-icons/${social.name}.svg`}
+                        src={`/images/icons/icon-social-${social.name.toLowerCase()}.svg`}
                         alt={social.name}
                         width={30}
                         height={30}
@@ -78,27 +93,20 @@ const NavBar = () => {
               align={"center"}
               mr={"100px"}
               display={{ initial: "none", md: "flex" }}
+              className="font-medium"
             >
               {links.map(({ title, url, isSubMenu, subMenu }) => (
                 <NavigationMenu.Item
-                  className={cx(
-                    "font-normal  decoration-2 underline-offset-8 duration-200",
-                    {
-                      "hover:underline": title !== "Donate",
-                      "hover:bg-navy-500 decoration-none cursor-pointer hover:text-white duration-200 text-dark-blue bg-white rounded-lg py-3 px-6 ":
-                        title === "Donate",
-                    },
-                  )}
+                  className={cx({
+                    "hover:underline decoration-2 underline-offset-8":
+                      title !== "Donate",
+                    [donateButtonClassNames]: title === "Donate",
+                  })}
                   key={title}
                 >
                   {isSubMenu ? (
                     <Box className="group">
-                      <Flex
-                        className="font-normal"
-                        position={"relative"}
-                        align={"center"}
-                        asChild
-                      >
+                      <Flex position={"relative"} align={"center"} asChild>
                         <NavigationMenu.Trigger>
                           <NavigationMenu.Link href={url}>
                             {title}
@@ -107,7 +115,6 @@ const NavBar = () => {
                         </NavigationMenu.Trigger>
                       </Flex>
                       <Flex
-                        as="div"
                         asChild
                         position={"absolute"}
                         maxWidth={"140px"}
@@ -148,6 +155,7 @@ const NavBar = () => {
 
             {/* Mobile Top Navbar */}
             <Flex
+              id="mobile-nav"
               gap={"4"}
               align={"center"}
               display={{ initial: "flex", md: "none" }}
@@ -158,7 +166,7 @@ const NavBar = () => {
                   asChild
                   px={"5"}
                   py={"3"}
-                  className="hover:bg-navy-500 hover:text-white duration-200 text-dark-blue bg-white font-normal rounded-lg"
+                  className={donateButtonClassNames}
                 >
                   <Link href="/donate" rel="noreferrer">
                     Donate
@@ -166,18 +174,21 @@ const NavBar = () => {
                 </Box>
               )}
               {/* Hamburger Icon */}
-              <Box
-                className="text-white z-40 cursor-pointer"
+              <button
+                className="text-white z-40 cursor-pointer bg-transparent border-none"
                 onClick={() => setNav(!nav)}
+                aria-label={
+                  nav ? "Close navigation menu" : "Open navigation menu"
+                }
+                aria-expanded={nav}
+                aria-controls="mobile-nav"
               >
                 {nav ? (
-                  <Button className="bg-navy-800 cursor-pointer" size={"4"}>
-                    Close <FaTimes size={30} />
-                  </Button>
+                  <FaTimes size={30} aria-hidden="true" />
                 ) : (
-                  <FaBars size={30} />
+                  <FaBars size={30} aria-hidden="true" />
                 )}
-              </Box>
+              </button>
             </Flex>
             {/* Mobile Menu */}
             {nav && <MobileNavBar />}

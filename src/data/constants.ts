@@ -1,4 +1,7 @@
 import { RiInstagramFill, RiBlueskyFill, RiLinkedinFill } from "react-icons/ri";
+import * as Messages from "@/data/messages";
+import { IconType } from "react-icons";
+import { strict } from "assert";
 
 export const MONTHS = [
   "January",
@@ -277,20 +280,28 @@ export const COUNTRY_CODE_OPTIONS = Object.entries(COUNTRY_CODES_TO_NAME).map(
   }),
 );
 
-export const SOCIAL_LINKS = [
+export const SOCIAL_LINKS: {
+  name: string;
+  ariaLabel: string;
+  link: string;
+  icon: IconType;
+}[] = [
   {
-    name: "instagram",
+    name: "Instagram",
+    ariaLabel: "Follow Distribute Aid on Instagram",
     link: "https://www.instagram.com/distributeaid",
     icon: RiInstagramFill,
   },
 
   {
-    name: "bluesky",
+    name: "Bluesky",
+    ariaLabel: "Follow Distribute Aid on Bluesky",
     link: "https://bsky.app/profile/distributeaid.org",
     icon: RiBlueskyFill,
   },
   {
-    name: "linked-in",
+    name: "LinkedIn",
+    ariaLabel: "Connect with Distribute Aid on LinkedIn",
     link: "https://www.linkedin.com/company/distribute-aid",
     icon: RiLinkedinFill,
   },
@@ -314,15 +325,15 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
         link: "/",
       },
       {
-        name: "About Us",
+        name: Messages.ABOUT_US_PAGE_TITLE,
         link: "/about-us",
       },
       {
-        name: "Donate",
+        name: Messages.DONATE_PAGE_TITLE,
         link: "/donate",
       },
       {
-        name: "Team",
+        name: Messages.TEAM_PAGE_TITLE,
         link: "/team",
       },
       {
@@ -340,11 +351,11 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     title: "",
     links: [
       {
-        name: "Tech",
+        name: Messages.TECH_PAGE_TITLE,
         link: "/tech",
       },
       {
-        name: "Resources",
+        name: Messages.RESOURCES_PAGE_TITLE,
         link: "/resources/assort",
       },
       {

@@ -7,7 +7,7 @@ import BankInfoDialog from "../../ui/BankInfoDialog";
 const DonationCTA = () => {
   const { donate } = siteSettings;
   return (
-    <Box className="bg-red-50">
+    <Box style={{ background: "#DFCDE8" }}>
       <Container
         pb={{ initial: "6", sm: "36px", md: "40px" }}
         px="4"
@@ -49,7 +49,7 @@ const DonationCTA = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Donate with Paypal
+                  Donate with PayPal
                 </Link>
               </Button>
             </Box>
@@ -74,7 +74,7 @@ const DonationCTA = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Use a Debit/Credit card
+                  Use a Debit/Credit Card
                 </Link>
               </Button>
             </Box>
