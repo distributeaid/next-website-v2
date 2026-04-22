@@ -1,7 +1,7 @@
 import { EmailTemplate } from "../../../components/templates/EmailTemplate";
 import { Resend } from "resend";
 import * as z from "zod";
-import createCap from "../cap/cap";
+import getCap from "../cap/cap";
 
 const EmailMessage = z.object({
   email: z.string(),
@@ -20,7 +20,7 @@ export async function POST(request: Request) {
 
   const body = EmailMessage.parse(requestBody);
 
-  const cap = await createCap();
+  const cap = await getCap();
   const { success: capValid } = await cap.validateToken(body.capToken);
   if (!capValid) {
     return Response.json({ error: "Invalid CAPTCHA" }, { status: 403 });
