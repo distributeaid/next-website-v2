@@ -2,7 +2,19 @@ import Cap from "@cap.js/server";
 import sqlite3 from "sqlite3";
 import { open } from "sqlite";
 
+declare global {
+  var cap: Cap | undefined;
+}
+
 export default async () => {
+  if (!globalThis.cap) {
+    globalThis.cap = await initCap();
+  }
+
+  return globalThis.cap;
+};
+
+async function initCap() {
   const db = await open({
     filename: "/tmp/database.db",
     driver: sqlite3.Database,
@@ -86,4 +98,4 @@ export default async () => {
   });
 
   return cap;
-};
+}
