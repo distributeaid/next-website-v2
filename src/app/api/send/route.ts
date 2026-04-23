@@ -1,5 +1,4 @@
 import { EmailTemplate } from "../../../components/templates/EmailTemplate";
-import { Resend } from "resend";
 import * as z from "zod";
 import getCap from "../cap/cap";
 import getResend from "./resend";
