@@ -6,7 +6,7 @@ interface ResponseHeroProps {
   children: ReactNode;
 }
 
-export const ResponseHero: FC<ResponseHeroProps> = ({title, children}) => (
+export const ResponseHero: FC<ResponseHeroProps> = ({ title, children }) => (
   <>
     <Section position="relative" width="100%" size="1" className="bg-navy-900">
       <Container>
