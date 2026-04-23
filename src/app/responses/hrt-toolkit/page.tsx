@@ -1,16 +1,21 @@
 import { FC } from "react";
 import { ResponseHero } from "@/components/responses/ResponseHero";
-import { AboutTheProject } from "@/components/responses/hrt-toolkit/AboutTheProject";
+import { AboutTheProject } from "@/components/responses/AboutTheProject";
 import { HrtKitsInNumbers } from "@/components/responses/hrt-toolkit/HrtKitsInNumbers";
 import { HowWeWork } from "@/components/responses/HowWeWork";
 import { GetInvolved } from "@/components/responses/GetInvolved";
 import { Faq } from "@/components/responses/Faq";
 
 import { faqs } from "@/data/hrtToolkitData";
+
 import frontlineGroups from "../../../../public/images/photos/photo-250000-000003-usa-hrt-toolkit.jpg";
 import inKind from "../../../../public/images/photos/photo-250000-000004-usa-hrt-toolkit.jpg";
+
 import graphHorizontal from "../../../../public/images/illus/illus-how-it-works-graph.png";
 import graphVertical from "../../../../public/images/illus/illus-how-it-works-vertical.png";
+
+import aboutOne from "../../../../public/images/photos/photo-250000-000001-usa-hrt-toolkit.jpg";
+import aboutTwo from "../../../../public/images/photos/photo-250000-000002-usa-hrt-toolkit.jpg";
 
 const HrtToolkit: FC = () => {
   return (
@@ -21,7 +26,38 @@ const HrtToolkit: FC = () => {
         affirming hormone therapy.
       </ResponseHero>
       <HrtKitsInNumbers />
-      <AboutTheProject />
+      <AboutTheProject
+        heading="About The HRT Harm Reduction Toolkit Project"
+        summary={
+          <>
+            Each kit includes a{" "}
+            <strong>1-year supply of medical equipment</strong> necessary to
+            administer injection-based hormone therapy. Each kit is worth
+            approximately $65 when purchased at retail value. Using our existing
+            mutual aid networks, the kits are delivered to local frontline
+            organizations who distribute the kits for free to trans people in
+            need.
+          </>
+        }
+        images={[
+          {
+            img: aboutOne,
+            alt: "The first about image",
+          },
+          {
+            img: aboutTwo,
+            alt: "The second about image",
+          },
+        ]}
+        listItems={[
+          "The kits do not provide hormones but the sundries needed to administer safely",
+          "Harm reduction kits reduce risks from needle sharing or reuse and provide trans people with privacy in a hostile political climate",
+          "Access to gender-affirming hormone therapy saves lives",
+        ]}
+        ctaText="Help Us Fund More Kits"
+        donateText="Donate via Omprakash"
+        donateURL="https://www.omprakash.org/global/distribute-aid/crowdfund/hrt---harm-reduction-toolkit"
+      />
       <HowWeWork
         title="How It Works"
         chartHorizontal={graphHorizontal}
