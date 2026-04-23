@@ -2,13 +2,15 @@ import { FC } from "react";
 import { ResponseHero } from "@/components/responses/ResponseHero";
 import { AboutTheProject } from "@/components/responses/hrt-toolkit/AboutTheProject";
 import { HrtKitsInNumbers } from "@/components/responses/hrt-toolkit/HrtKitsInNumbers";
-import { HowItWorks } from "@/components/responses/hrt-toolkit/HowItWorks";
+import { HowWeWork } from "@/components/responses/HowWeWork";
 import { GetInvolved } from "@/components/responses/GetInvolved";
 import { Faq } from "@/components/responses/Faq";
 
 import { faqs } from "@/data/hrtToolkitData";
 import frontlineGroups from "../../../../public/images/photos/photo-250000-000003-usa-hrt-toolkit.jpg";
 import inKind from "../../../../public/images/photos/photo-250000-000004-usa-hrt-toolkit.jpg";
+import graphHorizontal from "../../../../public/images/illus/illus-how-it-works-graph.png";
+import graphVertical from "../../../../public/images/illus/illus-how-it-works-vertical.png";
 
 const HrtToolkit: FC = () => {
   return (
@@ -20,7 +22,13 @@ const HrtToolkit: FC = () => {
       </ResponseHero>
       <HrtKitsInNumbers />
       <AboutTheProject />
-      <HowItWorks />
+      <HowWeWork
+        title="How It Works"
+        chartHorizontal={graphHorizontal}
+        chartVertical={graphVertical}
+        altText="Materials purchased with monetary donations and obtained through in-kind donations are assembled to make the kits. The kits are sent to frontline groups who distribute them in their area."
+        footnote="Good to know: Kits are never distributed directly to people but only through frontline organizations!"
+      />
       <GetInvolved
         boxes={[
           {
