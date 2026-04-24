@@ -66,12 +66,13 @@ const NavBar = () => {
                     aria-label={social.ariaLabel}
                   >
                     <NavigationMenu.Link href={social.link} target="_blank">
-                      <Image
-                        src={`/images/icons/icon-social-${social.name.toLowerCase()}.svg`}
-                        alt={social.name}
-                        width={30}
-                        height={30}
-                      />
+                      <Box className="relative w-[30px] h-[30px]">
+                        <Image
+                          src={`/images/icons/icon-social-${social.name.toLowerCase()}.svg`}
+                          alt={social.name}
+                          fill
+                        />
+                      </Box>
                     </NavigationMenu.Link>
                   </NavigationMenu.Item>
                 ))}

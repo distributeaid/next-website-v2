@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { Container, Flex, Separator, Text } from "@radix-ui/themes";
+import { Box, Container, Flex, Separator, Text } from "@radix-ui/themes";
 import Image from "next/image";
 import { PageTitle } from "@/components/resources/assort/PageTitle";
 import { AboutAssort } from "@/components/resources/assort/AboutAssort";
@@ -73,12 +73,14 @@ const page = () => {
             providing a “common language” for aid donations, organisations
             receiving aid can know ahead of time what is on an aid shipment.
           </Text>
-          <Image
-            src="/images/icons/icon-arrow-down.png"
-            alt="ASSORT"
-            width={22}
-            height={38}
-          />
+          <Box className="relative w-[22px] h-[38px]">
+            <Image
+              src="/images/icons/icon-arrow-down.png"
+              alt="ASSORT"
+              fill
+              sizes="22px"
+            />
+          </Box>
           <Text size="4" align="center">
             When the shipment arrives, they process it much faster than they
             otherwise could. Indeed, a pilot shipment showed that using ASSORT

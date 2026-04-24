@@ -1,4 +1,4 @@
-import { Flex, Heading, Text } from "@radix-ui/themes";
+import { Box, Flex, Heading, Text } from "@radix-ui/themes";
 import Image from "next/image";
 
 interface SortingControlProps {
@@ -21,7 +21,9 @@ export const SortingControl = ({
       width={{ md: "496px" }}
       className="text-navy-800"
     >
-      <Image src={src} alt={`${title}`} width={88} height={86} />
+      <Box className="relative w-[88px] h-[86px]">
+        <Image src={src} alt={`${title}`} fill sizes="88px" />
+      </Box>
       <Heading align="center">{title}</Heading>
       <Text align="center">{description}</Text>
     </Flex>

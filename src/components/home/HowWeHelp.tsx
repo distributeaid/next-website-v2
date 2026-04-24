@@ -177,15 +177,16 @@ const HowWeHelp = () => {
       >
         {/* Image Section */}
         <Flex justify="center" mb={{ initial: "5", md: "8" }}>
-          <Image
-            src="/images/illus/illus-circular-economy.png"
-            alt="Flow of donations: to hub, then to grassroots aid."
-            width={800}
-            height={480}
-            className="object-cover rounded-lg w-full max-w-[800px] h-auto"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
-            loading="lazy"
-          />
+          <Box className="relative w-full max-w-[800px] h-[480px]">
+            <Image
+              src="/images/illus/illus-circular-economy.png"
+              alt="Flow of donations: to hub, then to grassroots aid."
+              fill
+              className="object-cover rounded-lg"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
+              priority
+            />
+          </Box>
         </Flex>
         {/* Grid Section */}
 
