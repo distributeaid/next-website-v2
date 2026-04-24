@@ -31,6 +31,7 @@ const HeroSection = () => {
           <Image
             src={"/images/logos/logo-distribute-aid-explorers.png"}
             alt="Distribute aid OSE logo"
+            className="h-auto w-auto"
             width={100}
             height={100}
           ></Image>

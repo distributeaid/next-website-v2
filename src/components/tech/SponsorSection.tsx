@@ -35,7 +35,7 @@ const SponsorSection = () => {
             ></Box>
             <Box position={{ sm: "absolute" }} z-index={"1"}>
               <Image
-                className="rounded-l-[32px]"
+                className="rounded-l-[32px] w-auto h-auto"
                 width={"540"}
                 height={"340"}
                 src={"/images/photos/photo-hands.jpg"}

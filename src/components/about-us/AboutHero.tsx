@@ -47,31 +47,31 @@ export const AboutHero: FC = () => (
       mb={{ initial: "-10px" }}
     >
       {/* This could probably be cleaned up to avoid repeated code */}
-      <Box className="rounded-2xl overflow-hidden flex-shrink-0 w-[100px] sm:w-[160px] md:w-[200px] lg:w-[280px]">
+      <Box className="relative rounded-2xl overflow-hidden flex-shrink-0 w-[100px] h-[100px] sm:w-[160px] sm:h-[160px] md:w-[200px] md:h-[200px] lg:w-[280px] lg:h-[280px]">
         <Image
           src={"/images/photos/photo-ukr-donation.jpg"}
           alt="Hero Image"
-          width={280}
-          height={280}
-          className="w-full h-auto object-cover"
+          fill
+          sizes="(max-width: 640px) 100px, (max-width: 768px) 160px, (max-width: 1024px) 200px, 280px"
+          className="object-cover"
         />
       </Box>
-      <Box className="rounded-2xl overflow-hidden flex-shrink-0 w-[100px] sm:w-[160px] md:w-[200px] lg:w-[280px]">
+      <Box className="relative rounded-2xl overflow-hidden flex-shrink-0 w-[100px] h-[100px] sm:w-[160px] sm:h-[160px] md:w-[200px] md:h-[200px] lg:w-[280px] lg:h-[280px]">
         <Image
           src={"/images/photos/photo-donation.png"}
           alt="Hero Image"
-          width={280}
-          height={280}
-          className="w-full h-auto object-cover"
+          fill
+          sizes="(max-width: 640px) 100px, (max-width: 768px) 160px, (max-width: 1024px) 200px, 280px"
+          className="object-cover"
         />
       </Box>
-      <Box className="rounded-2xl overflow-hidden flex-shrink-0 w-[100px] sm:w-[160px] md:w-[200px] lg:w-[280px]">
+      <Box className="relative rounded-2xl overflow-hidden flex-shrink-0 w-[100px] h-[100px] sm:w-[160px] sm:h-[160px] md:w-[200px] md:h-[200px] lg:w-[280px] lg:h-[280px]">
         <Image
           src={"/images/photos/photo-volunteers.png"}
           alt="Hero Image"
-          width={280}
-          height={280}
-          className="w-full h-auto object-cover"
+          fill
+          sizes="(max-width: 640px) 100px, (max-width: 768px) 160px, (max-width: 1024px) 200px, 280px"
+          className="object-cover"
         />
       </Box>
     </Flex>
