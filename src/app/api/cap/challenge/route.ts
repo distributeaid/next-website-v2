@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
-import createCap from "../cap";
+import getCap from "../cap";
 
 export async function POST() {
   try {
-    let cap = await createCap();
+    let cap = await getCap();
 
     if (!cap) {
       throw Error("Cap.js failed to initialize");

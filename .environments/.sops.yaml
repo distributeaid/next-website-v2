@@ -1,0 +1,14 @@
+creation_rules:
+  - path_regex: \.enc\.yaml$
+    key_groups:
+      - age:
+          # CI Key
+          - age18czeejgx4sqes9lulh02af08z39u98lsm7dcuprk2y5yag43uegskuuhff
+          # Jaime's key
+          - age16z3ewnx22h4j4qxmaj43yysag8a3gnxs46mm9p0s92lcykwr952syq8365
+          # Finn's key
+          - age1k349xhtvfswn44wprj03pnlxafry0y2uyl23hy3e8zpxavjaysmqg62q9y
+          # Graham's key
+          - age1mzmws9mpksrk7chzxwrg570x77gjdsspswpzuta9q38fy7a57f5q0ks5x4
+          # Taylor's key
+          - age15z0l8mlxuet0n9s70c3fr4n9t9upt9yaxnfmxjz28h4j3c7yravqekrd04
