@@ -28,7 +28,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           fill
           className="object-cover rounded-2xl absolute"
           loading="lazy"
-          sizes="100vw"
+          sizes="(max-width: 1023px) 100vw, 50vw"
         />
       </Box>
 

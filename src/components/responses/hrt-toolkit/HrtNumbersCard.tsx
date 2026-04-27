@@ -36,7 +36,9 @@ export const HRTNumbersCard: FC<HrtNumbersCardProps> = ({
       width="100%"
       maxWidth="350px"
     >
-      <Image src={icon} width="100" height="100" alt={iconAlt} />
+      <Box>
+        <Image src={icon} width="100" height="100" alt={iconAlt} />
+      </Box>
       <Box>
         <Text
           as="p"

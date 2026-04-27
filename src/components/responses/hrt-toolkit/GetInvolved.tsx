@@ -62,8 +62,7 @@ const GetInvolvedBox: FC<GetInvolvedBoxType> = ({
   <div className="get-involved bg-navy-300 rounded-md m-4 w-full md:w-1/3">
     <Image
       src={image}
-      className="w-full h-auto rounded-t-md max-h-[390px]"
-      objectFit="cover"
+      className="w-full h-auto rounded-t-md max-h-[390px] object-cover"
       alt={title}
     />
     <div className="p-5">

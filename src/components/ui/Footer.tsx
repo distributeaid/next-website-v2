@@ -3,6 +3,7 @@ import { Flex, Box, Heading, Text } from "@radix-ui/themes";
 
 import LogoMark from "../../../public/images/LogoMark";
 import Link from "next/link";
+import Image from "next/image";
 
 const buttonStyle = {
   backgroundColor: "white",
@@ -105,9 +106,12 @@ const Footer = () => {
               href="https://app.candid.org/profile/16537426/distribute-aid/?pkId=21cd7735-e72c-4c49-9924-58521ccf1eef"
               target="_blank"
             >
-              <img
+              <Image
                 alt="Candid Silver Seal of Transparency widget"
                 src="https://widgets.guidestar.org/prod/v1/pdp/transparency-seal/16537426/svg"
+                width={108}
+                height={108}
+                unoptimized
               />{" "}
             </a>
           </Box>
