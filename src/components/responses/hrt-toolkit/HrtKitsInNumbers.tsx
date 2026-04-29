@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Button, Em, Flex, Heading, Section, Text } from "@radix-ui/themes";
 import Link from "next/link";
-import { HRTNumbersCard } from "./HrtNumbersCard";
+import { NumbersCard } from "../NumbersCard";
 import { kitsInNumbersValues as values } from "../../../data/hrtToolkitData";
 
 export const HrtKitsInNumbers: FC = () => {
@@ -18,7 +18,7 @@ export const HrtKitsInNumbers: FC = () => {
         HRT Kits In Numbers
       </Heading>
       <Flex gap="2" className="flex-wrap" align="center" justify="center">
-        <HRTNumbersCard
+        <NumbersCard
           amount={values.partialKits}
           background="circle-green"
           color="white"
@@ -41,9 +41,9 @@ export const HrtKitsInNumbers: FC = () => {
               Donate
             </Link>
           </Button>
-        </HRTNumbersCard>
+        </NumbersCard>
         <Flex height="360px" justify="between" direction="column">
-          <HRTNumbersCard
+          <NumbersCard
             amount={values.producedKits}
             background="navy-300"
             color="navy-800"
@@ -54,8 +54,8 @@ export const HrtKitsInNumbers: FC = () => {
             <Text size="6" weight="light">
               KITS PRODUCED SO FAR
             </Text>
-          </HRTNumbersCard>
-          <HRTNumbersCard
+          </NumbersCard>
+          <NumbersCard
             amount={values.saved}
             background="navy-800"
             color="white"
@@ -67,7 +67,7 @@ export const HrtKitsInNumbers: FC = () => {
             <Text size="4" weight="light">
               SAVED FOR THE TRANS COMMUNITY
             </Text>
-          </HRTNumbersCard>
+          </NumbersCard>
         </Flex>
       </Flex>
     </Section>
