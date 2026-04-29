@@ -1,7 +1,7 @@
 import { EmailTemplate } from "../../../components/templates/EmailTemplate";
-import { Resend } from "resend";
 import * as z from "zod";
 import getCap from "../cap/cap";
+import getResend from "./resend";
 
 const EmailMessage = z.object({
   email: z.string(),
@@ -12,8 +12,6 @@ const EmailMessage = z.object({
 });
 
 export type EmailMessageProps = z.infer<typeof EmailMessage>;
-
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   const requestBody = (await request.json()) as EmailMessageProps;
@@ -39,7 +37,7 @@ export async function POST(request: Request) {
   try {
     const fromName = `${body.firstName} ${body.lastName}`;
 
-    const { data, error } = await resend.emails.send({
+    const { data, error } = await getResend().emails.send({
       from: CONTACT_FROM_EMAIL,
       replyTo: `${fromName} <${body.email}>`,
       to: CONTACT_TO_EMAIL,
