@@ -7,6 +7,11 @@ import { FaArrowDown } from "react-icons/fa";
 const DonateGrid: FC<{
   funds: Fund[];
 }> = ({ funds }) => {
+  const percentage = (n: number, d: number) => {
+    const percentage = (n / d) * 100;
+    return Math.round(percentage * 10) / 10;
+  };
+
   return (
     <Container pt={"9"} px="4">
       <Flex gap={"4"} direction={"column"} align={"center"}>
@@ -35,7 +40,7 @@ const DonateGrid: FC<{
               imgSrc={fund.img}
               imgAlt=""
               title={fund.title}
-              raised={fund.percentage}
+              raised={percentage(fund.raised ?? 0, fund.goal_price ?? 0)}
               goal={fund.goal_price}
               donateLink={fund.donate_link}
               moreLink={fund.more_link}
