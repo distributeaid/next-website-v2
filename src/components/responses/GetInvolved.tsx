@@ -30,7 +30,7 @@ export const GetInvolved: FC<GetInvolvedProps> = ({ boxes }) => {
 type GetInvolvedBoxType = {
   buttonText: string;
   children?: ReactNode;
-  image: StaticImageData;
+  image: StaticImageData | string;
   link: string;
   title: string;
 };
@@ -47,6 +47,8 @@ const GetInvolvedBox: FC<GetInvolvedBoxType> = ({
       src={image}
       className="w-full h-auto rounded-t-md max-h-[390px]"
       objectFit="cover"
+      width={400}
+      height={390}
       alt={title}
     />
     <div className="p-5">
