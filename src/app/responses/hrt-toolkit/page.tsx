@@ -11,8 +11,8 @@ import { faqs } from "@/data/hrtToolkitData";
 import frontlineGroups from "../../../../public/images/photos/photo-250000-000003-usa-hrt-toolkit.jpg";
 import inKind from "../../../../public/images/photos/photo-250000-000004-usa-hrt-toolkit.jpg";
 
-import graphHorizontal from "../../../../public/images/illus/illus-how-it-works-graph.png";
-import graphVertical from "../../../../public/images/illus/illus-how-it-works-vertical.png";
+import graphHorizontal from "../../../../public/images/illus/hrt-response/illus-how-it-works-graph.png";
+import graphVertical from "../../../../public/images/illus/hrt-response/illus-how-it-works-vertical.png";
 
 import aboutOne from "../../../../public/images/photos/photo-250000-000001-usa-hrt-toolkit.jpg";
 import aboutTwo from "../../../../public/images/photos/photo-250000-000002-usa-hrt-toolkit.jpg";
