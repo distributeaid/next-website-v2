@@ -73,7 +73,10 @@ it("when resend call rejects, returns 500", async () => {
 
 it("when resend call returns an error, returns 500", async () => {
   const { sendMock } = await setup();
-  sendMock.mockResolvedValue({ error: { message: "failed" }, data: null } as any);
+  sendMock.mockResolvedValue({
+    error: { message: "failed" },
+    data: null,
+  } as any);
   const requestObj = createRequestBody({ capToken: "validtoken" });
 
   const response = await POST(requestObj);
@@ -147,7 +150,9 @@ describe("when request data is valid", () => {
     await POST(requestObj);
 
     const { react } = sendMock.mock.lastCall![0];
-    expect(react.props.children[2].props.children[0]).toBe("Firstname Lastname");
+    expect(react.props.children[2].props.children[0]).toBe(
+      "Firstname Lastname",
+    );
   });
 
   it("formats email template fromEmail with provided email", async () => {
