@@ -1,7 +1,23 @@
-import { expect, it, describe, vi } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
+
+const validateTokenMock = vi.fn();
+const sendMock = vi.fn();
+
+vi.mock("../cap/cap", () => ({
+  default: vi.fn(async () => ({
+    validateToken: validateTokenMock,
+  })),
+}));
+
+vi.mock("./resend", () => ({
+  default: vi.fn(() => ({
+    emails: {
+      send: sendMock,
+    },
+  })),
+}));
+
 import { EmailMessageProps, POST } from "./route";
-import getCap from "../cap/cap";
-import getResend from "./resend";
 
 function createRequestBody(props: Partial<EmailMessageProps>) {
   return {
@@ -15,21 +31,23 @@ function createRequestBody(props: Partial<EmailMessageProps>) {
   } as any;
 }
 
-const setup = async () => {
-  const cap = await getCap();
-  const capSpy = vi.spyOn(cap, "validateToken");
-  // Validate CAPTCHA for most test cases
-  capSpy.mockResolvedValue({ success: true });
-  const resend = getResend();
-  const sendEmailsSpy = vi.spyOn(resend.emails, "send");
-  sendEmailsSpy.mockResolvedValue({ error: null, data: null } as any);
+beforeEach(() => {
+  vi.clearAllMocks();
+});
 
-  return { capSpy, sendEmailsSpy };
+const setup = async () => {
+  process.env.CONTACT_TO_EMAIL = "contact@example.com";
+  process.env.CONTACT_FROM_EMAIL = "from@example.com";
+
+  validateTokenMock.mockResolvedValue({ success: true });
+  sendMock.mockResolvedValue({ error: null, data: null } as any);
+
+  return { validateTokenMock, sendMock };
 };
 
 it("when captcha token is invalid, returns 403", async () => {
-  const { capSpy } = await setup();
-  capSpy.mockResolvedValue({ success: false });
+  const { validateTokenMock } = await setup();
+  validateTokenMock.mockResolvedValue({ success: false });
   const requestObj = createRequestBody({
     capToken: "invalidtoken",
   });
@@ -41,9 +59,29 @@ it("when captcha token is invalid, returns 403", async () => {
   expect(body.error).toBe("Invalid CAPTCHA");
 });
 
-// TODO: add the following tests
-it("when resend call rejects, returns 500", async () => {});
-it("when resend call returns an error, returns 500", async () => {});
+it("when resend call rejects, returns 500", async () => {
+  const { sendMock } = await setup();
+  sendMock.mockRejectedValue(new Error("send failed"));
+  const requestObj = createRequestBody({ capToken: "validtoken" });
+
+  const response = await POST(requestObj);
+  const body = await response.json();
+
+  expect(response.status).toBe(500);
+  expect(body).toHaveProperty("error");
+});
+
+it("when resend call returns an error, returns 500", async () => {
+  const { sendMock } = await setup();
+  sendMock.mockResolvedValue({ error: { message: "failed" }, data: null } as any);
+  const requestObj = createRequestBody({ capToken: "validtoken" });
+
+  const response = await POST(requestObj);
+  const body = await response.json();
+
+  expect(response.status).toBe(500);
+  expect(body.error).toEqual({ message: "failed" });
+});
 
 describe("when request data is valid", () => {
   it("returns 200", async () => {
@@ -58,7 +96,7 @@ describe("when request data is valid", () => {
   });
 
   it("formats replyTo field using provided email and name", async () => {
-    const { sendEmailsSpy } = await setup();
+    const { sendMock } = await setup();
     const requestObj = createRequestBody({
       email: "myemail@email.com",
       firstName: "Firstname",
@@ -67,14 +105,74 @@ describe("when request data is valid", () => {
 
     await POST(requestObj);
 
-    const { replyTo } = sendEmailsSpy.mock.lastCall![0];
+    const { replyTo } = sendMock.mock.lastCall![0];
     expect(replyTo).toEqual("Firstname Lastname <myemail@email.com>");
   });
 
-  // TODO: add the following tests
-  it("formats subject with provided name", async () => {});
-  it("formats email body with provided message", async () => {});
-  it("formats email template fromName with provided name", async () => {});
-  it("formats email template fromEmail with provided email", async () => {});
-  it("returns resend data as response body", async () => {});
+  it("formats subject with provided name", async () => {
+    const { sendMock } = await setup();
+    const requestObj = createRequestBody({
+      firstName: "Firstname",
+      lastName: "Lastname",
+      capToken: "validtoken",
+    });
+
+    await POST(requestObj);
+
+    const { subject } = sendMock.mock.lastCall![0];
+    expect(subject).toBe("You've received message from Firstname Lastname");
+  });
+
+  it("formats email body with provided message", async () => {
+    const { sendMock } = await setup();
+    const requestObj = createRequestBody({
+      message: "Hello world",
+      capToken: "validtoken",
+    });
+
+    await POST(requestObj);
+
+    const { react } = sendMock.mock.lastCall![0];
+    expect(react.props.children[0].props.children).toBe("Hello world");
+  });
+
+  it("formats email template fromName with provided name", async () => {
+    const { sendMock } = await setup();
+    const requestObj = createRequestBody({
+      firstName: "Firstname",
+      lastName: "Lastname",
+      capToken: "validtoken",
+    });
+
+    await POST(requestObj);
+
+    const { react } = sendMock.mock.lastCall![0];
+    expect(react.props.children[2].props.children[0]).toBe("Firstname Lastname");
+  });
+
+  it("formats email template fromEmail with provided email", async () => {
+    const { sendMock } = await setup();
+    const requestObj = createRequestBody({
+      email: "myemail@email.com",
+      capToken: "validtoken",
+    });
+
+    await POST(requestObj);
+
+    const { react } = sendMock.mock.lastCall![0];
+    expect(react.props.children[2].props.children[2]).toBe("myemail@email.com");
+  });
+
+  it("returns resend data as response body", async () => {
+    const { sendMock } = await setup();
+    const expectedData = { id: "123" };
+    sendMock.mockResolvedValue({ error: null, data: expectedData } as any);
+
+    const requestObj = createRequestBody({ capToken: "validtoken" });
+    const response = await POST(requestObj);
+    const body = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(body).toEqual(expectedData);
+  });
 });
