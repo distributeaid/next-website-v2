@@ -3,7 +3,7 @@ import { Container, Heading, Section, Text } from "@radix-ui/themes";
 
 interface ResponseHeroProps {
   title: string;
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 export const ResponseHero: FC<ResponseHeroProps> = ({ title, children }) => (
@@ -22,12 +22,14 @@ export const ResponseHero: FC<ResponseHeroProps> = ({ title, children }) => (
       </Container>
     </Section>
 
-    <Section>
-      <Container size="3">
-        <Text as="p" size="5" align="center" className="text-navy-800">
-          {children}
-        </Text>
-      </Container>
-    </Section>
+    {children && (
+      <Section>
+        <Container size="3">
+          <Text as="p" size="5" align="center" className="text-navy-800">
+            {children}
+          </Text>
+        </Container>
+      </Section>
+    )}
   </>
 );
