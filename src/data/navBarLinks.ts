@@ -35,19 +35,19 @@ export const links = [
         url: "/responses",
       },
       {
-        title: "US Disaster Preparedness",
+        title: Messages.US_DISASTER_PREPAREDNESS_RESPONSE_PAGE_TITLE,
         url: "/responses/us-disaster-preparedness",
       },
       {
-        title: "Levant Response",
+        title: Messages.LEVANT_RESPONSE_PAGE_TITLE,
         url: "/responses/levant",
       },
       {
-        title: "Refugee Support Europe",
+        title: Messages.REFUGEE_SUPPORT_EUROPE_RESPONSE_PAGE_TITLE,
         url: "/responses/refugee-support-eu",
       },
       {
-        title: "HRT Harm Reduction Toolkit",
+        title: Messages.HRT_TOOLKIT_RESPONSE_PAGE_TITLE,
         url: "/responses/hrt-toolkit",
       },
     ],
