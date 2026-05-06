@@ -15,10 +15,10 @@ interface AboutTheProjectProps {
   heading: string;
   summary: ReactNode;
   images: {
-    img: StaticImageData;
+    img: StaticImageData | string;
     alt: string;
   }[];
-  listItems: string[];
+  listItems?: string[];
   ctaText: string;
   donateText: string;
   donateURL: string;
