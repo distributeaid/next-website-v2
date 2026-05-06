@@ -359,19 +359,19 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
         link: "/resources/assort",
       },
       {
-        name: "US Disaster Preparedness",
+        name: Messages.US_DISASTER_PREPAREDNESS_RESPONSE_PAGE_TITLE,
         link: "/responses/us-disaster-preparedness",
       },
       {
-        name: "Levant Response",
+        name: Messages.LEVANT_RESPONSE_PAGE_TITLE,
         link: "/responses/levant",
       },
       {
-        name: "Refugee Support Europe",
+        name: Messages.REFUGEE_SUPPORT_EUROPE_RESPONSE_PAGE_TITLE,
         link: "/responses/refugee-support-eu",
       },
       {
-        name: "HRT Harm Reduction Toolkit",
+        name: Messages.HRT_TOOLKIT_RESPONSE_PAGE_TITLE,
         link: "/responses/hrt-toolkit",
       },
     ],
