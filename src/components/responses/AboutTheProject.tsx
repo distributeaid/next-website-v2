@@ -66,6 +66,8 @@ export const AboutTheProject: FC<AboutTheProjectProps> = ({
                   src={img}
                   className="w-full h-auto rounded-lg"
                   alt={alt}
+                  width={400}
+                  height={400}
                 />
               </Box>
             ))}
