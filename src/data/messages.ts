@@ -18,3 +18,5 @@ export const TEAM_PAGE_TITLE = "Team";
 export const TECH_PAGE_TITLE = "Tech";
 
 export const DONATE_PAGE_TITLE = "Donate";
+
+export const RESPONSES_PAGE_TITLE = "Responses";

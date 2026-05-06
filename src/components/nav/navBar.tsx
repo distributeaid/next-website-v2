@@ -105,6 +105,7 @@ const NavBar = () => {
                   })}
                   key={title}
                 >
+                  {/* SubMenu */}
                   {isSubMenu ? (
                     <Box className="group">
                       <Flex position={"relative"} align={"center"} asChild>
@@ -118,7 +119,7 @@ const NavBar = () => {
                       <Flex
                         asChild
                         position={"absolute"}
-                        maxWidth={"140px"}
+                        maxWidth={"160px"}
                         mt={"3"}
                         className="shadow-md bg-white z-10 border rounded-md"
                       >
