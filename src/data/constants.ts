@@ -359,6 +359,18 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
         link: "/resources/assort",
       },
       {
+        name: "US Disaster Preparedness",
+        link: "/responses/us-disaster-preparedness",
+      },
+      {
+        name: "Levant Response",
+        link: "/responses/levant",
+      },
+      {
+        name: "Refugee Support Europe",
+        link: "/responses/refugee-support-eu",
+      },
+      {
         name: "HRT Harm Reduction Toolkit",
         link: "/responses/hrt-toolkit",
       },

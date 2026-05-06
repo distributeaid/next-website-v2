@@ -25,6 +25,33 @@ export const links = [
       },
     ],
   },
+  {
+    title: Messages.RESPONSES_PAGE_TITLE,
+    url: "/responses",
+    isSubMenu: true,
+    subMenu: [
+      {
+        title: Messages.OVERVIEW_NAV_ITEM_TITLE,
+        url: "/responses",
+      },
+      {
+        title: "US Disaster Preparedness",
+        url: "/responses/us-disaster-preparedness",
+      },
+      {
+        title: "Levant Response",
+        url: "/responses/levant",
+      },
+      {
+        title: "Refugee Support Europe",
+        url: "/responses/refugee-support-eu",
+      },
+      {
+        title: "HRT Harm Reduction Toolkit",
+        url: "/responses/hrt-toolkit",
+      },
+    ],
+  },
   // {
   //   id: 3,
   //   title: "Needs",
