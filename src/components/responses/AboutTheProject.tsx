@@ -15,10 +15,10 @@ interface AboutTheProjectProps {
   heading: string;
   summary: ReactNode;
   images: {
-    img: StaticImageData;
+    img: StaticImageData | string;
     alt: string;
   }[];
-  listItems: string[];
+  listItems?: string[];
   ctaText: string;
   donateText: string;
   donateURL: string;
@@ -61,20 +61,30 @@ export const AboutTheProject: FC<AboutTheProjectProps> = ({
           <Text as="p">{summary}</Text>
           <Flex justify="between" wrap="wrap">
             {images.map(({ img, alt }, index) => (
-              <Box key={index} width={{ sm: "100vw", md: "48%" }} p="2">
+              <Box
+                key={index}
+                height={{ initial: "400" }}
+                width={{ sm: "100vw", md: "48%" }}
+                className="rounded-lg overflow-hidden"
+                m="2"
+              >
                 <Image
+                  width={400}
+                  height={400}
                   src={img}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto max-h-[400px] object-cover"
                   alt={alt}
                 />
               </Box>
             ))}
           </Flex>
-          <ul className="list-disc list-inside pl-2">
-            {listItems?.map((item, index) => (
-              <li key={`about_the_project_li_${index}`}>{item}</li>
-            ))}
-          </ul>
+          {listItems && (
+            <ul className="list-disc list-inside pl-2">
+              {listItems?.map((item, index) => (
+                <li key={`about_the_project_li_${index}`}>{item}</li>
+              ))}
+            </ul>
+          )}
         </Container>
       </Flex>
     </Container>
