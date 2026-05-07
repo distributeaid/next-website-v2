@@ -18,7 +18,7 @@ const HrtToolkit: FC = () => {
       <ResponseHero title="Levant Response"></ResponseHero>
       <LevantByTheNumbers />
       <AboutTheProject
-        heading="About The US Disaster Preparedness Project"
+        heading="About Levant Emergency Relief"
         summary={
           <>
             <span className="mb-5 block">
