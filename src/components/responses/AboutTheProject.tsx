@@ -11,12 +11,18 @@ import {
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 
+import ImageAttribution from "./ImageAttribution";
+
 interface AboutTheProjectProps {
   heading: string;
   summary: ReactNode;
   images: {
     img: StaticImageData | string;
     alt: string;
+    attribution?: {
+      name: string;
+      href: string;
+    };
   }[];
   listItems?: string[];
   ctaText: string;
@@ -60,14 +66,20 @@ export const AboutTheProject: FC<AboutTheProjectProps> = ({
         >
           <Text as="p">{summary}</Text>
           <Flex justify="between" wrap="wrap">
-            {images.map(({ img, alt }, index) => (
+            {images.map(({ img, alt, attribution }, index) => (
               <Box
                 key={index}
                 height={{ initial: "400" }}
                 width={{ sm: "100vw", md: "48%" }}
-                className="rounded-lg overflow-hidden"
+                className="rounded-lg overflow-hidden relative"
                 m="2"
               >
+                {attribution && (
+                  <ImageAttribution
+                    name={attribution.name}
+                    href={attribution.href}
+                  />
+                )}
                 <Image
                   width={400}
                   height={400}
