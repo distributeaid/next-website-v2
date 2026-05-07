@@ -51,9 +51,9 @@ const HrtToolkit: FC = () => {
             alt: "The second about image",
           },
         ]}
-        ctaText="Help Us Fund More Kits"
+        ctaText="Send Aid to the Levant"
         donateText="Donate via Omprakash"
-        donateURL="https://www.omprakash.org/global/distribute-aid/crowdfund/us-disaster-relief"
+        donateURL="https://www.omprakash.org/global/distribute-aid/crowdfund/send-aid-to-the-levant"
       />
       <HowWeWork
         title="How We Work"
