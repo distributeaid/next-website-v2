@@ -72,7 +72,7 @@ export const AboutTheProject: FC<AboutTheProjectProps> = ({
                   width={400}
                   height={400}
                   src={img}
-                  className="w-full h-auto max-h-[400px] object-cover"
+                  className="w-full h-full object-cover"
                   alt={alt}
                 />
               </Box>
