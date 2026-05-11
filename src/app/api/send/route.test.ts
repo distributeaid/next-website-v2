@@ -1,7 +1,7 @@
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { describe, expect, it, vi, afterEach } from "vitest";
 
-const validateTokenMock = vi.fn();
-const sendMock = vi.fn();
+let validateTokenMock = vi.fn();
+let sendMock = vi.fn();
 
 vi.mock("../cap/cap", () => ({
   default: vi.fn(async () => ({
@@ -31,11 +31,14 @@ function createRequestBody(props: Partial<EmailMessageProps>) {
   } as any;
 }
 
-beforeEach(() => {
+afterEach(() => {
   vi.clearAllMocks();
 });
 
 const setup = async () => {
+  validateTokenMock = vi.fn();
+  sendMock = vi.fn();
+
   process.env.CONTACT_TO_EMAIL = "contact@example.com";
   process.env.CONTACT_FROM_EMAIL = "from@example.com";
 
