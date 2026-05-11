@@ -4,7 +4,7 @@ import { Box, Flex, Text } from "@radix-ui/themes";
 import Image from "next/image";
 import CountUp from "react-countup";
 
-export type HrtNumbersCardProps = {
+export type NumbersCardProps = {
   amount: number;
   amountPrefix?: string;
   background: string;
@@ -15,7 +15,7 @@ export type HrtNumbersCardProps = {
   iconAlt: string;
 };
 
-export const HRTNumbersCard: FC<HrtNumbersCardProps> = ({
+export const NumbersCard: FC<NumbersCardProps> = ({
   amount,
   amountPrefix,
   background,
@@ -36,7 +36,9 @@ export const HRTNumbersCard: FC<HrtNumbersCardProps> = ({
       width="100%"
       maxWidth="350px"
     >
-      <Image src={icon} width="100" height="100" alt={iconAlt} />
+      <Box>
+        <Image src={icon} width="100" height="100" alt={iconAlt} />
+      </Box>
       <Box>
         <Text
           as="p"

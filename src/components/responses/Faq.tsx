@@ -1,9 +1,14 @@
 import { FC } from "react";
 import { Box, Container, Heading, Section, Text } from "@radix-ui/themes";
 import { FaArrowDown } from "react-icons/fa";
-import { faqs } from "../../../data/hrtToolkitData";
 
-export const HrtFaq: FC = () => (
+import type FaqItem from "@/data/types/FaqItem";
+
+interface FaqProps {
+  faqs: FaqItem[];
+}
+
+export const Faq: FC<FaqProps> = ({ faqs }) => (
   <Section p="0">
     <Heading as="h2" align="center" size="8">
       FAQ <FaArrowDown className="inline" />
@@ -14,11 +19,11 @@ export const HrtFaq: FC = () => (
           <details>
             <summary>
               <Text weight="bold" size="4">
-                Q: "{item[0]}"
+                Q: "{item.q}"
               </Text>
             </summary>
             <Box as="div" className="pl-8 faq-answer">
-              {item[1]}
+              {item.a}
             </Box>
           </details>
         </Box>

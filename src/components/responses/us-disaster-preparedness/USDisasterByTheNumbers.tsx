@@ -2,9 +2,8 @@ import { FC } from "react";
 import { Button, Em, Flex, Heading, Section, Text } from "@radix-ui/themes";
 import Link from "next/link";
 import { NumbersCard } from "../NumbersCard";
-import { kitsInNumbersValues as values } from "../../../data/hrtToolkitData";
-
-export const HrtKitsInNumbers: FC = () => {
+import { USDisasterInNumbersValues as values } from "@/data/usDisasterPreparednessData";
+export const USDisasterByTheNumbers: FC = () => {
   return (
     <Section p="0" my="4">
       <Heading
@@ -15,22 +14,20 @@ export const HrtKitsInNumbers: FC = () => {
         className="text-navy-800"
         mb="5"
       >
-        HRT Kits In Numbers
+        By The Numbers
       </Heading>
       <Flex gap="2" className="flex-wrap" align="center" justify="center">
         <NumbersCard
-          amount={values.partialKits}
+          amount={values.aidWorth}
+          amountPrefix="$"
           background="circle-green"
           color="white"
           direction="column"
-          icon="/images/icons/icon-medical-kit.svg"
-          iconAlt="medical kit"
+          icon="/images/icons/icon-currency-dollar.svg"
+          iconAlt="money"
         >
           <Text as="p" size="8" weight="light">
-            PARTIAL KITS
-          </Text>
-          <Text as="p" size="5" weight="bold" align="center">
-            <Em>Donate to complete kits!</Em>
+            WORTH OF AID
           </Text>
           <Button className="bg-white text-navy-800" size="4" asChild>
             <Link
@@ -44,7 +41,7 @@ export const HrtKitsInNumbers: FC = () => {
         </NumbersCard>
         <Flex height="360px" justify="between" direction="column">
           <NumbersCard
-            amount={values.producedKits}
+            amount={values.diapers}
             background="navy-300"
             color="navy-800"
             direction="row"
@@ -52,20 +49,19 @@ export const HrtKitsInNumbers: FC = () => {
             iconAlt="medical kit"
           >
             <Text size="6" weight="light">
-              KITS PRODUCED SO FAR
+              DIAPERS
             </Text>
           </NumbersCard>
           <NumbersCard
-            amount={values.saved}
+            amount={values.n95Masks}
             background="navy-800"
             color="white"
             direction="row"
-            icon="/images/icons/icon-currency-dollar.svg"
-            iconAlt="money"
-            amountPrefix="$"
+            icon="/images/icons/icon-medical-kit.svg"
+            iconAlt="medical kit"
           >
             <Text size="4" weight="light">
-              SAVED FOR THE TRANS COMMUNITY
+              N95 MASKS
             </Text>
           </NumbersCard>
         </Flex>
