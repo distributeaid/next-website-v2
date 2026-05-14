@@ -1,0 +1,20 @@
+name: Deploy Production
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - name: Deploy application
+        uses: distributeaid/centralised-github-actions/.github/actions/ansible-deploy@main
+        with:
+          environment: prod
+          branch: ${{ github.ref_name }}
+          repo_name: next-website-v2
+          infra_checkout_token: ${{ secrets.INFRA_CHECKOUT_TOKEN }}
+          upcloud_token: ${{ secrets.UPCLOUD_TOKEN }}
+          ansible_ssh_private_key: ${{ secrets.ANSIBLE_NEXT_WEBSITE_PROD_SSH_PRIVATE_KEY }}
+          sops_age_key: ${{ secrets.SOPS_PROD_AGE_KEY }}
