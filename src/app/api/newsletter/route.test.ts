@@ -32,7 +32,9 @@ const setup = async () => {
   process.env.BEHIIV_TOKEN = "token";
   process.env.BEHIIV_PUB_KEY = "public_key";
 
-  createSubscriptionMock.mockResolvedValue({ data: { id: "subscription-123" } });
+  createSubscriptionMock.mockResolvedValue({
+    data: { id: "subscription-123" },
+  });
 
   return { createSubscriptionMock };
 };
@@ -44,7 +46,7 @@ it("throws when newsletter env vars are missing", async () => {
   const requestObj = createRequestBody({ email: "test@example.com" });
 
   await expect(POST(requestObj)).rejects.toThrow(
-    "BEHIIV_TOKEN and/or BEHIIV_PUB_KEY missing from environment variables"
+    "BEHIIV_TOKEN and/or BEHIIV_PUB_KEY missing from environment variables",
   );
 });
 
