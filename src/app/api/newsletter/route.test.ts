@@ -44,7 +44,7 @@ it("throws when newsletter env vars are missing", async () => {
   const requestObj = createRequestBody({ email: "test@example.com" });
 
   await expect(POST(requestObj)).rejects.toThrow(
-    "BEHIIV_TOKEN and/or BEHIIV_PUB_KEY missing from environment variables",
+    "BEHIIV_TOKEN and/or BEHIIV_PUB_KEY missing from environment variables"
   );
 });
 
