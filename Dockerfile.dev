@@ -1,0 +1,18 @@
+FROM node:20.0.0-alpine
+
+WORKDIR /app
+
+# Copy package files for layer caching
+COPY --parents package.json yarn.lock .yarnrc.yml .yarn/ ./
+
+# Install dependencies with BuildKit cache mount
+RUN --mount=type=cache,target=/root/.yarn/cache yarn install --immutable
+
+# Copy the rest of the source files
+COPY . .
+
+# Expose the port that the application listens
+EXPOSE 3000
+
+# Run the application (dev server)
+CMD yarn dev

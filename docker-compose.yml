@@ -1,0 +1,42 @@
+services:
+  frontend_dev:
+    image: frontend:dev
+    pull_policy: never
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: frontend-dev
+    ports:
+      - 3000:3000
+    env_file:
+      - .env.local
+    develop:
+      watch:
+        # Source code changes
+        - action: sync
+          path: ./src
+          target: /app/src
+        - action: sync
+          path: ./public
+          target: /app/public
+
+        # Configuration changes
+        - action: sync+restart
+          path: ./next.config.ts
+          target: /app/next.config.ts
+        - action: sync+restart
+          path: ./tailwind.config.ts
+          target: /app/tailwind.config.ts
+        - action: sync+restart
+          path: ./postcss.config.js
+          target: /app/postcss.config.js
+
+        # Dependency changes
+        - action: rebuild
+          path: ./package.json
+        - action: rebuild
+          path: ./yarn.lock
+        - action: rebuild
+          path: ./.yarnrc.yml
+        - action: rebuild
+          path: ./.yarn
