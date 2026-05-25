@@ -75,6 +75,6 @@ body:
     id: additional-images
     attributes:
       label: "Upload images"
-      description: "If applicable, add any additional images or screenshots to help explain the problemm you encountered."
+      description: "If applicable, add any additional images or screenshots to help explain the problem you encountered."
     validations:
       required: false
