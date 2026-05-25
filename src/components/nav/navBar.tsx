@@ -192,7 +192,7 @@ const NavBar = () => {
               </button>
             </Flex>
             {/* Mobile Menu */}
-            {nav && <MobileNavBar />}
+            {nav && <MobileNavBar shouldShowNav={setNav} />}
           </Flex>
         </NavigationMenu.List>
       </NavigationMenu.Root>

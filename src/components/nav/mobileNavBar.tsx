@@ -6,7 +6,11 @@ import { links } from "@/data/navBarLinks";
 import { SOCIAL_LINKS } from "@/data/constants";
 import Image from "next/image";
 
-const MobileNavBar = () => {
+const MobileNavBar = ({
+  shouldShowNav,
+}: {
+  shouldShowNav: (nav: boolean) => void;
+}) => {
   return (
     <Flex
       display={{ initial: "flex", md: "none" }}
@@ -78,46 +82,53 @@ const MobileNavBar = () => {
               )}
             </Accordion.Item>
           ))}
-      </Accordion.Root>
 
-      {/* NewsLetter */}
-      <NavigationMenu.Item>
-        <NavigationMenu.Link href="#newsletter-signup">
-          Newsletter
-        </NavigationMenu.Link>
-      </NavigationMenu.Item>
-
-      {/* Social media links */}
-      <Flex justify={"center"} gapX={"2"}>
-        {SOCIAL_LINKS.slice(0, 3).map((social) => (
-          <NavigationMenu.Item key={social.name} aria-label={social.ariaLabel}>
-            <NavigationMenu.Link href={social.link} target="_blank">
-              <Image
-                src={`/images/icons/icon-social-${social.name}.svg`}
-                alt={social.name}
-                width={30}
-                height={30}
-              />
-            </NavigationMenu.Link>
-          </NavigationMenu.Item>
-        ))}
-      </Flex>
-
-      {/* Donate Button (Ensure it appears last) */}
-      <Flex
-        as="div"
-        asChild
-        width={"100%"}
-        justify={"center"}
-        p={"2"}
-        className="hover:bg-navy-500 hover:text-white duration-200 text-dark-blue bg-white font-normal cursor-pointer rounded-lg"
-      >
-        <NavigationMenu.Item>
-          <NavigationMenu.Link href="/donate" target="" rel="noreferrer">
-            Donate
+        {/* NewsLetter */}
+        <NavigationMenu.Item className="py-4">
+          <NavigationMenu.Link
+            href="#newsletter-signup"
+            onClick={() => shouldShowNav(false)}
+          >
+            Newsletter
           </NavigationMenu.Link>
         </NavigationMenu.Item>
-      </Flex>
+
+        {/* Social media links */}
+        <Flex gapX={"2"} py="4">
+          {SOCIAL_LINKS.slice(0, 3).map((social) => (
+            <NavigationMenu.Item
+              key={social.name}
+              aria-label={social.ariaLabel}
+            >
+              <NavigationMenu.Link href={social.link} target="_blank">
+                <Image
+                  src={`/images/icons/icon-social-${social.name}.svg`}
+                  alt={social.name}
+                  width={30}
+                  height={30}
+                />
+              </NavigationMenu.Link>
+            </NavigationMenu.Item>
+          ))}
+        </Flex>
+
+        {/* Donate Button (Ensure it appears last) */}
+        <Flex
+          as="div"
+          asChild
+          width={"100%"}
+          justify={"center"}
+          p={"2"}
+          mt={"4"}
+          className="hover:bg-navy-500 hover:text-white duration-200 text-dark-blue bg-white font-normal cursor-pointer rounded-lg"
+        >
+          <NavigationMenu.Item>
+            <NavigationMenu.Link href="/donate" target="" rel="noreferrer">
+              Donate
+            </NavigationMenu.Link>
+          </NavigationMenu.Item>
+        </Flex>
+      </Accordion.Root>
     </Flex>
   );
 };
