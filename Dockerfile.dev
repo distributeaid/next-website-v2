@@ -1,9 +1,29 @@
-FROM node:20.0.0-alpine
+FROM ubuntu:24.04
 
+# Define Node.js version
+ENV NODE_VERSION=20.0.0
+
+# Install system prerequisites, download Node.js binary, and extract it
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates \
+    curl \
+    xz-utils \
+    && rm -rf /var/lib/apt/lists/* \
+    && curl -fsSL "https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.xz" -o node.tar.xz \
+    && tar -xJf node.tar.xz -C /usr/local --strip-components=1 --no-same-owner \
+    && rm node.tar.xz
+
+# Set working directory inside the container
 WORKDIR /app
 
 # Copy package files for layer caching
 COPY --parents package.json yarn.lock .yarnrc.yml .yarn/ ./
+
+# Enable Corepack. Yarn installed with version fetched from 'packageManager' in package.json
+RUN corepack enable
+
+# Verify versions
+RUN node --version && yarn --version
 
 # Install dependencies with BuildKit cache mount
 RUN --mount=type=cache,target=/root/.yarn/cache yarn install --immutable

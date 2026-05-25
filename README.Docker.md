@@ -8,6 +8,8 @@ This project uses Docker Compose with the `watch` feature for an optimized devel
 
 ## Quick Start
 
+**IMPORTANT**: Ensure there is a `.env.local` file at the project root with necessary environment variables.
+
 Start the development environment:
 
 ```bash
