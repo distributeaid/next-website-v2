@@ -47,7 +47,8 @@ const MobileNavBar = () => {
                           <Flex
                             key={title}
                             as="div"
-                            p={"1"}
+                            py="3"
+                            px="1"
                             width={"100%"}
                             style={{
                               textDecorationThickness: "2px",
