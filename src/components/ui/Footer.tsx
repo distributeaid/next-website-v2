@@ -196,15 +196,15 @@ const Footer = () => {
                     href={social.link}
                     key={social.name}
                     target="_blank"
-                    className="hover:!bg-navy-500 hover:!text-white"
+                    className="sm:hover:!bg-navy-800 sm:hover:!text-white p-1.5"
                     aria-label={social.ariaLabel}
                     style={{
                       ...buttonStyle,
+                      color: "var(#082b76)",
                       borderRadius: "100%",
-                      padding: "var(--space-1)",
                     }}
                   >
-                    <social.icon size={20} />
+                    <social.icon size={30} />
                   </a>
                 ))}
               </Flex>
