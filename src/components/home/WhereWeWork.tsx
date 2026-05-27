@@ -35,13 +35,37 @@ const WhereWeWork = () => {
     <Section className="bg-slate-100 p-12" aria-labelledby={headingId}>
       <Box mb="9">
         <SectionHeading id={headingId}>Global Aid Network</SectionHeading>
-        <Flex gap="6" justify="center" mt="5" asChild>
+        <Flex
+          gap={{
+            initial: "3",
+            sm: "6",
+          }}
+          justify="center"
+          mt="5"
+          asChild
+        >
           <ul>
             {mapKey.map(({ label, color }) => (
               <li key={label}>
-                <Flex gap="3">
-                  <Box className={`size-8 rounded-full ${color}`} />
-                  <Text size="6">{label}</Text>
+                <Flex
+                  gap={{
+                    initial: "1",
+                    sm: "3",
+                  }}
+                  align="center"
+                >
+                  <Box
+                    className={`size-4 sm:size-6 md:size-8 rounded-full ${color}`}
+                  />
+                  <Text
+                    size={{
+                      initial: "2",
+                      sm: "4",
+                      md: "6",
+                    }}
+                  >
+                    {label}
+                  </Text>
                 </Flex>
               </li>
             ))}
