@@ -16,7 +16,7 @@ const NavBar = () => {
   const [nav, setNav] = useState(false);
 
   const donateButtonClassNames =
-    "hover:bg-navy-500 cursor-pointer hover:text-white duration-200 text-dark-blue bg-white rounded-lg py-3 px-6 ";
+    "cursor-pointer hover:scale-105 duration-200 text-dark-blue bg-white rounded-lg py-3 px-6 ";
 
   return (
     <>
