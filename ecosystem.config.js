@@ -10,6 +10,7 @@ module.exports = {
       env: {
         NODE_ENV: "production",
         NODE_OPTIONS: "--max-old-space-size=2048",
+        NEXT_TELEMETRY_DISABLED: "1",
       },
     },
   ],

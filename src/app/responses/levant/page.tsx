@@ -45,10 +45,18 @@ const HrtToolkit: FC = () => {
           {
             img: "https://res.cloudinary.com/dthervbn8/image/upload/f_auto/Responses/Levant/Anera%20Photo%20Library/Gaza/gaza_emergency-response_2024-february-20_IMG-20240220-WA0019-EDIT_vstfeb.jpg",
             alt: "The first about image",
+            attribution: {
+              name: "Anera",
+              href: "https://anera.org/",
+            },
           },
           {
             img: "https://res.cloudinary.com/dthervbn8/image/upload/f_auto/Responses/Levant/Anera%20Photo%20Library/Gaza/GazaAnera2024_fyn9zs.jpg",
             alt: "The second about image",
+            attribution: {
+              name: "Anera",
+              href: "https://anera.org/",
+            },
           },
         ]}
         ctaText="Send Aid to the Levant"
@@ -67,6 +75,10 @@ const HrtToolkit: FC = () => {
             title: "Give money",
             image:
               "https://res.cloudinary.com/dthervbn8/image/upload/f_auto/Responses/Levant/Anera%20Photo%20Library/Gaza/IMG-20240120-WA0010_1_ktrfxi.jpg",
+            imageAttribution: {
+              name: "Anera",
+              href: "https://anera.org/",
+            },
             buttonText: "Send Aid to the Levant",
             link: "https://www.omprakash.org/global/distribute-aid/crowdfund/send-aid-to-the-levant",
             children: (
@@ -81,6 +93,10 @@ const HrtToolkit: FC = () => {
             title: "Donate supplies",
             image:
               "https://res.cloudinary.com/dthervbn8/image/upload/f_auto/Responses/Levant/Anera%20Photo%20Library/Gaza/gaza_emergency-response_2024-february-18_IMG-20240218-WA0006-EDIT_1_pr2ap8.jpg",
+            imageAttribution: {
+              name: "Anera",
+              href: "https://anera.org/",
+            },
             buttonText: "Reach out to donate in kind",
             link: "mailto:donate-aid@distributeaid.org",
             children: (
