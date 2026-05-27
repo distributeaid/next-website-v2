@@ -12,6 +12,7 @@ import {
 import { FC, forwardRef } from "react";
 import Image from "next/image";
 import FundProgress from "@/components/donate/FundProgress";
+import currencyFormatter from "@/utils/currencyFormatter";
 
 type Props = {
   imgSrc: string | undefined;
@@ -71,7 +72,7 @@ const CampaignCard: FC<Props> = forwardRef<HTMLDivElement, Props>(
                 {title}
               </Heading>
               <Box asChild mb="4">
-                <Text size="3">Goal: €{goal}</Text>
+                <Text size="3">Goal: {currencyFormatter(goal)}</Text>
               </Box>
             </Box>
             <Flex gap="2" wrap={"wrap"} mx="1" mb="3" mt="auto">
