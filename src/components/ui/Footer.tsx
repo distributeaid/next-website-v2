@@ -23,7 +23,7 @@ const ColumnHeading = ({ children }: { children: React.ReactNode }) => (
 );
 
 const FooterLinks = () => (
-  <Flex align="center" gap="2" mt="4">
+  <Flex align="center" gap="2" mt="4" p={"1"}>
     <Text as="p" weight="medium">
       <Link
         href="https://distributeaid.org/whistleblowing-policy"
@@ -138,7 +138,7 @@ const Footer = () => {
               direction={{ initial: "row" }}
             >
               {FOOTER_COLUMNS.map((column, index) => (
-                <Flex key={`column-${index + 1}`} direction="column" gap="3">
+                <Flex key={`column-${index + 1}`} direction="column" gap="4">
                   {column.title && (
                     <ColumnHeading>{column.title}</ColumnHeading>
                   )}
@@ -154,7 +154,7 @@ const Footer = () => {
                           href={link.link}
                           target="_blank"
                           rel="noreferrer"
-                          className="hover:underline"
+                          className="hover:underline p-1 "
                         >
                           {link.name}
                         </a>
@@ -165,7 +165,7 @@ const Footer = () => {
                       <Link
                         key={link.name}
                         href={link.link}
-                        className="hover:underline"
+                        className="hover:underline p-1 "
                       >
                         {link.name}
                       </Link>
@@ -175,7 +175,7 @@ const Footer = () => {
               ))}
             </Flex>
 
-            <Flex direction="column" gap="3" width={{ sm: "30%" }}>
+            <Flex direction="column" gap="4" width={{ sm: "30%" }}>
               <ColumnHeading>Contact us</ColumnHeading>
 
               <Text>
