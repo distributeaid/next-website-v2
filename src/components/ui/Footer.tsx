@@ -50,7 +50,7 @@ const DonateLink = () => (
     style={{
       ...buttonStyle,
     }}
-    className="hover:!bg-navy-500 hover:!text-white cursor-pointer font-medium capitalize w-max py-3 px-5 rounded-md"
+    className="hover:scale-105 cursor-pointer font-medium capitalize w-max py-3 px-5 rounded-md"
   >
     <Link href="/donate" target="_blank" rel="noreferrer">
       Donate
