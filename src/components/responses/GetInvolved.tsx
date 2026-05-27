@@ -55,7 +55,7 @@ const GetInvolvedBox: FC<GetInvolvedBoxType> = ({
       )}
       <Image
         src={image}
-        className="w-full h-auto rounded-t-md max-h-[390px]"
+        className="w-full h-auto object-cover rounded-t-md lg:h-[460px]"
         objectFit="cover"
         width={400}
         height={390}
