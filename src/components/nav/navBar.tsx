@@ -8,196 +8,188 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { Box, Flex } from "@radix-ui/themes";
 import { SOCIAL_LINKS } from "@/data/constants";
 import Image from "next/image";
-import cx from "classnames";
 import MobileNavBar from "./mobileNavBar";
 import { links } from "@/data/navBarLinks";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
 
-  const donateButtonClassNames =
-    "cursor-pointer hover:scale-105 duration-200 text-dark-blue bg-white rounded-lg py-3 px-6 ";
+  const buttonClassNames =
+    "cursor-pointer hover:scale-105 text-dark-blue bg-white rounded-lg py-3.5 px-6";
+  const linkClassNames =
+    "hover:underline decoration-2 underline-offset-8 whitespace-nowrap";
 
   return (
-    <>
-      {/* Desktop Menu */}
-      <NavigationMenu.Root orientation="horizontal">
-        <NavigationMenu.List>
+    <NavigationMenu.Root orientation="horizontal">
+      <NavigationMenu.List>
+        <Flex
+          className="w-full text-white z-50 border-b-2 border-seafoam-500 bg-navy-800"
+          position={"fixed"}
+          height={"80px"}
+          px={"4"}
+          justify={"between"}
+          align={"center"}
+        >
           <Flex
-            className="w-full text-white z-50 border-b-2 border-seafoam-500 bg-navy-800"
-            position={"fixed"}
-            height={"80px"}
-            px={"4"}
-            justify={"between"}
             align={"center"}
+            mx={"4"}
+            ml={{ initial: "3", lg: "100px" }}
+            justify={{ initial: "start", md: "center" }}
+            gap={"6"}
           >
-            <Flex
-              align={"center"}
-              mx={"4"}
-              ml={{ initial: "3", lg: "100px" }}
-              justify={{ initial: "start", md: "center" }}
-              gap={"6"}
-            >
-              {/*DA logo */}
-              <NavigationMenu.Item className="z-40">
-                <NavigationMenu.Link
-                  href="/"
-                  target=""
-                  rel="noreferrer"
-                  aria-label="Distribute Aid — go to homepage"
-                >
-                  <LogoMark
-                    width="50"
-                    height={(60 / 70) * 50}
-                    aria-hidden="true"
-                  />
-                </NavigationMenu.Link>
-              </NavigationMenu.Item>
-
-              {/* Social media links */}
-              <Flex
-                display={{ initial: "none", sm: "flex" }}
-                justify={"center"}
-                gapX={"2"}
+            <NavigationMenu.Item className="z-40">
+              <NavigationMenu.Link
+                href="/"
+                target=""
+                rel="noreferrer"
+                aria-label="Distribute Aid — go to homepage"
               >
-                {SOCIAL_LINKS.map((social) => (
-                  <NavigationMenu.Item
-                    key={social.name}
-                    aria-label={social.ariaLabel}
-                  >
-                    <NavigationMenu.Link href={social.link} target="_blank">
-                      <Box className="relative w-[30px] h-[30px]">
-                        <Image
-                          src={`/images/icons/icon-social-${social.name.toLowerCase()}.svg`}
-                          alt={social.name}
-                          fill
-                        />
-                      </Box>
-                    </NavigationMenu.Link>
-                  </NavigationMenu.Item>
-                ))}
-              </Flex>
+                <LogoMark
+                  width="50"
+                  height={(60 / 70) * 50}
+                  aria-hidden="true"
+                />
+              </NavigationMenu.Link>
+            </NavigationMenu.Item>
 
-              {/*NewsLetter  */}
-              <Box display={{ initial: "none", sm: "block" }}>
-                <NavigationMenu.Item>
-                  <NavigationMenu.Link href="#newsletter-signup">
-                    Newsletter
-                  </NavigationMenu.Link>
-                </NavigationMenu.Item>
-              </Box>
-            </Flex>
-            {/* page links */}
             <Flex
-              gapX={"40px"}
-              justify={"end"}
-              align={"center"}
-              mr={"100px"}
-              display={{ initial: "none", md: "flex" }}
-              className="font-medium"
+              display={{ initial: "none", sm: "flex" }}
+              justify={"center"}
+              gapX={"2"}
             >
-              {links.map(({ title, url, isSubMenu, subMenu }) => (
+              {SOCIAL_LINKS.map((social) => (
                 <NavigationMenu.Item
-                  className={cx({
-                    "hover:underline decoration-2 underline-offset-8":
-                      title !== "Donate",
-                    [donateButtonClassNames]: title === "Donate",
-                  })}
-                  key={title}
+                  key={social.name}
+                  aria-label={social.ariaLabel}
                 >
-                  {/* SubMenu */}
-                  {isSubMenu ? (
-                    <Box className="group">
-                      <Flex position={"relative"} align={"center"} asChild>
-                        <NavigationMenu.Trigger>
-                          <NavigationMenu.Link href={url}>
-                            {title}
-                          </NavigationMenu.Link>
-                          <FaChevronDown className="ml-2 transition-transform duration-200 group-hover:rotate-180" />
-                        </NavigationMenu.Trigger>
-                      </Flex>
-                      <Flex
-                        asChild
-                        position={"absolute"}
-                        maxWidth={"160px"}
-                        mt={"3"}
-                        className="shadow-md bg-white z-10 border rounded-md"
-                      >
-                        <NavigationMenu.Content>
-                          <NavigationMenu.Sub>
-                            <NavigationMenu.List>
-                              {subMenu?.map(({ title, url }) => (
-                                <NavigationMenu.Item key={title}>
-                                  <NavigationMenu.Link href={url}>
-                                    <Flex
-                                      width="100%"
-                                      py="1"
-                                      px="4"
-                                      className="hover:bg-navy-200 text-black"
-                                    >
-                                      {title}
-                                    </Flex>
-                                  </NavigationMenu.Link>
-                                </NavigationMenu.Item>
-                              ))}
-                            </NavigationMenu.List>
-                            <NavigationMenu.Viewport />
-                          </NavigationMenu.Sub>
-                        </NavigationMenu.Content>
-                      </Flex>
+                  <NavigationMenu.Link href={social.link} target="_blank">
+                    <Box className="relative w-[30px] h-[30px]">
+                      <Image
+                        src={`/images/icons/icon-social-${social.name.toLowerCase()}.svg`}
+                        alt={social.name}
+                        fill
+                      />
                     </Box>
-                  ) : (
-                    <NavigationMenu.Link href={url}>
-                      {title}
-                    </NavigationMenu.Link>
-                  )}
+                  </NavigationMenu.Link>
                 </NavigationMenu.Item>
               ))}
             </Flex>
 
-            {/* Mobile Top Navbar */}
-            <Flex
-              id="mobile-nav"
-              gap={"4"}
-              align={"center"}
-              display={{ initial: "flex", md: "none" }}
-            >
-              {/* Donate Button */}
-              {!nav && (
-                <Box
-                  asChild
-                  px={"5"}
-                  py={"3"}
-                  className={donateButtonClassNames}
-                >
-                  <Link href="/donate" rel="noreferrer">
-                    Donate
-                  </Link>
-                </Box>
-              )}
-              {/* Hamburger Icon */}
-              <button
-                className="text-white z-40 cursor-pointer bg-transparent border-none"
-                onClick={() => setNav(!nav)}
-                aria-label={
-                  nav ? "Close navigation menu" : "Open navigation menu"
-                }
-                aria-expanded={nav}
-                aria-controls="mobile-nav"
-              >
-                {nav ? (
-                  <FaTimes size={30} aria-hidden="true" />
-                ) : (
-                  <FaBars size={30} aria-hidden="true" />
-                )}
-              </button>
-            </Flex>
-            {/* Mobile Menu */}
-            {nav && <MobileNavBar shouldShowNav={setNav} />}
+            <Box display={{ initial: "none", sm: "block" }}>
+              <NavigationMenu.Item>
+                <NavigationMenu.Link href="#newsletter-signup">
+                  Newsletter
+                </NavigationMenu.Link>
+              </NavigationMenu.Item>
+            </Box>
           </Flex>
-        </NavigationMenu.List>
-      </NavigationMenu.Root>
-    </>
+          <Flex
+            gapX={"40px"}
+            justify={"end"}
+            align={"center"}
+            mr={"100px"}
+            display={{ initial: "none", md: "flex" }}
+            className="font-medium"
+          >
+            {links.map(({ title, url, isSubMenu, subMenu, isButton }) => (
+              <NavigationMenu.Item key={title}>
+                {isSubMenu ? (
+                  <Box className="group">
+                    <Flex position={"relative"} align={"center"} asChild>
+                      <NavigationMenu.Trigger>
+                        <NavigationMenu.Link
+                          href={url}
+                          className={
+                            isButton ? buttonClassNames : linkClassNames
+                          }
+                        >
+                          {title}
+                        </NavigationMenu.Link>
+                        <FaChevronDown className="ml-2 transition-transform duration-200 group-hover:rotate-180" />
+                      </NavigationMenu.Trigger>
+                    </Flex>
+                    <Flex
+                      asChild
+                      position={"absolute"}
+                      maxWidth={"160px"}
+                      mt={"3"}
+                      className="shadow-md bg-white z-10 border rounded-md"
+                    >
+                      <NavigationMenu.Content>
+                        <NavigationMenu.Sub>
+                          <NavigationMenu.List>
+                            {subMenu?.map(({ title, url }) => (
+                              <NavigationMenu.Item key={title}>
+                                <NavigationMenu.Link href={url}>
+                                  <Flex
+                                    width="100%"
+                                    py="1"
+                                    px="4"
+                                    className="hover:bg-navy-200 text-black"
+                                  >
+                                    {title}
+                                  </Flex>
+                                </NavigationMenu.Link>
+                              </NavigationMenu.Item>
+                            ))}
+                          </NavigationMenu.List>
+                          <NavigationMenu.Viewport />
+                        </NavigationMenu.Sub>
+                      </NavigationMenu.Content>
+                    </Flex>
+                  </Box>
+                ) : (
+                  <NavigationMenu.Link
+                    href={url}
+                    className={isButton ? buttonClassNames : linkClassNames}
+                  >
+                    {title}
+                  </NavigationMenu.Link>
+                )}
+              </NavigationMenu.Item>
+            ))}
+          </Flex>
+
+          {/* Mobile Top Navbar */}
+          <Flex
+            id="mobile-nav"
+            gap={"4"}
+            align={"center"}
+            display={{ initial: "flex", md: "none" }}
+          >
+            {/* Donate Button */}
+            {!nav && (
+              <Link
+                href="/donate"
+                rel="noreferrer"
+                className={buttonClassNames}
+              >
+                Donate
+              </Link>
+            )}
+            {/* Hamburger Icon */}
+            <button
+              type="button"
+              className="text-white z-40 cursor-pointer bg-transparent border-none"
+              onClick={() => setNav(!nav)}
+              aria-label={
+                nav ? "Close navigation menu" : "Open navigation menu"
+              }
+              aria-expanded={nav}
+              aria-controls="mobile-nav"
+            >
+              {nav ? (
+                <FaTimes size={30} aria-hidden="true" />
+              ) : (
+                <FaBars size={30} aria-hidden="true" />
+              )}
+            </button>
+          </Flex>
+          {/* Mobile Menu */}
+          {nav && <MobileNavBar shouldShowNav={setNav} />}
+        </Flex>
+      </NavigationMenu.List>
+    </NavigationMenu.Root>
   );
 };
 

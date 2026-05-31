@@ -1,6 +1,14 @@
 import * as Messages from "@/data/messages";
 
-export const links = [
+type NavBarLink = {
+  title: string;
+  url: string;
+  isSubMenu?: boolean;
+  subMenu?: NavBarLink[];
+  isButton?: boolean;
+};
+
+export const links: NavBarLink[] = [
   {
     title: "Home",
     url: "/",
@@ -127,5 +135,6 @@ export const links = [
     title: Messages.DONATE_PAGE_TITLE,
     url: "/donate",
     isSubMenu: false,
+    isButton: true,
   },
 ];
