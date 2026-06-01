@@ -18,3 +18,15 @@ export const TEAM_PAGE_TITLE = "Team";
 export const TECH_PAGE_TITLE = "Tech";
 
 export const DONATE_PAGE_TITLE = "Donate";
+
+export const RESPONSES_PAGE_TITLE = "Responses";
+
+export const US_DISASTER_PREPAREDNESS_RESPONSE_PAGE_TITLE =
+  "US Disaster Preparedness";
+
+export const LEVANT_RESPONSE_PAGE_TITLE = "Levant Response";
+
+export const REFUGEE_SUPPORT_EUROPE_RESPONSE_PAGE_TITLE =
+  "Refugee Support Europe";
+
+export const HRT_TOOLKIT_RESPONSE_PAGE_TITLE = "HRT Harm Reduction Toolkit";

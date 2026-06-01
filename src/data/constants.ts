@@ -359,7 +359,19 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
         link: "/resources/assort",
       },
       {
-        name: "HRT Harm Reduction Toolkit",
+        name: Messages.US_DISASTER_PREPAREDNESS_RESPONSE_PAGE_TITLE,
+        link: "/responses/us-disaster-preparedness",
+      },
+      {
+        name: Messages.LEVANT_RESPONSE_PAGE_TITLE,
+        link: "/responses/levant",
+      },
+      {
+        name: Messages.REFUGEE_SUPPORT_EUROPE_RESPONSE_PAGE_TITLE,
+        link: "/responses/refugee-support-eu",
+      },
+      {
+        name: Messages.HRT_TOOLKIT_RESPONSE_PAGE_TITLE,
         link: "/responses/hrt-toolkit",
       },
     ],
