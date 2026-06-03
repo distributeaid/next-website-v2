@@ -42,5 +42,6 @@ async function strapiGet(
 export async function getTeam(): Promise<TeamMember[]> {
   const response = await strapiGet("members", { populate: "*" });
   const jsonData = await response.json();
+  console.log(JSON.stringify(jsonData, null, 2));
   return jsonData.data;
 }

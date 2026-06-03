@@ -36,9 +36,9 @@ export const TeamMembers: FC<TeamMembersProps> = ({
       {people.map((item, index) => (
         <li key={`exec-${index}`} className="inline-block">
           <TeamCard
-            name={`${item.Name} ${item.Pronouns}`}
-            title={item.Roles[0].Title}
-            photo={`${item.Profile.url}`}
+            name={`${item.name} ${item.pronouns}`}
+            title={item.roles[0].title}
+            photo={`${item.profile.url}`}
           />
         </li>
       ))}
