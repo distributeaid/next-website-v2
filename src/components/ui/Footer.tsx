@@ -196,11 +196,10 @@ const Footer = () => {
                     href={social.link}
                     key={social.name}
                     target="_blank"
-                    className="sm:hover:!bg-navy-800 sm:hover:!text-white p-1.5"
+                    className="sm:hover:!bg-navy-700 sm:hover:!text-white text-navy-800 p-1.5"
                     aria-label={social.ariaLabel}
                     style={{
                       ...buttonStyle,
-                      color: "var(#082b76)",
                       borderRadius: "100%",
                     }}
                   >
