@@ -26,14 +26,12 @@ const NavBar = () => {
           className="w-full text-white z-50 border-b-2 border-seafoam-500 bg-navy-800"
           position={"fixed"}
           height={"80px"}
-          px={"4"}
+          px={{ initial: "24px", lg: "100px" }}
           justify={"between"}
           align={"center"}
         >
           <Flex
             align={"center"}
-            mx={"4"}
-            ml={{ initial: "3", lg: "100px" }}
             justify={{ initial: "start", md: "center" }}
             gap={"6"}
           >
@@ -87,7 +85,6 @@ const NavBar = () => {
             gapX={"40px"}
             justify={"end"}
             align={"center"}
-            mr={"100px"}
             display={{ initial: "none", md: "flex" }}
             className="font-medium"
           >
