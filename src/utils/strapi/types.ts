@@ -13,5 +13,11 @@ export interface StrapiMedia {
 
 export interface TeamMemberRole {
   title: string;
-  type: string;
+  type: TeamMemberRoleType;
 }
+
+export type TeamMemberRoleType =
+  | "director"
+  | "board member"
+  | "coordinator"
+  | "volunteer";
