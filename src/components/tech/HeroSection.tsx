@@ -92,8 +92,10 @@ const HeroSection = () => {
               <Link href="mailto:tech@distributeaid.org">
                 <Button size="4">Join Our Team</Button>
               </Link>
-              <Link >
-                <Button className="bg-white text-dark-blue" size="4">Become A Sponsor</Button>
+              <Link>
+                <Button className="bg-white text-dark-blue" size="4">
+                  Become A Sponsor
+                </Button>
               </Link>
             </Flex>
           </Flex>
