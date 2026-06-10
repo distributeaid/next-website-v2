@@ -17,6 +17,7 @@ const page = () => {
       direction="column"
       align="center"
       justify="start"
+      px="2"
     >
       <Box
         width="100%"
