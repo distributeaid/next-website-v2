@@ -1,5 +1,13 @@
 import { FC } from "react";
-import { Button, Em, Flex, Heading, Section, Text, Box } from "@radix-ui/themes";
+import {
+  Button,
+  Em,
+  Flex,
+  Heading,
+  Section,
+  Text,
+  Box,
+} from "@radix-ui/themes";
 import Link from "next/link";
 import { NumbersCard } from "../NumbersCard";
 import { kitsInNumbersValues as values } from "../../../data/hrtToolkitData";
@@ -74,31 +82,37 @@ export const HrtKitsInNumbers: FC = () => {
         </Flex>
       </Flex>
       <Flex align="center" justify="center" mt="4">
-        <HRTNumbersCard
-            amount={values.partialKits}
-            background="navy-800"
-            color="white"
-            direction="row"
-            icon="/images/icons/icon-currency-dollar.svg"
-            iconAlt="money"
-            maxWidth="740px"
-          >
-            <Text size="6" weight="light">
-                Partial Kits - Donate to complete kits!
-            </Text>
-            <Box>
-              <Button className="bg-white text-navy-800" size="4" asChild mb="2" ml="5">
-                <Link
-                  href="https://www.omprakash.org/global/distribute-aid/crowdfund/hrt---harm-reduction-toolkit"
-                  target={"_blank"}
-                  rel="noopener noreferrer"
-                >
-                  Donate
-                </Link>
-              </Button>
-            </Box>
-          </HRTNumbersCard>
-        </Flex>
+        <NumbersCard
+          amount={values.partialKits}
+          background="navy-800"
+          color="white"
+          direction="row"
+          icon="/images/icons/icon-currency-dollar.svg"
+          iconAlt="money"
+          maxWidth="740px"
+        >
+          <Text size="6" weight="light">
+            Partial Kits - Donate to complete kits!
+          </Text>
+          <Box>
+            <Button
+              className="bg-white text-navy-800"
+              size="4"
+              asChild
+              mb="2"
+              ml="5"
+            >
+              <Link
+                href="https://www.omprakash.org/global/distribute-aid/crowdfund/hrt---harm-reduction-toolkit"
+                target={"_blank"}
+                rel="noopener noreferrer"
+              >
+                Donate
+              </Link>
+            </Button>
+          </Box>
+        </NumbersCard>
+      </Flex>
     </Section>
   );
 };
