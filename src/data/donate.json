@@ -28,5 +28,12 @@
     "img": "/images/photos/0636b318-b9d2-45b5-b2f1-61bf8ab76ee3.webp",
     "img_link": "",
     "slug": "aid-to-levant"
+  },
+  {
+    "title": "Refugee Week",
+    "raised": 9617.71,
+    "goal_price": 75000,
+    "img": "/images/photos/refugee-week.jpg",
+    "slug": "refugee-week"
   }
 ]
