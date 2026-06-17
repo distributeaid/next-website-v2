@@ -50,7 +50,7 @@ export const SectionHeading = ({ id, children }: SectionHeadingProps) => (
     weight="bold"
     align="center"
     mb="4"
-    className="font-yantramanav font-bold text-[60px] leading-[60px] tracking-[-0.16px] text-navy-700"
+    className="font-yantramanav font-bold text-[60px] leading-[60px] tracking-[-0.16px] text-navy-900"
     id={id}
   >
     {children}
