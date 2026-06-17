@@ -1,6 +1,7 @@
 services:
   frontend_dev:
     image: frontend:dev
+    platform: linux/amd64 # Forces to use the x86_64 (amd64) architecture for better compatibility
     pull_policy: never
     build:
       context: .

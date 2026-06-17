@@ -24,7 +24,8 @@ Application will be available at http://localhost:3000.
 
 The development Dockerfile is optimized for local development:
 
-- **Base Image**: `node:20.0.0-alpine` - Lightweight Alpine-based Node.js image
+- **Base Image**: `ubuntu:24.04` (Ubuntu-based image with manually installed Node.js 20.0.0 binary)
+- **Node.js Installation**: Downloads and extracts Node.js binary for better compatibility
 - **Working Directory**: `/app`
 - **Dependency Installation**: Uses BuildKit cache mount for faster, cached yarn installations
 - **Immutable Mode**: Dependencies are installed with `--immutable` flag for reproducible builds
@@ -35,6 +36,7 @@ The development Dockerfile is optimized for local development:
 The `docker-compose.yml` file defines a single service `frontend_dev` with the following features:
 
 - **Image**: `frontend:dev` (built locally, never pulled from registry)
+- **Platform**: `linux/amd64` (forces the container to run on x86_64 (amd64) architecture for better compatibility, especially on Apple Silicon Macs (M1/M2/M3))
 - **Container Name**: `frontend-dev`
 - **Port Mapping**: `3000:3000` (host:container)
 - **Environment File**: `.env.local`
