@@ -84,7 +84,13 @@ const GetInvolved = () => {
         </ul>
       </Grid>
 
-      <Box className="bg-fuchsia-100" id="newsletter-signup">
+      <Box
+        style={{
+          backgroundColor: "var(--pink-5)",
+        }}
+        className="text-navy-900"
+        id="newsletter-signup"
+      >
         <Box py="8" px="4" maxWidth="1242px" mx="auto">
           <Heading as="h3" size="8">
             Stay Connected With Distribute Aid
@@ -95,7 +101,7 @@ const GetInvolved = () => {
             aid efforts. No spam—just meaningful insights, once a month.
           </Text>
           {newsletterSuccess ? (
-            <Box className="text-center" m="5">
+            <Box className="text-center " m="5">
               <Heading size="7">Success!</Heading>
               <Text size="4">
                 Thanks for signing up! Please check your email to confirm your
