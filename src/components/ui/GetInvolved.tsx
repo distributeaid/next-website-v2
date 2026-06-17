@@ -51,7 +51,6 @@ const GetInvolved = () => {
           initial: "1",
           md: "3",
         }}
-        gap="9"
         asChild
         mt="8"
         mb="9"
@@ -60,9 +59,9 @@ const GetInvolved = () => {
           {getInvolvedLinks.map(
             ({ label, buttonLabel, href, bgColor, Icon }) => (
               <li key={label}>
-                <Flex key={label} direction="column" align="center" gap="6">
+                <Flex key={label} direction="column" align="center" gap="5">
                   <Flex
-                    className="h-[228px] w-[228px] rounded-full"
+                    className="size-48 rounded-full"
                     style={{
                       backgroundColor: bgColor,
                     }}
@@ -71,10 +70,10 @@ const GetInvolved = () => {
                   >
                     <Icon />
                   </Flex>
-                  <Text weight="medium" size="8">
+                  <Text weight="medium" size="7">
                     {label}
                   </Text>
-                  <Button size="3" asChild>
+                  <Button size="4" asChild>
                     <a href={href}>{buttonLabel ?? label}</a>
                   </Button>
                 </Flex>
