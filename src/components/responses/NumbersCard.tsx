@@ -29,7 +29,9 @@ export const NumbersCard: FC<NumbersCardProps> = ({
 }) => {
   return (
     <Flex
-      className={`text-${color} bg-${background} rounded-xl box-border`}
+      className={`text-${color} bg-${background} rounded-xl box-border ${
+        direction === "row" ? "justify-around" : ""
+      }`}
       direction={direction}
       align="center"
       mx="4"

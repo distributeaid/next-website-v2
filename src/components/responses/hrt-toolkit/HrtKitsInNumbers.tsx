@@ -31,7 +31,7 @@ export const HrtKitsInNumbers: FC = () => {
           background="circle-green"
           color="white"
           direction="column"
-          icon="/images/icons/icon-medical-kit.svg"
+          icon="/images/icons/icon-calendar.svg"
           iconAlt="medical kit"
           maxWidth="350px"
         >
@@ -87,7 +87,7 @@ export const HrtKitsInNumbers: FC = () => {
           background="navy-800"
           color="white"
           direction="row"
-          icon="/images/icons/icon-currency-dollar.svg"
+          icon="/images/icons/icon-partial-kit.svg"
           iconAlt="money"
           maxWidth="740px"
         >
