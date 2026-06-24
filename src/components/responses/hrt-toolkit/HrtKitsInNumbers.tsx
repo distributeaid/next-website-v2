@@ -26,8 +26,8 @@ export const HrtKitsInNumbers: FC = () => {
           icon="/images/icons/icon-medical-kit.svg"
           iconAlt="medical kit"
         >
-          <Text as="p" size="8" weight="light">
-            PARTIAL KITS
+          <Text as="p" size="8" weight="light" align="center">
+            YEARS OF HRT SUPPORTED
           </Text>
           <Text as="p" size="5" weight="bold" align="center">
             <Em>Donate to complete kits!</Em>
@@ -70,6 +70,29 @@ export const HrtKitsInNumbers: FC = () => {
           </NumbersCard>
         </Flex>
       </Flex>
+      <Flex align="center" justify="center" mt="2">
+        <HRTNumbersCard
+            amount={values.partialKits}
+            background="navy-800"
+            color="white"
+            direction="row"
+            icon="/images/icons/icon-currency-dollar.svg"
+            iconAlt="money"
+          >
+            <Text size="6" weight="light">
+                Partial Kits - Donate to complete kits!
+            </Text>
+            <Button className="bg-white text-navy-800" size="4" asChild>
+              <Link
+                href="https://www.omprakash.org/global/distribute-aid/crowdfund/hrt---harm-reduction-toolkit"
+                target={"_blank"}
+                rel="noopener noreferrer"
+              >
+                Donate
+              </Link>
+            </Button>
+          </HRTNumbersCard>
+        </Flex>
     </Section>
   );
 };
