@@ -1,4 +1,5 @@
 import { Flex, Heading, Button, Box, Link } from "@radix-ui/themes";
+import { Fragment } from "react";
 import Image from "next/image";
 import siteSettings from "@/data/site-settings.json";
 import TextMark from "../../../public/images/TextMark";
@@ -25,7 +26,7 @@ const HeroSection = ({
     <Box>
       <Flex
         mb={{ initial: "270px", sm: "180px", lg: "245px" }}
-        height={{ initial: "590px", sm: "550px" }}
+        height={{ initial: "590px", sm: "450px", lg: "500px" }}
         className="shadow-xl bg-blue-900"
       >
         <Flex
@@ -39,7 +40,7 @@ const HeroSection = ({
         >
           <Box
             position={"absolute"}
-            height={{ initial: "400px", sm: "550px", lg: "733px" }}
+            height={{ initial: "400px", sm: "550px", lg: "590px" }}
             width={{ initial: "100%", sm: "70%" }}
             className="min-[1280px]:rounded-br-[32px] overflow-hidden"
           >
@@ -49,7 +50,7 @@ const HeroSection = ({
           <Flex
             direction={"column"}
             position={"relative"}
-            bottom={{ initial: "-240px", sm: "-131px", lg: "0" }}
+            bottom={{ initial: "-240px", sm: "-131px", lg: "50px" }}
             justify="end"
             align={{ initial: "center", sm: "start" }}
             left={{ lg: "-27%" }}
@@ -58,14 +59,26 @@ const HeroSection = ({
             width={"100%"}
           >
             {hasLogo && <TextMark width="240px" />}
-            <Box maxWidth={{ initial: "410px" }}>
+            <Box maxWidth={{ initial: "540px" }}>
               <Heading
                 as="h1"
                 size={{ initial: "8", sm: "9" }}
                 className="text-white md:leading-[4.5rem]"
                 align={{ initial: "center", sm: "left" }}
+                style={{
+                  textShadow: "1px 5px 8px rgba(3, 3, 3, 0.35);",
+                }}
               >
-                {heading}
+                {heading.split(",").map((part, i) => (
+                  <Fragment key={i}>
+                    {part}
+                    {i < heading.split(",").length - 1 && (
+                      <>
+                        ,<br />
+                      </>
+                    )}
+                  </Fragment>
+                ))}
               </Heading>
             </Box>
             {/* link container */}
