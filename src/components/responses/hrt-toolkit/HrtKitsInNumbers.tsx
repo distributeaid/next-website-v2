@@ -27,7 +27,7 @@ export const HrtKitsInNumbers: FC = () => {
       </Heading>
       <Flex gap="2" className="flex-wrap" align="center" justify="center">
         <NumbersCard
-          amount={values.partialKits}
+          amount={values.yearsSupported}
           background="circle-green"
           color="white"
           direction="column"
@@ -38,33 +38,8 @@ export const HrtKitsInNumbers: FC = () => {
           <Text as="p" size="8" weight="light" align="center">
             YEARS OF HRT SUPPORTED
           </Text>
-          <Text as="p" size="5" weight="bold" align="center">
-            <Em>Donate to complete kits!</Em>
-          </Text>
-          <Button className="bg-white text-navy-800" size="4" asChild>
-            <Link
-              href="https://www.omprakash.org/global/distribute-aid/crowdfund/hrt---harm-reduction-toolkit"
-              target={"_blank"}
-              rel="noopener noreferrer"
-            >
-              Donate
-            </Link>
-          </Button>
         </NumbersCard>
         <Flex height="360px" justify="between" direction="column">
-          <NumbersCard
-            amount={values.producedKits}
-            background="navy-300"
-            color="navy-800"
-            direction="row"
-            icon="/images/icons/icon-medical-kit-blue.svg"
-            iconAlt="medical kit"
-            maxWidth="350px"
-          >
-            <Text size="6" weight="light">
-              KITS PRODUCED SO FAR
-            </Text>
-          </NumbersCard>
           <NumbersCard
             amount={values.saved}
             background="navy-800"
@@ -77,6 +52,19 @@ export const HrtKitsInNumbers: FC = () => {
           >
             <Text size="4" weight="light">
               SAVED FOR THE TRANS COMMUNITY
+            </Text>
+          </NumbersCard>
+          <NumbersCard
+            amount={values.itemsSourced}
+            background="navy-300"
+            color="navy-800"
+            direction="row"
+            icon="/images/icons/icon-medical-kit-blue.svg"
+            iconAlt="medical kit"
+            maxWidth="350px"
+          >
+            <Text size="6" weight="light">
+              ITEMS SOURCED
             </Text>
           </NumbersCard>
         </Flex>
