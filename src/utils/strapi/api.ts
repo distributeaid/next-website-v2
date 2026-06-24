@@ -1,5 +1,5 @@
 "use server";
-import { TeamMember } from "./types";
+import type { TeamMember, TeamMemberRoleType } from "./types";
 
 // The universal get function for the strapi API.
 // The path you use here depends on the data you're looking for
@@ -39,8 +39,23 @@ async function strapiGet(
 }
 
 // Pulls a list of team members from the strapi API
-export async function getTeam(): Promise<TeamMember[]> {
-  const response = await strapiGet("members", { populate: "*" });
+// optionally filtered by role type
+export async function getTeam(
+  roleType?: TeamMemberRoleType,
+): Promise<TeamMember[]> {
+  let query: { [key: string]: any } = {
+    populate: "*",
+  };
+
+  if (roleType) {
+    query = {
+      ...query,
+      "filters[roles][type][$eq]": roleType,
+    };
+  }
+
+  const response = await strapiGet("members", query);
   const jsonData = await response.json();
+  console.log(JSON.stringify(jsonData, null, 2));
   return jsonData.data;
 }

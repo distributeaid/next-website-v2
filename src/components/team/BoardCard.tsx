@@ -16,8 +16,8 @@ export const BoardCard = ({ bgColor, teamMember }: CardProps) => {
           <div className="pt-7 px-7 w-full">
             <Box className="rounded-md overflow-hidden aspect-[4/3] w-full">
               <Image
-                src={teamMember.Profile.url}
-                alt={`Photo of ${teamMember.Name}`}
+                src={teamMember.profile.url}
+                alt={`Photo of ${teamMember.name}`}
                 width={400}
                 height={400}
                 className="object-cover object-center w-full translate-y-[-15%]"
@@ -29,7 +29,7 @@ export const BoardCard = ({ bgColor, teamMember }: CardProps) => {
               weight="bold"
               className="pt-3 flex justify-center"
             >
-              {teamMember.Name.toUpperCase()}
+              {teamMember.name.toUpperCase()}
             </Heading>
           </div>
           <Text
@@ -40,7 +40,7 @@ export const BoardCard = ({ bgColor, teamMember }: CardProps) => {
             weight="medium"
             className="text-center h-full pt-10 px-4 pb-8 flex flex-col justify-center"
           >
-            <MarkdownContent content={teamMember.Bio} />
+            <MarkdownContent content={teamMember.bio} />
           </Text>
         </Flex>
       </Box>

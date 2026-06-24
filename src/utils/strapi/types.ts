@@ -1,10 +1,10 @@
 export interface TeamMember {
   id: string;
-  Name: string;
-  Bio: string;
-  Pronouns: string;
-  Profile: StrapiMedia;
-  Roles: TeamMemberRole[];
+  name: string;
+  bio: string;
+  pronouns: string;
+  profile: StrapiMedia;
+  roles: TeamMemberRole[];
 }
 
 export interface StrapiMedia {
@@ -12,6 +12,12 @@ export interface StrapiMedia {
 }
 
 export interface TeamMemberRole {
-  Title: string;
-  Type: string;
+  title: string;
+  type: TeamMemberRoleType;
 }
+
+export type TeamMemberRoleType =
+  | "director"
+  | "board member"
+  | "coordinator"
+  | "volunteer";

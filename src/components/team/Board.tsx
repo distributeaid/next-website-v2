@@ -15,8 +15,9 @@ const Board = async () => {
     return colors[Math.abs(hash) % colors.length];
   };
 
-  const team = await getTeam();
+  const team = await getTeam("board member");
   const { STRAPI_URL } = process.env;
+
   return (
     <>
       <Box
