@@ -10,15 +10,18 @@ import { SOCIAL_LINKS } from "@/data/constants";
 import Image from "next/image";
 import MobileNavBar from "./mobileNavBar";
 import { links } from "@/data/navBarLinks";
+import { usePathname } from "next/navigation";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
-
+  const pathname = usePathname();
   const buttonClassNames =
     "cursor-pointer hover:scale-105 text-dark-blue bg-white rounded-lg py-3.5 px-6";
   const linkClassNames =
     "hover:underline decoration-2 underline-offset-8 whitespace-nowrap";
 
+  const isActive = (url: string) =>
+    pathname === url || pathname.startsWith(`${url}/`);
   return (
     <NavigationMenu.Root orientation="horizontal">
       <NavigationMenu.List>
@@ -97,7 +100,9 @@ const NavBar = () => {
                         <NavigationMenu.Link
                           href={url}
                           className={
-                            isButton ? buttonClassNames : linkClassNames
+                            isButton
+                              ? buttonClassNames
+                              : `${linkClassNames} ${isActive(url) && "underline"}`
                           }
                         >
                           {title}
@@ -138,7 +143,11 @@ const NavBar = () => {
                 ) : (
                   <NavigationMenu.Link
                     href={url}
-                    className={isButton ? buttonClassNames : linkClassNames}
+                    className={
+                      isButton
+                        ? buttonClassNames
+                        : `${linkClassNames} ${isActive(url) && "underline"}`
+                    }
                   >
                     {title}
                   </NavigationMenu.Link>
