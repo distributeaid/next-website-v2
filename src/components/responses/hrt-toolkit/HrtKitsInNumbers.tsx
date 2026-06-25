@@ -1,5 +1,13 @@
 import { FC } from "react";
-import { Button, Em, Flex, Heading, Section, Text } from "@radix-ui/themes";
+import {
+  Button,
+  Em,
+  Flex,
+  Heading,
+  Section,
+  Text,
+  Box,
+} from "@radix-ui/themes";
 import Link from "next/link";
 import { NumbersCard } from "../NumbersCard";
 import { kitsInNumbersValues as values } from "../../../data/hrtToolkitData";
@@ -19,42 +27,19 @@ export const HrtKitsInNumbers: FC = () => {
       </Heading>
       <Flex gap="2" className="flex-wrap" align="center" justify="center">
         <NumbersCard
-          amount={values.partialKits}
+          amount={values.yearsSupported}
           background="circle-green"
           color="white"
           direction="column"
-          icon="/images/icons/icon-medical-kit.svg"
+          icon="/images/icons/icon-calendar.svg"
           iconAlt="medical kit"
+          maxWidth="350px"
         >
-          <Text as="p" size="8" weight="light">
-            PARTIAL KITS
+          <Text as="p" size="8" weight="light" align="center">
+            YEARS OF HRT SUPPORTED
           </Text>
-          <Text as="p" size="5" weight="bold" align="center">
-            <Em>Donate to complete kits!</Em>
-          </Text>
-          <Button className="bg-white text-navy-800" size="4" asChild>
-            <Link
-              href="https://www.omprakash.org/global/distribute-aid/crowdfund/hrt---harm-reduction-toolkit"
-              target={"_blank"}
-              rel="noopener noreferrer"
-            >
-              Donate
-            </Link>
-          </Button>
         </NumbersCard>
         <Flex height="360px" justify="between" direction="column">
-          <NumbersCard
-            amount={values.producedKits}
-            background="navy-300"
-            color="navy-800"
-            direction="row"
-            icon="/images/icons/icon-medical-kit-blue.svg"
-            iconAlt="medical kit"
-          >
-            <Text size="6" weight="light">
-              KITS PRODUCED SO FAR
-            </Text>
-          </NumbersCard>
           <NumbersCard
             amount={values.saved}
             background="navy-800"
@@ -63,12 +48,58 @@ export const HrtKitsInNumbers: FC = () => {
             icon="/images/icons/icon-currency-dollar.svg"
             iconAlt="money"
             amountPrefix="$"
+            maxWidth="350px"
           >
             <Text size="4" weight="light">
               SAVED FOR THE TRANS COMMUNITY
             </Text>
           </NumbersCard>
+          <NumbersCard
+            amount={values.itemsSourced}
+            background="navy-300"
+            color="navy-800"
+            direction="row"
+            icon="/images/icons/icon-medical-kit-blue.svg"
+            iconAlt="medical kit"
+            maxWidth="350px"
+          >
+            <Text size="6" weight="light">
+              ITEMS SOURCED
+            </Text>
+          </NumbersCard>
         </Flex>
+      </Flex>
+      <Flex align="center" justify="center" mt="4">
+        <NumbersCard
+          amount={values.partialKits}
+          background="navy-800"
+          color="white"
+          direction="row"
+          icon="/images/icons/icon-partial-kit.svg"
+          iconAlt="money"
+          maxWidth="740px"
+        >
+          <Text size="6" weight="light">
+            Partial Kits - Donate to complete kits!
+          </Text>
+          <Box>
+            <Button
+              className="bg-white text-navy-800"
+              size="4"
+              asChild
+              mb="2"
+              ml="5"
+            >
+              <Link
+                href="https://www.omprakash.org/global/distribute-aid/crowdfund/hrt---harm-reduction-toolkit"
+                target={"_blank"}
+                rel="noopener noreferrer"
+              >
+                Donate
+              </Link>
+            </Button>
+          </Box>
+        </NumbersCard>
       </Flex>
     </Section>
   );

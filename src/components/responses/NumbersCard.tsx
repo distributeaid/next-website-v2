@@ -13,6 +13,7 @@ export type NumbersCardProps = {
   direction?: "column" | "row";
   icon: string;
   iconAlt: string;
+  maxWidth?: string;
 };
 
 export const NumbersCard: FC<NumbersCardProps> = ({
@@ -24,17 +25,20 @@ export const NumbersCard: FC<NumbersCardProps> = ({
   direction,
   icon,
   iconAlt,
+  maxWidth,
 }) => {
   return (
     <Flex
-      className={`text-${color} bg-${background} rounded-xl box-border`}
+      className={`text-${color} bg-${background} rounded-xl box-border ${
+        direction === "row" ? "justify-around" : ""
+      }`}
       direction={direction}
       align="center"
       mx="4"
       p="2"
       height={direction === "column" ? "360px" : "47%"}
       width="100%"
-      maxWidth="350px"
+      maxWidth={maxWidth || "350px"}
     >
       <Box>
         <Image src={icon} width="100" height="100" alt={iconAlt} />

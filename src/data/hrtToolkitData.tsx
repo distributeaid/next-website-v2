@@ -2,9 +2,10 @@ import { Text } from "@radix-ui/themes";
 import type FaqItem from "./types/FaqItem";
 
 export const kitsInNumbersValues = {
-  partialKits: 1068,
-  producedKits: 398330,
-  saved: 37390,
+  yearsSupported: 810,
+  saved: 53913,
+  itemsSourced: 548634,
+  partialKits: 969,
 };
 
 export const faqs: FaqItem[] = [
