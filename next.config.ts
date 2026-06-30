@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
         source: "/hrt-harm-reduction-toolkit",
         destination:
           "https://www.omprakash.org/global/distribute-aid/crowdfund/hrt---harm-reduction-toolkit",
-        permanent: true,
+        permanent: false,
       },
     ];
   },
