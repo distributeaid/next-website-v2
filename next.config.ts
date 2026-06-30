@@ -7,6 +7,17 @@ const nextConfig: NextConfig = {
     domains: [process.env.STRAPI_DOMAIN || "localhost", "res.cloudinary.com"],
   },
 
+  async redirects() {
+    return [
+      {
+        source: "/hrt-harm-reduction-toolkit",
+        destination:
+          "https://www.omprakash.org/global/distribute-aid/crowdfund/hrt---harm-reduction-toolkit",
+        permanent: true,
+      },
+    ];
+  },
+
   async headers() {
     return [
       {
