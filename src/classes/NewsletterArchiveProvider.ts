@@ -5,6 +5,7 @@ import type {
   PostOrderBy,
   RequestDirection,
 } from "@beehiiv/sdk/dist/cjs/api";
+import { sl } from "zod/v4/locales";
 
 export class NewsletterArchiveProvider {
   private publicKey: string;
@@ -38,8 +39,12 @@ export class NewsletterArchiveProvider {
     return res;
   }
 
-  async getPost(postID: string): Promise<PostsGetResponse> {
-    const res = await this.client.posts.show(this.publicKey, postID);
+  async getPostsBySlug(slugs: string[]): Promise<PostsListResponse> {
+    const res = await this.client.posts.index(this.publicKey, {
+      "slugs[]": slugs,
+    });
+
+    console.log(res);
     return res;
   }
 }
