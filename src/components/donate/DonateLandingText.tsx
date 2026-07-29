@@ -27,7 +27,16 @@ const DonateLandingText = () => {
           connecting you with a local hub that can collect your donations.
         </Text>
         <Text align={"center"} weight={"bold"}>
-          If that’s you, reach out to{" "}
+          If that’s you, complete our{" "}
+          <Link
+            href="https://docs.google.com/forms/d/e/1FAIpQLSc_k4arUk6UMZLdK930IMgspyT7m-QoWkRRBj_EWlK_CUKhww/viewform"
+            target="_blank"
+            underline="always"
+            color="blue"
+          >
+            In-Kind Donors Form
+          </Link>{" "}
+          reach out to{" "}
           <Link
             href="mailto:donate-aid@distributeaid.org"
             underline="always"
