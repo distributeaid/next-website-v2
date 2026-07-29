@@ -33,33 +33,33 @@ export const links: NavBarLink[] = [
       },
     ],
   },
-  // {
-  //   title: Messages.RESPONSES_PAGE_TITLE,
-  //   url: "/responses",
-  //   isSubMenu: true,
-  //   subMenu: [
-  //     {
-  //       title: Messages.OVERVIEW_NAV_ITEM_TITLE,
-  //       url: "/responses",
-  //     },
-  //     {
-  //       title: Messages.US_DISASTER_PREPAREDNESS_RESPONSE_PAGE_TITLE,
-  //       url: "/responses/us-disaster-preparedness",
-  //     },
-  //     {
-  //       title: Messages.LEVANT_RESPONSE_PAGE_TITLE,
-  //       url: "/responses/levant",
-  //     },
-  //     {
-  //       title: Messages.REFUGEE_SUPPORT_EUROPE_RESPONSE_PAGE_TITLE,
-  //       url: "/responses/refugee-support-eu",
-  //     },
-  //     {
-  //       title: Messages.HRT_TOOLKIT_RESPONSE_PAGE_TITLE,
-  //       url: "/responses/hrt-toolkit",
-  //     },
-  //   ],
-  // },
+  {
+    title: Messages.RESPONSES_PAGE_TITLE,
+    url: "/responses",
+    isSubMenu: true,
+    subMenu: [
+      {
+        title: Messages.OVERVIEW_NAV_ITEM_TITLE,
+        url: "/responses",
+      },
+      {
+        title: Messages.US_DISASTER_PREPAREDNESS_RESPONSE_PAGE_TITLE,
+        url: "/responses/us-disaster-preparedness",
+      },
+      {
+        title: Messages.LEVANT_RESPONSE_PAGE_TITLE,
+        url: "/responses/levant",
+      },
+      {
+        title: Messages.REFUGEE_SUPPORT_EUROPE_RESPONSE_PAGE_TITLE,
+        url: "/responses/refugee-support-eu",
+      },
+      {
+        title: Messages.HRT_TOOLKIT_RESPONSE_PAGE_TITLE,
+        url: "/responses/hrt-toolkit",
+      },
+    ],
+  },
   // {
   //   id: 3,
   //   title: "Needs",
