@@ -51,7 +51,6 @@ const GetInvolved = () => {
           initial: "1",
           md: "3",
         }}
-        gap="9"
         asChild
         mt="8"
         mb="9"
@@ -60,9 +59,9 @@ const GetInvolved = () => {
           {getInvolvedLinks.map(
             ({ label, buttonLabel, href, bgColor, Icon }) => (
               <li key={label}>
-                <Flex key={label} direction="column" align="center" gap="6">
+                <Flex key={label} direction="column" align="center" gap="5">
                   <Flex
-                    className="h-[228px] w-[228px] rounded-full"
+                    className="size-48 rounded-full"
                     style={{
                       backgroundColor: bgColor,
                     }}
@@ -71,10 +70,10 @@ const GetInvolved = () => {
                   >
                     <Icon />
                   </Flex>
-                  <Text weight="medium" size="8">
+                  <Text weight="medium" size="7">
                     {label}
                   </Text>
-                  <Button size="3" asChild>
+                  <Button size="4" asChild>
                     <a href={href}>{buttonLabel ?? label}</a>
                   </Button>
                 </Flex>
@@ -84,7 +83,13 @@ const GetInvolved = () => {
         </ul>
       </Grid>
 
-      <Box className="bg-fuchsia-100" id="newsletter-signup">
+      <Box
+        style={{
+          backgroundColor: "var(--pink-5)",
+        }}
+        className="text-navy-900"
+        id="newsletter-signup"
+      >
         <Box py="8" px="4" maxWidth="1242px" mx="auto">
           <Heading as="h3" size="8">
             Stay Connected With Distribute Aid
@@ -95,7 +100,7 @@ const GetInvolved = () => {
             aid efforts. No spam—just meaningful insights, once a month.
           </Text>
           {newsletterSuccess ? (
-            <Box className="text-center" m="5">
+            <Box className="text-center " m="5">
               <Heading size="7">Success!</Heading>
               <Text size="4">
                 Thanks for signing up! Please check your email to confirm your
