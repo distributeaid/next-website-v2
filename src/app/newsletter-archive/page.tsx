@@ -19,7 +19,7 @@ export default async function NewsletterArchive({
       <ul>
         {repo.data.map((post) => (
           <li key={post.id}>
-            <Link href={`/newsletter-archive/${post.id}`}>{post.title}</Link>
+            <Link href={`/newsletter-archive/${post.slug}`}>{post.title}</Link>
           </li>
         ))}
       </ul>

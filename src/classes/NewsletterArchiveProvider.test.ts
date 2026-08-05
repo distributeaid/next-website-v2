@@ -44,7 +44,7 @@ describe("NewsletterArchiveProvider", () => {
   });
 
   describe("getPost", () => {
-    const TEST_POST_ID = "post_d5d23ce5-37eb-4ddc-875c-48ed66f68f05";
+    const TEST_POST_SLUG = "test-post";
     let provider: NewsletterArchiveProvider;
 
     beforeEach(() => {
@@ -54,16 +54,16 @@ describe("NewsletterArchiveProvider", () => {
     });
 
     it("makes authenticated request using env vars with post ID and returns JSON data", async () => {
-      const mockResponse = { id: TEST_POST_ID, title: "Test Post" };
+      const mockResponse = { id: TEST_POST_SLUG, title: "Test Post" };
       const mockFetch = vi.fn().mockResolvedValue({
         json: () => Promise.resolve(mockResponse),
       });
       vi.stubGlobal("fetch", mockFetch);
 
-      const result = await provider.getPost(TEST_POST_ID);
+      const result = await provider.getPostsBySlug([TEST_POST_SLUG]);
 
       expect(mockFetch).toHaveBeenCalledWith(
-        expect.stringContaining(TEST_POST_ID),
+        expect.stringContaining(TEST_POST_SLUG),
         {
           headers: {
             Authorization: process.env.BEHIIV_TOKEN,
