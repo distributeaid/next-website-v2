@@ -1,11 +1,22 @@
 import DonateGrid from "@/components/donate/DonateGrid";
-import FUND_RAISERS from "@/data/donate.json";
 import CopySection from "@/components/donate/CopySection";
 import DonateLandingText from "@/components/donate/DonateLandingText";
 import WingOfHonor from "@/components/donate/WingOfHonor";
 import HeroSection from "@/components/ui/HeroSection";
+import { getFundraisers } from "@/utils/strapi/api";
+import type { Fundraiser } from "@/utils/strapi/types";
 
-const Page = () => {
+const Page = async () => {
+  let fundraisers: Fundraiser[] = [];
+  let error = false;
+
+  try {
+    fundraisers = await getFundraisers();
+  } catch (err) {
+    console.error("Failed to fetch fundraisers", err);
+    error = true;
+  }
+
   return (
     <>
       <HeroSection
@@ -18,9 +29,7 @@ const Page = () => {
         hasLogo={false}
       />
       <CopySection />
-      {FUND_RAISERS && FUND_RAISERS.length > 0 && (
-        <DonateGrid funds={FUND_RAISERS} />
-      )}
+      <DonateGrid funds={fundraisers} error={error} />
       <DonateLandingText />
       <WingOfHonor />
     </>

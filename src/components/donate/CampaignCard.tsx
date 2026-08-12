@@ -21,7 +21,7 @@ type Props = {
   raised: number | undefined;
   goal: number | undefined;
   donateLink: string | undefined;
-  moreLink: string | undefined;
+  isFeatured?: boolean;
 };
 
 // enable RadixUI's asChild functionality for callig code
@@ -35,7 +35,7 @@ const CampaignCard: FC<Props> = forwardRef<HTMLDivElement, Props>(
       raised = 0,
       goal = 0,
       donateLink = "#",
-      moreLink = "#",
+      isFeatured = false,
       ...props
     },
     forwardedRef,
@@ -45,11 +45,16 @@ const CampaignCard: FC<Props> = forwardRef<HTMLDivElement, Props>(
         <Card>
           <Flex direction="column" justify={"between"} height={"100%"}>
             <Inset clip="padding-box" pb="current">
-              {/* if rasied >= 75% of goal show "close" pill */}
-              {raised >= 75 && (
+              {isFeatured ? (
                 <Box top={"3"} left={"4"} position={"absolute"}>
-                  <Badge className="text-black bg-white">Close!!</Badge>
+                  <Badge className="text-black bg-white">Featured</Badge>
                 </Box>
+              ) : (
+                raised >= 75 && (
+                  <Box top={"3"} left={"4"} position={"absolute"}>
+                    <Badge className="text-black bg-white">Close!!</Badge>
+                  </Box>
+                )
               )}
               <Image
                 src={imgSrc}
