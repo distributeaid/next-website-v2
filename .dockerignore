@@ -6,7 +6,7 @@
 
 **/.classpath
 **/.dockerignore
-**/.env.*
+**/.env*
 **/.eslintrc.*
 **/vitest.*.*
 **/.git
