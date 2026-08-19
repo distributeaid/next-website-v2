@@ -87,7 +87,7 @@ export function ResponsePage({ overview, processImages }: ResponsePageProps) {
             </Box>
           )}
         </Container>
-        {overview.impactStatistics?.cta.bannerText && (
+        {overview.impactStatistics && (
           <Flex
             className="bg-circle-green rounded-lg justify-around mt-[-15px]"
             p="2"
@@ -101,7 +101,8 @@ export function ResponsePage({ overview, processImages }: ResponsePageProps) {
               weight="bold"
               as="p"
             >
-              {overview.impactStatistics.cta.bannerText}
+              {overview.impactStatistics.cta.bannerText ||
+                "Help support this project"}
             </Text>
             <Button className="bg-white text-navy-800" size="2" asChild>
               <Link
