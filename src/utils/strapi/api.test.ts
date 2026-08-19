@@ -59,9 +59,9 @@ describe("response overviews", () => {
     const url = new URL(fetchMock.mock.calls[0][0] as URL);
     expect(url.pathname).toBe("/api/overviews");
     expect(url.searchParams.has("filters[slug][$eq]")).toBe(false);
-    expect(
-      url.searchParams.get("populate[impactStatistics][populate][statistics]"),
-    ).toBe("true");
+    expect(url.searchParams.get("populate[impactStatistics][populate]")).toBe(
+      "*",
+    );
   });
 
   it("fetches the requested slug with nested response content populated", async () => {
@@ -83,9 +83,9 @@ describe("response overviews", () => {
     const url = new URL(fetchMock.mock.calls[0][0] as URL);
     expect(url.pathname).toBe("/api/overviews");
     expect(url.searchParams.get("filters[slug][$eq]")).toBe("levant");
-    expect(
-      url.searchParams.get("populate[impactStatistics][populate][statistics]"),
-    ).toBe("true");
+    expect(url.searchParams.get("populate[impactStatistics][populate]")).toBe(
+      "*",
+    );
   });
 
   it("returns null when the slug does not exist", async () => {

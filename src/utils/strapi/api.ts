@@ -72,8 +72,7 @@ const responseOverviewPopulate = {
   "populate[callToActionCards]": "true",
   "populate[faqs]": "true",
   "populate[details]": "true",
-  "populate[impactStatistics][populate][statistics]": "true",
-  "populate[impactStatistics][populate][cta]": "true",
+  "populate[impactStatistics][populate]": "*",
 };
 
 export async function getResponseNavigation(): Promise<
@@ -85,7 +84,8 @@ export async function getResponseNavigation(): Promise<
   });
 
   if (!response.ok) {
-    throw new Error(`Failed to fetch response navigation: ${response.status}`);
+    console.error(`Failed to fetch response navigation: ${response.status}`);
+    return [];
   }
 
   const jsonData: { data: ResponseNavigationItem[] } = await response.json();
