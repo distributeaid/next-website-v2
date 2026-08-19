@@ -1,5 +1,5 @@
 services:
-  frontend_dev:
+  frontend-dev:
     image: frontend:dev
     platform: linux/amd64 # Forces to use the x86_64 (amd64) architecture for better compatibility
     pull_policy: never
@@ -11,6 +11,8 @@ services:
       - 3000:3000
     env_file:
       - .env.local
+    networks:
+      - local-dev
     develop:
       watch:
         # Source code changes
@@ -41,3 +43,8 @@ services:
           path: ./.yarnrc.yml
         - action: rebuild
           path: ./.yarn
+
+networks:
+  local-dev:
+    name: local-dev
+    driver: bridge
