@@ -33,7 +33,7 @@ The development Dockerfile is optimized for local development:
 
 ### Docker Compose Configuration
 
-The `docker-compose.yml` file defines a single service `frontend_dev` with the following features:
+The `docker-compose.yml` file defines a single service `frontend-dev` with the following features:
 
 - **Image**: `frontend:dev` (built locally, never pulled from registry)
 - **Platform**: `linux/amd64` (forces the container to run on x86_64 (amd64) architecture for better compatibility, especially on Apple Silicon Macs (M1/M2/M3))
