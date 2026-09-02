@@ -16,11 +16,11 @@ import currencyFormatter from "@/utils/currencyFormatter";
 
 type Props = {
   imgSrc: string | undefined;
-  imgAlt: string | undefined;
-  title: string | undefined;
-  raised: number | undefined;
-  goal: number | undefined;
-  donateLink: string | undefined;
+  imgAlt: string;
+  title: string;
+  raised: number;
+  goal: number;
+  donateLink: string;
   isFeatured?: boolean;
 };
 
