@@ -1,5 +1,24 @@
 type PostOrderBy = "created" | "publish_date" | "displayed_date";
 type RequestDirection = "asc" | "desc";
+type PostExpand =
+  | "stats"
+  | "free_web_content"
+  | "free_email_content"
+  | "free_rss_content"
+  | "premium_web_content"
+  | "premium_email_content";
+
+interface BeehiivPostContent {
+  free?: {
+    web?: string;
+    email?: string;
+    rss?: string;
+  };
+  premium?: {
+    web?: string;
+    email?: string;
+  };
+}
 
 interface BeehiivPost {
   id: string;
@@ -22,6 +41,7 @@ interface BeehiivPost {
   displayed_date: number | null;
   meta_default_description: string | null;
   meta_default_title: string | null;
+  content?: BeehiivPostContent;
   [key: string]: unknown;
 }
 
@@ -119,12 +139,16 @@ export class NewsletterArchiveProvider {
     });
   }
 
-  async getPostsBySlug(slug: string): Promise<PostsListResponse> {
+  async getPostsBySlug(
+    slug: string,
+    expand: PostExpand[] = ["free_web_content", "free_email_content"],
+  ): Promise<PostsListResponse> {
     const res = await this.request<PostsListResponse>("/posts", {
       slugs: [slug],
       limit: 1,
+      expand,
     });
-    console.log(res);
+    console.log(JSON.stringify(res, null, 2));
     return res;
   }
 }
