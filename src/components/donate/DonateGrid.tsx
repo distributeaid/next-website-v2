@@ -2,7 +2,6 @@ import { FC } from "react";
 import CampaignCard from "@/components/donate/CampaignCard";
 import { Grid, Box, Container, Heading, Flex, Text } from "@radix-ui/themes";
 import { Fundraiser } from "@/utils/strapi/types";
-import siteSettings from "@/data/site-settings.json";
 import { FaArrowDown } from "react-icons/fa";
 
 const percentage = (n: number, d: number) => {
@@ -62,10 +61,10 @@ const DonateGrid: FC<{
                 imgAlt={fund.title}
                 title={fund.title}
                 raised={percentage(
-                  parseFloat(fund.amountRaised),
-                  parseFloat(fund.goalTotal),
+                  parseFloat(fund?.amountRaised ?? "0"),
+                  parseFloat(fund?.goalTotal ?? "0"),
                 )}
-                goal={parseFloat(fund.goalTotal)}
+                goal={parseFloat(fund?.goalTotal ?? "0")}
                 donateLink={fund.donateURL}
                 isFeatured={fund.isFeatured}
               />

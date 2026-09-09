@@ -27,8 +27,8 @@ export interface Fundraiser {
   documentId: string;
   title: string;
   featuredImageURL: string | null;
-  amountRaised: string;
-  goalTotal: string;
+  amountRaised?: string;
+  goalTotal?: string;
   isFeatured: boolean;
   donateURL: string;
   createdAt: string;
