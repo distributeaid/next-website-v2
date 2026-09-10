@@ -102,3 +102,17 @@ export interface ResponseStatistic {
   unit: string | null;
   category: "currency" | "items" | "shipments" | "time";
 }
+
+export interface Fundraiser {
+  id: number;
+  documentId: string;
+  title: string;
+  featuredImageURL: string | null;
+  amountRaised?: string;
+  goalTotal?: string;
+  isFeatured: boolean;
+  donateURL: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+}

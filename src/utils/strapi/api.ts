@@ -1,5 +1,6 @@
 "use server";
 import type {
+  Fundraiser,
   ResponseNavigationItem,
   ResponseOverview,
   TeamMember,
@@ -37,7 +38,9 @@ async function strapiGet(
     Authorization: `Bearer ${STRAPI_KEY}`,
   };
 
-  return fetch(url, {
+  console.log(url);
+
+  return await fetch(url, {
     cache: "no-cache",
     headers,
   });
@@ -117,4 +120,16 @@ export async function getResponseOverview(
 
   const jsonData: { data: ResponseOverview[] } = await response.json();
   return jsonData.data[0] ?? null;
+}
+
+// Pulls the list of fundraisers from the strapi API
+export async function getFundraisers(): Promise<Fundraiser[]> {
+  const response = await strapiGet("fundraisers");
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch fundraisers: ${response.status}`);
+  }
+
+  const jsonData = await response.json();
+  return jsonData.data;
 }
