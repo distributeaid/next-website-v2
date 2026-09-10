@@ -1,68 +1,105 @@
 "use client";
-import { FC, ReactNode } from "react";
+
 import { Box, Flex, Text } from "@radix-ui/themes";
 import Image from "next/image";
 import CountUp from "react-countup";
+import type { ReactNode } from "react";
 
-export type NumbersCardProps = {
-  amount: number;
-  amountPrefix?: string;
-  background: string;
-  color: string;
+import type { ResponseStatistic } from "@/utils/strapi/types";
+
+const ICONS = {
+  currency: {
+    navy: "/images/icons/icon-currency-dollar.svg",
+    white: "/images/icons/icon-currency-dollar-white.svg",
+  },
+  items: {
+    navy: "/images/icons/icon-medical-kit.svg",
+    white: "/images/icons/icon-medical-kit-white.svg",
+  },
+  shipments: {
+    navy: "/images/icons/icon-parcel.svg",
+    white: "/images/icons/icon-parcel-white.svg",
+  },
+  time: {
+    navy: "/images/icons/icon-calendar.svg",
+    white: "/images/icons/icon-calendar-white.svg",
+  },
+} as const;
+
+export type NumbersCardVariant =
+  | "featured"
+  | "secondary"
+  | "stacked-top"
+  | "stacked-bottom"
+  | "trailing";
+
+interface NumbersCardProps {
+  statistic: ResponseStatistic;
+  variant: NumbersCardVariant;
   children?: ReactNode;
-  direction?: "column" | "row";
-  icon: string;
-  iconAlt: string;
-  maxWidth?: string;
-};
+}
 
-export const NumbersCard: FC<NumbersCardProps> = ({
-  amount,
-  amountPrefix,
-  background,
-  color,
+export function NumbersCard({
+  statistic,
+  variant,
   children,
-  direction,
-  icon,
-  iconAlt,
-  maxWidth,
-}) => {
+}: NumbersCardProps) {
+  const trailing = variant === "trailing";
+  const square = variant === "featured" || variant === "secondary";
+  const dark = variant === "secondary" || variant === "stacked-top" || trailing;
+  const navyContent = variant === "stacked-bottom";
+  const iconTone = navyContent ? "navy" : "white";
+
   return (
     <Flex
-      className={`text-${color} bg-${background} rounded-xl box-border ${
-        direction === "row" ? "justify-around" : ""
-      }`}
-      direction={direction}
+      data-testid={`statistic-card-${variant}`}
+      className={`rounded-xl box-border ${
+        navyContent ? "text-navy-800 bg-navy-300" : "text-white"
+      } ${
+        variant === "featured" ? "bg-circle-green" : dark ? "bg-navy-800" : ""
+      } ${!square && !trailing ? "justify-around" : ""}`}
+      direction={square ? "column" : "row"}
       align="center"
-      mx="4"
-      p="2"
-      height={direction === "column" ? "360px" : "47%"}
+      gap={trailing ? "4" : undefined}
+      mx="0"
+      py="2"
+      px={trailing ? "4" : "2"}
+      height={square ? "360px" : "47%"}
       width="100%"
-      maxWidth={maxWidth || "350px"}
+      maxWidth={trailing ? "740px" : "350px"}
     >
       <Box>
-        <Image src={icon} width="100" height="100" alt={iconAlt} />
+        <Image
+          src={ICONS[statistic.category][iconTone]}
+          width="100"
+          height="100"
+          alt=""
+        />
       </Box>
-      <Box>
-        <Text
-          as="p"
-          size="9"
-          align={direction === "column" ? "center" : "left"}
-          weight="bold"
-        >
-          {amountPrefix}
-          <CountUp start={0} end={amount} duration={5} />
+      <Box width={trailing ? "100%" : undefined}>
+        <Text as="p" size="9" align={square ? "center" : "left"} weight="bold">
+          {statistic.unit}
+          <CountUp start={0} end={statistic.value} duration={5} />
         </Text>
         <Flex
-          direction={direction}
+          direction={square ? "column" : "row"}
           align="center"
-          className="justify-around"
+          className={trailing ? "justify-between" : "justify-around"}
           height="100%"
           flexGrow="1"
         >
+          <Text
+            as="p"
+            size={square ? "7" : "4"}
+            weight="light"
+            align={variant === "featured" ? "center" : undefined}
+            className="uppercase"
+          >
+            {statistic.label}
+          </Text>
           {children}
         </Flex>
       </Box>
     </Flex>
   );
-};
+}

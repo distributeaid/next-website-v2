@@ -11,8 +11,27 @@ import Image from "next/image";
 import MobileNavBar from "./mobileNavBar";
 import { links } from "@/data/navBarLinks";
 import { usePathname } from "next/navigation";
+import type { ResponseNavigationItem } from "@/utils/strapi/types";
 
-const NavBar = () => {
+interface NavBarProps {
+  responseNavigation: ResponseNavigationItem[];
+}
+
+const NavBar = ({ responseNavigation }: NavBarProps) => {
+  const navigationLinks = links.map((link) =>
+    link.url === "/responses"
+      ? {
+          ...link,
+          subMenu: [
+            ...(link.subMenu ?? []),
+            ...responseNavigation.map((response) => ({
+              title: response.name,
+              url: `/responses/${response.slug}`,
+            })),
+          ],
+        }
+      : link,
+  );
   const [nav, setNav] = useState(false);
   const pathname = usePathname();
   const buttonClassNames =
@@ -91,69 +110,71 @@ const NavBar = () => {
             display={{ initial: "none", md: "flex" }}
             className="font-medium"
           >
-            {links.map(({ title, url, isSubMenu, subMenu, isButton }) => (
-              <NavigationMenu.Item key={title}>
-                {isSubMenu ? (
-                  <Box className="group">
-                    <Flex position={"relative"} align={"center"} asChild>
-                      <NavigationMenu.Trigger>
-                        <NavigationMenu.Link
-                          href={url}
-                          className={
-                            isButton
-                              ? buttonClassNames
-                              : `${linkClassNames} ${isActive(url) && "underline"}`
-                          }
-                        >
-                          {title}
-                        </NavigationMenu.Link>
-                        <FaChevronDown className="ml-2 transition-transform duration-200 group-hover:rotate-180" />
-                      </NavigationMenu.Trigger>
-                    </Flex>
-                    <Flex
-                      asChild
-                      position={"absolute"}
-                      maxWidth={"160px"}
-                      mt={"3"}
-                      className="shadow-md bg-white z-10 border rounded-md"
+            {navigationLinks.map(
+              ({ title, url, isSubMenu, subMenu, isButton }) => (
+                <NavigationMenu.Item key={title}>
+                  {isSubMenu ? (
+                    <Box className="group">
+                      <Flex position={"relative"} align={"center"} asChild>
+                        <NavigationMenu.Trigger>
+                          <NavigationMenu.Link
+                            href={url}
+                            className={
+                              isButton
+                                ? buttonClassNames
+                                : `${linkClassNames} ${isActive(url) && "underline"}`
+                            }
+                          >
+                            {title}
+                          </NavigationMenu.Link>
+                          <FaChevronDown className="ml-2 transition-transform duration-200 group-hover:rotate-180" />
+                        </NavigationMenu.Trigger>
+                      </Flex>
+                      <Flex
+                        asChild
+                        position={"absolute"}
+                        maxWidth={"160px"}
+                        mt={"3"}
+                        className="shadow-md bg-white z-10 border rounded-md"
+                      >
+                        <NavigationMenu.Content>
+                          <NavigationMenu.Sub>
+                            <NavigationMenu.List>
+                              {subMenu?.map(({ title, url }) => (
+                                <NavigationMenu.Item key={title}>
+                                  <NavigationMenu.Link href={url}>
+                                    <Flex
+                                      width="100%"
+                                      py="1"
+                                      px="4"
+                                      className="hover:bg-navy-200 text-black"
+                                    >
+                                      {title}
+                                    </Flex>
+                                  </NavigationMenu.Link>
+                                </NavigationMenu.Item>
+                              ))}
+                            </NavigationMenu.List>
+                            <NavigationMenu.Viewport />
+                          </NavigationMenu.Sub>
+                        </NavigationMenu.Content>
+                      </Flex>
+                    </Box>
+                  ) : (
+                    <NavigationMenu.Link
+                      href={url}
+                      className={
+                        isButton
+                          ? buttonClassNames
+                          : `${linkClassNames} ${isActive(url) && "underline"}`
+                      }
                     >
-                      <NavigationMenu.Content>
-                        <NavigationMenu.Sub>
-                          <NavigationMenu.List>
-                            {subMenu?.map(({ title, url }) => (
-                              <NavigationMenu.Item key={title}>
-                                <NavigationMenu.Link href={url}>
-                                  <Flex
-                                    width="100%"
-                                    py="1"
-                                    px="4"
-                                    className="hover:bg-navy-200 text-black"
-                                  >
-                                    {title}
-                                  </Flex>
-                                </NavigationMenu.Link>
-                              </NavigationMenu.Item>
-                            ))}
-                          </NavigationMenu.List>
-                          <NavigationMenu.Viewport />
-                        </NavigationMenu.Sub>
-                      </NavigationMenu.Content>
-                    </Flex>
-                  </Box>
-                ) : (
-                  <NavigationMenu.Link
-                    href={url}
-                    className={
-                      isButton
-                        ? buttonClassNames
-                        : `${linkClassNames} ${isActive(url) && "underline"}`
-                    }
-                  >
-                    {title}
-                  </NavigationMenu.Link>
-                )}
-              </NavigationMenu.Item>
-            ))}
+                      {title}
+                    </NavigationMenu.Link>
+                  )}
+                </NavigationMenu.Item>
+              ),
+            )}
           </Flex>
 
           {/* Mobile Top Navbar */}
@@ -192,7 +213,12 @@ const NavBar = () => {
             </button>
           </Flex>
           {/* Mobile Menu */}
-          {nav && <MobileNavBar shouldShowNav={setNav} />}
+          {nav && (
+            <MobileNavBar
+              responseNavigation={responseNavigation}
+              shouldShowNav={setNav}
+            />
+          )}
         </Flex>
       </NavigationMenu.List>
     </NavigationMenu.Root>

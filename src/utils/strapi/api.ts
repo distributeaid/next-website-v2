@@ -1,13 +1,19 @@
 "use server";
-import type { Fundraiser, TeamMember, TeamMemberRoleType } from "./types";
+import type {
+  Fundraiser,
+  ResponseNavigationItem,
+  ResponseOverview,
+  TeamMember,
+  TeamMemberRoleType,
+} from "./types";
 
 // The universal get function for the strapi API.
 // The path you use here depends on the data you're looking for
 // as defined in https://github.com/distributeaid/aggregated-public-information
 async function strapiGet(
   urlPath: string,
-  query?: { [key: string]: any },
-): Promise<any> {
+  query?: Record<string, string>,
+): Promise<Response> {
   const { STRAPI_URL, STRAPI_KEY } = process.env;
 
   if (!STRAPI_URL) {
@@ -45,7 +51,7 @@ async function strapiGet(
 export async function getTeam(
   roleType?: TeamMemberRoleType,
 ): Promise<TeamMember[]> {
-  let query: { [key: string]: any } = {
+  let query: Record<string, string> = {
     populate: "*",
   };
 
@@ -60,6 +66,60 @@ export async function getTeam(
   const jsonData = await response.json();
   console.log(JSON.stringify(jsonData, null, 2));
   return jsonData.data;
+}
+
+const responseOverviewPopulate = {
+  "populate[imageGallery]": "true",
+  "populate[processImageMobile]": "true",
+  "populate[processImageDesktop]": "true",
+  "populate[callToActionCards]": "true",
+  "populate[faqs]": "true",
+  "populate[details]": "true",
+  "populate[impactStatistics][populate]": "*",
+};
+
+export async function getResponseNavigation(): Promise<
+  ResponseNavigationItem[]
+> {
+  const response = await strapiGet("overviews", {
+    "fields[0]": "name",
+    "fields[1]": "slug",
+  });
+
+  if (!response.ok) {
+    console.error(`Failed to fetch response navigation: ${response.status}`);
+    return [];
+  }
+
+  const jsonData: { data: ResponseNavigationItem[] } = await response.json();
+  return jsonData.data;
+}
+
+export async function getResponseOverviews(): Promise<ResponseOverview[]> {
+  const response = await strapiGet("overviews", responseOverviewPopulate);
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch response overviews: ${response.status}`);
+  }
+
+  const jsonData: { data: ResponseOverview[] } = await response.json();
+  return jsonData.data;
+}
+
+export async function getResponseOverview(
+  slug: string,
+): Promise<ResponseOverview | null> {
+  const response = await strapiGet("overviews", {
+    ...responseOverviewPopulate,
+    "filters[slug][$eq]": slug,
+  });
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch response overview: ${response.status}`);
+  }
+
+  const jsonData: { data: ResponseOverview[] } = await response.json();
+  return jsonData.data[0] ?? null;
 }
 
 // Pulls the list of fundraisers from the strapi API
