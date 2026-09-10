@@ -1,5 +1,5 @@
 "use server";
-import type { TeamMember, TeamMemberRoleType } from "./types";
+import type { Fundraiser, TeamMember, TeamMemberRoleType } from "./types";
 
 // The universal get function for the strapi API.
 // The path you use here depends on the data you're looking for
@@ -32,6 +32,8 @@ async function strapiGet(
     Authorization: `Bearer ${STRAPI_KEY}`,
   };
 
+  console.log(url);
+
   return await fetch(url, {
     cache: "no-cache",
     headers,
@@ -57,5 +59,17 @@ export async function getTeam(
   const response = await strapiGet("members", query);
   const jsonData = await response.json();
   console.log(JSON.stringify(jsonData, null, 2));
+  return jsonData.data;
+}
+
+// Pulls the list of fundraisers from the strapi API
+export async function getFundraisers(): Promise<Fundraiser[]> {
+  const response = await strapiGet("fundraisers");
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch fundraisers: ${response.status}`);
+  }
+
+  const jsonData = await response.json();
   return jsonData.data;
 }
