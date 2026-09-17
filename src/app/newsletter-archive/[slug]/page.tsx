@@ -1,6 +1,7 @@
 import { Box, Text } from "@radix-ui/themes";
 import { NewsletterArchiveProvider } from "@/classes/NewsletterArchiveProvider";
 import { use } from "react";
+import * as cheerio from "cheerio";
 
 async function NewsletterEntry({ slug }: { slug: string }) {
   const provider = new NewsletterArchiveProvider();
@@ -9,20 +10,26 @@ async function NewsletterEntry({ slug }: { slug: string }) {
   const post = repo.data[0];
 
   function extractBodyHtml(html: string | undefined): string {
-    if (!html) return "";
+    if (!html) return "Failed to get HTML";
 
     const match = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
-    return (match?.[1] ?? html).trim();
+    const htmlBody = (match?.[1] ?? html).trim();
+    const $ = cheerio.load(htmlBody);
+    $(".bh__byline_social_wrapper").remove();
+    // $("*").removeAttr("style").removeAttr("class");
+    $("style").remove();
+
+    return $.html();
   }
 
   if (!post) return <Text>Oh no</Text>;
 
   return (
     <Box>
-      {post.content?.free?.email && (
+      {post.content?.free?.web && (
         <article
           dangerouslySetInnerHTML={{
-            __html: extractBodyHtml(post.content.free.email),
+            __html: extractBodyHtml(post.content.free.web),
           }}
         ></article>
       )}

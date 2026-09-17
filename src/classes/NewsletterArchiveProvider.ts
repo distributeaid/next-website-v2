@@ -53,8 +53,6 @@ interface PostsListResponse {
   total_pages: number;
 }
 
-type PostsGetResponse = { data: BeehiivPost };
-
 class BeehiivApiError extends Error {
   constructor(
     public status: number,
@@ -141,7 +139,7 @@ export class NewsletterArchiveProvider {
 
   async getPostsBySlug(
     slug: string,
-    expand: PostExpand[] = ["free_web_content", "free_email_content"],
+    expand: PostExpand[] = ["free_web_content"],
   ): Promise<PostsListResponse> {
     const res = await this.request<PostsListResponse>("/posts", {
       slugs: [slug],
