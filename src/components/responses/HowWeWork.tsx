@@ -1,11 +1,17 @@
 import { FC } from "react";
 import { Box, Flex, Heading, Section } from "@radix-ui/themes";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
+
+export interface Chart {
+  src: string;
+  width: number;
+  height: number;
+}
 
 interface HowWeWorkProps {
   title: string;
-  chartHorizontal: StaticImageData;
-  chartVertical: StaticImageData;
+  chartHorizontal: Chart;
+  chartVertical: Chart;
   altText: string;
   footnote?: string;
 }
@@ -23,12 +29,16 @@ export const HowWeWork: FC<HowWeWorkProps> = ({
     </Heading>
     <Flex justify="center" p="4">
       <Image
-        src={chartHorizontal}
+        src={chartHorizontal.src}
+        width={chartHorizontal.width}
+        height={chartHorizontal.height}
         className="w-1/2 h-auto hidden md:block"
         alt={altText}
       />
       <Image
-        src={chartVertical}
+        src={chartVertical.src}
+        width={chartVertical.width}
+        height={chartVertical.height}
         className="w-full h-auto block md:hidden"
         alt={altText}
       />

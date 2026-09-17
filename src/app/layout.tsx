@@ -9,6 +9,7 @@ import "../stylesheets/main.css";
 import NavBar from "../components/nav/navBar";
 import Footer from "@/components/ui/Footer";
 import GetInvolved from "@/components/ui/GetInvolved";
+import { getResponseNavigation } from "@/utils/strapi/api";
 
 const yantramanav = Yantramanav({
   subsets: ["latin"],
@@ -44,11 +45,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const responseNavigation = await getResponseNavigation();
+
   return (
     <html lang="en">
       <body
@@ -61,7 +64,7 @@ export default function RootLayout({
           >
             Skip to main content
           </a>
-          <NavBar />
+          <NavBar responseNavigation={responseNavigation} />
           <div className="pt-20">{children}</div>
           <GetInvolved />
           <Footer />

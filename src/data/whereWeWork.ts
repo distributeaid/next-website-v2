@@ -34,6 +34,6 @@ export const cardContent: {
     title: "USA",
     summary:
       "In the US, our work is primarily centered around disaster relief and pre-positioning aid to be able to act swiftly when disaster strikes. We have a large network of partners and warehouses in disaster-prone areas who work locally with mutual aid in their communities.",
-    alt: `Color-coded map of the continental United States showing three aid-flow categories. Receiving aid: Washington, Utah, New York, Delaware. Sending aid: Oregon, Texas, Indiana, Ohio, Tennessee, Florida. Both: California, Georgia, North Carolina, Pennsylvania.`,
+    alt: `Color-coded map of the continental United States showing three aid-flow categories. Receiving aid: Washington, Utah, New York, Delaware. Sending aid: Oregon, Texas, Indiana, Ohio, Tennessee, Florida, South Carolina, Minnesota, Illinois, West Virginia, Mississippi. Both: California, Georgia, North Carolina, Pennsylvania.`,
   },
 ];

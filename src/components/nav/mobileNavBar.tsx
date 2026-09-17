@@ -5,12 +5,31 @@ import { FaChevronDown } from "react-icons/fa";
 import { links } from "@/data/navBarLinks";
 import { SOCIAL_LINKS } from "@/data/constants";
 import Image from "next/image";
+import type { ResponseNavigationItem } from "@/utils/strapi/types";
+
+interface MobileNavBarProps {
+  responseNavigation: ResponseNavigationItem[];
+  shouldShowNav: (nav: boolean) => void;
+}
 
 const MobileNavBar = ({
+  responseNavigation,
   shouldShowNav,
-}: {
-  shouldShowNav: (nav: boolean) => void;
-}) => {
+}: MobileNavBarProps) => {
+  const navigationLinks = links.map((link) =>
+    link.url === "/responses"
+      ? {
+          ...link,
+          subMenu: [
+            ...(link.subMenu ?? []),
+            ...responseNavigation.map((response) => ({
+              title: response.name,
+              url: `/responses/${response.slug}`,
+            })),
+          ],
+        }
+      : link,
+  );
   return (
     <Flex
       display={{ initial: "flex", md: "none" }}
@@ -28,7 +47,7 @@ const MobileNavBar = ({
     >
       {/* Accordion - Ensuring only one section is open */}
       <Accordion.Root type="single" collapsible className="w-full">
-        {links
+        {navigationLinks
           .filter(({ title }) => title !== "Donate") // Hide Donate button here
           .map(({ title, url, isSubMenu, subMenu }) => (
             <Accordion.Item
