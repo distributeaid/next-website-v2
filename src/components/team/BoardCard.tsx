@@ -1,7 +1,8 @@
 import { Box, Flex, Heading, Text } from "@radix-ui/themes";
-import Image from "next/image";
+import { FallbackImage } from "@/components/image/FallbackImage";
 import { MarkdownContent } from "../markdown/MarkdownContent";
 import { TeamMember } from "@/utils/strapi/types";
+import { TeamPhotoFallback } from "./TeamPhotoFallback";
 
 export interface CardProps {
   teamMember: TeamMember;
@@ -15,8 +16,14 @@ export const BoardCard = ({ bgColor, teamMember }: CardProps) => {
         <Flex direction="column" align="center">
           <div className="pt-7 px-7 w-full">
             <Box className="rounded-md overflow-hidden aspect-[4/3] w-full">
-              <Image
+              <FallbackImage
                 src={teamMember.profile.url}
+                fallback={
+                  <TeamPhotoFallback
+                    name={teamMember.name}
+                    className="w-full h-full"
+                  />
+                }
                 alt={`Photo of ${teamMember.name}`}
                 width={400}
                 height={400}

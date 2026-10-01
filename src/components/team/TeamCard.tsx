@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Flex, Text } from "@radix-ui/themes";
-import Image from "next/image";
+import { FallbackImage } from "@/components/image/FallbackImage";
+import { TeamPhotoFallback } from "./TeamPhotoFallback";
 
 export type TeamCardProps = {
   name: string;
@@ -16,8 +17,14 @@ export const TeamCard: FC<TeamCardProps> = ({ name, title, photo }) => (
     className="bg-navy-300 rounded-md"
   >
     <Flex display="inline-flex">
-      <Image
+      <FallbackImage
         src={photo}
+        fallback={
+          <TeamPhotoFallback
+            name={name}
+            className="rounded-md h-[250px] min-w-[250px] w-[250px]"
+          />
+        }
         width={250}
         height={250}
         alt={`Headshot of ${name}`}
