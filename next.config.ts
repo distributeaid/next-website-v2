@@ -4,7 +4,12 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   images: {
-    domains: [process.env.STRAPI_DOMAIN || "localhost", "res.cloudinary.com"],
+    domains: [
+      process.env.STRAPI_DOMAIN || "localhost",
+      "res.cloudinary.com",
+      "media.beehiiv.com",
+      "beehiiv-images-production.s3.amazonaws.com",
+    ],
   },
 
   async redirects() {
