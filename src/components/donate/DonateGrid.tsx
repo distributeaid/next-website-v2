@@ -54,10 +54,11 @@ const DonateGrid: FC<{
         </Box>
       ) : (
         <Grid gap="8" columns={{ sm: "2", md: "3" }} pt="4.5rem" pb="9rem">
-          {sortedFunds.map((fund) => (
+          {sortedFunds.map((fund, index) => (
             <Box key={fund.id} width="100%" mx="auto" asChild>
               <CampaignCard
                 imgSrc={fund.featuredImageURL ?? undefined}
+                fallbackIndex={index}
                 imgAlt={fund.title}
                 title={fund.title}
                 raised={percentage(

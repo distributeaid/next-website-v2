@@ -10,7 +10,8 @@ import {
   Badge,
 } from "@radix-ui/themes";
 import { FC, forwardRef } from "react";
-import Image from "next/image";
+import { FallbackImage } from "@/components/image/FallbackImage";
+import { StandInPhoto } from "@/components/image/StandInPhoto";
 import FundProgress from "@/components/donate/FundProgress";
 import currencyFormatter from "@/utils/currencyFormatter";
 
@@ -22,6 +23,7 @@ type Props = {
   goal: number;
   donateLink: string;
   isFeatured?: boolean;
+  fallbackIndex?: number;
 };
 
 // enable RadixUI's asChild functionality for callig code
@@ -36,6 +38,7 @@ const CampaignCard: FC<Props> = forwardRef<HTMLDivElement, Props>(
       goal = 0,
       donateLink = "#",
       isFeatured = false,
+      fallbackIndex = 0,
       ...props
     },
     forwardedRef,
@@ -56,13 +59,22 @@ const CampaignCard: FC<Props> = forwardRef<HTMLDivElement, Props>(
                   </Box>
                 )
               )}
-              <Image
+              <FallbackImage
                 src={imgSrc}
                 alt={imgAlt}
                 height={256}
                 width={1200}
                 sizes={"100vw"}
                 className="block object-cover width-full bg-blue-900 h-[150px]"
+                fallback={
+                  <StandInPhoto
+                    index={fallbackIndex}
+                    height={256}
+                    width={1200}
+                    sizes={"100vw"}
+                    className="block object-cover width-full bg-blue-900 h-[150px]"
+                  />
+                }
               />
               <FundProgress raised={raised} />
             </Inset>
