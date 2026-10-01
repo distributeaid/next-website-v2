@@ -16,6 +16,10 @@ const round = (num: number) =>
 const em = (px: number, base: number) => `${round(px / base)}em`;
 
 const config: Config = {
+  // Hover styles will only be applied on devices that actually support hover
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
