@@ -1,9 +1,10 @@
 import { FC } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Button, Card, Flex, Heading, Text } from "@radix-ui/themes";
 
 import type { ResponseOverview } from "@/utils/strapi/types";
+import { FallbackImage } from "@/components/image/FallbackImage";
+import { StandInPhoto } from "@/components/image/StandInPhoto";
 
 const DESCRIPTION_PREVIEW_LENGTH = 180;
 
@@ -17,9 +18,13 @@ const truncateDescription = (text: string) => {
 
 export type ResponseCardProps = {
   response: ResponseOverview;
+  fallbackIndex?: number;
 };
 
-export const ResponseCard: FC<ResponseCardProps> = ({ response }) => {
+export const ResponseCard: FC<ResponseCardProps> = ({
+  response,
+  fallbackIndex = 0,
+}) => {
   const image = response.imageGallery?.[0];
 
   return (
@@ -27,12 +32,20 @@ export const ResponseCard: FC<ResponseCardProps> = ({ response }) => {
       <Flex direction="column" height="100%">
         {image && (
           <div className="relative aspect-[16/10] w-full overflow-hidden rounded">
-            <Image
+            <FallbackImage
               src={image.imageURL}
               alt={image.altText ?? ""}
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              fallback={
+                <StandInPhoto
+                  index={fallbackIndex}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              }
             />
           </div>
         )}

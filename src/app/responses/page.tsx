@@ -33,8 +33,12 @@ export default async function ResponsesOverviewPage() {
               gap="5"
               width="100%"
             >
-              {responses.map((response) => (
-                <ResponseCard key={response.id} response={response} />
+              {responses.map((response, index) => (
+                <ResponseCard
+                  key={response.id}
+                  response={response}
+                  fallbackIndex={index}
+                />
               ))}
             </Grid>
           ) : (

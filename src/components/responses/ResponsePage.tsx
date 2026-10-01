@@ -7,7 +7,6 @@ import {
   Section,
   Text,
 } from "@radix-ui/themes";
-import Image from "next/image";
 import Link from "next/link";
 
 import { MarkdownContent } from "@/components/markdown/MarkdownContent";
@@ -17,6 +16,8 @@ import { HowWeWork, type Chart } from "./HowWeWork";
 import ImageAttribution from "./ImageAttribution";
 import { ImpactStatistics } from "./ImpactStatistics";
 import { ResponseHero } from "./ResponseHero";
+import { FallbackImage } from "@/components/image/FallbackImage";
+import { StandInPhoto } from "@/components/image/StandInPhoto";
 
 interface ResponsePageProps {
   overview: ResponseOverview;
@@ -54,22 +55,34 @@ export function ResponsePage({ overview, processImages }: ResponsePageProps) {
               gap="4"
               className="mx-auto max-w-4xl"
             >
-              {imageGallery.map((image) => (
+              {imageGallery.map((image, index) => (
                 <Box
                   key={image.id}
                   className="relative h-[400px] w-full overflow-hidden rounded-lg md:w-[48%]"
                 >
-                  {image.attributionName && image.attributionURL && (
-                    <ImageAttribution
-                      name={image.attributionName}
-                      href={image.attributionURL}
-                    />
-                  )}
-                  <Image
+                  <FallbackImage
                     src={image.imageURL}
                     fill
+                    sizes="(max-width: 767px) 100vw, 448px"
                     className="object-cover"
                     alt={image.altText ?? ""}
+                    fallback={
+                      <StandInPhoto
+                        index={index}
+                        fill
+                        sizes="(max-width: 767px) 100vw, 448px"
+                        className="object-cover"
+                      />
+                    }
+                    attribution={
+                      image.attributionName &&
+                      image.attributionURL && (
+                        <ImageAttribution
+                          name={image.attributionName}
+                          href={image.attributionURL}
+                        />
+                      )
+                    }
                   />
                 </Box>
               ))}
@@ -138,24 +151,36 @@ export function ResponsePage({ overview, processImages }: ResponsePageProps) {
             How To Get Involved
           </Heading>
           <Flex justify="center" wrap="wrap">
-            {callToActionCards.map((card) => (
+            {callToActionCards.map((card, index) => (
               <Box
                 key={card.id}
                 className="m-4 w-full max-w-md overflow-hidden rounded-md bg-navy-300"
               >
                 {card.imageLink && (
                   <Box className="relative h-80 w-full">
-                    {card.imageAttributionName && card.imageAttributionURL && (
-                      <ImageAttribution
-                        name={card.imageAttributionName}
-                        href={card.imageAttributionURL}
-                      />
-                    )}
-                    <Image
+                    <FallbackImage
                       src={card.imageLink}
                       fill
+                      sizes="(max-width: 767px) 100vw, 448px"
                       className="object-cover"
                       alt={card.imageAltText ?? card.title}
+                      fallback={
+                        <StandInPhoto
+                          index={imageGallery.length + index}
+                          fill
+                          sizes="(max-width: 767px) 100vw, 448px"
+                          className="object-cover"
+                        />
+                      }
+                      attribution={
+                        card.imageAttributionName &&
+                        card.imageAttributionURL && (
+                          <ImageAttribution
+                            name={card.imageAttributionName}
+                            href={card.imageAttributionURL}
+                          />
+                        )
+                      }
                     />
                   </Box>
                 )}
