@@ -4,9 +4,9 @@ import OSEColumn from "./OSEColumn";
 const OSE3upText = () => {
   return (
     <Container
-      pt={{ initial: "60px", sm: "76px", md: "80px" }}
+      pt={{ initial: "60px", sm: "76px", md: "100px" }}
       px="4"
-      pb="60px"
+      pb={{ initial: "60px", md: "100px" }}
       size={{ initial: "1", sm: "2", md: "3", lg: "4" }}
       align="center"
     >

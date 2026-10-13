@@ -9,7 +9,7 @@ export const CodeOfConduct: FC = () => (
       </h1>
 
       <section>
-        <div className="max-w-5xl mx-auto px-4 py-12 lg:py-20 space-y-6 text-lg text-gray-700">
+        <div className="max-w-5xl mx-auto px-4 py-12 lg:py-24 space-y-6 text-lg text-gray-700">
           <h2 className="text-2xl font-semibold mb-8 text-gray-800">
             Our Pledge
           </h2>
@@ -31,7 +31,7 @@ export const CodeOfConduct: FC = () => (
       </section>
 
       <section className="bg-gray-50">
-        <div className="max-w-5xl mx-auto px-4 py-12 lg:py-20 space-y-6 text-lg text-gray-700">
+        <div className="max-w-5xl mx-auto px-4 py-12 lg:py-24 space-y-6 text-lg text-gray-700">
           <h2 className="text-2xl font-semibold mb-8 text-gray-800">
             Our Standards
           </h2>
@@ -83,7 +83,7 @@ export const CodeOfConduct: FC = () => (
       </section>
 
       <section>
-        <div className="max-w-5xl mx-auto px-4 py-12 lg:py-20 space-y-6 text-lg text-gray-700">
+        <div className="max-w-5xl mx-auto px-4 py-12 lg:py-24 space-y-6 text-lg text-gray-700">
           <h2 className="text-2xl font-semibold mb-8 text-gray-800">
             Enforcement Responsibilities
           </h2>
@@ -104,7 +104,7 @@ export const CodeOfConduct: FC = () => (
       </section>
 
       <section className="bg-gray-50">
-        <div className="max-w-5xl mx-auto px-4 py-12 lg:py-20 space-y-6 text-lg text-gray-700">
+        <div className="max-w-5xl mx-auto px-4 py-12 lg:py-24 space-y-6 text-lg text-gray-700">
           <h2 className="text-2xl font-semibold mb-8 text-gray-800">Scope</h2>
           <p>
             This Code of Conduct applies within all community spaces, and also
@@ -118,7 +118,7 @@ export const CodeOfConduct: FC = () => (
       </section>
 
       <section>
-        <div className="max-w-5xl mx-auto px-4 py-12 lg:py-20 space-y-6 text-lg text-gray-700">
+        <div className="max-w-5xl mx-auto px-4 py-12 lg:py-24 space-y-6 text-lg text-gray-700">
           <h2 className="text-2xl font-semibold mb-8 text-gray-800">
             Enforcement
           </h2>
@@ -143,7 +143,7 @@ export const CodeOfConduct: FC = () => (
       </section>
 
       <section className="bg-gray-50">
-        <div className="max-w-5xl mx-auto px-4 py-12 lg:py-20 space-y-6 text-lg text-gray-700">
+        <div className="max-w-5xl mx-auto px-4 py-12 lg:py-24 space-y-6 text-lg text-gray-700">
           <h2 className="text-2xl font-semibold mb-8 text-gray-800">
             Enforcement Guidelines
           </h2>
@@ -213,7 +213,7 @@ export const CodeOfConduct: FC = () => (
       </section>
 
       <footer>
-        <div className="max-w-5xl mx-auto px-4 py-12 lg:py-20 space-y-6 text-sm text-gray-700">
+        <div className="max-w-5xl mx-auto px-4 py-12 lg:py-24 space-y-6 text-sm text-gray-700">
           <h2 className="text-2xl font-semibold mb-8 text-gray-800">
             Attribution
           </h2>
