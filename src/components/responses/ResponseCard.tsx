@@ -1,20 +1,12 @@
 import { FC } from "react";
 import Link from "next/link";
-import { Button, Card, Flex, Heading, Text } from "@radix-ui/themes";
+import { Button, Card, Flex, Heading } from "@radix-ui/themes";
 
 import type { ResponseOverview } from "@/utils/strapi/types";
 import { FallbackImage } from "@/components/image/FallbackImage";
 import { StandInPhoto } from "@/components/image/StandInPhoto";
+import { MarkdownContent } from "@/components/markdown/MarkdownContent";
 
-const DESCRIPTION_PREVIEW_LENGTH = 180;
-
-const truncateDescription = (text: string) => {
-  if (text.length <= DESCRIPTION_PREVIEW_LENGTH) {
-    return text;
-  }
-
-  return `${text.slice(0, DESCRIPTION_PREVIEW_LENGTH)}…`;
-};
 
 export type ResponseCardProps = {
   response: ResponseOverview;
@@ -54,9 +46,15 @@ export const ResponseCard: FC<ResponseCardProps> = ({
             {response.name}
           </Heading>
           {response.description && (
-            <Text as="p" size="3" className="text-gray-700">
-              {truncateDescription(response.description)}
-            </Text>
+            <MarkdownContent
+              content={response.description}
+              components={{ a: ({ children }) => <span>{children}</span> }}
+              wrapper={(children) => (
+                <div className="line-clamp-3 text-base leading-6 text-gray-700">
+                  {children}
+                </div>
+              )}
+            />
           )}
           <Flex flexGrow="1" align="end">
             <Button
