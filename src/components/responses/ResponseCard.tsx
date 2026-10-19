@@ -7,7 +7,6 @@ import { FallbackImage } from "@/components/image/FallbackImage";
 import { StandInPhoto } from "@/components/image/StandInPhoto";
 import { MarkdownContent } from "@/components/markdown/MarkdownContent";
 
-
 export type ResponseCardProps = {
   response: ResponseOverview;
   fallbackIndex?: number;
