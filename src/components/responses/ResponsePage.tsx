@@ -45,7 +45,14 @@ export function ResponsePage({ overview, processImages }: ResponsePageProps) {
           </Heading>
           {overview.description && (
             <Box className="mx-auto my-6 max-w-4xl text-xl">
-              <MarkdownContent content={overview.description} />
+              <MarkdownContent
+                content={overview.description}
+                components={{
+                  ul: ({ children }) => (
+                    <ul className="list-inside list-disc pl-2">{children}</ul>
+                  ),
+                }}
+              />
             </Box>
           )}
           {imageGallery.length > 0 && (
@@ -211,7 +218,7 @@ export function ResponsePage({ overview, processImages }: ResponsePageProps) {
         <Faq
           faqs={faqs.map(({ question, answer }) => ({
             q: question,
-            a: <>A: {answer}</>,
+            a: answer,
           }))}
         />
       )}
