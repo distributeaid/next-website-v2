@@ -11,6 +11,23 @@ export interface StrapiMedia {
   url: string;
 }
 
+export interface RecruitingSection {
+  id: number;
+  heading: string;
+  content: string;
+}
+
+export interface RecruitingRole {
+  id: number;
+  documentId: string;
+  slug: string;
+  title: string;
+  isOpen: boolean;
+  roleDetails: { id: number; label: string; value: string }[];
+  sections: RecruitingSection[];
+  applicationInstructions: string;
+}
+
 export interface TeamMemberRole {
   title: string;
   type: TeamMemberRoleType;

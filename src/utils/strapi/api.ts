@@ -1,6 +1,7 @@
 "use server";
 import type {
   Fundraiser,
+  RecruitingRole,
   ResponseNavigationItem,
   ResponseOverview,
   TeamMember,
@@ -132,4 +133,40 @@ export async function getFundraisers(): Promise<Fundraiser[]> {
 
   const jsonData = await response.json();
   return jsonData.data;
+}
+
+const openRolesQuery = {
+  "filters[isOpen][$eq]": "true",
+  "populate[roleDetails]": "true",
+  "populate[sections]": "true",
+};
+
+export async function getRecruitingRoles(): Promise<RecruitingRole[]> {
+  const response = await strapiGet("roles", {
+    ...openRolesQuery,
+    "sort[0]": "publishedAt:desc",
+  });
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch recruiting roles: ${response.status}`);
+  }
+
+  const jsonData: { data: RecruitingRole[] } = await response.json();
+  return jsonData.data;
+}
+
+export async function getRecruitingRole(
+  slug: string,
+): Promise<RecruitingRole | null> {
+  const response = await strapiGet("roles", {
+    ...openRolesQuery,
+    "filters[slug][$eq]": slug,
+  });
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch recruiting role: ${response.status}`);
+  }
+
+  const jsonData: { data: RecruitingRole[] } = await response.json();
+  return jsonData.data[0] ?? null;
 }
