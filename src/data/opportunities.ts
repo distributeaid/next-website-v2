@@ -1,4 +1,4 @@
-export const values = [
+export const organizationalValues = [
   {
     title: "Transparent",
     description:

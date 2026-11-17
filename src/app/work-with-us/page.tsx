@@ -10,12 +10,13 @@ import {
   Section,
   Text,
 } from "@radix-ui/themes";
-import { values } from "@/data/opportunities";
+import { WORK_WITH_US_PAGE_TITLE } from "@/data/messages";
+import { organizationalValues } from "@/data/opportunities";
 import { getRecruitingRoles } from "@/utils/strapi/api";
 import type { RecruitingRole } from "@/utils/strapi/types";
 
 export const metadata: Metadata = {
-  title: "Work with us · Distribute Aid",
+  title: `${WORK_WITH_US_PAGE_TITLE} · Distribute Aid`,
   description:
     "Our mission is to provide for basic human needs at scale by connecting communities and empowering people to uphold human dignity.",
 };
@@ -42,7 +43,7 @@ export default async function OpportunitiesPage() {
             align="center"
             className="text-white"
           >
-            Work with us
+            {WORK_WITH_US_PAGE_TITLE}
           </Heading>
         </Container>
       </Section>
@@ -136,7 +137,7 @@ export default async function OpportunitiesPage() {
               Our values
             </Heading>
             <Grid columns={{ initial: "1", sm: "2", lg: "3" }} gap="6">
-              {values.map((value) => (
+              {organizationalValues.map((value) => (
                 <Box key={value.title}>
                   <Heading as="h3" size="5" mb="3" className="text-navy-800">
                     {value.title}
