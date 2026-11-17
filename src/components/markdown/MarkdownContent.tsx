@@ -11,7 +11,7 @@ const COMPONENTS: Components = {
 /**
  * The function accepted by the component that wraps the rendered content.
  */
-type WrapperFN = (children: ReactNode) => ReactElement<any, any> | null;
+type WrapperFN = (children: ReactNode) => ReactElement | null;
 
 /**
  * Default wrapper, if non provided by the calling code.
@@ -32,7 +32,10 @@ export const MarkdownContent: FC<{
    * @see https://tailwindcss.com/docs/typography-plugin
    */
   wrapper?: WrapperFN;
-}> = ({ content, wrapper }) =>
+  components?: Components;
+}> = ({ content, wrapper, components }) =>
   (wrapper ?? defaultWrapper)(
-    <ReactMarkdown components={COMPONENTS}>{content}</ReactMarkdown>,
+    <ReactMarkdown components={{ ...COMPONENTS, ...components }}>
+      {content}
+    </ReactMarkdown>,
   );

@@ -50,7 +50,7 @@ const TechSection = ({
   title,
 }: TechSectionProps) => {
   return (
-    <section className="mt-20">
+    <section className="mt-24">
       <h2 className="border-l-2 pl-4 border-navy-600 mb-8 text-4xl font-bold text-dark-blue">
         {title}
       </h2>

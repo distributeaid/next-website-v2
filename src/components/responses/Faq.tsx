@@ -3,6 +3,7 @@ import { Box, Container, Heading, Section, Text } from "@radix-ui/themes";
 import { FaArrowDown } from "react-icons/fa";
 
 import type FaqItem from "@/data/types/FaqItem";
+import { MarkdownContent } from "@/components/markdown/MarkdownContent";
 
 interface FaqProps {
   faqs: FaqItem[];
@@ -22,8 +23,14 @@ export const Faq: FC<FaqProps> = ({ faqs }) => (
                 Q: "{item.q}"
               </Text>
             </summary>
-            <Box as="div" className="pl-8 faq-answer">
-              {item.a}
+            <Box as="div" className="flow-root pl-8 faq-answer">
+              <Text as="span" weight="bold" className="float-left mr-1">
+                A:
+              </Text>
+              <MarkdownContent
+                content={item.a}
+                wrapper={(children) => <div>{children}</div>}
+              />
             </Box>
           </details>
         </Box>
