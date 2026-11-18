@@ -15,6 +15,8 @@ export const RESOURCES_PAGE_TITLE = "Resources";
 
 export const TEAM_PAGE_TITLE = "Team";
 
+export const WORK_WITH_US_PAGE_TITLE = "Work with us";
+
 export const TECH_PAGE_TITLE = "Tech";
 
 export const DONATE_PAGE_TITLE = "Donate";

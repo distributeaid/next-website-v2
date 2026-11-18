@@ -28,6 +28,10 @@ export const links: NavBarLink[] = [
         url: "/team",
       },
       {
+        title: Messages.WORK_WITH_US_PAGE_TITLE,
+        url: "/work-with-us",
+      },
+      {
         title: Messages.CONTACT_US_PAGE_TITLE,
         url: "/contact-us",
       },
