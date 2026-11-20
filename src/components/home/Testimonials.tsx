@@ -47,9 +47,15 @@ const Testimonials = () => {
                         <Text className="text-lg">{role}</Text>
                       </Flex>
                     </Flex>
-                    <blockquote className="font-bold italic text-2xl">
+                    <Text
+                      size={"5"}
+                      style={{
+                        fontStyle: "italic",
+                      }}
+                      weight={"bold"}
+                    >
                       "{quote}"
-                    </blockquote>
+                    </Text>
                   </article>
                 </Flex>
               </li>
